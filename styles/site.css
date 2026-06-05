@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "Cloister Black";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/fonts/cloister-black.ttf") format("truetype");
+}
+
 :root {
 	--color-bg: #0b0805;
 	--color-surface: #17100a;
@@ -9,7 +17,7 @@
 	--color-border: #512816;
 	--space-page: clamp(1.25rem, 3vw, 3rem);
 	--content-width: 68rem;
-	--font-display: "Old English Text MT", Georgia, "Times New Roman", serif;
+	--font-display: "Cloister Black", "Old English Text MT", Georgia, "Times New Roman", serif;
 }
 
 * {

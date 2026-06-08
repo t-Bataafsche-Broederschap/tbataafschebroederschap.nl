@@ -1,0 +1,798 @@
+:root {
+	--project-bg: #050505;
+	--project-bg-soft: #0d0d0d;
+	--project-surface: #111;
+	--project-surface-2: #181414;
+	--project-surface-3: #211817;
+	--project-ink: #f4efe6;
+	--project-muted: #c7b9a3;
+	--project-dim: #9a8870;
+	--project-gold: #c9a36a;
+	--project-gold-2: #a98552;
+	--project-copper: #8e6a3b;
+	--project-red: #971f16;
+	--project-red-2: #c43b2f;
+	--project-green: #8fbf8d;
+	--project-blue: #7da7c9;
+	--project-line: rgba(151, 31, 22, 0.44);
+	--project-line-soft: rgba(201, 163, 106, 0.16);
+	--project-shadow: 0 1.25rem 2.8rem rgba(0, 0, 0, 0.36);
+	--project-radius: 4px;
+	--project-body-font: Georgia, "Times New Roman", serif;
+	--project-ui-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.benefits-page,
+.migration-map-page,
+.suspects-page,
+.autochtoon-page,
+.cultural-distance-page,
+.eu-budget-flow-page,
+.world-population-page {
+	color-scheme: dark;
+	--bg: var(--project-bg);
+	--surface: var(--project-surface);
+	--surface-quiet: var(--project-surface-2);
+	--panel: var(--project-surface);
+	--ink: var(--project-ink);
+	--muted: var(--project-muted);
+	--line: var(--project-line);
+	--accent: var(--project-gold);
+	--accent-2: var(--project-copper);
+	--accent-dark: var(--project-gold-2);
+	--select: var(--project-gold);
+	--selected: var(--project-gold);
+	--near: var(--project-copper);
+	--orange: var(--project-gold);
+	--orange-dark: var(--project-copper);
+	--blue: var(--project-blue);
+	--red: var(--project-red-2);
+	--green: var(--project-green);
+	--amber: var(--project-gold);
+	--out: var(--project-red-2);
+	--in: var(--project-green);
+	--land: #202020;
+	--shadow: var(--project-shadow);
+	min-height: calc(100vh - 4.5rem);
+	background: radial-gradient(circle at 50% 0, rgba(151, 31, 22, 0.32), transparent 27rem), linear-gradient(180deg, var(--project-bg) 0%, var(--project-bg-soft) 56%, #030303 100%);
+	color: var(--project-ink);
+	font-family: var(--project-body-font);
+}
+
+.benefits-page,
+.migration-map-page,
+.suspects-page,
+.autochtoon-page,
+.cultural-distance-page {
+	padding-top: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.benefits-page p,
+.migration-map-page p,
+.suspects-page p,
+.autochtoon-page p,
+.cultural-distance-page p,
+.world-population-page p {
+	color: var(--project-muted);
+}
+
+.benefits-header,
+.migration-header,
+.suspects-header,
+.autochtoon-header,
+.cultural-header {
+	padding-bottom: 1.2rem;
+	border-bottom: 1px solid var(--project-line-soft);
+}
+
+.benefits-header h1,
+.migration-header h1,
+.suspects-header h1,
+.autochtoon-header h1,
+.cultural-header h1 {
+	color: #fff8ed;
+	font-family: var(--font-display), "Old English Text MT", Georgia, "Times New Roman", serif;
+	font-weight: 700;
+	line-height: 0.86;
+	text-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.42);
+}
+
+.eu-budget-flow-page #yearLabel {
+	color: #fff8ed;
+	font-family: var(--font-display), "Old English Text MT", Georgia, "Times New Roman", serif;
+	font-weight: 700;
+	text-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.75);
+}
+
+.eyebrow,
+.cultural-eyebrow,
+.selected-summary span,
+.distance-panel label span,
+.ranking-header span,
+.stat-list span,
+.grid-card dt,
+.world-population-status,
+.world-population-field span,
+.world-population-slider span {
+	color: var(--project-dim);
+	font-family: var(--project-ui-font);
+	letter-spacing: 0.13em;
+}
+
+.chart-panel,
+.scatter-panel,
+.map-panel,
+.table-panel,
+.side-panel,
+.distance-panel,
+.controls,
+.notes,
+.explanation,
+.panel,
+.world-population-panel,
+.world-population-stage,
+.project-sources {
+	border: 1px solid var(--project-line);
+	border-radius: var(--project-radius);
+	background: linear-gradient(180deg, rgba(151, 31, 22, 0.1), rgba(151, 31, 22, 0) 9rem), var(--project-surface);
+	box-shadow: var(--project-shadow);
+	color: var(--project-ink);
+}
+
+.toolbar,
+.chart-toolbar,
+.chart-head,
+.section-head,
+.map-head,
+.table-head,
+.year-panel,
+.grid-panel,
+.summary-strip div,
+.stat-list div,
+.stat-item,
+.grid-card,
+.selected-summary div,
+.ranking-header,
+.stats div,
+.ranking li,
+.distance-ranking button,
+.ranking-list button,
+.current-total,
+tbody tr,
+.world-population-panel,
+.world-population-stage {
+	border-color: var(--project-line-soft);
+	background-color: transparent;
+	color: var(--project-ink);
+}
+
+.toolbar,
+.chart-toolbar,
+.controls,
+.map-pane,
+.eu-budget-flow-page .map-pane {
+	background: linear-gradient(180deg, rgba(151, 31, 22, 0.22), rgba(16, 16, 16, 0.86)), var(--project-surface-2);
+}
+
+.map-wrap,
+.chart-wrap,
+.world-population-stage,
+.eu-budget-flow-page canvas {
+	background: radial-gradient(circle at 50% 20%, rgba(151, 31, 22, 0.16), transparent 27rem), #080808;
+}
+
+.benefits-page h2,
+.migration-map-page h2,
+.suspects-page h2,
+.autochtoon-page h2,
+.cultural-distance-page h2,
+.world-population-page h2 {
+	color: #fff8ed;
+	font-family: var(--project-body-font);
+	font-weight: 700;
+}
+
+.benefits-page h3,
+.migration-map-page h3,
+.suspects-page h3,
+.autochtoon-page h3,
+.cultural-distance-page h3,
+.world-population-page h3 {
+	color: var(--project-ink);
+}
+
+.benefits-page button,
+.migration-map-page button,
+.suspects-page button,
+.autochtoon-page button,
+.cultural-distance-page button,
+.eu-budget-flow-page button,
+.world-population-page button,
+.button {
+	border: 1px solid var(--project-line);
+	border-radius: var(--project-radius);
+	background: rgba(255, 255, 255, 0.04);
+	color: var(--project-ink);
+	font-family: var(--project-ui-font);
+	box-shadow: none;
+}
+
+.benefits-page button:hover,
+.migration-map-page button:hover,
+.suspects-page button:hover,
+.autochtoon-page button:hover,
+.cultural-distance-page button:hover,
+.eu-budget-flow-page button:hover,
+.world-population-page button:hover {
+	border-color: rgba(215, 177, 122, 0.7);
+	background: rgba(151, 31, 22, 0.22);
+	color: #fff8ed;
+}
+
+.benefits-page button.active,
+.migration-map-page button.active,
+.suspects-page button.active,
+.autochtoon-page button.active,
+.cultural-distance-page button.active,
+.eu-budget-flow-page button.active,
+.world-population-page button.is-active,
+.axis-scale-toggle label:has(input:checked),
+.distance-ranking button[aria-current="true"],
+.ranking-list button.active,
+.world-population-chip.is-selected,
+.world-population-continents button.is-active {
+	border-color: rgba(196, 59, 47, 0.9);
+	background: linear-gradient(180deg, #c43b2f, #7f1711);
+	color: #fff8ed;
+}
+
+.benefits-page button:disabled,
+.suspects-page button:disabled,
+.autochtoon-page button:disabled,
+.world-population-scale button:disabled {
+	opacity: 0.48;
+	color: var(--project-dim);
+}
+
+.benefits-page input,
+.benefits-page select,
+.migration-map-page input,
+.migration-map-page select,
+.suspects-page input,
+.suspects-page select,
+.autochtoon-page input,
+.autochtoon-page select,
+.cultural-distance-page input,
+.cultural-distance-page select,
+.eu-budget-flow-page input,
+.eu-budget-flow-page select,
+.world-population-page input,
+.world-population-page select {
+	accent-color: var(--project-gold);
+	border-color: var(--project-line);
+	background-color: #090909;
+	color: var(--project-ink);
+}
+
+.benefits-page input[type="range"],
+.migration-map-page input[type="range"],
+.suspects-page input[type="range"],
+.autochtoon-page input[type="range"],
+.cultural-distance-page input[type="range"],
+.eu-budget-flow-page input[type="range"],
+.world-population-page input[type="range"] {
+	accent-color: var(--project-gold);
+}
+
+.period-head strong,
+.year-picker strong,
+.chart-toolbar strong,
+.year-control strong,
+.speed-control strong,
+.summary-strip strong,
+.stat-list strong,
+.stat-item strong,
+.grid-card strong,
+.selected-summary strong,
+.stats strong,
+.ranking strong,
+.distance-ranking b,
+.current-summary strong,
+.world-population-status strong {
+	color: #fff8ed;
+}
+
+.selection-label,
+.row-count,
+.point-count,
+.chart-note,
+.source,
+.world-population-note {
+	color: var(--project-dim);
+}
+
+.legend,
+.line-legend,
+.summary-strip,
+.current-summary,
+.world-population-legend,
+.world-population-continents {
+	color: var(--project-muted);
+}
+
+.tooltip,
+.info-tooltip,
+.country-tooltip,
+.world-population-tooltip {
+	border: 1px solid rgba(215, 177, 122, 0.55);
+	border-radius: var(--project-radius);
+	background: rgba(15, 10, 7, 0.96);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.48);
+	color: var(--project-ink);
+}
+
+.tooltip strong,
+.info-tooltip strong,
+.country-tooltip strong,
+.world-population-tooltip strong {
+	color: #fff8ed;
+}
+
+.tooltip span,
+.tooltip small,
+.info-tooltip small,
+.country-tooltip span,
+.country-tooltip dt,
+.world-population-tooltip span {
+	color: var(--project-muted);
+}
+
+table {
+	color: var(--project-ink);
+}
+
+thead {
+	background: rgba(151, 31, 22, 0.16);
+}
+
+th,
+td {
+	border-color: var(--project-line-soft);
+}
+
+tbody tr:hover,
+tbody tr.is-selected {
+	background: rgba(151, 31, 22, 0.18);
+}
+
+th button {
+	color: var(--project-ink);
+}
+
+.axis path,
+.axis line,
+.tick line,
+.domain {
+	stroke: rgba(202, 176, 140, 0.42);
+}
+
+.axis text,
+.tick text,
+.axis-label,
+.chart-legend text,
+.dot-label,
+.labels text,
+.legend-text,
+.quadrant-label,
+.selected-year-label,
+.definition-marker-label,
+.estimated-band-label,
+.group-label,
+.country-label {
+	fill: var(--project-muted);
+	color: var(--project-muted);
+	font-family: var(--project-ui-font);
+}
+
+.grid line,
+.grid-lines line {
+	stroke: rgba(169, 142, 106, 0.16);
+}
+
+.selected-year,
+.definition-marker,
+.zero-line {
+	stroke: var(--project-gold);
+}
+
+.municipality,
+.country-point,
+.point,
+.scatter-dot {
+	stroke: rgba(11, 8, 5, 0.76);
+}
+
+.municipality:hover,
+.country-point.is-selected,
+.point.is-selected,
+.scatter-dot.is-selected {
+	stroke: var(--project-gold);
+}
+
+.country-trail,
+.distance-line,
+.trend-arrow {
+	stroke: var(--project-gold);
+}
+
+.group-fill,
+.estimated-band {
+	fill-opacity: 0.18;
+}
+
+.quality-badge,
+.stat-note,
+.card-note,
+.ranking small,
+.distance-ranking span,
+.distance-ranking output,
+.current-summary small,
+.grid-card dt,
+.rank-list span {
+	color: var(--project-dim);
+}
+
+.positive,
+.in {
+	color: var(--project-green);
+}
+
+.negative,
+.out {
+	color: #c96352;
+}
+
+.project-sources {
+	background: linear-gradient(180deg, rgba(169, 142, 106, 0.08), transparent), var(--project-surface);
+}
+
+.benefits-page > .notes,
+.migration-map-page > .notes,
+.suspects-page > .notes,
+.autochtoon-page > .notes,
+.cultural-distance-page > .explanation {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.benefits-page > .notes + .benefits-dashboard,
+.migration-map-page > .notes + .migration-app,
+.suspects-page > .notes + .suspects-dashboard,
+.autochtoon-page > .notes + .dashboard,
+.cultural-distance-page > .explanation + .cultural-app {
+	margin-top: 1rem;
+}
+
+@media (max-width: 760px) {
+	.benefits-header,
+	.migration-header,
+	.suspects-header,
+	.autochtoon-header,
+	.cultural-header {
+		padding-bottom: 1rem;
+	}
+
+	.benefits-header h1,
+	.migration-header h1,
+	.suspects-header h1,
+	.autochtoon-header h1,
+	.cultural-header h1 {
+		font-size: clamp(2.5rem, 14vw, 4.25rem);
+	}
+}
+
+.cultural-distance-page {
+	padding: clamp(1.5rem, 3vw, 2.5rem) var(--space-page) 3rem;
+	background: radial-gradient(circle at 50% 0, rgba(143, 101, 52, 0.18), transparent 24rem), linear-gradient(180deg, #0b0805 0%, #100b07 58%, #080604 100%);
+}
+
+.cultural-distance-page .cultural-header,
+.cultural-distance-page .cultural-app,
+.cultural-distance-page .explanation {
+	width: min(76rem, 100%);
+	max-width: none;
+}
+
+.cultural-distance-page .cultural-header {
+	grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 27rem);
+	gap: clamp(1.5rem, 4vw, 3rem);
+	align-items: center;
+	margin-bottom: 1.25rem;
+	padding-bottom: 1.1rem;
+}
+
+.cultural-distance-page .cultural-header h1 {
+	max-width: 10ch;
+	font-size: clamp(3rem, 6vw, 5.6rem);
+	line-height: 0.84;
+}
+
+.cultural-distance-page .cultural-header p:last-child {
+	color: var(--project-muted);
+	font-size: 1.05rem;
+	line-height: 1.55;
+}
+
+.cultural-distance-page .cultural-app {
+	grid-template-columns: minmax(0, 1fr) minmax(18rem, 21rem);
+	gap: 1rem;
+	align-items: start;
+}
+
+.cultural-distance-page .chart-panel,
+.cultural-distance-page .distance-panel,
+.cultural-distance-page .explanation {
+	border-radius: var(--project-radius);
+	background: linear-gradient(180deg, rgba(169, 142, 106, 0.08), transparent 11rem), #17100a;
+}
+
+.cultural-distance-page .chart-toolbar {
+	grid-template-columns: minmax(16rem, 24rem) minmax(15rem, 1fr) auto;
+	gap: 0.75rem 1rem;
+	align-items: start;
+	padding: 0.9rem;
+}
+
+.cultural-distance-page .mode-switch {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-self: start;
+}
+
+.cultural-distance-page .mode-switch button,
+.cultural-distance-page .zoom-actions button {
+	min-height: 2.5rem;
+	height: 2.5rem;
+	padding: 0 0.8rem;
+}
+
+.cultural-distance-page .line-legend {
+	grid-row: 2;
+	grid-column: 1 / -1;
+	gap: 0.55rem 1rem;
+	padding-top: 0.45rem;
+	border-top: 1px solid var(--project-line-soft);
+	color: var(--project-dim);
+	font-size: 0.76rem;
+	letter-spacing: 0.08em;
+}
+
+.cultural-distance-page .line-legend span {
+	white-space: nowrap;
+}
+
+.cultural-distance-page .trail-toggle,
+.cultural-distance-page .trend-toggle,
+.cultural-distance-page .group-toggle {
+	grid-row: 3;
+	min-height: 2.25rem;
+	padding: 0.35rem 0.55rem;
+	border: 1px solid var(--project-line-soft);
+	border-radius: var(--project-radius);
+	background: rgba(169, 142, 106, 0.06);
+	color: var(--project-muted);
+}
+
+.cultural-distance-page .trail-toggle {
+	grid-column: 1;
+}
+
+.cultural-distance-page .trend-toggle {
+	grid-column: 2;
+}
+
+.cultural-distance-page .group-toggle {
+	grid-column: 3;
+}
+
+.cultural-distance-page .zoom-actions {
+	grid-row: 1;
+	grid-column: 3;
+	align-self: start;
+	justify-self: end;
+	z-index: 1;
+}
+
+.cultural-distance-page button,
+.cultural-distance-page select {
+	border-radius: var(--project-radius);
+	background: #100b07;
+	color: var(--project-ink);
+}
+
+.cultural-distance-page button.active,
+.cultural-distance-page .distance-ranking button[aria-current="true"] {
+	background: #d7b17a;
+	color: #140d08;
+}
+
+.cultural-distance-page .chart-wrap {
+	min-height: 38rem;
+	background: radial-gradient(circle at 52% 38%, rgba(151, 31, 22, 0.2), transparent 24rem), linear-gradient(135deg, #080808, #111);
+}
+
+.cultural-distance-page #culturalChart {
+	height: 38rem;
+}
+
+.cultural-distance-page .group-label {
+	fill: rgba(255, 248, 237, 0.95);
+	stroke: rgba(5, 5, 5, 0.86);
+}
+
+.cultural-distance-page .country-label {
+	fill: #fff8ed;
+	stroke: rgba(5, 5, 5, 0.92);
+}
+
+.cultural-distance-page .axis-label,
+.cultural-distance-page .quadrant-label,
+.cultural-distance-page .tick text {
+	fill: var(--project-muted);
+}
+
+.cultural-distance-page .group-fill {
+	fill-opacity: 0.62;
+}
+
+.cultural-distance-page .country-trail {
+	stroke: rgba(239, 68, 68, 0.9);
+}
+
+.cultural-distance-page .distance-line {
+	stroke: rgba(250, 204, 21, 0.82);
+}
+
+.cultural-distance-page .trend-arrow {
+	stroke: rgba(244, 239, 230, 0.72);
+}
+
+.suspects-page .band {
+	mix-blend-mode: normal;
+}
+
+.suspects-page .point.is-country {
+	fill: #f4efe6;
+	stroke: rgba(5, 5, 5, 0.92);
+}
+
+.suspects-page .point.is-aggregate {
+	fill: #c43b2f;
+	stroke: #050505;
+}
+
+.suspects-page .point.is-selected {
+	stroke: #c9a36a;
+}
+
+.suspects-page .labels text {
+	fill: #fff8ed;
+	stroke: rgba(5, 5, 5, 0.92);
+}
+
+.cultural-distance-page .distance-panel {
+	gap: 0.85rem;
+	padding: 0.9rem;
+}
+
+.cultural-distance-page .selected-summary {
+	gap: 0.6rem;
+}
+
+.cultural-distance-page .selected-summary div {
+	padding: 0.7rem;
+	background: rgba(169, 142, 106, 0.07);
+}
+
+.cultural-distance-page .selected-summary strong {
+	color: #f1e6d2;
+	font-size: 1rem;
+}
+
+.cultural-distance-page .ranking-header {
+	padding-top: 0.35rem;
+	border-top: 1px solid var(--project-line-soft);
+}
+
+.cultural-distance-page .ranking-header h2 {
+	color: #f1e6d2;
+	font-size: 1.05rem;
+}
+
+.cultural-distance-page .distance-ranking {
+	gap: 0.45rem;
+}
+
+.cultural-distance-page .distance-ranking button {
+	grid-template-columns: minmax(0, 1fr) minmax(3.25rem, auto);
+	min-height: 3rem;
+	padding: 0.55rem 0.65rem;
+	border-color: var(--project-line-soft);
+	background: rgba(169, 142, 106, 0.06);
+}
+
+.cultural-distance-page .distance-ranking b,
+.cultural-distance-page .distance-ranking span {
+	display: block;
+	min-width: 0;
+}
+
+.cultural-distance-page .distance-ranking b {
+	color: var(--project-ink);
+	font-size: 0.92rem;
+	line-height: 1.2;
+}
+
+.cultural-distance-page .distance-ranking span {
+	color: var(--project-dim);
+	line-height: 1.35;
+}
+
+.cultural-distance-page .distance-ranking output {
+	align-self: center;
+	justify-self: end;
+	color: var(--project-gold);
+	font-size: 0.95rem;
+}
+
+.cultural-distance-page .explanation {
+	grid-template-columns: minmax(14rem, 0.75fr) 1fr 1fr;
+	margin-top: 1rem;
+	padding: 1rem;
+}
+
+.cultural-distance-page .explanation h2,
+.cultural-distance-page .explanation h3 {
+	color: #f1e6d2;
+}
+
+.cultural-distance-page .explanation p {
+	color: var(--project-muted);
+}
+
+.cultural-distance-page .explanation code {
+	border-color: var(--project-line-soft);
+	background: rgba(169, 142, 106, 0.1);
+	color: var(--project-gold);
+}
+
+@media (max-width: 1080px) {
+	.cultural-distance-page .cultural-header,
+	.cultural-distance-page .cultural-app,
+	.cultural-distance-page .chart-toolbar,
+	.cultural-distance-page .explanation {
+		grid-template-columns: 1fr;
+	}
+
+	.cultural-distance-page .zoom-actions {
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 680px) {
+	.cultural-distance-page {
+		padding: 1rem 0.75rem 2rem;
+	}
+
+	.cultural-distance-page .cultural-header h1 {
+		font-size: clamp(2.55rem, 13vw, 3.75rem);
+		line-height: 0.9;
+	}
+
+	.cultural-distance-page .chart-wrap {
+		min-height: 32rem;
+	}
+
+	.cultural-distance-page #culturalChart {
+		height: 32rem;
+	}
+}

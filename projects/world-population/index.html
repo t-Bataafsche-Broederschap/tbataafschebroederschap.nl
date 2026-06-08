@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>World Population | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Country-by-country population data scraped from Worldometer into a chart-ready JSON file." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/world-population/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<div class="world-population-page">
+				<style>
+					.world-population-page {
+						display: grid;
+						gap: 1rem;
+						color: var(--project-ink, #f4efe6);
+					}
+					.world-population-panel,
+					.world-population-stage {
+						border: 1px solid rgba(151, 31, 22, 0.44);
+						border-radius: 4px;
+						background: #111;
+						box-shadow: 0 1.25rem 2.8rem rgba(0, 0, 0, 0.36);
+					}
+					.world-population-panel {
+						display: grid;
+						gap: 0.9rem;
+						padding: 1rem;
+					}
+					.world-population-panel h2,
+					.world-population-panel p {
+						margin: 0;
+					}
+					.world-population-panel p,
+					.world-population-status {
+						color: var(--project-muted, #c7b9a3);
+					}
+					.world-population-toolbar,
+					.world-population-metric,
+					.world-population-scale,
+					.world-population-visibility,
+					.world-population-comparison,
+					.world-population-continents,
+					.world-population-legend,
+					.world-population-highlight {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						align-items: center;
+					}
+					.world-population-field {
+						display: grid;
+						gap: 0.35rem;
+						flex: 1 1 18rem;
+					}
+					.world-population-slider {
+						display: grid;
+						gap: 0.35rem;
+						flex: 1 1 14rem;
+					}
+					.world-population-field input {
+						border: 1px solid rgba(151, 31, 22, 0.44);
+						border-radius: 4px;
+						padding: 0.6rem 0.75rem;
+						font: inherit;
+						background: #090909;
+						color: var(--project-ink, #f4efe6);
+					}
+					.world-population-slider input[type="range"] {
+						accent-color: var(--project-red-2, #c43b2f);
+					}
+					.world-population-chip {
+						display: inline-flex;
+						align-items: stretch;
+						border: 1px solid rgba(151, 31, 22, 0.44);
+						border-radius: 999px;
+						background: #111;
+						color: var(--project-ink, #f4efe6);
+						overflow: hidden;
+					}
+					.world-population-chip.is-selected {
+						border-color: var(--project-red-2, #c43b2f);
+						background: rgba(151, 31, 22, 0.3);
+						box-shadow: inset 0 0 0 1px var(--project-red-2, #c43b2f);
+						font-weight: 700;
+					}
+					.world-population-chip-swatch {
+						width: 0.8rem;
+						height: 0.8rem;
+						border-radius: 999px;
+						flex: 0 0 auto;
+					}
+					.world-population-chip-label,
+					.world-population-chip-remove {
+						border: 0;
+						background: transparent;
+						color: inherit;
+						font: inherit;
+					}
+					.world-population-chip-label {
+						display: inline-flex;
+						align-items: center;
+						gap: 0.55rem;
+						padding: 0.35rem 0.35rem 0.35rem 0.7rem;
+						cursor: pointer;
+					}
+					.world-population-chip-remove {
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+						min-width: 2rem;
+						padding: 0 0.6rem 0 0.35rem;
+						cursor: pointer;
+						border-left: 1px solid rgba(201, 163, 106, 0.18);
+						font-size: 0.95rem;
+						line-height: 1;
+					}
+					.world-population-chip-remove:hover,
+					.world-population-chip-label:hover {
+						background: rgba(151, 31, 22, 0.22);
+					}
+					.world-population-metric button.is-active,
+					.world-population-scale button.is-active {
+						box-shadow: inset 0 0 0 1px var(--project-red-2, #c43b2f);
+						background: rgba(151, 31, 22, 0.3);
+						color: #fff8ed;
+					}
+					.world-population-scale button:disabled {
+						opacity: 0.55;
+						cursor: not-allowed;
+					}
+					.world-population-continents button.is-active {
+						box-shadow: inset 0 0 0 1px var(--project-red-2, #c43b2f);
+						background: var(--continent-button-bg, rgba(151, 31, 22, 0.3));
+						color: var(--continent-button-fg, #fff8ed);
+					}
+					.world-population-stage {
+						position: relative;
+						padding: 0.75rem;
+					}
+					#world-population-chart {
+						width: 100%;
+						min-height: 34rem;
+					}
+					.world-population-tooltip {
+						position: absolute;
+						display: none;
+						pointer-events: none;
+						max-width: 16rem;
+						padding: 0.6rem 0.75rem;
+						border: 1px solid var(--project-red-2, #c43b2f);
+						border-radius: 4px;
+						background: rgba(8, 8, 8, 0.97);
+						color: var(--project-ink, #f4efe6);
+						box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.48);
+						font-size: 0.9rem;
+						line-height: 1.4;
+						z-index: 2;
+					}
+					.world-population-tooltip strong {
+						display: block;
+						margin-bottom: 0.2rem;
+						color: #fff8ed;
+					}
+					.world-population-note {
+						font-size: 0.92rem;
+					}
+					@media (max-width: 719px) {
+						#world-population-chart {
+							min-height: 26rem;
+						}
+					}
+				</style>
+				<link rel="stylesheet" href="/styles/project-theme.css" />
+				<div class="world-population-panel">
+					<h2>All Countries Over Time</h2>
+					<p>This chart draws every country and dependency in the dataset across the full historical-plus-forecast timeline. All series are visible in the background; highlighted countries are drawn on top so the chart stays readable.</p>
+					<div class="world-population-toolbar">
+						<div class="world-population-metric" aria-label="Metric">
+							<button class="button is-active" data-world-population-metric="population" type="button">Population</button>
+							<button class="button" data-world-population-metric="net-migration-share" type="button">Net migration %</button>
+						</div>
+						<div class="world-population-scale" aria-label="Scale mode">
+							<button class="button is-active" data-world-population-scale="log" type="button">Log scale</button>
+							<button class="button" data-world-population-scale="linear" type="button">Linear scale</button>
+						</div>
+						<label class="world-population-visibility">
+							<input id="world-population-show-background" type="checkbox" checked />
+							<span>Show unselected countries</span>
+						</label>
+						<label class="world-population-comparison">
+							<input id="world-population-show-no-migration" type="checkbox" />
+							<span>Compare active country without net migration</span>
+						</label>
+						<button class="button" id="world-population-reset" type="button">Reset highlights</button>
+					</div>
+					<div class="world-population-continents" id="world-population-continents" aria-label="Highlight continents"></div>
+					<div class="world-population-highlight">
+						<label class="world-population-field">
+							<span>Highlight country</span>
+							<input id="world-population-highlight" list="world-population-country-list" placeholder="Netherlands, India, Nigeria…" />
+						</label>
+						<label class="world-population-slider">
+							<span>Neighbors each side: <strong id="world-population-neighbor-count">0</strong></span>
+							<input id="world-population-neighbor-range" type="range" min="0" max="25" step="1" value="0" />
+						</label>
+						<button class="button" id="world-population-add-highlight" type="button">Add highlight</button>
+						<datalist id="world-population-country-list"></datalist>
+					</div>
+					<div class="world-population-legend" id="world-population-legend" aria-label="Highlighted countries"></div>
+					<p class="world-population-status" id="world-population-status">Loading chart data…</p>
+					<p class="world-population-note">The default population view uses a logarithmic y-axis because a single linear axis flattens nearly every small and medium-sized country. Net migration % is calculated from net migrants divided by population.</p>
+				</div>
+				<div class="world-population-stage">
+					<div id="world-population-chart" aria-label="Population chart for all countries"></div>
+					<div class="world-population-tooltip" id="world-population-tooltip" aria-hidden="true"></div>
+				</div>
+				<div class="world-population-panel">
+					<p>
+						This project generates one aggregated JSON file via <a href="./fetch_population.py"><code>fetch_population.py</code></a
+						>.
+					</p>
+					<p>The scraper merges the historical and forecast tables per country, sorts them by year, normalizes text values, and writes the chart-ready dataset used by this page.</p>
+				</div>
+				<script type="module" src="/projects/world-population/world-population.mjs"></script>
+			</div>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.worldometers.info/world-population/population-by-country/" rel="noopener noreferrer" target="_blank">Worldometer: Countries in the world by population</a>
+						<span>Source table scraped into the chart-ready project data.</span>
+					</li>
+					<li>
+						<a href="https://population.un.org/wpp/" rel="noopener noreferrer" target="_blank">United Nations World Population Prospects</a>
+						<span>Authoritative population-data background and methodology.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

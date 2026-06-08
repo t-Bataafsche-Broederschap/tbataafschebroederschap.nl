@@ -1,0 +1,7083 @@
+{
+	"source": "https://eubudget.com/ranking",
+	"fetched_at": "2026-05-21T18:00:35.385Z",
+	"note": "EUBudget publishes ranking pages for 2000 and 2007-2024. Years 2001-2006 are linearly interpolated between 2000 and 2007 so the animation can run continuously.",
+	"units": {
+		"contribution_m_eur": "million EUR",
+		"receipts_m_eur": "million EUR",
+		"net_balance_m_eur": "million EUR",
+		"net_balance_per_capita_eur": "EUR per resident",
+		"net_balance_pct_gni": "percentage points of GNI"
+	},
+	"years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+	"publishedYears": [2000, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+	"estimatedYears": [2001, 2002, 2003, 2004, 2005, 2006],
+	"countries": [
+		{
+			"code": "AT",
+			"country": "Austria"
+		},
+		{
+			"code": "BE",
+			"country": "Belgium"
+		},
+		{
+			"code": "BG",
+			"country": "Bulgaria"
+		},
+		{
+			"code": "HR",
+			"country": "Croatia"
+		},
+		{
+			"code": "CY",
+			"country": "Cyprus"
+		},
+		{
+			"code": "CZ",
+			"country": "Czech Republic"
+		},
+		{
+			"code": "DK",
+			"country": "Denmark"
+		},
+		{
+			"code": "EE",
+			"country": "Estonia"
+		},
+		{
+			"code": "FI",
+			"country": "Finland"
+		},
+		{
+			"code": "FR",
+			"country": "France"
+		},
+		{
+			"code": "DE",
+			"country": "Germany"
+		},
+		{
+			"code": "GR",
+			"country": "Greece"
+		},
+		{
+			"code": "HU",
+			"country": "Hungary"
+		},
+		{
+			"code": "IE",
+			"country": "Ireland"
+		},
+		{
+			"code": "IT",
+			"country": "Italy"
+		},
+		{
+			"code": "LV",
+			"country": "Latvia"
+		},
+		{
+			"code": "LT",
+			"country": "Lithuania"
+		},
+		{
+			"code": "LU",
+			"country": "Luxembourg"
+		},
+		{
+			"code": "MT",
+			"country": "Malta"
+		},
+		{
+			"code": "NL",
+			"country": "Netherlands"
+		},
+		{
+			"code": "PL",
+			"country": "Poland"
+		},
+		{
+			"code": "PT",
+			"country": "Portugal"
+		},
+		{
+			"code": "RO",
+			"country": "Romania"
+		},
+		{
+			"code": "SK",
+			"country": "Slovakia"
+		},
+		{
+			"code": "SI",
+			"country": "Slovenia"
+		},
+		{
+			"code": "ES",
+			"country": "Spain"
+		},
+		{
+			"code": "SE",
+			"country": "Sweden"
+		}
+	],
+	"extent": {
+		"maxAbsNetBalance": 25967,
+		"maxAbsPctGni": 3.31
+	},
+	"byYear": {
+		"2000": [
+			{
+				"year": 2000,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 1824,
+				"receipts_m_eur": 1398,
+				"net_balance_m_eur": -425,
+				"net_balance_per_capita_eur": -47,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2000,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 2162,
+				"receipts_m_eur": 4239,
+				"net_balance_m_eur": 2077,
+				"net_balance_per_capita_eur": 179,
+				"net_balance_pct_gni": 0.35
+			},
+			{
+				"year": 2000,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 90,
+				"net_balance_m_eur": 90,
+				"net_balance_per_capita_eur": 14,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2000,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 14,
+				"net_balance_m_eur": 14,
+				"net_balance_per_capita_eur": 4,
+				"net_balance_pct_gni": 0.02
+			},
+			{
+				"year": 2000,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 4,
+				"net_balance_m_eur": 4,
+				"net_balance_per_capita_eur": 4,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2000,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 100,
+				"net_balance_m_eur": 100,
+				"net_balance_per_capita_eur": 9,
+				"net_balance_pct_gni": 0.04
+			},
+			{
+				"year": 2000,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 1368,
+				"receipts_m_eur": 1643,
+				"net_balance_m_eur": 275,
+				"net_balance_per_capita_eur": 46,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2000,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 45,
+				"net_balance_m_eur": 45,
+				"net_balance_per_capita_eur": 33,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2000,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1100,
+				"receipts_m_eur": 1393,
+				"net_balance_m_eur": 292,
+				"net_balance_per_capita_eur": 53,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2000,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 12866,
+				"receipts_m_eur": 12378,
+				"net_balance_m_eur": -488,
+				"net_balance_per_capita_eur": -7,
+				"net_balance_pct_gni": -0.02
+			},
+			{
+				"year": 2000,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 18423,
+				"receipts_m_eur": 10257,
+				"net_balance_m_eur": -8167,
+				"net_balance_per_capita_eur": -98,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2000,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1132,
+				"receipts_m_eur": 5529,
+				"net_balance_m_eur": 4396,
+				"net_balance_per_capita_eur": 423,
+				"net_balance_pct_gni": 1.91
+			},
+			{
+				"year": 2000,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 156,
+				"net_balance_m_eur": 156,
+				"net_balance_per_capita_eur": 16,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2000,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 875,
+				"receipts_m_eur": 2617,
+				"net_balance_m_eur": 1742,
+				"net_balance_per_capita_eur": 342,
+				"net_balance_pct_gni": 0.34
+			},
+			{
+				"year": 2000,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 9516,
+				"receipts_m_eur": 10812,
+				"net_balance_m_eur": 1296,
+				"net_balance_per_capita_eur": 22,
+				"net_balance_pct_gni": 0.06
+			},
+			{
+				"year": 2000,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 51,
+				"net_balance_m_eur": 51,
+				"net_balance_per_capita_eur": 28,
+				"net_balance_pct_gni": 0.12
+			},
+			{
+				"year": 2000,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 48,
+				"net_balance_m_eur": 48,
+				"net_balance_per_capita_eur": 17,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2000,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 161,
+				"receipts_m_eur": 885,
+				"net_balance_m_eur": 724,
+				"net_balance_per_capita_eur": 1097,
+				"net_balance_pct_gni": 0.8
+			},
+			{
+				"year": 2000,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 3,
+				"net_balance_m_eur": 3,
+				"net_balance_per_capita_eur": 5,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2000,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 3749,
+				"receipts_m_eur": 2241,
+				"net_balance_m_eur": -1508,
+				"net_balance_per_capita_eur": -84,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2000,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 248,
+				"net_balance_m_eur": 248,
+				"net_balance_per_capita_eur": 7,
+				"net_balance_pct_gni": 0.03
+			},
+			{
+				"year": 2000,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1072,
+				"receipts_m_eur": 3210,
+				"net_balance_m_eur": 2138,
+				"net_balance_per_capita_eur": 208,
+				"net_balance_pct_gni": 0.8
+			},
+			{
+				"year": 2000,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 158,
+				"net_balance_m_eur": 158,
+				"net_balance_per_capita_eur": 8,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2000,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 62,
+				"net_balance_m_eur": 62,
+				"net_balance_per_capita_eur": 11,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2000,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 34,
+				"net_balance_m_eur": 34,
+				"net_balance_per_capita_eur": 16,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2000,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 5528,
+				"receipts_m_eur": 10804,
+				"net_balance_m_eur": 5276,
+				"net_balance_per_capita_eur": 111,
+				"net_balance_pct_gni": 0.35
+			},
+			{
+				"year": 2000,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2243,
+				"receipts_m_eur": 1201,
+				"net_balance_m_eur": -1042,
+				"net_balance_per_capita_eur": -99,
+				"net_balance_pct_gni": -0.17
+			}
+		],
+		"2001": [
+			{
+				"year": 2001,
+				"code": "AT",
+				"country": "Austria",
+				"estimated": true,
+				"contribution_m_eur": 1851.57,
+				"receipts_m_eur": 1426.57,
+				"net_balance_m_eur": -424.14,
+				"net_balance_per_capita_eur": -46.86,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2001,
+				"code": "BE",
+				"country": "Belgium",
+				"estimated": true,
+				"contribution_m_eur": 2237,
+				"receipts_m_eur": 4444.71,
+				"net_balance_m_eur": 2207.71,
+				"net_balance_per_capita_eur": 190.29,
+				"net_balance_pct_gni": 0.37
+			},
+			{
+				"year": 2001,
+				"code": "BG",
+				"country": "Bulgaria",
+				"estimated": true,
+				"contribution_m_eur": 32.86,
+				"receipts_m_eur": 161.57,
+				"net_balance_m_eur": 128.71,
+				"net_balance_per_capita_eur": 20,
+				"net_balance_pct_gni": 0.14
+			},
+			{
+				"year": 2001,
+				"code": "HR",
+				"country": "Croatia",
+				"estimated": true,
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 23,
+				"net_balance_m_eur": 23,
+				"net_balance_per_capita_eur": 6.29,
+				"net_balance_pct_gni": 0.03
+			},
+			{
+				"year": 2001,
+				"code": "CY",
+				"country": "Cyprus",
+				"estimated": true,
+				"contribution_m_eur": 17.71,
+				"receipts_m_eur": 21.57,
+				"net_balance_m_eur": 3.86,
+				"net_balance_per_capita_eur": 3.71,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2001,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"estimated": true,
+				"contribution_m_eur": 141.14,
+				"receipts_m_eur": 331.57,
+				"net_balance_m_eur": 190.43,
+				"net_balance_per_capita_eur": 17.29,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2001,
+				"code": "DK",
+				"country": "Denmark",
+				"estimated": true,
+				"contribution_m_eur": 1442.43,
+				"receipts_m_eur": 1615.29,
+				"net_balance_m_eur": 172.86,
+				"net_balance_per_capita_eur": 28.86,
+				"net_balance_pct_gni": 0.04
+			},
+			{
+				"year": 2001,
+				"code": "EE",
+				"country": "Estonia",
+				"estimated": true,
+				"contribution_m_eur": 19.14,
+				"receipts_m_eur": 92.43,
+				"net_balance_m_eur": 73.29,
+				"net_balance_per_capita_eur": 53.57,
+				"net_balance_pct_gni": 0.18
+			},
+			{
+				"year": 2001,
+				"code": "FI",
+				"country": "Finland",
+				"estimated": true,
+				"contribution_m_eur": 1154.29,
+				"receipts_m_eur": 1397.29,
+				"net_balance_m_eur": 242.14,
+				"net_balance_per_capita_eur": 44,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2001,
+				"code": "FR",
+				"country": "France",
+				"estimated": true,
+				"contribution_m_eur": 13264.57,
+				"receipts_m_eur": 12595,
+				"net_balance_m_eur": -669.57,
+				"net_balance_per_capita_eur": -9.71,
+				"net_balance_pct_gni": -0.03
+			},
+			{
+				"year": 2001,
+				"code": "DE",
+				"country": "Germany",
+				"estimated": true,
+				"contribution_m_eur": 18445.86,
+				"receipts_m_eur": 10575.14,
+				"net_balance_m_eur": -7871.71,
+				"net_balance_per_capita_eur": -94.43,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2001,
+				"code": "GR",
+				"country": "Greece",
+				"estimated": true,
+				"contribution_m_eur": 1368.86,
+				"receipts_m_eur": 5943.29,
+				"net_balance_m_eur": 4573.57,
+				"net_balance_per_capita_eur": 440,
+				"net_balance_pct_gni": 1.99
+			},
+			{
+				"year": 2001,
+				"code": "HU",
+				"country": "Hungary",
+				"estimated": true,
+				"contribution_m_eur": 108.43,
+				"receipts_m_eur": 480.57,
+				"net_balance_m_eur": 372,
+				"net_balance_per_capita_eur": 38.14,
+				"net_balance_pct_gni": 0.19
+			},
+			{
+				"year": 2001,
+				"code": "IE",
+				"country": "Ireland",
+				"estimated": true,
+				"contribution_m_eur": 945.43,
+				"receipts_m_eur": 2551.29,
+				"net_balance_m_eur": 1605.71,
+				"net_balance_per_capita_eur": 315.29,
+				"net_balance_pct_gni": 0.31
+			},
+			{
+				"year": 2001,
+				"code": "IT",
+				"country": "Italy",
+				"estimated": true,
+				"contribution_m_eur": 9919,
+				"receipts_m_eur": 10883.86,
+				"net_balance_m_eur": 964.86,
+				"net_balance_per_capita_eur": 16.43,
+				"net_balance_pct_gni": 0.04
+			},
+			{
+				"year": 2001,
+				"code": "LV",
+				"country": "Latvia",
+				"estimated": true,
+				"contribution_m_eur": 24,
+				"receipts_m_eur": 140.14,
+				"net_balance_m_eur": 116.14,
+				"net_balance_per_capita_eur": 63.14,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2001,
+				"code": "LT",
+				"country": "Lithuania",
+				"estimated": true,
+				"contribution_m_eur": 32.29,
+				"receipts_m_eur": 190.29,
+				"net_balance_m_eur": 158,
+				"net_balance_per_capita_eur": 55.86,
+				"net_balance_pct_gni": 0.22
+			},
+			{
+				"year": 2001,
+				"code": "LU",
+				"country": "Luxembourg",
+				"estimated": true,
+				"contribution_m_eur": 177.57,
+				"receipts_m_eur": 938,
+				"net_balance_m_eur": 760.43,
+				"net_balance_per_capita_eur": 1152.29,
+				"net_balance_pct_gni": 0.84
+			},
+			{
+				"year": 2001,
+				"code": "MT",
+				"country": "Malta",
+				"estimated": true,
+				"contribution_m_eur": 6.43,
+				"receipts_m_eur": 15.29,
+				"net_balance_m_eur": 8.86,
+				"net_balance_per_capita_eur": 16,
+				"net_balance_pct_gni": 0.04
+			},
+			{
+				"year": 2001,
+				"code": "NL",
+				"country": "Netherlands",
+				"estimated": true,
+				"contribution_m_eur": 3846.14,
+				"receipts_m_eur": 2194.57,
+				"net_balance_m_eur": -1651.57,
+				"net_balance_per_capita_eur": -92,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2001,
+				"code": "PL",
+				"country": "Poland",
+				"estimated": true,
+				"contribution_m_eur": 352.86,
+				"receipts_m_eur": 1324.86,
+				"net_balance_m_eur": 972,
+				"net_balance_per_capita_eur": 26,
+				"net_balance_pct_gni": 0.13
+			},
+			{
+				"year": 2001,
+				"code": "PT",
+				"country": "Portugal",
+				"estimated": true,
+				"contribution_m_eur": 1107.86,
+				"receipts_m_eur": 3309.14,
+				"net_balance_m_eur": 2201.29,
+				"net_balance_per_capita_eur": 214.14,
+				"net_balance_pct_gni": 0.82
+			},
+			{
+				"year": 2001,
+				"code": "RO",
+				"country": "Romania",
+				"estimated": true,
+				"contribution_m_eur": 132.86,
+				"receipts_m_eur": 364.29,
+				"net_balance_m_eur": 231.43,
+				"net_balance_per_capita_eur": 11.86,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2001,
+				"code": "SK",
+				"country": "Slovakia",
+				"estimated": true,
+				"contribution_m_eur": 61.29,
+				"receipts_m_eur": 207.86,
+				"net_balance_m_eur": 146.57,
+				"net_balance_per_capita_eur": 26.57,
+				"net_balance_pct_gni": 0.12
+			},
+			{
+				"year": 2001,
+				"code": "SI",
+				"country": "Slovenia",
+				"estimated": true,
+				"contribution_m_eur": 39.57,
+				"receipts_m_eur": 84.86,
+				"net_balance_m_eur": 45.29,
+				"net_balance_per_capita_eur": 21.29,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2001,
+				"code": "ES",
+				"country": "Spain",
+				"estimated": true,
+				"contribution_m_eur": 5959.43,
+				"receipts_m_eur": 11088.57,
+				"net_balance_m_eur": 5129.14,
+				"net_balance_per_capita_eur": 108,
+				"net_balance_pct_gni": 0.34
+			},
+			{
+				"year": 2001,
+				"code": "SE",
+				"country": "Sweden",
+				"estimated": true,
+				"contribution_m_eur": 2276.43,
+				"receipts_m_eur": 1266.43,
+				"net_balance_m_eur": -1010,
+				"net_balance_per_capita_eur": -96,
+				"net_balance_pct_gni": -0.17
+			}
+		],
+		"2002": [
+			{
+				"year": 2002,
+				"code": "AT",
+				"country": "Austria",
+				"estimated": true,
+				"contribution_m_eur": 1879.14,
+				"receipts_m_eur": 1455.14,
+				"net_balance_m_eur": -423.29,
+				"net_balance_per_capita_eur": -46.71,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2002,
+				"code": "BE",
+				"country": "Belgium",
+				"estimated": true,
+				"contribution_m_eur": 2312,
+				"receipts_m_eur": 4650.43,
+				"net_balance_m_eur": 2338.43,
+				"net_balance_per_capita_eur": 201.57,
+				"net_balance_pct_gni": 0.4
+			},
+			{
+				"year": 2002,
+				"code": "BG",
+				"country": "Bulgaria",
+				"estimated": true,
+				"contribution_m_eur": 65.71,
+				"receipts_m_eur": 233.14,
+				"net_balance_m_eur": 167.43,
+				"net_balance_per_capita_eur": 26,
+				"net_balance_pct_gni": 0.18
+			},
+			{
+				"year": 2002,
+				"code": "HR",
+				"country": "Croatia",
+				"estimated": true,
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 32,
+				"net_balance_m_eur": 32,
+				"net_balance_per_capita_eur": 8.57,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2002,
+				"code": "CY",
+				"country": "Cyprus",
+				"estimated": true,
+				"contribution_m_eur": 35.43,
+				"receipts_m_eur": 39.14,
+				"net_balance_m_eur": 3.71,
+				"net_balance_per_capita_eur": 3.43,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2002,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"estimated": true,
+				"contribution_m_eur": 282.29,
+				"receipts_m_eur": 563.14,
+				"net_balance_m_eur": 280.86,
+				"net_balance_per_capita_eur": 25.57,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2002,
+				"code": "DK",
+				"country": "Denmark",
+				"estimated": true,
+				"contribution_m_eur": 1516.86,
+				"receipts_m_eur": 1587.57,
+				"net_balance_m_eur": 70.71,
+				"net_balance_per_capita_eur": 11.71,
+				"net_balance_pct_gni": 0.02
+			},
+			{
+				"year": 2002,
+				"code": "EE",
+				"country": "Estonia",
+				"estimated": true,
+				"contribution_m_eur": 38.29,
+				"receipts_m_eur": 139.86,
+				"net_balance_m_eur": 101.57,
+				"net_balance_per_capita_eur": 74.14,
+				"net_balance_pct_gni": 0.25
+			},
+			{
+				"year": 2002,
+				"code": "FI",
+				"country": "Finland",
+				"estimated": true,
+				"contribution_m_eur": 1208.57,
+				"receipts_m_eur": 1401.57,
+				"net_balance_m_eur": 192.29,
+				"net_balance_per_capita_eur": 35,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2002,
+				"code": "FR",
+				"country": "France",
+				"estimated": true,
+				"contribution_m_eur": 13663.14,
+				"receipts_m_eur": 12812,
+				"net_balance_m_eur": -851.14,
+				"net_balance_per_capita_eur": -12.43,
+				"net_balance_pct_gni": -0.03
+			},
+			{
+				"year": 2002,
+				"code": "DE",
+				"country": "Germany",
+				"estimated": true,
+				"contribution_m_eur": 18468.71,
+				"receipts_m_eur": 10893.29,
+				"net_balance_m_eur": -7576.43,
+				"net_balance_per_capita_eur": -90.86,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2002,
+				"code": "GR",
+				"country": "Greece",
+				"estimated": true,
+				"contribution_m_eur": 1605.71,
+				"receipts_m_eur": 6357.57,
+				"net_balance_m_eur": 4751.14,
+				"net_balance_per_capita_eur": 457,
+				"net_balance_pct_gni": 2.06
+			},
+			{
+				"year": 2002,
+				"code": "HU",
+				"country": "Hungary",
+				"estimated": true,
+				"contribution_m_eur": 216.86,
+				"receipts_m_eur": 805.14,
+				"net_balance_m_eur": 588,
+				"net_balance_per_capita_eur": 60.29,
+				"net_balance_pct_gni": 0.3
+			},
+			{
+				"year": 2002,
+				"code": "IE",
+				"country": "Ireland",
+				"estimated": true,
+				"contribution_m_eur": 1015.86,
+				"receipts_m_eur": 2485.57,
+				"net_balance_m_eur": 1469.43,
+				"net_balance_per_capita_eur": 288.57,
+				"net_balance_pct_gni": 0.29
+			},
+			{
+				"year": 2002,
+				"code": "IT",
+				"country": "Italy",
+				"estimated": true,
+				"contribution_m_eur": 10322,
+				"receipts_m_eur": 10955.71,
+				"net_balance_m_eur": 633.71,
+				"net_balance_per_capita_eur": 10.86,
+				"net_balance_pct_gni": 0.03
+			},
+			{
+				"year": 2002,
+				"code": "LV",
+				"country": "Latvia",
+				"estimated": true,
+				"contribution_m_eur": 48,
+				"receipts_m_eur": 229.29,
+				"net_balance_m_eur": 181.29,
+				"net_balance_per_capita_eur": 98.29,
+				"net_balance_pct_gni": 0.42
+			},
+			{
+				"year": 2002,
+				"code": "LT",
+				"country": "Lithuania",
+				"estimated": true,
+				"contribution_m_eur": 64.57,
+				"receipts_m_eur": 332.57,
+				"net_balance_m_eur": 268,
+				"net_balance_per_capita_eur": 94.71,
+				"net_balance_pct_gni": 0.37
+			},
+			{
+				"year": 2002,
+				"code": "LU",
+				"country": "Luxembourg",
+				"estimated": true,
+				"contribution_m_eur": 194.14,
+				"receipts_m_eur": 991,
+				"net_balance_m_eur": 796.86,
+				"net_balance_per_capita_eur": 1207.57,
+				"net_balance_pct_gni": 0.88
+			},
+			{
+				"year": 2002,
+				"code": "MT",
+				"country": "Malta",
+				"estimated": true,
+				"contribution_m_eur": 12.86,
+				"receipts_m_eur": 27.57,
+				"net_balance_m_eur": 14.71,
+				"net_balance_per_capita_eur": 27,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2002,
+				"code": "NL",
+				"country": "Netherlands",
+				"estimated": true,
+				"contribution_m_eur": 3943.29,
+				"receipts_m_eur": 2148.14,
+				"net_balance_m_eur": -1795.14,
+				"net_balance_per_capita_eur": -100,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2002,
+				"code": "PL",
+				"country": "Poland",
+				"estimated": true,
+				"contribution_m_eur": 705.71,
+				"receipts_m_eur": 2401.71,
+				"net_balance_m_eur": 1696,
+				"net_balance_per_capita_eur": 45,
+				"net_balance_pct_gni": 0.22
+			},
+			{
+				"year": 2002,
+				"code": "PT",
+				"country": "Portugal",
+				"estimated": true,
+				"contribution_m_eur": 1143.71,
+				"receipts_m_eur": 3408.29,
+				"net_balance_m_eur": 2264.57,
+				"net_balance_per_capita_eur": 220.29,
+				"net_balance_pct_gni": 0.85
+			},
+			{
+				"year": 2002,
+				"code": "RO",
+				"country": "Romania",
+				"estimated": true,
+				"contribution_m_eur": 265.71,
+				"receipts_m_eur": 570.57,
+				"net_balance_m_eur": 304.86,
+				"net_balance_per_capita_eur": 15.71,
+				"net_balance_pct_gni": 0.09
+			},
+			{
+				"year": 2002,
+				"code": "SK",
+				"country": "Slovakia",
+				"estimated": true,
+				"contribution_m_eur": 122.57,
+				"receipts_m_eur": 353.71,
+				"net_balance_m_eur": 231.14,
+				"net_balance_per_capita_eur": 42.14,
+				"net_balance_pct_gni": 0.2
+			},
+			{
+				"year": 2002,
+				"code": "SI",
+				"country": "Slovenia",
+				"estimated": true,
+				"contribution_m_eur": 79.14,
+				"receipts_m_eur": 135.71,
+				"net_balance_m_eur": 56.57,
+				"net_balance_per_capita_eur": 26.57,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2002,
+				"code": "ES",
+				"country": "Spain",
+				"estimated": true,
+				"contribution_m_eur": 6390.86,
+				"receipts_m_eur": 11373.14,
+				"net_balance_m_eur": 4982.29,
+				"net_balance_per_capita_eur": 105,
+				"net_balance_pct_gni": 0.33
+			},
+			{
+				"year": 2002,
+				"code": "SE",
+				"country": "Sweden",
+				"estimated": true,
+				"contribution_m_eur": 2309.86,
+				"receipts_m_eur": 1331.86,
+				"net_balance_m_eur": -978,
+				"net_balance_per_capita_eur": -93,
+				"net_balance_pct_gni": -0.16
+			}
+		],
+		"2003": [
+			{
+				"year": 2003,
+				"code": "AT",
+				"country": "Austria",
+				"estimated": true,
+				"contribution_m_eur": 1906.71,
+				"receipts_m_eur": 1483.71,
+				"net_balance_m_eur": -422.43,
+				"net_balance_per_capita_eur": -46.57,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2003,
+				"code": "BE",
+				"country": "Belgium",
+				"estimated": true,
+				"contribution_m_eur": 2387,
+				"receipts_m_eur": 4856.14,
+				"net_balance_m_eur": 2469.14,
+				"net_balance_per_capita_eur": 212.86,
+				"net_balance_pct_gni": 0.42
+			},
+			{
+				"year": 2003,
+				"code": "BG",
+				"country": "Bulgaria",
+				"estimated": true,
+				"contribution_m_eur": 98.57,
+				"receipts_m_eur": 304.71,
+				"net_balance_m_eur": 206.14,
+				"net_balance_per_capita_eur": 32,
+				"net_balance_pct_gni": 0.22
+			},
+			{
+				"year": 2003,
+				"code": "HR",
+				"country": "Croatia",
+				"estimated": true,
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 41,
+				"net_balance_m_eur": 41,
+				"net_balance_per_capita_eur": 10.86,
+				"net_balance_pct_gni": 0.06
+			},
+			{
+				"year": 2003,
+				"code": "CY",
+				"country": "Cyprus",
+				"estimated": true,
+				"contribution_m_eur": 53.14,
+				"receipts_m_eur": 56.71,
+				"net_balance_m_eur": 3.57,
+				"net_balance_per_capita_eur": 3.14,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2003,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"estimated": true,
+				"contribution_m_eur": 423.43,
+				"receipts_m_eur": 794.71,
+				"net_balance_m_eur": 371.29,
+				"net_balance_per_capita_eur": 33.86,
+				"net_balance_pct_gni": 0.14
+			},
+			{
+				"year": 2003,
+				"code": "DK",
+				"country": "Denmark",
+				"estimated": true,
+				"contribution_m_eur": 1591.29,
+				"receipts_m_eur": 1559.86,
+				"net_balance_m_eur": -31.43,
+				"net_balance_per_capita_eur": -5.43,
+				"net_balance_pct_gni": -0.01
+			},
+			{
+				"year": 2003,
+				"code": "EE",
+				"country": "Estonia",
+				"estimated": true,
+				"contribution_m_eur": 57.43,
+				"receipts_m_eur": 187.29,
+				"net_balance_m_eur": 129.86,
+				"net_balance_per_capita_eur": 94.71,
+				"net_balance_pct_gni": 0.32
+			},
+			{
+				"year": 2003,
+				"code": "FI",
+				"country": "Finland",
+				"estimated": true,
+				"contribution_m_eur": 1262.86,
+				"receipts_m_eur": 1405.86,
+				"net_balance_m_eur": 142.43,
+				"net_balance_per_capita_eur": 26,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2003,
+				"code": "FR",
+				"country": "France",
+				"estimated": true,
+				"contribution_m_eur": 14061.71,
+				"receipts_m_eur": 13029,
+				"net_balance_m_eur": -1032.71,
+				"net_balance_per_capita_eur": -15.14,
+				"net_balance_pct_gni": -0.04
+			},
+			{
+				"year": 2003,
+				"code": "DE",
+				"country": "Germany",
+				"estimated": true,
+				"contribution_m_eur": 18491.57,
+				"receipts_m_eur": 11211.43,
+				"net_balance_m_eur": -7281.14,
+				"net_balance_per_capita_eur": -87.29,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2003,
+				"code": "GR",
+				"country": "Greece",
+				"estimated": true,
+				"contribution_m_eur": 1842.57,
+				"receipts_m_eur": 6771.86,
+				"net_balance_m_eur": 4928.71,
+				"net_balance_per_capita_eur": 474,
+				"net_balance_pct_gni": 2.14
+			},
+			{
+				"year": 2003,
+				"code": "HU",
+				"country": "Hungary",
+				"estimated": true,
+				"contribution_m_eur": 325.29,
+				"receipts_m_eur": 1129.71,
+				"net_balance_m_eur": 804,
+				"net_balance_per_capita_eur": 82.43,
+				"net_balance_pct_gni": 0.41
+			},
+			{
+				"year": 2003,
+				"code": "IE",
+				"country": "Ireland",
+				"estimated": true,
+				"contribution_m_eur": 1086.29,
+				"receipts_m_eur": 2419.86,
+				"net_balance_m_eur": 1333.14,
+				"net_balance_per_capita_eur": 261.86,
+				"net_balance_pct_gni": 0.26
+			},
+			{
+				"year": 2003,
+				"code": "IT",
+				"country": "Italy",
+				"estimated": true,
+				"contribution_m_eur": 10725,
+				"receipts_m_eur": 11027.57,
+				"net_balance_m_eur": 302.57,
+				"net_balance_per_capita_eur": 5.29,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2003,
+				"code": "LV",
+				"country": "Latvia",
+				"estimated": true,
+				"contribution_m_eur": 72,
+				"receipts_m_eur": 318.43,
+				"net_balance_m_eur": 246.43,
+				"net_balance_per_capita_eur": 133.43,
+				"net_balance_pct_gni": 0.57
+			},
+			{
+				"year": 2003,
+				"code": "LT",
+				"country": "Lithuania",
+				"estimated": true,
+				"contribution_m_eur": 96.86,
+				"receipts_m_eur": 474.86,
+				"net_balance_m_eur": 378,
+				"net_balance_per_capita_eur": 133.57,
+				"net_balance_pct_gni": 0.52
+			},
+			{
+				"year": 2003,
+				"code": "LU",
+				"country": "Luxembourg",
+				"estimated": true,
+				"contribution_m_eur": 210.71,
+				"receipts_m_eur": 1044,
+				"net_balance_m_eur": 833.29,
+				"net_balance_per_capita_eur": 1262.86,
+				"net_balance_pct_gni": 0.92
+			},
+			{
+				"year": 2003,
+				"code": "MT",
+				"country": "Malta",
+				"estimated": true,
+				"contribution_m_eur": 19.29,
+				"receipts_m_eur": 39.86,
+				"net_balance_m_eur": 20.57,
+				"net_balance_per_capita_eur": 38,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2003,
+				"code": "NL",
+				"country": "Netherlands",
+				"estimated": true,
+				"contribution_m_eur": 4040.43,
+				"receipts_m_eur": 2101.71,
+				"net_balance_m_eur": -1938.71,
+				"net_balance_per_capita_eur": -108,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2003,
+				"code": "PL",
+				"country": "Poland",
+				"estimated": true,
+				"contribution_m_eur": 1058.57,
+				"receipts_m_eur": 3478.57,
+				"net_balance_m_eur": 2420,
+				"net_balance_per_capita_eur": 64,
+				"net_balance_pct_gni": 0.32
+			},
+			{
+				"year": 2003,
+				"code": "PT",
+				"country": "Portugal",
+				"estimated": true,
+				"contribution_m_eur": 1179.57,
+				"receipts_m_eur": 3507.43,
+				"net_balance_m_eur": 2327.86,
+				"net_balance_per_capita_eur": 226.43,
+				"net_balance_pct_gni": 0.87
+			},
+			{
+				"year": 2003,
+				"code": "RO",
+				"country": "Romania",
+				"estimated": true,
+				"contribution_m_eur": 398.57,
+				"receipts_m_eur": 776.86,
+				"net_balance_m_eur": 378.29,
+				"net_balance_per_capita_eur": 19.57,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2003,
+				"code": "SK",
+				"country": "Slovakia",
+				"estimated": true,
+				"contribution_m_eur": 183.86,
+				"receipts_m_eur": 499.57,
+				"net_balance_m_eur": 315.71,
+				"net_balance_per_capita_eur": 57.71,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2003,
+				"code": "SI",
+				"country": "Slovenia",
+				"estimated": true,
+				"contribution_m_eur": 118.71,
+				"receipts_m_eur": 186.57,
+				"net_balance_m_eur": 67.86,
+				"net_balance_per_capita_eur": 31.86,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2003,
+				"code": "ES",
+				"country": "Spain",
+				"estimated": true,
+				"contribution_m_eur": 6822.29,
+				"receipts_m_eur": 11657.71,
+				"net_balance_m_eur": 4835.43,
+				"net_balance_per_capita_eur": 102,
+				"net_balance_pct_gni": 0.32
+			},
+			{
+				"year": 2003,
+				"code": "SE",
+				"country": "Sweden",
+				"estimated": true,
+				"contribution_m_eur": 2343.29,
+				"receipts_m_eur": 1397.29,
+				"net_balance_m_eur": -946,
+				"net_balance_per_capita_eur": -90,
+				"net_balance_pct_gni": -0.16
+			}
+		],
+		"2004": [
+			{
+				"year": 2004,
+				"code": "AT",
+				"country": "Austria",
+				"estimated": true,
+				"contribution_m_eur": 1934.29,
+				"receipts_m_eur": 1512.29,
+				"net_balance_m_eur": -421.57,
+				"net_balance_per_capita_eur": -46.43,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2004,
+				"code": "BE",
+				"country": "Belgium",
+				"estimated": true,
+				"contribution_m_eur": 2462,
+				"receipts_m_eur": 5061.86,
+				"net_balance_m_eur": 2599.86,
+				"net_balance_per_capita_eur": 224.14,
+				"net_balance_pct_gni": 0.44
+			},
+			{
+				"year": 2004,
+				"code": "BG",
+				"country": "Bulgaria",
+				"estimated": true,
+				"contribution_m_eur": 131.43,
+				"receipts_m_eur": 376.29,
+				"net_balance_m_eur": 244.86,
+				"net_balance_per_capita_eur": 38,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2004,
+				"code": "HR",
+				"country": "Croatia",
+				"estimated": true,
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 50,
+				"net_balance_m_eur": 50,
+				"net_balance_per_capita_eur": 13.14,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2004,
+				"code": "CY",
+				"country": "Cyprus",
+				"estimated": true,
+				"contribution_m_eur": 70.86,
+				"receipts_m_eur": 74.29,
+				"net_balance_m_eur": 3.43,
+				"net_balance_per_capita_eur": 2.86,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2004,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"estimated": true,
+				"contribution_m_eur": 564.57,
+				"receipts_m_eur": 1026.29,
+				"net_balance_m_eur": 461.71,
+				"net_balance_per_capita_eur": 42.14,
+				"net_balance_pct_gni": 0.17
+			},
+			{
+				"year": 2004,
+				"code": "DK",
+				"country": "Denmark",
+				"estimated": true,
+				"contribution_m_eur": 1665.71,
+				"receipts_m_eur": 1532.14,
+				"net_balance_m_eur": -133.57,
+				"net_balance_per_capita_eur": -22.57,
+				"net_balance_pct_gni": -0.03
+			},
+			{
+				"year": 2004,
+				"code": "EE",
+				"country": "Estonia",
+				"estimated": true,
+				"contribution_m_eur": 76.57,
+				"receipts_m_eur": 234.71,
+				"net_balance_m_eur": 158.14,
+				"net_balance_per_capita_eur": 115.29,
+				"net_balance_pct_gni": 0.38
+			},
+			{
+				"year": 2004,
+				"code": "FI",
+				"country": "Finland",
+				"estimated": true,
+				"contribution_m_eur": 1317.14,
+				"receipts_m_eur": 1410.14,
+				"net_balance_m_eur": 92.57,
+				"net_balance_per_capita_eur": 17,
+				"net_balance_pct_gni": 0.03
+			},
+			{
+				"year": 2004,
+				"code": "FR",
+				"country": "France",
+				"estimated": true,
+				"contribution_m_eur": 14460.29,
+				"receipts_m_eur": 13246,
+				"net_balance_m_eur": -1214.29,
+				"net_balance_per_capita_eur": -17.86,
+				"net_balance_pct_gni": -0.04
+			},
+			{
+				"year": 2004,
+				"code": "DE",
+				"country": "Germany",
+				"estimated": true,
+				"contribution_m_eur": 18514.43,
+				"receipts_m_eur": 11529.57,
+				"net_balance_m_eur": -6985.86,
+				"net_balance_per_capita_eur": -83.71,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2004,
+				"code": "GR",
+				"country": "Greece",
+				"estimated": true,
+				"contribution_m_eur": 2079.43,
+				"receipts_m_eur": 7186.14,
+				"net_balance_m_eur": 5106.29,
+				"net_balance_per_capita_eur": 491,
+				"net_balance_pct_gni": 2.21
+			},
+			{
+				"year": 2004,
+				"code": "HU",
+				"country": "Hungary",
+				"estimated": true,
+				"contribution_m_eur": 433.71,
+				"receipts_m_eur": 1454.29,
+				"net_balance_m_eur": 1020,
+				"net_balance_per_capita_eur": 104.57,
+				"net_balance_pct_gni": 0.52
+			},
+			{
+				"year": 2004,
+				"code": "IE",
+				"country": "Ireland",
+				"estimated": true,
+				"contribution_m_eur": 1156.71,
+				"receipts_m_eur": 2354.14,
+				"net_balance_m_eur": 1196.86,
+				"net_balance_per_capita_eur": 235.14,
+				"net_balance_pct_gni": 0.23
+			},
+			{
+				"year": 2004,
+				"code": "IT",
+				"country": "Italy",
+				"estimated": true,
+				"contribution_m_eur": 11128,
+				"receipts_m_eur": 11099.43,
+				"net_balance_m_eur": -28.57,
+				"net_balance_per_capita_eur": -0.29,
+				"net_balance_pct_gni": 0
+			},
+			{
+				"year": 2004,
+				"code": "LV",
+				"country": "Latvia",
+				"estimated": true,
+				"contribution_m_eur": 96,
+				"receipts_m_eur": 407.57,
+				"net_balance_m_eur": 311.57,
+				"net_balance_per_capita_eur": 168.57,
+				"net_balance_pct_gni": 0.72
+			},
+			{
+				"year": 2004,
+				"code": "LT",
+				"country": "Lithuania",
+				"estimated": true,
+				"contribution_m_eur": 129.14,
+				"receipts_m_eur": 617.14,
+				"net_balance_m_eur": 488,
+				"net_balance_per_capita_eur": 172.43,
+				"net_balance_pct_gni": 0.67
+			},
+			{
+				"year": 2004,
+				"code": "LU",
+				"country": "Luxembourg",
+				"estimated": true,
+				"contribution_m_eur": 227.29,
+				"receipts_m_eur": 1097,
+				"net_balance_m_eur": 869.71,
+				"net_balance_per_capita_eur": 1318.14,
+				"net_balance_pct_gni": 0.96
+			},
+			{
+				"year": 2004,
+				"code": "MT",
+				"country": "Malta",
+				"estimated": true,
+				"contribution_m_eur": 25.71,
+				"receipts_m_eur": 52.14,
+				"net_balance_m_eur": 26.43,
+				"net_balance_per_capita_eur": 49,
+				"net_balance_pct_gni": 0.14
+			},
+			{
+				"year": 2004,
+				"code": "NL",
+				"country": "Netherlands",
+				"estimated": true,
+				"contribution_m_eur": 4137.57,
+				"receipts_m_eur": 2055.29,
+				"net_balance_m_eur": -2082.29,
+				"net_balance_per_capita_eur": -116,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2004,
+				"code": "PL",
+				"country": "Poland",
+				"estimated": true,
+				"contribution_m_eur": 1411.43,
+				"receipts_m_eur": 4555.43,
+				"net_balance_m_eur": 3144,
+				"net_balance_per_capita_eur": 83,
+				"net_balance_pct_gni": 0.41
+			},
+			{
+				"year": 2004,
+				"code": "PT",
+				"country": "Portugal",
+				"estimated": true,
+				"contribution_m_eur": 1215.43,
+				"receipts_m_eur": 3606.57,
+				"net_balance_m_eur": 2391.14,
+				"net_balance_per_capita_eur": 232.57,
+				"net_balance_pct_gni": 0.9
+			},
+			{
+				"year": 2004,
+				"code": "RO",
+				"country": "Romania",
+				"estimated": true,
+				"contribution_m_eur": 531.43,
+				"receipts_m_eur": 983.14,
+				"net_balance_m_eur": 451.71,
+				"net_balance_per_capita_eur": 23.43,
+				"net_balance_pct_gni": 0.14
+			},
+			{
+				"year": 2004,
+				"code": "SK",
+				"country": "Slovakia",
+				"estimated": true,
+				"contribution_m_eur": 245.14,
+				"receipts_m_eur": 645.43,
+				"net_balance_m_eur": 400.29,
+				"net_balance_per_capita_eur": 73.29,
+				"net_balance_pct_gni": 0.34
+			},
+			{
+				"year": 2004,
+				"code": "SI",
+				"country": "Slovenia",
+				"estimated": true,
+				"contribution_m_eur": 158.29,
+				"receipts_m_eur": 237.43,
+				"net_balance_m_eur": 79.14,
+				"net_balance_per_capita_eur": 37.14,
+				"net_balance_pct_gni": 0.12
+			},
+			{
+				"year": 2004,
+				"code": "ES",
+				"country": "Spain",
+				"estimated": true,
+				"contribution_m_eur": 7253.71,
+				"receipts_m_eur": 11942.29,
+				"net_balance_m_eur": 4688.57,
+				"net_balance_per_capita_eur": 99,
+				"net_balance_pct_gni": 0.32
+			},
+			{
+				"year": 2004,
+				"code": "SE",
+				"country": "Sweden",
+				"estimated": true,
+				"contribution_m_eur": 2376.71,
+				"receipts_m_eur": 1462.71,
+				"net_balance_m_eur": -914,
+				"net_balance_per_capita_eur": -87,
+				"net_balance_pct_gni": -0.15
+			}
+		],
+		"2005": [
+			{
+				"year": 2005,
+				"code": "AT",
+				"country": "Austria",
+				"estimated": true,
+				"contribution_m_eur": 1961.86,
+				"receipts_m_eur": 1540.86,
+				"net_balance_m_eur": -420.71,
+				"net_balance_per_capita_eur": -46.29,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2005,
+				"code": "BE",
+				"country": "Belgium",
+				"estimated": true,
+				"contribution_m_eur": 2537,
+				"receipts_m_eur": 5267.57,
+				"net_balance_m_eur": 2730.57,
+				"net_balance_per_capita_eur": 235.43,
+				"net_balance_pct_gni": 0.46
+			},
+			{
+				"year": 2005,
+				"code": "BG",
+				"country": "Bulgaria",
+				"estimated": true,
+				"contribution_m_eur": 164.29,
+				"receipts_m_eur": 447.86,
+				"net_balance_m_eur": 283.57,
+				"net_balance_per_capita_eur": 44,
+				"net_balance_pct_gni": 0.31
+			},
+			{
+				"year": 2005,
+				"code": "HR",
+				"country": "Croatia",
+				"estimated": true,
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 59,
+				"net_balance_m_eur": 59,
+				"net_balance_per_capita_eur": 15.43,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2005,
+				"code": "CY",
+				"country": "Cyprus",
+				"estimated": true,
+				"contribution_m_eur": 88.57,
+				"receipts_m_eur": 91.86,
+				"net_balance_m_eur": 3.29,
+				"net_balance_per_capita_eur": 2.57,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2005,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"estimated": true,
+				"contribution_m_eur": 705.71,
+				"receipts_m_eur": 1257.86,
+				"net_balance_m_eur": 552.14,
+				"net_balance_per_capita_eur": 50.43,
+				"net_balance_pct_gni": 0.2
+			},
+			{
+				"year": 2005,
+				"code": "DK",
+				"country": "Denmark",
+				"estimated": true,
+				"contribution_m_eur": 1740.14,
+				"receipts_m_eur": 1504.43,
+				"net_balance_m_eur": -235.71,
+				"net_balance_per_capita_eur": -39.71,
+				"net_balance_pct_gni": -0.06
+			},
+			{
+				"year": 2005,
+				"code": "EE",
+				"country": "Estonia",
+				"estimated": true,
+				"contribution_m_eur": 95.71,
+				"receipts_m_eur": 282.14,
+				"net_balance_m_eur": 186.43,
+				"net_balance_per_capita_eur": 135.86,
+				"net_balance_pct_gni": 0.45
+			},
+			{
+				"year": 2005,
+				"code": "FI",
+				"country": "Finland",
+				"estimated": true,
+				"contribution_m_eur": 1371.43,
+				"receipts_m_eur": 1414.43,
+				"net_balance_m_eur": 42.71,
+				"net_balance_per_capita_eur": 8,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2005,
+				"code": "FR",
+				"country": "France",
+				"estimated": true,
+				"contribution_m_eur": 14858.86,
+				"receipts_m_eur": 13463,
+				"net_balance_m_eur": -1395.86,
+				"net_balance_per_capita_eur": -20.57,
+				"net_balance_pct_gni": -0.05
+			},
+			{
+				"year": 2005,
+				"code": "DE",
+				"country": "Germany",
+				"estimated": true,
+				"contribution_m_eur": 18537.29,
+				"receipts_m_eur": 11847.71,
+				"net_balance_m_eur": -6690.57,
+				"net_balance_per_capita_eur": -80.14,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2005,
+				"code": "GR",
+				"country": "Greece",
+				"estimated": true,
+				"contribution_m_eur": 2316.29,
+				"receipts_m_eur": 7600.43,
+				"net_balance_m_eur": 5283.86,
+				"net_balance_per_capita_eur": 508,
+				"net_balance_pct_gni": 2.29
+			},
+			{
+				"year": 2005,
+				"code": "HU",
+				"country": "Hungary",
+				"estimated": true,
+				"contribution_m_eur": 542.14,
+				"receipts_m_eur": 1778.86,
+				"net_balance_m_eur": 1236,
+				"net_balance_per_capita_eur": 126.71,
+				"net_balance_pct_gni": 0.63
+			},
+			{
+				"year": 2005,
+				"code": "IE",
+				"country": "Ireland",
+				"estimated": true,
+				"contribution_m_eur": 1227.14,
+				"receipts_m_eur": 2288.43,
+				"net_balance_m_eur": 1060.57,
+				"net_balance_per_capita_eur": 208.43,
+				"net_balance_pct_gni": 0.2
+			},
+			{
+				"year": 2005,
+				"code": "IT",
+				"country": "Italy",
+				"estimated": true,
+				"contribution_m_eur": 11531,
+				"receipts_m_eur": 11171.29,
+				"net_balance_m_eur": -359.71,
+				"net_balance_per_capita_eur": -5.86,
+				"net_balance_pct_gni": -0.02
+			},
+			{
+				"year": 2005,
+				"code": "LV",
+				"country": "Latvia",
+				"estimated": true,
+				"contribution_m_eur": 120,
+				"receipts_m_eur": 496.71,
+				"net_balance_m_eur": 376.71,
+				"net_balance_per_capita_eur": 203.71,
+				"net_balance_pct_gni": 0.87
+			},
+			{
+				"year": 2005,
+				"code": "LT",
+				"country": "Lithuania",
+				"estimated": true,
+				"contribution_m_eur": 161.43,
+				"receipts_m_eur": 759.43,
+				"net_balance_m_eur": 598,
+				"net_balance_per_capita_eur": 211.29,
+				"net_balance_pct_gni": 0.82
+			},
+			{
+				"year": 2005,
+				"code": "LU",
+				"country": "Luxembourg",
+				"estimated": true,
+				"contribution_m_eur": 243.86,
+				"receipts_m_eur": 1150,
+				"net_balance_m_eur": 906.14,
+				"net_balance_per_capita_eur": 1373.43,
+				"net_balance_pct_gni": 1
+			},
+			{
+				"year": 2005,
+				"code": "MT",
+				"country": "Malta",
+				"estimated": true,
+				"contribution_m_eur": 32.14,
+				"receipts_m_eur": 64.43,
+				"net_balance_m_eur": 32.29,
+				"net_balance_per_capita_eur": 60,
+				"net_balance_pct_gni": 0.17
+			},
+			{
+				"year": 2005,
+				"code": "NL",
+				"country": "Netherlands",
+				"estimated": true,
+				"contribution_m_eur": 4234.71,
+				"receipts_m_eur": 2008.86,
+				"net_balance_m_eur": -2225.86,
+				"net_balance_per_capita_eur": -124,
+				"net_balance_pct_gni": -0.2
+			},
+			{
+				"year": 2005,
+				"code": "PL",
+				"country": "Poland",
+				"estimated": true,
+				"contribution_m_eur": 1764.29,
+				"receipts_m_eur": 5632.29,
+				"net_balance_m_eur": 3868,
+				"net_balance_per_capita_eur": 102,
+				"net_balance_pct_gni": 0.51
+			},
+			{
+				"year": 2005,
+				"code": "PT",
+				"country": "Portugal",
+				"estimated": true,
+				"contribution_m_eur": 1251.29,
+				"receipts_m_eur": 3705.71,
+				"net_balance_m_eur": 2454.43,
+				"net_balance_per_capita_eur": 238.71,
+				"net_balance_pct_gni": 0.92
+			},
+			{
+				"year": 2005,
+				"code": "RO",
+				"country": "Romania",
+				"estimated": true,
+				"contribution_m_eur": 664.29,
+				"receipts_m_eur": 1189.43,
+				"net_balance_m_eur": 525.14,
+				"net_balance_per_capita_eur": 27.29,
+				"net_balance_pct_gni": 0.16
+			},
+			{
+				"year": 2005,
+				"code": "SK",
+				"country": "Slovakia",
+				"estimated": true,
+				"contribution_m_eur": 306.43,
+				"receipts_m_eur": 791.29,
+				"net_balance_m_eur": 484.86,
+				"net_balance_per_capita_eur": 88.86,
+				"net_balance_pct_gni": 0.41
+			},
+			{
+				"year": 2005,
+				"code": "SI",
+				"country": "Slovenia",
+				"estimated": true,
+				"contribution_m_eur": 197.86,
+				"receipts_m_eur": 288.29,
+				"net_balance_m_eur": 90.43,
+				"net_balance_per_capita_eur": 42.43,
+				"net_balance_pct_gni": 0.14
+			},
+			{
+				"year": 2005,
+				"code": "ES",
+				"country": "Spain",
+				"estimated": true,
+				"contribution_m_eur": 7685.14,
+				"receipts_m_eur": 12226.86,
+				"net_balance_m_eur": 4541.71,
+				"net_balance_per_capita_eur": 96,
+				"net_balance_pct_gni": 0.31
+			},
+			{
+				"year": 2005,
+				"code": "SE",
+				"country": "Sweden",
+				"estimated": true,
+				"contribution_m_eur": 2410.14,
+				"receipts_m_eur": 1528.14,
+				"net_balance_m_eur": -882,
+				"net_balance_per_capita_eur": -84,
+				"net_balance_pct_gni": -0.15
+			}
+		],
+		"2006": [
+			{
+				"year": 2006,
+				"code": "AT",
+				"country": "Austria",
+				"estimated": true,
+				"contribution_m_eur": 1989.43,
+				"receipts_m_eur": 1569.43,
+				"net_balance_m_eur": -419.86,
+				"net_balance_per_capita_eur": -46.14,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2006,
+				"code": "BE",
+				"country": "Belgium",
+				"estimated": true,
+				"contribution_m_eur": 2612,
+				"receipts_m_eur": 5473.29,
+				"net_balance_m_eur": 2861.29,
+				"net_balance_per_capita_eur": 246.71,
+				"net_balance_pct_gni": 0.49
+			},
+			{
+				"year": 2006,
+				"code": "BG",
+				"country": "Bulgaria",
+				"estimated": true,
+				"contribution_m_eur": 197.14,
+				"receipts_m_eur": 519.43,
+				"net_balance_m_eur": 322.29,
+				"net_balance_per_capita_eur": 50,
+				"net_balance_pct_gni": 0.35
+			},
+			{
+				"year": 2006,
+				"code": "HR",
+				"country": "Croatia",
+				"estimated": true,
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 68,
+				"net_balance_m_eur": 68,
+				"net_balance_per_capita_eur": 17.71,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2006,
+				"code": "CY",
+				"country": "Cyprus",
+				"estimated": true,
+				"contribution_m_eur": 106.29,
+				"receipts_m_eur": 109.43,
+				"net_balance_m_eur": 3.14,
+				"net_balance_per_capita_eur": 2.29,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2006,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"estimated": true,
+				"contribution_m_eur": 846.86,
+				"receipts_m_eur": 1489.43,
+				"net_balance_m_eur": 642.57,
+				"net_balance_per_capita_eur": 58.71,
+				"net_balance_pct_gni": 0.24
+			},
+			{
+				"year": 2006,
+				"code": "DK",
+				"country": "Denmark",
+				"estimated": true,
+				"contribution_m_eur": 1814.57,
+				"receipts_m_eur": 1476.71,
+				"net_balance_m_eur": -337.86,
+				"net_balance_per_capita_eur": -56.86,
+				"net_balance_pct_gni": -0.08
+			},
+			{
+				"year": 2006,
+				"code": "EE",
+				"country": "Estonia",
+				"estimated": true,
+				"contribution_m_eur": 114.86,
+				"receipts_m_eur": 329.57,
+				"net_balance_m_eur": 214.71,
+				"net_balance_per_capita_eur": 156.43,
+				"net_balance_pct_gni": 0.52
+			},
+			{
+				"year": 2006,
+				"code": "FI",
+				"country": "Finland",
+				"estimated": true,
+				"contribution_m_eur": 1425.71,
+				"receipts_m_eur": 1418.71,
+				"net_balance_m_eur": -7.14,
+				"net_balance_per_capita_eur": -1,
+				"net_balance_pct_gni": 0
+			},
+			{
+				"year": 2006,
+				"code": "FR",
+				"country": "France",
+				"estimated": true,
+				"contribution_m_eur": 15257.43,
+				"receipts_m_eur": 13680,
+				"net_balance_m_eur": -1577.43,
+				"net_balance_per_capita_eur": -23.29,
+				"net_balance_pct_gni": -0.05
+			},
+			{
+				"year": 2006,
+				"code": "DE",
+				"country": "Germany",
+				"estimated": true,
+				"contribution_m_eur": 18560.14,
+				"receipts_m_eur": 12165.86,
+				"net_balance_m_eur": -6395.29,
+				"net_balance_per_capita_eur": -76.57,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2006,
+				"code": "GR",
+				"country": "Greece",
+				"estimated": true,
+				"contribution_m_eur": 2553.14,
+				"receipts_m_eur": 8014.71,
+				"net_balance_m_eur": 5461.43,
+				"net_balance_per_capita_eur": 525,
+				"net_balance_pct_gni": 2.36
+			},
+			{
+				"year": 2006,
+				"code": "HU",
+				"country": "Hungary",
+				"estimated": true,
+				"contribution_m_eur": 650.57,
+				"receipts_m_eur": 2103.43,
+				"net_balance_m_eur": 1452,
+				"net_balance_per_capita_eur": 148.86,
+				"net_balance_pct_gni": 0.74
+			},
+			{
+				"year": 2006,
+				"code": "IE",
+				"country": "Ireland",
+				"estimated": true,
+				"contribution_m_eur": 1297.57,
+				"receipts_m_eur": 2222.71,
+				"net_balance_m_eur": 924.29,
+				"net_balance_per_capita_eur": 181.71,
+				"net_balance_pct_gni": 0.18
+			},
+			{
+				"year": 2006,
+				"code": "IT",
+				"country": "Italy",
+				"estimated": true,
+				"contribution_m_eur": 11934,
+				"receipts_m_eur": 11243.14,
+				"net_balance_m_eur": -690.86,
+				"net_balance_per_capita_eur": -11.43,
+				"net_balance_pct_gni": -0.03
+			},
+			{
+				"year": 2006,
+				"code": "LV",
+				"country": "Latvia",
+				"estimated": true,
+				"contribution_m_eur": 144,
+				"receipts_m_eur": 585.86,
+				"net_balance_m_eur": 441.86,
+				"net_balance_per_capita_eur": 238.86,
+				"net_balance_pct_gni": 1.02
+			},
+			{
+				"year": 2006,
+				"code": "LT",
+				"country": "Lithuania",
+				"estimated": true,
+				"contribution_m_eur": 193.71,
+				"receipts_m_eur": 901.71,
+				"net_balance_m_eur": 708,
+				"net_balance_per_capita_eur": 250.14,
+				"net_balance_pct_gni": 0.97
+			},
+			{
+				"year": 2006,
+				"code": "LU",
+				"country": "Luxembourg",
+				"estimated": true,
+				"contribution_m_eur": 260.43,
+				"receipts_m_eur": 1203,
+				"net_balance_m_eur": 942.57,
+				"net_balance_per_capita_eur": 1428.71,
+				"net_balance_pct_gni": 1.04
+			},
+			{
+				"year": 2006,
+				"code": "MT",
+				"country": "Malta",
+				"estimated": true,
+				"contribution_m_eur": 38.57,
+				"receipts_m_eur": 76.71,
+				"net_balance_m_eur": 38.14,
+				"net_balance_per_capita_eur": 71,
+				"net_balance_pct_gni": 0.21
+			},
+			{
+				"year": 2006,
+				"code": "NL",
+				"country": "Netherlands",
+				"estimated": true,
+				"contribution_m_eur": 4331.86,
+				"receipts_m_eur": 1962.43,
+				"net_balance_m_eur": -2369.43,
+				"net_balance_per_capita_eur": -132,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2006,
+				"code": "PL",
+				"country": "Poland",
+				"estimated": true,
+				"contribution_m_eur": 2117.14,
+				"receipts_m_eur": 6709.14,
+				"net_balance_m_eur": 4592,
+				"net_balance_per_capita_eur": 121,
+				"net_balance_pct_gni": 0.6
+			},
+			{
+				"year": 2006,
+				"code": "PT",
+				"country": "Portugal",
+				"estimated": true,
+				"contribution_m_eur": 1287.14,
+				"receipts_m_eur": 3804.86,
+				"net_balance_m_eur": 2517.71,
+				"net_balance_per_capita_eur": 244.86,
+				"net_balance_pct_gni": 0.95
+			},
+			{
+				"year": 2006,
+				"code": "RO",
+				"country": "Romania",
+				"estimated": true,
+				"contribution_m_eur": 797.14,
+				"receipts_m_eur": 1395.71,
+				"net_balance_m_eur": 598.57,
+				"net_balance_per_capita_eur": 31.14,
+				"net_balance_pct_gni": 0.18
+			},
+			{
+				"year": 2006,
+				"code": "SK",
+				"country": "Slovakia",
+				"estimated": true,
+				"contribution_m_eur": 367.71,
+				"receipts_m_eur": 937.14,
+				"net_balance_m_eur": 569.43,
+				"net_balance_per_capita_eur": 104.43,
+				"net_balance_pct_gni": 0.49
+			},
+			{
+				"year": 2006,
+				"code": "SI",
+				"country": "Slovenia",
+				"estimated": true,
+				"contribution_m_eur": 237.43,
+				"receipts_m_eur": 339.14,
+				"net_balance_m_eur": 101.71,
+				"net_balance_per_capita_eur": 47.71,
+				"net_balance_pct_gni": 0.15
+			},
+			{
+				"year": 2006,
+				"code": "ES",
+				"country": "Spain",
+				"estimated": true,
+				"contribution_m_eur": 8116.57,
+				"receipts_m_eur": 12511.43,
+				"net_balance_m_eur": 4394.86,
+				"net_balance_per_capita_eur": 93,
+				"net_balance_pct_gni": 0.3
+			},
+			{
+				"year": 2006,
+				"code": "SE",
+				"country": "Sweden",
+				"estimated": true,
+				"contribution_m_eur": 2443.57,
+				"receipts_m_eur": 1593.57,
+				"net_balance_m_eur": -850,
+				"net_balance_per_capita_eur": -81,
+				"net_balance_pct_gni": -0.14
+			}
+		],
+		"2007": [
+			{
+				"year": 2007,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2017,
+				"receipts_m_eur": 1598,
+				"net_balance_m_eur": -419,
+				"net_balance_per_capita_eur": -46,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2007,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 2687,
+				"receipts_m_eur": 5679,
+				"net_balance_m_eur": 2992,
+				"net_balance_per_capita_eur": 258,
+				"net_balance_pct_gni": 0.51
+			},
+			{
+				"year": 2007,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 230,
+				"receipts_m_eur": 591,
+				"net_balance_m_eur": 361,
+				"net_balance_per_capita_eur": 56,
+				"net_balance_pct_gni": 0.39
+			},
+			{
+				"year": 2007,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 77,
+				"net_balance_m_eur": 77,
+				"net_balance_per_capita_eur": 20,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2007,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 124,
+				"receipts_m_eur": 127,
+				"net_balance_m_eur": 3,
+				"net_balance_per_capita_eur": 2,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2007,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 988,
+				"receipts_m_eur": 1721,
+				"net_balance_m_eur": 733,
+				"net_balance_per_capita_eur": 67,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2007,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 1889,
+				"receipts_m_eur": 1449,
+				"net_balance_m_eur": -440,
+				"net_balance_per_capita_eur": -74,
+				"net_balance_pct_gni": -0.11
+			},
+			{
+				"year": 2007,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 134,
+				"receipts_m_eur": 377,
+				"net_balance_m_eur": 243,
+				"net_balance_per_capita_eur": 177,
+				"net_balance_pct_gni": 0.59
+			},
+			{
+				"year": 2007,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1480,
+				"receipts_m_eur": 1423,
+				"net_balance_m_eur": -57,
+				"net_balance_per_capita_eur": -10,
+				"net_balance_pct_gni": -0.02
+			},
+			{
+				"year": 2007,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 15656,
+				"receipts_m_eur": 13897,
+				"net_balance_m_eur": -1759,
+				"net_balance_per_capita_eur": -26,
+				"net_balance_pct_gni": -0.06
+			},
+			{
+				"year": 2007,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 18583,
+				"receipts_m_eur": 12484,
+				"net_balance_m_eur": -6100,
+				"net_balance_per_capita_eur": -73,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2007,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 2790,
+				"receipts_m_eur": 8429,
+				"net_balance_m_eur": 5639,
+				"net_balance_per_capita_eur": 542,
+				"net_balance_pct_gni": 2.44
+			},
+			{
+				"year": 2007,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 759,
+				"receipts_m_eur": 2428,
+				"net_balance_m_eur": 1668,
+				"net_balance_per_capita_eur": 171,
+				"net_balance_pct_gni": 0.85
+			},
+			{
+				"year": 2007,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1368,
+				"receipts_m_eur": 2157,
+				"net_balance_m_eur": 788,
+				"net_balance_per_capita_eur": 155,
+				"net_balance_pct_gni": 0.15
+			},
+			{
+				"year": 2007,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 12337,
+				"receipts_m_eur": 11315,
+				"net_balance_m_eur": -1022,
+				"net_balance_per_capita_eur": -17,
+				"net_balance_pct_gni": -0.05
+			},
+			{
+				"year": 2007,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 168,
+				"receipts_m_eur": 675,
+				"net_balance_m_eur": 507,
+				"net_balance_per_capita_eur": 274,
+				"net_balance_pct_gni": 1.17
+			},
+			{
+				"year": 2007,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 226,
+				"receipts_m_eur": 1044,
+				"net_balance_m_eur": 818,
+				"net_balance_per_capita_eur": 289,
+				"net_balance_pct_gni": 1.12
+			},
+			{
+				"year": 2007,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 277,
+				"receipts_m_eur": 1256,
+				"net_balance_m_eur": 979,
+				"net_balance_per_capita_eur": 1484,
+				"net_balance_pct_gni": 1.08
+			},
+			{
+				"year": 2007,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 45,
+				"receipts_m_eur": 89,
+				"net_balance_m_eur": 44,
+				"net_balance_per_capita_eur": 82,
+				"net_balance_pct_gni": 0.24
+			},
+			{
+				"year": 2007,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 4429,
+				"receipts_m_eur": 1916,
+				"net_balance_m_eur": -2513,
+				"net_balance_per_capita_eur": -140,
+				"net_balance_pct_gni": -0.23
+			},
+			{
+				"year": 2007,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 2470,
+				"receipts_m_eur": 7786,
+				"net_balance_m_eur": 5316,
+				"net_balance_per_capita_eur": 140,
+				"net_balance_pct_gni": 0.7
+			},
+			{
+				"year": 2007,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1323,
+				"receipts_m_eur": 3904,
+				"net_balance_m_eur": 2581,
+				"net_balance_per_capita_eur": 251,
+				"net_balance_pct_gni": 0.97
+			},
+			{
+				"year": 2007,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 930,
+				"receipts_m_eur": 1602,
+				"net_balance_m_eur": 672,
+				"net_balance_per_capita_eur": 35,
+				"net_balance_pct_gni": 0.2
+			},
+			{
+				"year": 2007,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 429,
+				"receipts_m_eur": 1083,
+				"net_balance_m_eur": 654,
+				"net_balance_per_capita_eur": 120,
+				"net_balance_pct_gni": 0.56
+			},
+			{
+				"year": 2007,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 277,
+				"receipts_m_eur": 390,
+				"net_balance_m_eur": 113,
+				"net_balance_per_capita_eur": 53,
+				"net_balance_pct_gni": 0.17
+			},
+			{
+				"year": 2007,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 8548,
+				"receipts_m_eur": 12796,
+				"net_balance_m_eur": 4248,
+				"net_balance_per_capita_eur": 90,
+				"net_balance_pct_gni": 0.29
+			},
+			{
+				"year": 2007,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2477,
+				"receipts_m_eur": 1659,
+				"net_balance_m_eur": -818,
+				"net_balance_per_capita_eur": -78,
+				"net_balance_pct_gni": -0.14
+			}
+		],
+		"2008": [
+			{
+				"year": 2008,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 1993,
+				"receipts_m_eur": 1777,
+				"net_balance_m_eur": -215,
+				"net_balance_per_capita_eur": -24,
+				"net_balance_pct_gni": -0.05
+			},
+			{
+				"year": 2008,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 2811,
+				"receipts_m_eur": 6108,
+				"net_balance_m_eur": 3297,
+				"net_balance_per_capita_eur": 284,
+				"net_balance_pct_gni": 0.56
+			},
+			{
+				"year": 2008,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 277,
+				"receipts_m_eur": 972,
+				"net_balance_m_eur": 694,
+				"net_balance_per_capita_eur": 107,
+				"net_balance_pct_gni": 0.76
+			},
+			{
+				"year": 2008,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 135,
+				"net_balance_m_eur": 135,
+				"net_balance_per_capita_eur": 35,
+				"net_balance_pct_gni": 0.19
+			},
+			{
+				"year": 2008,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 135,
+				"receipts_m_eur": 130,
+				"net_balance_m_eur": -5,
+				"net_balance_per_capita_eur": -4,
+				"net_balance_pct_gni": -0.02
+			},
+			{
+				"year": 2008,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1189,
+				"receipts_m_eur": 2441,
+				"net_balance_m_eur": 1252,
+				"net_balance_per_capita_eur": 115,
+				"net_balance_pct_gni": 0.46
+			},
+			{
+				"year": 2008,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 1958,
+				"receipts_m_eur": 1557,
+				"net_balance_m_eur": -400,
+				"net_balance_per_capita_eur": -67,
+				"net_balance_pct_gni": -0.1
+			},
+			{
+				"year": 2008,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 127,
+				"receipts_m_eur": 368,
+				"net_balance_m_eur": 241,
+				"net_balance_per_capita_eur": 176,
+				"net_balance_pct_gni": 0.59
+			},
+			{
+				"year": 2008,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1543,
+				"receipts_m_eur": 1321,
+				"net_balance_m_eur": -222,
+				"net_balance_per_capita_eur": -40,
+				"net_balance_pct_gni": -0.07
+			},
+			{
+				"year": 2008,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 16457,
+				"receipts_m_eur": 13722,
+				"net_balance_m_eur": -2735,
+				"net_balance_per_capita_eur": -40,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2008,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 18878,
+				"receipts_m_eur": 11194,
+				"net_balance_m_eur": -7685,
+				"net_balance_per_capita_eur": -92,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2008,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 2097,
+				"receipts_m_eur": 8514,
+				"net_balance_m_eur": 6417,
+				"net_balance_per_capita_eur": 617,
+				"net_balance_pct_gni": 2.78
+			},
+			{
+				"year": 2008,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 834,
+				"receipts_m_eur": 2003,
+				"net_balance_m_eur": 1169,
+				"net_balance_per_capita_eur": 120,
+				"net_balance_pct_gni": 0.59
+			},
+			{
+				"year": 2008,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1376,
+				"receipts_m_eur": 2052,
+				"net_balance_m_eur": 676,
+				"net_balance_per_capita_eur": 133,
+				"net_balance_pct_gni": 0.13
+			},
+			{
+				"year": 2008,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 13496,
+				"receipts_m_eur": 10306,
+				"net_balance_m_eur": -3189,
+				"net_balance_per_capita_eur": -54,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2008,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 187,
+				"receipts_m_eur": 610,
+				"net_balance_m_eur": 424,
+				"net_balance_per_capita_eur": 229,
+				"net_balance_pct_gni": 0.97
+			},
+			{
+				"year": 2008,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 269,
+				"receipts_m_eur": 1134,
+				"net_balance_m_eur": 865,
+				"net_balance_per_capita_eur": 306,
+				"net_balance_pct_gni": 1.18
+			},
+			{
+				"year": 2008,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 245,
+				"receipts_m_eur": 1410,
+				"net_balance_m_eur": 1165,
+				"net_balance_per_capita_eur": 1765,
+				"net_balance_pct_gni": 1.29
+			},
+			{
+				"year": 2008,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 47,
+				"receipts_m_eur": 87,
+				"net_balance_m_eur": 40,
+				"net_balance_per_capita_eur": 75,
+				"net_balance_pct_gni": 0.22
+			},
+			{
+				"year": 2008,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 4636,
+				"receipts_m_eur": 2267,
+				"net_balance_m_eur": -2369,
+				"net_balance_per_capita_eur": -132,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2008,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3022,
+				"receipts_m_eur": 7639,
+				"net_balance_m_eur": 4618,
+				"net_balance_per_capita_eur": 122,
+				"net_balance_pct_gni": 0.61
+			},
+			{
+				"year": 2008,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1332,
+				"receipts_m_eur": 4117,
+				"net_balance_m_eur": 2785,
+				"net_balance_per_capita_eur": 270,
+				"net_balance_pct_gni": 1.05
+			},
+			{
+				"year": 2008,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1018,
+				"receipts_m_eur": 2666,
+				"net_balance_m_eur": 1648,
+				"net_balance_per_capita_eur": 87,
+				"net_balance_pct_gni": 0.5
+			},
+			{
+				"year": 2008,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 483,
+				"receipts_m_eur": 1242,
+				"net_balance_m_eur": 759,
+				"net_balance_per_capita_eur": 139,
+				"net_balance_pct_gni": 0.65
+			},
+			{
+				"year": 2008,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 319,
+				"receipts_m_eur": 456,
+				"net_balance_m_eur": 138,
+				"net_balance_per_capita_eur": 65,
+				"net_balance_pct_gni": 0.21
+			},
+			{
+				"year": 2008,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 8776,
+				"receipts_m_eur": 12094,
+				"net_balance_m_eur": 3317,
+				"net_balance_per_capita_eur": 70,
+				"net_balance_pct_gni": 0.22
+			},
+			{
+				"year": 2008,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2769,
+				"receipts_m_eur": 1464,
+				"net_balance_m_eur": -1305,
+				"net_balance_per_capita_eur": -124,
+				"net_balance_pct_gni": -0.22
+			}
+		],
+		"2009": [
+			{
+				"year": 2009,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2159,
+				"receipts_m_eur": 1817,
+				"net_balance_m_eur": -342,
+				"net_balance_per_capita_eur": -38,
+				"net_balance_pct_gni": -0.07
+			},
+			{
+				"year": 2009,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3238,
+				"receipts_m_eur": 5629,
+				"net_balance_m_eur": 2391,
+				"net_balance_per_capita_eur": 206,
+				"net_balance_pct_gni": 0.41
+			},
+			{
+				"year": 2009,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 337,
+				"receipts_m_eur": 979,
+				"net_balance_m_eur": 642,
+				"net_balance_per_capita_eur": 99,
+				"net_balance_pct_gni": 0.7
+			},
+			{
+				"year": 2009,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 107,
+				"net_balance_m_eur": 107,
+				"net_balance_per_capita_eur": 27,
+				"net_balance_pct_gni": 0.15
+			},
+			{
+				"year": 2009,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 165,
+				"receipts_m_eur": 172,
+				"net_balance_m_eur": 7,
+				"net_balance_per_capita_eur": 6,
+				"net_balance_pct_gni": 0.03
+			},
+			{
+				"year": 2009,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1207,
+				"receipts_m_eur": 2949,
+				"net_balance_m_eur": 1741,
+				"net_balance_per_capita_eur": 160,
+				"net_balance_pct_gni": 0.64
+			},
+			{
+				"year": 2009,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2208,
+				"receipts_m_eur": 1328,
+				"net_balance_m_eur": -880,
+				"net_balance_per_capita_eur": -148,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2009,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 134,
+				"receipts_m_eur": 716,
+				"net_balance_m_eur": 582,
+				"net_balance_per_capita_eur": 425,
+				"net_balance_pct_gni": 1.41
+			},
+			{
+				"year": 2009,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1699,
+				"receipts_m_eur": 1208,
+				"net_balance_m_eur": -491,
+				"net_balance_per_capita_eur": -88,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2009,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 18830,
+				"receipts_m_eur": 13632,
+				"net_balance_m_eur": -5198,
+				"net_balance_per_capita_eur": -76,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2009,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 17564,
+				"receipts_m_eur": 11713,
+				"net_balance_m_eur": -5851,
+				"net_balance_per_capita_eur": -70,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2009,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 2234,
+				"receipts_m_eur": 5434,
+				"net_balance_m_eur": 3200,
+				"net_balance_per_capita_eur": 308,
+				"net_balance_pct_gni": 1.39
+			},
+			{
+				"year": 2009,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 816,
+				"receipts_m_eur": 3569,
+				"net_balance_m_eur": 2753,
+				"net_balance_per_capita_eur": 282,
+				"net_balance_pct_gni": 1.4
+			},
+			{
+				"year": 2009,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1357,
+				"receipts_m_eur": 1378,
+				"net_balance_m_eur": 21,
+				"net_balance_per_capita_eur": 4,
+				"net_balance_pct_gni": 0
+			},
+			{
+				"year": 2009,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 13913,
+				"receipts_m_eur": 9372,
+				"net_balance_m_eur": -4540,
+				"net_balance_per_capita_eur": -77,
+				"net_balance_pct_gni": -0.21
+			},
+			{
+				"year": 2009,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 197,
+				"receipts_m_eur": 710,
+				"net_balance_m_eur": 513,
+				"net_balance_per_capita_eur": 277,
+				"net_balance_pct_gni": 1.18
+			},
+			{
+				"year": 2009,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 282,
+				"receipts_m_eur": 1790,
+				"net_balance_m_eur": 1508,
+				"net_balance_per_capita_eur": 533,
+				"net_balance_pct_gni": 2.06
+			},
+			{
+				"year": 2009,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 276,
+				"receipts_m_eur": 1454,
+				"net_balance_m_eur": 1178,
+				"net_balance_per_capita_eur": 1784,
+				"net_balance_pct_gni": 1.3
+			},
+			{
+				"year": 2009,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 55,
+				"receipts_m_eur": 72,
+				"net_balance_m_eur": 17,
+				"net_balance_per_capita_eur": 32,
+				"net_balance_pct_gni": 0.09
+			},
+			{
+				"year": 2009,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 2285,
+				"receipts_m_eur": 1850,
+				"net_balance_m_eur": -436,
+				"net_balance_per_capita_eur": -24,
+				"net_balance_pct_gni": -0.04
+			},
+			{
+				"year": 2009,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 2834,
+				"receipts_m_eur": 9253,
+				"net_balance_m_eur": 6418,
+				"net_balance_per_capita_eur": 169,
+				"net_balance_pct_gni": 0.85
+			},
+			{
+				"year": 2009,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1519,
+				"receipts_m_eur": 3724,
+				"net_balance_m_eur": 2205,
+				"net_balance_per_capita_eur": 214,
+				"net_balance_pct_gni": 0.83
+			},
+			{
+				"year": 2009,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1218,
+				"receipts_m_eur": 2951,
+				"net_balance_m_eur": 1733,
+				"net_balance_per_capita_eur": 91,
+				"net_balance_pct_gni": 0.52
+			},
+			{
+				"year": 2009,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 628,
+				"receipts_m_eur": 1192,
+				"net_balance_m_eur": 564,
+				"net_balance_per_capita_eur": 103,
+				"net_balance_pct_gni": 0.48
+			},
+			{
+				"year": 2009,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 359,
+				"receipts_m_eur": 616,
+				"net_balance_m_eur": 258,
+				"net_balance_per_capita_eur": 121,
+				"net_balance_pct_gni": 0.39
+			},
+			{
+				"year": 2009,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 10168,
+				"receipts_m_eur": 11614,
+				"net_balance_m_eur": 1446,
+				"net_balance_per_capita_eur": 31,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2009,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 1485,
+				"receipts_m_eur": 1452,
+				"net_balance_m_eur": -33,
+				"net_balance_per_capita_eur": -3,
+				"net_balance_pct_gni": -0.01
+			}
+		],
+		"2010": [
+			{
+				"year": 2010,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2460,
+				"receipts_m_eur": 1822,
+				"net_balance_m_eur": -639,
+				"net_balance_per_capita_eur": -70,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2010,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3294,
+				"receipts_m_eur": 6145,
+				"net_balance_m_eur": 2851,
+				"net_balance_per_capita_eur": 246,
+				"net_balance_pct_gni": 0.48
+			},
+			{
+				"year": 2010,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 310,
+				"receipts_m_eur": 1222,
+				"net_balance_m_eur": 912,
+				"net_balance_per_capita_eur": 140,
+				"net_balance_pct_gni": 0.99
+			},
+			{
+				"year": 2010,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 88,
+				"net_balance_m_eur": 88,
+				"net_balance_per_capita_eur": 23,
+				"net_balance_pct_gni": 0.12
+			},
+			{
+				"year": 2010,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 158,
+				"receipts_m_eur": 178,
+				"net_balance_m_eur": 20,
+				"net_balance_per_capita_eur": 16,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2010,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1308,
+				"receipts_m_eur": 3416,
+				"net_balance_m_eur": 2107,
+				"net_balance_per_capita_eur": 193,
+				"net_balance_pct_gni": 0.77
+			},
+			{
+				"year": 2010,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2074,
+				"receipts_m_eur": 1526,
+				"net_balance_m_eur": -548,
+				"net_balance_per_capita_eur": -92,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2010,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 125,
+				"receipts_m_eur": 808,
+				"net_balance_m_eur": 683,
+				"net_balance_per_capita_eur": 498,
+				"net_balance_pct_gni": 1.66
+			},
+			{
+				"year": 2010,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1575,
+				"receipts_m_eur": 1310,
+				"net_balance_m_eur": -266,
+				"net_balance_per_capita_eur": -48,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2010,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 18174,
+				"receipts_m_eur": 13105,
+				"net_balance_m_eur": -5068,
+				"net_balance_per_capita_eur": -75,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2010,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 20708,
+				"receipts_m_eur": 11825,
+				"net_balance_m_eur": -8883,
+				"net_balance_per_capita_eur": -107,
+				"net_balance_pct_gni": -0.21
+			},
+			{
+				"year": 2010,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 2095,
+				"receipts_m_eur": 5749,
+				"net_balance_m_eur": 3654,
+				"net_balance_per_capita_eur": 351,
+				"net_balance_pct_gni": 1.58
+			},
+			{
+				"year": 2010,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 862,
+				"receipts_m_eur": 3650,
+				"net_balance_m_eur": 2788,
+				"net_balance_per_capita_eur": 286,
+				"net_balance_pct_gni": 1.42
+			},
+			{
+				"year": 2010,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1209,
+				"receipts_m_eur": 2066,
+				"net_balance_m_eur": 857,
+				"net_balance_per_capita_eur": 168,
+				"net_balance_pct_gni": 0.17
+			},
+			{
+				"year": 2010,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 13664,
+				"receipts_m_eur": 9497,
+				"net_balance_m_eur": -4167,
+				"net_balance_per_capita_eur": -71,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2010,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 158,
+				"receipts_m_eur": 844,
+				"net_balance_m_eur": 685,
+				"net_balance_per_capita_eur": 370,
+				"net_balance_pct_gni": 1.58
+			},
+			{
+				"year": 2010,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 230,
+				"receipts_m_eur": 1602,
+				"net_balance_m_eur": 1372,
+				"net_balance_per_capita_eur": 485,
+				"net_balance_pct_gni": 1.87
+			},
+			{
+				"year": 2010,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 248,
+				"receipts_m_eur": 1554,
+				"net_balance_m_eur": 1306,
+				"net_balance_per_capita_eur": 1978,
+				"net_balance_pct_gni": 1.45
+			},
+			{
+				"year": 2010,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 51,
+				"receipts_m_eur": 112,
+				"net_balance_m_eur": 61,
+				"net_balance_per_capita_eur": 114,
+				"net_balance_pct_gni": 0.33
+			},
+			{
+				"year": 2010,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 3864,
+				"receipts_m_eur": 2146,
+				"net_balance_m_eur": -1718,
+				"net_balance_per_capita_eur": -96,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2010,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3339,
+				"receipts_m_eur": 11822,
+				"net_balance_m_eur": 8483,
+				"net_balance_per_capita_eur": 223,
+				"net_balance_pct_gni": 1.12
+			},
+			{
+				"year": 2010,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1714,
+				"receipts_m_eur": 4379,
+				"net_balance_m_eur": 2665,
+				"net_balance_per_capita_eur": 259,
+				"net_balance_pct_gni": 1
+			},
+			{
+				"year": 2010,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1042,
+				"receipts_m_eur": 2317,
+				"net_balance_m_eur": 1275,
+				"net_balance_per_capita_eur": 67,
+				"net_balance_pct_gni": 0.39
+			},
+			{
+				"year": 2010,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 540,
+				"receipts_m_eur": 1905,
+				"net_balance_m_eur": 1365,
+				"net_balance_per_capita_eur": 250,
+				"net_balance_pct_gni": 1.16
+			},
+			{
+				"year": 2010,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 320,
+				"receipts_m_eur": 756,
+				"net_balance_m_eur": 436,
+				"net_balance_per_capita_eur": 206,
+				"net_balance_pct_gni": 0.65
+			},
+			{
+				"year": 2010,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 8937,
+				"receipts_m_eur": 13190,
+				"net_balance_m_eur": 4253,
+				"net_balance_per_capita_eur": 90,
+				"net_balance_pct_gni": 0.29
+			},
+			{
+				"year": 2010,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2809,
+				"receipts_m_eur": 1646,
+				"net_balance_m_eur": -1163,
+				"net_balance_per_capita_eur": -111,
+				"net_balance_pct_gni": -0.19
+			}
+		],
+		"2011": [
+			{
+				"year": 2011,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2499,
+				"receipts_m_eur": 1876,
+				"net_balance_m_eur": -623,
+				"net_balance_per_capita_eur": -68,
+				"net_balance_pct_gni": -0.13
+			},
+			{
+				"year": 2011,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3345,
+				"receipts_m_eur": 6797,
+				"net_balance_m_eur": 3451,
+				"net_balance_per_capita_eur": 298,
+				"net_balance_pct_gni": 0.58
+			},
+			{
+				"year": 2011,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 346,
+				"receipts_m_eur": 1107,
+				"net_balance_m_eur": 761,
+				"net_balance_per_capita_eur": 117,
+				"net_balance_pct_gni": 0.83
+			},
+			{
+				"year": 2011,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 113,
+				"net_balance_m_eur": 113,
+				"net_balance_per_capita_eur": 29,
+				"net_balance_pct_gni": 0.16
+			},
+			{
+				"year": 2011,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 160,
+				"receipts_m_eur": 184,
+				"net_balance_m_eur": 23,
+				"net_balance_per_capita_eur": 19,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2011,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1462,
+				"receipts_m_eur": 3029,
+				"net_balance_m_eur": 1567,
+				"net_balance_per_capita_eur": 144,
+				"net_balance_pct_gni": 0.57
+			},
+			{
+				"year": 2011,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2121,
+				"receipts_m_eur": 1473,
+				"net_balance_m_eur": -648,
+				"net_balance_per_capita_eur": -109,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2011,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 137,
+				"receipts_m_eur": 505,
+				"net_balance_m_eur": 368,
+				"net_balance_per_capita_eur": 269,
+				"net_balance_pct_gni": 0.89
+			},
+			{
+				"year": 2011,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1803,
+				"receipts_m_eur": 1293,
+				"net_balance_m_eur": -510,
+				"net_balance_per_capita_eur": -92,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2011,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 18051,
+				"receipts_m_eur": 13162,
+				"net_balance_m_eur": -4889,
+				"net_balance_per_capita_eur": -72,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2011,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 19671,
+				"receipts_m_eur": 12133,
+				"net_balance_m_eur": -7538,
+				"net_balance_per_capita_eur": -91,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2011,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1762,
+				"receipts_m_eur": 6537,
+				"net_balance_m_eur": 4775,
+				"net_balance_per_capita_eur": 459,
+				"net_balance_pct_gni": 2.07
+			},
+			{
+				"year": 2011,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 836,
+				"receipts_m_eur": 5331,
+				"net_balance_m_eur": 4495,
+				"net_balance_per_capita_eur": 461,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2011,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1139,
+				"receipts_m_eur": 1639,
+				"net_balance_m_eur": 500,
+				"net_balance_per_capita_eur": 98,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2011,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 14336,
+				"receipts_m_eur": 9586,
+				"net_balance_m_eur": -4750,
+				"net_balance_per_capita_eur": -81,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2011,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 160,
+				"receipts_m_eur": 911,
+				"net_balance_m_eur": 751,
+				"net_balance_per_capita_eur": 406,
+				"net_balance_pct_gni": 1.73
+			},
+			{
+				"year": 2011,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 257,
+				"receipts_m_eur": 1653,
+				"net_balance_m_eur": 1395,
+				"net_balance_per_capita_eur": 493,
+				"net_balance_pct_gni": 1.91
+			},
+			{
+				"year": 2011,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 279,
+				"receipts_m_eur": 1549,
+				"net_balance_m_eur": 1270,
+				"net_balance_per_capita_eur": 1924,
+				"net_balance_pct_gni": 1.41
+			},
+			{
+				"year": 2011,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 56,
+				"receipts_m_eur": 135,
+				"net_balance_m_eur": 79,
+				"net_balance_per_capita_eur": 148,
+				"net_balance_pct_gni": 0.43
+			},
+			{
+				"year": 2011,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 3933,
+				"receipts_m_eur": 2064,
+				"net_balance_m_eur": -1869,
+				"net_balance_per_capita_eur": -104,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2011,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3228,
+				"receipts_m_eur": 14441,
+				"net_balance_m_eur": 11213,
+				"net_balance_per_capita_eur": 295,
+				"net_balance_pct_gni": 1.48
+			},
+			{
+				"year": 2011,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1599,
+				"receipts_m_eur": 4715,
+				"net_balance_m_eur": 3116,
+				"net_balance_per_capita_eur": 303,
+				"net_balance_pct_gni": 1.17
+			},
+			{
+				"year": 2011,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1116,
+				"receipts_m_eur": 2659,
+				"net_balance_m_eur": 1543,
+				"net_balance_per_capita_eur": 81,
+				"net_balance_pct_gni": 0.47
+			},
+			{
+				"year": 2011,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 576,
+				"receipts_m_eur": 1785,
+				"net_balance_m_eur": 1209,
+				"net_balance_per_capita_eur": 221,
+				"net_balance_pct_gni": 1.03
+			},
+			{
+				"year": 2011,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 327,
+				"receipts_m_eur": 847,
+				"net_balance_m_eur": 520,
+				"net_balance_per_capita_eur": 245,
+				"net_balance_pct_gni": 0.78
+			},
+			{
+				"year": 2011,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 9876,
+				"receipts_m_eur": 13599,
+				"net_balance_m_eur": 3723,
+				"net_balance_per_capita_eur": 79,
+				"net_balance_pct_gni": 0.25
+			},
+			{
+				"year": 2011,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2867,
+				"receipts_m_eur": 1757,
+				"net_balance_m_eur": -1110,
+				"net_balance_per_capita_eur": -106,
+				"net_balance_pct_gni": -0.19
+			}
+		],
+		"2012": [
+			{
+				"year": 2012,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2765,
+				"receipts_m_eur": 1856,
+				"net_balance_m_eur": -909,
+				"net_balance_per_capita_eur": -100,
+				"net_balance_pct_gni": -0.2
+			},
+			{
+				"year": 2012,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3643,
+				"receipts_m_eur": 6969,
+				"net_balance_m_eur": 3326,
+				"net_balance_per_capita_eur": 287,
+				"net_balance_pct_gni": 0.56
+			},
+			{
+				"year": 2012,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 371,
+				"receipts_m_eur": 1732,
+				"net_balance_m_eur": 1361,
+				"net_balance_per_capita_eur": 209,
+				"net_balance_pct_gni": 1.48
+			},
+			{
+				"year": 2012,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 0,
+				"receipts_m_eur": 104,
+				"net_balance_m_eur": 104,
+				"net_balance_per_capita_eur": 27,
+				"net_balance_pct_gni": 0.14
+			},
+			{
+				"year": 2012,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 165,
+				"receipts_m_eur": 155,
+				"net_balance_m_eur": -10,
+				"net_balance_per_capita_eur": -8,
+				"net_balance_pct_gni": -0.04
+			},
+			{
+				"year": 2012,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1396,
+				"receipts_m_eur": 4529,
+				"net_balance_m_eur": 3134,
+				"net_balance_per_capita_eur": 288,
+				"net_balance_pct_gni": 1.15
+			},
+			{
+				"year": 2012,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2391,
+				"receipts_m_eur": 1441,
+				"net_balance_m_eur": -950,
+				"net_balance_per_capita_eur": -160,
+				"net_balance_pct_gni": -0.24
+			},
+			{
+				"year": 2012,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 154,
+				"receipts_m_eur": 954,
+				"net_balance_m_eur": 801,
+				"net_balance_per_capita_eur": 584,
+				"net_balance_pct_gni": 1.94
+			},
+			{
+				"year": 2012,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1862,
+				"receipts_m_eur": 1324,
+				"net_balance_m_eur": -538,
+				"net_balance_per_capita_eur": -97,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2012,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 19797,
+				"receipts_m_eur": 12890,
+				"net_balance_m_eur": -6907,
+				"net_balance_per_capita_eur": -102,
+				"net_balance_pct_gni": -0.24
+			},
+			{
+				"year": 2012,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 22820,
+				"receipts_m_eur": 12245,
+				"net_balance_m_eur": -10575,
+				"net_balance_per_capita_eur": -127,
+				"net_balance_pct_gni": -0.25
+			},
+			{
+				"year": 2012,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1681,
+				"receipts_m_eur": 6353,
+				"net_balance_m_eur": 4672,
+				"net_balance_per_capita_eur": 449,
+				"net_balance_pct_gni": 2.02
+			},
+			{
+				"year": 2012,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 832,
+				"receipts_m_eur": 4177,
+				"net_balance_m_eur": 3346,
+				"net_balance_per_capita_eur": 343,
+				"net_balance_pct_gni": 1.7
+			},
+			{
+				"year": 2012,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1236,
+				"receipts_m_eur": 2013,
+				"net_balance_m_eur": 778,
+				"net_balance_per_capita_eur": 152,
+				"net_balance_pct_gni": 0.15
+			},
+			{
+				"year": 2012,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 14980,
+				"receipts_m_eur": 10957,
+				"net_balance_m_eur": -4023,
+				"net_balance_per_capita_eur": -68,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2012,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 205,
+				"receipts_m_eur": 1180,
+				"net_balance_m_eur": 975,
+				"net_balance_per_capita_eur": 527,
+				"net_balance_pct_gni": 2.24
+			},
+			{
+				"year": 2012,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 293,
+				"receipts_m_eur": 1833,
+				"net_balance_m_eur": 1539,
+				"net_balance_per_capita_eur": 544,
+				"net_balance_pct_gni": 2.1
+			},
+			{
+				"year": 2012,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 265,
+				"receipts_m_eur": 1530,
+				"net_balance_m_eur": 1266,
+				"net_balance_per_capita_eur": 1918,
+				"net_balance_pct_gni": 1.4
+			},
+			{
+				"year": 2012,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 59,
+				"receipts_m_eur": 141,
+				"net_balance_m_eur": 82,
+				"net_balance_per_capita_eur": 153,
+				"net_balance_pct_gni": 0.45
+			},
+			{
+				"year": 2012,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 4173,
+				"receipts_m_eur": 2124,
+				"net_balance_m_eur": -2050,
+				"net_balance_per_capita_eur": -115,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2012,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3525,
+				"receipts_m_eur": 15736,
+				"net_balance_m_eur": 12210,
+				"net_balance_per_capita_eur": 321,
+				"net_balance_pct_gni": 1.61
+			},
+			{
+				"year": 2012,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1646,
+				"receipts_m_eur": 6789,
+				"net_balance_m_eur": 5143,
+				"net_balance_per_capita_eur": 499,
+				"net_balance_pct_gni": 1.93
+			},
+			{
+				"year": 2012,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1326,
+				"receipts_m_eur": 3446,
+				"net_balance_m_eur": 2119,
+				"net_balance_per_capita_eur": 112,
+				"net_balance_pct_gni": 0.64
+			},
+			{
+				"year": 2012,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 646,
+				"receipts_m_eur": 2287,
+				"net_balance_m_eur": 1641,
+				"net_balance_per_capita_eur": 300,
+				"net_balance_pct_gni": 1.4
+			},
+			{
+				"year": 2012,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 334,
+				"receipts_m_eur": 932,
+				"net_balance_m_eur": 598,
+				"net_balance_per_capita_eur": 282,
+				"net_balance_pct_gni": 0.9
+			},
+			{
+				"year": 2012,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 9662,
+				"receipts_m_eur": 14257,
+				"net_balance_m_eur": 4596,
+				"net_balance_per_capita_eur": 97,
+				"net_balance_pct_gni": 0.31
+			},
+			{
+				"year": 2012,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 3289,
+				"receipts_m_eur": 1566,
+				"net_balance_m_eur": -1723,
+				"net_balance_per_capita_eur": -164,
+				"net_balance_pct_gni": -0.29
+			}
+		],
+		"2013": [
+			{
+				"year": 2013,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3028,
+				"receipts_m_eur": 1862,
+				"net_balance_m_eur": -1166,
+				"net_balance_per_capita_eur": -128,
+				"net_balance_pct_gni": -0.25
+			},
+			{
+				"year": 2013,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3931,
+				"receipts_m_eur": 7209,
+				"net_balance_m_eur": 3278,
+				"net_balance_per_capita_eur": 283,
+				"net_balance_pct_gni": 0.56
+			},
+			{
+				"year": 2013,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 423,
+				"receipts_m_eur": 1977,
+				"net_balance_m_eur": 1554,
+				"net_balance_per_capita_eur": 239,
+				"net_balance_pct_gni": 1.69
+			},
+			{
+				"year": 2013,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 227,
+				"receipts_m_eur": 290,
+				"net_balance_m_eur": 63,
+				"net_balance_per_capita_eur": 16,
+				"net_balance_pct_gni": 0.09
+			},
+			{
+				"year": 2013,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 170,
+				"receipts_m_eur": 227,
+				"net_balance_m_eur": 57,
+				"net_balance_per_capita_eur": 46,
+				"net_balance_pct_gni": 0.19
+			},
+			{
+				"year": 2013,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1445,
+				"receipts_m_eur": 4893,
+				"net_balance_m_eur": 3448,
+				"net_balance_per_capita_eur": 316,
+				"net_balance_pct_gni": 1.26
+			},
+			{
+				"year": 2013,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2606,
+				"receipts_m_eur": 1435,
+				"net_balance_m_eur": -1171,
+				"net_balance_per_capita_eur": -197,
+				"net_balance_pct_gni": -0.3
+			},
+			{
+				"year": 2013,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 190,
+				"receipts_m_eur": 973,
+				"net_balance_m_eur": 783,
+				"net_balance_per_capita_eur": 572,
+				"net_balance_pct_gni": 1.9
+			},
+			{
+				"year": 2013,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2032,
+				"receipts_m_eur": 1497,
+				"net_balance_m_eur": -535,
+				"net_balance_per_capita_eur": -96,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2013,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 21874,
+				"receipts_m_eur": 14239,
+				"net_balance_m_eur": -7635,
+				"net_balance_per_capita_eur": -112,
+				"net_balance_pct_gni": -0.26
+			},
+			{
+				"year": 2013,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 26125,
+				"receipts_m_eur": 13056,
+				"net_balance_m_eur": -13069,
+				"net_balance_per_capita_eur": -157,
+				"net_balance_pct_gni": -0.3
+			},
+			{
+				"year": 2013,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1794,
+				"receipts_m_eur": 7215,
+				"net_balance_m_eur": 5420,
+				"net_balance_per_capita_eur": 521,
+				"net_balance_pct_gni": 2.35
+			},
+			{
+				"year": 2013,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 920,
+				"receipts_m_eur": 5910,
+				"net_balance_m_eur": 4990,
+				"net_balance_per_capita_eur": 512,
+				"net_balance_pct_gni": 2.54
+			},
+			{
+				"year": 2013,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1521,
+				"receipts_m_eur": 1874,
+				"net_balance_m_eur": 354,
+				"net_balance_per_capita_eur": 69,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2013,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 15748,
+				"receipts_m_eur": 12554,
+				"net_balance_m_eur": -3194,
+				"net_balance_per_capita_eur": -54,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2013,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 248,
+				"receipts_m_eur": 1063,
+				"net_balance_m_eur": 815,
+				"net_balance_per_capita_eur": 441,
+				"net_balance_pct_gni": 1.87
+			},
+			{
+				"year": 2013,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 349,
+				"receipts_m_eur": 1881,
+				"net_balance_m_eur": 1532,
+				"net_balance_per_capita_eur": 541,
+				"net_balance_pct_gni": 2.09
+			},
+			{
+				"year": 2013,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 311,
+				"receipts_m_eur": 1598,
+				"net_balance_m_eur": 1288,
+				"net_balance_per_capita_eur": 1951,
+				"net_balance_pct_gni": 1.43
+			},
+			{
+				"year": 2013,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 78,
+				"receipts_m_eur": 174,
+				"net_balance_m_eur": 96,
+				"net_balance_per_capita_eur": 180,
+				"net_balance_pct_gni": 0.52
+			},
+			{
+				"year": 2013,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 4745,
+				"receipts_m_eur": 2264,
+				"net_balance_m_eur": -2480,
+				"net_balance_per_capita_eur": -139,
+				"net_balance_pct_gni": -0.23
+			},
+			{
+				"year": 2013,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3831,
+				"receipts_m_eur": 16179,
+				"net_balance_m_eur": 12349,
+				"net_balance_per_capita_eur": 325,
+				"net_balance_pct_gni": 1.63
+			},
+			{
+				"year": 2013,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1679,
+				"receipts_m_eur": 6163,
+				"net_balance_m_eur": 4484,
+				"net_balance_per_capita_eur": 435,
+				"net_balance_pct_gni": 1.68
+			},
+			{
+				"year": 2013,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1369,
+				"receipts_m_eur": 5561,
+				"net_balance_m_eur": 4192,
+				"net_balance_per_capita_eur": 221,
+				"net_balance_pct_gni": 1.27
+			},
+			{
+				"year": 2013,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 713,
+				"receipts_m_eur": 2026,
+				"net_balance_m_eur": 1313,
+				"net_balance_per_capita_eur": 240,
+				"net_balance_pct_gni": 1.12
+			},
+			{
+				"year": 2013,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 368,
+				"receipts_m_eur": 814,
+				"net_balance_m_eur": 445,
+				"net_balance_per_capita_eur": 210,
+				"net_balance_pct_gni": 0.67
+			},
+			{
+				"year": 2013,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 10376,
+				"receipts_m_eur": 13752,
+				"net_balance_m_eur": 3377,
+				"net_balance_per_capita_eur": 71,
+				"net_balance_pct_gni": 0.23
+			},
+			{
+				"year": 2013,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 3769,
+				"receipts_m_eur": 1661,
+				"net_balance_m_eur": -2108,
+				"net_balance_per_capita_eur": -201,
+				"net_balance_pct_gni": -0.35
+			}
+		],
+		"2014": [
+			{
+				"year": 2014,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2691,
+				"receipts_m_eur": 1573,
+				"net_balance_m_eur": -1118,
+				"net_balance_per_capita_eur": -123,
+				"net_balance_pct_gni": -0.24
+			},
+			{
+				"year": 2014,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3660,
+				"receipts_m_eur": 7044,
+				"net_balance_m_eur": 3384,
+				"net_balance_per_capita_eur": 292,
+				"net_balance_pct_gni": 0.57
+			},
+			{
+				"year": 2014,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 404,
+				"receipts_m_eur": 2255,
+				"net_balance_m_eur": 1852,
+				"net_balance_per_capita_eur": 285,
+				"net_balance_pct_gni": 2.02
+			},
+			{
+				"year": 2014,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 387,
+				"receipts_m_eur": 584,
+				"net_balance_m_eur": 197,
+				"net_balance_per_capita_eur": 51,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2014,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 143,
+				"receipts_m_eur": 273,
+				"net_balance_m_eur": 130,
+				"net_balance_per_capita_eur": 104,
+				"net_balance_pct_gni": 0.44
+			},
+			{
+				"year": 2014,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1309,
+				"receipts_m_eur": 4377,
+				"net_balance_m_eur": 3068,
+				"net_balance_per_capita_eur": 282,
+				"net_balance_pct_gni": 1.12
+			},
+			{
+				"year": 2014,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2213,
+				"receipts_m_eur": 1512,
+				"net_balance_m_eur": -702,
+				"net_balance_per_capita_eur": -118,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2014,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 178,
+				"receipts_m_eur": 668,
+				"net_balance_m_eur": 489,
+				"net_balance_per_capita_eur": 357,
+				"net_balance_pct_gni": 1.19
+			},
+			{
+				"year": 2014,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1777,
+				"receipts_m_eur": 1062,
+				"net_balance_m_eur": -715,
+				"net_balance_per_capita_eur": -129,
+				"net_balance_pct_gni": -0.24
+			},
+			{
+				"year": 2014,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 19574,
+				"receipts_m_eur": 13479,
+				"net_balance_m_eur": -6095,
+				"net_balance_per_capita_eur": -90,
+				"net_balance_pct_gni": -0.21
+			},
+			{
+				"year": 2014,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 25816,
+				"receipts_m_eur": 11484,
+				"net_balance_m_eur": -14331,
+				"net_balance_per_capita_eur": -172,
+				"net_balance_pct_gni": -0.33
+			},
+			{
+				"year": 2014,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1827,
+				"receipts_m_eur": 7095,
+				"net_balance_m_eur": 5268,
+				"net_balance_per_capita_eur": 507,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2014,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 890,
+				"receipts_m_eur": 6620,
+				"net_balance_m_eur": 5730,
+				"net_balance_per_capita_eur": 588,
+				"net_balance_pct_gni": 2.91
+			},
+			{
+				"year": 2014,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1425,
+				"receipts_m_eur": 1563,
+				"net_balance_m_eur": 138,
+				"net_balance_per_capita_eur": 27,
+				"net_balance_pct_gni": 0.03
+			},
+			{
+				"year": 2014,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 14368,
+				"receipts_m_eur": 10695,
+				"net_balance_m_eur": -3673,
+				"net_balance_per_capita_eur": -62,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2014,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 244,
+				"receipts_m_eur": 1062,
+				"net_balance_m_eur": 818,
+				"net_balance_per_capita_eur": 442,
+				"net_balance_pct_gni": 1.88
+			},
+			{
+				"year": 2014,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 320,
+				"receipts_m_eur": 1886,
+				"net_balance_m_eur": 1566,
+				"net_balance_per_capita_eur": 553,
+				"net_balance_pct_gni": 2.14
+			},
+			{
+				"year": 2014,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 232,
+				"receipts_m_eur": 1714,
+				"net_balance_m_eur": 1482,
+				"net_balance_per_capita_eur": 2245,
+				"net_balance_pct_gni": 1.64
+			},
+			{
+				"year": 2014,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 66,
+				"receipts_m_eur": 255,
+				"net_balance_m_eur": 189,
+				"net_balance_per_capita_eur": 354,
+				"net_balance_pct_gni": 1.03
+			},
+			{
+				"year": 2014,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 6391,
+				"receipts_m_eur": 2014,
+				"net_balance_m_eur": -4377,
+				"net_balance_per_capita_eur": -245,
+				"net_balance_pct_gni": -0.4
+			},
+			{
+				"year": 2014,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3526,
+				"receipts_m_eur": 17436,
+				"net_balance_m_eur": 13910,
+				"net_balance_per_capita_eur": 366,
+				"net_balance_pct_gni": 1.84
+			},
+			{
+				"year": 2014,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1637,
+				"receipts_m_eur": 4943,
+				"net_balance_m_eur": 3306,
+				"net_balance_per_capita_eur": 321,
+				"net_balance_pct_gni": 1.24
+			},
+			{
+				"year": 2014,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1353,
+				"receipts_m_eur": 5944,
+				"net_balance_m_eur": 4591,
+				"net_balance_per_capita_eur": 242,
+				"net_balance_pct_gni": 1.39
+			},
+			{
+				"year": 2014,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 625,
+				"receipts_m_eur": 1669,
+				"net_balance_m_eur": 1044,
+				"net_balance_per_capita_eur": 191,
+				"net_balance_pct_gni": 0.89
+			},
+			{
+				"year": 2014,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 327,
+				"receipts_m_eur": 1142,
+				"net_balance_m_eur": 816,
+				"net_balance_per_capita_eur": 385,
+				"net_balance_pct_gni": 1.22
+			},
+			{
+				"year": 2014,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 9978,
+				"receipts_m_eur": 11539,
+				"net_balance_m_eur": 1560,
+				"net_balance_per_capita_eur": 33,
+				"net_balance_pct_gni": 0.1
+			},
+			{
+				"year": 2014,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 3828,
+				"receipts_m_eur": 1691,
+				"net_balance_m_eur": -2137,
+				"net_balance_per_capita_eur": -204,
+				"net_balance_pct_gni": -0.36
+			}
+		],
+		"2015": [
+			{
+				"year": 2015,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2529,
+				"receipts_m_eur": 1787,
+				"net_balance_m_eur": -742,
+				"net_balance_per_capita_eur": -81,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2015,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3692,
+				"receipts_m_eur": 6952,
+				"net_balance_m_eur": 3260,
+				"net_balance_per_capita_eur": 281,
+				"net_balance_pct_gni": 0.55
+			},
+			{
+				"year": 2015,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 424,
+				"receipts_m_eur": 2730,
+				"net_balance_m_eur": 2305,
+				"net_balance_per_capita_eur": 355,
+				"net_balance_pct_gni": 2.51
+			},
+			{
+				"year": 2015,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 357,
+				"receipts_m_eur": 605,
+				"net_balance_m_eur": 248,
+				"net_balance_per_capita_eur": 64,
+				"net_balance_pct_gni": 0.34
+			},
+			{
+				"year": 2015,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 212,
+				"receipts_m_eur": 203,
+				"net_balance_m_eur": -9,
+				"net_balance_per_capita_eur": -7,
+				"net_balance_pct_gni": -0.03
+			},
+			{
+				"year": 2015,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1315,
+				"receipts_m_eur": 7075,
+				"net_balance_m_eur": 5760,
+				"net_balance_per_capita_eur": 528,
+				"net_balance_pct_gni": 2.11
+			},
+			{
+				"year": 2015,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2191,
+				"receipts_m_eur": 1529,
+				"net_balance_m_eur": -662,
+				"net_balance_per_capita_eur": -111,
+				"net_balance_pct_gni": -0.17
+			},
+			{
+				"year": 2015,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 185,
+				"receipts_m_eur": 443,
+				"net_balance_m_eur": 258,
+				"net_balance_per_capita_eur": 188,
+				"net_balance_pct_gni": 0.63
+			},
+			{
+				"year": 2015,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1729,
+				"receipts_m_eur": 1330,
+				"net_balance_m_eur": -399,
+				"net_balance_per_capita_eur": -72,
+				"net_balance_pct_gni": -0.13
+			},
+			{
+				"year": 2015,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 19013,
+				"receipts_m_eur": 14468,
+				"net_balance_m_eur": -4544,
+				"net_balance_per_capita_eur": -67,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2015,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 24283,
+				"receipts_m_eur": 11013,
+				"net_balance_m_eur": -13270,
+				"net_balance_per_capita_eur": -160,
+				"net_balance_pct_gni": -0.31
+			},
+			{
+				"year": 2015,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1206,
+				"receipts_m_eur": 6210,
+				"net_balance_m_eur": 5004,
+				"net_balance_per_capita_eur": 481,
+				"net_balance_pct_gni": 2.17
+			},
+			{
+				"year": 2015,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 946,
+				"receipts_m_eur": 5629,
+				"net_balance_m_eur": 4683,
+				"net_balance_per_capita_eur": 480,
+				"net_balance_pct_gni": 2.38
+			},
+			{
+				"year": 2015,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1558,
+				"receipts_m_eur": 2009,
+				"net_balance_m_eur": 450,
+				"net_balance_per_capita_eur": 88,
+				"net_balance_pct_gni": 0.09
+			},
+			{
+				"year": 2015,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 14232,
+				"receipts_m_eur": 12338,
+				"net_balance_m_eur": -1893,
+				"net_balance_per_capita_eur": -32,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2015,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 206,
+				"receipts_m_eur": 982,
+				"net_balance_m_eur": 776,
+				"net_balance_per_capita_eur": 419,
+				"net_balance_pct_gni": 1.78
+			},
+			{
+				"year": 2015,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 316,
+				"receipts_m_eur": 877,
+				"net_balance_m_eur": 561,
+				"net_balance_per_capita_eur": 198,
+				"net_balance_pct_gni": 0.77
+			},
+			{
+				"year": 2015,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 350,
+				"receipts_m_eur": 1649,
+				"net_balance_m_eur": 1299,
+				"net_balance_per_capita_eur": 1968,
+				"net_balance_pct_gni": 1.44
+			},
+			{
+				"year": 2015,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 92,
+				"receipts_m_eur": 134,
+				"net_balance_m_eur": 42,
+				"net_balance_per_capita_eur": 78,
+				"net_balance_pct_gni": 0.23
+			},
+			{
+				"year": 2015,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 5759,
+				"receipts_m_eur": 2359,
+				"net_balance_m_eur": -3400,
+				"net_balance_per_capita_eur": -190,
+				"net_balance_pct_gni": -0.31
+			},
+			{
+				"year": 2015,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3718,
+				"receipts_m_eur": 13358,
+				"net_balance_m_eur": 9640,
+				"net_balance_per_capita_eur": 254,
+				"net_balance_pct_gni": 1.27
+			},
+			{
+				"year": 2015,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1529,
+				"receipts_m_eur": 2595,
+				"net_balance_m_eur": 1067,
+				"net_balance_per_capita_eur": 104,
+				"net_balance_pct_gni": 0.4
+			},
+			{
+				"year": 2015,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1319,
+				"receipts_m_eur": 6538,
+				"net_balance_m_eur": 5219,
+				"net_balance_per_capita_eur": 275,
+				"net_balance_pct_gni": 1.58
+			},
+			{
+				"year": 2015,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 608,
+				"receipts_m_eur": 3735,
+				"net_balance_m_eur": 3127,
+				"net_balance_per_capita_eur": 573,
+				"net_balance_pct_gni": 2.66
+			},
+			{
+				"year": 2015,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 341,
+				"receipts_m_eur": 940,
+				"net_balance_m_eur": 599,
+				"net_balance_per_capita_eur": 283,
+				"net_balance_pct_gni": 0.9
+			},
+			{
+				"year": 2015,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 8772,
+				"receipts_m_eur": 13696,
+				"net_balance_m_eur": 4923,
+				"net_balance_per_capita_eur": 104,
+				"net_balance_pct_gni": 0.33
+			},
+			{
+				"year": 2015,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 3513,
+				"receipts_m_eur": 1468,
+				"net_balance_m_eur": -2046,
+				"net_balance_per_capita_eur": -195,
+				"net_balance_pct_gni": -0.34
+			}
+		],
+		"2016": [
+			{
+				"year": 2016,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2943,
+				"receipts_m_eur": 1940,
+				"net_balance_m_eur": -1003,
+				"net_balance_per_capita_eur": -110,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2016,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3991,
+				"receipts_m_eur": 7333,
+				"net_balance_m_eur": 3342,
+				"net_balance_per_capita_eur": 288,
+				"net_balance_pct_gni": 0.57
+			},
+			{
+				"year": 2016,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 395,
+				"receipts_m_eur": 2345,
+				"net_balance_m_eur": 1951,
+				"net_balance_per_capita_eur": 300,
+				"net_balance_pct_gni": 2.12
+			},
+			{
+				"year": 2016,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 404,
+				"receipts_m_eur": 921,
+				"net_balance_m_eur": 517,
+				"net_balance_per_capita_eur": 133,
+				"net_balance_pct_gni": 0.72
+			},
+			{
+				"year": 2016,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 162,
+				"receipts_m_eur": 185,
+				"net_balance_m_eur": 23,
+				"net_balance_per_capita_eur": 19,
+				"net_balance_pct_gni": 0.08
+			},
+			{
+				"year": 2016,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1482,
+				"receipts_m_eur": 4690,
+				"net_balance_m_eur": 3208,
+				"net_balance_per_capita_eur": 294,
+				"net_balance_pct_gni": 1.17
+			},
+			{
+				"year": 2016,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2055,
+				"receipts_m_eur": 1431,
+				"net_balance_m_eur": -624,
+				"net_balance_per_capita_eur": -105,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2016,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 190,
+				"receipts_m_eur": 674,
+				"net_balance_m_eur": 483,
+				"net_balance_per_capita_eur": 353,
+				"net_balance_pct_gni": 1.17
+			},
+			{
+				"year": 2016,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1962,
+				"receipts_m_eur": 1531,
+				"net_balance_m_eur": -431,
+				"net_balance_per_capita_eur": -77,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2016,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 20540,
+				"receipts_m_eur": 11275,
+				"net_balance_m_eur": -9265,
+				"net_balance_per_capita_eur": -136,
+				"net_balance_pct_gni": -0.32
+			},
+			{
+				"year": 2016,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 21277,
+				"receipts_m_eur": 10082,
+				"net_balance_m_eur": -11195,
+				"net_balance_per_capita_eur": -135,
+				"net_balance_pct_gni": -0.26
+			},
+			{
+				"year": 2016,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1570,
+				"receipts_m_eur": 5850,
+				"net_balance_m_eur": 4280,
+				"net_balance_per_capita_eur": 412,
+				"net_balance_pct_gni": 1.86
+			},
+			{
+				"year": 2016,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 969,
+				"receipts_m_eur": 4546,
+				"net_balance_m_eur": 3577,
+				"net_balance_per_capita_eur": 367,
+				"net_balance_pct_gni": 1.82
+			},
+			{
+				"year": 2016,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1845,
+				"receipts_m_eur": 2038,
+				"net_balance_m_eur": 192,
+				"net_balance_per_capita_eur": 38,
+				"net_balance_pct_gni": 0.04
+			},
+			{
+				"year": 2016,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 14827,
+				"receipts_m_eur": 11592,
+				"net_balance_m_eur": -3235,
+				"net_balance_per_capita_eur": -55,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2016,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 225,
+				"receipts_m_eur": 734,
+				"net_balance_m_eur": 509,
+				"net_balance_per_capita_eur": 275,
+				"net_balance_pct_gni": 1.17
+			},
+			{
+				"year": 2016,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 331,
+				"receipts_m_eur": 1477,
+				"net_balance_m_eur": 1146,
+				"net_balance_per_capita_eur": 405,
+				"net_balance_pct_gni": 1.57
+			},
+			{
+				"year": 2016,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 316,
+				"receipts_m_eur": 1788,
+				"net_balance_m_eur": 1472,
+				"net_balance_per_capita_eur": 2230,
+				"net_balance_pct_gni": 1.63
+			},
+			{
+				"year": 2016,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 83,
+				"receipts_m_eur": 208,
+				"net_balance_m_eur": 124,
+				"net_balance_per_capita_eur": 233,
+				"net_balance_pct_gni": 0.68
+			},
+			{
+				"year": 2016,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 2959,
+				"receipts_m_eur": 2289,
+				"net_balance_m_eur": -670,
+				"net_balance_per_capita_eur": -37,
+				"net_balance_pct_gni": -0.06
+			},
+			{
+				"year": 2016,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3709,
+				"receipts_m_eur": 10638,
+				"net_balance_m_eur": 6929,
+				"net_balance_per_capita_eur": 182,
+				"net_balance_pct_gni": 0.92
+			},
+			{
+				"year": 2016,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1664,
+				"receipts_m_eur": 3384,
+				"net_balance_m_eur": 1720,
+				"net_balance_per_capita_eur": 167,
+				"net_balance_pct_gni": 0.65
+			},
+			{
+				"year": 2016,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1407,
+				"receipts_m_eur": 7360,
+				"net_balance_m_eur": 5953,
+				"net_balance_per_capita_eur": 313,
+				"net_balance_pct_gni": 1.8
+			},
+			{
+				"year": 2016,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 680,
+				"receipts_m_eur": 2663,
+				"net_balance_m_eur": 1983,
+				"net_balance_per_capita_eur": 363,
+				"net_balance_pct_gni": 1.69
+			},
+			{
+				"year": 2016,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 362,
+				"receipts_m_eur": 545,
+				"net_balance_m_eur": 183,
+				"net_balance_per_capita_eur": 86,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2016,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 10008,
+				"receipts_m_eur": 11593,
+				"net_balance_m_eur": 1585,
+				"net_balance_per_capita_eur": 33,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2016,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2677,
+				"receipts_m_eur": 1712,
+				"net_balance_m_eur": -965,
+				"net_balance_per_capita_eur": -92,
+				"net_balance_pct_gni": -0.16
+			}
+		],
+		"2017": [
+			{
+				"year": 2017,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 2429,
+				"receipts_m_eur": 1743,
+				"net_balance_m_eur": -686,
+				"net_balance_per_capita_eur": -75,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2017,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 2978,
+				"receipts_m_eur": 7358,
+				"net_balance_m_eur": 4380,
+				"net_balance_per_capita_eur": 378,
+				"net_balance_pct_gni": 0.74
+			},
+			{
+				"year": 2017,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 379,
+				"receipts_m_eur": 1896,
+				"net_balance_m_eur": 1517,
+				"net_balance_per_capita_eur": 233,
+				"net_balance_pct_gni": 1.65
+			},
+			{
+				"year": 2017,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 359,
+				"receipts_m_eur": 663,
+				"net_balance_m_eur": 304,
+				"net_balance_per_capita_eur": 78,
+				"net_balance_pct_gni": 0.42
+			},
+			{
+				"year": 2017,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 137,
+				"receipts_m_eur": 207,
+				"net_balance_m_eur": 69,
+				"net_balance_per_capita_eur": 55,
+				"net_balance_pct_gni": 0.23
+			},
+			{
+				"year": 2017,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1282,
+				"receipts_m_eur": 3895,
+				"net_balance_m_eur": 2612,
+				"net_balance_per_capita_eur": 240,
+				"net_balance_pct_gni": 0.96
+			},
+			{
+				"year": 2017,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 1927,
+				"receipts_m_eur": 1459,
+				"net_balance_m_eur": -468,
+				"net_balance_per_capita_eur": -79,
+				"net_balance_pct_gni": -0.12
+			},
+			{
+				"year": 2017,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 154,
+				"receipts_m_eur": 648,
+				"net_balance_m_eur": 494,
+				"net_balance_per_capita_eur": 360,
+				"net_balance_pct_gni": 1.2
+			},
+			{
+				"year": 2017,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 1595,
+				"receipts_m_eur": 1501,
+				"net_balance_m_eur": -94,
+				"net_balance_per_capita_eur": -17,
+				"net_balance_pct_gni": -0.03
+			},
+			{
+				"year": 2017,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 16234,
+				"receipts_m_eur": 13505,
+				"net_balance_m_eur": -2729,
+				"net_balance_per_capita_eur": -40,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2017,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 19587,
+				"receipts_m_eur": 10927,
+				"net_balance_m_eur": -8660,
+				"net_balance_per_capita_eur": -104,
+				"net_balance_pct_gni": -0.2
+			},
+			{
+				"year": 2017,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1248,
+				"receipts_m_eur": 5130,
+				"net_balance_m_eur": 3882,
+				"net_balance_per_capita_eur": 373,
+				"net_balance_pct_gni": 1.68
+			},
+			{
+				"year": 2017,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 821,
+				"receipts_m_eur": 4049,
+				"net_balance_m_eur": 3228,
+				"net_balance_per_capita_eur": 331,
+				"net_balance_pct_gni": 1.64
+			},
+			{
+				"year": 2017,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1777,
+				"receipts_m_eur": 1818,
+				"net_balance_m_eur": 41,
+				"net_balance_per_capita_eur": 8,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2017,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 12000,
+				"receipts_m_eur": 9795,
+				"net_balance_m_eur": -2205,
+				"net_balance_per_capita_eur": -37,
+				"net_balance_pct_gni": -0.1
+			},
+			{
+				"year": 2017,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 184,
+				"receipts_m_eur": 737,
+				"net_balance_m_eur": 552,
+				"net_balance_per_capita_eur": 299,
+				"net_balance_pct_gni": 1.27
+			},
+			{
+				"year": 2017,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 274,
+				"receipts_m_eur": 1575,
+				"net_balance_m_eur": 1301,
+				"net_balance_per_capita_eur": 460,
+				"net_balance_pct_gni": 1.78
+			},
+			{
+				"year": 2017,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 307,
+				"receipts_m_eur": 1827,
+				"net_balance_m_eur": 1520,
+				"net_balance_per_capita_eur": 2303,
+				"net_balance_pct_gni": 1.68
+			},
+			{
+				"year": 2017,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 82,
+				"receipts_m_eur": 201,
+				"net_balance_m_eur": 119,
+				"net_balance_per_capita_eur": 222,
+				"net_balance_pct_gni": 0.65
+			},
+			{
+				"year": 2017,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 3384,
+				"receipts_m_eur": 2417,
+				"net_balance_m_eur": -967,
+				"net_balance_per_capita_eur": -54,
+				"net_balance_pct_gni": -0.09
+			},
+			{
+				"year": 2017,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3048,
+				"receipts_m_eur": 11921,
+				"net_balance_m_eur": 8873,
+				"net_balance_per_capita_eur": 234,
+				"net_balance_pct_gni": 1.17
+			},
+			{
+				"year": 2017,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1375,
+				"receipts_m_eur": 3976,
+				"net_balance_m_eur": 2601,
+				"net_balance_per_capita_eur": 253,
+				"net_balance_pct_gni": 0.98
+			},
+			{
+				"year": 2017,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1229,
+				"receipts_m_eur": 4742,
+				"net_balance_m_eur": 3513,
+				"net_balance_per_capita_eur": 185,
+				"net_balance_pct_gni": 1.06
+			},
+			{
+				"year": 2017,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 600,
+				"receipts_m_eur": 1645,
+				"net_balance_m_eur": 1046,
+				"net_balance_per_capita_eur": 192,
+				"net_balance_pct_gni": 0.89
+			},
+			{
+				"year": 2017,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 293,
+				"receipts_m_eur": 476,
+				"net_balance_m_eur": 183,
+				"net_balance_per_capita_eur": 86,
+				"net_balance_pct_gni": 0.27
+			},
+			{
+				"year": 2017,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 8080,
+				"receipts_m_eur": 9664,
+				"net_balance_m_eur": 1584,
+				"net_balance_per_capita_eur": 33,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2017,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 2629,
+				"receipts_m_eur": 1504,
+				"net_balance_m_eur": -1125,
+				"net_balance_per_capita_eur": -107,
+				"net_balance_pct_gni": -0.19
+			}
+		],
+		"2018": [
+			{
+				"year": 2018,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3277,
+				"receipts_m_eur": 1951,
+				"net_balance_m_eur": -1327,
+				"net_balance_per_capita_eur": -145,
+				"net_balance_pct_gni": -0.29
+			},
+			{
+				"year": 2018,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3840,
+				"receipts_m_eur": 8496,
+				"net_balance_m_eur": 4657,
+				"net_balance_per_capita_eur": 402,
+				"net_balance_pct_gni": 0.79
+			},
+			{
+				"year": 2018,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 487,
+				"receipts_m_eur": 2169,
+				"net_balance_m_eur": 1681,
+				"net_balance_per_capita_eur": 259,
+				"net_balance_pct_gni": 1.83
+			},
+			{
+				"year": 2018,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 451,
+				"receipts_m_eur": 1120,
+				"net_balance_m_eur": 670,
+				"net_balance_per_capita_eur": 172,
+				"net_balance_pct_gni": 0.93
+			},
+			{
+				"year": 2018,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 180,
+				"receipts_m_eur": 264,
+				"net_balance_m_eur": 84,
+				"net_balance_per_capita_eur": 67,
+				"net_balance_pct_gni": 0.28
+			},
+			{
+				"year": 2018,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1720,
+				"receipts_m_eur": 4121,
+				"net_balance_m_eur": 2401,
+				"net_balance_per_capita_eur": 220,
+				"net_balance_pct_gni": 0.88
+			},
+			{
+				"year": 2018,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2541,
+				"receipts_m_eur": 1415,
+				"net_balance_m_eur": -1127,
+				"net_balance_per_capita_eur": -190,
+				"net_balance_pct_gni": -0.28
+			},
+			{
+				"year": 2018,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 210,
+				"receipts_m_eur": 759,
+				"net_balance_m_eur": 549,
+				"net_balance_per_capita_eur": 400,
+				"net_balance_pct_gni": 1.33
+			},
+			{
+				"year": 2018,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2018,
+				"receipts_m_eur": 1483,
+				"net_balance_m_eur": -536,
+				"net_balance_per_capita_eur": -96,
+				"net_balance_pct_gni": -0.18
+			},
+			{
+				"year": 2018,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 20574,
+				"receipts_m_eur": 15036,
+				"net_balance_m_eur": -5537,
+				"net_balance_per_capita_eur": -81,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2018,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 25267,
+				"receipts_m_eur": 12017,
+				"net_balance_m_eur": -13249,
+				"net_balance_per_capita_eur": -159,
+				"net_balance_pct_gni": -0.31
+			},
+			{
+				"year": 2018,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1488,
+				"receipts_m_eur": 4870,
+				"net_balance_m_eur": 3382,
+				"net_balance_per_capita_eur": 325,
+				"net_balance_pct_gni": 1.47
+			},
+			{
+				"year": 2018,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1076,
+				"receipts_m_eur": 6298,
+				"net_balance_m_eur": 5222,
+				"net_balance_per_capita_eur": 536,
+				"net_balance_pct_gni": 2.65
+			},
+			{
+				"year": 2018,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 2320,
+				"receipts_m_eur": 2063,
+				"net_balance_m_eur": -258,
+				"net_balance_per_capita_eur": -51,
+				"net_balance_pct_gni": -0.05
+			},
+			{
+				"year": 2018,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 15215,
+				"receipts_m_eur": 10352,
+				"net_balance_m_eur": -4864,
+				"net_balance_per_capita_eur": -82,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2018,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 234,
+				"receipts_m_eur": 1212,
+				"net_balance_m_eur": 978,
+				"net_balance_per_capita_eur": 529,
+				"net_balance_pct_gni": 2.25
+			},
+			{
+				"year": 2018,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 356,
+				"receipts_m_eur": 2071,
+				"net_balance_m_eur": 1715,
+				"net_balance_per_capita_eur": 606,
+				"net_balance_pct_gni": 2.34
+			},
+			{
+				"year": 2018,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 357,
+				"receipts_m_eur": 2008,
+				"net_balance_m_eur": 1651,
+				"net_balance_per_capita_eur": 2502,
+				"net_balance_pct_gni": 1.83
+			},
+			{
+				"year": 2018,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 103,
+				"receipts_m_eur": 156,
+				"net_balance_m_eur": 53,
+				"net_balance_per_capita_eur": 100,
+				"net_balance_pct_gni": 0.29
+			},
+			{
+				"year": 2018,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 4845,
+				"receipts_m_eur": 2464,
+				"net_balance_m_eur": -2380,
+				"net_balance_per_capita_eur": -133,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2018,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 3983,
+				"receipts_m_eur": 16350,
+				"net_balance_m_eur": 12366,
+				"net_balance_per_capita_eur": 325,
+				"net_balance_pct_gni": 1.64
+			},
+			{
+				"year": 2018,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1699,
+				"receipts_m_eur": 5012,
+				"net_balance_m_eur": 3313,
+				"net_balance_per_capita_eur": 322,
+				"net_balance_pct_gni": 1.24
+			},
+			{
+				"year": 2018,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1655,
+				"receipts_m_eur": 4865,
+				"net_balance_m_eur": 3210,
+				"net_balance_per_capita_eur": 169,
+				"net_balance_pct_gni": 0.97
+			},
+			{
+				"year": 2018,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 764,
+				"receipts_m_eur": 2457,
+				"net_balance_m_eur": 1694,
+				"net_balance_per_capita_eur": 310,
+				"net_balance_pct_gni": 1.44
+			},
+			{
+				"year": 2018,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 386,
+				"receipts_m_eur": 927,
+				"net_balance_m_eur": 541,
+				"net_balance_per_capita_eur": 255,
+				"net_balance_pct_gni": 0.81
+			},
+			{
+				"year": 2018,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 10314,
+				"receipts_m_eur": 12273,
+				"net_balance_m_eur": 1959,
+				"net_balance_per_capita_eur": 41,
+				"net_balance_pct_gni": 0.13
+			},
+			{
+				"year": 2018,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 3303,
+				"receipts_m_eur": 1812,
+				"net_balance_m_eur": -1492,
+				"net_balance_per_capita_eur": -142,
+				"net_balance_pct_gni": -0.25
+			}
+		],
+		"2019": [
+			{
+				"year": 2019,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3148,
+				"receipts_m_eur": 2023,
+				"net_balance_m_eur": -1125,
+				"net_balance_per_capita_eur": -123,
+				"net_balance_pct_gni": -0.24
+			},
+			{
+				"year": 2019,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 3862,
+				"receipts_m_eur": 8777,
+				"net_balance_m_eur": 4915,
+				"net_balance_per_capita_eur": 424,
+				"net_balance_pct_gni": 0.83
+			},
+			{
+				"year": 2019,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 488,
+				"receipts_m_eur": 2205,
+				"net_balance_m_eur": 1716,
+				"net_balance_per_capita_eur": 264,
+				"net_balance_pct_gni": 1.87
+			},
+			{
+				"year": 2019,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 449,
+				"receipts_m_eur": 2074,
+				"net_balance_m_eur": 1625,
+				"net_balance_per_capita_eur": 418,
+				"net_balance_pct_gni": 2.25
+			},
+			{
+				"year": 2019,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 184,
+				"receipts_m_eur": 266,
+				"net_balance_m_eur": 82,
+				"net_balance_per_capita_eur": 66,
+				"net_balance_pct_gni": 0.28
+			},
+			{
+				"year": 2019,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 1712,
+				"receipts_m_eur": 5276,
+				"net_balance_m_eur": 3563,
+				"net_balance_per_capita_eur": 327,
+				"net_balance_pct_gni": 1.3
+			},
+			{
+				"year": 2019,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2406,
+				"receipts_m_eur": 1500,
+				"net_balance_m_eur": -905,
+				"net_balance_per_capita_eur": -152,
+				"net_balance_pct_gni": -0.23
+			},
+			{
+				"year": 2019,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 229,
+				"receipts_m_eur": 1169,
+				"net_balance_m_eur": 940,
+				"net_balance_per_capita_eur": 686,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2019,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2016,
+				"receipts_m_eur": 1542,
+				"net_balance_m_eur": -474,
+				"net_balance_per_capita_eur": -85,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2019,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 21009,
+				"receipts_m_eur": 15086,
+				"net_balance_m_eur": -5923,
+				"net_balance_per_capita_eur": -87,
+				"net_balance_pct_gni": -0.2
+			},
+			{
+				"year": 2019,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 25820,
+				"receipts_m_eur": 12214,
+				"net_balance_m_eur": -13606,
+				"net_balance_per_capita_eur": -164,
+				"net_balance_pct_gni": -0.32
+			},
+			{
+				"year": 2019,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1517,
+				"receipts_m_eur": 5258,
+				"net_balance_m_eur": 3741,
+				"net_balance_per_capita_eur": 360,
+				"net_balance_pct_gni": 1.62
+			},
+			{
+				"year": 2019,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1090,
+				"receipts_m_eur": 6202,
+				"net_balance_m_eur": 5113,
+				"net_balance_per_capita_eur": 524,
+				"net_balance_pct_gni": 2.6
+			},
+			{
+				"year": 2019,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 1996,
+				"receipts_m_eur": 2071,
+				"net_balance_m_eur": 75,
+				"net_balance_per_capita_eur": 15,
+				"net_balance_pct_gni": 0.01
+			},
+			{
+				"year": 2019,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 14956,
+				"receipts_m_eur": 11386,
+				"net_balance_m_eur": -3570,
+				"net_balance_per_capita_eur": -61,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2019,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 246,
+				"receipts_m_eur": 1375,
+				"net_balance_m_eur": 1128,
+				"net_balance_per_capita_eur": 610,
+				"net_balance_pct_gni": 2.59
+			},
+			{
+				"year": 2019,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 369,
+				"receipts_m_eur": 1550,
+				"net_balance_m_eur": 1180,
+				"net_balance_per_capita_eur": 417,
+				"net_balance_pct_gni": 1.61
+			},
+			{
+				"year": 2019,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 365,
+				"receipts_m_eur": 2061,
+				"net_balance_m_eur": 1696,
+				"net_balance_per_capita_eur": 2570,
+				"net_balance_pct_gni": 1.88
+			},
+			{
+				"year": 2019,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 107,
+				"receipts_m_eur": 260,
+				"net_balance_m_eur": 153,
+				"net_balance_per_capita_eur": 286,
+				"net_balance_pct_gni": 0.83
+			},
+			{
+				"year": 2019,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 5326,
+				"receipts_m_eur": 2557,
+				"net_balance_m_eur": -2769,
+				"net_balance_per_capita_eur": -155,
+				"net_balance_pct_gni": -0.25
+			},
+			{
+				"year": 2019,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 4214,
+				"receipts_m_eur": 16366,
+				"net_balance_m_eur": 12151,
+				"net_balance_per_capita_eur": 320,
+				"net_balance_pct_gni": 1.61
+			},
+			{
+				"year": 2019,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 1719,
+				"receipts_m_eur": 4367,
+				"net_balance_m_eur": 2648,
+				"net_balance_per_capita_eur": 257,
+				"net_balance_pct_gni": 0.99
+			},
+			{
+				"year": 2019,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 1703,
+				"receipts_m_eur": 5133,
+				"net_balance_m_eur": 3431,
+				"net_balance_per_capita_eur": 181,
+				"net_balance_pct_gni": 1.04
+			},
+			{
+				"year": 2019,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 750,
+				"receipts_m_eur": 2304,
+				"net_balance_m_eur": 1554,
+				"net_balance_per_capita_eur": 285,
+				"net_balance_pct_gni": 1.32
+			},
+			{
+				"year": 2019,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 405,
+				"receipts_m_eur": 936,
+				"net_balance_m_eur": 531,
+				"net_balance_per_capita_eur": 250,
+				"net_balance_pct_gni": 0.79
+			},
+			{
+				"year": 2019,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 10221,
+				"receipts_m_eur": 11267,
+				"net_balance_m_eur": 1046,
+				"net_balance_per_capita_eur": 22,
+				"net_balance_pct_gni": 0.07
+			},
+			{
+				"year": 2019,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 3042,
+				"receipts_m_eur": 1705,
+				"net_balance_m_eur": -1337,
+				"net_balance_per_capita_eur": -127,
+				"net_balance_pct_gni": -0.22
+			}
+		],
+		"2020": [
+			{
+				"year": 2020,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3550,
+				"receipts_m_eur": 2116,
+				"net_balance_m_eur": -1434,
+				"net_balance_per_capita_eur": -157,
+				"net_balance_pct_gni": -0.31
+			},
+			{
+				"year": 2020,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 4668,
+				"receipts_m_eur": 9051,
+				"net_balance_m_eur": 4384,
+				"net_balance_per_capita_eur": 378,
+				"net_balance_pct_gni": 0.74
+			},
+			{
+				"year": 2020,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 586,
+				"receipts_m_eur": 2229,
+				"net_balance_m_eur": 1643,
+				"net_balance_per_capita_eur": 253,
+				"net_balance_pct_gni": 1.79
+			},
+			{
+				"year": 2020,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 503,
+				"receipts_m_eur": 2688,
+				"net_balance_m_eur": 2185,
+				"net_balance_per_capita_eur": 562,
+				"net_balance_pct_gni": 3.02
+			},
+			{
+				"year": 2020,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 219,
+				"receipts_m_eur": 233,
+				"net_balance_m_eur": 13,
+				"net_balance_per_capita_eur": 11,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2020,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 2024,
+				"receipts_m_eur": 5536,
+				"net_balance_m_eur": 3512,
+				"net_balance_per_capita_eur": 322,
+				"net_balance_pct_gni": 1.28
+			},
+			{
+				"year": 2020,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2819,
+				"receipts_m_eur": 1530,
+				"net_balance_m_eur": -1289,
+				"net_balance_per_capita_eur": -217,
+				"net_balance_pct_gni": -0.33
+			},
+			{
+				"year": 2020,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 278,
+				"receipts_m_eur": 1085,
+				"net_balance_m_eur": 806,
+				"net_balance_per_capita_eur": 589,
+				"net_balance_pct_gni": 1.96
+			},
+			{
+				"year": 2020,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2318,
+				"receipts_m_eur": 1558,
+				"net_balance_m_eur": -761,
+				"net_balance_per_capita_eur": -137,
+				"net_balance_pct_gni": -0.26
+			},
+			{
+				"year": 2020,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 23689,
+				"receipts_m_eur": 15849,
+				"net_balance_m_eur": -7841,
+				"net_balance_per_capita_eur": -115,
+				"net_balance_pct_gni": -0.27
+			},
+			{
+				"year": 2020,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 28064,
+				"receipts_m_eur": 12566,
+				"net_balance_m_eur": -15499,
+				"net_balance_per_capita_eur": -186,
+				"net_balance_pct_gni": -0.36
+			},
+			{
+				"year": 2020,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1655,
+				"receipts_m_eur": 7414,
+				"net_balance_m_eur": 5760,
+				"net_balance_per_capita_eur": 554,
+				"net_balance_pct_gni": 2.5
+			},
+			{
+				"year": 2020,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1299,
+				"receipts_m_eur": 6144,
+				"net_balance_m_eur": 4845,
+				"net_balance_per_capita_eur": 497,
+				"net_balance_pct_gni": 2.46
+			},
+			{
+				"year": 2020,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 2380,
+				"receipts_m_eur": 2255,
+				"net_balance_m_eur": -126,
+				"net_balance_per_capita_eur": -25,
+				"net_balance_pct_gni": -0.02
+			},
+			{
+				"year": 2020,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 16598,
+				"receipts_m_eur": 11863,
+				"net_balance_m_eur": -4735,
+				"net_balance_per_capita_eur": -80,
+				"net_balance_pct_gni": -0.22
+			},
+			{
+				"year": 2020,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 285,
+				"receipts_m_eur": 1324,
+				"net_balance_m_eur": 1038,
+				"net_balance_per_capita_eur": 561,
+				"net_balance_pct_gni": 2.39
+			},
+			{
+				"year": 2020,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 448,
+				"receipts_m_eur": 2594,
+				"net_balance_m_eur": 2146,
+				"net_balance_per_capita_eur": 758,
+				"net_balance_pct_gni": 2.93
+			},
+			{
+				"year": 2020,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 388,
+				"receipts_m_eur": 2445,
+				"net_balance_m_eur": 2057,
+				"net_balance_per_capita_eur": 3116,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2020,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 116,
+				"receipts_m_eur": 205,
+				"net_balance_m_eur": 88,
+				"net_balance_per_capita_eur": 165,
+				"net_balance_pct_gni": 0.48
+			},
+			{
+				"year": 2020,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 5846,
+				"receipts_m_eur": 2735,
+				"net_balance_m_eur": -3111,
+				"net_balance_per_capita_eur": -174,
+				"net_balance_pct_gni": -0.29
+			},
+			{
+				"year": 2020,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 4881,
+				"receipts_m_eur": 18092,
+				"net_balance_m_eur": 13211,
+				"net_balance_per_capita_eur": 348,
+				"net_balance_pct_gni": 1.75
+			},
+			{
+				"year": 2020,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 2009,
+				"receipts_m_eur": 5310,
+				"net_balance_m_eur": 3301,
+				"net_balance_per_capita_eur": 320,
+				"net_balance_pct_gni": 1.24
+			},
+			{
+				"year": 2020,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 2052,
+				"receipts_m_eur": 6978,
+				"net_balance_m_eur": 4926,
+				"net_balance_per_capita_eur": 259,
+				"net_balance_pct_gni": 1.49
+			},
+			{
+				"year": 2020,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 877,
+				"receipts_m_eur": 2594,
+				"net_balance_m_eur": 1716,
+				"net_balance_per_capita_eur": 314,
+				"net_balance_pct_gni": 1.46
+			},
+			{
+				"year": 2020,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 457,
+				"receipts_m_eur": 1051,
+				"net_balance_m_eur": 594,
+				"net_balance_per_capita_eur": 280,
+				"net_balance_pct_gni": 0.89
+			},
+			{
+				"year": 2020,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 11040,
+				"receipts_m_eur": 12810,
+				"net_balance_m_eur": 1770,
+				"net_balance_per_capita_eur": 37,
+				"net_balance_pct_gni": 0.12
+			},
+			{
+				"year": 2020,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 4097,
+				"receipts_m_eur": 2191,
+				"net_balance_m_eur": -1907,
+				"net_balance_per_capita_eur": -182,
+				"net_balance_pct_gni": -0.32
+			}
+		],
+		"2021": [
+			{
+				"year": 2021,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3967,
+				"receipts_m_eur": 2225,
+				"net_balance_m_eur": -1742,
+				"net_balance_per_capita_eur": -191,
+				"net_balance_pct_gni": -0.38
+			},
+			{
+				"year": 2021,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 6275,
+				"receipts_m_eur": 9640,
+				"net_balance_m_eur": 3365,
+				"net_balance_per_capita_eur": 290,
+				"net_balance_pct_gni": 0.57
+			},
+			{
+				"year": 2021,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 776,
+				"receipts_m_eur": 2561,
+				"net_balance_m_eur": 1784,
+				"net_balance_per_capita_eur": 275,
+				"net_balance_pct_gni": 1.94
+			},
+			{
+				"year": 2021,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 578,
+				"receipts_m_eur": 2352,
+				"net_balance_m_eur": 1774,
+				"net_balance_per_capita_eur": 456,
+				"net_balance_pct_gni": 2.45
+			},
+			{
+				"year": 2021,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 237,
+				"receipts_m_eur": 424,
+				"net_balance_m_eur": 187,
+				"net_balance_per_capita_eur": 149,
+				"net_balance_pct_gni": 0.63
+			},
+			{
+				"year": 2021,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 2381,
+				"receipts_m_eur": 5407,
+				"net_balance_m_eur": 3027,
+				"net_balance_per_capita_eur": 278,
+				"net_balance_pct_gni": 1.11
+			},
+			{
+				"year": 2021,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 3479,
+				"receipts_m_eur": 1637,
+				"net_balance_m_eur": -1841,
+				"net_balance_per_capita_eur": -310,
+				"net_balance_pct_gni": -0.46
+			},
+			{
+				"year": 2021,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 323,
+				"receipts_m_eur": 1082,
+				"net_balance_m_eur": 759,
+				"net_balance_per_capita_eur": 554,
+				"net_balance_pct_gni": 1.84
+			},
+			{
+				"year": 2021,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2536,
+				"receipts_m_eur": 1600,
+				"net_balance_m_eur": -935,
+				"net_balance_per_capita_eur": -168,
+				"net_balance_pct_gni": -0.31
+			},
+			{
+				"year": 2021,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 26368,
+				"receipts_m_eur": 15729,
+				"net_balance_m_eur": -10639,
+				"net_balance_per_capita_eur": -156,
+				"net_balance_pct_gni": -0.37
+			},
+			{
+				"year": 2021,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 37802,
+				"receipts_m_eur": 11834,
+				"net_balance_m_eur": -25967,
+				"net_balance_per_capita_eur": -312,
+				"net_balance_pct_gni": -0.61
+			},
+			{
+				"year": 2021,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1862,
+				"receipts_m_eur": 6282,
+				"net_balance_m_eur": 4420,
+				"net_balance_per_capita_eur": 425,
+				"net_balance_pct_gni": 1.92
+			},
+			{
+				"year": 2021,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1668,
+				"receipts_m_eur": 5974,
+				"net_balance_m_eur": 4306,
+				"net_balance_per_capita_eur": 442,
+				"net_balance_pct_gni": 2.19
+			},
+			{
+				"year": 2021,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 3084,
+				"receipts_m_eur": 2686,
+				"net_balance_m_eur": -397,
+				"net_balance_per_capita_eur": -78,
+				"net_balance_pct_gni": -0.08
+			},
+			{
+				"year": 2021,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 18378,
+				"receipts_m_eur": 16746,
+				"net_balance_m_eur": -1632,
+				"net_balance_per_capita_eur": -28,
+				"net_balance_pct_gni": -0.07
+			},
+			{
+				"year": 2021,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 353,
+				"receipts_m_eur": 1244,
+				"net_balance_m_eur": 891,
+				"net_balance_per_capita_eur": 482,
+				"net_balance_pct_gni": 2.05
+			},
+			{
+				"year": 2021,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 591,
+				"receipts_m_eur": 2173,
+				"net_balance_m_eur": 1582,
+				"net_balance_per_capita_eur": 559,
+				"net_balance_pct_gni": 2.16
+			},
+			{
+				"year": 2021,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 444,
+				"receipts_m_eur": 2493,
+				"net_balance_m_eur": 2048,
+				"net_balance_per_capita_eur": 3104,
+				"net_balance_pct_gni": 2.27
+			},
+			{
+				"year": 2021,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 194,
+				"receipts_m_eur": 222,
+				"net_balance_m_eur": 28,
+				"net_balance_per_capita_eur": 52,
+				"net_balance_pct_gni": 0.15
+			},
+			{
+				"year": 2021,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 10840,
+				"receipts_m_eur": 2624,
+				"net_balance_m_eur": -8215,
+				"net_balance_per_capita_eur": -459,
+				"net_balance_pct_gni": -0.75
+			},
+			{
+				"year": 2021,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 6178,
+				"receipts_m_eur": 18727,
+				"net_balance_m_eur": 12550,
+				"net_balance_per_capita_eur": 330,
+				"net_balance_pct_gni": 1.66
+			},
+			{
+				"year": 2021,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 2373,
+				"receipts_m_eur": 5633,
+				"net_balance_m_eur": 3260,
+				"net_balance_per_capita_eur": 317,
+				"net_balance_pct_gni": 1.22
+			},
+			{
+				"year": 2021,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 2467,
+				"receipts_m_eur": 6638,
+				"net_balance_m_eur": 4171,
+				"net_balance_per_capita_eur": 220,
+				"net_balance_pct_gni": 1.26
+			},
+			{
+				"year": 2021,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 1260,
+				"receipts_m_eur": 2743,
+				"net_balance_m_eur": 1483,
+				"net_balance_per_capita_eur": 272,
+				"net_balance_pct_gni": 1.26
+			},
+			{
+				"year": 2021,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 589,
+				"receipts_m_eur": 1011,
+				"net_balance_m_eur": 422,
+				"net_balance_per_capita_eur": 199,
+				"net_balance_pct_gni": 0.63
+			},
+			{
+				"year": 2021,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 13106,
+				"receipts_m_eur": 16190,
+				"net_balance_m_eur": 3084,
+				"net_balance_per_capita_eur": 65,
+				"net_balance_pct_gni": 0.21
+			},
+			{
+				"year": 2021,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 5567,
+				"receipts_m_eur": 2071,
+				"net_balance_m_eur": -3496,
+				"net_balance_per_capita_eur": -333,
+				"net_balance_pct_gni": -0.58
+			}
+		],
+		"2022": [
+			{
+				"year": 2022,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3788,
+				"receipts_m_eur": 2266,
+				"net_balance_m_eur": -1523,
+				"net_balance_per_capita_eur": -167,
+				"net_balance_pct_gni": -0.33
+			},
+			{
+				"year": 2022,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 7347,
+				"receipts_m_eur": 11212,
+				"net_balance_m_eur": 3865,
+				"net_balance_per_capita_eur": 334,
+				"net_balance_pct_gni": 0.65
+			},
+			{
+				"year": 2022,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 773,
+				"receipts_m_eur": 2344,
+				"net_balance_m_eur": 1571,
+				"net_balance_per_capita_eur": 242,
+				"net_balance_pct_gni": 1.71
+			},
+			{
+				"year": 2022,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 559,
+				"receipts_m_eur": 2060,
+				"net_balance_m_eur": 1501,
+				"net_balance_per_capita_eur": 386,
+				"net_balance_pct_gni": 2.08
+			},
+			{
+				"year": 2022,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 233,
+				"receipts_m_eur": 488,
+				"net_balance_m_eur": 255,
+				"net_balance_per_capita_eur": 204,
+				"net_balance_pct_gni": 0.87
+			},
+			{
+				"year": 2022,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 2464,
+				"receipts_m_eur": 5295,
+				"net_balance_m_eur": 2831,
+				"net_balance_per_capita_eur": 260,
+				"net_balance_pct_gni": 1.04
+			},
+			{
+				"year": 2022,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 3328,
+				"receipts_m_eur": 2186,
+				"net_balance_m_eur": -1142,
+				"net_balance_per_capita_eur": -192,
+				"net_balance_pct_gni": -0.29
+			},
+			{
+				"year": 2022,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 333,
+				"receipts_m_eur": 1253,
+				"net_balance_m_eur": 920,
+				"net_balance_per_capita_eur": 671,
+				"net_balance_pct_gni": 2.23
+			},
+			{
+				"year": 2022,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2333,
+				"receipts_m_eur": 1773,
+				"net_balance_m_eur": -559,
+				"net_balance_per_capita_eur": -101,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2022,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 24230,
+				"receipts_m_eur": 16892,
+				"net_balance_m_eur": -7337,
+				"net_balance_per_capita_eur": -108,
+				"net_balance_pct_gni": -0.25
+			},
+			{
+				"year": 2022,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 36122,
+				"receipts_m_eur": 14160,
+				"net_balance_m_eur": -21962,
+				"net_balance_per_capita_eur": -264,
+				"net_balance_pct_gni": -0.51
+			},
+			{
+				"year": 2022,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 2246,
+				"receipts_m_eur": 5851,
+				"net_balance_m_eur": 3605,
+				"net_balance_per_capita_eur": 347,
+				"net_balance_pct_gni": 1.56
+			},
+			{
+				"year": 2022,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1575,
+				"receipts_m_eur": 6062,
+				"net_balance_m_eur": 4487,
+				"net_balance_per_capita_eur": 460,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2022,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 3125,
+				"receipts_m_eur": 2341,
+				"net_balance_m_eur": -784,
+				"net_balance_per_capita_eur": -154,
+				"net_balance_pct_gni": -0.15
+			},
+			{
+				"year": 2022,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 17754,
+				"receipts_m_eur": 14593,
+				"net_balance_m_eur": -3162,
+				"net_balance_per_capita_eur": -54,
+				"net_balance_pct_gni": -0.14
+			},
+			{
+				"year": 2022,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 349,
+				"receipts_m_eur": 1375,
+				"net_balance_m_eur": 1026,
+				"net_balance_per_capita_eur": 554,
+				"net_balance_pct_gni": 2.36
+			},
+			{
+				"year": 2022,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 613,
+				"receipts_m_eur": 2284,
+				"net_balance_m_eur": 1671,
+				"net_balance_per_capita_eur": 590,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2022,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 139,
+				"receipts_m_eur": 264,
+				"net_balance_m_eur": 125,
+				"net_balance_per_capita_eur": 234,
+				"net_balance_pct_gni": 0.68
+			},
+			{
+				"year": 2022,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 11136,
+				"receipts_m_eur": 3511,
+				"net_balance_m_eur": -7625,
+				"net_balance_per_capita_eur": -426,
+				"net_balance_pct_gni": -0.7
+			},
+			{
+				"year": 2022,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 6318,
+				"receipts_m_eur": 18319,
+				"net_balance_m_eur": 12001,
+				"net_balance_per_capita_eur": 316,
+				"net_balance_pct_gni": 1.59
+			},
+			{
+				"year": 2022,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 2182,
+				"receipts_m_eur": 5274,
+				"net_balance_m_eur": 3093,
+				"net_balance_per_capita_eur": 300,
+				"net_balance_pct_gni": 1.16
+			},
+			{
+				"year": 2022,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 2350,
+				"receipts_m_eur": 8162,
+				"net_balance_m_eur": 5812,
+				"net_balance_per_capita_eur": 306,
+				"net_balance_pct_gni": 1.76
+			},
+			{
+				"year": 2022,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 944,
+				"receipts_m_eur": 3177,
+				"net_balance_m_eur": 2233,
+				"net_balance_per_capita_eur": 409,
+				"net_balance_pct_gni": 1.9
+			},
+			{
+				"year": 2022,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 673,
+				"receipts_m_eur": 944,
+				"net_balance_m_eur": 272,
+				"net_balance_per_capita_eur": 128,
+				"net_balance_pct_gni": 0.41
+			},
+			{
+				"year": 2022,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 12636,
+				"receipts_m_eur": 14248,
+				"net_balance_m_eur": 1612,
+				"net_balance_per_capita_eur": 34,
+				"net_balance_pct_gni": 0.11
+			},
+			{
+				"year": 2022,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 5121,
+				"receipts_m_eur": 2124,
+				"net_balance_m_eur": -2997,
+				"net_balance_per_capita_eur": -285,
+				"net_balance_pct_gni": -0.5
+			}
+		],
+		"2023": [
+			{
+				"year": 2023,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3701,
+				"receipts_m_eur": 2167,
+				"net_balance_m_eur": -1534,
+				"net_balance_per_capita_eur": -168,
+				"net_balance_pct_gni": -0.33
+			},
+			{
+				"year": 2023,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 6354,
+				"receipts_m_eur": 11576,
+				"net_balance_m_eur": 5222,
+				"net_balance_per_capita_eur": 451,
+				"net_balance_pct_gni": 0.88
+			},
+			{
+				"year": 2023,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 799,
+				"receipts_m_eur": 2812,
+				"net_balance_m_eur": 2013,
+				"net_balance_per_capita_eur": 310,
+				"net_balance_pct_gni": 2.19
+			},
+			{
+				"year": 2023,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 647,
+				"receipts_m_eur": 3043,
+				"net_balance_m_eur": 2396,
+				"net_balance_per_capita_eur": 616,
+				"net_balance_pct_gni": 3.31
+			},
+			{
+				"year": 2023,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 240,
+				"receipts_m_eur": 393,
+				"net_balance_m_eur": 153,
+				"net_balance_per_capita_eur": 122,
+				"net_balance_pct_gni": 0.52
+			},
+			{
+				"year": 2023,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 2527,
+				"receipts_m_eur": 5552,
+				"net_balance_m_eur": 3025,
+				"net_balance_per_capita_eur": 278,
+				"net_balance_pct_gni": 1.11
+			},
+			{
+				"year": 2023,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 3103,
+				"receipts_m_eur": 1776,
+				"net_balance_m_eur": -1327,
+				"net_balance_per_capita_eur": -223,
+				"net_balance_pct_gni": -0.34
+			},
+			{
+				"year": 2023,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 315,
+				"receipts_m_eur": 1194,
+				"net_balance_m_eur": 879,
+				"net_balance_per_capita_eur": 642,
+				"net_balance_pct_gni": 2.13
+			},
+			{
+				"year": 2023,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2195,
+				"receipts_m_eur": 1517,
+				"net_balance_m_eur": -678,
+				"net_balance_per_capita_eur": -122,
+				"net_balance_pct_gni": -0.23
+			},
+			{
+				"year": 2023,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 23873,
+				"receipts_m_eur": 16498,
+				"net_balance_m_eur": -7375,
+				"net_balance_per_capita_eur": -108,
+				"net_balance_pct_gni": -0.26
+			},
+			{
+				"year": 2023,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 34331,
+				"receipts_m_eur": 14065,
+				"net_balance_m_eur": -20266,
+				"net_balance_per_capita_eur": -244,
+				"net_balance_pct_gni": -0.47
+			},
+			{
+				"year": 2023,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1792,
+				"receipts_m_eur": 5852,
+				"net_balance_m_eur": 4060,
+				"net_balance_per_capita_eur": 390,
+				"net_balance_pct_gni": 1.76
+			},
+			{
+				"year": 2023,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1768,
+				"receipts_m_eur": 6419,
+				"net_balance_m_eur": 4651,
+				"net_balance_per_capita_eur": 477,
+				"net_balance_pct_gni": 2.36
+			},
+			{
+				"year": 2023,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 3245,
+				"receipts_m_eur": 2264,
+				"net_balance_m_eur": -981,
+				"net_balance_per_capita_eur": -192,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2023,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 16881,
+				"receipts_m_eur": 12804,
+				"net_balance_m_eur": -4077,
+				"net_balance_per_capita_eur": -69,
+				"net_balance_pct_gni": -0.19
+			},
+			{
+				"year": 2023,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 349,
+				"receipts_m_eur": 1499,
+				"net_balance_m_eur": 1150,
+				"net_balance_per_capita_eur": 622,
+				"net_balance_pct_gni": 2.64
+			},
+			{
+				"year": 2023,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 609,
+				"receipts_m_eur": 2279,
+				"net_balance_m_eur": 1670,
+				"net_balance_per_capita_eur": 590,
+				"net_balance_pct_gni": 2.28
+			},
+			{
+				"year": 2023,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 691,
+				"receipts_m_eur": 2511,
+				"net_balance_m_eur": 1821,
+				"net_balance_per_capita_eur": 2759,
+				"net_balance_pct_gni": 2.02
+			},
+			{
+				"year": 2023,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 152,
+				"receipts_m_eur": 277,
+				"net_balance_m_eur": 125,
+				"net_balance_per_capita_eur": 234,
+				"net_balance_pct_gni": 0.68
+			},
+			{
+				"year": 2023,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 10524,
+				"receipts_m_eur": 2886,
+				"net_balance_m_eur": -7638,
+				"net_balance_per_capita_eur": -427,
+				"net_balance_pct_gni": -0.7
+			},
+			{
+				"year": 2023,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 6231,
+				"receipts_m_eur": 14137,
+				"net_balance_m_eur": 7906,
+				"net_balance_per_capita_eur": 208,
+				"net_balance_pct_gni": 1.05
+			},
+			{
+				"year": 2023,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 2129,
+				"receipts_m_eur": 4518,
+				"net_balance_m_eur": 2390,
+				"net_balance_per_capita_eur": 232,
+				"net_balance_pct_gni": 0.9
+			},
+			{
+				"year": 2023,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 2526,
+				"receipts_m_eur": 8655,
+				"net_balance_m_eur": 6128,
+				"net_balance_per_capita_eur": 323,
+				"net_balance_pct_gni": 1.85
+			},
+			{
+				"year": 2023,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 964,
+				"receipts_m_eur": 3546,
+				"net_balance_m_eur": 2583,
+				"net_balance_per_capita_eur": 473,
+				"net_balance_pct_gni": 2.2
+			},
+			{
+				"year": 2023,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 629,
+				"receipts_m_eur": 952,
+				"net_balance_m_eur": 323,
+				"net_balance_per_capita_eur": 152,
+				"net_balance_pct_gni": 0.48
+			},
+			{
+				"year": 2023,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 12198,
+				"receipts_m_eur": 12122,
+				"net_balance_m_eur": -76,
+				"net_balance_per_capita_eur": -2,
+				"net_balance_pct_gni": -0.01
+			},
+			{
+				"year": 2023,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 4462,
+				"receipts_m_eur": 2081,
+				"net_balance_m_eur": -2381,
+				"net_balance_per_capita_eur": -227,
+				"net_balance_pct_gni": -0.4
+			}
+		],
+		"2024": [
+			{
+				"year": 2024,
+				"code": "AT",
+				"country": "Austria",
+				"contribution_m_eur": 3444,
+				"receipts_m_eur": 2012,
+				"net_balance_m_eur": -1432,
+				"net_balance_per_capita_eur": -157,
+				"net_balance_pct_gni": -0.31
+			},
+			{
+				"year": 2024,
+				"code": "BE",
+				"country": "Belgium",
+				"contribution_m_eur": 6369,
+				"receipts_m_eur": 11456,
+				"net_balance_m_eur": 5086,
+				"net_balance_per_capita_eur": 439,
+				"net_balance_pct_gni": 0.86
+			},
+			{
+				"year": 2024,
+				"code": "BG",
+				"country": "Bulgaria",
+				"contribution_m_eur": 752,
+				"receipts_m_eur": 2067,
+				"net_balance_m_eur": 1314,
+				"net_balance_per_capita_eur": 202,
+				"net_balance_pct_gni": 1.43
+			},
+			{
+				"year": 2024,
+				"code": "HR",
+				"country": "Croatia",
+				"contribution_m_eur": 663,
+				"receipts_m_eur": 1737,
+				"net_balance_m_eur": 1075,
+				"net_balance_per_capita_eur": 276,
+				"net_balance_pct_gni": 1.49
+			},
+			{
+				"year": 2024,
+				"code": "CY",
+				"country": "Cyprus",
+				"contribution_m_eur": 234,
+				"receipts_m_eur": 321,
+				"net_balance_m_eur": 87,
+				"net_balance_per_capita_eur": 70,
+				"net_balance_pct_gni": 0.3
+			},
+			{
+				"year": 2024,
+				"code": "CZ",
+				"country": "Czech Republic",
+				"contribution_m_eur": 2227,
+				"receipts_m_eur": 3109,
+				"net_balance_m_eur": 881,
+				"net_balance_per_capita_eur": 81,
+				"net_balance_pct_gni": 0.32
+			},
+			{
+				"year": 2024,
+				"code": "DK",
+				"country": "Denmark",
+				"contribution_m_eur": 2862,
+				"receipts_m_eur": 1842,
+				"net_balance_m_eur": -1020,
+				"net_balance_per_capita_eur": -172,
+				"net_balance_pct_gni": -0.26
+			},
+			{
+				"year": 2024,
+				"code": "EE",
+				"country": "Estonia",
+				"contribution_m_eur": 300,
+				"receipts_m_eur": 906,
+				"net_balance_m_eur": 606,
+				"net_balance_per_capita_eur": 443,
+				"net_balance_pct_gni": 1.47
+			},
+			{
+				"year": 2024,
+				"code": "FI",
+				"country": "Finland",
+				"contribution_m_eur": 2023,
+				"receipts_m_eur": 1638,
+				"net_balance_m_eur": -385,
+				"net_balance_per_capita_eur": -69,
+				"net_balance_pct_gni": -0.13
+			},
+			{
+				"year": 2024,
+				"code": "FR",
+				"country": "France",
+				"contribution_m_eur": 22276,
+				"receipts_m_eur": 16456,
+				"net_balance_m_eur": -5821,
+				"net_balance_per_capita_eur": -86,
+				"net_balance_pct_gni": -0.2
+			},
+			{
+				"year": 2024,
+				"code": "DE",
+				"country": "Germany",
+				"contribution_m_eur": 32081,
+				"receipts_m_eur": 12620,
+				"net_balance_m_eur": -19461,
+				"net_balance_per_capita_eur": -234,
+				"net_balance_pct_gni": -0.45
+			},
+			{
+				"year": 2024,
+				"code": "GR",
+				"country": "Greece",
+				"contribution_m_eur": 1737,
+				"receipts_m_eur": 5101,
+				"net_balance_m_eur": 3364,
+				"net_balance_per_capita_eur": 323,
+				"net_balance_pct_gni": 1.46
+			},
+			{
+				"year": 2024,
+				"code": "HU",
+				"country": "Hungary",
+				"contribution_m_eur": 1597,
+				"receipts_m_eur": 3453,
+				"net_balance_m_eur": 1856,
+				"net_balance_per_capita_eur": 190,
+				"net_balance_pct_gni": 0.94
+			},
+			{
+				"year": 2024,
+				"code": "IE",
+				"country": "Ireland",
+				"contribution_m_eur": 3010,
+				"receipts_m_eur": 2188,
+				"net_balance_m_eur": -821,
+				"net_balance_per_capita_eur": -161,
+				"net_balance_pct_gni": -0.16
+			},
+			{
+				"year": 2024,
+				"code": "IT",
+				"country": "Italy",
+				"contribution_m_eur": 16148,
+				"receipts_m_eur": 13269,
+				"net_balance_m_eur": -2880,
+				"net_balance_per_capita_eur": -49,
+				"net_balance_pct_gni": -0.13
+			},
+			{
+				"year": 2024,
+				"code": "LV",
+				"country": "Latvia",
+				"contribution_m_eur": 322,
+				"receipts_m_eur": 1328,
+				"net_balance_m_eur": 1006,
+				"net_balance_per_capita_eur": 544,
+				"net_balance_pct_gni": 2.31
+			},
+			{
+				"year": 2024,
+				"code": "LT",
+				"country": "Lithuania",
+				"contribution_m_eur": 595,
+				"receipts_m_eur": 1833,
+				"net_balance_m_eur": 1238,
+				"net_balance_per_capita_eur": 437,
+				"net_balance_pct_gni": 1.69
+			},
+			{
+				"year": 2024,
+				"code": "LU",
+				"country": "Luxembourg",
+				"contribution_m_eur": 441,
+				"receipts_m_eur": 2812,
+				"net_balance_m_eur": 2370,
+				"net_balance_per_capita_eur": 3591,
+				"net_balance_pct_gni": 2.63
+			},
+			{
+				"year": 2024,
+				"code": "MT",
+				"country": "Malta",
+				"contribution_m_eur": 154,
+				"receipts_m_eur": 263,
+				"net_balance_m_eur": 108,
+				"net_balance_per_capita_eur": 202,
+				"net_balance_pct_gni": 0.59
+			},
+			{
+				"year": 2024,
+				"code": "NL",
+				"country": "Netherlands",
+				"contribution_m_eur": 9577,
+				"receipts_m_eur": 3153,
+				"net_balance_m_eur": -6424,
+				"net_balance_per_capita_eur": -359,
+				"net_balance_pct_gni": -0.59
+			},
+			{
+				"year": 2024,
+				"code": "PL",
+				"country": "Poland",
+				"contribution_m_eur": 6697,
+				"receipts_m_eur": 9148,
+				"net_balance_m_eur": 2450,
+				"net_balance_per_capita_eur": 64,
+				"net_balance_pct_gni": 0.32
+			},
+			{
+				"year": 2024,
+				"code": "PT",
+				"country": "Portugal",
+				"contribution_m_eur": 2061,
+				"receipts_m_eur": 3181,
+				"net_balance_m_eur": 1120,
+				"net_balance_per_capita_eur": 109,
+				"net_balance_pct_gni": 0.42
+			},
+			{
+				"year": 2024,
+				"code": "RO",
+				"country": "Romania",
+				"contribution_m_eur": 2749,
+				"receipts_m_eur": 5268,
+				"net_balance_m_eur": 2519,
+				"net_balance_per_capita_eur": 133,
+				"net_balance_pct_gni": 0.76
+			},
+			{
+				"year": 2024,
+				"code": "SK",
+				"country": "Slovakia",
+				"contribution_m_eur": 891,
+				"receipts_m_eur": 2205,
+				"net_balance_m_eur": 1314,
+				"net_balance_per_capita_eur": 241,
+				"net_balance_pct_gni": 1.12
+			},
+			{
+				"year": 2024,
+				"code": "SI",
+				"country": "Slovenia",
+				"contribution_m_eur": 598,
+				"receipts_m_eur": 974,
+				"net_balance_m_eur": 376,
+				"net_balance_per_capita_eur": 177,
+				"net_balance_pct_gni": 0.56
+			},
+			{
+				"year": 2024,
+				"code": "ES",
+				"country": "Spain",
+				"contribution_m_eur": 11832,
+				"receipts_m_eur": 12610,
+				"net_balance_m_eur": 778,
+				"net_balance_per_capita_eur": 16,
+				"net_balance_pct_gni": 0.05
+			},
+			{
+				"year": 2024,
+				"code": "SE",
+				"country": "Sweden",
+				"contribution_m_eur": 4265,
+				"receipts_m_eur": 2008,
+				"net_balance_m_eur": -2257,
+				"net_balance_per_capita_eur": -215,
+				"net_balance_pct_gni": -0.38
+			}
+		]
+	}
+}

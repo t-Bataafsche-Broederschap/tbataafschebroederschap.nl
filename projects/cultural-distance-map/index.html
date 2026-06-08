@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>Culturele Afstand Map | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactieve culturele kaart die landen positioneert op de Inglehart-Welzel assen en afstanden tot een gekozen land rangschikt." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/cultural-distance-map/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<div class="cultural-distance-page">
+				<header class="cultural-header">
+					<div>
+						<p class="cultural-eyebrow">EVS/WVS cultural map</p>
+						<h1>Culturele Afstand Map</h1>
+					</div>
+					<p>Vergelijk landen op basis van hun positie in de culturele waardenruimte. De afstand is de rechte lijn tussen twee landen in de gekozen projectie.</p>
+				</header>
+				<section class="explanation" aria-labelledby="explanation-title">
+					<div>
+						<p class="cultural-eyebrow">Interpretatie</p>
+						<h2 id="explanation-title">Wat meet deze kaart?</h2>
+						<p>De afstand in deze tool is de rechte lijn tussen twee landen in de gekozen tweedimensionale waardenruimte. Afstanden zijn daarom alleen binnen dezelfde modus zinvol vergelijkbaar.</p>
+					</div>
+					<article>
+						<h3>Inglehart-Welzel</h3>
+						<p>Dit is de klassieke culturele kaart van de World Values Survey en European Values Study. De horizontale as loopt van overlevingswaarden naar zelfexpressiewaarden; de verticale as loopt van traditionele naar seculier-rationele waarden.</p>
+						<p>In de dataset gebruikt deze modus <code>TradAgg</code> en <code>SurvSAgg</code>. Dit is de beste keuze voor de bekende landenwolk: waar ligt Nederland ten opzichte van bijvoorbeeld Duitsland, Zweden, Japan of de VS?</p>
+					</article>
+					<article>
+						<h3>Welzel waarden</h3>
+						<p>Deze modus gebruikt Christian Welzels explicietere waardenindexen: <code>SACSECVAL</code> voor seculiere waarden en <code>RESEMAVAL</code> voor emancipatieve waarden.</p>
+						<p>Deze scores liggen in deze dataset ongeveer tussen 0 en 1. De horizontale as gebruikt emancipatieve waarden; de verticale as gebruikt seculiere waarden. Ze beantwoorden een iets andere vraag: welke landen lijken op elkaar qua seculiere en emancipatieve waarden?</p>
+					</article>
+				</section>
+				<main class="cultural-app">
+					<section class="chart-panel" aria-label="Culturele kaart">
+						<div class="chart-toolbar">
+							<div class="mode-switch" role="group" aria-label="Projectie">
+								<button class="active" type="button" data-mode="standard">Inglehart-Welzel</button>
+								<button type="button" data-mode="welzel">Welzel waarden</button>
+							</div>
+							<label>
+								<span>Meting t/m <strong id="yearLabel">2022</strong></span>
+								<input id="yearRange" type="range" min="1981" max="2022" value="2022" step="1" />
+							</label>
+							<div class="line-legend" aria-label="Lijnlegenda">
+								<span><i class="legend-line legend-line-solid"></i> historische route referentieland</span>
+								<span><i class="legend-line legend-line-dotted"></i> afstand naar dichtstbijzijnde landen</span>
+								<span><i class="legend-line legend-line-arrow"></i> gewogen historische richting</span>
+							</div>
+							<label class="trail-toggle">
+								<input id="trailToggle" type="checkbox" checked />
+								<span>Toon historische route</span>
+							</label>
+							<label class="trend-toggle">
+								<input id="trendToggle" type="checkbox" checked />
+								<span>Toon trendpijlen</span>
+							</label>
+							<label class="group-toggle">
+								<input id="groupToggle" type="checkbox" checked />
+								<span>Toon waardengroepen</span>
+							</label>
+							<div class="zoom-actions">
+								<button id="resetZoom" type="button">Reset zoom</button>
+							</div>
+						</div>
+						<div class="chart-wrap">
+							<svg id="culturalChart" role="img" aria-labelledby="chartTitle chartDescription"></svg>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+					</section>
+					<aside class="distance-panel" aria-label="Afstandsvergelijking">
+						<label class="country-picker">
+							<span>Referentieland</span>
+							<select id="countrySelect"></select>
+						</label>
+						<section class="selected-summary" aria-label="Geselecteerd land">
+							<div>
+								<span>Land</span>
+								<strong id="selectedCountry">-</strong>
+							</div>
+							<div>
+								<span>Meting</span>
+								<strong id="selectedYear">-</strong>
+							</div>
+							<div>
+								<span>X</span>
+								<strong id="selectedX">-</strong>
+							</div>
+							<div>
+								<span>Y</span>
+								<strong id="selectedY">-</strong>
+							</div>
+						</section>
+						<div class="ranking-header">
+							<h2>Dichtstbij</h2>
+							<span id="rankingCount">-</span>
+						</div>
+						<ol id="distanceRanking" class="distance-ranking"></ol>
+					</aside>
+				</main>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="source-files/F00016619-CulturalMapFinalEVSWVS_2023.xlsx" rel="noopener noreferrer" target="_blank">EVS/WVS Cultural Map dataset</a>
+						<span>Excel-bron met TradAgg, SurvSAgg, SACSECVAL en RESEMAVAL country-year waarden, geëxporteerd naar lokale JSON voor deze visualisatie.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

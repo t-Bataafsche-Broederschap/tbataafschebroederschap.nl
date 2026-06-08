@@ -7,14 +7,15 @@
 }
 
 :root {
-	--color-bg: #0b0805;
-	--color-surface: #17100a;
-	--color-text: #eadfc9;
-	--color-muted: #cab08c;
-	--color-gold: #a98e6a;
-	--color-copper: #8f6534;
-	--color-red: #6b1f16;
-	--color-border: #512816;
+	--color-bg: #050505;
+	--color-surface: #111;
+	--color-surface-2: #181412;
+	--color-text: #f4efe6;
+	--color-muted: #c7b9a3;
+	--color-gold: #c9a36a;
+	--color-copper: #8e6a3b;
+	--color-red: #971f16;
+	--color-border: #4f1713;
 	--space-page: clamp(1.25rem, 3vw, 3rem);
 	--content-width: 68rem;
 	--font-display: "Cloister Black", "Old English Text MT", Georgia, "Times New Roman", serif;
@@ -34,19 +35,19 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	color: var(--color-text);
-	background: radial-gradient(circle at top, rgba(143, 101, 52, 0.18), transparent 28rem), linear-gradient(180deg, #0b0805 0%, #110b07 52%, #080604 100%);
+	background: radial-gradient(circle at 50% 0, rgba(151, 31, 22, 0.28), transparent 24rem), linear-gradient(180deg, #050505 0%, #101010 58%, #030303 100%);
 	font-size: 1.125rem;
 	line-height: 1.7;
 }
 
 a {
 	color: var(--color-gold);
-	text-decoration-color: rgba(169, 142, 106, 0.45);
+	text-decoration-color: rgba(201, 163, 106, 0.5);
 	text-underline-offset: 0.18em;
 }
 
 a:hover {
-	color: #eacba1;
+	color: #f0d7ae;
 	text-decoration-color: currentColor;
 }
 
@@ -58,7 +59,7 @@ a:hover {
 	width: min(var(--content-width), calc(100% - (2 * var(--space-page))));
 	margin: 0 auto;
 	padding: 1.25rem 0;
-	border-bottom: 1px solid rgba(169, 142, 106, 0.28);
+	border-bottom: 1px solid rgba(151, 31, 22, 0.48);
 }
 
 .site-title {
@@ -86,7 +87,7 @@ nav a {
 }
 
 nav a:hover {
-	background: rgba(169, 142, 106, 0.1);
+	background: rgba(151, 31, 22, 0.2);
 	color: var(--color-text);
 }
 
@@ -94,6 +95,11 @@ nav a:hover {
 	width: min(var(--content-width), calc(100% - (2 * var(--space-page))));
 	margin: 0 auto;
 	padding: clamp(2.5rem, 7vw, 6rem) 0;
+}
+
+.site-main.section-projects {
+	width: 100%;
+	padding: 0;
 }
 
 .home-intro {
@@ -110,7 +116,7 @@ nav a:hover {
 
 .eyebrow {
 	margin: 0 0 0.75rem;
-	color: var(--color-copper);
+	color: #c64034;
 	font-size: 0.82rem;
 	font-weight: 700;
 	letter-spacing: 0.16em;
@@ -120,7 +126,7 @@ nav a:hover {
 h1 {
 	max-width: 12ch;
 	margin: 0 0 1.25rem;
-	color: #f1e6d2;
+	color: #fff8ed;
 	font-family: var(--font-display);
 	font-size: clamp(3.25rem, 8.5vw, 6.75rem);
 	font-weight: 700;
@@ -164,6 +170,86 @@ p:last-child {
 
 .content p {
 	color: var(--color-muted);
+}
+
+.projects-index-page {
+	width: min(var(--content-width), calc(100% - (2 * var(--space-page))));
+	margin: 0 auto;
+	padding: clamp(2.5rem, 7vw, 6rem) 0;
+}
+
+.project-list {
+	display: grid;
+	gap: 1rem;
+	max-width: 54rem;
+	margin: 2rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.project-entry {
+	padding: 1rem 0;
+	border-top: 1px solid rgba(151, 31, 22, 0.36);
+}
+
+.project-entry h2 {
+	margin: 0 0 0.45rem;
+	color: #fff8ed;
+	font-size: clamp(1.35rem, 2.5vw, 2rem);
+	line-height: 1.15;
+}
+
+.project-entry h2 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.project-entry h2 a:hover {
+	color: #f0d7ae;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.16em;
+}
+
+.project-entry p {
+	max-width: 48rem;
+	margin: 0;
+	color: var(--color-muted);
+}
+
+.project-sources {
+	width: min(92rem, calc(100% - (2 * var(--space-page))));
+	margin: 2rem auto 3rem;
+	padding: 1rem;
+	border: 1px solid rgba(151, 31, 22, 0.42);
+	border-radius: 6px;
+	background: linear-gradient(180deg, rgba(151, 31, 22, 0.11), transparent 8rem), rgba(10, 10, 10, 0.96);
+	color: var(--color-muted);
+}
+
+.project-sources h2 {
+	margin: 0 0 0.75rem;
+	color: var(--color-text);
+	font-size: 1.1rem;
+	line-height: 1.25;
+}
+
+.project-sources ul {
+	display: grid;
+	gap: 0.65rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.project-sources li {
+	display: grid;
+	gap: 0.15rem;
+}
+
+.project-sources span {
+	font-size: 0.95rem;
+	line-height: 1.35;
 }
 
 @media (max-width: 760px) {

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>Relatie totaal verdachten vs. verdachten per 10.000 | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactieve scatterplot met CBS-cijfers over geregistreerde verdachten van misdrijven naar migratieachtergrond en herkomst." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/verdachten-naar-herkomst/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<div class="suspects-page">
+				<header class="suspects-header">
+					<div>
+						<p class="eyebrow">CBS StatLine 81959NED + 85658NED</p>
+						<h1>Relatie totaal verdachten vs. verdachten per 10.000</h1>
+					</div>
+					<p>Geregistreerde verdachten van misdrijven, niet veroordeelden. Hoofdscatter: CBS 81959NED, 2022.</p>
+				</header>
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>Een persoon telt per verslagjaar maximaal een keer mee in het totaal aantal unieke verdachten.</p>
+						<p>
+							"Nederlandse achtergrond" volgt hier de oude CBS-definitie uit 81959NED: een persoon van wie beide ouders in Nederland zijn geboren. In de nieuwe, hier niet voor de hoofdscatter gebruikte CBS-indeling uit 85658NED heet de vergelijkbare groep "Nederland": personen die zelf in Nederland zijn geboren en van
+							wie beide ouders ook in Nederland zijn geboren.
+						</p>
+						<p>De rechter y-as zet dezelfde relatieve maat om naar een ratio ten opzichte van "Nederlandse achtergrond": 1,00x is het 2022-niveau van Nederlandse achtergrond, namelijk 61 verdachten per 10.000 inwoners.</p>
+						<p>"Aandeel alle verdachten" is het percentage van het totaal aantal geregistreerde verdachten in 2022. "Verdachten/bevolking" deelt dat percentage door het aandeel van dezelfde groep in de afgeleide bevolkingsnoemer.</p>
+						<p>De hover en het selectiepanel tonen ook hetzelfde relatieve cijfer als aandeel binnen de groep. Bijvoorbeeld: 61 verdachten per 10.000 inwoners is 0,61 procent, ongeveer 1 op 164 personen in die groep in dat verslagjaar.</p>
+						<p>De bevolking per groep wordt hier afgeleid uit dezelfde CBS-tabel: verdachten met woonadres in Nederland gedeeld door verdachten per 10.000 inwoners, maal 10.000. Dat is de noemer achter het relatieve cijfer en kan door afronding licht afwijken van aparte CBS-bevolkingstabellen.</p>
+						<p>De kleurbanden zijn relatieve kwartielen binnen de getoonde 2022-punten op de y-as. Ze verdelen de herkomstpunten in vier groepen op basis van verdachten per 10.000 inwoners. Het zijn dus geen absolute risicocategorieen of CBS-normen.</p>
+						<p>Relatieve cijfers tellen alleen personen die in de BRP voorkomen. BRP staat voor Basisregistratie Personen: het bevolkingsregister van gemeenten in Nederland. Personen zonder BRP-registratie zitten wel in absolute aantallen maar niet in verdachten per 10.000 inwoners.</p>
+						<p>De nieuwe CBS-tabel 85658NED loopt tot 2025, maar gebruikt een andere herkomstindeling met minder detailpunten.</p>
+					</article>
+				</section>
+				<main class="suspects-dashboard">
+					<section class="chart-panel" aria-labelledby="chartTitle">
+						<div class="toolbar">
+							<label class="search-field">
+								<span>Zoek herkomst</span>
+								<input id="searchInput" type="search" placeholder="Bijv. Marokko, Duitsland, totaal" autocomplete="off" />
+							</label>
+							<div class="toggle-row" role="group" aria-label="Grafiekopties">
+								<label><input id="labelToggle" type="checkbox" checked /> Labels</label>
+								<label><input id="aggregateToggle" type="checkbox" checked /> Aggregaten</label>
+								<fieldset class="axis-scale-toggle">
+									<legend>X-as</legend>
+									<label><input type="radio" name="xScale" value="log" checked /> Log</label>
+									<label><input type="radio" name="xScale" value="linear" /> Lineair</label>
+								</fieldset>
+								<button id="resetZoom" type="button" disabled>Reset zoom</button>
+								<button id="exportCsv" type="button">CSV</button>
+							</div>
+						</div>
+						<div class="chart-head">
+							<div>
+								<p class="eyebrow">2022, algemene misdrijven totaal</p>
+								<h2 id="chartTitle">Totaal verdachten tegenover verdachten per 10.000 inwoners</h2>
+							</div>
+							<p id="pointCount" class="point-count"></p>
+						</div>
+						<div class="chart-wrap">
+							<svg id="scatterChart" role="img" aria-labelledby="chartTitle chartDescription"></svg>
+							<p id="chartDescription" class="sr-only">Scatterplot met totaal verdachten op de x-as en verdachten per 10.000 inwoners op de y-as. De x-as kan tussen logaritmisch en lineair worden gewisseld.</p>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+						<div class="legend" aria-label="Legenda">
+							<span><i class="point-country"></i> landen / herkomsten</span>
+							<span><i class="point-aggregate"></i> aggregaten</span>
+							<span>scroll/pinch om te zoomen, sleep om te pannen, dubbelklik om te resetten</span>
+							<span>rechter y-as: Nederlandse achtergrond = 1,00x</span>
+							<span id="quartileLabel">y-kwartielen</span>
+						</div>
+					</section>
+					<aside class="side-panel">
+						<section aria-labelledby="selectedTitle">
+							<p class="eyebrow">Geselecteerd punt</p>
+							<h2 id="selectedTitle">Geen selectie</h2>
+							<div id="selectedStats" class="stat-list"></div>
+						</section>
+						<section aria-labelledby="currentTitle">
+							<p class="eyebrow">Nieuwe CBS-indeling</p>
+							<h2 id="currentTitle">Actuele context</h2>
+							<div id="currentSummary" class="current-summary"></div>
+						</section>
+					</aside>
+				</main>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/81959NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Verdachten; geslacht, leeftijd, migratieachtergrond en generatie 1999-2022</a>
+						<span>Hoofdscatter voor 2022. Deze oude CBS-tabel bevat de volledige landenlijst naar migratieachtergrond.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85658NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Verdachten; geslacht, leeftijd, herkomst, opleiding, huishoudensinkomen</a>
+						<span>Actuele contexttabel tot en met 2025 met de nieuwe CBS-indeling naar herkomst.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

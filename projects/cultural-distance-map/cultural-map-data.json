@@ -1,0 +1,4532 @@
+{
+	"metadata": {
+		"generatedFrom": "F00016619-CulturalMapFinalEVSWVS_2023.xlsx",
+		"recordCount": 458,
+		"standardCount": 115,
+		"welzelCount": 116,
+		"yearExtent": [1981, 2022],
+		"defaultCountryCode": "528",
+		"nearestToNetherlands": [
+			{
+				"country": "Great Britain",
+				"year": 2022,
+				"distance": 0.231548
+			},
+			{
+				"country": "Germany",
+				"year": 2018,
+				"distance": 0.352093
+			},
+			{
+				"country": "Finland",
+				"year": 2017,
+				"distance": 0.362428
+			},
+			{
+				"country": "Switzerland",
+				"year": 2017,
+				"distance": 0.482179
+			},
+			{
+				"country": "Canada",
+				"year": 2020,
+				"distance": 0.488856
+			},
+			{
+				"country": "Denmark",
+				"year": 2017,
+				"distance": 0.524161
+			},
+			{
+				"country": "Australia",
+				"year": 2018,
+				"distance": 0.619656
+			},
+			{
+				"country": "Andorra",
+				"year": 2018,
+				"distance": 0.641371
+			}
+		]
+	},
+	"records": [
+		{
+			"key": "8-1998",
+			"countryCode": "8",
+			"year": 1998,
+			"country": "Albania",
+			"tradAgg": 0.570498,
+			"survSAgg": -1.010323,
+			"secularValue": 0.428985,
+			"emancipativeValue": 0.338735
+		},
+		{
+			"key": "8-2002",
+			"countryCode": "8",
+			"year": 2002,
+			"country": "Albania",
+			"tradAgg": 0.133405,
+			"survSAgg": -0.785438,
+			"secularValue": 0.396055,
+			"emancipativeValue": 0.361634
+		},
+		{
+			"key": "8-2008",
+			"countryCode": "8",
+			"year": 2008,
+			"country": "Albania",
+			"tradAgg": 0.289334,
+			"survSAgg": -0.941726,
+			"secularValue": 0.471856,
+			"emancipativeValue": 0.391003
+		},
+		{
+			"key": "8-2018",
+			"countryCode": "8",
+			"year": 2018,
+			"country": "Albania",
+			"tradAgg": -0.74506,
+			"survSAgg": -0.830716,
+			"secularValue": 0.301792,
+			"emancipativeValue": 0.415198
+		},
+		{
+			"key": "12-2002",
+			"countryCode": "12",
+			"year": 2002,
+			"country": "Algeria",
+			"tradAgg": -1.269662,
+			"survSAgg": -1.197026,
+			"secularValue": 0.269691,
+			"emancipativeValue": 0.29459
+		},
+		{
+			"key": "12-2014",
+			"countryCode": "12",
+			"year": 2014,
+			"country": "Algeria",
+			"tradAgg": -0.779785,
+			"survSAgg": -0.924712,
+			"secularValue": 0.35574,
+			"emancipativeValue": 0.324519
+		},
+		{
+			"key": "20-2005",
+			"countryCode": "20",
+			"year": 2005,
+			"country": "Andorra",
+			"tradAgg": 0.747073,
+			"survSAgg": 1.800309,
+			"secularValue": 0.472037,
+			"emancipativeValue": 0.677104
+		},
+		{
+			"key": "20-2018",
+			"countryCode": "20",
+			"year": 2018,
+			"country": "Andorra",
+			"tradAgg": 0.5486,
+			"survSAgg": 2.182286,
+			"secularValue": 0.411708,
+			"emancipativeValue": 0.626075
+		},
+		{
+			"key": "32-1984",
+			"countryCode": "32",
+			"year": 1984,
+			"country": "Argentina",
+			"tradAgg": 0.146348,
+			"survSAgg": -0.366262,
+			"secularValue": 0.435986,
+			"emancipativeValue": 0.431379
+		},
+		{
+			"key": "32-1991",
+			"countryCode": "32",
+			"year": 1991,
+			"country": "Argentina",
+			"tradAgg": -0.409794,
+			"survSAgg": -0.195547,
+			"secularValue": 0.362198,
+			"emancipativeValue": 0.469955
+		},
+		{
+			"key": "32-1995",
+			"countryCode": "32",
+			"year": 1995,
+			"country": "Argentina",
+			"tradAgg": -0.485699,
+			"survSAgg": 0.379766,
+			"secularValue": 0.391048,
+			"emancipativeValue": 0.513229
+		},
+		{
+			"key": "32-1999",
+			"countryCode": "32",
+			"year": 1999,
+			"country": "Argentina",
+			"tradAgg": -0.891815,
+			"survSAgg": 0.125663,
+			"secularValue": 0.343907,
+			"emancipativeValue": 0.479285
+		},
+		{
+			"key": "32-2006",
+			"countryCode": "32",
+			"year": 2006,
+			"country": "Argentina",
+			"tradAgg": -0.820417,
+			"survSAgg": 0.440115,
+			"secularValue": 0.362658,
+			"emancipativeValue": 0.482712
+		},
+		{
+			"key": "32-2013",
+			"countryCode": "32",
+			"year": 2013,
+			"country": "Argentina",
+			"tradAgg": -0.228138,
+			"survSAgg": 0.252363,
+			"secularValue": 0.423496,
+			"emancipativeValue": 0.51594
+		},
+		{
+			"key": "32-2017",
+			"countryCode": "32",
+			"year": 2017,
+			"country": "Argentina",
+			"tradAgg": -0.400942,
+			"survSAgg": 0.191305,
+			"secularValue": 0.420672,
+			"emancipativeValue": 0.467123
+		},
+		{
+			"key": "51-1997",
+			"countryCode": "51",
+			"year": 1997,
+			"country": "Armenia",
+			"tradAgg": 0.681531,
+			"survSAgg": -0.950165,
+			"secularValue": 0.435961,
+			"emancipativeValue": 0.339435
+		},
+		{
+			"key": "51-2008",
+			"countryCode": "51",
+			"year": 2008,
+			"country": "Armenia",
+			"tradAgg": -0.419872,
+			"survSAgg": -0.941005,
+			"secularValue": 0.350086,
+			"emancipativeValue": 0.362713
+		},
+		{
+			"key": "51-2011",
+			"countryCode": "51",
+			"year": 2011,
+			"country": "Armenia",
+			"tradAgg": -0.733178,
+			"survSAgg": -1.194616,
+			"secularValue": 0.300664,
+			"emancipativeValue": 0.287878
+		},
+		{
+			"key": "51-2018",
+			"countryCode": "51",
+			"year": 2018,
+			"country": "Armenia",
+			"tradAgg": -0.272734,
+			"survSAgg": -0.900257,
+			"secularValue": 0.390365,
+			"emancipativeValue": 0.326128
+		},
+		{
+			"key": "51-2021",
+			"countryCode": "51",
+			"year": 2021,
+			"country": "Armenia",
+			"tradAgg": -1.310965,
+			"survSAgg": -0.71001,
+			"secularValue": 0.275033,
+			"emancipativeValue": 0.30653
+		},
+		{
+			"key": "36-1981",
+			"countryCode": "36",
+			"year": 1981,
+			"country": "Australia",
+			"secularValue": 0.38218
+		},
+		{
+			"key": "36-1995",
+			"countryCode": "36",
+			"year": 1995,
+			"country": "Australia",
+			"tradAgg": -0.476871,
+			"survSAgg": 1.938837,
+			"secularValue": 0.376684,
+			"emancipativeValue": 0.560054
+		},
+		{
+			"key": "36-2005",
+			"countryCode": "36",
+			"year": 2005,
+			"country": "Australia",
+			"tradAgg": -0.141336,
+			"survSAgg": 1.982481,
+			"secularValue": 0.383662,
+			"emancipativeValue": 0.576952
+		},
+		{
+			"key": "36-2012",
+			"countryCode": "36",
+			"year": 2012,
+			"country": "Australia",
+			"tradAgg": 0.204713,
+			"survSAgg": 1.970357,
+			"secularValue": 0.390091,
+			"emancipativeValue": 0.588131
+		},
+		{
+			"key": "36-2018",
+			"countryCode": "36",
+			"year": 2018,
+			"country": "Australia",
+			"tradAgg": 0.549277,
+			"survSAgg": 2.262706,
+			"secularValue": 0.413709,
+			"emancipativeValue": 0.627195
+		},
+		{
+			"key": "40-1990",
+			"countryCode": "40",
+			"year": 1990,
+			"country": "Austria",
+			"tradAgg": 0.04224,
+			"survSAgg": 0.689476,
+			"secularValue": 0.418097,
+			"emancipativeValue": 0.496367
+		},
+		{
+			"key": "40-1999",
+			"countryCode": "40",
+			"year": 1999,
+			"country": "Austria",
+			"tradAgg": 0.209269,
+			"survSAgg": 1.377494,
+			"secularValue": 0.421495,
+			"emancipativeValue": 0.558552
+		},
+		{
+			"key": "40-2008",
+			"countryCode": "40",
+			"year": 2008,
+			"country": "Austria",
+			"tradAgg": 0.380834,
+			"survSAgg": 0.984508,
+			"secularValue": 0.448504,
+			"emancipativeValue": 0.515938
+		},
+		{
+			"key": "40-2018",
+			"countryCode": "40",
+			"year": 2018,
+			"country": "Austria",
+			"tradAgg": 0.619618,
+			"survSAgg": 1.940001,
+			"secularValue": 0.407241,
+			"emancipativeValue": 0.635188
+		},
+		{
+			"key": "31-1997",
+			"countryCode": "31",
+			"year": 1997,
+			"country": "Azerbaijan",
+			"tradAgg": -0.147065,
+			"survSAgg": -1.125633,
+			"secularValue": 0.38868,
+			"emancipativeValue": 0.335574
+		},
+		{
+			"key": "31-2008",
+			"countryCode": "31",
+			"year": 2008,
+			"country": "Azerbaijan",
+			"tradAgg": 0.217531,
+			"survSAgg": -0.70633,
+			"secularValue": 0.366823,
+			"emancipativeValue": 0.471514
+		},
+		{
+			"key": "31-2011",
+			"countryCode": "31",
+			"year": 2011,
+			"country": "Azerbaijan",
+			"tradAgg": -0.614356,
+			"survSAgg": -1.290585,
+			"secularValue": 0.332119,
+			"emancipativeValue": 0.333736
+		},
+		{
+			"key": "31-2018",
+			"countryCode": "31",
+			"year": 2018,
+			"country": "Azerbaijan",
+			"tradAgg": -0.405453,
+			"survSAgg": -0.840342,
+			"secularValue": 0.340096,
+			"emancipativeValue": 0.369229
+		},
+		{
+			"key": "50-1996",
+			"countryCode": "50",
+			"year": 1996,
+			"country": "Bangladesh",
+			"secularValue": 0.175535,
+			"emancipativeValue": 0.38785
+		},
+		{
+			"key": "50-2002",
+			"countryCode": "50",
+			"year": 2002,
+			"country": "Bangladesh",
+			"tradAgg": -1.100096,
+			"survSAgg": -1.037391,
+			"secularValue": 0.168507,
+			"emancipativeValue": 0.332864
+		},
+		{
+			"key": "50-2018",
+			"countryCode": "50",
+			"year": 2018,
+			"country": "Bangladesh",
+			"tradAgg": -1.503443,
+			"survSAgg": -0.687479,
+			"secularValue": 0.234671,
+			"emancipativeValue": 0.304874
+		},
+		{
+			"key": "112-1990",
+			"countryCode": "112",
+			"year": 1990,
+			"country": "Belarus",
+			"tradAgg": 1.129116,
+			"survSAgg": -0.71685,
+			"secularValue": 0.462925,
+			"emancipativeValue": 0.414403
+		},
+		{
+			"key": "112-1996",
+			"countryCode": "112",
+			"year": 1996,
+			"country": "Belarus",
+			"tradAgg": 1.010487,
+			"survSAgg": -1.367464,
+			"secularValue": 0.462439,
+			"emancipativeValue": 0.356622
+		},
+		{
+			"key": "112-2000",
+			"countryCode": "112",
+			"year": 2000,
+			"country": "Belarus",
+			"tradAgg": 0.931242,
+			"survSAgg": -0.645009,
+			"secularValue": 0.56893,
+			"emancipativeValue": 0.413391
+		},
+		{
+			"key": "112-2008",
+			"countryCode": "112",
+			"year": 2008,
+			"country": "Belarus",
+			"tradAgg": 0.212536,
+			"survSAgg": -0.700576,
+			"secularValue": 0.534342,
+			"emancipativeValue": 0.384221
+		},
+		{
+			"key": "112-2011",
+			"countryCode": "112",
+			"year": 2011,
+			"country": "Belarus",
+			"secularValue": 0.450526,
+			"emancipativeValue": 0.39678
+		},
+		{
+			"key": "112-2018",
+			"countryCode": "112",
+			"year": 2018,
+			"country": "Belarus",
+			"tradAgg": 0.291976,
+			"survSAgg": -0.320507,
+			"secularValue": 0.488322,
+			"emancipativeValue": 0.407817
+		},
+		{
+			"key": "56-1981",
+			"countryCode": "56",
+			"year": 1981,
+			"country": "Belgium",
+			"tradAgg": 0.08707,
+			"survSAgg": 0.024893,
+			"secularValue": 0.442474,
+			"emancipativeValue": 0.388335
+		},
+		{
+			"key": "56-1990",
+			"countryCode": "56",
+			"year": 1990,
+			"country": "Belgium",
+			"tradAgg": 0.352744,
+			"survSAgg": 0.793328,
+			"secularValue": 0.509201,
+			"emancipativeValue": 0.472978
+		},
+		{
+			"key": "56-1999",
+			"countryCode": "56",
+			"year": 1999,
+			"country": "Belgium",
+			"tradAgg": 0.431701,
+			"survSAgg": 1.121664,
+			"secularValue": 0.490841,
+			"emancipativeValue": 0.476388
+		},
+		{
+			"key": "56-2009",
+			"countryCode": "56",
+			"year": 2009,
+			"country": "Belgium",
+			"tradAgg": 0.142721,
+			"survSAgg": 1.480984,
+			"secularValue": 0.468734,
+			"emancipativeValue": 0.483896
+		},
+		{
+			"key": "68-2017",
+			"countryCode": "68",
+			"year": 2017,
+			"country": "Bolivia",
+			"tradAgg": -1.226608,
+			"survSAgg": -0.382814,
+			"secularValue": 0.371472,
+			"emancipativeValue": 0.392434
+		},
+		{
+			"key": "70-1998",
+			"countryCode": "70",
+			"year": 1998,
+			"country": "Bosnia and Herzegovina",
+			"tradAgg": 0.091028,
+			"survSAgg": -0.426116,
+			"secularValue": 0.338854,
+			"emancipativeValue": 0.367387
+		},
+		{
+			"key": "70-2001",
+			"countryCode": "70",
+			"year": 2001,
+			"country": "Bosnia and Herzegovina",
+			"tradAgg": 0.511219,
+			"survSAgg": -0.646873,
+			"secularValue": 0.3365,
+			"emancipativeValue": 0.421663
+		},
+		{
+			"key": "70-2008",
+			"countryCode": "70",
+			"year": 2008,
+			"country": "Bosnia and Herzegovina",
+			"tradAgg": 0.084078,
+			"survSAgg": -0.817153,
+			"secularValue": 0.382656,
+			"emancipativeValue": 0.355858
+		},
+		{
+			"key": "70-2019",
+			"countryCode": "70",
+			"year": 2019,
+			"country": "Bosnia and Herzegovina",
+			"tradAgg": -0.065361,
+			"survSAgg": -0.677234,
+			"secularValue": 0.334385,
+			"emancipativeValue": 0.409298
+		},
+		{
+			"key": "76-1991",
+			"countryCode": "76",
+			"year": 1991,
+			"country": "Brazil",
+			"tradAgg": -0.777282,
+			"survSAgg": -0.585231,
+			"secularValue": 0.321291,
+			"emancipativeValue": 0.374816
+		},
+		{
+			"key": "76-1997",
+			"countryCode": "76",
+			"year": 1997,
+			"country": "Brazil",
+			"tradAgg": -1.06281,
+			"survSAgg": -0.401163,
+			"secularValue": 0.342126,
+			"emancipativeValue": 0.362107
+		},
+		{
+			"key": "76-2006",
+			"countryCode": "76",
+			"year": 2006,
+			"country": "Brazil",
+			"tradAgg": -0.865512,
+			"survSAgg": -0.015094,
+			"secularValue": 0.366291,
+			"emancipativeValue": 0.440297
+		},
+		{
+			"key": "76-2014",
+			"countryCode": "76",
+			"year": 2014,
+			"country": "Brazil",
+			"tradAgg": -0.774949,
+			"survSAgg": -0.047586,
+			"secularValue": 0.329886,
+			"emancipativeValue": 0.46938
+		},
+		{
+			"key": "76-2018",
+			"countryCode": "76",
+			"year": 2018,
+			"country": "Brazil",
+			"tradAgg": -0.30784,
+			"survSAgg": -0.097301,
+			"secularValue": 0.348537,
+			"emancipativeValue": 0.465657
+		},
+		{
+			"key": "100-1991",
+			"countryCode": "100",
+			"year": 1991,
+			"country": "Bulgaria",
+			"tradAgg": 1.52851,
+			"survSAgg": -0.707995,
+			"secularValue": 0.469809,
+			"emancipativeValue": 0.455878
+		},
+		{
+			"key": "100-1997",
+			"countryCode": "100",
+			"year": 1997,
+			"country": "Bulgaria",
+			"tradAgg": 1.041548,
+			"survSAgg": -0.368252,
+			"secularValue": 0.421022,
+			"emancipativeValue": 0.409541
+		},
+		{
+			"key": "100-1999",
+			"countryCode": "100",
+			"year": 1999,
+			"country": "Bulgaria",
+			"tradAgg": 1.218226,
+			"survSAgg": -0.804663,
+			"secularValue": 0.453754,
+			"emancipativeValue": 0.4227
+		},
+		{
+			"key": "100-2006",
+			"countryCode": "100",
+			"year": 2006,
+			"country": "Bulgaria",
+			"tradAgg": 1.157049,
+			"survSAgg": -0.545518,
+			"secularValue": 0.430798,
+			"emancipativeValue": 0.457458
+		},
+		{
+			"key": "100-2008",
+			"countryCode": "100",
+			"year": 2008,
+			"country": "Bulgaria",
+			"tradAgg": 0.881939,
+			"survSAgg": -0.907117,
+			"secularValue": 0.457597,
+			"emancipativeValue": 0.433124
+		},
+		{
+			"key": "100-2017",
+			"countryCode": "100",
+			"year": 2017,
+			"country": "Bulgaria",
+			"tradAgg": 0.667764,
+			"survSAgg": -0.537961,
+			"secularValue": 0.392805,
+			"emancipativeValue": 0.412345
+		},
+		{
+			"key": "854-2007",
+			"countryCode": "854",
+			"year": 2007,
+			"country": "Burkina Faso",
+			"tradAgg": -1.222465,
+			"survSAgg": -0.801579,
+			"secularValue": 0.284459,
+			"emancipativeValue": 0.298794
+		},
+		{
+			"key": "124-1982",
+			"countryCode": "124",
+			"year": 1982,
+			"country": "Canada",
+			"tradAgg": -0.828274,
+			"survSAgg": 0.958256,
+			"secularValue": 0.354412,
+			"emancipativeValue": 0.426668
+		},
+		{
+			"key": "124-1990",
+			"countryCode": "124",
+			"year": 1990,
+			"country": "Canada",
+			"tradAgg": -0.220455,
+			"survSAgg": 1.363585,
+			"secularValue": 0.346975,
+			"emancipativeValue": 0.514915
+		},
+		{
+			"key": "124-2000",
+			"countryCode": "124",
+			"year": 2000,
+			"country": "Canada",
+			"tradAgg": -0.551751,
+			"survSAgg": 1.86673,
+			"secularValue": 0.329437,
+			"emancipativeValue": 0.597052
+		},
+		{
+			"key": "124-2006",
+			"countryCode": "124",
+			"year": 2006,
+			"country": "Canada",
+			"tradAgg": -0.664471,
+			"survSAgg": 1.979928,
+			"secularValue": 0.34502,
+			"emancipativeValue": 0.590939
+		},
+		{
+			"key": "124-2020",
+			"countryCode": "124",
+			"year": 2020,
+			"country": "Canada",
+			"tradAgg": 0.797529,
+			"survSAgg": 2.055478,
+			"secularValue": 0.477665,
+			"emancipativeValue": 0.635737
+		},
+		{
+			"key": "152-1990",
+			"countryCode": "152",
+			"year": 1990,
+			"country": "Chile",
+			"tradAgg": -0.910472,
+			"survSAgg": -0.651075,
+			"secularValue": 0.320848,
+			"emancipativeValue": 0.385091
+		},
+		{
+			"key": "152-1996",
+			"countryCode": "152",
+			"year": 1996,
+			"country": "Chile",
+			"tradAgg": -0.694561,
+			"survSAgg": -0.389578,
+			"secularValue": 0.375989,
+			"emancipativeValue": 0.429183
+		},
+		{
+			"key": "152-2000",
+			"countryCode": "152",
+			"year": 2000,
+			"country": "Chile",
+			"tradAgg": -0.870904,
+			"survSAgg": -0.12815,
+			"secularValue": 0.359234,
+			"emancipativeValue": 0.457439
+		},
+		{
+			"key": "152-2006",
+			"countryCode": "152",
+			"year": 2006,
+			"country": "Chile",
+			"tradAgg": -0.64274,
+			"survSAgg": -0.200103,
+			"secularValue": 0.385589,
+			"emancipativeValue": 0.443404
+		},
+		{
+			"key": "152-2012",
+			"countryCode": "152",
+			"year": 2012,
+			"country": "Chile",
+			"tradAgg": -0.284831,
+			"survSAgg": 0.158814,
+			"secularValue": 0.404551,
+			"emancipativeValue": 0.510675
+		},
+		{
+			"key": "152-2018",
+			"countryCode": "152",
+			"year": 2018,
+			"country": "Chile",
+			"tradAgg": 0.213271,
+			"survSAgg": -0.108915,
+			"secularValue": 0.461818,
+			"emancipativeValue": 0.459098
+		},
+		{
+			"key": "156-1990",
+			"countryCode": "156",
+			"year": 1990,
+			"country": "China",
+			"secularValue": 0.415784,
+			"emancipativeValue": 0.415766
+		},
+		{
+			"key": "156-1995",
+			"countryCode": "156",
+			"year": 1995,
+			"country": "China",
+			"secularValue": 0.355166
+		},
+		{
+			"key": "156-2001",
+			"countryCode": "156",
+			"year": 2001,
+			"country": "China",
+			"secularValue": 0.399187,
+			"emancipativeValue": 0.392606
+		},
+		{
+			"key": "156-2007",
+			"countryCode": "156",
+			"year": 2007,
+			"country": "China",
+			"tradAgg": 0.657487,
+			"survSAgg": -0.479177,
+			"secularValue": 0.406216,
+			"emancipativeValue": 0.374726
+		},
+		{
+			"key": "156-2013",
+			"countryCode": "156",
+			"year": 2013,
+			"country": "China",
+			"tradAgg": 0.836695,
+			"survSAgg": -0.414636,
+			"secularValue": 0.510784,
+			"emancipativeValue": 0.38567
+		},
+		{
+			"key": "156-2018",
+			"countryCode": "156",
+			"year": 2018,
+			"country": "China",
+			"tradAgg": 0.575461,
+			"survSAgg": -0.107059,
+			"secularValue": 0.401284,
+			"emancipativeValue": 0.391767
+		},
+		{
+			"key": "170-1997",
+			"countryCode": "170",
+			"year": 1997,
+			"country": "Colombia",
+			"secularValue": 0.363879,
+			"emancipativeValue": 0.36429
+		},
+		{
+			"key": "170-1998",
+			"countryCode": "170",
+			"year": 1998,
+			"country": "Colombia",
+			"secularValue": 0.296562,
+			"emancipativeValue": 0.387207
+		},
+		{
+			"key": "170-2005",
+			"countryCode": "170",
+			"year": 2005,
+			"country": "Colombia",
+			"tradAgg": -1.803832,
+			"survSAgg": 0.170698,
+			"secularValue": 0.340437,
+			"emancipativeValue": 0.410149
+		},
+		{
+			"key": "170-2012",
+			"countryCode": "170",
+			"year": 2012,
+			"country": "Colombia",
+			"tradAgg": -1.783556,
+			"survSAgg": 0.107456,
+			"secularValue": 0.32141,
+			"emancipativeValue": 0.41753
+		},
+		{
+			"key": "170-2018",
+			"countryCode": "170",
+			"year": 2018,
+			"country": "Colombia",
+			"tradAgg": -1.568092,
+			"survSAgg": 0.264158,
+			"secularValue": 0.337688,
+			"emancipativeValue": 0.426456
+		},
+		{
+			"key": "191-1996",
+			"countryCode": "191",
+			"year": 1996,
+			"country": "Croatia",
+			"tradAgg": 1.15859,
+			"survSAgg": 0.283361,
+			"secularValue": 0.463352,
+			"emancipativeValue": 0.49547
+		},
+		{
+			"key": "191-1999",
+			"countryCode": "191",
+			"year": 1999,
+			"country": "Croatia",
+			"secularValue": 0.389798
+		},
+		{
+			"key": "191-2008",
+			"countryCode": "191",
+			"year": 2008,
+			"country": "Croatia",
+			"tradAgg": -0.08508,
+			"survSAgg": -0.116077,
+			"secularValue": 0.439592,
+			"emancipativeValue": 0.402065
+		},
+		{
+			"key": "191-2017",
+			"countryCode": "191",
+			"year": 2017,
+			"country": "Croatia",
+			"tradAgg": 0.093737,
+			"survSAgg": 0.08211,
+			"secularValue": 0.391123,
+			"emancipativeValue": 0.480595
+		},
+		{
+			"key": "196-2006",
+			"countryCode": "196",
+			"year": 2006,
+			"country": "Cyprus",
+			"tradAgg": -0.543568,
+			"survSAgg": -0.050028,
+			"secularValue": 0.344111,
+			"emancipativeValue": 0.429408
+		},
+		{
+			"key": "196-2008",
+			"countryCode": "196",
+			"year": 2008,
+			"country": "Cyprus",
+			"tradAgg": -0.565559,
+			"survSAgg": -0.616374,
+			"secularValue": 0.327959,
+			"emancipativeValue": 0.388857
+		},
+		{
+			"key": "196-2011",
+			"countryCode": "196",
+			"year": 2011,
+			"country": "Cyprus",
+			"tradAgg": -0.270482,
+			"survSAgg": -0.405728,
+			"secularValue": 0.30393,
+			"emancipativeValue": 0.440281
+		},
+		{
+			"key": "196-2019",
+			"countryCode": "196",
+			"year": 2019,
+			"country": "Cyprus",
+			"tradAgg": -0.412136,
+			"survSAgg": -0.499496,
+			"secularValue": 0.309689,
+			"emancipativeValue": 0.416662
+		},
+		{
+			"key": "203-1991",
+			"countryCode": "203",
+			"year": 1991,
+			"country": "Czechia",
+			"tradAgg": 1.217953,
+			"survSAgg": 0.2379,
+			"secularValue": 0.501552,
+			"emancipativeValue": 0.467937
+		},
+		{
+			"key": "203-1998",
+			"countryCode": "203",
+			"year": 1998,
+			"country": "Czechia",
+			"tradAgg": 1.142001,
+			"survSAgg": 0.849466,
+			"secularValue": 0.539699,
+			"emancipativeValue": 0.479777
+		},
+		{
+			"key": "203-1999",
+			"countryCode": "203",
+			"year": 1999,
+			"country": "Czechia",
+			"tradAgg": 1.293771,
+			"survSAgg": 0.820131,
+			"secularValue": 0.565423,
+			"emancipativeValue": 0.51257
+		},
+		{
+			"key": "203-2008",
+			"countryCode": "203",
+			"year": 2008,
+			"country": "Czechia",
+			"tradAgg": 1.025177,
+			"survSAgg": 0.539042,
+			"secularValue": 0.590146,
+			"emancipativeValue": 0.499682
+		},
+		{
+			"key": "203-2017",
+			"countryCode": "203",
+			"year": 2017,
+			"country": "Czechia",
+			"tradAgg": 1.17621,
+			"survSAgg": 0.993044,
+			"secularValue": 0.510114,
+			"emancipativeValue": 0.530501
+		},
+		{
+			"key": "203-2022",
+			"countryCode": "203",
+			"year": 2022,
+			"country": "Czechia",
+			"tradAgg": 1.332219,
+			"survSAgg": 0.729842,
+			"secularValue": 0.574142,
+			"emancipativeValue": 0.491642
+		},
+		{
+			"key": "208-1981",
+			"countryCode": "208",
+			"year": 1981,
+			"country": "Denmark",
+			"tradAgg": 0.969414,
+			"survSAgg": 1.426336,
+			"secularValue": 0.395537,
+			"emancipativeValue": 0.557785
+		},
+		{
+			"key": "208-1990",
+			"countryCode": "208",
+			"year": 1990,
+			"country": "Denmark",
+			"secularValue": 0.418605,
+			"emancipativeValue": 0.566239
+		},
+		{
+			"key": "208-1999",
+			"countryCode": "208",
+			"year": 1999,
+			"country": "Denmark",
+			"tradAgg": 0.826308,
+			"survSAgg": 2.468484,
+			"secularValue": 0.399679,
+			"emancipativeValue": 0.618297
+		},
+		{
+			"key": "208-2008",
+			"countryCode": "208",
+			"year": 2008,
+			"country": "Denmark",
+			"tradAgg": 0.552117,
+			"survSAgg": 2.834535,
+			"secularValue": 0.376806,
+			"emancipativeValue": 0.630797
+		},
+		{
+			"key": "208-2017",
+			"countryCode": "208",
+			"year": 2017,
+			"country": "Denmark",
+			"tradAgg": 1.018058,
+			"survSAgg": 2.893263,
+			"secularValue": 0.390376,
+			"emancipativeValue": 0.734804
+		},
+		{
+			"key": "214-1996",
+			"countryCode": "214",
+			"year": 1996,
+			"country": "Dominican Republic",
+			"tradAgg": -1.001152,
+			"survSAgg": -0.147586,
+			"secularValue": 0.357161,
+			"emancipativeValue": 0.457399
+		},
+		{
+			"key": "218-2013",
+			"countryCode": "218",
+			"year": 2013,
+			"country": "Ecuador",
+			"tradAgg": -1.736763,
+			"survSAgg": -0.225369,
+			"secularValue": 0.320018,
+			"emancipativeValue": 0.410915
+		},
+		{
+			"key": "218-2018",
+			"countryCode": "218",
+			"year": 2018,
+			"country": "Ecuador",
+			"tradAgg": -1.724766,
+			"survSAgg": 0.018241,
+			"secularValue": 0.32322,
+			"emancipativeValue": 0.385646
+		},
+		{
+			"key": "818-2001",
+			"countryCode": "818",
+			"year": 2001,
+			"country": "Egypt",
+			"tradAgg": -1.486329,
+			"survSAgg": -0.698807,
+			"secularValue": 0.184527,
+			"emancipativeValue": 0.293505
+		},
+		{
+			"key": "818-2008",
+			"countryCode": "818",
+			"year": 2008,
+			"country": "Egypt",
+			"secularValue": 0.158865,
+			"emancipativeValue": 0.224719
+		},
+		{
+			"key": "818-2013",
+			"countryCode": "818",
+			"year": 2013,
+			"country": "Egypt",
+			"secularValue": 0.325127,
+			"emancipativeValue": 0.301971
+		},
+		{
+			"key": "818-2018",
+			"countryCode": "818",
+			"year": 2018,
+			"country": "Egypt",
+			"tradAgg": -0.854367,
+			"survSAgg": -2.231847,
+			"secularValue": 0.174142,
+			"emancipativeValue": 0.23665
+		},
+		{
+			"key": "222-1999",
+			"countryCode": "222",
+			"year": 1999,
+			"country": "El Salvador",
+			"secularValue": 0.26634,
+			"emancipativeValue": 0.374685
+		},
+		{
+			"key": "233-1990",
+			"countryCode": "233",
+			"year": 1990,
+			"country": "Estonia",
+			"secularValue": 0.569831,
+			"emancipativeValue": 0.422847
+		},
+		{
+			"key": "233-1996",
+			"countryCode": "233",
+			"year": 1996,
+			"country": "Estonia",
+			"tradAgg": 1.576171,
+			"survSAgg": -0.70913,
+			"secularValue": 0.499955,
+			"emancipativeValue": 0.437354
+		},
+		{
+			"key": "233-1999",
+			"countryCode": "233",
+			"year": 1999,
+			"country": "Estonia",
+			"tradAgg": 1.448783,
+			"survSAgg": -0.767223,
+			"secularValue": 0.563591,
+			"emancipativeValue": 0.399247
+		},
+		{
+			"key": "233-2008",
+			"countryCode": "233",
+			"year": 2008,
+			"country": "Estonia",
+			"tradAgg": 0.932912,
+			"survSAgg": -0.281614,
+			"secularValue": 0.50149,
+			"emancipativeValue": 0.411494
+		},
+		{
+			"key": "233-2011",
+			"countryCode": "233",
+			"year": 2011,
+			"country": "Estonia",
+			"tradAgg": 1.253063,
+			"survSAgg": -0.333665,
+			"secularValue": 0.477686,
+			"emancipativeValue": 0.480014
+		},
+		{
+			"key": "233-2018",
+			"countryCode": "233",
+			"year": 2018,
+			"country": "Estonia",
+			"tradAgg": 0.895843,
+			"survSAgg": 0.703463,
+			"secularValue": 0.450757,
+			"emancipativeValue": 0.528615
+		},
+		{
+			"key": "231-2007",
+			"countryCode": "231",
+			"year": 2007,
+			"country": "Ethiopia",
+			"tradAgg": -0.591111,
+			"survSAgg": -0.704975,
+			"secularValue": 0.305675,
+			"emancipativeValue": 0.473302
+		},
+		{
+			"key": "231-2020",
+			"countryCode": "231",
+			"year": 2020,
+			"country": "Ethiopia",
+			"tradAgg": -1.325935,
+			"survSAgg": -0.980136,
+			"secularValue": 0.181297,
+			"emancipativeValue": 0.325801
+		},
+		{
+			"key": "246-1981",
+			"countryCode": "246",
+			"year": 1981,
+			"country": "Finland",
+			"secularValue": 0.412214
+		},
+		{
+			"key": "246-1990",
+			"countryCode": "246",
+			"year": 1990,
+			"country": "Finland",
+			"tradAgg": 0.930423,
+			"survSAgg": 1.417115,
+			"secularValue": 0.491185,
+			"emancipativeValue": 0.6025
+		},
+		{
+			"key": "246-1996",
+			"countryCode": "246",
+			"year": 1996,
+			"country": "Finland",
+			"tradAgg": 0.562477,
+			"survSAgg": 1.223969,
+			"secularValue": 0.427171,
+			"emancipativeValue": 0.596434
+		},
+		{
+			"key": "246-2000",
+			"countryCode": "246",
+			"year": 2000,
+			"country": "Finland",
+			"tradAgg": 0.444313,
+			"survSAgg": 1.313061,
+			"secularValue": 0.421247,
+			"emancipativeValue": 0.51207
+		},
+		{
+			"key": "246-2005",
+			"countryCode": "246",
+			"year": 2005,
+			"country": "Finland",
+			"tradAgg": 0.429109,
+			"survSAgg": 1.598598,
+			"secularValue": 0.400427,
+			"emancipativeValue": 0.620195
+		},
+		{
+			"key": "246-2009",
+			"countryCode": "246",
+			"year": 2009,
+			"country": "Finland",
+			"tradAgg": 0.809177,
+			"survSAgg": 1.850261,
+			"secularValue": 0.434449,
+			"emancipativeValue": 0.565518
+		},
+		{
+			"key": "246-2017",
+			"countryCode": "246",
+			"year": 2017,
+			"country": "Finland",
+			"tradAgg": 0.798504,
+			"survSAgg": 2.445954,
+			"secularValue": 0.409996,
+			"emancipativeValue": 0.650833
+		},
+		{
+			"key": "250-1981",
+			"countryCode": "250",
+			"year": 1981,
+			"country": "France",
+			"tradAgg": 0.514604,
+			"survSAgg": 0.109017,
+			"secularValue": 0.492719,
+			"emancipativeValue": 0.434638
+		},
+		{
+			"key": "250-1990",
+			"countryCode": "250",
+			"year": 1990,
+			"country": "France",
+			"tradAgg": 0.485039,
+			"survSAgg": 0.70012,
+			"secularValue": 0.492459,
+			"emancipativeValue": 0.470156
+		},
+		{
+			"key": "250-1999",
+			"countryCode": "250",
+			"year": 1999,
+			"country": "France",
+			"tradAgg": 0.394053,
+			"survSAgg": 1.142697,
+			"secularValue": 0.488616,
+			"emancipativeValue": 0.480149
+		},
+		{
+			"key": "250-2006",
+			"countryCode": "250",
+			"year": 2006,
+			"country": "France",
+			"tradAgg": 0.552311,
+			"survSAgg": 1.50825,
+			"secularValue": 0.454586,
+			"emancipativeValue": 0.581899
+		},
+		{
+			"key": "250-2008",
+			"countryCode": "250",
+			"year": 2008,
+			"country": "France",
+			"tradAgg": 0.47396,
+			"survSAgg": 1.408615,
+			"secularValue": 0.465724,
+			"emancipativeValue": 0.493116
+		},
+		{
+			"key": "250-2018",
+			"countryCode": "250",
+			"year": 2018,
+			"country": "France",
+			"tradAgg": 0.464431,
+			"survSAgg": 1.902382,
+			"secularValue": 0.416516,
+			"emancipativeValue": 0.605623
+		},
+		{
+			"key": "268-1996",
+			"countryCode": "268",
+			"year": 1996,
+			"country": "Georgia",
+			"tradAgg": -0.113049,
+			"survSAgg": -1.116039,
+			"secularValue": 0.370556,
+			"emancipativeValue": 0.325839
+		},
+		{
+			"key": "268-2008",
+			"countryCode": "268",
+			"year": 2008,
+			"country": "Georgia",
+			"tradAgg": -0.598906,
+			"survSAgg": -1.143062,
+			"secularValue": 0.318128,
+			"emancipativeValue": 0.384183
+		},
+		{
+			"key": "268-2009",
+			"countryCode": "268",
+			"year": 2009,
+			"country": "Georgia",
+			"tradAgg": -0.801297,
+			"survSAgg": -1.316396,
+			"secularValue": 0.281889,
+			"emancipativeValue": 0.334466
+		},
+		{
+			"key": "268-2014",
+			"countryCode": "268",
+			"year": 2014,
+			"country": "Georgia",
+			"tradAgg": -0.741908,
+			"survSAgg": -1.438865,
+			"secularValue": 0.260524,
+			"emancipativeValue": 0.351709
+		},
+		{
+			"key": "268-2018",
+			"countryCode": "268",
+			"year": 2018,
+			"country": "Georgia",
+			"tradAgg": -1.017877,
+			"survSAgg": -0.817059,
+			"secularValue": 0.278211,
+			"emancipativeValue": 0.354334
+		},
+		{
+			"key": "276-1990",
+			"countryCode": "276",
+			"year": 1990,
+			"country": "Germany",
+			"tradAgg": 1.140795,
+			"survSAgg": 0.707815,
+			"secularValue": 0.509402,
+			"emancipativeValue": 0.535688
+		},
+		{
+			"key": "276-1997",
+			"countryCode": "276",
+			"year": 1997,
+			"country": "Germany",
+			"tradAgg": 1.747129,
+			"survSAgg": 1.148155,
+			"secularValue": 0.531659,
+			"emancipativeValue": 0.603654
+		},
+		{
+			"key": "276-1999",
+			"countryCode": "276",
+			"year": 1999,
+			"country": "Germany",
+			"tradAgg": 1.312505,
+			"survSAgg": 0.726735,
+			"secularValue": 0.481882,
+			"emancipativeValue": 0.540524
+		},
+		{
+			"key": "276-2006",
+			"countryCode": "276",
+			"year": 2006,
+			"country": "Germany",
+			"tradAgg": 1.337889,
+			"survSAgg": 1.149988,
+			"secularValue": 0.463007,
+			"emancipativeValue": 0.623189
+		},
+		{
+			"key": "276-2008",
+			"countryCode": "276",
+			"year": 2008,
+			"country": "Germany",
+			"tradAgg": 1.18753,
+			"survSAgg": 0.98904,
+			"secularValue": 0.497328,
+			"emancipativeValue": 0.563463
+		},
+		{
+			"key": "276-2013",
+			"countryCode": "276",
+			"year": 2013,
+			"country": "Germany",
+			"tradAgg": 0.878446,
+			"survSAgg": 1.157843,
+			"secularValue": 0.40823,
+			"emancipativeValue": 0.603778
+		},
+		{
+			"key": "276-2017",
+			"countryCode": "276",
+			"year": 2017,
+			"country": "Germany",
+			"tradAgg": 1.082524,
+			"survSAgg": 1.974439,
+			"secularValue": 0.40588,
+			"emancipativeValue": 0.670388
+		},
+		{
+			"key": "276-2018",
+			"countryCode": "276",
+			"year": 2018,
+			"country": "Germany",
+			"tradAgg": 0.890929,
+			"survSAgg": 2.156128,
+			"secularValue": 0.381969,
+			"emancipativeValue": 0.675882
+		},
+		{
+			"key": "276-1981",
+			"countryCode": "276",
+			"year": 1981,
+			"country": "Germany West",
+			"tradAgg": 0.91239,
+			"survSAgg": 0.06142,
+			"secularValue": 0.452483,
+			"emancipativeValue": 0.455445
+		},
+		{
+			"key": "288-2007",
+			"countryCode": "288",
+			"year": 2007,
+			"country": "Ghana",
+			"tradAgg": -1.793251,
+			"survSAgg": -0.733523,
+			"secularValue": 0.215759,
+			"emancipativeValue": 0.288908
+		},
+		{
+			"key": "288-2012",
+			"countryCode": "288",
+			"year": 2012,
+			"country": "Ghana",
+			"tradAgg": -1.835779,
+			"survSAgg": -1.044337,
+			"secularValue": 0.213343,
+			"emancipativeValue": 0.2663
+		},
+		{
+			"key": "826-1981",
+			"countryCode": "826",
+			"year": 1981,
+			"country": "Great Britain",
+			"tradAgg": -0.412074,
+			"survSAgg": 1.002619,
+			"secularValue": 0.389168,
+			"emancipativeValue": 0.417477
+		},
+		{
+			"key": "826-1990",
+			"countryCode": "826",
+			"year": 1990,
+			"country": "Great Britain",
+			"tradAgg": -0.185953,
+			"survSAgg": 1.258823,
+			"secularValue": 0.412485,
+			"emancipativeValue": 0.477086
+		},
+		{
+			"key": "826-1998",
+			"countryCode": "826",
+			"year": 1998,
+			"country": "Great Britain",
+			"secularValue": 0.506244
+		},
+		{
+			"key": "826-1999",
+			"countryCode": "826",
+			"year": 1999,
+			"country": "Great Britain",
+			"secularValue": 0.460696
+		},
+		{
+			"key": "826-2005",
+			"countryCode": "826",
+			"year": 2005,
+			"country": "Great Britain",
+			"tradAgg": -0.208363,
+			"survSAgg": 1.873992,
+			"secularValue": 0.398972,
+			"emancipativeValue": 0.577359
+		},
+		{
+			"key": "826-2009",
+			"countryCode": "826",
+			"year": 2009,
+			"country": "Great Britain",
+			"tradAgg": -0.049341,
+			"survSAgg": 1.709459,
+			"secularValue": 0.417538,
+			"emancipativeValue": 0.518115
+		},
+		{
+			"key": "826-2018",
+			"countryCode": "826",
+			"year": 2018,
+			"country": "Great Britain",
+			"tradAgg": 0.399767,
+			"survSAgg": 2.333186,
+			"secularValue": 0.398013,
+			"emancipativeValue": 0.628911
+		},
+		{
+			"key": "826-2022",
+			"countryCode": "826",
+			"year": 2022,
+			"country": "Great Britain",
+			"tradAgg": 0.980843,
+			"survSAgg": 2.236436,
+			"secularValue": 0.425909,
+			"emancipativeValue": 0.649945
+		},
+		{
+			"key": "300-1999",
+			"countryCode": "300",
+			"year": 1999,
+			"country": "Greece",
+			"tradAgg": 0.452334,
+			"survSAgg": 0.620286,
+			"secularValue": 0.471469,
+			"emancipativeValue": 0.531479
+		},
+		{
+			"key": "300-2008",
+			"countryCode": "300",
+			"year": 2008,
+			"country": "Greece",
+			"tradAgg": 0.034846,
+			"survSAgg": 0.026574,
+			"secularValue": 0.397398,
+			"emancipativeValue": 0.466743
+		},
+		{
+			"key": "300-2017",
+			"countryCode": "300",
+			"year": 2017,
+			"country": "Greece",
+			"tradAgg": 0.268633,
+			"survSAgg": -0.285253,
+			"secularValue": 0.319631,
+			"emancipativeValue": 0.470843
+		},
+		{
+			"key": "320-2004",
+			"countryCode": "320",
+			"year": 2004,
+			"country": "Guatemala",
+			"tradAgg": -1.53346,
+			"survSAgg": -0.436649,
+			"secularValue": 0.33336,
+			"emancipativeValue": 0.409512
+		},
+		{
+			"key": "320-2020",
+			"countryCode": "320",
+			"year": 2020,
+			"country": "Guatemala",
+			"tradAgg": -1.005993,
+			"survSAgg": 0.004235,
+			"secularValue": 0.404593,
+			"emancipativeValue": 0.478359
+		},
+		{
+			"key": "332-2016",
+			"countryCode": "332",
+			"year": 2016,
+			"country": "Haiti",
+			"tradAgg": -0.859315,
+			"survSAgg": 0.068643,
+			"secularValue": 0.510219,
+			"emancipativeValue": 0.379462
+		},
+		{
+			"key": "344-2005",
+			"countryCode": "344",
+			"year": 2005,
+			"country": "Hong Kong SAR",
+			"secularValue": 0.482978,
+			"emancipativeValue": 0.430976
+		},
+		{
+			"key": "344-2014",
+			"countryCode": "344",
+			"year": 2014,
+			"country": "Hong Kong SAR",
+			"tradAgg": 0.907313,
+			"survSAgg": 0.341786,
+			"secularValue": 0.469138,
+			"emancipativeValue": 0.4759
+		},
+		{
+			"key": "344-2018",
+			"countryCode": "344",
+			"year": 2018,
+			"country": "Hong Kong SAR",
+			"tradAgg": 1.458908,
+			"survSAgg": -0.058246,
+			"secularValue": 0.49586,
+			"emancipativeValue": 0.485547
+		},
+		{
+			"key": "348-1982",
+			"countryCode": "348",
+			"year": 1982,
+			"country": "Hungary",
+			"secularValue": 0.357505,
+			"emancipativeValue": 0.373199
+		},
+		{
+			"key": "348-1991",
+			"countryCode": "348",
+			"year": 1991,
+			"country": "Hungary",
+			"tradAgg": 0.621818,
+			"survSAgg": -0.639808,
+			"secularValue": 0.45238,
+			"emancipativeValue": 0.427921
+		},
+		{
+			"key": "348-1998",
+			"countryCode": "348",
+			"year": 1998,
+			"country": "Hungary",
+			"tradAgg": 0.79139,
+			"survSAgg": -0.079468,
+			"secularValue": 0.484626,
+			"emancipativeValue": 0.414094
+		},
+		{
+			"key": "348-1999",
+			"countryCode": "348",
+			"year": 1999,
+			"country": "Hungary",
+			"tradAgg": 0.500571,
+			"survSAgg": -0.936573,
+			"secularValue": 0.48009,
+			"emancipativeValue": 0.394775
+		},
+		{
+			"key": "348-2008",
+			"countryCode": "348",
+			"year": 2008,
+			"country": "Hungary",
+			"tradAgg": 0.63023,
+			"survSAgg": -0.396192,
+			"secularValue": 0.461922,
+			"emancipativeValue": 0.464635
+		},
+		{
+			"key": "348-2009",
+			"countryCode": "348",
+			"year": 2009,
+			"country": "Hungary",
+			"tradAgg": 0.701372,
+			"survSAgg": -0.3049,
+			"secularValue": 0.472759,
+			"emancipativeValue": 0.500869
+		},
+		{
+			"key": "348-2018",
+			"countryCode": "348",
+			"year": 2018,
+			"country": "Hungary",
+			"tradAgg": 0.593183,
+			"survSAgg": 0.02354,
+			"secularValue": 0.424049,
+			"emancipativeValue": 0.534306
+		},
+		{
+			"key": "352-1984",
+			"countryCode": "352",
+			"year": 1984,
+			"country": "Iceland",
+			"tradAgg": -0.33761,
+			"survSAgg": 0.878614,
+			"secularValue": 0.419194,
+			"emancipativeValue": 0.451862
+		},
+		{
+			"key": "352-1990",
+			"countryCode": "352",
+			"year": 1990,
+			"country": "Iceland",
+			"tradAgg": 0.055712,
+			"survSAgg": 1.355823,
+			"secularValue": 0.425531,
+			"emancipativeValue": 0.550057
+		},
+		{
+			"key": "352-1999",
+			"countryCode": "352",
+			"year": 1999,
+			"country": "Iceland",
+			"tradAgg": -0.006827,
+			"survSAgg": 1.985585,
+			"secularValue": 0.398599,
+			"emancipativeValue": 0.556952
+		},
+		{
+			"key": "352-2009",
+			"countryCode": "352",
+			"year": 2009,
+			"country": "Iceland",
+			"tradAgg": 0.147686,
+			"survSAgg": 2.42645,
+			"secularValue": 0.396919,
+			"emancipativeValue": 0.609956
+		},
+		{
+			"key": "352-2017",
+			"countryCode": "352",
+			"year": 2017,
+			"country": "Iceland",
+			"tradAgg": 0.504164,
+			"survSAgg": 2.907971,
+			"secularValue": 0.418233,
+			"emancipativeValue": 0.731801
+		},
+		{
+			"key": "356-1990",
+			"countryCode": "356",
+			"year": 1990,
+			"country": "India",
+			"tradAgg": -0.444902,
+			"survSAgg": -0.486686,
+			"secularValue": 0.25291,
+			"emancipativeValue": 0.315883
+		},
+		{
+			"key": "356-1995",
+			"countryCode": "356",
+			"year": 1995,
+			"country": "India",
+			"tradAgg": -0.631634,
+			"survSAgg": -0.357883,
+			"secularValue": 0.283867,
+			"emancipativeValue": 0.287432
+		},
+		{
+			"key": "356-2001",
+			"countryCode": "356",
+			"year": 2001,
+			"country": "India",
+			"tradAgg": -0.129567,
+			"survSAgg": -0.067354,
+			"secularValue": 0.27325,
+			"emancipativeValue": 0.346719
+		},
+		{
+			"key": "356-2006",
+			"countryCode": "356",
+			"year": 2006,
+			"country": "India",
+			"tradAgg": -0.424958,
+			"survSAgg": -0.151573,
+			"secularValue": 0.304542,
+			"emancipativeValue": 0.364104
+		},
+		{
+			"key": "356-2012",
+			"countryCode": "356",
+			"year": 2012,
+			"country": "India",
+			"tradAgg": -0.709541,
+			"survSAgg": -0.861494,
+			"secularValue": 0.243829,
+			"emancipativeValue": 0.340381
+		},
+		{
+			"key": "360-2001",
+			"countryCode": "360",
+			"year": 2001,
+			"country": "Indonesia",
+			"tradAgg": -0.793749,
+			"survSAgg": -1.077287,
+			"secularValue": 0.263716,
+			"emancipativeValue": 0.326465
+		},
+		{
+			"key": "360-2006",
+			"countryCode": "360",
+			"year": 2006,
+			"country": "Indonesia",
+			"tradAgg": -0.434854,
+			"survSAgg": -1.110226,
+			"secularValue": 0.282537,
+			"emancipativeValue": 0.335922
+		},
+		{
+			"key": "360-2018",
+			"countryCode": "360",
+			"year": 2018,
+			"country": "Indonesia",
+			"tradAgg": -1.219422,
+			"survSAgg": -0.840277,
+			"secularValue": 0.258136,
+			"emancipativeValue": 0.328823
+		},
+		{
+			"key": "364-2000",
+			"countryCode": "364",
+			"year": 2000,
+			"country": "Iran",
+			"secularValue": 0.15257,
+			"emancipativeValue": 0.321663
+		},
+		{
+			"key": "364-2007",
+			"countryCode": "364",
+			"year": 2007,
+			"country": "Iran",
+			"secularValue": 0.30869,
+			"emancipativeValue": 0.333622
+		},
+		{
+			"key": "364-2020",
+			"countryCode": "364",
+			"year": 2020,
+			"country": "Iran",
+			"tradAgg": -0.539229,
+			"survSAgg": -0.923642,
+			"secularValue": 0.259681,
+			"emancipativeValue": 0.337517
+		},
+		{
+			"key": "368-2004",
+			"countryCode": "368",
+			"year": 2004,
+			"country": "Iraq",
+			"secularValue": 0.248745
+		},
+		{
+			"key": "368-2006",
+			"countryCode": "368",
+			"year": 2006,
+			"country": "Iraq",
+			"secularValue": 0.232782
+		},
+		{
+			"key": "368-2013",
+			"countryCode": "368",
+			"year": 2013,
+			"country": "Iraq",
+			"tradAgg": -0.831699,
+			"survSAgg": -1.366376,
+			"secularValue": 0.342087,
+			"emancipativeValue": 0.269176
+		},
+		{
+			"key": "368-2018",
+			"countryCode": "368",
+			"year": 2018,
+			"country": "Iraq",
+			"tradAgg": -0.8453,
+			"survSAgg": -1.3175,
+			"secularValue": 0.343375,
+			"emancipativeValue": 0.26418
+		},
+		{
+			"key": "372-1981",
+			"countryCode": "372",
+			"year": 1981,
+			"country": "Ireland",
+			"tradAgg": -1.369901,
+			"survSAgg": 0.12725,
+			"secularValue": 0.336717,
+			"emancipativeValue": 0.347835
+		},
+		{
+			"key": "372-1990",
+			"countryCode": "372",
+			"year": 1990,
+			"country": "Ireland",
+			"tradAgg": -1.34052,
+			"survSAgg": 0.75908,
+			"secularValue": 0.319534,
+			"emancipativeValue": 0.430901
+		},
+		{
+			"key": "372-1999",
+			"countryCode": "372",
+			"year": 1999,
+			"country": "Ireland",
+			"tradAgg": -1.083813,
+			"survSAgg": 1.052775,
+			"secularValue": 0.336602,
+			"emancipativeValue": 0.440827
+		},
+		{
+			"key": "372-2008",
+			"countryCode": "372",
+			"year": 2008,
+			"country": "Ireland",
+			"tradAgg": -0.848229,
+			"survSAgg": 1.129745,
+			"secularValue": 0.409464,
+			"emancipativeValue": 0.459198
+		},
+		{
+			"key": "376-2001",
+			"countryCode": "376",
+			"year": 2001,
+			"country": "Israel",
+			"tradAgg": 0.19197,
+			"survSAgg": 0.58403,
+			"secularValue": 0.512743
+		},
+		{
+			"key": "380-1981",
+			"countryCode": "380",
+			"year": 1981,
+			"country": "Italy",
+			"tradAgg": 0.229892,
+			"survSAgg": -0.491635,
+			"secularValue": 0.368186,
+			"emancipativeValue": 0.387543
+		},
+		{
+			"key": "380-1990",
+			"countryCode": "380",
+			"year": 1990,
+			"country": "Italy",
+			"tradAgg": 0.006163,
+			"survSAgg": 0.400851,
+			"secularValue": 0.395604,
+			"emancipativeValue": 0.460632
+		},
+		{
+			"key": "380-1999",
+			"countryCode": "380",
+			"year": 1999,
+			"country": "Italy",
+			"tradAgg": 0.024393,
+			"survSAgg": 0.727453,
+			"secularValue": 0.386404,
+			"emancipativeValue": 0.484503
+		},
+		{
+			"key": "380-2005",
+			"countryCode": "380",
+			"year": 2005,
+			"country": "Italy",
+			"tradAgg": -0.151847,
+			"survSAgg": 0.449933,
+			"secularValue": 0.33162,
+			"emancipativeValue": 0.502749
+		},
+		{
+			"key": "380-2009",
+			"countryCode": "380",
+			"year": 2009,
+			"country": "Italy",
+			"secularValue": 0.353715,
+			"emancipativeValue": 0.435874
+		},
+		{
+			"key": "380-2018",
+			"countryCode": "380",
+			"year": 2018,
+			"country": "Italy",
+			"tradAgg": 0.346995,
+			"survSAgg": 0.801053,
+			"secularValue": 0.341953,
+			"emancipativeValue": 0.525015
+		},
+		{
+			"key": "392-1981",
+			"countryCode": "392",
+			"year": 1981,
+			"country": "Japan",
+			"tradAgg": 1.438769,
+			"survSAgg": 0.007524,
+			"secularValue": 0.502262,
+			"emancipativeValue": 0.42617
+		},
+		{
+			"key": "392-1990",
+			"countryCode": "392",
+			"year": 1990,
+			"country": "Japan",
+			"tradAgg": 1.587883,
+			"survSAgg": 0.225313,
+			"secularValue": 0.48438,
+			"emancipativeValue": 0.481772
+		},
+		{
+			"key": "392-1995",
+			"countryCode": "392",
+			"year": 1995,
+			"country": "Japan",
+			"tradAgg": 1.067948,
+			"survSAgg": 0.729409,
+			"secularValue": 0.443233,
+			"emancipativeValue": 0.480452
+		},
+		{
+			"key": "392-2000",
+			"countryCode": "392",
+			"year": 2000,
+			"country": "Japan",
+			"tradAgg": 1.808318,
+			"survSAgg": 0.888034,
+			"secularValue": 0.476986,
+			"emancipativeValue": 0.54931
+		},
+		{
+			"key": "392-2005",
+			"countryCode": "392",
+			"year": 2005,
+			"country": "Japan",
+			"tradAgg": 1.857339,
+			"survSAgg": 0.781967,
+			"secularValue": 0.471333,
+			"emancipativeValue": 0.53301
+		},
+		{
+			"key": "392-2010",
+			"countryCode": "392",
+			"year": 2010,
+			"country": "Japan",
+			"tradAgg": 1.635594,
+			"survSAgg": 0.825029,
+			"secularValue": 0.443423,
+			"emancipativeValue": 0.510547
+		},
+		{
+			"key": "392-2019",
+			"countryCode": "392",
+			"year": 2019,
+			"country": "Japan",
+			"tradAgg": 1.614605,
+			"survSAgg": 1.302005,
+			"secularValue": 0.43905,
+			"emancipativeValue": 0.556281
+		},
+		{
+			"key": "400-2001",
+			"countryCode": "400",
+			"year": 2001,
+			"country": "Jordan",
+			"tradAgg": -1.444166,
+			"survSAgg": -1.464391,
+			"secularValue": 0.151977,
+			"emancipativeValue": 0.227799
+		},
+		{
+			"key": "400-2007",
+			"countryCode": "400",
+			"year": 2007,
+			"country": "Jordan",
+			"tradAgg": -1.649575,
+			"survSAgg": -1.324398,
+			"secularValue": 0.108447,
+			"emancipativeValue": 0.227249
+		},
+		{
+			"key": "400-2014",
+			"countryCode": "400",
+			"year": 2014,
+			"country": "Jordan",
+			"tradAgg": -1.385558,
+			"survSAgg": -1.515717,
+			"secularValue": 0.177329,
+			"emancipativeValue": 0.245755
+		},
+		{
+			"key": "400-2018",
+			"countryCode": "400",
+			"year": 2018,
+			"country": "Jordan",
+			"tradAgg": -1.578521,
+			"survSAgg": -1.208982,
+			"secularValue": 0.174989,
+			"emancipativeValue": 0.271535
+		},
+		{
+			"key": "398-2011",
+			"countryCode": "398",
+			"year": 2011,
+			"country": "Kazakhstan",
+			"tradAgg": -0.275586,
+			"survSAgg": -0.664297,
+			"secularValue": 0.40966,
+			"emancipativeValue": 0.361673
+		},
+		{
+			"key": "398-2018",
+			"countryCode": "398",
+			"year": 2018,
+			"country": "Kazakhstan",
+			"tradAgg": -0.128849,
+			"survSAgg": -0.682448,
+			"secularValue": 0.377316,
+			"emancipativeValue": 0.374873
+		},
+		{
+			"key": "404-2021",
+			"countryCode": "404",
+			"year": 2021,
+			"country": "Kenya",
+			"tradAgg": -0.928546,
+			"survSAgg": -0.273128,
+			"secularValue": 0.338283,
+			"emancipativeValue": 0.407583
+		},
+		{
+			"key": "915-2008",
+			"countryCode": "915",
+			"year": 2008,
+			"country": "Kosovo",
+			"tradAgg": -1.131821,
+			"survSAgg": -0.424289,
+			"secularValue": 0.234375,
+			"emancipativeValue": 0.373547
+		},
+		{
+			"key": "414-2014",
+			"countryCode": "414",
+			"year": 2014,
+			"country": "Kuwait",
+			"secularValue": 0.250557,
+			"emancipativeValue": 0.32317
+		},
+		{
+			"key": "417-2003",
+			"countryCode": "417",
+			"year": 2003,
+			"country": "Kyrgyzstan",
+			"tradAgg": 0.089219,
+			"survSAgg": -1.064506,
+			"secularValue": 0.405242,
+			"emancipativeValue": 0.380113
+		},
+		{
+			"key": "417-2011",
+			"countryCode": "417",
+			"year": 2011,
+			"country": "Kyrgyzstan",
+			"tradAgg": -0.577812,
+			"survSAgg": -0.741181,
+			"secularValue": 0.352663,
+			"emancipativeValue": 0.329636
+		},
+		{
+			"key": "417-2020",
+			"countryCode": "417",
+			"year": 2020,
+			"country": "Kyrgyzstan",
+			"tradAgg": -1.394308,
+			"survSAgg": -0.551781,
+			"secularValue": 0.309332,
+			"emancipativeValue": 0.293726
+		},
+		{
+			"key": "428-1990",
+			"countryCode": "428",
+			"year": 1990,
+			"country": "Latvia",
+			"secularValue": 0.531853,
+			"emancipativeValue": 0.456305
+		},
+		{
+			"key": "428-1996",
+			"countryCode": "428",
+			"year": 1996,
+			"country": "Latvia",
+			"tradAgg": 1.578523,
+			"survSAgg": -0.423608,
+			"secularValue": 0.563118,
+			"emancipativeValue": 0.431634
+		},
+		{
+			"key": "428-1999",
+			"countryCode": "428",
+			"year": 1999,
+			"country": "Latvia",
+			"tradAgg": 0.913087,
+			"survSAgg": -0.972999,
+			"secularValue": 0.469186,
+			"emancipativeValue": 0.406486
+		},
+		{
+			"key": "428-2008",
+			"countryCode": "428",
+			"year": 2008,
+			"country": "Latvia",
+			"tradAgg": 0.894376,
+			"survSAgg": -0.469025,
+			"secularValue": 0.511244,
+			"emancipativeValue": 0.448371
+		},
+		{
+			"key": "428-2021",
+			"countryCode": "428",
+			"year": 2021,
+			"country": "Latvia",
+			"tradAgg": 0.83978,
+			"survSAgg": -0.04843,
+			"secularValue": 0.467398,
+			"emancipativeValue": 0.504005
+		},
+		{
+			"key": "422-2013",
+			"countryCode": "422",
+			"year": 2013,
+			"country": "Lebanon",
+			"tradAgg": -0.0946,
+			"survSAgg": -0.891526,
+			"secularValue": 0.417606,
+			"emancipativeValue": 0.398064
+		},
+		{
+			"key": "422-2018",
+			"countryCode": "422",
+			"year": 2018,
+			"country": "Lebanon",
+			"tradAgg": -0.535189,
+			"survSAgg": -1.075104,
+			"secularValue": 0.366156,
+			"emancipativeValue": 0.412437
+		},
+		{
+			"key": "434-2014",
+			"countryCode": "434",
+			"year": 2014,
+			"country": "Libya",
+			"tradAgg": -1.580271,
+			"survSAgg": -1.000294,
+			"secularValue": 0.239167,
+			"emancipativeValue": 0.261897
+		},
+		{
+			"key": "434-2022",
+			"countryCode": "434",
+			"year": 2022,
+			"country": "Libya",
+			"tradAgg": -1.75754,
+			"survSAgg": -1.125604,
+			"secularValue": 0.217856,
+			"emancipativeValue": 0.256322
+		},
+		{
+			"key": "440-1990",
+			"countryCode": "440",
+			"year": 1990,
+			"country": "Lithuania",
+			"secularValue": 0.484317,
+			"emancipativeValue": 0.425809
+		},
+		{
+			"key": "440-1997",
+			"countryCode": "440",
+			"year": 1997,
+			"country": "Lithuania",
+			"tradAgg": 1.111993,
+			"survSAgg": -1.070705,
+			"secularValue": 0.474778,
+			"emancipativeValue": 0.415386
+		},
+		{
+			"key": "440-1999",
+			"countryCode": "440",
+			"year": 1999,
+			"country": "Lithuania",
+			"tradAgg": 1.046831,
+			"survSAgg": -0.752034,
+			"secularValue": 0.500267,
+			"emancipativeValue": 0.442051
+		},
+		{
+			"key": "440-2008",
+			"countryCode": "440",
+			"year": 2008,
+			"country": "Lithuania",
+			"tradAgg": 0.993683,
+			"survSAgg": -0.709696,
+			"secularValue": 0.508487,
+			"emancipativeValue": 0.455126
+		},
+		{
+			"key": "440-2018",
+			"countryCode": "440",
+			"year": 2018,
+			"country": "Lithuania",
+			"tradAgg": 0.861852,
+			"survSAgg": -0.184072,
+			"secularValue": 0.444836,
+			"emancipativeValue": 0.489271
+		},
+		{
+			"key": "442-1999",
+			"countryCode": "442",
+			"year": 1999,
+			"country": "Luxembourg",
+			"tradAgg": 0.391231,
+			"survSAgg": 1.355223,
+			"secularValue": 0.464611,
+			"emancipativeValue": 0.520059
+		},
+		{
+			"key": "442-2008",
+			"countryCode": "442",
+			"year": 2008,
+			"country": "Luxembourg",
+			"tradAgg": 0.327359,
+			"survSAgg": 1.381733,
+			"secularValue": 0.425907,
+			"emancipativeValue": 0.507446
+		},
+		{
+			"key": "446-2019",
+			"countryCode": "446",
+			"year": 2019,
+			"country": "Macau SAR",
+			"tradAgg": 1.271305,
+			"survSAgg": 0.203636,
+			"secularValue": 0.512792,
+			"emancipativeValue": 0.501369
+		},
+		{
+			"key": "458-2006",
+			"countryCode": "458",
+			"year": 2006,
+			"country": "Malaysia",
+			"tradAgg": -0.61662,
+			"survSAgg": -0.432487,
+			"secularValue": 0.3356,
+			"emancipativeValue": 0.386837
+		},
+		{
+			"key": "458-2012",
+			"countryCode": "458",
+			"year": 2012,
+			"country": "Malaysia",
+			"tradAgg": -1.031429,
+			"survSAgg": -0.706089,
+			"secularValue": 0.305714,
+			"emancipativeValue": 0.359097
+		},
+		{
+			"key": "458-2018",
+			"countryCode": "458",
+			"year": 2018,
+			"country": "Malaysia",
+			"tradAgg": 0.054588,
+			"survSAgg": -0.382345,
+			"secularValue": 0.381968,
+			"emancipativeValue": 0.419821
+		},
+		{
+			"key": "462-2021",
+			"countryCode": "462",
+			"year": 2021,
+			"country": "Maldives",
+			"tradAgg": -1.377969,
+			"survSAgg": -0.648204,
+			"secularValue": 0.217697,
+			"emancipativeValue": 0.338579
+		},
+		{
+			"key": "466-2007",
+			"countryCode": "466",
+			"year": 2007,
+			"country": "Mali",
+			"tradAgg": -1.385107,
+			"survSAgg": -0.113988,
+			"secularValue": 0.241999,
+			"emancipativeValue": 0.317298
+		},
+		{
+			"key": "470-1983",
+			"countryCode": "470",
+			"year": 1983,
+			"country": "Malta",
+			"secularValue": 0.250869,
+			"emancipativeValue": 0.315232
+		},
+		{
+			"key": "470-1991",
+			"countryCode": "470",
+			"year": 1991,
+			"country": "Malta",
+			"tradAgg": -1.725945,
+			"survSAgg": -0.266312,
+			"secularValue": 0.252796,
+			"emancipativeValue": 0.328127
+		},
+		{
+			"key": "470-1999",
+			"countryCode": "470",
+			"year": 1999,
+			"country": "Malta",
+			"tradAgg": -1.458345,
+			"survSAgg": -0.347869,
+			"secularValue": 0.274568,
+			"emancipativeValue": 0.329692
+		},
+		{
+			"key": "470-2008",
+			"countryCode": "470",
+			"year": 2008,
+			"country": "Malta",
+			"tradAgg": -1.271279,
+			"survSAgg": 0.176127,
+			"secularValue": 0.264986,
+			"emancipativeValue": 0.375537
+		},
+		{
+			"key": "484-1981",
+			"countryCode": "484",
+			"year": 1981,
+			"country": "Mexico",
+			"tradAgg": -0.972886,
+			"survSAgg": -0.703569,
+			"secularValue": 0.402761,
+			"emancipativeValue": 0.347557
+		},
+		{
+			"key": "484-1990",
+			"countryCode": "484",
+			"year": 1990,
+			"country": "Mexico",
+			"tradAgg": -0.329268,
+			"survSAgg": 0.065966,
+			"secularValue": 0.431408,
+			"emancipativeValue": 0.446774
+		},
+		{
+			"key": "484-1996",
+			"countryCode": "484",
+			"year": 1996,
+			"country": "Mexico",
+			"tradAgg": -0.819325,
+			"survSAgg": 0.08326,
+			"secularValue": 0.387182,
+			"emancipativeValue": 0.397966
+		},
+		{
+			"key": "484-2000",
+			"countryCode": "484",
+			"year": 2000,
+			"country": "Mexico",
+			"tradAgg": -1.483838,
+			"survSAgg": 0.299603,
+			"secularValue": 0.321554,
+			"emancipativeValue": 0.420379
+		},
+		{
+			"key": "484-2005",
+			"countryCode": "484",
+			"year": 2005,
+			"country": "Mexico",
+			"tradAgg": -1.515503,
+			"survSAgg": 0.634243,
+			"secularValue": 0.354473,
+			"emancipativeValue": 0.468325
+		},
+		{
+			"key": "484-2012",
+			"countryCode": "484",
+			"year": 2012,
+			"country": "Mexico",
+			"tradAgg": -1.624684,
+			"survSAgg": 0.577478,
+			"secularValue": 0.344992,
+			"emancipativeValue": 0.464935
+		},
+		{
+			"key": "484-2018",
+			"countryCode": "484",
+			"year": 2018,
+			"country": "Mexico",
+			"tradAgg": -1.060339,
+			"survSAgg": 0.22602,
+			"secularValue": 0.428413,
+			"emancipativeValue": 0.438229
+		},
+		{
+			"key": "498-1996",
+			"countryCode": "498",
+			"year": 1996,
+			"country": "Moldova",
+			"tradAgg": 0.687311,
+			"survSAgg": -1.578433,
+			"secularValue": 0.429845,
+			"emancipativeValue": 0.334029
+		},
+		{
+			"key": "498-2002",
+			"countryCode": "498",
+			"year": 2002,
+			"country": "Moldova",
+			"tradAgg": 1.026698,
+			"survSAgg": -1.569242,
+			"secularValue": 0.455783,
+			"emancipativeValue": 0.385597
+		},
+		{
+			"key": "498-2006",
+			"countryCode": "498",
+			"year": 2006,
+			"country": "Moldova",
+			"tradAgg": 0.8275,
+			"survSAgg": -1.667335,
+			"secularValue": 0.473559,
+			"emancipativeValue": 0.40784
+		},
+		{
+			"key": "498-2008",
+			"countryCode": "498",
+			"year": 2008,
+			"country": "Moldova",
+			"tradAgg": 0.181766,
+			"survSAgg": -1.550172,
+			"secularValue": 0.418995,
+			"emancipativeValue": 0.369995
+		},
+		{
+			"key": "496-2020",
+			"countryCode": "496",
+			"year": 2020,
+			"country": "Mongolia",
+			"tradAgg": 0.747239,
+			"survSAgg": 0.147036,
+			"secularValue": 0.544377,
+			"emancipativeValue": 0.435539
+		},
+		{
+			"key": "499-1996",
+			"countryCode": "499",
+			"year": 1996,
+			"country": "Montenegro",
+			"tradAgg": 0.333437,
+			"survSAgg": -0.738164,
+			"secularValue": 0.422406,
+			"emancipativeValue": 0.382919
+		},
+		{
+			"key": "499-2001",
+			"countryCode": "499",
+			"year": 2001,
+			"country": "Montenegro",
+			"tradAgg": 1.092754,
+			"survSAgg": -1.03325,
+			"secularValue": 0.453037,
+			"emancipativeValue": 0.379096
+		},
+		{
+			"key": "499-2008",
+			"countryCode": "499",
+			"year": 2008,
+			"country": "Montenegro",
+			"tradAgg": 0.185723,
+			"survSAgg": -0.655193,
+			"secularValue": 0.396104,
+			"emancipativeValue": 0.403154
+		},
+		{
+			"key": "499-2019",
+			"countryCode": "499",
+			"year": 2019,
+			"country": "Montenegro",
+			"tradAgg": -0.435889,
+			"survSAgg": -0.017133,
+			"secularValue": 0.343759,
+			"emancipativeValue": 0.423825
+		},
+		{
+			"key": "504-2001",
+			"countryCode": "504",
+			"year": 2001,
+			"country": "Morocco",
+			"secularValue": 0.194477,
+			"emancipativeValue": 0.249232
+		},
+		{
+			"key": "504-2007",
+			"countryCode": "504",
+			"year": 2007,
+			"country": "Morocco",
+			"secularValue": 0.210242,
+			"emancipativeValue": 0.34335
+		},
+		{
+			"key": "504-2011",
+			"countryCode": "504",
+			"year": 2011,
+			"country": "Morocco",
+			"tradAgg": -1.058217,
+			"survSAgg": -1.512952,
+			"secularValue": 0.202742,
+			"emancipativeValue": 0.324913
+		},
+		{
+			"key": "504-2021",
+			"countryCode": "504",
+			"year": 2021,
+			"country": "Morocco",
+			"tradAgg": -0.317586,
+			"survSAgg": -0.813487,
+			"secularValue": 0.356856,
+			"emancipativeValue": 0.386959
+		},
+		{
+			"key": "104-2020",
+			"countryCode": "104",
+			"year": 2020,
+			"country": "Myanmar",
+			"tradAgg": -1.025433,
+			"survSAgg": -0.950791,
+			"secularValue": 0.313707,
+			"emancipativeValue": 0.289624
+		},
+		{
+			"key": "528-1981",
+			"countryCode": "528",
+			"year": 1981,
+			"country": "Netherlands",
+			"tradAgg": 0.546556,
+			"survSAgg": 0.908887,
+			"secularValue": 0.460617,
+			"emancipativeValue": 0.462858
+		},
+		{
+			"key": "528-1990",
+			"countryCode": "528",
+			"year": 1990,
+			"country": "Netherlands",
+			"tradAgg": 0.583666,
+			"survSAgg": 1.939944,
+			"secularValue": 0.47712,
+			"emancipativeValue": 0.585234
+		},
+		{
+			"key": "528-1999",
+			"countryCode": "528",
+			"year": 1999,
+			"country": "Netherlands",
+			"tradAgg": 0.507902,
+			"survSAgg": 2.160191,
+			"secularValue": 0.481032,
+			"emancipativeValue": 0.576752
+		},
+		{
+			"key": "528-2006",
+			"countryCode": "528",
+			"year": 2006,
+			"country": "Netherlands",
+			"tradAgg": 0.482811,
+			"survSAgg": 1.762723,
+			"secularValue": 0.440689,
+			"emancipativeValue": 0.614044
+		},
+		{
+			"key": "528-2008",
+			"countryCode": "528",
+			"year": 2008,
+			"country": "Netherlands",
+			"tradAgg": 0.1165,
+			"survSAgg": 2.32276,
+			"secularValue": 0.449292,
+			"emancipativeValue": 0.559761
+		},
+		{
+			"key": "528-2012",
+			"countryCode": "528",
+			"year": 2012,
+			"country": "Netherlands",
+			"tradAgg": 0.724514,
+			"survSAgg": 2.09917,
+			"secularValue": 0.430809,
+			"emancipativeValue": 0.609011
+		},
+		{
+			"key": "528-2017",
+			"countryCode": "528",
+			"year": 2017,
+			"country": "Netherlands",
+			"tradAgg": 0.696798,
+			"survSAgg": 2.50253,
+			"secularValue": 0.462694,
+			"emancipativeValue": 0.648207
+		},
+		{
+			"key": "528-2022",
+			"countryCode": "528",
+			"year": 2022,
+			"country": "Netherlands",
+			"tradAgg": 1.156209,
+			"survSAgg": 2.387636,
+			"secularValue": 0.455878,
+			"emancipativeValue": 0.660081
+		},
+		{
+			"key": "554-1998",
+			"countryCode": "554",
+			"year": 1998,
+			"country": "New Zealand",
+			"tradAgg": -0.037559,
+			"survSAgg": 2.062838,
+			"secularValue": 0.408321,
+			"emancipativeValue": 0.560206
+		},
+		{
+			"key": "554-2004",
+			"countryCode": "554",
+			"year": 2004,
+			"country": "New Zealand",
+			"tradAgg": -0.141541,
+			"survSAgg": 2.369523,
+			"secularValue": 0.413658,
+			"emancipativeValue": 0.576551
+		},
+		{
+			"key": "554-2011",
+			"countryCode": "554",
+			"year": 2011,
+			"country": "New Zealand",
+			"tradAgg": 0.098416,
+			"survSAgg": 2.298811,
+			"secularValue": 0.394213,
+			"emancipativeValue": 0.576409
+		},
+		{
+			"key": "554-2020",
+			"countryCode": "554",
+			"year": 2020,
+			"country": "New Zealand",
+			"tradAgg": 0.531681,
+			"survSAgg": 2.856591,
+			"secularValue": 0.405592,
+			"emancipativeValue": 0.644928
+		},
+		{
+			"key": "558-2020",
+			"countryCode": "558",
+			"year": 2020,
+			"country": "Nicaragua",
+			"tradAgg": -1.712567,
+			"survSAgg": -0.360411,
+			"secularValue": 0.356894,
+			"emancipativeValue": 0.379583
+		},
+		{
+			"key": "566-1990",
+			"countryCode": "566",
+			"year": 1990,
+			"country": "Nigeria",
+			"tradAgg": -1.234192,
+			"survSAgg": -1.05784,
+			"secularValue": 0.262564,
+			"emancipativeValue": 0.305242
+		},
+		{
+			"key": "566-1995",
+			"countryCode": "566",
+			"year": 1995,
+			"country": "Nigeria",
+			"tradAgg": -1.350837,
+			"survSAgg": -1.057272,
+			"secularValue": 0.273924,
+			"emancipativeValue": 0.263283
+		},
+		{
+			"key": "566-2000",
+			"countryCode": "566",
+			"year": 2000,
+			"country": "Nigeria",
+			"tradAgg": -1.862228,
+			"survSAgg": -0.56685,
+			"secularValue": 0.276123,
+			"emancipativeValue": 0.256358
+		},
+		{
+			"key": "566-2012",
+			"countryCode": "566",
+			"year": 2012,
+			"country": "Nigeria",
+			"tradAgg": -1.28668,
+			"survSAgg": -0.775794,
+			"secularValue": 0.302919,
+			"emancipativeValue": 0.274626
+		},
+		{
+			"key": "566-2018",
+			"countryCode": "566",
+			"year": 2018,
+			"country": "Nigeria",
+			"tradAgg": -1.373646,
+			"survSAgg": -1.102776,
+			"secularValue": 0.257711,
+			"emancipativeValue": 0.287548
+		},
+		{
+			"key": "807-1998",
+			"countryCode": "807",
+			"year": 1998,
+			"country": "North Macedonia",
+			"tradAgg": 0.645719,
+			"survSAgg": -0.708855,
+			"secularValue": 0.403562,
+			"emancipativeValue": 0.403815
+		},
+		{
+			"key": "807-2001",
+			"countryCode": "807",
+			"year": 2001,
+			"country": "North Macedonia",
+			"tradAgg": 0.234096,
+			"survSAgg": -0.576785,
+			"secularValue": 0.329617,
+			"emancipativeValue": 0.409131
+		},
+		{
+			"key": "807-2008",
+			"countryCode": "807",
+			"year": 2008,
+			"country": "North Macedonia",
+			"tradAgg": 0.124709,
+			"survSAgg": -0.116778,
+			"secularValue": 0.340856,
+			"emancipativeValue": 0.469179
+		},
+		{
+			"key": "807-2019",
+			"countryCode": "807",
+			"year": 2019,
+			"country": "North Macedonia",
+			"tradAgg": 0.087164,
+			"survSAgg": -0.268639,
+			"secularValue": 0.35062,
+			"emancipativeValue": 0.419994
+		},
+		{
+			"key": "909-1981",
+			"countryCode": "909",
+			"year": 1981,
+			"country": "Northern Ireland",
+			"tradAgg": -0.835827,
+			"survSAgg": -0.113825,
+			"secularValue": 0.338626,
+			"emancipativeValue": 0.315513
+		},
+		{
+			"key": "909-1990",
+			"countryCode": "909",
+			"year": 1990,
+			"country": "Northern Ireland",
+			"tradAgg": -1.033464,
+			"survSAgg": 0.590384,
+			"secularValue": 0.312201,
+			"emancipativeValue": 0.395229
+		},
+		{
+			"key": "909-1999",
+			"countryCode": "909",
+			"year": 1999,
+			"country": "Northern Ireland",
+			"tradAgg": -0.62213,
+			"survSAgg": 0.66555,
+			"secularValue": 0.406936,
+			"emancipativeValue": 0.431088
+		},
+		{
+			"key": "909-2008",
+			"countryCode": "909",
+			"year": 2008,
+			"country": "Northern Ireland",
+			"tradAgg": -0.530148,
+			"survSAgg": 0.545246,
+			"secularValue": 0.408664,
+			"emancipativeValue": 0.440454
+		},
+		{
+			"key": "909-2022",
+			"countryCode": "909",
+			"year": 2022,
+			"country": "Northern Ireland",
+			"tradAgg": 0.118896,
+			"survSAgg": 1.676413,
+			"secularValue": 0.400237,
+			"emancipativeValue": 0.613078
+		},
+		{
+			"key": "578-1982",
+			"countryCode": "578",
+			"year": 1982,
+			"country": "Norway",
+			"tradAgg": 0.647707,
+			"survSAgg": 0.919839,
+			"secularValue": 0.434382,
+			"emancipativeValue": 0.449356
+		},
+		{
+			"key": "578-1990",
+			"countryCode": "578",
+			"year": 1990,
+			"country": "Norway",
+			"tradAgg": 0.799553,
+			"survSAgg": 1.281302,
+			"secularValue": 0.454287,
+			"emancipativeValue": 0.537203
+		},
+		{
+			"key": "578-1996",
+			"countryCode": "578",
+			"year": 1996,
+			"country": "Norway",
+			"tradAgg": 0.749306,
+			"survSAgg": 1.864388,
+			"secularValue": 0.435809,
+			"emancipativeValue": 0.637611
+		},
+		{
+			"key": "578-2007",
+			"countryCode": "578",
+			"year": 2007,
+			"country": "Norway",
+			"tradAgg": 0.873897,
+			"survSAgg": 2.706687,
+			"secularValue": 0.462167,
+			"emancipativeValue": 0.723104
+		},
+		{
+			"key": "578-2008",
+			"countryCode": "578",
+			"year": 2008,
+			"country": "Norway",
+			"tradAgg": 0.644889,
+			"survSAgg": 2.61296,
+			"secularValue": 0.455893,
+			"emancipativeValue": 0.599959
+		},
+		{
+			"key": "578-2018",
+			"countryCode": "578",
+			"year": 2018,
+			"country": "Norway",
+			"tradAgg": 0.92647,
+			"survSAgg": 3.030698,
+			"secularValue": 0.42037,
+			"emancipativeValue": 0.732431
+		},
+		{
+			"key": "586-1997",
+			"countryCode": "586",
+			"year": 1997,
+			"country": "Pakistan",
+			"secularValue": 0.271776
+		},
+		{
+			"key": "586-2001",
+			"countryCode": "586",
+			"year": 2001,
+			"country": "Pakistan",
+			"tradAgg": -1.288875,
+			"survSAgg": -1.448768,
+			"secularValue": 0.199402,
+			"emancipativeValue": 0.237536
+		},
+		{
+			"key": "586-2012",
+			"countryCode": "586",
+			"year": 2012,
+			"country": "Pakistan",
+			"tradAgg": -1.152362,
+			"survSAgg": -0.621148,
+			"secularValue": 0.30432,
+			"emancipativeValue": 0.295374
+		},
+		{
+			"key": "586-2018",
+			"countryCode": "586",
+			"year": 2018,
+			"country": "Pakistan",
+			"tradAgg": -1.383316,
+			"survSAgg": -0.632957,
+			"secularValue": 0.245903,
+			"emancipativeValue": 0.253647
+		},
+		{
+			"key": "275-2013",
+			"countryCode": "275",
+			"year": 2013,
+			"country": "Palestine",
+			"tradAgg": -0.916624,
+			"survSAgg": -1.367944,
+			"secularValue": 0.327868,
+			"emancipativeValue": 0.294563
+		},
+		{
+			"key": "604-1996",
+			"countryCode": "604",
+			"year": 1996,
+			"country": "Peru",
+			"tradAgg": -0.960146,
+			"survSAgg": -0.52712,
+			"secularValue": 0.357225,
+			"emancipativeValue": 0.400599
+		},
+		{
+			"key": "604-2001",
+			"countryCode": "604",
+			"year": 2001,
+			"country": "Peru",
+			"tradAgg": -1.174265,
+			"survSAgg": -0.45163,
+			"secularValue": 0.337644,
+			"emancipativeValue": 0.424214
+		},
+		{
+			"key": "604-2006",
+			"countryCode": "604",
+			"year": 2006,
+			"country": "Peru",
+			"secularValue": 0.406605,
+			"emancipativeValue": 0.451674
+		},
+		{
+			"key": "604-2012",
+			"countryCode": "604",
+			"year": 2012,
+			"country": "Peru",
+			"tradAgg": -0.968659,
+			"survSAgg": -0.333431,
+			"secularValue": 0.402064,
+			"emancipativeValue": 0.435559
+		},
+		{
+			"key": "604-2018",
+			"countryCode": "604",
+			"year": 2018,
+			"country": "Peru",
+			"tradAgg": -1.055721,
+			"survSAgg": -0.562857,
+			"secularValue": 0.379277,
+			"emancipativeValue": 0.402917
+		},
+		{
+			"key": "608-1996",
+			"countryCode": "608",
+			"year": 1996,
+			"country": "Philippines",
+			"tradAgg": -1.204252,
+			"survSAgg": -0.499479,
+			"secularValue": 0.342927,
+			"emancipativeValue": 0.369987
+		},
+		{
+			"key": "608-2001",
+			"countryCode": "608",
+			"year": 2001,
+			"country": "Philippines",
+			"tradAgg": -1.139706,
+			"survSAgg": -0.385455,
+			"secularValue": 0.328152,
+			"emancipativeValue": 0.364404
+		},
+		{
+			"key": "608-2012",
+			"countryCode": "608",
+			"year": 2012,
+			"country": "Philippines",
+			"tradAgg": -1.261657,
+			"survSAgg": -0.068751,
+			"secularValue": 0.31519,
+			"emancipativeValue": 0.398732
+		},
+		{
+			"key": "608-2019",
+			"countryCode": "608",
+			"year": 2019,
+			"country": "Philippines",
+			"tradAgg": -1.414542,
+			"survSAgg": 0.105671,
+			"secularValue": 0.317603,
+			"emancipativeValue": 0.389141
+		},
+		{
+			"key": "616-1989",
+			"countryCode": "616",
+			"year": 1989,
+			"country": "Poland",
+			"secularValue": 0.409172
+		},
+		{
+			"key": "616-1990",
+			"countryCode": "616",
+			"year": 1990,
+			"country": "Poland",
+			"tradAgg": -0.635718,
+			"survSAgg": -0.914846,
+			"secularValue": 0.32248,
+			"emancipativeValue": 0.356545
+		},
+		{
+			"key": "616-1997",
+			"countryCode": "616",
+			"year": 1997,
+			"country": "Poland",
+			"secularValue": 0.293256,
+			"emancipativeValue": 0.366611
+		},
+		{
+			"key": "616-1999",
+			"countryCode": "616",
+			"year": 1999,
+			"country": "Poland",
+			"tradAgg": -0.530258,
+			"survSAgg": -0.406727,
+			"secularValue": 0.341017,
+			"emancipativeValue": 0.391034
+		},
+		{
+			"key": "616-2005",
+			"countryCode": "616",
+			"year": 2005,
+			"country": "Poland",
+			"tradAgg": -0.680993,
+			"survSAgg": -0.281931,
+			"secularValue": 0.327746,
+			"emancipativeValue": 0.429708
+		},
+		{
+			"key": "616-2008",
+			"countryCode": "616",
+			"year": 2008,
+			"country": "Poland",
+			"tradAgg": -0.238351,
+			"survSAgg": -0.202119,
+			"secularValue": 0.407774,
+			"emancipativeValue": 0.407975
+		},
+		{
+			"key": "616-2012",
+			"countryCode": "616",
+			"year": 2012,
+			"country": "Poland",
+			"tradAgg": -0.549976,
+			"survSAgg": 0.063631,
+			"secularValue": 0.333455,
+			"emancipativeValue": 0.461782
+		},
+		{
+			"key": "616-2017",
+			"countryCode": "616",
+			"year": 2017,
+			"country": "Poland",
+			"tradAgg": -0.430959,
+			"survSAgg": 0.598213,
+			"secularValue": 0.335857,
+			"emancipativeValue": 0.482883
+		},
+		{
+			"key": "620-1990",
+			"countryCode": "620",
+			"year": 1990,
+			"country": "Portugal",
+			"tradAgg": 0.072722,
+			"survSAgg": -0.368082,
+			"secularValue": 0.444753,
+			"emancipativeValue": 0.403883
+		},
+		{
+			"key": "620-1999",
+			"countryCode": "620",
+			"year": 1999,
+			"country": "Portugal",
+			"tradAgg": -0.659181,
+			"survSAgg": -0.216182,
+			"secularValue": 0.368588,
+			"emancipativeValue": 0.406888
+		},
+		{
+			"key": "620-2008",
+			"countryCode": "620",
+			"year": 2008,
+			"country": "Portugal",
+			"tradAgg": -0.156943,
+			"survSAgg": 0.217907,
+			"secularValue": 0.387645,
+			"emancipativeValue": 0.445597
+		},
+		{
+			"key": "620-2020",
+			"countryCode": "620",
+			"year": 2020,
+			"country": "Portugal",
+			"tradAgg": -0.269594,
+			"survSAgg": 0.335309,
+			"secularValue": 0.344404,
+			"emancipativeValue": 0.503447
+		},
+		{
+			"key": "630-1995",
+			"countryCode": "630",
+			"year": 1995,
+			"country": "Puerto Rico",
+			"tradAgg": -1.87862,
+			"survSAgg": 0.092482,
+			"secularValue": 0.238174,
+			"emancipativeValue": 0.396452
+		},
+		{
+			"key": "630-2001",
+			"countryCode": "630",
+			"year": 2001,
+			"country": "Puerto Rico",
+			"tradAgg": -2.025379,
+			"survSAgg": 0.460782,
+			"secularValue": 0.218605,
+			"emancipativeValue": 0.476899
+		},
+		{
+			"key": "630-2018",
+			"countryCode": "630",
+			"year": 2018,
+			"country": "Puerto Rico",
+			"tradAgg": -1.555056,
+			"survSAgg": 0.659693,
+			"secularValue": 0.262422,
+			"emancipativeValue": 0.52821
+		},
+		{
+			"key": "634-2010",
+			"countryCode": "634",
+			"year": 2010,
+			"country": "Qatar",
+			"tradAgg": -2.166689,
+			"survSAgg": -0.714306,
+			"secularValue": 0.095702,
+			"emancipativeValue": 0.269909
+		},
+		{
+			"key": "642-1993",
+			"countryCode": "642",
+			"year": 1993,
+			"country": "Romania",
+			"secularValue": 0.37449,
+			"emancipativeValue": 0.394846
+		},
+		{
+			"key": "642-1998",
+			"countryCode": "642",
+			"year": 1998,
+			"country": "Romania",
+			"tradAgg": 0.49388,
+			"survSAgg": -0.945791,
+			"secularValue": 0.33637,
+			"emancipativeValue": 0.425548
+		},
+		{
+			"key": "642-1999",
+			"countryCode": "642",
+			"year": 1999,
+			"country": "Romania",
+			"tradAgg": 0.135429,
+			"survSAgg": -1.455119,
+			"secularValue": 0.357091,
+			"emancipativeValue": 0.391405
+		},
+		{
+			"key": "642-2005",
+			"countryCode": "642",
+			"year": 2005,
+			"country": "Romania",
+			"tradAgg": -0.082483,
+			"survSAgg": -1.502185,
+			"secularValue": 0.319997,
+			"emancipativeValue": 0.383818
+		},
+		{
+			"key": "642-2008",
+			"countryCode": "642",
+			"year": 2008,
+			"country": "Romania",
+			"tradAgg": -0.098999,
+			"survSAgg": -1.143754,
+			"secularValue": 0.384901,
+			"emancipativeValue": 0.426753
+		},
+		{
+			"key": "642-2012",
+			"countryCode": "642",
+			"year": 2012,
+			"country": "Romania",
+			"tradAgg": -0.20739,
+			"survSAgg": -1.154823,
+			"secularValue": 0.30901,
+			"emancipativeValue": 0.423566
+		},
+		{
+			"key": "642-2018",
+			"countryCode": "642",
+			"year": 2018,
+			"country": "Romania",
+			"tradAgg": -0.387611,
+			"survSAgg": -0.801672,
+			"secularValue": 0.317729,
+			"emancipativeValue": 0.419285
+		},
+		{
+			"key": "643-1990",
+			"countryCode": "643",
+			"year": 1990,
+			"country": "Russia",
+			"tradAgg": 1.302332,
+			"survSAgg": -0.813761,
+			"secularValue": 0.428206,
+			"emancipativeValue": 0.386944
+		},
+		{
+			"key": "643-1995",
+			"countryCode": "643",
+			"year": 1995,
+			"country": "Russia",
+			"tradAgg": 1.192098,
+			"survSAgg": -1.315533,
+			"secularValue": 0.479965,
+			"emancipativeValue": 0.345918
+		},
+		{
+			"key": "643-1999",
+			"countryCode": "643",
+			"year": 1999,
+			"country": "Russia",
+			"tradAgg": 1.272922,
+			"survSAgg": -1.255189,
+			"secularValue": 0.516585,
+			"emancipativeValue": 0.383257
+		},
+		{
+			"key": "643-2006",
+			"countryCode": "643",
+			"year": 2006,
+			"country": "Russia",
+			"tradAgg": 0.623172,
+			"survSAgg": -1.020063,
+			"secularValue": 0.450863,
+			"emancipativeValue": 0.368317
+		},
+		{
+			"key": "643-2008",
+			"countryCode": "643",
+			"year": 2008,
+			"country": "Russia",
+			"tradAgg": 0.408186,
+			"survSAgg": -0.931418,
+			"secularValue": 0.485909,
+			"emancipativeValue": 0.386973
+		},
+		{
+			"key": "643-2011",
+			"countryCode": "643",
+			"year": 2011,
+			"country": "Russia",
+			"tradAgg": 0.464112,
+			"survSAgg": -0.863628,
+			"secularValue": 0.489841,
+			"emancipativeValue": 0.395357
+		},
+		{
+			"key": "643-2017",
+			"countryCode": "643",
+			"year": 2017,
+			"country": "Russia",
+			"tradAgg": 0.389481,
+			"survSAgg": -0.595041,
+			"secularValue": 0.456453,
+			"emancipativeValue": 0.397699
+		},
+		{
+			"key": "646-2007",
+			"countryCode": "646",
+			"year": 2007,
+			"country": "Rwanda",
+			"tradAgg": -1.273409,
+			"survSAgg": -1.134039,
+			"secularValue": 0.255857,
+			"emancipativeValue": 0.321848
+		},
+		{
+			"key": "646-2012",
+			"countryCode": "646",
+			"year": 2012,
+			"country": "Rwanda",
+			"tradAgg": -1.099507,
+			"survSAgg": -0.706921,
+			"secularValue": 0.352138,
+			"emancipativeValue": 0.310391
+		},
+		{
+			"key": "682-2003",
+			"countryCode": "682",
+			"year": 2003,
+			"country": "Saudi Arabia",
+			"tradAgg": -1.504354,
+			"survSAgg": -0.416516,
+			"secularValue": 0.248226,
+			"emancipativeValue": 0.328053
+		},
+		{
+			"key": "688-1996",
+			"countryCode": "688",
+			"year": 1996,
+			"country": "Serbia",
+			"tradAgg": 0.90854,
+			"survSAgg": -0.559902,
+			"secularValue": 0.420314,
+			"emancipativeValue": 0.40492
+		},
+		{
+			"key": "688-2001",
+			"countryCode": "688",
+			"year": 2001,
+			"country": "Serbia",
+			"tradAgg": 0.775325,
+			"survSAgg": -0.626995,
+			"secularValue": 0.366881,
+			"emancipativeValue": 0.418375
+		},
+		{
+			"key": "688-2006",
+			"countryCode": "688",
+			"year": 2006,
+			"country": "Serbia",
+			"tradAgg": 0.508962,
+			"survSAgg": -0.236915,
+			"secularValue": 0.477113,
+			"emancipativeValue": 0.474844
+		},
+		{
+			"key": "688-2008",
+			"countryCode": "688",
+			"year": 2008,
+			"country": "Serbia",
+			"tradAgg": 0.215274,
+			"survSAgg": -0.789538,
+			"secularValue": 0.40074,
+			"emancipativeValue": 0.382036
+		},
+		{
+			"key": "688-2017",
+			"countryCode": "688",
+			"year": 2017,
+			"country": "Serbia",
+			"tradAgg": 0.483058,
+			"survSAgg": -0.138658,
+			"secularValue": 0.437708,
+			"emancipativeValue": 0.464613
+		},
+		{
+			"key": "688-2018",
+			"countryCode": "688",
+			"year": 2018,
+			"country": "Serbia",
+			"tradAgg": 0.310579,
+			"survSAgg": -0.577015,
+			"secularValue": 0.395954,
+			"emancipativeValue": 0.41685
+		},
+		{
+			"key": "702-2002",
+			"countryCode": "702",
+			"year": 2002,
+			"country": "Singapore",
+			"tradAgg": -0.212749,
+			"survSAgg": -0.422979,
+			"secularValue": 0.347844,
+			"emancipativeValue": 0.400936
+		},
+		{
+			"key": "702-2012",
+			"countryCode": "702",
+			"year": 2012,
+			"country": "Singapore",
+			"secularValue": 0.379738,
+			"emancipativeValue": 0.429727
+		},
+		{
+			"key": "702-2020",
+			"countryCode": "702",
+			"year": 2020,
+			"country": "Singapore",
+			"tradAgg": 0.088752,
+			"survSAgg": -0.120131,
+			"secularValue": 0.319946,
+			"emancipativeValue": 0.449371
+		},
+		{
+			"key": "703-1990",
+			"countryCode": "703",
+			"year": 1990,
+			"country": "Slovakia",
+			"secularValue": 0.434105,
+			"emancipativeValue": 0.445776
+		},
+		{
+			"key": "703-1991",
+			"countryCode": "703",
+			"year": 1991,
+			"country": "Slovakia",
+			"tradAgg": 0.902999,
+			"survSAgg": -0.470204,
+			"secularValue": 0.463862,
+			"emancipativeValue": 0.425683
+		},
+		{
+			"key": "703-1998",
+			"countryCode": "703",
+			"year": 1998,
+			"country": "Slovakia",
+			"tradAgg": 0.486303,
+			"survSAgg": 0.153292,
+			"secularValue": 0.467527,
+			"emancipativeValue": 0.400774
+		},
+		{
+			"key": "703-1999",
+			"countryCode": "703",
+			"year": 1999,
+			"country": "Slovakia",
+			"tradAgg": 0.75548,
+			"survSAgg": -0.042648,
+			"secularValue": 0.455376,
+			"emancipativeValue": 0.448225
+		},
+		{
+			"key": "703-2008",
+			"countryCode": "703",
+			"year": 2008,
+			"country": "Slovakia",
+			"tradAgg": 0.22017,
+			"survSAgg": 0.247124,
+			"secularValue": 0.477914,
+			"emancipativeValue": 0.477568
+		},
+		{
+			"key": "703-2017",
+			"countryCode": "703",
+			"year": 2017,
+			"country": "Slovakia",
+			"tradAgg": 0.587206,
+			"survSAgg": 0.558363,
+			"secularValue": 0.472276,
+			"emancipativeValue": 0.487515
+		},
+		{
+			"key": "703-2022",
+			"countryCode": "703",
+			"year": 2022,
+			"country": "Slovakia",
+			"tradAgg": 0.726098,
+			"survSAgg": 0.121668,
+			"secularValue": 0.468396,
+			"emancipativeValue": 0.46285
+		},
+		{
+			"key": "705-1992",
+			"countryCode": "705",
+			"year": 1992,
+			"country": "Slovenia",
+			"tradAgg": 0.779316,
+			"survSAgg": -0.092064,
+			"secularValue": 0.415257,
+			"emancipativeValue": 0.473706
+		},
+		{
+			"key": "705-1995",
+			"countryCode": "705",
+			"year": 1995,
+			"country": "Slovenia",
+			"tradAgg": 0.768144,
+			"survSAgg": 0.188388,
+			"secularValue": 0.435384,
+			"emancipativeValue": 0.524379
+		},
+		{
+			"key": "705-1999",
+			"countryCode": "705",
+			"year": 1999,
+			"country": "Slovenia",
+			"tradAgg": 0.895789,
+			"survSAgg": 0.720901,
+			"secularValue": 0.45487,
+			"emancipativeValue": 0.536952
+		},
+		{
+			"key": "705-2005",
+			"countryCode": "705",
+			"year": 2005,
+			"country": "Slovenia",
+			"tradAgg": 0.873319,
+			"survSAgg": 0.823518,
+			"secularValue": 0.458299,
+			"emancipativeValue": 0.592811
+		},
+		{
+			"key": "705-2008",
+			"countryCode": "705",
+			"year": 2008,
+			"country": "Slovenia",
+			"tradAgg": 0.636023,
+			"survSAgg": 0.79262,
+			"secularValue": 0.425817,
+			"emancipativeValue": 0.520041
+		},
+		{
+			"key": "705-2011",
+			"countryCode": "705",
+			"year": 2011,
+			"country": "Slovenia",
+			"tradAgg": 0.950098,
+			"survSAgg": 0.851424,
+			"secularValue": 0.431615,
+			"emancipativeValue": 0.602913
+		},
+		{
+			"key": "705-2017",
+			"countryCode": "705",
+			"year": 2017,
+			"country": "Slovenia",
+			"tradAgg": 0.776693,
+			"survSAgg": 1.231032,
+			"secularValue": 0.419253,
+			"emancipativeValue": 0.618233
+		},
+		{
+			"key": "710-1982",
+			"countryCode": "710",
+			"year": 1982,
+			"country": "South Africa",
+			"tradAgg": -0.484314,
+			"survSAgg": -0.56935,
+			"secularValue": 0.399898,
+			"emancipativeValue": 0.356096
+		},
+		{
+			"key": "710-1990",
+			"countryCode": "710",
+			"year": 1990,
+			"country": "South Africa",
+			"tradAgg": -0.860834,
+			"survSAgg": -0.550967,
+			"secularValue": 0.300551,
+			"emancipativeValue": 0.356847
+		},
+		{
+			"key": "710-1996",
+			"countryCode": "710",
+			"year": 1996,
+			"country": "South Africa",
+			"tradAgg": -1.214766,
+			"survSAgg": -0.599735,
+			"secularValue": 0.277469,
+			"emancipativeValue": 0.362268
+		},
+		{
+			"key": "710-2001",
+			"countryCode": "710",
+			"year": 2001,
+			"country": "South Africa",
+			"tradAgg": -0.930262,
+			"survSAgg": -0.257507,
+			"secularValue": 0.3115,
+			"emancipativeValue": 0.428189
+		},
+		{
+			"key": "710-2006",
+			"countryCode": "710",
+			"year": 2006,
+			"country": "South Africa",
+			"secularValue": 0.309095,
+			"emancipativeValue": 0.411315
+		},
+		{
+			"key": "710-2013",
+			"countryCode": "710",
+			"year": 2013,
+			"country": "South Africa",
+			"tradAgg": -0.270603,
+			"survSAgg": 0.02695,
+			"secularValue": 0.405437,
+			"emancipativeValue": 0.457623
+		},
+		{
+			"key": "410-1982",
+			"countryCode": "410",
+			"year": 1982,
+			"country": "South Korea",
+			"secularValue": 0.396018,
+			"emancipativeValue": 0.407504
+		},
+		{
+			"key": "410-1990",
+			"countryCode": "410",
+			"year": 1990,
+			"country": "South Korea",
+			"secularValue": 0.367792,
+			"emancipativeValue": 0.407211
+		},
+		{
+			"key": "410-1996",
+			"countryCode": "410",
+			"year": 1996,
+			"country": "South Korea",
+			"secularValue": 0.477047,
+			"emancipativeValue": 0.377862
+		},
+		{
+			"key": "410-2001",
+			"countryCode": "410",
+			"year": 2001,
+			"country": "South Korea",
+			"tradAgg": 1.296508,
+			"survSAgg": -0.235864,
+			"secularValue": 0.462652,
+			"emancipativeValue": 0.450178
+		},
+		{
+			"key": "410-2005",
+			"countryCode": "410",
+			"year": 2005,
+			"country": "South Korea",
+			"tradAgg": 1.032082,
+			"survSAgg": -0.420227,
+			"secularValue": 0.458286,
+			"emancipativeValue": 0.438987
+		},
+		{
+			"key": "410-2010",
+			"countryCode": "410",
+			"year": 2010,
+			"country": "South Korea",
+			"tradAgg": 0.942174,
+			"survSAgg": -0.272248,
+			"secularValue": 0.445146,
+			"emancipativeValue": 0.436093
+		},
+		{
+			"key": "410-2018",
+			"countryCode": "410",
+			"year": 2018,
+			"country": "South Korea",
+			"tradAgg": 1.45357,
+			"survSAgg": -0.470835,
+			"secularValue": 0.563857,
+			"emancipativeValue": 0.453503
+		},
+		{
+			"key": "724-1981",
+			"countryCode": "724",
+			"year": 1981,
+			"country": "Spain",
+			"tradAgg": -0.212045,
+			"survSAgg": -0.392619,
+			"secularValue": 0.404961,
+			"emancipativeValue": 0.383411
+		},
+		{
+			"key": "724-1990",
+			"countryCode": "724",
+			"year": 1990,
+			"country": "Spain",
+			"tradAgg": 0.08477,
+			"survSAgg": 0.255672,
+			"secularValue": 0.412515,
+			"emancipativeValue": 0.495433
+		},
+		{
+			"key": "724-1995",
+			"countryCode": "724",
+			"year": 1995,
+			"country": "Spain",
+			"tradAgg": -0.30664,
+			"survSAgg": 0.492935,
+			"secularValue": 0.360109,
+			"emancipativeValue": 0.484699
+		},
+		{
+			"key": "724-1999",
+			"countryCode": "724",
+			"year": 1999,
+			"country": "Spain",
+			"tradAgg": 0.166213,
+			"survSAgg": 0.610797,
+			"secularValue": 0.468917,
+			"emancipativeValue": 0.483299
+		},
+		{
+			"key": "724-2000",
+			"countryCode": "724",
+			"year": 2000,
+			"country": "Spain",
+			"tradAgg": 0.110179,
+			"survSAgg": 0.804494,
+			"secularValue": 0.39301,
+			"emancipativeValue": 0.539467
+		},
+		{
+			"key": "724-2007",
+			"countryCode": "724",
+			"year": 2007,
+			"country": "Spain",
+			"tradAgg": 0.197552,
+			"survSAgg": 0.819085,
+			"secularValue": 0.414888,
+			"emancipativeValue": 0.55283
+		},
+		{
+			"key": "724-2008",
+			"countryCode": "724",
+			"year": 2008,
+			"country": "Spain",
+			"tradAgg": 0.11064,
+			"survSAgg": 1.194697,
+			"secularValue": 0.454323,
+			"emancipativeValue": 0.501272
+		},
+		{
+			"key": "724-2011",
+			"countryCode": "724",
+			"year": 2011,
+			"country": "Spain",
+			"tradAgg": 0.504285,
+			"survSAgg": 0.760528,
+			"secularValue": 0.426407,
+			"emancipativeValue": 0.562913
+		},
+		{
+			"key": "724-2017",
+			"countryCode": "724",
+			"year": 2017,
+			"country": "Spain",
+			"tradAgg": 0.588406,
+			"survSAgg": 1.431875,
+			"secularValue": 0.471488,
+			"emancipativeValue": 0.621241
+		},
+		{
+			"key": "752-1981",
+			"countryCode": "752",
+			"year": 1981,
+			"country": "Sweden",
+			"tradAgg": 0.99594,
+			"survSAgg": 1.194211,
+			"secularValue": 0.441868,
+			"emancipativeValue": 0.480924
+		},
+		{
+			"key": "752-1990",
+			"countryCode": "752",
+			"year": 1990,
+			"country": "Sweden",
+			"tradAgg": 0.841118,
+			"survSAgg": 1.767103,
+			"secularValue": 0.467337,
+			"emancipativeValue": 0.534561
+		},
+		{
+			"key": "752-1996",
+			"countryCode": "752",
+			"year": 1996,
+			"country": "Sweden",
+			"tradAgg": 1.117048,
+			"survSAgg": 2.515662,
+			"secularValue": 0.51156,
+			"emancipativeValue": 0.664496
+		},
+		{
+			"key": "752-1999",
+			"countryCode": "752",
+			"year": 1999,
+			"country": "Sweden",
+			"tradAgg": 0.975154,
+			"survSAgg": 2.808021,
+			"secularValue": 0.501765,
+			"emancipativeValue": 0.702367
+		},
+		{
+			"key": "752-2006",
+			"countryCode": "752",
+			"year": 2006,
+			"country": "Sweden",
+			"tradAgg": 1.27417,
+			"survSAgg": 3.011763,
+			"secularValue": 0.520748,
+			"emancipativeValue": 0.731907
+		},
+		{
+			"key": "752-2009",
+			"countryCode": "752",
+			"year": 2009,
+			"country": "Sweden",
+			"tradAgg": 1.474378,
+			"survSAgg": 2.968417,
+			"secularValue": 0.556288,
+			"emancipativeValue": 0.659209
+		},
+		{
+			"key": "752-2011",
+			"countryCode": "752",
+			"year": 2011,
+			"country": "Sweden",
+			"tradAgg": 1.321282,
+			"survSAgg": 2.899177,
+			"secularValue": 0.496004,
+			"emancipativeValue": 0.71819
+		},
+		{
+			"key": "752-2017",
+			"countryCode": "752",
+			"year": 2017,
+			"country": "Sweden",
+			"tradAgg": 1.106717,
+			"survSAgg": 3.113339,
+			"secularValue": 0.465738,
+			"emancipativeValue": 0.738998
+		},
+		{
+			"key": "756-1989",
+			"countryCode": "756",
+			"year": 1989,
+			"country": "Switzerland",
+			"secularValue": 0.33222,
+			"emancipativeValue": 0.501521
+		},
+		{
+			"key": "756-1996",
+			"countryCode": "756",
+			"year": 1996,
+			"country": "Switzerland",
+			"tradAgg": 0.694343,
+			"survSAgg": 1.443155,
+			"secularValue": 0.460733,
+			"emancipativeValue": 0.551556
+		},
+		{
+			"key": "756-2007",
+			"countryCode": "756",
+			"year": 2007,
+			"country": "Switzerland",
+			"secularValue": 0.411632,
+			"emancipativeValue": 0.651473
+		},
+		{
+			"key": "756-2008",
+			"countryCode": "756",
+			"year": 2008,
+			"country": "Switzerland",
+			"tradAgg": 0.28519,
+			"survSAgg": 1.940239,
+			"secularValue": 0.448106,
+			"emancipativeValue": 0.53993
+		},
+		{
+			"key": "756-2017",
+			"countryCode": "756",
+			"year": 2017,
+			"country": "Switzerland",
+			"tradAgg": 0.675381,
+			"survSAgg": 2.351561,
+			"secularValue": 0.447092,
+			"emancipativeValue": 0.645686
+		},
+		{
+			"key": "158-1998",
+			"countryCode": "158",
+			"year": 1998,
+			"country": "Taiwan ROC",
+			"tradAgg": 0.645948,
+			"survSAgg": -0.657341,
+			"secularValue": 0.410431,
+			"emancipativeValue": 0.337962
+		},
+		{
+			"key": "158-2006",
+			"countryCode": "158",
+			"year": 2006,
+			"country": "Taiwan ROC",
+			"tradAgg": 1.426005,
+			"survSAgg": -0.943874,
+			"secularValue": 0.493147,
+			"emancipativeValue": 0.410558
+		},
+		{
+			"key": "158-2012",
+			"countryCode": "158",
+			"year": 2012,
+			"country": "Taiwan ROC",
+			"tradAgg": 1.15143,
+			"survSAgg": -0.233007,
+			"secularValue": 0.462711,
+			"emancipativeValue": 0.456756
+		},
+		{
+			"key": "158-2019",
+			"countryCode": "158",
+			"year": 2019,
+			"country": "Taiwan ROC",
+			"tradAgg": 1.12609,
+			"survSAgg": -0.144713,
+			"secularValue": 0.447032,
+			"emancipativeValue": 0.454605
+		},
+		{
+			"key": "762-2020",
+			"countryCode": "762",
+			"year": 2020,
+			"country": "Tajikistan",
+			"tradAgg": -1.368009,
+			"survSAgg": -0.61816,
+			"secularValue": 0.395363,
+			"emancipativeValue": 0.311048
+		},
+		{
+			"key": "834-2001",
+			"countryCode": "834",
+			"year": 2001,
+			"country": "Tanzania",
+			"tradAgg": -1.802098,
+			"survSAgg": -0.68209,
+			"secularValue": 0.160364,
+			"emancipativeValue": 0.358811
+		},
+		{
+			"key": "764-2007",
+			"countryCode": "764",
+			"year": 2007,
+			"country": "Thailand",
+			"tradAgg": -0.684918,
+			"survSAgg": -0.188947,
+			"secularValue": 0.456078,
+			"emancipativeValue": 0.370628
+		},
+		{
+			"key": "764-2013",
+			"countryCode": "764",
+			"year": 2013,
+			"country": "Thailand",
+			"tradAgg": -0.229946,
+			"survSAgg": -0.145987,
+			"secularValue": 0.34899,
+			"emancipativeValue": 0.370044
+		},
+		{
+			"key": "764-2018",
+			"countryCode": "764",
+			"year": 2018,
+			"country": "Thailand",
+			"tradAgg": 0.254507,
+			"survSAgg": 0.065849,
+			"secularValue": 0.399094,
+			"emancipativeValue": 0.424998
+		},
+		{
+			"key": "780-2006",
+			"countryCode": "780",
+			"year": 2006,
+			"country": "Trinidad and Tobago",
+			"tradAgg": -1.774853,
+			"survSAgg": -0.305762,
+			"secularValue": 0.313575,
+			"emancipativeValue": 0.39579
+		},
+		{
+			"key": "780-2010",
+			"countryCode": "780",
+			"year": 2010,
+			"country": "Trinidad and Tobago",
+			"tradAgg": -1.755611,
+			"survSAgg": -0.358422,
+			"secularValue": 0.275883,
+			"emancipativeValue": 0.394182
+		},
+		{
+			"key": "788-2013",
+			"countryCode": "788",
+			"year": 2013,
+			"country": "Tunisia",
+			"tradAgg": -0.819564,
+			"survSAgg": -1.705295,
+			"secularValue": 0.279552,
+			"emancipativeValue": 0.277134
+		},
+		{
+			"key": "788-2019",
+			"countryCode": "788",
+			"year": 2019,
+			"country": "Tunisia",
+			"tradAgg": -0.596153,
+			"survSAgg": -1.432377,
+			"secularValue": 0.308891,
+			"emancipativeValue": 0.327602
+		},
+		{
+			"key": "792-1990",
+			"countryCode": "792",
+			"year": 1990,
+			"country": "Turkey",
+			"tradAgg": -0.707361,
+			"survSAgg": -0.47325,
+			"secularValue": 0.230971,
+			"emancipativeValue": 0.396653
+		},
+		{
+			"key": "792-1996",
+			"countryCode": "792",
+			"year": 1996,
+			"country": "Turkey",
+			"secularValue": 0.223973,
+			"emancipativeValue": 0.336447
+		},
+		{
+			"key": "792-2001",
+			"countryCode": "792",
+			"year": 2001,
+			"country": "Turkey",
+			"tradAgg": -0.395697,
+			"survSAgg": -1.338826,
+			"secularValue": 0.258395,
+			"emancipativeValue": 0.363868
+		},
+		{
+			"key": "792-2007",
+			"countryCode": "792",
+			"year": 2007,
+			"country": "Turkey",
+			"tradAgg": -1.110263,
+			"survSAgg": -0.704925,
+			"secularValue": 0.243173,
+			"emancipativeValue": 0.346584
+		},
+		{
+			"key": "792-2009",
+			"countryCode": "792",
+			"year": 2009,
+			"country": "Turkey",
+			"tradAgg": -0.89956,
+			"survSAgg": -1.196222,
+			"secularValue": 0.228255,
+			"emancipativeValue": 0.447039
+		},
+		{
+			"key": "792-2011",
+			"countryCode": "792",
+			"year": 2011,
+			"country": "Turkey",
+			"tradAgg": -1.021523,
+			"survSAgg": -0.73157,
+			"secularValue": 0.237676,
+			"emancipativeValue": 0.328474
+		},
+		{
+			"key": "792-2018",
+			"countryCode": "792",
+			"year": 2018,
+			"country": "Turkey",
+			"tradAgg": -0.456288,
+			"survSAgg": -0.704069,
+			"secularValue": 0.269343,
+			"emancipativeValue": 0.362414
+		},
+		{
+			"key": "800-2001",
+			"countryCode": "800",
+			"year": 2001,
+			"country": "Uganda",
+			"tradAgg": -1.223633,
+			"survSAgg": -0.960242,
+			"secularValue": 0.253213,
+			"emancipativeValue": 0.300161
+		},
+		{
+			"key": "804-1996",
+			"countryCode": "804",
+			"year": 1996,
+			"country": "Ukraine",
+			"tradAgg": 1.113053,
+			"survSAgg": -1.315623,
+			"secularValue": 0.485969,
+			"emancipativeValue": 0.358712
+		},
+		{
+			"key": "804-1999",
+			"countryCode": "804",
+			"year": 1999,
+			"country": "Ukraine",
+			"tradAgg": 1.134518,
+			"survSAgg": -1.335831,
+			"secularValue": 0.503803,
+			"emancipativeValue": 0.378931
+		},
+		{
+			"key": "804-2006",
+			"countryCode": "804",
+			"year": 2006,
+			"country": "Ukraine",
+			"tradAgg": 0.355243,
+			"survSAgg": -1.068342,
+			"secularValue": 0.468182,
+			"emancipativeValue": 0.375068
+		},
+		{
+			"key": "804-2008",
+			"countryCode": "804",
+			"year": 2008,
+			"country": "Ukraine",
+			"tradAgg": 0.29139,
+			"survSAgg": -1.265755,
+			"secularValue": 0.449972,
+			"emancipativeValue": 0.347425
+		},
+		{
+			"key": "804-2011",
+			"countryCode": "804",
+			"year": 2011,
+			"country": "Ukraine",
+			"tradAgg": 0.524335,
+			"survSAgg": -1.19684,
+			"secularValue": 0.466032,
+			"emancipativeValue": 0.396799
+		},
+		{
+			"key": "804-2020",
+			"countryCode": "804",
+			"year": 2020,
+			"country": "Ukraine",
+			"tradAgg": 0.431221,
+			"survSAgg": -0.492958,
+			"secularValue": 0.45931,
+			"emancipativeValue": 0.407929
+		},
+		{
+			"key": "840-1981",
+			"countryCode": "840",
+			"year": 1981,
+			"country": "United States",
+			"secularValue": 0.301049
+		},
+		{
+			"key": "840-1990",
+			"countryCode": "840",
+			"year": 1990,
+			"country": "United States",
+			"tradAgg": -1.071744,
+			"survSAgg": 1.269236,
+			"secularValue": 0.288744,
+			"emancipativeValue": 0.463744
+		},
+		{
+			"key": "840-1995",
+			"countryCode": "840",
+			"year": 1995,
+			"country": "United States",
+			"tradAgg": -1.256995,
+			"survSAgg": 1.436844,
+			"secularValue": 0.280871,
+			"emancipativeValue": 0.507122
+		},
+		{
+			"key": "840-1999",
+			"countryCode": "840",
+			"year": 1999,
+			"country": "United States",
+			"tradAgg": -0.901872,
+			"survSAgg": 1.63245,
+			"secularValue": 0.29553,
+			"emancipativeValue": 0.559523
+		},
+		{
+			"key": "840-2006",
+			"countryCode": "840",
+			"year": 2006,
+			"country": "United States",
+			"tradAgg": -0.625443,
+			"survSAgg": 1.273899,
+			"secularValue": 0.337425,
+			"emancipativeValue": 0.517867
+		},
+		{
+			"key": "840-2011",
+			"countryCode": "840",
+			"year": 2011,
+			"country": "United States",
+			"tradAgg": -0.332671,
+			"survSAgg": 1.292388,
+			"secularValue": 0.345779,
+			"emancipativeValue": 0.535728
+		},
+		{
+			"key": "840-2017",
+			"countryCode": "840",
+			"year": 2017,
+			"country": "United States",
+			"tradAgg": 0.144365,
+			"survSAgg": 1.403377,
+			"secularValue": 0.380561,
+			"emancipativeValue": 0.560497
+		},
+		{
+			"key": "858-1996",
+			"countryCode": "858",
+			"year": 1996,
+			"country": "Uruguay",
+			"tradAgg": -0.185796,
+			"survSAgg": 0.409741,
+			"secularValue": 0.385989,
+			"emancipativeValue": 0.482656
+		},
+		{
+			"key": "858-2006",
+			"countryCode": "858",
+			"year": 2006,
+			"country": "Uruguay",
+			"tradAgg": -0.485701,
+			"survSAgg": 0.967294,
+			"secularValue": 0.418859,
+			"emancipativeValue": 0.547483
+		},
+		{
+			"key": "858-2011",
+			"countryCode": "858",
+			"year": 2011,
+			"country": "Uruguay",
+			"tradAgg": -0.187084,
+			"survSAgg": 0.768437,
+			"secularValue": 0.412266,
+			"emancipativeValue": 0.535867
+		},
+		{
+			"key": "858-2022",
+			"countryCode": "858",
+			"year": 2022,
+			"country": "Uruguay",
+			"tradAgg": -0.329285,
+			"survSAgg": 1.361061,
+			"secularValue": 0.379395,
+			"emancipativeValue": 0.573801
+		},
+		{
+			"key": "860-2011",
+			"countryCode": "860",
+			"year": 2011,
+			"country": "Uzbekistan",
+			"tradAgg": -1.322973,
+			"survSAgg": -0.577593,
+			"secularValue": 0.271628,
+			"emancipativeValue": 0.303167
+		},
+		{
+			"key": "862-1996",
+			"countryCode": "862",
+			"year": 1996,
+			"country": "Venezuela",
+			"tradAgg": -1.818973,
+			"survSAgg": -0.107481,
+			"secularValue": 0.3017,
+			"emancipativeValue": 0.383762
+		},
+		{
+			"key": "862-2000",
+			"countryCode": "862",
+			"year": 2000,
+			"country": "Venezuela",
+			"tradAgg": -1.728716,
+			"survSAgg": 0.161034,
+			"secularValue": 0.29538,
+			"emancipativeValue": 0.427719
+		},
+		{
+			"key": "862-2021",
+			"countryCode": "862",
+			"year": 2021,
+			"country": "Venezuela",
+			"tradAgg": -1.060309,
+			"survSAgg": -0.250291,
+			"secularValue": 0.418751,
+			"emancipativeValue": 0.361797
+		},
+		{
+			"key": "704-2001",
+			"countryCode": "704",
+			"year": 2001,
+			"country": "Vietnam",
+			"tradAgg": -0.84284,
+			"survSAgg": 0.225449,
+			"secularValue": 0.271538,
+			"emancipativeValue": 0.340774
+		},
+		{
+			"key": "704-2006",
+			"countryCode": "704",
+			"year": 2006,
+			"country": "Vietnam",
+			"tradAgg": -0.506549,
+			"survSAgg": -0.058741,
+			"secularValue": 0.281869,
+			"emancipativeValue": 0.3607
+		},
+		{
+			"key": "704-2020",
+			"countryCode": "704",
+			"year": 2020,
+			"country": "Vietnam",
+			"tradAgg": -0.442932,
+			"survSAgg": 0.612792,
+			"secularValue": 0.423503,
+			"emancipativeValue": 0.407133
+		},
+		{
+			"key": "887-2014",
+			"countryCode": "887",
+			"year": 2014,
+			"country": "Yemen",
+			"tradAgg": -1.364089,
+			"survSAgg": -1.254322,
+			"secularValue": 0.284004,
+			"emancipativeValue": 0.216052
+		},
+		{
+			"key": "894-2007",
+			"countryCode": "894",
+			"year": 2007,
+			"country": "Zambia",
+			"tradAgg": -0.509887,
+			"survSAgg": -0.914757,
+			"secularValue": 0.36957,
+			"emancipativeValue": 0.399373
+		},
+		{
+			"key": "716-2001",
+			"countryCode": "716",
+			"year": 2001,
+			"country": "Zimbabwe",
+			"tradAgg": -1.14868,
+			"survSAgg": -1.724362,
+			"secularValue": 0.196817,
+			"emancipativeValue": 0.304908
+		},
+		{
+			"key": "716-2012",
+			"countryCode": "716",
+			"year": 2012,
+			"country": "Zimbabwe",
+			"tradAgg": -1.229314,
+			"survSAgg": -0.928208,
+			"secularValue": 0.287569,
+			"emancipativeValue": 0.338838
+		},
+		{
+			"key": "716-2020",
+			"countryCode": "716",
+			"year": 2020,
+			"country": "Zimbabwe",
+			"tradAgg": -0.585019,
+			"survSAgg": -1.87095,
+			"secularValue": 0.23184,
+			"emancipativeValue": 0.314263
+		}
+	]
+}

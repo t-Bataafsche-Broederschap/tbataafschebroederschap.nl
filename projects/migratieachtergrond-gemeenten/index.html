@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>Migratieachtergrond per Gemeente | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactieve kaart en sorteerbare tabel met CBS-cijfers over herkomst en geboorteland per Nederlandse gemeente." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/migratieachtergrond-gemeenten/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<div class="migration-map-page">
+				<header class="migration-header">
+					<div>
+						<p class="eyebrow">CBS StatLine 85458NED + PDOK</p>
+						<h1>Migratieachtergrond per Gemeente</h1>
+					</div>
+					<p>Vergelijk per gemeente meerdere CBS-maten rond herkomstland en geboorteland, telkens als percentage van de totale gemeentebevolking op 1 januari.</p>
+				</header>
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>Alle kaartlagen komen uit CBS StatLine 85458NED. De teller volgt de gekozen combinatie van herkomstland, geboorteland en leeftijd; de noemer is steeds de totale gemeentebevolking in dezelfde CBS-tabel en hetzelfde jaar.</p>
+						<p>De standaardlaag volgt de VZinfo-maat: personen geboren buiten Nederland met herkomstland buiten Europa.</p>
+						<p>De kaart gebruikt de gegeneraliseerde gemeentegrenzen van 2025 voor alle jaren 2022-2025. Gemeentelijke herindelingen binnen deze periode worden dus getoond op de 2025-indeling.</p>
+					</article>
+				</section>
+				<main class="migration-app">
+					<section class="map-panel" aria-labelledby="mapTitle">
+						<div class="toolbar">
+							<label class="year-picker">
+								<span>Jaar <strong id="yearLabel">2025</strong></span>
+								<input id="yearSlider" type="range" min="2022" max="2025" value="2025" step="1" />
+								<div id="yearTicks" class="year-ticks" aria-hidden="true"></div>
+							</label>
+							<label class="metric-picker">
+								<span>Maat</span>
+								<select id="metricSelect"></select>
+							</label>
+							<div class="summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
+						</div>
+						<div class="map-head">
+							<div>
+								<p class="eyebrow">Gemeenten, grenzen 2025</p>
+								<h2 id="mapTitle">Buiten-Europese migranten geboren buiten Nederland</h2>
+							</div>
+							<p id="selectionLabel" class="selection-label">Geen gemeente geselecteerd</p>
+						</div>
+						<div class="map-wrap">
+							<svg id="municipalityMap" role="img" aria-labelledby="mapTitle mapDescription"></svg>
+							<p id="mapDescription" class="sr-only">Choroplethkaart van Nederlandse gemeenten met het percentage inwoners voor de gekozen CBS-maat.</p>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+					</section>
+					<section class="table-panel" aria-labelledby="tableTitle">
+						<div class="table-head">
+							<div>
+								<p class="eyebrow">Sorteerbare tabel</p>
+								<h2 id="tableTitle">Gemeenten</h2>
+							</div>
+							<p id="rowCount" class="row-count"></p>
+						</div>
+						<div class="table-wrap">
+							<table>
+								<thead>
+									<tr>
+										<th><button type="button" data-sort="name">Gemeente</button></th>
+										<th><button type="button" data-sort="percentage">Percentage</button></th>
+										<th><button type="button" data-sort="count">Aantal</button></th>
+										<th><button type="button" data-sort="totalPopulation">Bevolking</button></th>
+									</tr>
+								</thead>
+								<tbody id="tableBody"></tbody>
+							</table>
+						</div>
+					</section>
+				</main>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.vzinfo.nl/bevolking/regionaal/migratieachtergrond" rel="noopener noreferrer" target="_blank">VZinfo: Bevolking | Regionaal | Migratieachtergrond</a>
+						<span>Contextpagina waarop de maat is gebaseerd: percentage migranten met buiten-Europese herkomst per gemeente.</span>
+					</li>
+					<li>
+						<a href="https://opendata.cbs.nl/#/CBS/nl/dataset/85458NED/table" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking; herkomstland, geboorteland, leeftijd, regio, 1 januari</a>
+						<span>CBS 85458NED levert de gemeentelijke teller en totale bevolking voor 2022-2025.</span>
+					</li>
+					<li>
+						<a href="https://service.pdok.nl/cbs/gebiedsindelingen/2025/wfs/v1_0" rel="noopener noreferrer" target="_blank">PDOK/CBS Gebiedsindelingen 2025 WFS</a>
+						<span>Gegeneraliseerde gemeentegrenzen 2025 voor de kaart.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

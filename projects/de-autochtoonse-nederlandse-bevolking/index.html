@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>De Autochtoonse Nederlandse Bevolking | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactieve grafiek over Nederlandse bevolking, migratie, woningbouw, woningtekort en stroomnetcapaciteit." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/de-autochtoonse-nederlandse-bevolking/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<div class="autochtoon-page">
+				<header class="autochtoon-header">
+					<div>
+						<p class="eyebrow">CBS StatLine + officiele reeksen</p>
+						<h1>De Autochtoonse Nederlandse Bevolking</h1>
+					</div>
+					<p>Bevolking, samenstelling naar achtergrond, migratie, woningbouw, woningtekort en stroomnetdruk in dezelfde tijdlijn. "Bevolking min cum. nettomigratie" blijft boekhouding, geen bevolkingsscenario.</p>
+				</header>
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datakeuzes</h2>
+						<p>"Autochtoon" is niet meer de CBS-indeling. Daarom laat deze pagina zowel de oude CBS-reeks voor Nederlandse achtergrond en 1e/2e generatie migratieachtergrond zien als de recentere tabellen op basis van geboorteland van persoon en ouders.</p>
+						<p>
+							De herkomsttab gebruikt vertrekland, geboorteland en nationaliteit als drie aparte CBS-definities. "Terugkomers" is een proxy: immigranten met geboorteland Nederland. De emigratietab houdt bestemmingsland apart, omdat die reeks exclusief administratieve correcties is. Het woningtekort is een
+							ABF/Primos-indicator, niet een CBS StatLine-reeks. Ontbrekende jaren tussen bekende woningtekortpunten worden lineair geinterpoleerd en in de tooltip als interpolatie gemarkeerd. De stroomnetcijfers komen van Netbeheer Nederland; de actuele capaciteitskaart is een momentopname.
+						</p>
+						<p>
+							De compositietab gebruikt 1972-1995 de CBS-reconstructie 70787NED voor migratieachtergrond en 1e/2e generatie. CBS markeert die jaren als geschat op basis van een reconstructie van het verleden. Voor 1996-2021 gebruikt de pagina de publieke CBS-reeks 70751NED voor Nederlandse achtergrond,
+							migratieachtergrond totaal en 1e/2e generatie. Vanaf 2022 stopt die publieke hoofdreeks en schakelt deze pagina over op 85384NED: twee ouders geboren in Nederland, geboren buiten Nederland en geboren in Nederland met een of twee buiten Nederland geboren ouders. Daarmee blijven 1e en 2e generatie
+							zichtbaar, maar 3e generatie niet: grootouderherkomst zit niet in deze openbare tabellen. De Bevolking-tab trekt die samenstellingsreeksen nu ook de hoofdgrafiek in. De voorraad "in het buitenland geboren" is vanaf 2022 direct en voor 1972-2021 teruggeschat uit 1e generatie plus een kleine vaste
+							correctiegroep. 85369NED is een verwante contextreeks voor jaarlijkse stromen, niet de hoofdbron voor deze bevolkingssamenstelling.
+						</p>
+						<p>
+							De Groei-tab ontleedt de jaarlijkse bevolkingsgroei boekhoudkundig in geboorteoverschot, nettomigratie en overige correcties. De Motieven-tab houdt EU/EFTA en niet-EU/EFTA apart: het eerste is een afgeleid migratiedoel, het tweede een IND-migratiemotief. Dat zijn verwante maar niet identieke definities.
+						</p>
+					</article>
+					<article>
+						<h2>Bronnen</h2>
+						<ul>
+							<li>CBS StatLine: bevolking, migratie, herkomst, nationaliteit en woningvoorraad.</li>
+							<li>CBS, WBO/WoON, ABF Research / Primos via overheidspublicaties: statistisch woningtekort.</li>
+							<li>Netbeheer Nederland: wachtrijen en actuele capaciteitskaart elektriciteitsnet.</li>
+						</ul>
+					</article>
+				</section>
+				<main class="dashboard" aria-label="Interactieve grafiek">
+					<section class="chart-panel">
+						<div class="toolbar">
+							<div class="view-switch" role="group" aria-label="Grafiekweergave">
+								<button class="active" type="button" data-view="population">Bevolking</button>
+								<button type="button" data-view="composition">Samenstelling</button>
+								<button type="button" data-view="growth">Groei</button>
+								<button type="button" data-view="age">Leeftijd</button>
+								<button type="button" data-view="origin">Herkomst</button>
+								<button type="button" data-view="emigration">Emigratie</button>
+								<button type="button" data-view="motives">Motieven</button>
+								<button type="button" data-view="housing">Wonen</button>
+								<button type="button" data-view="grid">Stroomnet</button>
+							</div>
+							<div class="year-control">
+								<div id="definitionControl" class="definition-control" hidden>
+									<span>Definitie</span>
+									<div class="definition-options" role="group" aria-label="Benadruk definitie">
+										<button class="active" type="button" data-definition="nativeBackgroundProxy">Inheemse proxy</button>
+										<button type="button" data-definition="bornAbroadPopulation">Geboren buiten NL</button>
+										<button type="button" data-definition="firstGenerationMigrationBackground">1e generatie</button>
+										<button type="button" data-definition="migrationBackgroundTotal">Migratieachtergrond</button>
+									</div>
+								</div>
+								<div class="year-control-head">
+									<span>Selecteer jaar</span>
+									<strong id="yearLabel">2024</strong>
+								</div>
+								<div class="year-stepper">
+									<button id="prevYear" type="button" aria-label="Vorig jaar">‹</button>
+									<input id="yearRange" type="range" min="2010" max="2025" value="2024" step="1" aria-label="Selecteer jaar voor de verticale marker en rechter cijfers" />
+									<button id="nextYear" type="button" aria-label="Volgend jaar">›</button>
+								</div>
+								<div class="year-range-labels" aria-hidden="true">
+									<span id="minYearLabel">2010</span>
+									<span id="maxYearLabel">2025</span>
+								</div>
+								<div class="chart-actions">
+									<button id="resetZoom" class="zoom-reset" type="button" disabled>Volledig bereik</button>
+									<button id="exportCsv" class="zoom-reset" type="button">CSV</button>
+								</div>
+							</div>
+						</div>
+						<div class="chart-head">
+							<div>
+								<p class="eyebrow" id="viewKicker">Bevolking en migratie</p>
+								<h2 id="viewTitle">Nederland in personen</h2>
+							</div>
+							<div id="legend" class="legend" aria-label="Legenda"></div>
+							<p id="chartNote" class="chart-note" hidden></p>
+						</div>
+						<div class="chart-wrap">
+							<svg id="mainChart" role="img" aria-labelledby="viewTitle viewDescription"></svg>
+							<p id="viewDescription" class="sr-only">Interactieve tijdlijngrafiek met de gekozen Nederlandse indicatoren.</p>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+					</section>
+					<aside class="side-panel">
+						<section class="year-panel" aria-labelledby="selectedYearTitle">
+							<p class="eyebrow">Geselecteerd jaar</p>
+							<h2 id="selectedYearTitle">2024</h2>
+							<div id="statList" class="stat-list"></div>
+						</section>
+						<section class="grid-panel" aria-labelledby="gridTitle">
+							<p id="detailEyebrow" class="eyebrow">Capaciteitskaart 2026</p>
+							<h2 id="gridTitle">Stroomnet grootverbruik</h2>
+							<div id="gridCards" class="grid-cards"></div>
+						</section>
+					</aside>
+				</main>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85524NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking, huishoudens en bevolkingsontwikkeling; vanaf 1899</a>
+						<span>Lange CBS-reeks voor bevolking, immigratie, emigratie en migratiesaldo. Waarden zijn in duizendtallen; recente jaren worden waar mogelijk vervangen door preciezere CBS-tabellen.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85496NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking; kerncijfers</a>
+						<span>Preciezere totale bevolking per jaar, gebruikt vanaf 1950 waar beschikbaar.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85451NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Immi- en emigratie; geslacht, leeftijd, nationaliteit, regio</a>
+						<span>Preciezere immigratie, emigratie en migratiesaldo vanaf 2010 voor totaal mannen/vrouwen, totaal leeftijd, totaal nationaliteit, Nederland.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85671NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Migratie; land vertrek / bestemming, geboorteland en geslacht</a>
+						<span>Immigratie naar vertrekland en emigratie naar bestemmingsland, uitgesplitst naar geboortelandcategorie. Emigratie in deze tabel is exclusief administratieve correcties.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85468NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Immigratie en emigratie; geslacht, leeftijd, geboorteland, regio</a>
+						<span>Immigratie en emigratie naar geboorteland voor Nederland, inclusief administratieve correcties bij emigratie.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85848NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Immi- en emigratie; nationaliteit, leeftijd en geslacht</a>
+						<span>Immigratie en emigratie naar nationaliteit op het moment van migratie.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/70787NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking met migratieachtergrond; geslacht, leeftijd, 1 januari 1972-2022</a>
+						<span>Gereconstrueerde CBS-reeks voor migratieachtergrond en 1e/2e generatie. CBS markeert 1972-1995 als geschat op basis van een reconstructie van het verleden.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/37325" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking; leeftijd, generatie en migratieachtergrond, 1996-2022</a>
+						<span>Leeftijdsprofiel per generatie en migratieachtergrond, gebruikt voor de leeftijdstab.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/70751NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolkingsontwikkeling; migratieachtergrond en generatie; 1996-2021</a>
+						<span>Lange publieke reeks voor Nederlandse achtergrond, migratieachtergrond totaal en 1e/2e generatie migratieachtergrond.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85384NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking; herkomstland, geboorteland en geboorteland ouders</a>
+						<span>Recente bevolkingstabel vanaf 2022 waarmee de compositietab de oude 1e/2e generatie-logica doorzet via geboorteland van persoon en ouders.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85369NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolkingsontwikkeling; herkomstland en geboorteland (ouders)</a>
+						<span>Verwante korte reeks vanaf 2022 met bevolking, geboorte, sterfte en migratie naar geboorteland van beide ouders; contextbron voor de nieuwe ouderindeling.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/82235NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Voorraad woningen; standen en mutaties vanaf 1921</a>
+						<span>Nieuwbouw, woningbouw, saldo voorraad en eindstand woningvoorraad.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/84808ned" rel="noopener noreferrer" target="_blank">CBS StatLine: EU/EFTA-immigranten; afgeleid migratiedoel</a>
+						<span>Immigranten uit EU/EFTA-landen naar afgeleid migratiedoel, gebruikt voor de Motieven-tab.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/84809NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Niet-EU/EFTA-immigranten; migratiemotief</a>
+						<span>Immigranten exclusief EU/EFTA naar IND-migratiemotief, gebruikt voor de Motieven-tab.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/visualisaties/tijdlijn-bevolking-tellen/1947" rel="noopener noreferrer" target="_blank">CBS: 12e Volkstelling annex woningtelling 1947</a>
+						<span>CBS-context voor de woningtelling van 31 mei 1947 en het historische woningtekort van 271 tot 357 duizend woningen.</span>
+					</li>
+					<li>
+						<a href="https://zoek.officielebekendmakingen.nl/blg-1152089.pdf" rel="noopener noreferrer" target="_blank">ABF Research: Evaluatie woningtekort</a>
+						<span>Historische evaluatie van de woningtekortmethode; bronpunten vanaf 1947 en latere woningtellingen, WBO/WoON en Primos-reeksen.</span>
+					</li>
+					<li>
+						<a href="https://zoek.officielebekendmakingen.nl/blg-134955.pdf" rel="noopener noreferrer" target="_blank">Primos Prognose 2011: woningtekort 2006-2020</a>
+						<span>Bronpunten 2006 en 2010 voor statistisch woningtekort; latere waarden in deze tabel zijn prognoses en niet als historische waarneming gebruikt.</span>
+					</li>
+					<li>
+						<a href="https://zoek.officielebekendmakingen.nl/kst-35925-VII-10.html" rel="noopener noreferrer" target="_blank">Overheid.nl: woningtekort volgens Primos/ABF</a>
+						<span>Historische reeks 2012-2021 voor statistisch woningtekort.</span>
+					</li>
+					<li>
+						<a href="https://zoek.officielebekendmakingen.nl/blg-1226836.pdf" rel="noopener noreferrer" target="_blank">Staat van de Volkshuisvesting 2025</a>
+						<span>Woningtekort 2025 en bronverwijzing naar ABF Research, Primos 2025.</span>
+					</li>
+					<li>
+						<a href="https://www.volkshuisvestingnederland.nl/binaries/volkshuisvestingnederland/documenten/publicaties/2024/08/12/berekening-woningbouwopgave/ABF-min-VRO-infographics-2024_T.pdf" rel="noopener noreferrer" target="_blank">VRO / ABF Research: Huishoudens, woningen en woningtekort 2024-2039</a>
+						<span>Woningtekort 2024: 401 duizend woningen, 4,9 procent.</span>
+					</li>
+					<li>
+						<a href="https://data.partnersinenergie.nl/capaciteitskaart/info/algemene-info" rel="noopener noreferrer" target="_blank">Netbeheer Nederland: Capaciteitskaart elektriciteitsnet</a>
+						<span>Actuele brondata per voedingsgebied, inclusief aanwezige/benodigde transportcapaciteit en wachtrijvermogen.</span>
+					</li>
+					<li>
+						<a href="https://www.netbeheernederland.nl/feiten-en-cijfers" rel="noopener noreferrer" target="_blank">Netbeheer Nederland: Feiten en cijfers</a>
+						<span>Wachtrijcijfers eind 2025 voor afname en invoeding.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

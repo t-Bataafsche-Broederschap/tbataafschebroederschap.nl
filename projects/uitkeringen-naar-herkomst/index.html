@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>Uitkeringen Naar Herkomst | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactief CBS-dashboard over uitkeringsontvangers naar herkomstgroep, geslacht, leeftijd, uitkeringstype en regio." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/uitkeringen-naar-herkomst/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<div class="benefits-page">
+				<header class="benefits-header">
+					<div>
+						<p class="eyebrow">CBS StatLine 85692NED + 85721NED + 80794NED</p>
+						<h1>Uitkeringen Naar Herkomst</h1>
+					</div>
+					<p>Nationale uitkeringsontvangers naar herkomst, leeftijd en geslacht, met regionale context zonder herkomstuitsplitsing.</p>
+				</header>
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>De nationale grafieken combineren CBS 85692NED met de bevolkingsnoemer uit 85721NED. De relatieve maat is ontvangers per 1.000 inwoners binnen dezelfde filtercombinatie.</p>
+						<p>De Nederlandse referentiegroep is hier herkomstland Nederland met twee in Nederland geboren ouders. Waar de ouderfilter op totaal staat, blijft de referentielijn dezelfde smalle referentiegroep.</p>
+						<p>De kaart gebruikt CBS 80794NED. Die tabel bevat regio en uitkeringstype, maar geen herkomst, leeftijd of geslacht. Regionale verschillen zijn daarom regionale context, geen regionale herkomstanalyse.</p>
+						<p>Personen kunnen bij meerdere uitkeringstypen meetellen. Bij totalen telt CBS een persoon maar een keer; losse uitkeringstypen zijn niet bedoeld om bij elkaar op te tellen.</p>
+					</article>
+				</section>
+				<main class="benefits-dashboard">
+					<section class="panel chart-panel" aria-labelledby="trendTitle">
+						<div class="toolbar">
+							<div class="period-control">
+								<div class="period-head">
+									<span>Periode</span>
+									<strong id="periodLabel">2025 november</strong>
+								</div>
+								<input id="periodRange" type="range" min="0" max="0" value="0" step="1" aria-label="Selecteer periode" />
+							</div>
+							<label>
+								<span>Uitkeringstype</span>
+								<select id="topicSelect"></select>
+							</label>
+							<label>
+								<span>Leeftijd</span>
+								<select id="ageSelect"></select>
+							</label>
+							<label>
+								<span>Geslacht</span>
+								<select id="sexSelect"></select>
+							</label>
+							<label>
+								<span>Geboorteland ouders</span>
+								<select id="parentsSelect"></select>
+							</label>
+						</div>
+						<div class="chart-head">
+							<div>
+								<p class="eyebrow" id="trendKicker">Nationaal, per 1.000 inwoners</p>
+								<h2 id="trendTitle">Trend naar herkomstgroep</h2>
+							</div>
+							<div id="summaryStrip" class="summary-strip" aria-label="Samenvatting"></div>
+						</div>
+						<div class="chart-wrap">
+							<svg id="trendChart" role="img" aria-labelledby="trendTitle trendDescription"></svg>
+							<p id="trendDescription" class="sr-only">Lijngrafiek met uitkeringsontvangers per 1.000 inwoners naar herkomstgroep.</p>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+					</section>
+					<section class="panel scatter-panel" aria-labelledby="scatterTitle">
+						<div class="section-head">
+							<div>
+								<p class="eyebrow">Geselecteerde periode</p>
+								<h2 id="scatterTitle">Aantal tegenover relatief niveau</h2>
+							</div>
+							<button id="exportCsv" type="button">CSV</button>
+						</div>
+						<div class="chart-wrap compact">
+							<svg id="scatterChart" role="img" aria-labelledby="scatterTitle scatterDescription"></svg>
+							<p id="scatterDescription" class="sr-only">Scatterplot met uitkeringsontvangers en uitkeringsontvangers per 1.000 inwoners.</p>
+						</div>
+					</section>
+					<aside class="panel side-panel">
+						<section aria-labelledby="detailTitle">
+							<p class="eyebrow">Selectie</p>
+							<h2 id="detailTitle">Nederlandse referentiegroep</h2>
+							<div id="detailStats" class="stat-list"></div>
+						</section>
+						<section aria-labelledby="rankingTitle">
+							<p class="eyebrow">Herkomstgroepen</p>
+							<h2 id="rankingTitle">Ranglijst</h2>
+							<div id="rankingList" class="ranking-list"></div>
+						</section>
+					</aside>
+					<section class="panel map-panel" aria-labelledby="mapTitle">
+						<div class="section-head">
+							<div>
+								<p class="eyebrow">Regionale context, geen herkomstuitsplitsing</p>
+								<h2 id="mapTitle">Gemeenten naar totaal aantal ontvangers</h2>
+							</div>
+							<p id="regionSelection" class="selection-label">Geen gemeente geselecteerd</p>
+						</div>
+						<div class="map-grid">
+							<div class="map-wrap">
+								<svg id="regionMap" role="img" aria-labelledby="mapTitle mapDescription"></svg>
+								<p id="mapDescription" class="sr-only">Choroplethkaart van gemeenten met uitkeringsontvangers voor het gekozen uitkeringstype.</p>
+							</div>
+							<div class="table-wrap">
+								<table>
+									<thead>
+										<tr>
+											<th>Regio</th>
+											<th>Niveau</th>
+											<th>Aantal</th>
+										</tr>
+									</thead>
+									<tbody id="regionTable"></tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+				</main>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85692NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Personen met een uitkering; kenmerken uitkeringsontvangers</a>
+						<span>Nationale uitkeringsontvangers naar geslacht, leeftijd, herkomstland en geboorteland ouders.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85721NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking op de eerste van de maand; geslacht, leeftijd, herkomstland</a>
+						<span>Bevolkingsnoemer voor relatieve nationale cijfers vanaf 2022.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/80794ned" rel="noopener noreferrer" target="_blank">CBS StatLine: Personen met een uitkering; uitkeringsontvangers per regio</a>
+						<span>Regionale aantallen per uitkeringstype, zonder herkomstuitsplitsing.</span>
+					</li>
+					<li>
+						<a href="https://service.pdok.nl/cbs/gebiedsindelingen/2025/wfs/v1_0" rel="noopener noreferrer" target="_blank">PDOK/CBS Gebiedsindelingen 2025 WFS</a>
+						<span>Gegeneraliseerde gemeentegrenzen 2025 voor de kaart.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

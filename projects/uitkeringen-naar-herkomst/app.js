@@ -10,7 +10,6 @@ const periodLabelElement = document.querySelector("#periodLabel");
 const topicSelect = document.querySelector("#topicSelect");
 const ageSelect = document.querySelector("#ageSelect");
 const sexSelect = document.querySelector("#sexSelect");
-const parentsSelect = document.querySelector("#parentsSelect");
 const summaryStrip = document.querySelector("#summaryStrip");
 const detailTitle = document.querySelector("#detailTitle");
 const detailStats = document.querySelector("#detailStats");
@@ -25,6 +24,7 @@ const ratioFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 2, m
 
 let data;
 let selectedOrigin = "1012600";
+let selectedParents = "A051760";
 let selectedRegion = null;
 let selectedPeriod = null;
 
@@ -46,6 +46,37 @@ function labelFor(options, key) {
 
 function topicLabel() {
 	return labelFor(data.national.dimensions.topics, topicSelect.value);
+}
+
+function parentLabel(key) {
+	return labelFor(data.national.dimensions.parents, key);
+}
+
+function compactParentLabel(key) {
+	return parentLabel(key)
+		.replace(/^Geboren in Nederland, /, "")
+		.replace(/^Geboren in NL, /, "")
+		.replace(/^Geboren buiten Nederland$/, "geboren buiten NL")
+		.replace(/Nederland/g, "NL")
+		.replace(/ouder\(s\)/g, "ouder(s)");
+}
+
+function rowLabel(row) {
+	if (!row) return "-";
+	return `${originLabel(row.origin)} · ${compactParentLabel(row.parents)}`;
+}
+
+function comparisonParentKeys() {
+	const keys = data.national.defaults.comparisonParents || ["A051736", "A051742", "A051760"];
+	return new Set(keys);
+}
+
+function isDisplayRecord(row) {
+	return comparisonParentKeys().has(row.parents) && row.origin !== data.national.defaults.totalOrigin;
+}
+
+function sameSelection(row) {
+	return row?.origin === selectedOrigin && row?.parents === selectedParents;
 }
 
 function periodLabel(period) {
@@ -76,7 +107,6 @@ function populateSelects() {
 	for (const topic of data.national.dimensions.topics) option(topicSelect, topic);
 	for (const age of data.national.dimensions.ages) option(ageSelect, age);
 	for (const sex of data.national.dimensions.sexes) option(sexSelect, sex);
-	for (const parents of data.national.dimensions.parents) option(parentsSelect, parents);
 
 	periodRange.min = "0";
 	periodRange.max = String(data.national.periods.length - 1);
@@ -85,15 +115,16 @@ function populateSelects() {
 	topicSelect.value = data.national.defaults.topic;
 	ageSelect.value = data.national.defaults.age;
 	sexSelect.value = data.national.defaults.sex;
-	parentsSelect.value = data.national.defaults.parents;
 	selectedOrigin = data.national.defaults.referenceOrigin;
+	selectedParents = data.national.defaults.referenceParents;
 }
 
-function filteredRecords({ period = null, origin = null } = {}) {
+function filteredRecords({ period = null, origin = null, parents = null } = {}) {
 	return data.national.records.filter((row) => {
 		if (period && row.period !== period) return false;
 		if (origin && row.origin !== origin) return false;
-		return row.sex === sexSelect.value && row.age === ageSelect.value && row.parents === parentsSelect.value;
+		if (parents && row.parents !== parents) return false;
+		return row.sex === sexSelect.value && row.age === ageSelect.value && isDisplayRecord(row);
 	});
 }
 
@@ -112,8 +143,8 @@ function referenceRecord(period = selectedPeriod) {
 }
 
 function selectedRecord(period = selectedPeriod) {
-	const sameFilter = data.national.records.find((row) => row.period === period && row.sex === sexSelect.value && row.age === ageSelect.value && row.parents === parentsSelect.value && row.origin === selectedOrigin);
-	return sameFilter || data.national.records.find((row) => row.period === period && row.sex === sexSelect.value && row.age === ageSelect.value && row.origin === selectedOrigin);
+	const sameFilter = data.national.records.find((row) => row.period === period && row.sex === sexSelect.value && row.age === ageSelect.value && row.parents === selectedParents && row.origin === selectedOrigin);
+	return sameFilter || latestRows()[0];
 }
 
 function valueFor(row) {
@@ -156,7 +187,7 @@ function renderSummary() {
 	const value = valueFor(row);
 	const refValue = valueFor(ref);
 	const items = [
-		["Selectie", originLabel(row?.origin || selectedOrigin)],
+		["Selectie", rowLabel(row)],
 		["Ontvangers", formatNumber(value.recipients)],
 		["Per 1.000", formatDecimal(value.per1000)],
 		["T.o.v. referentie", formatRatio(ratioToReference(row))],
@@ -174,10 +205,12 @@ function renderSummary() {
 function renderDetails() {
 	const row = selectedRecord();
 	const value = valueFor(row);
-	detailTitle.textContent = originLabel(row?.origin || selectedOrigin);
+	detailTitle.textContent = rowLabel(row);
 	const rows = [
 		["Periode", periodLabel(selectedPeriod)],
 		["Uitkeringstype", topicLabel()],
+		["Herkomst", originLabel(row?.origin || selectedOrigin)],
+		["Geboorteland ouders", parentLabel(row?.parents || selectedParents)],
 		["Ontvangers", formatNumber(value.recipients)],
 		["Bevolking", formatNumber(row?.population)],
 		["Per 1.000 inwoners", formatDecimal(value.per1000)],
@@ -185,7 +218,6 @@ function renderDetails() {
 		["Aandeel in totaal", Number.isFinite(rowShare(row)) ? `${formatDecimal(rowShare(row))}%` : "-"],
 		["Leeftijd", labelFor(data.national.dimensions.ages, ageSelect.value)],
 		["Geslacht", labelFor(data.national.dimensions.sexes, sexSelect.value)],
-		["Ouderfilter", labelFor(data.national.dimensions.parents, parentsSelect.value)],
 	];
 	detailStats.replaceChildren(
 		...rows.map(([label, valueText]) => {
@@ -202,10 +234,11 @@ function renderRanking() {
 		...rows.map((row) => {
 			const button = document.createElement("button");
 			button.type = "button";
-			button.className = row.origin === selectedOrigin ? "active" : "";
-			button.innerHTML = `<span>${originLabel(row.origin)}</span><strong>${formatDecimal(valueFor(row).per1000)} per 1.000</strong><small>${formatNumber(valueFor(row).recipients)} ontvangers · ${formatRatio(ratioToReference(row))}</small>`;
+			button.className = sameSelection(row) ? "active" : "";
+			button.innerHTML = `<span>${rowLabel(row)}</span><strong>${formatDecimal(valueFor(row).per1000)} per 1.000</strong><small>${formatNumber(valueFor(row).recipients)} ontvangers · ${formatRatio(ratioToReference(row))}</small>`;
 			button.addEventListener("click", () => {
 				selectedOrigin = row.origin;
+				selectedParents = row.parents;
 				renderAll();
 			});
 			return button;
@@ -214,12 +247,13 @@ function renderRanking() {
 }
 
 function trendSeries() {
-	const importantOrigins = new Set([data.national.defaults.totalOrigin, data.national.defaults.referenceOrigin, "H007933", "H008859", selectedOrigin]);
-	const records = data.national.records.filter((row) => row.sex === sexSelect.value && row.age === ageSelect.value && row.parents === parentsSelect.value && importantOrigins.has(row.origin));
-	const byOrigin = d3.group(records, (row) => row.origin);
-	return [...byOrigin].map(([origin, rows]) => ({
-		origin,
-		label: originLabel(origin),
+	const records = data.national.records.filter((row) => row.sex === sexSelect.value && row.age === ageSelect.value && isDisplayRecord(row));
+	const bySeries = d3.group(records, (row) => `${row.origin}|${row.parents}`);
+	return [...bySeries].map(([key, rows]) => ({
+		key,
+		origin: rows[0].origin,
+		parents: rows[0].parents,
+		label: rowLabel(rows[0]),
 		values: rows
 			.map((row) => ({ date: new Date(row.date), period: row.period, value: valueFor(row).per1000, recipients: valueFor(row).recipients }))
 			.filter((row) => Number.isFinite(row.value))
@@ -237,8 +271,8 @@ function renderTrend() {
 	const series = trendSeries().filter((row) => row.values.length);
 	const color = d3
 		.scaleOrdinal()
-		.domain(series.map((row) => row.origin))
-		.range(["#264653", "#2a9d8f", "#e76f51", "#8f5b2d", "#5c6bc0"]);
+		.domain(series.map((row) => row.key))
+		.range(["#264653", "#2a9d8f", "#e76f51", "#8f5b2d", "#5c6bc0", "#b56576", "#577590", "#6d597a"]);
 
 	trendSvg.attr("viewBox", `0 0 ${width} ${height}`).attr("width", width).attr("height", height);
 	trendSvg.selectAll("*").remove();
@@ -293,20 +327,20 @@ function renderTrend() {
 	g.selectAll("path.series")
 		.data(series)
 		.join("path")
-		.attr("class", (row) => `series ${row.origin === selectedOrigin ? "is-selected" : ""}`)
+		.attr("class", (row) => `series ${sameSelection(row) ? "is-selected" : ""}`)
 		.attr("fill", "none")
-		.attr("stroke", (row) => color(row.origin))
-		.attr("stroke-width", (row) => (row.origin === selectedOrigin ? 3.4 : 2.1))
+		.attr("stroke", (row) => color(row.key))
+		.attr("stroke-width", (row) => (sameSelection(row) ? 3.4 : 2.1))
 		.attr("d", (row) => line(row.values));
 
 	g.selectAll("circle.point")
-		.data(series.flatMap((lineRow) => lineRow.values.map((point) => ({ ...point, origin: lineRow.origin, label: lineRow.label }))))
+		.data(series.flatMap((lineRow) => lineRow.values.map((point) => ({ ...point, key: lineRow.key, origin: lineRow.origin, parents: lineRow.parents, label: lineRow.label }))))
 		.join("circle")
 		.attr("class", "point")
-		.attr("r", (row) => (row.period === selectedPeriod && row.origin === selectedOrigin ? 5 : 3.2))
+		.attr("r", (row) => (row.period === selectedPeriod && sameSelection(row) ? 5 : 3.2))
 		.attr("cx", (row) => x(row.date))
 		.attr("cy", (row) => y(row.value))
-		.attr("fill", (row) => color(row.origin))
+		.attr("fill", (row) => color(row.key))
 		.on("mouseenter", (event, row) => {
 			showTooltip(event, `<strong>${row.label}</strong><span>${periodLabel(row.period)}</span><span>${formatDecimal(row.value)} per 1.000 inwoners</span><span>${formatNumber(row.recipients)} ontvangers</span>`);
 		})
@@ -314,6 +348,7 @@ function renderTrend() {
 		.on("mouseleave", hideTooltip)
 		.on("click", (event, row) => {
 			selectedOrigin = row.origin;
+			selectedParents = row.parents;
 			setSelectedPeriod(row.period);
 			renderAll();
 		});
@@ -369,27 +404,28 @@ function renderScatter() {
 	g.selectAll("circle")
 		.data(rows)
 		.join("circle")
-		.attr("class", (row) => `scatter-dot ${row.origin === selectedOrigin ? "is-selected" : ""}`)
-		.attr("r", (row) => (row.origin === selectedOrigin ? 7 : 5.2))
+		.attr("class", (row) => `scatter-dot ${sameSelection(row) ? "is-selected" : ""}`)
+		.attr("r", (row) => (sameSelection(row) ? 7 : 5.2))
 		.attr("cx", (row) => x(valueFor(row).recipients))
 		.attr("cy", (row) => y(valueFor(row).per1000))
 		.on("mouseenter", (event, row) => {
-			showTooltip(event, `<strong>${originLabel(row.origin)}</strong><span>${formatNumber(valueFor(row).recipients)} ontvangers</span><span>${formatDecimal(valueFor(row).per1000)} per 1.000</span><span>${formatRatio(ratioToReference(row))} t.o.v. referentie</span>`);
+			showTooltip(event, `<strong>${rowLabel(row)}</strong><span>${formatNumber(valueFor(row).recipients)} ontvangers</span><span>${formatDecimal(valueFor(row).per1000)} per 1.000</span><span>${formatRatio(ratioToReference(row))} t.o.v. referentie</span>`);
 		})
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip)
 		.on("click", (event, row) => {
 			selectedOrigin = row.origin;
+			selectedParents = row.parents;
 			renderAll();
 		});
 
 	g.selectAll("text.dot-label")
-		.data(rows.filter((row) => row.origin === selectedOrigin || row.origin === data.national.defaults.referenceOrigin || row.origin === "H008859" || row.origin === "H007933"))
+		.data(rows.filter((row) => rows.length <= 8 || sameSelection(row)))
 		.join("text")
 		.attr("class", "dot-label")
 		.attr("x", (row) => x(valueFor(row).recipients) + 8)
 		.attr("y", (row) => y(valueFor(row).per1000) - 7)
-		.text((row) => originLabel(row.origin));
+		.text((row) => rowLabel(row));
 }
 
 function coordinateBounds(featureCollection) {
@@ -507,8 +543,8 @@ function renderRegionalTable() {
 
 function exportCsv() {
 	const rows = latestRows();
-	const header = ["periode", "uitkeringstype", "herkomst", "ontvangers", "bevolking", "per_1000", "ratio_referentie"].join(",");
-	const body = rows.map((row) => [selectedPeriod, JSON.stringify(topicLabel()), JSON.stringify(originLabel(row.origin)), valueFor(row).recipients ?? "", row.population ?? "", valueFor(row).per1000 ?? "", ratioToReference(row) ?? ""].join(",")).join("\n");
+	const header = ["periode", "uitkeringstype", "herkomst", "geboorteland_ouders", "ontvangers", "bevolking", "per_1000", "ratio_referentie"].join(",");
+	const body = rows.map((row) => [selectedPeriod, JSON.stringify(topicLabel()), JSON.stringify(originLabel(row.origin)), JSON.stringify(parentLabel(row.parents)), valueFor(row).recipients ?? "", row.population ?? "", valueFor(row).per1000 ?? "", ratioToReference(row) ?? ""].join(",")).join("\n");
 	const blob = new Blob([`${header}\n${body}\n`], { type: "text/csv;charset=utf-8" });
 	const link = document.createElement("a");
 	link.href = URL.createObjectURL(blob);
@@ -518,7 +554,10 @@ function exportCsv() {
 }
 
 function renderAll() {
-	if (!selectedRecord()) selectedOrigin = data.national.defaults.referenceOrigin;
+	if (!selectedRecord()) {
+		selectedOrigin = data.national.defaults.referenceOrigin;
+		selectedParents = data.national.defaults.referenceParents;
+	}
 	renderSummary();
 	renderDetails();
 	renderRanking();
@@ -539,7 +578,7 @@ async function init() {
 		setSelectedPeriod(period);
 		renderAll();
 	});
-	[topicSelect, ageSelect, sexSelect, parentsSelect].forEach((select) => select.addEventListener("change", renderAll));
+	[topicSelect, ageSelect, sexSelect].forEach((select) => select.addEventListener("change", renderAll));
 	exportCsvButton.addEventListener("click", exportCsv);
 	window.addEventListener("resize", () => {
 		renderTrend();

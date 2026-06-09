@@ -131,7 +131,7 @@ body:has(.demographic-safety-page) {
 
 .toolbar {
 	display: grid;
-	grid-template-columns: 1.1fr 1fr 1fr 1fr;
+	grid-template-columns: minmax(11rem, 1fr) minmax(10rem, 0.95fr) minmax(10rem, 0.95fr) minmax(8rem, 0.58fr) minmax(24rem, 1.55fr);
 	gap: 0.75rem;
 	padding: 1rem;
 	border-bottom: 1px solid var(--line-soft);
@@ -169,6 +169,65 @@ body:has(.demographic-safety-page) {
 	font-weight: 680;
 	letter-spacing: 0;
 	text-transform: none;
+}
+
+.zero-control {
+	align-self: end;
+	grid-template-columns: auto minmax(0, 1fr);
+	gap: 0.55rem;
+	align-items: center;
+	min-height: 2.6rem;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	padding: 0 0.7rem;
+	background: #080808;
+	color: var(--ink);
+	cursor: pointer;
+	font-size: 0.78rem;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.zero-control input {
+	width: 1rem;
+	height: 1rem;
+	margin: 0;
+	accent-color: var(--accent);
+}
+
+.preset-controls {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.45rem;
+	align-self: end;
+	min-width: 0;
+}
+
+.preset-controls button {
+	min-height: 2.6rem;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	padding: 0.35rem 0.52rem;
+	background: #080808;
+	color: var(--ink);
+	cursor: pointer;
+	font-family:
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	font-size: 0.78rem;
+	font-weight: 780;
+	line-height: 1.15;
+	text-align: center;
+}
+
+.preset-controls button:hover,
+.preset-controls button.active {
+	border-color: var(--accent);
+	background: rgba(201, 163, 106, 0.12);
 }
 
 .summary-strip {
@@ -373,8 +432,7 @@ body:has(.demographic-safety-page) {
 	padding: 0 0.8rem;
 }
 
-.ranking-list button,
-.ranking-row {
+.ranking-list button {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: 0.3rem 0.7rem;
@@ -399,8 +457,7 @@ body:has(.demographic-safety-page) {
 	background: rgba(201, 163, 106, 0.1);
 }
 
-.ranking-list span,
-.ranking-row span {
+.ranking-list span {
 	overflow: hidden;
 	font-family:
 		ui-sans-serif,
@@ -415,8 +472,7 @@ body:has(.demographic-safety-page) {
 	white-space: nowrap;
 }
 
-.ranking-list strong,
-.ranking-row strong {
+.ranking-list strong {
 	color: #fff8ed;
 	font-family:
 		ui-sans-serif,
@@ -450,6 +506,10 @@ body:has(.demographic-safety-page) {
 	.toolbar {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
+
+	.preset-controls {
+		grid-column: 1 / -1;
+	}
 }
 
 @media (max-width: 720px) {
@@ -459,6 +519,10 @@ body:has(.demographic-safety-page) {
 
 	.toolbar,
 	.summary-strip {
+		grid-template-columns: 1fr;
+	}
+
+	.preset-controls {
 		grid-template-columns: 1fr;
 	}
 

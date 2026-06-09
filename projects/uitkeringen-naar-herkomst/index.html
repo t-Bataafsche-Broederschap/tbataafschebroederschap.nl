@@ -32,7 +32,8 @@
 					<article>
 						<h2>Datatoelichting</h2>
 						<p>De nationale grafieken combineren CBS 85692NED met de bevolkingsnoemer uit 85721NED. De relatieve maat is ontvangers per 1.000 inwoners binnen dezelfde filtercombinatie.</p>
-						<p>De Nederlandse referentiegroep is hier herkomstland Nederland met twee in Nederland geboren ouders. Waar de ouderfilter op totaal staat, blijft de referentielijn dezelfde smalle referentiegroep.</p>
+						<p>Geboorteland ouders wordt gecombineerd in dezelfde grafieken met drie niet-overlappende categorieën: geboren buiten Nederland, geboren in Nederland met ouder(s) buiten Nederland, en geboren in Nederland met ouders in Nederland. Onbekend is weggelaten.</p>
+						<p>De Nederlandse referentiegroep is hier herkomstland Nederland met twee in Nederland geboren ouders.</p>
 						<p>De kaart gebruikt CBS 80794NED. Die tabel bevat regio en uitkeringstype, maar geen herkomst, leeftijd of geslacht. Regionale verschillen zijn daarom regionale context, geen regionale herkomstanalyse.</p>
 						<p>Personen kunnen bij meerdere uitkeringstypen meetellen. Bij totalen telt CBS een persoon maar een keer; losse uitkeringstypen zijn niet bedoeld om bij elkaar op te tellen.</p>
 					</article>
@@ -59,21 +60,17 @@
 								<span>Geslacht</span>
 								<select id="sexSelect"></select>
 							</label>
-							<label>
-								<span>Geboorteland ouders</span>
-								<select id="parentsSelect"></select>
-							</label>
 						</div>
 						<div class="chart-head">
 							<div>
 								<p class="eyebrow" id="trendKicker">Nationaal, per 1.000 inwoners</p>
-								<h2 id="trendTitle">Trend naar herkomstgroep</h2>
+								<h2 id="trendTitle">Trend naar herkomst en geboorteland ouders</h2>
 							</div>
 							<div id="summaryStrip" class="summary-strip" aria-label="Samenvatting"></div>
 						</div>
 						<div class="chart-wrap">
 							<svg id="trendChart" role="img" aria-labelledby="trendTitle trendDescription"></svg>
-							<p id="trendDescription" class="sr-only">Lijngrafiek met uitkeringsontvangers per 1.000 inwoners naar herkomstgroep.</p>
+							<p id="trendDescription" class="sr-only">Lijngrafiek met uitkeringsontvangers per 1.000 inwoners naar herkomstgroep en geboorteland ouders.</p>
 							<div id="tooltip" class="tooltip" role="status" hidden></div>
 						</div>
 					</section>
@@ -87,7 +84,7 @@
 						</div>
 						<div class="chart-wrap compact">
 							<svg id="scatterChart" role="img" aria-labelledby="scatterTitle scatterDescription"></svg>
-							<p id="scatterDescription" class="sr-only">Scatterplot met uitkeringsontvangers en uitkeringsontvangers per 1.000 inwoners.</p>
+							<p id="scatterDescription" class="sr-only">Scatterplot met uitkeringsontvangers en uitkeringsontvangers per 1.000 inwoners naar herkomstgroep en geboorteland ouders.</p>
 						</div>
 					</section>
 					<aside class="panel side-panel">

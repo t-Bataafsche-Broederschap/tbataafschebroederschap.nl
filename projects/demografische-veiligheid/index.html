@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Demografische veiligheid | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactief dashboard met CBS Veiligheidsmonitor 2025: veiligheidsgevoel, slachtofferschap, discriminatie en politiecontact naar demografische groepen en gemeenten." />
+		<meta name="description" content="Interactief dashboard met CBS Veiligheidsmonitor 2025: veiligheidsgevoel, slachtofferschap, discriminatie en politiecontact naar demografische groepen." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/demografische-veiligheid/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/styles/site.css" />
@@ -32,7 +32,7 @@
 					<article>
 						<h2>Datatoelichting</h2>
 						<p>Alle cijfers gaan over inwoners van Nederland van 15 jaar of ouder en komen uit de Veiligheidsmonitor 2025. De percentages zijn puntschattingen uit de CBS StatLine-tabellen.</p>
-						<p>De demografische vergelijking gebruikt persoonskenmerken zoals geslacht, leeftijd, herkomst, onderwijsniveau, seksuele orientatie, inkomen, welvaart en stedelijkheid van de woongemeente. De regionale ranglijst gebruikt provincies en 70-duizend-plus gemeenten.</p>
+						<p>De demografische vergelijking gebruikt persoonskenmerken zoals geslacht, leeftijd, herkomst, onderwijsniveau, seksuele orientatie, inkomen, welvaart en stedelijkheid van de woongemeente.</p>
 						<p>Let op bij kleine of specifieke groepen: interpreteer verschillen samen met de CBS-betrouwbaarheidsmarges in StatLine. Deze eerste versie toont de waarden zelf, niet de marges.</p>
 					</article>
 				</section>
@@ -51,10 +51,18 @@
 								<span>Y-as</span>
 								<select id="yMetricSelect"></select>
 							</label>
-							<label>
-								<span>Gemeenten</span>
-								<select id="regionMetricSelect"></select>
+							<label class="zero-control">
+								<input id="zeroBaselineToggle" type="checkbox" checked />
+								<span>Begin op 0</span>
 							</label>
+							<div class="preset-controls" id="presetControls" aria-label="Interessante instellingen">
+								<button type="button" data-preset="ageRisk">Leeftijd: risico</button>
+								<button type="button" data-preset="originDiscrimination">Herkomst: discriminatie</button>
+								<button type="button" data-preset="urbanCohesion">Stad: cohesie</button>
+								<button type="button" data-preset="orientationStreet">Seksualiteit: straat</button>
+								<button type="button" data-preset="incomeSafety">Inkomen: buurt</button>
+								<button type="button" data-preset="genderOnline">Gender: online</button>
+							</div>
 						</div>
 						<div class="summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
 						<div class="chart-head">
@@ -85,15 +93,6 @@
 							</div>
 							<div id="rankingList" class="ranking-list"></div>
 						</section>
-						<section class="panel ranking-panel" aria-labelledby="regionTitle">
-							<div class="section-head">
-								<div>
-									<p class="eyebrow">70-duizend-plus gemeenten</p>
-									<h2 id="regionTitle">Regionale uitschieters</h2>
-								</div>
-							</div>
-							<div id="regionList" class="ranking-list"></div>
-						</section>
 					</aside>
 				</main>
 			</div>
@@ -109,10 +108,6 @@
 					<li>
 						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85844NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Veiligheidsmonitor; kerncijfers, persoonskenmerken</a>
 						<span>Bron voor de demografische uitsplitsingen in het dashboard.</span>
-					</li>
-					<li>
-						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85146NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Veiligheidsmonitor; kerncijfers, regio</a>
-						<span>Bron voor de regionale ranglijst van provincies en 70-duizend-plus gemeenten.</span>
 					</li>
 				</ul>
 			</aside>

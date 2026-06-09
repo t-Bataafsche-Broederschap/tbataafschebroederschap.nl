@@ -3,7 +3,8 @@
 const groupSelect = document.querySelector("#groupSelect");
 const xMetricSelect = document.querySelector("#xMetricSelect");
 const yMetricSelect = document.querySelector("#yMetricSelect");
-const regionMetricSelect = document.querySelector("#regionMetricSelect");
+const zeroBaselineToggle = document.querySelector("#zeroBaselineToggle");
+const presetControls = document.querySelector("#presetControls");
 const summaryStrip = document.querySelector("#summaryStrip");
 const chartTitle = document.querySelector("#chartTitle");
 const chartMeta = document.querySelector("#chartMeta");
@@ -13,11 +14,48 @@ const selectedTitle = document.querySelector("#selectedTitle");
 const selectedStats = document.querySelector("#selectedStats");
 const rankingTitle = document.querySelector("#rankingTitle");
 const rankingList = document.querySelector("#rankingList");
-const regionTitle = document.querySelector("#regionTitle");
-const regionList = document.querySelector("#regionList");
 
 const decimalFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const signedFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1, signDisplay: "always" });
+
+const PRESETS = {
+	ageRisk: {
+		group: "Leeftijdsklasse beknopt",
+		xMetric: "traditionalVictim",
+		yMetric: "neighborhoodUnsafe",
+		selectedKey: "53050",
+	},
+	originDiscrimination: {
+		group: "Geboorteland en herkomst",
+		xMetric: "traditionalVictim",
+		yMetric: "discrimination",
+		selectedKey: "A052023",
+	},
+	urbanCohesion: {
+		group: "Stedelijkheid gemeente",
+		xMetric: "socialCohesion",
+		yMetric: "safetyGrade",
+		selectedKey: "1018850",
+	},
+	orientationStreet: {
+		group: "Seksuele oriëntatie",
+		xMetric: "streetDisrespect",
+		yMetric: "generalUnsafe",
+		selectedKey: "A052631",
+	},
+	incomeSafety: {
+		group: "Inkomen",
+		xMetric: "neighborhoodUnsafe",
+		yMetric: "safetyGrade",
+		selectedKey: "1014752",
+	},
+	genderOnline: {
+		group: "Genderidentiteit",
+		xMetric: "onlineVictim",
+		yMetric: "onlineThreat",
+		selectedKey: "A052616",
+	},
+};
 
 let data;
 let selectedKey;
@@ -73,13 +111,11 @@ function populateControls() {
 	for (const item of data.metrics) {
 		option(xMetricSelect, item.key, item.label);
 		option(yMetricSelect, item.key, item.label);
-		option(regionMetricSelect, item.key, item.label);
 	}
 
 	groupSelect.value = data.defaults.group;
 	xMetricSelect.value = data.defaults.xMetric;
 	yMetricSelect.value = data.defaults.yMetric;
-	regionMetricSelect.value = data.defaults.regionMetric;
 	selectedKey = data.defaults.selectedKey;
 }
 
@@ -112,6 +148,31 @@ function sortRows(rows, metricKey) {
 	});
 }
 
+function rankingDirectionLabel(metricKey) {
+	return metric(metricKey)?.direction === "higher-better" ? "Laagste" : "Hoogste";
+}
+
+function activePresetKey() {
+	return Object.entries(PRESETS).find(([, preset]) => preset.group === groupSelect.value && preset.xMetric === xMetricSelect.value && preset.yMetric === yMetricSelect.value)?.[0] || "";
+}
+
+function updatePresetButtons() {
+	const active = activePresetKey();
+	presetControls.querySelectorAll("button").forEach((button) => {
+		button.classList.toggle("active", button.dataset.preset === active);
+	});
+}
+
+function applyPreset(key) {
+	const preset = PRESETS[key];
+	if (!preset) return;
+	groupSelect.value = preset.group;
+	xMetricSelect.value = preset.xMetric;
+	yMetricSelect.value = preset.yMetric;
+	selectedKey = preset.selectedKey;
+	renderAll();
+}
+
 function renderSummary() {
 	const rows = rowsForGroup();
 	const xKey = xMetricSelect.value;
@@ -123,7 +184,7 @@ function renderSummary() {
 	const items = [
 		["Selectie", selected?.label || "-"],
 		[`Nederland: ${metric(yKey).shortLabel}`, formatValue(valueOf(total, yKey), yKey)],
-		[`Hoogste ${metric(xKey).shortLabel}`, topX ? `${topX.label} · ${formatValue(valueOf(topX, xKey), xKey)}` : "-"],
+		[`${rankingDirectionLabel(xKey)} ${metric(xKey).shortLabel}`, topX ? `${topX.label} · ${formatValue(valueOf(topX, xKey), xKey)}` : "-"],
 		[`Spreiding ${metric(yKey).shortLabel}`, formatValue(metricGap(rows, yKey), yKey)],
 	];
 	summaryStrip.replaceChildren(
@@ -156,7 +217,7 @@ function renderDetails() {
 function renderRanking() {
 	const yKey = yMetricSelect.value;
 	const rows = sortRows(rowsForGroup(), yKey).slice(0, 12);
-	rankingTitle.textContent = `${metric(yKey).shortLabel}: hoogste waarden`;
+	rankingTitle.textContent = `${metric(yKey).shortLabel}: ${rankingDirectionLabel(yKey).toLowerCase()} waarden`;
 	rankingList.replaceChildren(
 		...rows.map((row) => {
 			const button = document.createElement("button");
@@ -168,28 +229,6 @@ function renderRanking() {
 				renderAll();
 			});
 			return button;
-		})
-	);
-}
-
-function renderRegionList() {
-	const metricKey = regionMetricSelect.value;
-	const rows = data.regional
-		.filter((row) => row.group === "70-duizend-plus gemeenten" && Number.isFinite(valueOf(row, metricKey)))
-		.sort((a, b) => {
-			const av = valueOf(a, metricKey);
-			const bv = valueOf(b, metricKey);
-			return metric(metricKey)?.direction === "higher-better" ? av - bv : bv - av;
-		})
-		.slice(0, 12);
-
-	regionTitle.textContent = `${metric(metricKey).shortLabel}: gemeenten`;
-	regionList.replaceChildren(
-		...rows.map((row) => {
-			const item = document.createElement("div");
-			item.className = "ranking-row";
-			item.innerHTML = `<span>${row.label}</span><strong>${formatValue(valueOf(row, metricKey), metricKey)}</strong><small>${row.group}</small>`;
-			return item;
 		})
 	);
 }
@@ -218,14 +257,16 @@ function renderScatter() {
 	const yDomain = d3.extent(yValues);
 	const xPad = Math.max((xDomain[1] - xDomain[0]) * 0.16, xKey === "safetyGrade" || xKey === "socialCohesion" ? 0.12 : 1);
 	const yPad = Math.max((yDomain[1] - yDomain[0]) * 0.16, yKey === "safetyGrade" || yKey === "socialCohesion" ? 0.12 : 1);
+	const xMin = zeroBaselineToggle.checked ? 0 : xDomain[0] - xPad;
+	const yMin = zeroBaselineToggle.checked ? 0 : yDomain[0] - yPad;
 	const x = d3
 		.scaleLinear()
-		.domain([xDomain[0] - xPad, xDomain[1] + xPad])
+		.domain([xMin, xDomain[1] + xPad])
 		.nice()
 		.range([0, innerWidth]);
 	const y = d3
 		.scaleLinear()
-		.domain([yDomain[0] - yPad, yDomain[1] + yPad])
+		.domain([yMin, yDomain[1] + yPad])
 		.nice()
 		.range([innerHeight, 0]);
 	const xMedian = d3.median(xValues);
@@ -310,8 +351,8 @@ function renderAll() {
 	renderSummary();
 	renderDetails();
 	renderRanking();
-	renderRegionList();
 	renderScatter();
+	updatePresetButtons();
 }
 
 function handleGroupChange() {
@@ -331,7 +372,11 @@ fetch("data.json")
 		groupSelect.addEventListener("change", handleGroupChange);
 		xMetricSelect.addEventListener("change", renderAll);
 		yMetricSelect.addEventListener("change", renderAll);
-		regionMetricSelect.addEventListener("change", renderAll);
+		zeroBaselineToggle.addEventListener("change", renderScatter);
+		presetControls.addEventListener("click", (event) => {
+			const button = event.target.closest("button[data-preset]");
+			if (button) applyPreset(button.dataset.preset);
+		});
 		window.addEventListener("resize", () => renderScatter());
 		renderAll();
 	})

@@ -21,6 +21,8 @@ const codes = {
 	benefitBornOutsideNetherlands: "A051736",
 	benefitBornInNetherlandsParentsOutside: "A051742",
 	benefitBornInNetherlandsParentsInNetherlands: "A051760",
+	unknownOrigin: "2012659",
+	unknownParents: "A052139",
 	populationBornInNetherlands: "A051735",
 	populationBornOutsideNetherlands: "A051736",
 	populationTwoParentsBornInNetherlands: "A051737",
@@ -328,12 +330,14 @@ async function buildNational() {
 
 	const periods = recentMonthlyPeriods(benefitPeriods, populationPeriods);
 	const benefitAgeKeys = ages.map((row) => cleanKey(row.Key)).filter((key) => key !== "99999");
-	const benefitParentKeys = parents.map((row) => cleanKey(row.Key)).filter((key) => key !== "A052139");
+	const comparisonParentKeys = [codes.benefitBornOutsideNetherlands, codes.benefitBornInNetherlandsParentsOutside, codes.benefitBornInNetherlandsParentsInNetherlands];
+	const benefitParentKeys = comparisonParentKeys;
 	const sexKeys = sexes.map((row) => cleanKey(row.Key));
-	const originKeys = origins.map((row) => cleanKey(row.Key));
+	const originKeys = origins.map((row) => cleanKey(row.Key)).filter((key) => key !== codes.unknownOrigin);
 	const [benefitRows, populationRows] = await Promise.all([
 		fetchPeriodBatches(tables.benefits, "TypedDataSet", {
 			periods,
+			filter: [orFilter("Geslacht", sexKeys), orFilter("Leeftijd", benefitAgeKeys), orFilter("Herkomstland", originKeys), orFilter("GeboortelandOuders", benefitParentKeys)].join(" and "),
 			select: ["Geslacht", "Leeftijd", "Herkomstland", "GeboortelandOuders", "Perioden", ...topicKeys].join(","),
 		}),
 		Promise.all(
@@ -372,18 +376,19 @@ async function buildNational() {
 			sex: codes.totalSex,
 			age: codes.totalAgeBenefits,
 			origin: codes.dutchOrigin,
-			parents: codes.totalParentsBenefits,
+			parents: codes.benefitBornInNetherlandsParentsInNetherlands,
 			referenceOrigin: codes.dutchOrigin,
 			referenceParents: codes.benefitBornInNetherlandsParentsInNetherlands,
 			totalOrigin: codes.totalOrigin,
 			totalParents: codes.totalParentsBenefits,
+			comparisonParents: comparisonParentKeys,
 			topic: "UitkeringsontvangersTotaal_1",
 		},
 		dimensions: {
 			sexes: rowsToOptions(sexes),
 			ages: rowsToOptions(ages),
-			origins: rowsToOptions(origins),
-			parents: rowsToOptions(parents),
+			origins: rowsToOptions(origins).filter((row) => row.key !== codes.unknownOrigin),
+			parents: rowsToOptions(parents).filter((row) => comparisonParentKeys.includes(row.key)),
 			topics: topicOptions(benefitTopics),
 		},
 		records: validRecords,

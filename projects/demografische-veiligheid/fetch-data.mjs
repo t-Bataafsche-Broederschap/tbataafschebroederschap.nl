@@ -1,6 +1,5 @@
 const TABLES = {
 	demographic: "85844NED",
-	regional: "85146NED",
 };
 
 const PERIOD = "2025JJ00";
@@ -131,13 +130,6 @@ const DEMOGRAPHIC_GROUPS = new Set([
 	14, // Stedelijkheid gemeente
 ]);
 
-const REGIONAL_GROUPS = new Set([
-	1, // Nederland
-	3, // Provincies
-	4, // G4/G40/70k
-	5, // 70k gemeenten
-]);
-
 async function cbs(table, endpoint) {
 	const url = new URL(`https://opendata.cbs.nl/ODataApi/OData/${table}/${endpoint}`);
 	const response = await fetch(url);
@@ -200,31 +192,7 @@ async function demographicData() {
 		.filter(Boolean);
 }
 
-async function regionalData() {
-	const [groups, regions, rows] = await Promise.all([cbsAll(TABLES.regional, "CategoryGroups"), cbsAll(TABLES.regional, "RegioS"), cbsAll(TABLES.regional, `TypedDataSet?$filter=Marges eq '${VALUE_MARGIN}' and Perioden eq '${PERIOD}'`)]);
-
-	const groupById = new Map(groups.map((group) => [group.ID, group]));
-	const regionByKey = new Map(regions.map((item) => [item.Key, item]));
-
-	return rows
-		.map((row) => {
-			const region = regionByKey.get(row.RegioS);
-			const group = groupById.get(region?.CategoryGroupID);
-			if (!region || !group || !REGIONAL_GROUPS.has(group.ID)) return null;
-			return {
-				key: row.RegioS.trim(),
-				sourceKey: row.RegioS,
-				label: region.Title.replace(/ \((GM|PV)\)$/, ""),
-				fullLabel: region.Title,
-				groupId: group.ID,
-				group: group.Title,
-				values: valuesFrom(row),
-			};
-		})
-		.filter(Boolean);
-}
-
-const [tableInfo, demographic, regional] = await Promise.all([cbs(TABLES.demographic, "TableInfos"), demographicData(), regionalData()]);
+const [tableInfo, demographic] = await Promise.all([cbs(TABLES.demographic, "TableInfos"), demographicData()]);
 
 const data = {
 	meta: {
@@ -234,18 +202,15 @@ const data = {
 		generatedAt: new Date().toISOString(),
 		tables: {
 			demographic: TABLES.demographic,
-			regional: TABLES.regional,
 		},
 		sourceModified: tableInfo.value?.[0]?.Modified || null,
 	},
 	metrics: METRICS.map(({ sourceKey, ...metric }) => metric),
 	demographic,
-	regional,
 	defaults: {
 		group: "Leeftijdsklasse beknopt",
 		xMetric: "traditionalVictim",
 		yMetric: "neighborhoodUnsafe",
-		regionMetric: "neighborhoodUnsafe",
 		selectedKey: "53050",
 	},
 };

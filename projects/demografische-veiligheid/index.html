@@ -53,7 +53,7 @@
 							</label>
 							<label class="zero-control">
 								<input id="zeroBaselineToggle" type="checkbox" checked />
-								<span>Begin op 0</span>
+								<span>%-assen 0-100</span>
 							</label>
 							<div class="preset-controls" id="presetControls" aria-label="Interessante instellingen">
 								<button type="button" data-preset="ageRisk">Leeftijd: risico</button>
@@ -70,7 +70,10 @@
 								<p class="eyebrow">Risico tegenover veiligheidsbeleving</p>
 								<h2 id="chartTitle">Slachtofferschap versus onveiligheidsgevoel in de buurt</h2>
 							</div>
-							<p id="chartMeta" class="chart-meta"></p>
+							<div class="chart-actions">
+								<p id="chartMeta" class="chart-meta"></p>
+								<button class="fullscreen-button" id="fullscreenButton" type="button">Vul scherm</button>
+							</div>
 						</div>
 						<div class="chart-wrap">
 							<svg id="safetyScatter" role="img" aria-labelledby="chartTitle chartDescription"></svg>

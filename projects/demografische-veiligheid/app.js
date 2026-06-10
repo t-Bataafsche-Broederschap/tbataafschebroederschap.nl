@@ -4,6 +4,9 @@ const groupSelect = document.querySelector("#groupSelect");
 const xMetricSelect = document.querySelector("#xMetricSelect");
 const yMetricSelect = document.querySelector("#yMetricSelect");
 const zeroBaselineToggle = document.querySelector("#zeroBaselineToggle");
+const chartPanel = document.querySelector(".chart-panel");
+const chartWrap = document.querySelector(".chart-wrap");
+const fullscreenButton = document.querySelector("#fullscreenButton");
 const presetControls = document.querySelector("#presetControls");
 const summaryStrip = document.querySelector("#summaryStrip");
 const chartTitle = document.querySelector("#chartTitle");
@@ -80,6 +83,19 @@ function formatDelta(value, metricKey) {
 	return signedFormat.format(value);
 }
 
+function isPercentMetric(metricKey) {
+	return metric(metricKey)?.unit === "%";
+}
+
+function clamp(value, min, max) {
+	return Math.max(min, Math.min(max, value));
+}
+
+function toRgba(color, alpha) {
+	const parsed = d3.rgb(color);
+	return `rgba(${parsed.r}, ${parsed.g}, ${parsed.b}, ${alpha})`;
+}
+
 function valueOf(row, metricKey) {
 	const value = row?.values?.[metricKey];
 	return Number.isFinite(value) ? value : null;
@@ -131,6 +147,22 @@ function showTooltip(event, row) {
 	moveTooltip(event);
 }
 
+function updateFullscreenButton() {
+	if (!fullscreenButton) return;
+	const isFullscreen = document.fullscreenElement === chartPanel;
+	fullscreenButton.textContent = isFullscreen ? "Verlaat schermvullend" : "Vul scherm";
+	fullscreenButton.setAttribute("aria-pressed", String(isFullscreen));
+}
+
+function toggleFullscreen() {
+	if (!chartPanel || !fullscreenButton) return;
+	if (document.fullscreenElement === chartPanel) {
+		document.exitFullscreen?.();
+		return;
+	}
+	chartPanel.requestFullscreen?.();
+}
+
 function hideTooltip() {
 	tooltip.hidden = true;
 }
@@ -150,6 +182,29 @@ function sortRows(rows, metricKey) {
 
 function rankingDirectionLabel(metricKey) {
 	return metric(metricKey)?.direction === "higher-better" ? "Laagste" : "Hoogste";
+}
+
+function selectedStatTone(metricKey, delta) {
+	const totalValue = valueOf(totalRow(), metricKey);
+	if (!Number.isFinite(delta) || !Number.isFinite(totalValue)) {
+		return null;
+	}
+
+	const values = data.demographic.map((row) => valueOf(row, metricKey)).filter(Number.isFinite);
+	const maxDelta = d3.max(values.map((value) => Math.abs(value - totalValue))) || 0;
+	const direction = metric(metricKey)?.direction === "higher-better" ? 1 : -1;
+	const favorableDelta = delta * direction;
+	const score = maxDelta > 0 ? clamp(0.5 + favorableDelta / (maxDelta * 2), 0, 1) : 0.5;
+	const color = d3.interpolateRgbBasis(["#d46a54", "#c9a36a", "#8fbf8d"])(score);
+	const threshold = maxDelta * 0.08;
+	const label = Math.abs(favorableDelta) <= threshold ? "vergelijkbaar met Nederland" : favorableDelta > 0 ? "gunstiger dan Nederland" : "ongunstiger dan Nederland";
+
+	return {
+		color,
+		background: toRgba(color, 0.18),
+		border: toRgba(color, 0.62),
+		label,
+	};
 }
 
 function activePresetKey() {
@@ -206,8 +261,16 @@ function renderDetails() {
 	selectedStats.replaceChildren(
 		...detailMetrics.map((metricKey) => {
 			const value = valueOf(row, metricKey);
-			const delta = value - valueOf(total, metricKey);
+			const totalValue = valueOf(total, metricKey);
+			const delta = Number.isFinite(value) && Number.isFinite(totalValue) ? value - totalValue : null;
+			const tone = selectedStatTone(metricKey, delta);
 			const item = document.createElement("div");
+			if (tone) {
+				item.style.setProperty("--stat-color", tone.color);
+				item.style.setProperty("--stat-bg", tone.background);
+				item.style.setProperty("--stat-border", tone.border);
+				item.setAttribute("title", tone.label);
+			}
 			item.innerHTML = `<span>${metric(metricKey).label}</span><strong>${formatValue(value, metricKey)} <small>${formatDelta(delta, metricKey)} vs NL</small></strong>`;
 			return item;
 		})
@@ -238,9 +301,10 @@ function renderScatter() {
 	const xKey = xMetricSelect.value;
 	const yKey = yMetricSelect.value;
 	const selected = selectedRow();
-	const wrap = document.querySelector(".chart-wrap");
+	const wrap = chartWrap;
 	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
-	const height = window.matchMedia("(max-width: 720px)").matches ? 420 : 520;
+	const fullscreenHeight = document.fullscreenElement === chartPanel ? Math.max(520, window.innerHeight - Math.ceil(wrap.getBoundingClientRect().top) - 28) : null;
+	const height = fullscreenHeight ?? (window.matchMedia("(max-width: 720px)").matches ? 420 : 520);
 	const margin = { top: 26, right: 28, bottom: 66, left: 74 };
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
@@ -257,18 +321,16 @@ function renderScatter() {
 	const yDomain = d3.extent(yValues);
 	const xPad = Math.max((xDomain[1] - xDomain[0]) * 0.16, xKey === "safetyGrade" || xKey === "socialCohesion" ? 0.12 : 1);
 	const yPad = Math.max((yDomain[1] - yDomain[0]) * 0.16, yKey === "safetyGrade" || yKey === "socialCohesion" ? 0.12 : 1);
-	const xMin = zeroBaselineToggle.checked ? 0 : xDomain[0] - xPad;
-	const yMin = zeroBaselineToggle.checked ? 0 : yDomain[0] - yPad;
-	const x = d3
-		.scaleLinear()
-		.domain([xMin, xDomain[1] + xPad])
-		.nice()
-		.range([0, innerWidth]);
-	const y = d3
-		.scaleLinear()
-		.domain([yMin, yDomain[1] + yPad])
-		.nice()
-		.range([innerHeight, 0]);
+	const fixedPercentXAxis = zeroBaselineToggle.checked && isPercentMetric(xKey);
+	const fixedPercentYAxis = zeroBaselineToggle.checked && isPercentMetric(yKey);
+	const xMin = fixedPercentXAxis ? 0 : xDomain[0] - xPad;
+	const xMax = fixedPercentXAxis ? 100 : xDomain[1] + xPad;
+	const yMin = fixedPercentYAxis ? 0 : yDomain[0] - yPad;
+	const yMax = fixedPercentYAxis ? 100 : yDomain[1] + yPad;
+	const x = d3.scaleLinear().domain([xMin, xMax]).range([0, innerWidth]);
+	const y = d3.scaleLinear().domain([yMin, yMax]).range([innerHeight, 0]);
+	if (!fixedPercentXAxis) x.nice();
+	if (!fixedPercentYAxis) y.nice();
 	const xMedian = d3.median(xValues);
 	const yMedian = d3.median(yValues);
 
@@ -373,6 +435,16 @@ fetch("data.json")
 		xMetricSelect.addEventListener("change", renderAll);
 		yMetricSelect.addEventListener("change", renderAll);
 		zeroBaselineToggle.addEventListener("change", renderScatter);
+		if (fullscreenButton && chartPanel?.requestFullscreen) {
+			fullscreenButton.addEventListener("click", toggleFullscreen);
+			document.addEventListener("fullscreenchange", () => {
+				updateFullscreenButton();
+				renderScatter();
+			});
+			updateFullscreenButton();
+		} else if (fullscreenButton) {
+			fullscreenButton.hidden = true;
+		}
 		presetControls.addEventListener("click", (event) => {
 			const button = event.target.closest("button[data-preset]");
 			if (button) applyPreset(button.dataset.preset);

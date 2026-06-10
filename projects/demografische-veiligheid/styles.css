@@ -313,6 +313,51 @@ body:has(.demographic-safety-page) {
 	font-size: 0.84rem;
 }
 
+.chart-actions {
+	display: flex;
+	flex: 0 0 auto;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.fullscreen-button {
+	min-height: 2.35rem;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	padding: 0 0.72rem;
+	background: #080808;
+	color: var(--ink);
+	cursor: pointer;
+	font-family:
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	font-size: 0.78rem;
+	font-weight: 780;
+}
+
+.fullscreen-button:hover,
+.fullscreen-button[aria-pressed="true"] {
+	border-color: var(--accent);
+	background: rgba(201, 163, 106, 0.12);
+}
+
+.chart-panel:fullscreen {
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background: var(--surface);
+}
+
+.chart-panel:fullscreen .chart-wrap {
+	min-height: calc(100vh - 18rem);
+}
+
 .chart-wrap {
 	position: relative;
 	padding: 0 0.75rem 0.95rem;
@@ -423,7 +468,18 @@ body:has(.demographic-safety-page) {
 }
 
 .stat-list div {
+	position: relative;
+	overflow: hidden;
+	border-color: var(--stat-border, var(--line-soft));
+	border-left: 0.32rem solid var(--stat-color, var(--line-soft));
 	padding: 0.62rem 0.7rem;
+	background: linear-gradient(90deg, var(--stat-bg, rgba(255, 255, 255, 0.025)), rgba(255, 255, 255, 0.025) 78%);
+}
+
+.stat-list small {
+	color: var(--stat-color, var(--dim));
+	font-size: 0.78rem;
+	white-space: nowrap;
 }
 
 .ranking-list {
@@ -528,6 +584,10 @@ body:has(.demographic-safety-page) {
 
 	.chart-head {
 		display: grid;
+	}
+
+	.chart-actions {
+		justify-content: flex-start;
 	}
 
 	#safetyScatter {

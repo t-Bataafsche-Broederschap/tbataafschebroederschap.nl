@@ -18,7 +18,7 @@
 			</nav>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="/styles/project-theme.css" />
+<link rel="stylesheet" href="/styles/project-theme.css" />
 <link rel="stylesheet" href="styles.css" />
 <div class="tennet-security-page">
 	<header class="tennet-header">
@@ -54,14 +54,15 @@
 			<button class="active" type="button" data-metric="lole">LOLE</button>
 			<button type="button" data-metric="eens">EENS</button>
 		</div>
-		<nav class="tab-list" aria-label="TenneT dashboard tabs">
-			<button class="active" type="button" data-tab="scarcity">Krapte</button>
-			<button type="button" data-tab="events">Tekortevents</button>
-			<button type="button" data-tab="system">Systeemmix</button>
-		</nav>
 	</section>
 
 	<div id="summaryCards" class="summary-cards" aria-label="Samenvatting"></div>
+
+	<nav class="tab-list" aria-label="TenneT dashboard tabs">
+		<button class="active" type="button" data-tab="scarcity">Krapte</button>
+		<button type="button" data-tab="events">Tekortevents</button>
+		<button type="button" data-tab="system">Systeemmix</button>
+	</nav>
 
 	<main class="tennet-dashboard">
 		<section class="tab-panel active" id="tab-scarcity" aria-labelledby="tab-scarcity-title">
@@ -87,6 +88,16 @@
 				<div class="chart-wrap compact">
 					<svg id="missingCapacityChart" role="img" aria-label="Extra capaciteit en resulterende LOLE"></svg>
 				</div>
+				<div id="capacityMechanismList" class="insight-list" aria-label="Capaciteitsmechanisme samenvatting"></div>
+			</section>
+			<section class="panel insight-panel">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">Normdoorbraak</p>
+						<h2>Wanneer faalt de norm?</h2>
+					</div>
+				</div>
+				<div id="normBreakdownList" class="insight-list" aria-label="Normdoorbraak per scenario"></div>
 			</section>
 		</section>
 
@@ -150,41 +161,50 @@
 					<svg id="capacityChart" role="img" aria-label="Capaciteit en flexibiliteit"></svg>
 				</div>
 			</section>
-						<section class="panel chart-panel">
-							<div class="section-head">
-								<div>
-									<p class="eyebrow">Import</p>
-									<h2>Normale uren versus tekorturen</h2>
+			<section class="panel chart-panel">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">Import</p>
+						<h2>Normale uren versus tekorturen</h2>
 					</div>
 				</div>
 				<div class="chart-wrap compact">
-								<svg id="importChart" role="img" aria-label="Netto import in normale uren en tekorturen"></svg>
-							</div>
-						</section>
-						<section class="panel chart-panel">
-							<div class="section-head">
-								<div>
-									<p class="eyebrow">Weekprofiel</p>
-									<h2>Vraag per uur</h2>
-								</div>
-							</div>
-							<div class="chart-wrap compact heatmap-wrap">
-								<svg id="weeklyDemandChart" role="img" aria-label="Weekprofiel van elektriciteitsvraag"></svg>
-							</div>
-						</section>
-						<section class="panel chart-panel">
-							<div class="section-head">
-								<div>
-									<p class="eyebrow">Gelijktijdigheid</p>
-									<h2>Krapte met buurlanden</h2>
-								</div>
-							</div>
-							<div class="chart-wrap compact heatmap-wrap">
-								<svg id="simultaneityChart" role="img" aria-label="Matrix van gelijktijdige krapte met buurlanden"></svg>
-							</div>
-						</section>
-					</section>
-				</main>
+					<svg id="importChart" role="img" aria-label="Netto import in normale uren en tekorturen"></svg>
+				</div>
+			</section>
+			<section class="panel chart-panel">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">Weekprofiel</p>
+						<h2>Vraag per uur</h2>
+					</div>
+				</div>
+				<div class="chart-wrap compact heatmap-wrap">
+					<svg id="weeklyDemandChart" role="img" aria-label="Weekprofiel van elektriciteitsvraag"></svg>
+				</div>
+			</section>
+			<section class="panel chart-panel">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">Gelijktijdigheid</p>
+						<h2>Krapte met buurlanden</h2>
+					</div>
+				</div>
+				<div class="chart-wrap compact heatmap-wrap">
+					<svg id="simultaneityChart" role="img" aria-label="Matrix van gelijktijdige krapte met buurlanden"></svg>
+				</div>
+			</section>
+			<section class="panel insight-panel">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">Importkwetsbaarheid</p>
+						<h2>Als buren tegelijk krap zijn</h2>
+					</div>
+				</div>
+				<div id="importVulnerabilityList" class="insight-list" aria-label="Importkwetsbaarheid per buurland"></div>
+			</section>
+		</section>
+	</main>
 	<div id="tooltip" class="tooltip" role="status" hidden></div>
 </div>
 

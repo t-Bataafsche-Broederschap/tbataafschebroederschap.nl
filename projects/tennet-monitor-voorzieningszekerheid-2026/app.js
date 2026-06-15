@@ -10,6 +10,9 @@ const tabPanels = document.querySelectorAll(".tab-panel");
 const summaryCards = document.querySelector("#summaryCards");
 const tooltip = document.querySelector("#tooltip");
 const weatherMeta = document.querySelector("#weatherMeta");
+const normBreakdownList = document.querySelector("#normBreakdownList");
+const capacityMechanismList = document.querySelector("#capacityMechanismList");
+const importVulnerabilityList = document.querySelector("#importVulnerabilityList");
 
 const svgs = {
 	lole: d3.select("#loleChart"),
@@ -97,6 +100,30 @@ function mainResult(scenario = state.scenario, year = state.year) {
 
 function rowsForMetric(metric) {
 	return data.weatherDistributions.filter((row) => row.metric === metric && row.scenario === state.scenario && row.year === state.year && Number.isFinite(row.value));
+}
+
+function missingCapacityPoints(year = state.year) {
+	const rows = data.missingCapacity.filter((row) => row.year === year && Number.isFinite(row.resultingLole));
+	return d3
+		.rollups(
+			rows,
+			(values) => ({
+				case: values[0]?.case || "",
+				iteration: values[0]?.iteration || "",
+				addedNl: d3.sum(
+					values.filter((row) => row.attribute.includes("NL")),
+					(row) => row.addedCapacityGw || 0
+				),
+				addedAbroad: d3.sum(
+					values.filter((row) => row.attribute.includes("abroad")),
+					(row) => row.addedCapacityGw || 0
+				),
+				lole: d3.mean(values, (row) => row.resultingLole),
+			}),
+			(row) => `${row.case} ${row.iteration}`.trim()
+		)
+		.map(([label, value]) => ({ label, ...value, totalAdded: value.addedNl + value.addedAbroad }))
+		.sort((a, b) => a.totalAdded - b.totalAdded);
 }
 
 function chartSize(svg, preferredHeight = 420) {
@@ -207,6 +234,55 @@ function renderSummary() {
 	);
 }
 
+function renderNormBreakdown() {
+	const rows = visibleScenarios().map((scenario) => {
+		const scenarioRows = data.mainResults.filter((row) => row.scenario === scenario.key).sort((a, b) => a.year - b.year);
+		const firstAbove = scenarioRows.find((row) => row.lole > state.norm);
+		const worst = [...scenarioRows].sort((a, b) => b.lole - a.lole)[0];
+		return {
+			scenario: scenario.label,
+			firstAbove,
+			worst,
+			overshoot: worst ? Math.max(0, worst.lole - state.norm) : null,
+		};
+	});
+
+	normBreakdownList.replaceChildren(
+		...rows.map((row) => {
+			const item = document.createElement("article");
+			item.innerHTML = `<span>${row.scenario}</span><strong>${row.firstAbove ? row.firstAbove.year : "blijft onder norm"}</strong><small>${row.worst ? `piek ${formatHours(row.worst.lole)} · ${formatHours(row.overshoot)} boven norm` : "geen LOLE-data"}</small>`;
+			return item;
+		})
+	);
+}
+
+function renderCapacityMechanismSummary() {
+	const points = missingCapacityPoints();
+	if (!points.length) {
+		capacityMechanismList.replaceChildren();
+		return;
+	}
+
+	const european = points.filter((point) => point.case === "European capacity expansion");
+	const onlyNl = points.filter((point) => point.case === "Only NL");
+	const baseline = points.find((point) => point.totalAdded === 0);
+	const requiredEurope = european.find((point) => point.lole <= state.norm);
+	const requiredNl = onlyNl.find((point) => point.lole <= state.norm);
+	const items = [
+		["Startpunt", baseline ? formatHours(baseline.lole) : "-"],
+		["Europa + NL onder norm", requiredEurope ? `${formatGw(requiredEurope.totalAdded)} extra` : "niet in stappenreeks"],
+		["Alleen NL onder norm", requiredNl ? `${formatGw(requiredNl.addedNl)} extra` : "niet in stappenreeks"],
+	];
+
+	capacityMechanismList.replaceChildren(
+		...items.map(([label, value]) => {
+			const item = document.createElement("article");
+			item.innerHTML = `<span>${label}</span><strong>${value}</strong><small>High Demand analyse ${state.year}</small>`;
+			return item;
+		})
+	);
+}
+
 function renderLoleChart() {
 	const rows = data.mainResults.filter((row) => row.scenario !== "reference" && Number.isFinite(row.lole));
 	if (!rows.length) return emptyChart(svgs.lole, "Geen LOLE-data beschikbaar.", 440);
@@ -301,32 +377,14 @@ function renderLoleChart() {
 }
 
 function renderMissingCapacityChart() {
-	const rows = data.missingCapacity.filter((row) => row.year === state.year && Number.isFinite(row.resultingLole));
-	if (!rows.length) return emptyChart(svgs.missing, "Beschikbaar voor 2030 en 2035 High Demand.", 340);
+	const grouped = missingCapacityPoints();
+	renderCapacityMechanismSummary();
+	if (!grouped.length) return emptyChart(svgs.missing, "Beschikbaar voor 2030 en 2035 High Demand.", 340);
 	const svg = svgs.missing;
 	const { width, height } = chartSize(svg, 360);
 	const margin = { top: 22, right: 18, bottom: 52, left: 58 };
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
-
-	const grouped = d3
-		.rollups(
-			rows,
-			(values) => ({
-				addedNl: d3.sum(
-					values.filter((row) => row.attribute.includes("NL")),
-					(row) => row.addedCapacityGw || 0
-				),
-				addedAbroad: d3.sum(
-					values.filter((row) => row.attribute.includes("abroad")),
-					(row) => row.addedCapacityGw || 0
-				),
-				lole: d3.mean(values, (row) => row.resultingLole),
-			}),
-			(row) => `${row.case} ${row.iteration}`.trim()
-		)
-		.map(([label, value]) => ({ label, ...value, totalAdded: value.addedNl + value.addedAbroad }))
-		.sort((a, b) => a.totalAdded - b.totalAdded);
 
 	const x = d3
 		.scaleLinear()
@@ -703,8 +761,20 @@ function renderWeeklyDemandChart() {
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
 
-	root.append("g").attr("class", "axis heat-axis").call(d3.axisLeft(y).tickFormat((value) => dayLabels[value]));
-	root.append("g").attr("class", "axis heat-axis").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).tickValues([0, 6, 12, 18, 23]).tickFormat((value) => `${value}:00`));
+	root
+		.append("g")
+		.attr("class", "axis heat-axis")
+		.call(d3.axisLeft(y).tickFormat((value) => dayLabels[value]));
+	root
+		.append("g")
+		.attr("class", "axis heat-axis")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(
+			d3
+				.axisBottom(x)
+				.tickValues([0, 6, 12, 18, 23])
+				.tickFormat((value) => `${value}:00`)
+		);
 }
 
 function renderSimultaneityChart() {
@@ -742,15 +812,58 @@ function renderSimultaneityChart() {
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
 
-	root.append("g").attr("class", "axis heat-axis").call(d3.axisLeft(y).tickFormat((value) => objectLabels[value] || value));
-	root.append("g").attr("class", "axis heat-axis").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).tickFormat((value) => objectLabels[value] || value));
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", -18).attr("text-anchor", "middle").text(`${state.year}: kans op gelijktijdige krapte`);
+	root
+		.append("g")
+		.attr("class", "axis heat-axis")
+		.call(d3.axisLeft(y).tickFormat((value) => objectLabels[value] || value));
+	root
+		.append("g")
+		.attr("class", "axis heat-axis")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(d3.axisBottom(x).tickFormat((value) => objectLabels[value] || value));
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", -18)
+		.attr("text-anchor", "middle")
+		.text(`${state.year}: kans op gelijktijdige krapte`);
+}
+
+function renderImportVulnerability() {
+	const shortageImport = data.systemMix.imports.find((row) => row.year === state.year && row.scenario === state.scenario && row.state === "Shortage hour")?.value;
+	const byObject = d3.rollup(
+		data.simultaneity.filter((row) => row.year === state.year && row.objectA === "NL00" && row.objectB !== "NL00" && Number.isFinite(row.probability)),
+		(values) => d3.max(values, (row) => row.probability),
+		(row) => row.objectB
+	);
+	const rows = [...byObject]
+		.map(([objectB, probability]) => ({
+			objectB,
+			probability,
+			score: Number.isFinite(shortageImport) ? probability * shortageImport : probability,
+		}))
+		.sort((a, b) => b.score - a.score);
+
+	if (!rows.length) {
+		importVulnerabilityList.replaceChildren();
+		return;
+	}
+
+	importVulnerabilityList.replaceChildren(
+		...rows.map((row) => {
+			const item = document.createElement("article");
+			item.innerHTML = `<span>${objectLabels[row.objectB] || row.objectB}</span><strong>${formatPct(row.probability)}</strong><small>${Number.isFinite(shortageImport) ? `${formatGw(shortageImport)} import in tekorturen · score ${numberFormat.format(row.score)}` : "gelijktijdige krapte met NL"}</small>`;
+			return item;
+		})
+	);
 }
 
 function renderActiveTab() {
 	if (state.tab === "scarcity") {
 		renderLoleChart();
 		renderMissingCapacityChart();
+		renderNormBreakdown();
 	} else if (state.tab === "events") {
 		renderWeatherChart();
 		renderDurationChart();
@@ -761,6 +874,7 @@ function renderActiveTab() {
 		renderImportChart();
 		renderWeeklyDemandChart();
 		renderSimultaneityChart();
+		renderImportVulnerability();
 	}
 }
 

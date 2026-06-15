@@ -1,0 +1,64 @@
+﻿Target Year,Scenario,Sector,Sum of Value numbers only
+2025,Reference,Agriculture,8.1
+2025,Reference,Buildings,49.7
+2025,Reference,Datacenters,8.5
+2025,Reference,Energy,3.5
+2025,Reference,Industry (incl. transformation),39.6
+2025,Reference,Others,5.0
+2025,Reference,Transport,5.9
+2028,high demand,Agriculture,9.2
+2028,high demand,Buildings,55.7
+2028,high demand,Datacenters,15.9
+2028,high demand,Energy,2.7
+2028,high demand,Industry (incl. transformation),43.6
+2028,high demand,Others,6.6
+2028,high demand,Transport,13.0
+2028,low demand,Agriculture,8.1
+2028,low demand,Buildings,49.7
+2028,low demand,Datacenters,8.5
+2028,low demand,Energy,3.5
+2028,low demand,Industry (incl. transformation),39.6
+2028,low demand,Others,5.0
+2028,low demand,Transport,5.9
+2030,high demand,Agriculture,10.0
+2030,high demand,Buildings,53.9
+2030,high demand,Datacenters,20.0
+2030,high demand,Energy,5.9
+2030,high demand,Industry (incl. transformation),46.3
+2030,high demand,Others,7.4
+2030,high demand,Transport,16.7
+2030,low demand,Agriculture,9.2
+2030,low demand,Buildings,55.7
+2030,low demand,Datacenters,15.9
+2030,low demand,Energy,2.7
+2030,low demand,Industry (incl. transformation),43.6
+2030,low demand,Others,6.6
+2030,low demand,Transport,13.0
+2033,high demand,Agriculture,10.4
+2033,high demand,Buildings,59.4
+2033,high demand,Datacenters,24.1
+2033,high demand,Energy,6.6
+2033,high demand,Industry (incl. transformation),53.9
+2033,high demand,Others,8.7
+2033,high demand,Transport,25.2
+2033,low demand,Agriculture,10.0
+2033,low demand,Buildings,53.9
+2033,low demand,Datacenters,20.0
+2033,low demand,Energy,5.9
+2033,low demand,Industry (incl. transformation),46.3
+2033,low demand,Others,7.4
+2033,low demand,Transport,16.7
+2035,high demand,Agriculture,9.8
+2035,high demand,Buildings,62.5
+2035,high demand,Datacenters,26.8
+2035,high demand,Energy,8.4
+2035,high demand,Industry (incl. transformation),57.1
+2035,high demand,Others,9.4
+2035,high demand,Transport,31.8
+2035,low demand,Agriculture,10.4
+2035,low demand,Buildings,59.4
+2035,low demand,Datacenters,24.1
+2035,low demand,Energy,6.6
+2035,low demand,Industry (incl. transformation),53.9
+2035,low demand,Others,8.7
+2035,low demand,Transport,25.2

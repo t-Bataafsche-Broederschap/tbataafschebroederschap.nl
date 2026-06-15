@@ -1,0 +1,281 @@
+﻿Target Year,Country,Category,Sum of Value-GW
+2028,Belgium,Coal,0.4
+2028,Denmark,Coal,2.4
+2028,France,Coal,0.0
+2028,Germany,Coal,14.2
+2028,Netherlands,Coal,2.9
+2028,Norway,Coal,0.0
+2028,UK,Coal,0.0
+2030,Belgium,Coal,0.4
+2030,Denmark,Coal,2.0
+2030,France,Coal,0.0
+2030,Germany,Coal,14.9
+2030,Netherlands,Coal,0.0
+2030,Norway,Coal,0.0
+2030,UK,Coal,0.0
+2033,Belgium,Coal,0.4
+2033,Denmark,Coal,1.7
+2033,France,Coal,0.0
+2033,Germany,Coal,9.1
+2033,Netherlands,Coal,0.0
+2033,Norway,Coal,0.0
+2033,UK,Coal,0.0
+2035,Belgium,Coal,0.4
+2035,Denmark,Coal,1.3
+2035,France,Coal,0.0
+2035,Germany,Coal,4.8
+2035,Netherlands,Coal,0.0
+2035,Norway,Coal,0.0
+2035,UK,Coal,0.0
+2028,Belgium,Gas,5.3
+2028,Denmark,Gas,1.7
+2028,France,Gas,6.7
+2028,Germany,Gas,29.7
+2028,Netherlands,Gas,12.2
+2028,Norway,Gas,0.0
+2028,UK,Gas,29.1
+2030,Belgium,Gas,7.2
+2030,Denmark,Gas,2.2
+2030,France,Gas,6.7
+2030,Germany,Gas,32.3
+2030,Netherlands,Gas,11.0
+2030,Norway,Gas,0.0
+2030,UK,Gas,31.1
+2033,Belgium,Gas,7.2
+2033,Denmark,Gas,4.5
+2033,France,Gas,6.7
+2033,Germany,Gas,49.3
+2033,Netherlands,Gas,9.8
+2033,Norway,Gas,0.0
+2033,UK,Gas,32.0
+2035,Belgium,Gas,7.2
+2035,Denmark,Gas,4.5
+2035,France,Gas,2.9
+2035,Germany,Gas,55.6
+2035,Netherlands,Gas,9.3
+2035,Norway,Gas,0.0
+2035,UK,Gas,35.5
+2028,Belgium,Hydro,1.4
+2028,Denmark,Hydro,0.0
+2028,France,Hydro,27.1
+2028,Germany,Hydro,13.5
+2028,Netherlands,Hydro,0.0
+2028,Norway,Hydro,33.2
+2028,UK,Hydro,4.7
+2030,Belgium,Hydro,1.5
+2030,Denmark,Hydro,0.0
+2030,France,Hydro,27.2
+2030,Germany,Hydro,13.9
+2030,Netherlands,Hydro,0.0
+2030,Norway,Hydro,34.1
+2030,UK,Hydro,5.5
+2033,Belgium,Hydro,1.5
+2033,Denmark,Hydro,0.0
+2033,France,Hydro,27.2
+2033,Germany,Hydro,14.1
+2033,Netherlands,Hydro,0.0
+2033,Norway,Hydro,34.2
+2033,UK,Hydro,6.1
+2035,Belgium,Hydro,1.5
+2035,Denmark,Hydro,0.0
+2035,France,Hydro,27.7
+2035,Germany,Hydro,14.5
+2035,Netherlands,Hydro,0.0
+2035,Norway,Hydro,43.0
+2035,UK,Hydro,6.1
+2028,Belgium,Nuclear,2.1
+2028,Denmark,Nuclear,0.0
+2028,France,Nuclear,63.0
+2028,Germany,Nuclear,0.0
+2028,Netherlands,Nuclear,0.5
+2028,Norway,Nuclear,0.0
+2028,UK,Nuclear,3.7
+2030,Belgium,Nuclear,2.1
+2030,Denmark,Nuclear,0.0
+2030,France,Nuclear,63.0
+2030,Germany,Nuclear,0.0
+2030,Netherlands,Nuclear,0.5
+2030,Norway,Nuclear,0.0
+2030,UK,Nuclear,2.9
+2033,Belgium,Nuclear,2.1
+2033,Denmark,Nuclear,0.0
+2033,France,Nuclear,63.0
+2033,Germany,Nuclear,0.0
+2033,Netherlands,Nuclear,0.5
+2033,Norway,Nuclear,0.0
+2033,UK,Nuclear,4.6
+2035,Belgium,Nuclear,2.1
+2035,Denmark,Nuclear,0.0
+2035,France,Nuclear,63.0
+2035,Germany,Nuclear,0.0
+2035,Netherlands,Nuclear,0.5
+2035,Norway,Nuclear,0.0
+2035,UK,Nuclear,6.0
+2028,Belgium,Oil,0.1
+2028,Denmark,Oil,0.7
+2028,France,Oil,0.0
+2028,Germany,Oil,1.2
+2028,Netherlands,Oil,0.0
+2028,Norway,Oil,0.0
+2028,UK,Oil,0.3
+2030,Belgium,Oil,0.1
+2030,Denmark,Oil,0.7
+2030,France,Oil,0.0
+2030,Germany,Oil,1.2
+2030,Netherlands,Oil,0.0
+2030,Norway,Oil,0.0
+2030,UK,Oil,0.3
+2033,Belgium,Oil,0.1
+2033,Denmark,Oil,0.7
+2033,France,Oil,0.0
+2033,Germany,Oil,0.7
+2033,Netherlands,Oil,0.0
+2033,Norway,Oil,0.0
+2033,UK,Oil,0.4
+2035,Belgium,Oil,0.1
+2035,Denmark,Oil,0.7
+2035,France,Oil,0.0
+2035,Germany,Oil,0.3
+2035,Netherlands,Oil,0.0
+2035,Norway,Oil,0.0
+2035,UK,Oil,0.1
+2028,Belgium,Other non-RES,1.5
+2028,Denmark,Other non-RES,0.0
+2028,France,Other non-RES,5.1
+2028,Germany,Other non-RES,8.1
+2028,Netherlands,Other non-RES,3.2
+2028,Norway,Other non-RES,0.0
+2028,UK,Other non-RES,0.1
+2030,Belgium,Other non-RES,1.6
+2030,Denmark,Other non-RES,0.0
+2030,France,Other non-RES,4.8
+2030,Germany,Other non-RES,6.2
+2030,Netherlands,Other non-RES,3.1
+2030,Norway,Other non-RES,0.0
+2030,UK,Other non-RES,0.1
+2033,Belgium,Other non-RES,1.6
+2033,Denmark,Other non-RES,0.0
+2033,France,Other non-RES,3.8
+2033,Germany,Other non-RES,3.8
+2033,Netherlands,Other non-RES,2.6
+2033,Norway,Other non-RES,0.0
+2033,UK,Other non-RES,0.1
+2035,Belgium,Other non-RES,1.6
+2035,Denmark,Other non-RES,0.0
+2035,France,Other non-RES,2.8
+2035,Germany,Other non-RES,2.9
+2035,Netherlands,Other non-RES,2.3
+2035,Norway,Other non-RES,0.0
+2035,UK,Other non-RES,0.1
+2028,Belgium,Other RES,0.6
+2028,Denmark,Other RES,0.0
+2028,France,Other RES,1.8
+2028,Germany,Other RES,12.4
+2028,Netherlands,Other RES,1.4
+2028,Norway,Other RES,0.0
+2028,UK,Other RES,7.9
+2030,Belgium,Other RES,0.6
+2030,Denmark,Other RES,0.0
+2030,France,Other RES,1.8
+2030,Germany,Other RES,12.8
+2030,Netherlands,Other RES,1.4
+2030,Norway,Other RES,0.0
+2030,UK,Other RES,8.1
+2033,Belgium,Other RES,0.6
+2033,Denmark,Other RES,0.0
+2033,France,Other RES,1.9
+2033,Germany,Other RES,11.4
+2033,Netherlands,Other RES,1.5
+2033,Norway,Other RES,0.0
+2033,UK,Other RES,8.2
+2035,Belgium,Other RES,0.6
+2035,Denmark,Other RES,0.0
+2035,France,Other RES,1.9
+2035,Germany,Other RES,10.4
+2035,Netherlands,Other RES,1.5
+2035,Norway,Other RES,0.0
+2035,UK,Other RES,8.7
+2028,Belgium,Solar Photovoltaic,13.9
+2028,Denmark,Solar Photovoltaic,16.5
+2028,France,Solar Photovoltaic,37.9
+2028,Germany,Solar Photovoltaic,137.9
+2028,Netherlands,Solar Photovoltaic,37.0
+2028,Norway,Solar Photovoltaic,4.1
+2028,UK,Solar Photovoltaic,28.6
+2030,Belgium,Solar Photovoltaic,15.6
+2030,Denmark,Solar Photovoltaic,25.5
+2030,France,Solar Photovoltaic,47.0
+2030,Germany,Solar Photovoltaic,169.7
+2030,Netherlands,Solar Photovoltaic,42.2
+2030,Norway,Solar Photovoltaic,5.6
+2030,UK,Solar Photovoltaic,34.1
+2033,Belgium,Solar Photovoltaic,18.3
+2033,Denmark,Solar Photovoltaic,34.0
+2033,France,Solar Photovoltaic,61.8
+2033,Germany,Solar Photovoltaic,220.8
+2033,Netherlands,Solar Photovoltaic,48.3
+2033,Norway,Solar Photovoltaic,6.7
+2033,UK,Solar Photovoltaic,43.6
+2035,Belgium,Solar Photovoltaic,20.1
+2035,Denmark,Solar Photovoltaic,38.2
+2035,France,Solar Photovoltaic,72.1
+2035,Germany,Solar Photovoltaic,248.4
+2035,Netherlands,Solar Photovoltaic,52.4
+2035,Norway,Solar Photovoltaic,7.4
+2035,UK,Solar Photovoltaic,49.6
+2028,Belgium,Wind Offshore,2.3
+2028,Denmark,Wind Offshore,3.7
+2028,France,Wind Offshore,3.0
+2028,Germany,Wind Offshore,15.4
+2028,Netherlands,Wind Offshore,6.0
+2028,Norway,Wind Offshore,0.0
+2028,UK,Wind Offshore,28.7
+2030,Belgium,Wind Offshore,2.3
+2030,Denmark,Wind Offshore,4.1
+2030,France,Wind Offshore,3.0
+2030,Germany,Wind Offshore,24.4
+2030,Netherlands,Wind Offshore,8.9
+2030,Norway,Wind Offshore,0.0
+2030,UK,Wind Offshore,46.4
+2033,Belgium,Wind Offshore,4.4
+2033,Denmark,Wind Offshore,5.3
+2033,France,Wind Offshore,9.6
+2033,Germany,Wind Offshore,42.4
+2033,Netherlands,Wind Offshore,15.8
+2033,Norway,Wind Offshore,0.0
+2033,UK,Wind Offshore,63.6
+2035,Belgium,Wind Offshore,5.8
+2035,Denmark,Wind Offshore,10.8
+2035,France,Wind Offshore,18.0
+2035,Germany,Wind Offshore,50.4
+2035,Netherlands,Wind Offshore,19.8
+2035,Norway,Wind Offshore,2.8
+2035,UK,Wind Offshore,77.3
+2028,Belgium,Wind Onshore,4.7
+2028,Denmark,Wind Onshore,5.6
+2028,France,Wind Onshore,27.7
+2028,Germany,Wind Onshore,79.9
+2028,Netherlands,Wind Onshore,7.4
+2028,Norway,Wind Onshore,5.1
+2028,UK,Wind Onshore,22.5
+2030,Belgium,Wind Onshore,5.6
+2030,Denmark,Wind Onshore,6.5
+2030,France,Wind Onshore,30.5
+2030,Germany,Wind Onshore,94.5
+2030,Netherlands,Wind Onshore,7.6
+2030,Norway,Wind Onshore,5.2
+2030,UK,Wind Onshore,27.8
+2033,Belgium,Wind Onshore,6.6
+2033,Denmark,Wind Onshore,7.0
+2033,France,Wind Onshore,34.7
+2033,Germany,Wind Onshore,129.0
+2033,Netherlands,Wind Onshore,8.0
+2033,Norway,Wind Onshore,5.6
+2033,UK,Wind Onshore,31.0
+2035,Belgium,Wind Onshore,7.3
+2035,Denmark,Wind Onshore,7.0
+2035,France,Wind Onshore,37.6
+2035,Germany,Wind Onshore,157.0
+2035,Netherlands,Wind Onshore,8.2
+2035,Norway,Wind Onshore,6.3
+2035,UK,Wind Onshore,33.6

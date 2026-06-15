@@ -1,0 +1,12 @@
+﻿Scenario,Iteration,Attribute,Average of Value,Average of Resulting LOLE,Sum of LOLE 2
+Start LOLE,"",Added capacity abroad,0.00,46,
+Start LOLE,"",Added capacity NL,0.00,46,
+European capacity expansion,Iteration 1,Added capacity abroad,11.70,25.6,
+European capacity expansion,Iteration 1,Added capacity NL,1.30,25.6,
+European capacity expansion,Iteration 2,Added capacity abroad,18.30,15.7,
+European capacity expansion,Iteration 2,Added capacity NL,2.10,15.7,
+European capacity expansion,Iteration 3,Added capacity abroad,22.40,12.6,
+European capacity expansion,Iteration 3,Added capacity NL,2.50,12.6,
+European capacity expansion,Iteration 4,Added capacity abroad,25.40,10.5,
+European capacity expansion,Iteration 4,Added capacity NL,2.80,10.5,
+Only NL,"",Added capacity NL,15.10,,5.4

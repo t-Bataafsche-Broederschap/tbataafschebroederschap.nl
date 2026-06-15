@@ -1,0 +1,73 @@
+﻿Attribute,Average of Value,Category,TargetYear
+Yearly fixed cost high,162.7,2h battery,2028
+Yearly fixed cost high,163.9,2h battery,2030
+Yearly fixed cost high,170.7,2h battery,2033
+Yearly fixed cost high,177.5,2h battery,2035
+Yearly fixed cost low,90.5,2h battery,2028
+Yearly fixed cost low,85.2,2h battery,2030
+Yearly fixed cost low,87.6,2h battery,2033
+Yearly fixed cost low,85.8,2h battery,2035
+Yearly fixed cost medium,131.4,2h battery,2028
+Yearly fixed cost medium,129.7,2h battery,2030
+Yearly fixed cost medium,131.4,2h battery,2033
+Yearly fixed cost medium,134.4,2h battery,2035
+Yearly fixed cost high,211.7,4h battery,2028
+Yearly fixed cost high,207.7,4h battery,2030
+Yearly fixed cost high,209.2,4h battery,2033
+Yearly fixed cost high,213.2,4h battery,2035
+Yearly fixed cost low,126.8,4h battery,2028
+Yearly fixed cost low,115.5,4h battery,2030
+Yearly fixed cost low,109.9,4h battery,2033
+Yearly fixed cost low,99.2,4h battery,2035
+Yearly fixed cost medium,180.5,4h battery,2028
+Yearly fixed cost medium,173.4,4h battery,2030
+Yearly fixed cost medium,169.8,4h battery,2033
+Yearly fixed cost medium,170.1,4h battery,2035
+Yearly fixed cost high,50.0,DSR,2028
+Yearly fixed cost high,50.0,DSR,2030
+Yearly fixed cost high,50.0,DSR,2033
+Yearly fixed cost high,50.0,DSR,2035
+Yearly fixed cost low,0.0,DSR,2028
+Yearly fixed cost low,0.0,DSR,2030
+Yearly fixed cost low,0.0,DSR,2033
+Yearly fixed cost low,0.0,DSR,2035
+Yearly fixed cost medium,15.0,DSR,2028
+Yearly fixed cost medium,15.0,DSR,2030
+Yearly fixed cost medium,15.0,DSR,2033
+Yearly fixed cost medium,15.0,DSR,2035
+Yearly fixed cost high,67.1,Gas CCGT 44,2028
+Yearly fixed cost high,67.1,Gas CCGT 44,2030
+Yearly fixed cost high,67.1,Gas CCGT 44,2033
+Yearly fixed cost high,67.1,Gas CCGT 44,2035
+Yearly fixed cost low,39.7,Gas CCGT 44,2028
+Yearly fixed cost low,39.7,Gas CCGT 44,2030
+Yearly fixed cost low,39.7,Gas CCGT 44,2033
+Yearly fixed cost low,39.7,Gas CCGT 44,2035
+Yearly fixed cost medium,53.4,Gas CCGT 44,2028
+Yearly fixed cost medium,53.4,Gas CCGT 44,2030
+Yearly fixed cost medium,53.4,Gas CCGT 44,2033
+Yearly fixed cost medium,53.4,Gas CCGT 44,2035
+Yearly fixed cost high,67.1,Gas CCGT 52,2028
+Yearly fixed cost high,67.1,Gas CCGT 52,2030
+Yearly fixed cost high,67.1,Gas CCGT 52,2033
+Yearly fixed cost high,67.1,Gas CCGT 52,2035
+Yearly fixed cost low,39.7,Gas CCGT 52,2028
+Yearly fixed cost low,39.7,Gas CCGT 52,2030
+Yearly fixed cost low,39.7,Gas CCGT 52,2033
+Yearly fixed cost low,39.7,Gas CCGT 52,2035
+Yearly fixed cost medium,53.4,Gas CCGT 52,2028
+Yearly fixed cost medium,53.4,Gas CCGT 52,2030
+Yearly fixed cost medium,53.4,Gas CCGT 52,2033
+Yearly fixed cost medium,53.4,Gas CCGT 52,2035
+Yearly fixed cost high,67.1,Gas CCGT 58,2028
+Yearly fixed cost high,67.1,Gas CCGT 58,2030
+Yearly fixed cost high,67.1,Gas CCGT 58,2033
+Yearly fixed cost high,67.1,Gas CCGT 58,2035
+Yearly fixed cost low,39.7,Gas CCGT 58,2028
+Yearly fixed cost low,39.7,Gas CCGT 58,2030
+Yearly fixed cost low,39.7,Gas CCGT 58,2033
+Yearly fixed cost low,39.7,Gas CCGT 58,2035
+Yearly fixed cost medium,53.4,Gas CCGT 58,2028
+Yearly fixed cost medium,53.4,Gas CCGT 58,2030
+Yearly fixed cost medium,53.4,Gas CCGT 58,2033
+Yearly fixed cost medium,53.4,Gas CCGT 58,2035

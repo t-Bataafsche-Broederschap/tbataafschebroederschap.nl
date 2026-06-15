@@ -1,0 +1,36 @@
+﻿Target Year,Scenario,Sum of Value numbers only,Subsector
+2025,Ref,0.4,Batteries - colocated solar PV
+2025,Ref,0.2,Batteries - colocated wind onshore
+2025,Ref,1.3,Batteries - households
+2025,Ref,0.0,Batteries - large-scale long
+2025,Ref,0.0,Batteries - large-scale medium
+2025,Ref,1.0,Batteries - large-scale short
+2025,Ref,0.0,Batteries - V2G
+2028,high demand,2.4,Batteries - colocated solar PV
+2028,high demand,0.4,Batteries - colocated wind onshore
+2028,high demand,2.3,Batteries - households
+2028,high demand,0.0,Batteries - large-scale long
+2028,high demand,3.8,Batteries - large-scale medium
+2028,high demand,4.4,Batteries - large-scale short
+2028,high demand,0.4,Batteries - V2G
+2030,high demand,3.7,Batteries - colocated solar PV
+2030,high demand,0.7,Batteries - colocated wind onshore
+2030,high demand,3.6,Batteries - households
+2030,high demand,0.0,Batteries - large-scale long
+2030,high demand,9.5,Batteries - large-scale medium
+2030,high demand,4.8,Batteries - large-scale short
+2030,high demand,0.8,Batteries - V2G
+2033,high demand,4.8,Batteries - colocated solar PV
+2033,high demand,1.1,Batteries - colocated wind onshore
+2033,high demand,7.0,Batteries - households
+2033,high demand,2.4,Batteries - large-scale long
+2033,high demand,17.1,Batteries - large-scale medium
+2033,high demand,3.7,Batteries - large-scale short
+2033,high demand,2.9,Batteries - V2G
+2035,high demand,5.5,Batteries - colocated solar PV
+2035,high demand,1.5,Batteries - colocated wind onshore
+2035,high demand,9.3,Batteries - households
+2035,high demand,5.6,Batteries - large-scale long
+2035,high demand,21.8,Batteries - large-scale medium
+2035,high demand,2.7,Batteries - large-scale short
+2035,high demand,5.1,Batteries - V2G

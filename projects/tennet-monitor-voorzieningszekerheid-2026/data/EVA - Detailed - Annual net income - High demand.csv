@@ -1,0 +1,181 @@
+﻿Category,TargetYear,Average of Value,Attribute
+2h battery,2028,0.0,Other revenues
+2h battery,2028,23.1,Ancillary services
+2h battery,2028,86.2,Option value shaping
+2h battery,2028,0.0,Option value futures markets
+2h battery,2028,8.4,Intrinsic market value
+2h battery,2030,0.0,Other revenues
+2h battery,2030,20.9,Ancillary services
+2h battery,2030,90.0,Option value shaping
+2h battery,2030,0.0,Option value futures markets
+2h battery,2030,14.4,Intrinsic market value
+2h battery,2033,0.0,Other revenues
+2h battery,2033,24.1,Ancillary services
+2h battery,2033,92.7,Option value shaping
+2h battery,2033,0.0,Option value futures markets
+2h battery,2033,12.5,Intrinsic market value
+2h battery,2035,0.0,Other revenues
+2h battery,2035,17.7,Ancillary services
+2h battery,2035,100.5,Option value shaping
+2h battery,2035,0.0,Option value futures markets
+2h battery,2035,15.2,Intrinsic market value
+4h battery,2028,0.0,Other revenues
+4h battery,2028,12.3,Ancillary services
+4h battery,2028,118.6,Option value shaping
+4h battery,2028,0.0,Option value futures markets
+4h battery,2028,14.1,Intrinsic market value
+4h battery,2030,0.0,Other revenues
+4h battery,2030,20.4,Ancillary services
+4h battery,2030,126.2,Option value shaping
+4h battery,2030,0.0,Option value futures markets
+4h battery,2030,22.7,Intrinsic market value
+4h battery,2033,0.0,Other revenues
+4h battery,2033,15.1,Ancillary services
+4h battery,2033,132.2,Option value shaping
+4h battery,2033,0.0,Option value futures markets
+4h battery,2033,24.5,Intrinsic market value
+4h battery,2035,0.0,Other revenues
+4h battery,2035,10.3,Ancillary services
+4h battery,2035,154.8,Option value shaping
+4h battery,2035,0.0,Option value futures markets
+4h battery,2035,31.4,Intrinsic market value
+DSR,2028,0.0,Other revenues
+DSR,2028,0.0,Ancillary services
+DSR,2028,0.0,Option value shaping
+DSR,2028,0.0,Option value futures markets
+DSR,2028,14.9,Intrinsic market value
+DSR,2030,0.0,Other revenues
+DSR,2030,0.0,Ancillary services
+DSR,2030,0.0,Option value shaping
+DSR,2030,0.0,Option value futures markets
+DSR,2030,63.6,Intrinsic market value
+DSR,2033,0.0,Other revenues
+DSR,2033,0.0,Ancillary services
+DSR,2033,0.0,Option value shaping
+DSR,2033,0.0,Option value futures markets
+DSR,2033,95.5,Intrinsic market value
+DSR,2035,0.0,Other revenues
+DSR,2035,0.0,Ancillary services
+DSR,2035,0.0,Option value shaping
+DSR,2035,0.0,Option value futures markets
+DSR,2035,193.7,Intrinsic market value
+Gas CCGT 44,2028,4.2,Other revenues
+Gas CCGT 44,2028,0.5,Ancillary services
+Gas CCGT 44,2028,0.5,Option value shaping
+Gas CCGT 44,2028,2.4,Option value futures markets
+Gas CCGT 44,2028,28.9,Intrinsic market value
+Gas CCGT 44,2030,5.4,Other revenues
+Gas CCGT 44,2030,0.7,Ancillary services
+Gas CCGT 44,2030,0.7,Option value shaping
+Gas CCGT 44,2030,2.1,Option value futures markets
+Gas CCGT 44,2030,106.2,Intrinsic market value
+Gas CCGT 44,2033,6.7,Other revenues
+Gas CCGT 44,2033,0.7,Ancillary services
+Gas CCGT 44,2033,0.7,Option value shaping
+Gas CCGT 44,2033,0.8,Option value futures markets
+Gas CCGT 44,2033,145.8,Intrinsic market value
+Gas CCGT 44,2035,5.3,Other revenues
+Gas CCGT 44,2035,0.7,Ancillary services
+Gas CCGT 44,2035,0.5,Option value shaping
+Gas CCGT 44,2035,0.6,Option value futures markets
+Gas CCGT 44,2035,288.9,Intrinsic market value
+Gas CCGT 52,2028,9.9,Other revenues
+Gas CCGT 52,2028,0.9,Ancillary services
+Gas CCGT 52,2028,2.3,Option value shaping
+Gas CCGT 52,2028,5.8,Option value futures markets
+Gas CCGT 52,2028,31.6,Intrinsic market value
+Gas CCGT 52,2030,19.0,Other revenues
+Gas CCGT 52,2030,1.6,Ancillary services
+Gas CCGT 52,2030,3.9,Option value shaping
+Gas CCGT 52,2030,6.9,Option value futures markets
+Gas CCGT 52,2030,112.9,Intrinsic market value
+Gas CCGT 52,2033,20.8,Other revenues
+Gas CCGT 52,2033,1.4,Ancillary services
+Gas CCGT 52,2033,3.1,Option value shaping
+Gas CCGT 52,2033,2.9,Option value futures markets
+Gas CCGT 52,2033,155.2,Intrinsic market value
+Gas CCGT 52,2035,9.1,Other revenues
+Gas CCGT 52,2035,1.2,Ancillary services
+Gas CCGT 52,2035,1.9,Option value shaping
+Gas CCGT 52,2035,2.6,Option value futures markets
+Gas CCGT 52,2035,295.6,Intrinsic market value
+Gas CCGT 58,2028,3.9,Other revenues
+Gas CCGT 58,2028,1.5,Ancillary services
+Gas CCGT 58,2028,4.5,Option value shaping
+Gas CCGT 58,2028,8.1,Option value futures markets
+Gas CCGT 58,2028,42.4,Intrinsic market value
+Gas CCGT 58,2030,3.7,Other revenues
+Gas CCGT 58,2030,2.3,Ancillary services
+Gas CCGT 58,2030,5.1,Option value shaping
+Gas CCGT 58,2030,8.1,Option value futures markets
+Gas CCGT 58,2030,135.3,Intrinsic market value
+Gas CCGT 58,2033,3.0,Other revenues
+Gas CCGT 58,2033,1.8,Ancillary services
+Gas CCGT 58,2033,3.7,Option value shaping
+Gas CCGT 58,2033,3.8,Option value futures markets
+Gas CCGT 58,2033,184.9,Intrinsic market value
+Gas CCGT 58,2035,2.5,Other revenues
+Gas CCGT 58,2035,1.4,Ancillary services
+Gas CCGT 58,2035,2.7,Option value shaping
+Gas CCGT 58,2035,4.0,Option value futures markets
+Gas CCGT 58,2035,335.1,Intrinsic market value
+Solar PV,2028,0.9,Other revenues
+Solar PV,2028,0.0,Ancillary services
+Solar PV,2028,0.9,Option value shaping
+Solar PV,2028,0.0,Option value futures markets
+Solar PV,2028,34.0,Intrinsic market value
+Solar PV,2030,0.9,Other revenues
+Solar PV,2030,0.0,Ancillary services
+Solar PV,2030,0.9,Option value shaping
+Solar PV,2030,0.0,Option value futures markets
+Solar PV,2030,39.3,Intrinsic market value
+Solar PV,2033,0.9,Other revenues
+Solar PV,2033,0.0,Ancillary services
+Solar PV,2033,0.9,Option value shaping
+Solar PV,2033,0.0,Option value futures markets
+Solar PV,2033,40.4,Intrinsic market value
+Solar PV,2035,0.9,Other revenues
+Solar PV,2035,0.0,Ancillary services
+Solar PV,2035,0.9,Option value shaping
+Solar PV,2035,0.0,Option value futures markets
+Solar PV,2035,39.1,Intrinsic market value
+Wind offshore,2028,4.9,Other revenues
+Wind offshore,2028,0.0,Ancillary services
+Wind offshore,2028,4.9,Option value shaping
+Wind offshore,2028,0.0,Option value futures markets
+Wind offshore,2028,226.1,Intrinsic market value
+Wind offshore,2030,4.5,Other revenues
+Wind offshore,2030,0.0,Ancillary services
+Wind offshore,2030,4.5,Option value shaping
+Wind offshore,2030,0.0,Option value futures markets
+Wind offshore,2030,277.7,Intrinsic market value
+Wind offshore,2033,4.2,Other revenues
+Wind offshore,2033,0.0,Ancillary services
+Wind offshore,2033,4.2,Option value shaping
+Wind offshore,2033,0.0,Option value futures markets
+Wind offshore,2033,271.5,Intrinsic market value
+Wind offshore,2035,4.6,Other revenues
+Wind offshore,2035,0.0,Ancillary services
+Wind offshore,2035,4.6,Option value shaping
+Wind offshore,2035,0.0,Option value futures markets
+Wind offshore,2035,244.3,Intrinsic market value
+Wind onshore,2028,2.5,Other revenues
+Wind onshore,2028,0.0,Ancillary services
+Wind onshore,2028,2.5,Option value shaping
+Wind onshore,2028,0.0,Option value futures markets
+Wind onshore,2028,111.5,Intrinsic market value
+Wind onshore,2030,2.5,Other revenues
+Wind onshore,2030,0.0,Ancillary services
+Wind onshore,2030,2.5,Option value shaping
+Wind onshore,2030,0.0,Option value futures markets
+Wind onshore,2030,126.2,Intrinsic market value
+Wind onshore,2033,2.5,Other revenues
+Wind onshore,2033,0.0,Ancillary services
+Wind onshore,2033,2.5,Option value shaping
+Wind onshore,2033,0.0,Option value futures markets
+Wind onshore,2033,116.8,Intrinsic market value
+Wind onshore,2035,2.3,Other revenues
+Wind onshore,2035,0.0,Ancillary services
+Wind onshore,2035,2.3,Option value shaping
+Wind onshore,2035,0.0,Option value futures markets
+Wind onshore,2035,105.2,Intrinsic market value

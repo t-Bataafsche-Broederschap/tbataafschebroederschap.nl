@@ -1,0 +1,43 @@
+﻿EVA category 2,Target Year,Attribute,Average of Value-GW
+Batteries,2028,Not assessed,2.5
+Batteries,2028,Possibly viable,3.1
+Batteries,2030,Not assessed,3.9
+Batteries,2030,Possibly viable,4.8
+Batteries,2033,Not assessed,6.5
+Batteries,2033,Possibly viable,2.1
+Batteries,2033,Likely viable,4.3
+Batteries,2035,Not assessed,8.3
+Batteries,2035,Possibly viable,1.4
+Batteries,2035,Likely viable,6.1
+DSR,2028,Not assessed,0.6
+DSR,2028,Possibly viable,0.5
+DSR,2028,Likely viable,0.4
+DSR,2030,Not assessed,0.6
+DSR,2030,Possibly viable,0.1
+DSR,2030,Likely viable,0.4
+DSR,2030,Very likely viable,0.4
+DSR,2033,Not assessed,0.8
+DSR,2033,Possibly viable,0.2
+DSR,2033,Very likely viable,0.9
+DSR,2035,Not assessed,0.9
+DSR,2035,Likely viable,0.2
+DSR,2035,Very likely viable,0.9
+Gas CCGT,2028,Not assessed,0.4
+Gas CCGT,2028,Viability at risk,0.8
+Gas CCGT,2028,Possibly viable,4.1
+Gas CCGT,2028,Likely viable,5.2
+Gas CCGT,2028,Very likely viable,0.9
+Gas CCGT,2030,Not assessed,0.4
+Gas CCGT,2030,Very likely viable,9.9
+Gas CCGT,2033,Not assessed,0.4
+Gas CCGT,2033,Very likely viable,8.8
+Gas CCGT,2035,Not assessed,0.4
+Gas CCGT,2035,Very likely viable,8.3
+Nuclear,2028,Very likely viable,0.5
+Nuclear,2030,Very likely viable,0.5
+Nuclear,2033,Very likely viable,0.5
+Nuclear,2035,Very likely viable,0.5
+Other,2028,Not assessed,8.3
+Other,2030,Not assessed,5.3
+Other,2033,Not assessed,4.8
+Other,2035,Not assessed,4.5

@@ -1,0 +1,16 @@
+﻿Target Year,Scenario,Sum of Value numbers only,Sector
+2025,Ref,29.3,Solar PV
+2025,Ref,4.7,Wind offshore
+2025,Ref,7.0,Wind onshore
+2028,high demand,37.0,Solar PV
+2028,high demand,6.0,Wind offshore
+2028,high demand,7.4,Wind onshore
+2030,high demand,42.2,Solar PV
+2030,high demand,8.9,Wind offshore
+2030,high demand,7.6,Wind onshore
+2033,high demand,48.3,Solar PV
+2033,high demand,15.8,Wind offshore
+2033,high demand,8.0,Wind onshore
+2035,high demand,52.4,Solar PV
+2035,high demand,19.8,Wind offshore
+2035,high demand,8.2,Wind onshore

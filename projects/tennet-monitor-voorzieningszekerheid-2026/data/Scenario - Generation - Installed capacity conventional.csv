@@ -1,0 +1,26 @@
+﻿Target Year,Scenario,Sum of Value numbers only,Sector
+2025,Ref,4.0,Coal
+2025,Ref,17.5,Gas
+2025,Ref,0.5,Nuclear
+2025,Ref,0.5,Other RES
+2025,Ref,0.8,Waste
+2028,high demand,2.9,Coal
+2028,high demand,15.4,Gas
+2028,high demand,0.5,Nuclear
+2028,high demand,0.6,Other RES
+2028,high demand,0.8,Waste
+2030,high demand,0.0,Coal
+2030,high demand,14.1,Gas
+2030,high demand,0.5,Nuclear
+2030,high demand,0.7,Other RES
+2030,high demand,0.8,Waste
+2033,high demand,0.0,Coal
+2033,high demand,12.4,Gas
+2033,high demand,0.5,Nuclear
+2033,high demand,0.7,Other RES
+2033,high demand,0.8,Waste
+2035,high demand,0.0,Coal
+2035,high demand,11.6,Gas
+2035,high demand,0.5,Nuclear
+2035,high demand,0.7,Other RES
+2035,high demand,0.8,Waste

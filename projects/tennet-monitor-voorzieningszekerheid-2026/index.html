@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>TenneT Monitor Voorzieningszekerheid 2026 | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactief dashboard bij de TenneT Monitor Voorzieningszekerheid 2026: krapte, tekortevents en systeemmix tot en met 2035." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/tennet-monitor-voorzieningszekerheid-2026/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<link rel="stylesheet" href="styles.css" />
+			<div class="tennet-security-page">
+				<header class="tennet-header">
+					<div>
+						<p class="eyebrow">TenneT Monitor Voorzieningszekerheid 2026</p>
+						<h1>Voorzienings<wbr />zekerheid onder druk</h1>
+					</div>
+					<p>Verken hoe tekorturen, weerscenario's, vraaggroei, import en flexibiliteit samen het Nederlandse elektriciteitssysteem richting 2035 vormen. De rode normlijn markeert de Nederlandse LOLE-norm van gemiddeld maximaal 4 tekorturen per jaar.</p>
+				</header>
+
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>LOLE staat voor Loss of Load Expectation: het verwachte aantal uren per jaar waarin niet aan de elektriciteitsvraag kan worden voldaan. EENS/ENS duidt de verwachte niet-geleverde energie aan.</p>
+						<p>Alle runtime-data komt uit de lokaal opgeslagen CSV-bestanden van de Monitor Voorzieningszekerheid 2026. De pagina haalt tijdens gebruik geen externe data op.</p>
+					</article>
+				</section>
+
+				<section class="tennet-controls panel" aria-label="Dashboardinstellingen">
+					<label>
+						<span>Scenario</span>
+						<select id="scenarioSelect"></select>
+					</label>
+					<label>
+						<span>Jaar</span>
+						<select id="yearSelect"></select>
+					</label>
+					<div class="metric-toggle" role="group" aria-label="Metriek voor weerscenario's">
+						<button class="active" type="button" data-metric="lole">LOLE</button>
+						<button type="button" data-metric="eens">EENS</button>
+					</div>
+					<nav class="tab-list" aria-label="TenneT dashboard tabs">
+						<button class="active" type="button" data-tab="scarcity">Krapte</button>
+						<button type="button" data-tab="events">Tekortevents</button>
+						<button type="button" data-tab="system">Systeemmix</button>
+					</nav>
+				</section>
+
+				<div id="summaryCards" class="summary-cards" aria-label="Samenvatting"></div>
+
+				<main class="tennet-dashboard">
+					<section class="tab-panel active" id="tab-scarcity" aria-labelledby="tab-scarcity-title">
+						<section class="panel chart-panel wide">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Krapte</p>
+									<h2 id="tab-scarcity-title">LOLE per scenario</h2>
+								</div>
+								<p class="chart-meta">Norm: 4 uur per jaar</p>
+							</div>
+							<div class="chart-wrap">
+								<svg id="loleChart" role="img" aria-label="LOLE per jaar en scenario"></svg>
+							</div>
+						</section>
+						<section class="panel chart-panel">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Capaciteit</p>
+									<h2>Missing-capacity analyse</h2>
+								</div>
+							</div>
+							<div class="chart-wrap compact">
+								<svg id="missingCapacityChart" role="img" aria-label="Extra capaciteit en resulterende LOLE"></svg>
+							</div>
+						</section>
+					</section>
+
+					<section class="tab-panel" id="tab-events" aria-labelledby="tab-events-title" hidden>
+						<section class="panel chart-panel wide">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Weerscenario's</p>
+									<h2 id="tab-events-title">Risicowaaier</h2>
+								</div>
+								<p id="weatherMeta" class="chart-meta"></p>
+							</div>
+							<div class="chart-wrap">
+								<svg id="weatherChart" role="img" aria-label="Verdeling over weerscenario's"></svg>
+							</div>
+						</section>
+						<section class="panel chart-panel">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">ENS</p>
+									<h2>Tekort-duurcurve</h2>
+								</div>
+							</div>
+							<div class="chart-wrap compact">
+								<svg id="durationChart" role="img" aria-label="ENS duurcurve"></svg>
+							</div>
+						</section>
+						<section class="panel chart-panel">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Events</p>
+									<h2>Grootte en duur</h2>
+								</div>
+							</div>
+							<div class="chart-wrap compact">
+								<svg id="eventChart" role="img" aria-label="Tekortevent-grootte en duur"></svg>
+							</div>
+						</section>
+					</section>
+
+					<section class="tab-panel" id="tab-system" aria-labelledby="tab-system-title" hidden>
+						<section class="panel chart-panel wide">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Vraag</p>
+									<h2 id="tab-system-title">Elektriciteitsvraag per sector</h2>
+								</div>
+							</div>
+							<div class="chart-wrap">
+								<svg id="demandChart" role="img" aria-label="Vraag per sector"></svg>
+							</div>
+						</section>
+						<section class="panel chart-panel">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Mix</p>
+									<h2>Capaciteit en flexibiliteit</h2>
+								</div>
+							</div>
+							<div class="chart-wrap compact">
+								<svg id="capacityChart" role="img" aria-label="Capaciteit en flexibiliteit"></svg>
+							</div>
+						</section>
+						<section class="panel chart-panel">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Import</p>
+									<h2>Normale uren versus tekorturen</h2>
+								</div>
+							</div>
+							<div class="chart-wrap compact">
+								<svg id="importChart" role="img" aria-label="Netto import in normale uren en tekorturen"></svg>
+							</div>
+						</section>
+					</section>
+				</main>
+				<div id="tooltip" class="tooltip" role="status" hidden></div>
+			</div>
+
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.netbeheernederland.nl/artikelen/nieuws/tennet-adviseert-politiek-te-starten-met-capaciteitsmechanisme-voor" rel="noopener noreferrer" target="_blank">Netbeheer Nederland: TenneT adviseert capaciteitsmechanisme</a>
+						<span>Publieke context bij de Monitor Voorzieningszekerheid 2026 en de oproep om met een capaciteitsmechanisme te starten.</span>
+					</li>
+					<li>
+						<a href="https://www.vemw.nl/kennisbank-detail/2026/06/10/monitor-voorzieningszekerheid-2026" rel="noopener noreferrer" target="_blank">VEMW: Monitor Voorzieningszekerheid 2026</a>
+						<span>Publieke samenvatting van de TenneT-monitor en de rol van de jaarlijkse monitor.</span>
+					</li>
+					<li>
+						<span>Lokale TenneT CSV-bestanden</span>
+						<span>Brondata in deze projectmap voor LOLE, EENS/ENS, tekortevents, vraag, productiecapaciteit, flexibiliteit, import en missing-capacity-analyse.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

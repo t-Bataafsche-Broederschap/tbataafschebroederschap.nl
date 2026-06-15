@@ -2,6 +2,8 @@
 
 const scenarioSelect = document.querySelector("#scenarioSelect");
 const yearSelect = document.querySelector("#yearSelect");
+const normSlider = document.querySelector("#normSlider");
+const normValue = document.querySelector("#normValue");
 const metricButtons = document.querySelectorAll("[data-metric]");
 const tabButtons = document.querySelectorAll("[data-tab]");
 const tabPanels = document.querySelectorAll(".tab-panel");
@@ -18,6 +20,8 @@ const svgs = {
 	demand: d3.select("#demandChart"),
 	capacity: d3.select("#capacityChart"),
 	imports: d3.select("#importChart"),
+	weeklyDemand: d3.select("#weeklyDemandChart"),
+	simultaneity: d3.select("#simultaneityChart"),
 };
 
 const scenarioColors = {
@@ -30,6 +34,8 @@ const state = {
 	scenario: "high-demand",
 	year: 2035,
 	metric: "lole",
+	norm: 4,
+	normIndex: 2,
 	tab: "scarcity",
 };
 
@@ -37,6 +43,17 @@ let data;
 
 const numberFormat = new Intl.NumberFormat("nl-NL", { maximumFractionDigits: 1 });
 const compactFormat = new Intl.NumberFormat("nl-NL", { maximumFractionDigits: 0 });
+const percentFormat = new Intl.NumberFormat("nl-NL", { maximumFractionDigits: 0 });
+const dayLabels = ["Ma", "Di", "Wo", "Do", "Vr", "Za", "Zo"];
+const objectLabels = {
+	BE00: "BE",
+	DE00: "DE",
+	DKW1: "DK-W",
+	FR00: "FR",
+	NL00: "NL",
+	NOS2: "NO-S",
+	UK00: "UK",
+};
 
 function formatHours(value) {
 	return Number.isFinite(value) ? `${numberFormat.format(value)} uur` : "-";
@@ -48,6 +65,10 @@ function formatGwh(value) {
 
 function formatGw(value) {
 	return Number.isFinite(value) ? `${numberFormat.format(value)} GW` : "-";
+}
+
+function formatPct(value) {
+	return Number.isFinite(value) ? `${percentFormat.format(value * 100)}%` : "-";
 }
 
 function metricLabel(metric) {
@@ -116,13 +137,26 @@ function hideTooltip() {
 }
 
 function drawAxis(root, x, y, innerWidth, innerHeight, { xTicks = 5, yTicks = 5, yFormat = (value) => value } = {}) {
-	root.append("g").attr("class", "grid").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).ticks?.(xTicks).tickSize(-innerHeight).tickFormat("") || d3.axisBottom(x).tickSize(-innerHeight).tickFormat(""));
+	root
+		.append("g")
+		.attr("class", "grid")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(d3.axisBottom(x).ticks?.(xTicks).tickSize(-innerHeight).tickFormat("") || d3.axisBottom(x).tickSize(-innerHeight).tickFormat(""));
 	root.append("g").attr("class", "grid").call(d3.axisLeft(y).ticks(yTicks).tickSize(-innerWidth).tickFormat(""));
-	root.append("g").attr("class", "axis").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).ticks?.(xTicks) || d3.axisBottom(x));
+	root
+		.append("g")
+		.attr("class", "axis")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(d3.axisBottom(x).ticks?.(xTicks) || d3.axisBottom(x));
 	root.append("g").attr("class", "axis").call(d3.axisLeft(y).ticks(yTicks).tickFormat(yFormat));
 }
 
 function populateControls() {
+	state.normIndex = Math.max(0, data.meta.adequacyNormOptions.indexOf(data.meta.adequacyNormHours));
+	state.norm = data.meta.adequacyNormOptions[state.normIndex] || data.meta.adequacyNormHours;
+	normSlider.max = String(data.meta.adequacyNormOptions.length - 1);
+	normSlider.value = String(state.normIndex);
+	normValue.textContent = formatHours(state.norm);
 	scenarioSelect.replaceChildren(
 		...visibleScenarios().map((scenario) => {
 			const option = document.createElement("option");
@@ -154,11 +188,11 @@ function renderSummary() {
 	const highest = [...data.mainResults].filter((row) => row.scenario !== "reference").sort((a, b) => b.lole - a.lole)[0];
 	const weatherRows = rowsForMetric(state.metric);
 	const weatherMax = d3.max(weatherRows, (row) => row.value);
-	const overshoot = selected ? Math.max(0, selected.lole - data.meta.adequacyNormHours) : null;
+	const overshoot = selected ? Math.max(0, selected.lole - state.norm) : null;
 	const cards = [
 		["Scenario", `${scenarioLabel(state.scenario)} ${state.year}`],
 		["LOLE", selected ? formatHours(selected.lole) : "-"],
-		["Boven norm", Number.isFinite(overshoot) ? formatHours(overshoot) : "-"],
+		[`Boven ${formatHours(state.norm)} norm`, Number.isFinite(overshoot) ? formatHours(overshoot) : "-"],
 		["EENS", selected ? formatGwh(selected.eens) : "-"],
 		[`Max ${metricLabel(state.metric)} in weerloting`, formatMetric(weatherMax, state.metric)],
 		["Hoogste LOLE", highest ? `${highest.scenarioLabel} ${highest.year}: ${formatHours(highest.lole)}` : "-"],
@@ -182,22 +216,29 @@ function renderLoleChart() {
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
 	const years = [...new Set(rows.map((row) => row.year))].sort((a, b) => a - b);
-	const maxValue = Math.max(data.meta.adequacyNormHours, d3.max(rows, (row) => row.lole));
+	const maxValue = Math.max(
+		state.norm,
+		d3.max(rows, (row) => row.lole)
+	);
 	const x = d3.scalePoint().domain(years).range([0, innerWidth]).padding(0.42);
-	const y = d3.scaleLinear().domain([0, maxValue * 1.16]).nice().range([innerHeight, 0]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, maxValue * 1.16])
+		.nice()
+		.range([innerHeight, 0]);
 
 	svg.selectAll("*").remove();
 	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 	drawAxis(root, x, y, innerWidth, innerHeight, { yFormat: (value) => `${value}` });
 
+	root.append("line").attr("class", "norm-line").attr("x1", 0).attr("x2", innerWidth).attr("y1", y(state.norm)).attr("y2", y(state.norm));
 	root
-		.append("line")
-		.attr("class", "norm-line")
-		.attr("x1", 0)
-		.attr("x2", innerWidth)
-		.attr("y1", y(data.meta.adequacyNormHours))
-		.attr("y2", y(data.meta.adequacyNormHours));
-	root.append("text").attr("class", "norm-label").attr("x", innerWidth).attr("y", y(data.meta.adequacyNormHours) - 8).attr("text-anchor", "end").text("4-uursnorm");
+		.append("text")
+		.attr("class", "norm-label")
+		.attr("x", innerWidth)
+		.attr("y", y(state.norm) - 8)
+		.attr("text-anchor", "end")
+		.text(`${formatHours(state.norm)} norm`);
 
 	const line = d3
 		.line()
@@ -242,7 +283,14 @@ function renderLoleChart() {
 		.attr("y", innerHeight + 46)
 		.attr("text-anchor", "middle")
 		.text("Jaar");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -50).attr("text-anchor", "middle").text("LOLE-uren per jaar");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -50)
+		.attr("text-anchor", "middle")
+		.text("LOLE-uren per jaar");
 
 	const legend = svg.append("g").attr("class", "legend").attr("transform", `translate(${margin.left},18)`);
 	visibleScenarios().forEach((scenario, index) => {
@@ -261,25 +309,40 @@ function renderMissingCapacityChart() {
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
 
-	const grouped = d3.rollups(
-		rows,
-		(values) => ({
-			addedNl: d3.sum(values.filter((row) => row.attribute.includes("NL")), (row) => row.addedCapacityGw || 0),
-			addedAbroad: d3.sum(values.filter((row) => row.attribute.includes("abroad")), (row) => row.addedCapacityGw || 0),
-			lole: d3.mean(values, (row) => row.resultingLole),
-		}),
-		(row) => `${row.case} ${row.iteration}`.trim()
-	)
+	const grouped = d3
+		.rollups(
+			rows,
+			(values) => ({
+				addedNl: d3.sum(
+					values.filter((row) => row.attribute.includes("NL")),
+					(row) => row.addedCapacityGw || 0
+				),
+				addedAbroad: d3.sum(
+					values.filter((row) => row.attribute.includes("abroad")),
+					(row) => row.addedCapacityGw || 0
+				),
+				lole: d3.mean(values, (row) => row.resultingLole),
+			}),
+			(row) => `${row.case} ${row.iteration}`.trim()
+		)
 		.map(([label, value]) => ({ label, ...value, totalAdded: value.addedNl + value.addedAbroad }))
 		.sort((a, b) => a.totalAdded - b.totalAdded);
 
-	const x = d3.scaleLinear().domain([0, d3.max(grouped, (row) => row.totalAdded) || 1]).nice().range([0, innerWidth]);
-	const y = d3.scaleLinear().domain([0, Math.max(data.meta.adequacyNormHours, d3.max(grouped, (row) => row.lole) || 1) * 1.15]).nice().range([innerHeight, 0]);
+	const x = d3
+		.scaleLinear()
+		.domain([0, d3.max(grouped, (row) => row.totalAdded) || 1])
+		.nice()
+		.range([0, innerWidth]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, Math.max(state.norm, d3.max(grouped, (row) => row.lole) || 1) * 1.15])
+		.nice()
+		.range([innerHeight, 0]);
 
 	svg.selectAll("*").remove();
 	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 	drawAxis(root, x, y, innerWidth, innerHeight, { yFormat: (value) => `${value}` });
-	root.append("line").attr("class", "norm-line").attr("x1", 0).attr("x2", innerWidth).attr("y1", y(data.meta.adequacyNormHours)).attr("y2", y(data.meta.adequacyNormHours));
+	root.append("line").attr("class", "norm-line").attr("x1", 0).attr("x2", innerWidth).attr("y1", y(state.norm)).attr("y2", y(state.norm));
 
 	root
 		.selectAll("circle")
@@ -294,8 +357,21 @@ function renderMissingCapacityChart() {
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
 
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", innerHeight + 42).attr("text-anchor", "middle").text("Extra capaciteit");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -43).attr("text-anchor", "middle").text("Resulterende LOLE");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 42)
+		.attr("text-anchor", "middle")
+		.text("Extra capaciteit");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -43)
+		.attr("text-anchor", "middle")
+		.text("Resulterende LOLE");
 }
 
 function renderWeatherChart() {
@@ -309,16 +385,26 @@ function renderWeatherChart() {
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
 	const weatherScenarios = [...new Set(rows.map((row) => row.weatherScenario))].sort();
-	const maxValue = Math.max(state.metric === "lole" ? data.meta.adequacyNormHours : 0, d3.max(rows, (row) => row.value));
+	const maxValue = Math.max(
+		state.metric === "lole" ? state.norm : 0,
+		d3.max(rows, (row) => row.value)
+	);
 	const x = d3.scaleBand().domain(weatherScenarios).range([0, innerWidth]).padding(0.32);
-	const y = d3.scaleLinear().domain([0, maxValue * 1.16 || 1]).nice().range([innerHeight, 0]);
-	const jitter = d3.scaleLinear().domain([0, 1]).range([-x.bandwidth() * 0.28, x.bandwidth() * 0.28]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, maxValue * 1.16 || 1])
+		.nice()
+		.range([innerHeight, 0]);
+	const jitter = d3
+		.scaleLinear()
+		.domain([0, 1])
+		.range([-x.bandwidth() * 0.28, x.bandwidth() * 0.28]);
 
 	svg.selectAll("*").remove();
 	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 	drawAxis(root, x, y, innerWidth, innerHeight, { yFormat: (value) => `${value}` });
 	if (state.metric === "lole") {
-		root.append("line").attr("class", "norm-line").attr("x1", 0).attr("x2", innerWidth).attr("y1", y(data.meta.adequacyNormHours)).attr("y2", y(data.meta.adequacyNormHours));
+		root.append("line").attr("class", "norm-line").attr("x1", 0).attr("x2", innerWidth).attr("y1", y(state.norm)).attr("y2", y(state.norm));
 	}
 
 	root
@@ -334,8 +420,21 @@ function renderWeatherChart() {
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
 
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", innerHeight + 44).attr("text-anchor", "middle").text("Weerscenario");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -50).attr("text-anchor", "middle").text(metricLabel(state.metric));
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 44)
+		.attr("text-anchor", "middle")
+		.text("Weerscenario");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -50)
+		.attr("text-anchor", "middle")
+		.text(metricLabel(state.metric));
 }
 
 function renderDurationChart() {
@@ -346,16 +445,39 @@ function renderDurationChart() {
 	const margin = { top: 22, right: 18, bottom: 52, left: 58 };
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
-	const x = d3.scaleLinear().domain([0, d3.max(row.points, (point) => point.hour) || 1]).range([0, innerWidth]);
-	const y = d3.scaleLinear().domain([0, d3.max(row.points, (point) => point.ensGw) || 1]).nice().range([innerHeight, 0]);
-	const line = d3.line().x((point) => x(point.hour)).y((point) => y(point.ensGw));
+	const x = d3
+		.scaleLinear()
+		.domain([0, d3.max(row.points, (point) => point.hour) || 1])
+		.range([0, innerWidth]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, d3.max(row.points, (point) => point.ensGw) || 1])
+		.nice()
+		.range([innerHeight, 0]);
+	const line = d3
+		.line()
+		.x((point) => x(point.hour))
+		.y((point) => y(point.ensGw));
 
 	svg.selectAll("*").remove();
 	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 	drawAxis(root, x, y, innerWidth, innerHeight, { yFormat: (value) => `${value}` });
 	root.append("path").datum(row.points).attr("class", "area-line").attr("fill", "none").attr("stroke", scenarioColors[state.scenario]).attr("d", line);
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", innerHeight + 42).attr("text-anchor", "middle").text("Gerangschikte tekorturen");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -43).attr("text-anchor", "middle").text("ENS GW");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 42)
+		.attr("text-anchor", "middle")
+		.text("Gerangschikte tekorturen");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -43)
+		.attr("text-anchor", "middle")
+		.text("ENS GW");
 }
 
 function renderEventChart() {
@@ -366,9 +488,20 @@ function renderEventChart() {
 	const margin = { top: 22, right: 18, bottom: 52, left: 58 };
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
-	const x = d3.scaleLinear().domain([0, d3.max(rows, (row) => row.durationHours) || 1]).nice().range([0, innerWidth]);
-	const y = d3.scaleLinear().domain([0, d3.max(rows, (row) => row.eventSizeGwh) || 1]).nice().range([innerHeight, 0]);
-	const r = d3.scaleSqrt().domain([0, d3.max(rows, (row) => row.count) || 1]).range([3, 15]);
+	const x = d3
+		.scaleLinear()
+		.domain([0, d3.max(rows, (row) => row.durationHours) || 1])
+		.nice()
+		.range([0, innerWidth]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, d3.max(rows, (row) => row.eventSizeGwh) || 1])
+		.nice()
+		.range([innerHeight, 0]);
+	const r = d3
+		.scaleSqrt()
+		.domain([0, d3.max(rows, (row) => row.count) || 1])
+		.range([3, 15]);
 
 	svg.selectAll("*").remove();
 	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
@@ -384,8 +517,21 @@ function renderEventChart() {
 		.on("mouseenter", (event, row) => showTooltip(event, `<strong>${formatGwh(row.eventSizeGwh)} · ${formatHours(row.durationHours)}</strong>Aantal events: ${compactFormat.format(row.count)}`))
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", innerHeight + 42).attr("text-anchor", "middle").text("Eventduur");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -43).attr("text-anchor", "middle").text("Eventgrootte");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 42)
+		.attr("text-anchor", "middle")
+		.text("Eventduur");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -43)
+		.attr("text-anchor", "middle")
+		.text("Eventgrootte");
 }
 
 function stackedBars(svg, rows, { categoryKey, valueKey, preferredHeight, yLabel }) {
@@ -396,10 +542,18 @@ function stackedBars(svg, rows, { categoryKey, valueKey, preferredHeight, yLabel
 	const innerHeight = height - margin.top - margin.bottom;
 	const years = [...new Set(rows.map((row) => row.year))].sort((a, b) => a - b);
 	const categories = [...new Set(rows.map((row) => row[categoryKey]))];
-	const byYear = d3.rollup(rows, (values) => Object.fromEntries(values.map((row) => [row[categoryKey], row[valueKey] || 0])), (row) => row.year);
+	const byYear = d3.rollup(
+		rows,
+		(values) => Object.fromEntries(values.map((row) => [row[categoryKey], row[valueKey] || 0])),
+		(row) => row.year
+	);
 	const series = d3.stack().keys(categories)(years.map((year) => ({ year, ...(byYear.get(year) || {}) })));
 	const x = d3.scaleBand().domain(years).range([0, innerWidth]).padding(0.28);
-	const y = d3.scaleLinear().domain([0, d3.max(series.at(-1), (item) => item[1]) || 1]).nice().range([innerHeight, 0]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, d3.max(series.at(-1), (item) => item[1]) || 1])
+		.nice()
+		.range([innerHeight, 0]);
 	const color = d3.scaleOrdinal().domain(categories).range(["#d64f43", "#d7b16e", "#76b7c9", "#8fbf8d", "#9f84d9", "#c78f61", "#b8b0a0", "#e07a5f"]);
 
 	svg.selectAll("*").remove();
@@ -421,8 +575,21 @@ function stackedBars(svg, rows, { categoryKey, valueKey, preferredHeight, yLabel
 		.on("mouseenter", (event, item) => showTooltip(event, `<strong>${item.key} ${item.data.year}</strong>${formatGw(item.data[item.key] || 0)}`))
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", innerHeight + 42).attr("text-anchor", "middle").text("Jaar");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -44).attr("text-anchor", "middle").text(yLabel);
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 42)
+		.attr("text-anchor", "middle")
+		.text("Jaar");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -44)
+		.attr("text-anchor", "middle")
+		.text(yLabel);
 }
 
 function renderDemandChart() {
@@ -446,12 +613,14 @@ function renderCapacityChart() {
 		}
 	}
 	const rows = [...rowsByKey.values()];
-	const aggregate = d3.rollups(
-		rows,
-		(values) => d3.sum(values, (row) => row.value || 0),
-		(row) => row.year,
-		(row) => row.type
-	).flatMap(([year, types]) => types.map(([type, value]) => ({ year, type, value })));
+	const aggregate = d3
+		.rollups(
+			rows,
+			(values) => d3.sum(values, (row) => row.value || 0),
+			(row) => row.year,
+			(row) => row.type
+		)
+		.flatMap(([year, types]) => types.map(([type, value]) => ({ year, type, value })));
 	stackedBars(svgs.capacity, aggregate, { categoryKey: "type", valueKey: "value", preferredHeight: 360, yLabel: "Capaciteit GW" });
 }
 
@@ -463,8 +632,16 @@ function renderImportChart() {
 	const margin = { top: 24, right: 18, bottom: 64, left: 56 };
 	const innerWidth = width - margin.left - margin.right;
 	const innerHeight = height - margin.top - margin.bottom;
-	const x = d3.scaleBand().domain(rows.map((row) => row.state)).range([0, innerWidth]).padding(0.36);
-	const y = d3.scaleLinear().domain([0, d3.max(rows, (row) => row.value) * 1.2 || 1]).nice().range([innerHeight, 0]);
+	const x = d3
+		.scaleBand()
+		.domain(rows.map((row) => row.state))
+		.range([0, innerWidth])
+		.padding(0.36);
+	const y = d3
+		.scaleLinear()
+		.domain([0, d3.max(rows, (row) => row.value) * 1.2 || 1])
+		.nice()
+		.range([innerHeight, 0]);
 
 	svg.selectAll("*").remove();
 	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
@@ -481,8 +658,93 @@ function renderImportChart() {
 		.on("mouseenter", (event, row) => showTooltip(event, `<strong>${row.state}</strong>${formatGw(row.value)} netto import`))
 		.on("mousemove", moveTooltip)
 		.on("mouseleave", hideTooltip);
-	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", innerHeight + 52).attr("text-anchor", "middle").text("Uurtype");
-	root.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -innerHeight / 2).attr("y", -42).attr("text-anchor", "middle").text("Netto import GW");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 52)
+		.attr("text-anchor", "middle")
+		.text("Uurtype");
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -42)
+		.attr("text-anchor", "middle")
+		.text("Netto import GW");
+}
+
+function renderWeeklyDemandChart() {
+	const rows = data.weeklyDemand.filter((row) => row.scenario === state.scenario && row.year === state.year && Number.isFinite(row.load));
+	if (!rows.length) return emptyChart(svgs.weeklyDemand, "Weekprofiel beschikbaar voor High Demand en Low Demand.", 340);
+	const svg = svgs.weeklyDemand;
+	const { width, height } = chartSize(svg, 360);
+	const margin = { top: 28, right: 18, bottom: 46, left: 46 };
+	const innerWidth = width - margin.left - margin.right;
+	const innerHeight = height - margin.top - margin.bottom;
+	const x = d3.scaleBand().domain(d3.range(24)).range([0, innerWidth]).padding(0.04);
+	const y = d3.scaleBand().domain(d3.range(7)).range([0, innerHeight]).padding(0.08);
+	const color = d3.scaleSequential(d3.interpolateYlOrRd).domain(d3.extent(rows, (row) => row.load));
+
+	svg.selectAll("*").remove();
+	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+	root
+		.selectAll("rect")
+		.data(rows)
+		.join("rect")
+		.attr("class", "heat-cell")
+		.attr("x", (row) => x(row.hour))
+		.attr("y", (row) => y(row.day))
+		.attr("width", x.bandwidth())
+		.attr("height", y.bandwidth())
+		.attr("fill", (row) => color(row.load))
+		.on("mouseenter", (event, row) => showTooltip(event, `<strong>${dayLabels[row.day]} ${String(row.hour).padStart(2, "0")}:00</strong>Load: ${formatGw(row.load)}<br>Native load: ${formatGw(row.nativeLoad)}`))
+		.on("mousemove", moveTooltip)
+		.on("mouseleave", hideTooltip);
+
+	root.append("g").attr("class", "axis heat-axis").call(d3.axisLeft(y).tickFormat((value) => dayLabels[value]));
+	root.append("g").attr("class", "axis heat-axis").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).tickValues([0, 6, 12, 18, 23]).tickFormat((value) => `${value}:00`));
+}
+
+function renderSimultaneityChart() {
+	const rows = data.simultaneity.filter((row) => row.year === state.year && Number.isFinite(row.probability));
+	if (!rows.length) return emptyChart(svgs.simultaneity, "Geen simultaneity-data voor dit jaar.", 340);
+	const objects = [...new Set(rows.flatMap((row) => [row.objectA, row.objectB]))].sort((a, b) => {
+		if (a === "NL00") return -1;
+		if (b === "NL00") return 1;
+		return (objectLabels[a] || a).localeCompare(objectLabels[b] || b);
+	});
+	const byPair = new Map(rows.map((row) => [`${row.objectA}:${row.objectB}`, row]));
+	const svg = svgs.simultaneity;
+	const { width, height } = chartSize(svg, 360);
+	const margin = { top: 42, right: 20, bottom: 46, left: 52 };
+	const innerWidth = width - margin.left - margin.right;
+	const innerHeight = height - margin.top - margin.bottom;
+	const x = d3.scaleBand().domain(objects).range([0, innerWidth]).padding(0.06);
+	const y = d3.scaleBand().domain(objects).range([0, innerHeight]).padding(0.06);
+	const color = d3.scaleSequential(d3.interpolateRgb("#191716", "#d64f43")).domain([0, 1]);
+	const cells = objects.flatMap((objectA) => objects.map((objectB) => byPair.get(`${objectA}:${objectB}`) || { objectA, objectB, probability: null }));
+
+	svg.selectAll("*").remove();
+	const root = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+	root
+		.selectAll("rect")
+		.data(cells)
+		.join("rect")
+		.attr("class", (row) => `heat-cell ${row.objectA === "NL00" || row.objectB === "NL00" ? "heat-cell-focus" : ""}`)
+		.attr("x", (row) => x(row.objectB))
+		.attr("y", (row) => y(row.objectA))
+		.attr("width", x.bandwidth())
+		.attr("height", y.bandwidth())
+		.attr("fill", (row) => (Number.isFinite(row.probability) ? color(row.probability) : "rgba(255,255,255,0.03)"))
+		.on("mouseenter", (event, row) => showTooltip(event, `<strong>${objectLabels[row.objectA] || row.objectA} met ${objectLabels[row.objectB] || row.objectB}</strong>Gelijktijdigheid: ${formatPct(row.probability)}`))
+		.on("mousemove", moveTooltip)
+		.on("mouseleave", hideTooltip);
+
+	root.append("g").attr("class", "axis heat-axis").call(d3.axisLeft(y).tickFormat((value) => objectLabels[value] || value));
+	root.append("g").attr("class", "axis heat-axis").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).tickFormat((value) => objectLabels[value] || value));
+	root.append("text").attr("class", "axis-label").attr("x", innerWidth / 2).attr("y", -18).attr("text-anchor", "middle").text(`${state.year}: kans op gelijktijdige krapte`);
 }
 
 function renderActiveTab() {
@@ -497,6 +759,8 @@ function renderActiveTab() {
 		renderDemandChart();
 		renderCapacityChart();
 		renderImportChart();
+		renderWeeklyDemandChart();
+		renderSimultaneityChart();
 	}
 }
 
@@ -524,6 +788,12 @@ fetch("data.json")
 	.then((loaded) => {
 		data = loaded;
 		populateControls();
+		normSlider.addEventListener("input", () => {
+			state.normIndex = Number(normSlider.value);
+			state.norm = data.meta.adequacyNormOptions[state.normIndex] || data.meta.adequacyNormHours;
+			normValue.textContent = formatHours(state.norm);
+			renderAll();
+		});
 		scenarioSelect.addEventListener("change", () => {
 			state.scenario = scenarioSelect.value;
 			populateYears();

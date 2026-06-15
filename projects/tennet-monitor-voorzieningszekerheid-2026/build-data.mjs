@@ -3,6 +3,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 const dataDir = new URL("./data/", import.meta.url);
 const outputFile = new URL("./data.json", import.meta.url);
 const adequacyNormHours = 4;
+const adequacyNormOptions = [1, 2, 4, 8];
 const durationCurveMaxPoints = 650;
 
 const scenarioLabels = {
@@ -26,10 +27,10 @@ function parseCsv(text) {
 		const next = source[index + 1];
 
 		if (quoted) {
-			if (char === "\"" && next === "\"") {
-				field += "\"";
+			if (char === '"' && next === '"') {
+				field += '"';
 				index += 1;
-			} else if (char === "\"") {
+			} else if (char === '"') {
 				quoted = false;
 			} else {
 				field += char;
@@ -37,7 +38,7 @@ function parseCsv(text) {
 			continue;
 		}
 
-		if (char === "\"") {
+		if (char === '"') {
 			quoted = true;
 		} else if (char === ",") {
 			row.push(field);
@@ -56,9 +57,7 @@ function parseCsv(text) {
 	rows.push(row);
 
 	const headers = rows.shift().map((header) => header.trim());
-	return rows
-		.filter((values) => values.some((value) => String(value).trim() !== ""))
-		.map((values) => Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""])));
+	return rows.filter((values) => values.some((value) => String(value).trim() !== "")).map((values) => Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""])));
 }
 
 async function csvFiles() {
@@ -105,6 +104,11 @@ function downsample(rows, maxPoints) {
 
 function sortYears(a, b) {
 	return a.year - b.year || a.scenario.localeCompare(b.scenario);
+}
+
+function yearFromScenarioCode(value) {
+	const match = String(value || "").match(/(\d{4})/);
+	return match ? Number(match[1]) : null;
 }
 
 async function buildMainResults() {
@@ -268,6 +272,41 @@ async function buildSystemMix() {
 	};
 }
 
+async function buildWeeklyDemand(files) {
+	const items = [];
+	for (const file of files.filter((item) => item.startsWith("Scenario - Demand - Weekly average"))) {
+		const year = yearFromFile(file);
+		const scenario = normalizeScenario(file);
+		for (const row of await readCsv(file)) {
+			const weekHour = number(row.WeekHour);
+			if (!Number.isFinite(weekHour)) continue;
+			items.push({
+				year,
+				scenario,
+				scenarioLabel: scenarioLabels[scenario] || scenario,
+				weekHour,
+				day: Math.floor((weekHour - 1) / 24),
+				hour: (weekHour - 1) % 24,
+				load: number(row.Load),
+				nativeLoad: number(row["Native Load"]),
+			});
+		}
+	}
+	return items.sort((a, b) => a.year - b.year || a.scenario.localeCompare(b.scenario) || a.weekHour - b.weekHour);
+}
+
+async function buildSimultaneity() {
+	return (await readCsv("Results - Simultaneity analysis.csv"))
+		.map((row) => ({
+			year: yearFromScenarioCode(row.Scenario),
+			objectA: row["Object A"],
+			objectB: row["Object B"],
+			probability: number(row.Probability),
+		}))
+		.filter((row) => Number.isFinite(row.year) && row.objectA && row.objectB)
+		.sort((a, b) => a.year - b.year || a.objectA.localeCompare(b.objectA) || a.objectB.localeCompare(b.objectB));
+}
+
 async function buildMissingCapacity() {
 	const items = [];
 	for (const file of ["Results - Missing capacity analysis - 2030 - High demand.csv", "Results - Missing capacity analysis - 2035 - High demand.csv"]) {
@@ -295,6 +334,7 @@ const data = {
 		title: "TenneT Monitor Voorzieningszekerheid 2026",
 		generatedAt: new Date().toISOString(),
 		adequacyNormHours,
+		adequacyNormOptions,
 		sourceFiles: files,
 		warnings,
 	},
@@ -304,6 +344,8 @@ const data = {
 	eventDistributions: await buildEventDistributions(files),
 	durationCurves: await buildDurationCurves(files),
 	systemMix: await buildSystemMix(),
+	weeklyDemand: await buildWeeklyDemand(files),
+	simultaneity: await buildSimultaneity(),
 	missingCapacity: await buildMissingCapacity(),
 };
 

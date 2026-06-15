@@ -115,7 +115,7 @@ body:has(.tennet-security-page) {
 
 .tennet-controls {
 	display: grid;
-	grid-template-columns: minmax(12rem, 0.9fr) minmax(8rem, 0.45fr) auto minmax(22rem, 1.35fr);
+	grid-template-columns: minmax(12rem, 0.9fr) minmax(8rem, 0.42fr) minmax(11rem, 0.7fr) auto minmax(22rem, 1.35fr);
 	gap: 0.75rem;
 	align-items: end;
 	margin-top: 1rem;
@@ -162,6 +162,19 @@ body:has(.tennet-security-page) {
 .tennet-controls select {
 	width: 100%;
 	padding: 0 0.65rem;
+}
+
+.norm-control input {
+	width: 100%;
+	margin: 0;
+	accent-color: var(--accent);
+}
+
+.norm-control strong {
+	color: var(--ink);
+	font-weight: 820;
+	letter-spacing: 0;
+	text-transform: none;
 }
 
 .tennet-controls button {
@@ -300,6 +313,10 @@ body:has(.tennet-security-page) {
 	min-height: 22rem;
 }
 
+.chart-wrap.heatmap-wrap {
+	min-height: 20rem;
+}
+
 .chart-wrap svg {
 	display: block;
 	width: 100%;
@@ -393,6 +410,25 @@ body:has(.tennet-security-page) {
 	stroke-width: 1;
 }
 
+.heat-cell {
+	stroke: rgba(5, 5, 5, 0.75);
+	stroke-width: 1;
+}
+
+.heat-cell:hover {
+	stroke: #fff8ed;
+	stroke-width: 1.8;
+}
+
+.heat-cell-focus {
+	stroke: rgba(201, 163, 106, 0.42);
+}
+
+.heat-axis path,
+.heat-axis line {
+	display: none;
+}
+
 .tooltip {
 	position: absolute;
 	z-index: 5;
@@ -431,6 +467,10 @@ body:has(.tennet-security-page) {
 		grid-column: span 1;
 	}
 
+	.tab-list {
+		grid-column: 1 / -1;
+	}
+
 	.summary-cards {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
@@ -465,6 +505,11 @@ body:has(.tennet-security-page) {
 	.metric-toggle,
 	.tab-list {
 		grid-template-columns: 1fr;
+	}
+
+	.tab-list,
+	.metric-toggle {
+		grid-column: auto;
 	}
 
 	.summary-cards {

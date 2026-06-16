@@ -17,13 +17,18 @@
 	</head>
 	<body>
 		<header class="site-header">
+			<nav class="site-nav">
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<div class="site-actions">
-				<nav>
-					<a href="/">Home</a>
-					<a href="/projects/">Projecten</a>
-					<a href="/over/">Over</a>
-				</nav>
+			<div class="site-tools">
+				<form class="site-search" role="search" autocomplete="off">
+					<label class="sr-only" for="siteSearch">Zoeken</label>
+					<input id="siteSearch" class="site-search__input" type="search" name="q" placeholder="Zoek" aria-expanded="false" aria-controls="siteSearchResults" />
+					<div id="siteSearchResults" class="site-search__results" role="listbox" hidden></div>
+				</form>
 				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
 					<span class="theme-toggle__icon" aria-hidden="true"></span>
 				</button>
@@ -35,5 +40,6 @@
 			</article>
 		</main>
 		<script src="/theme-toggle.js"></script>
+		<script src="/search.js"></script>
 	</body>
 </html>

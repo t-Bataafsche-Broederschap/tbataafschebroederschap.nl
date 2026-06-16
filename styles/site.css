@@ -140,11 +140,14 @@ nav a:hover {
 .theme-toggle {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.45rem;
+	justify-content: center;
+	width: 2.25rem;
+	min-width: 2.25rem;
+	height: 2.25rem;
 	min-height: 2.25rem;
 	border: 1px solid rgba(244, 239, 230, 0.16);
 	border-radius: 4px;
-	padding: 0 0.7rem;
+	padding: 0;
 	background: rgba(255, 255, 255, 0.035);
 	color: var(--color-muted);
 	cursor: pointer;
@@ -170,6 +173,14 @@ nav a:hover {
 	border: 2px solid currentColor;
 	border-radius: 50%;
 	background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+
+.theme-toggle--ready .theme-toggle__icon {
+	transition: transform 160ms ease;
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle__icon {
+	transform: rotate(180deg);
 }
 
 .site-main {

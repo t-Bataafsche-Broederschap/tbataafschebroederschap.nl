@@ -5,7 +5,7 @@ import { gridCardInfo, metricInfo, viewSourceNotes } from "./metadata.js";
 import { views } from "./views.js";
 
 const chart = d3.select("#mainChart");
-const chartWrap = document.querySelector(".chart-wrap");
+const chartWrap = document.querySelector(".project-chart-wrap");
 const tooltip = document.querySelector("#tooltip");
 const infoTooltip = document.createElement("div");
 const legend = document.querySelector("#legend");
@@ -42,7 +42,7 @@ const decimalTick = (value) => formatOne.format(value);
 infoTooltip.className = "info-tooltip";
 infoTooltip.hidden = true;
 infoTooltip.setAttribute("role", "status");
-document.querySelector(".autochtoon-page").append(infoTooltip);
+document.querySelector(".project-page--de-autochtoonse-nederlandse-bevolking").append(infoTooltip);
 
 function valueFor(row, key) {
 	const value = row?.[key];
@@ -1903,9 +1903,9 @@ function render() {
 	renderStats();
 	renderDetailCards();
 	renderChart();
-	viewButtons.forEach((button) => button.classList.toggle("active", button.dataset.view === state.view));
+	viewButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === state.view));
 	definitionControl.hidden = !["population", "composition"].includes(state.view);
-	definitionButtons.forEach((button) => button.classList.toggle("active", button.dataset.definition === state.definition));
+	definitionButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.definition === state.definition));
 	scheduleUrlUpdate();
 }
 

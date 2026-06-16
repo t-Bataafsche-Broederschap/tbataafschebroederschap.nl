@@ -1,39 +1,8 @@
-.cultural-distance-page {
-	color-scheme: light;
-	--bg: #f7f5ef;
-	--panel: #fffdf8;
-	--ink: #24221d;
-	--muted: #6f695d;
-	--line: #ded7c9;
-	--accent: #216869;
-	--accent-strong: #164e52;
-	--selected: #c44536;
-	--near: #e1a730;
-	--shadow: 0 16px 42px rgba(48, 43, 35, 0.13);
-	box-sizing: border-box;
-	margin: 0;
-	padding: 28px clamp(16px, 4vw, 48px) 44px;
-	background: var(--bg);
-	color: var(--ink);
-	font-family:
-		Inter,
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
+.project-page--culturele-afstandskaart {
+	--project-width: 1540px;
 }
 
-body:has(.cultural-distance-page) {
-	overflow-x: hidden;
-}
-
-.cultural-distance-page * {
-	box-sizing: border-box;
-}
-
-.cultural-header {
+.project-page--culturele-afstandskaart .project-hero {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(260px, 560px);
 	gap: 24px;
@@ -42,10 +11,10 @@ body:has(.cultural-distance-page) {
 	margin: 0 auto 24px;
 }
 
-.cultural-eyebrow,
-.selected-summary span,
-.distance-panel label span,
-.ranking-header span {
+.project-page--culturele-afstandskaart .eyebrow,
+.project-page--culturele-afstandskaart .selected-summary span,
+.project-page--culturele-afstandskaart .project-sidebar label span,
+.project-page--culturele-afstandskaart .ranking-header span {
 	margin: 0;
 	color: var(--muted);
 	font-size: 12px;
@@ -54,7 +23,7 @@ body:has(.cultural-distance-page) {
 	text-transform: uppercase;
 }
 
-.cultural-header h1 {
+.project-page--culturele-afstandskaart .project-hero h1 {
 	overflow: visible;
 	margin: 0;
 	padding: 0;
@@ -67,16 +36,16 @@ body:has(.cultural-distance-page) {
 	text-transform: none;
 }
 
-.cultural-header p:last-child {
+.project-page--culturele-afstandskaart .project-hero p:last-child {
 	max-width: 60ch;
 	margin: 0;
-	color: #4e463a;
+	color: var(--muted);
 	font-size: 17px;
 	line-height: 1.5;
 	text-align: left;
 }
 
-.cultural-app {
+.project-page--culturele-afstandskaart .project-dashboard {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
 	gap: 18px;
@@ -84,31 +53,31 @@ body:has(.cultural-distance-page) {
 	margin: 0 auto;
 }
 
-.chart-panel,
-.distance-panel,
-.explanation {
+.project-page--culturele-afstandskaart .project-chart,
+.project-page--culturele-afstandskaart .project-sidebar,
+.project-page--culturele-afstandskaart .project-notes {
 	border: 1px solid var(--line);
 	border-radius: 8px;
 	background: var(--panel);
 	box-shadow: var(--shadow);
 }
 
-.chart-panel {
+.project-page--culturele-afstandskaart .project-chart {
 	min-width: 0;
 	overflow: hidden;
 }
 
-.chart-toolbar {
+.project-page--culturele-afstandskaart .project-toolbar {
 	display: grid;
 	grid-template-columns: minmax(280px, 420px) minmax(280px, 1fr);
 	gap: 14px;
 	align-items: end;
 	padding: 16px;
 	border-bottom: 1px solid var(--line);
-	background: #fbf8f1;
+	background: var(--surface-quiet);
 }
 
-.line-legend {
+.project-page--culturele-afstandskaart .line-legend {
 	display: flex;
 	grid-column: 1 / -1;
 	flex-wrap: wrap;
@@ -121,28 +90,28 @@ body:has(.cultural-distance-page) {
 	text-transform: uppercase;
 }
 
-.line-legend span {
+.project-page--culturele-afstandskaart .line-legend span {
 	display: inline-flex;
 	gap: 8px;
 	align-items: center;
 }
 
-.legend-line {
+.project-page--culturele-afstandskaart .legend-line {
 	display: inline-block;
 	position: relative;
 	width: 34px;
 	border-top: 2px solid rgba(239, 68, 68, 0.9);
 }
 
-.legend-line-dotted {
+.project-page--culturele-afstandskaart .legend-line-dotted {
 	border-top-style: dashed;
 }
 
-.legend-line-arrow {
+.project-page--culturele-afstandskaart .legend-line-arrow {
 	border-top-color: rgba(244, 239, 230, 0.78);
 }
 
-.legend-line-arrow::after {
+.project-page--culturele-afstandskaart .legend-line-arrow::after {
 	position: absolute;
 	top: -5px;
 	right: -1px;
@@ -154,9 +123,9 @@ body:has(.cultural-distance-page) {
 	content: "";
 }
 
-.trail-toggle,
-.trend-toggle,
-.group-toggle {
+.project-page--culturele-afstandskaart .trail-toggle,
+.project-page--culturele-afstandskaart .trend-toggle,
+.project-page--culturele-afstandskaart .group-toggle {
 	display: inline-flex;
 	grid-column: 1 / -1;
 	gap: 8px;
@@ -170,56 +139,56 @@ body:has(.cultural-distance-page) {
 	cursor: pointer;
 }
 
-.trail-toggle input,
-.trend-toggle input,
-.group-toggle input {
+.project-page--culturele-afstandskaart .trail-toggle input,
+.project-page--culturele-afstandskaart .trend-toggle input,
+.project-page--culturele-afstandskaart .group-toggle input {
 	width: 16px;
 	height: 16px;
 	margin: 0;
 	accent-color: var(--accent);
 }
 
-.zoom-actions {
+.project-page--culturele-afstandskaart .zoom-actions {
 	grid-column: 1 / -1;
 }
 
-.zoom-actions button {
+.project-page--culturele-afstandskaart .zoom-actions button {
 	min-height: 34px;
 	padding: 0 14px;
 	font-size: 13px;
 	font-weight: 800;
 }
 
-.mode-switch {
+.project-page--culturele-afstandskaart .mode-switch {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 8px;
 }
 
-.cultural-distance-page button,
-.cultural-distance-page select {
+.project-page--culturele-afstandskaart button,
+.project-page--culturele-afstandskaart select {
 	min-height: 42px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
-	background: #ffffff;
+	background: var(--surface-quiet);
 	color: var(--ink);
 	font: inherit;
 }
 
-.cultural-distance-page button {
+.project-page--culturele-afstandskaart button {
 	cursor: pointer;
 }
 
-.cultural-distance-page button.active,
-.distance-ranking button[aria-current="true"] {
+.project-page--culturele-afstandskaart button.is-active,
+.project-page--culturele-afstandskaart .distance-ranking button[aria-current="true"] {
 	border-color: var(--accent);
 	background: #dceeed;
 	color: var(--accent-strong);
 	font-weight: 800;
 }
 
-.chart-toolbar label,
-.country-picker {
+.project-page--culturele-afstandskaart .project-toolbar label,
+.project-page--culturele-afstandskaart .country-picker {
 	display: grid;
 	gap: 8px;
 	color: var(--muted);
@@ -229,45 +198,45 @@ body:has(.cultural-distance-page) {
 	text-transform: uppercase;
 }
 
-.chart-toolbar label span {
+.project-page--culturele-afstandskaart .project-toolbar label span {
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
 }
 
-.chart-toolbar .trail-toggle,
-.chart-toolbar .trend-toggle,
-.chart-toolbar .group-toggle {
+.project-page--culturele-afstandskaart .project-toolbar .trail-toggle,
+.project-page--culturele-afstandskaart .project-toolbar .trend-toggle,
+.project-page--culturele-afstandskaart .project-toolbar .group-toggle {
 	display: inline-flex;
 	gap: 8px;
 	align-items: center;
 	width: fit-content;
 }
 
-.chart-toolbar .trail-toggle span,
-.chart-toolbar .trend-toggle span,
-.chart-toolbar .group-toggle span {
+.project-page--culturele-afstandskaart .project-toolbar .trail-toggle span,
+.project-page--culturele-afstandskaart .project-toolbar .trend-toggle span,
+.project-page--culturele-afstandskaart .project-toolbar .group-toggle span {
 	display: inline;
 }
 
-.chart-toolbar strong {
+.project-page--culturele-afstandskaart .project-toolbar strong {
 	color: var(--ink);
 	letter-spacing: 0;
 	text-transform: none;
 }
 
-input[type="range"] {
+.project-page--culturele-afstandskaart input[type="range"] {
 	width: 100%;
 	accent-color: var(--accent);
 }
 
-.chart-wrap {
+.project-page--culturele-afstandskaart .project-chart-wrap {
 	position: relative;
 	min-height: 680px;
 	background: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), linear-gradient(135deg, #eef3e6, #f8f1df 45%, #edf5f3);
 }
 
-#culturalChart {
+.project-page--culturele-afstandskaart #culturalChart {
 	display: block;
 	width: 100%;
 	height: 680px;
@@ -276,46 +245,46 @@ input[type="range"] {
 	user-select: none;
 }
 
-#culturalChart:active {
+.project-page--culturele-afstandskaart #culturalChart:active {
 	cursor: grabbing;
 }
 
-.axis-label,
-.quadrant-label {
-	fill: #6c665b;
+.project-page--culturele-afstandskaart .axis-label,
+.project-page--culturele-afstandskaart .quadrant-label {
+	fill: var(--muted);
 	font-size: 12px;
 	font-weight: 800;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 }
 
-.tick text {
-	fill: #7b7467;
+.project-page--culturele-afstandskaart .tick text {
+	fill: var(--muted);
 	font-size: 11px;
 }
 
-.tick line,
-.domain {
-	stroke: #d7cebd;
+.project-page--culturele-afstandskaart .tick line,
+.project-page--culturele-afstandskaart .domain {
+	stroke: var(--line-strong);
 }
 
-.grid line {
+.project-page--culturele-afstandskaart .grid line {
 	stroke: rgba(244, 239, 230, 0.13);
 }
 
-.zero-line {
+.project-page--culturele-afstandskaart .zero-line {
 	stroke: rgba(201, 163, 106, 0.5);
 	stroke-width: 1.25;
 	stroke-dasharray: 4 5;
 }
 
-.group-fill {
+.project-page--culturele-afstandskaart .group-fill {
 	opacity: 0.92;
 	pointer-events: none;
 	shape-rendering: geometricPrecision;
 }
 
-.group-label {
+.project-page--culturele-afstandskaart .group-label {
 	fill: rgba(20, 18, 16, 0.86);
 	font-size: 20px;
 	font-style: italic;
@@ -328,26 +297,26 @@ input[type="range"] {
 	text-anchor: middle;
 }
 
-.country-trail {
+.project-page--culturele-afstandskaart .country-trail {
 	fill: none;
 	stroke: rgba(239, 68, 68, 0.9);
 	stroke-width: 2.6;
 }
 
-.distance-line {
+.project-page--culturele-afstandskaart .distance-line {
 	stroke: rgba(250, 204, 21, 0.82);
 	stroke-width: 1.8;
 	stroke-dasharray: 5 5;
 }
 
-.trend-arrow {
+.project-page--culturele-afstandskaart .trend-arrow {
 	stroke: rgba(244, 239, 230, 0.72);
 	stroke-linecap: round;
 	stroke-width: 1.8;
 	pointer-events: none;
 }
 
-.country-point {
+.project-page--culturele-afstandskaart .country-point {
 	stroke: rgba(8, 8, 8, 0.92);
 	stroke-width: 1.5;
 	cursor: pointer;
@@ -356,22 +325,22 @@ input[type="range"] {
 		r 140ms ease;
 }
 
-.country-point.is-muted {
+.project-page--culturele-afstandskaart .country-point.is-muted {
 	opacity: 0.5;
 }
 
-.country-point.is-near {
+.project-page--culturele-afstandskaart .country-point.is-near {
 	stroke: var(--near);
 	stroke-width: 2.5;
 }
 
-.country-point.is-selected {
+.project-page--culturele-afstandskaart .country-point.is-selected {
 	stroke: var(--selected);
 	stroke-width: 3.4;
 }
 
-.country-label {
-	fill: #302b24;
+.project-page--culturele-afstandskaart .country-label {
+	fill: var(--muted);
 	font-size: 11px;
 	font-weight: 800;
 	paint-order: stroke;
@@ -381,7 +350,7 @@ input[type="range"] {
 	stroke-width: 4px;
 }
 
-.tooltip {
+.project-page--culturele-afstandskaart .project-tooltip {
 	position: absolute;
 	z-index: 5;
 	min-width: 220px;
@@ -396,17 +365,17 @@ input[type="range"] {
 	pointer-events: none;
 }
 
-.tooltip[hidden] {
+.project-page--culturele-afstandskaart .project-tooltip[hidden] {
 	display: none;
 }
 
-.tooltip strong {
+.project-page--culturele-afstandskaart .project-tooltip strong {
 	display: block;
 	margin-bottom: 6px;
 	font-size: 15px;
 }
 
-.distance-panel {
+.project-page--culturele-afstandskaart .project-sidebar {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -414,28 +383,28 @@ input[type="range"] {
 	padding: 16px;
 }
 
-.country-picker select {
+.project-page--culturele-afstandskaart .country-picker select {
 	width: 100%;
 	padding: 0 12px;
 }
 
-.selected-summary {
+.project-page--culturele-afstandskaart .selected-summary {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 }
 
-.selected-summary div {
+.project-page--culturele-afstandskaart .selected-summary div {
 	display: grid;
 	gap: 5px;
 	min-width: 0;
 	padding: 12px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
-	background: #fbf8f1;
+	background: var(--surface-quiet);
 }
 
-.selected-summary strong {
+.project-page--culturele-afstandskaart .selected-summary strong {
 	overflow: hidden;
 	color: var(--ink);
 	font-size: 18px;
@@ -443,7 +412,7 @@ input[type="range"] {
 	white-space: nowrap;
 }
 
-.ranking-header {
+.project-page--culturele-afstandskaart .ranking-header {
 	display: flex;
 	align-items: baseline;
 	justify-content: space-between;
@@ -451,7 +420,7 @@ input[type="range"] {
 	margin-top: 4px;
 }
 
-.ranking-header h2 {
+.project-page--culturele-afstandskaart .ranking-header h2 {
 	margin: 0;
 	padding: 0;
 	color: var(--ink);
@@ -461,7 +430,7 @@ input[type="range"] {
 	text-transform: none;
 }
 
-.distance-ranking {
+.project-page--culturele-afstandskaart .distance-ranking {
 	display: grid;
 	gap: 8px;
 	margin: 0;
@@ -469,12 +438,12 @@ input[type="range"] {
 	list-style: none;
 }
 
-.distance-ranking li {
+.project-page--culturele-afstandskaart .distance-ranking li {
 	margin: 0;
 	padding: 0;
 }
 
-.distance-ranking button {
+.project-page--culturele-afstandskaart .distance-ranking button {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: 12px;
@@ -484,25 +453,25 @@ input[type="range"] {
 	text-align: left;
 }
 
-.distance-ranking b {
+.project-page--culturele-afstandskaart .distance-ranking b {
 	overflow: hidden;
 	font-size: 14px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.distance-ranking span {
+.project-page--culturele-afstandskaart .distance-ranking span {
 	color: var(--muted);
 	font-size: 12px;
 }
 
-.distance-ranking output {
+.project-page--culturele-afstandskaart .distance-ranking output {
 	color: var(--accent-strong);
 	font-variant-numeric: tabular-nums;
 	font-weight: 850;
 }
 
-.explanation {
+.project-page--culturele-afstandskaart .project-notes {
 	display: grid;
 	grid-template-columns: minmax(240px, 0.85fr) 1fr 1fr;
 	gap: 22px;
@@ -511,8 +480,8 @@ input[type="range"] {
 	padding: 22px;
 }
 
-.explanation h2,
-.explanation h3 {
+.project-page--culturele-afstandskaart .project-notes h2,
+.project-page--culturele-afstandskaart .project-notes h3 {
 	margin: 0;
 	padding: 0;
 	color: var(--ink);
@@ -521,78 +490,78 @@ input[type="range"] {
 	text-transform: none;
 }
 
-.explanation h2 {
+.project-page--culturele-afstandskaart .project-notes h2 {
 	font-size: clamp(24px, 3vw, 38px);
 }
 
-.explanation h3 {
+.project-page--culturele-afstandskaart .project-notes h3 {
 	font-size: 20px;
 }
 
-.explanation p {
+.project-page--culturele-afstandskaart .project-notes p {
 	margin: 9px 0 0;
 	padding: 0;
-	color: #4e463a;
+	color: var(--muted);
 	font-size: 15px;
 	line-height: 1.5;
 	text-align: left;
 }
 
-.explanation code {
+.project-page--culturele-afstandskaart .project-notes code {
 	border: 1px solid #d8d0c1;
 	border-radius: 4px;
-	background: #f7f1e6;
-	color: #2a5758;
+	background: var(--surface-quiet);
+	color: var(--muted);
 	font-size: 0.92em;
 	padding: 0.08em 0.28em;
 }
 
 @media (max-width: 1080px) {
-	.cultural-header,
-	.cultural-app,
-	.chart-toolbar,
-	.explanation {
+	.project-page--culturele-afstandskaart .project-hero,
+	.project-page--culturele-afstandskaart .project-dashboard,
+	.project-page--culturele-afstandskaart .project-toolbar,
+	.project-page--culturele-afstandskaart .project-notes {
 		grid-template-columns: 1fr;
 	}
 
-	.chart-wrap {
+	.project-page--culturele-afstandskaart .project-chart-wrap {
 		min-height: 620px;
 	}
 
-	#culturalChart {
+	.project-page--culturele-afstandskaart #culturalChart {
 		height: 620px;
 	}
 }
 
 @media (max-width: 680px) {
-	body:has(.cultural-distance-page) > header .title {
+	body:has(.project-page--culturele-afstandskaart) > header .title {
 		font-size: clamp(32px, 10vw, 48px);
 	}
 
-	body:has(.cultural-distance-page) > main.projects {
+	body:has(.project-page--culturele-afstandskaart) > main.projects {
 		padding-right: 0.75rem;
 		padding-left: 0.75rem;
 	}
 
-	.cultural-distance-page {
+	.project-page--culturele-afstandskaart {
 		padding: 18px 12px 32px;
 	}
 
-	.cultural-header h1 {
+	.project-page--culturele-afstandskaart .project-hero h1 {
 		font-size: 38px;
 		line-height: 0.98;
 	}
 
-	.mode-switch,
-	.selected-summary {
+	.project-page--culturele-afstandskaart .mode-switch,
+	.project-page--culturele-afstandskaart .selected-summary {
 		grid-template-columns: 1fr;
 	}
 
-	.chart-wrap {
+	.project-page--culturele-afstandskaart .project-chart-wrap {
 		min-height: 520px;
 	}
 
-	#culturalChart {
+	.project-page--culturele-afstandskaart #culturalChart {
 		height: 520px;
 	}
 }

@@ -183,7 +183,7 @@ function renderSummary() {
 
 function renderMap() {
 	mapTitle.textContent = activeMetric().label;
-	const wrap = document.querySelector(".map-wrap");
+	const wrap = document.querySelector(".project-chart-wrap");
 	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
 	const height = window.matchMedia("(max-width: 760px)").matches ? 560 : 720;
 	const rows = rowsForYear();

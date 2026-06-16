@@ -3,12 +3,7 @@
 		"title": "TenneT Monitor Voorzieningszekerheid 2026",
 		"generatedAt": "2026-06-15T12:13:30.836Z",
 		"adequacyNormHours": 4,
-		"adequacyNormOptions": [
-			1,
-			2,
-			4,
-			8
-		],
+		"adequacyNormOptions": [1, 2, 4, 8],
 		"sourceFiles": [
 			"EVA - Baseload prices.csv",
 			"EVA - Detailed - Annual net income - High demand.csv",
@@ -85,9 +80,7 @@
 			"Scenario - Neighbouring Countries - Flexibility.csv",
 			"Scenario - Neighbouring Countries - Installed capacity.csv"
 		],
-		"warnings": [
-			"Bestandsnaam met jaar 20230 geimporteerd als 2030."
-		]
+		"warnings": ["Bestandsnaam met jaar 20230 geimporteerd als 2030."]
 	},
 	"scenarios": [
 		{

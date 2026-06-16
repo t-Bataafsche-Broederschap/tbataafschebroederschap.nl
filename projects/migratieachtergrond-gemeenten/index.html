@@ -6,29 +6,42 @@
 		<meta name="description" content="Interactieve kaart en sorteerbare tabel met CBS-cijfers over herkomst en geboorteland per Nederlandse gemeente." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/migratieachtergrond-gemeenten/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="styles.css" />
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<div class="migration-map-page">
-				<header class="migration-header">
-					<div>
+			<link rel="stylesheet" href="styles.css" />
+			<article class="project-page project-page--migratieachtergrond-gemeenten">
+				<header class="project-hero">
+					<div class="project-hero__body">
 						<p class="eyebrow">CBS StatLine 85458NED + PDOK</p>
 						<h1>Migratieachtergrond per Gemeente</h1>
 					</div>
 					<p>Vergelijk per gemeente meerdere CBS-maten rond herkomstland en geboorteland, telkens als percentage van de totale gemeentebevolking op 1 januari.</p>
 				</header>
-				<section class="notes" aria-label="Datatoelichting">
+				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datatoelichting</h2>
 						<p>Alle kaartlagen komen uit CBS StatLine 85458NED. De teller volgt de gekozen combinatie van herkomstland, geboorteland en leeftijd; de noemer is steeds de totale gemeentebevolking in dezelfde CBS-tabel en hetzelfde jaar.</p>
@@ -36,9 +49,9 @@
 						<p>De kaart gebruikt de gegeneraliseerde gemeentegrenzen van 2025 voor alle jaren 2022-2025. Gemeentelijke herindelingen binnen deze periode worden dus getoond op de 2025-indeling.</p>
 					</article>
 				</section>
-				<main class="migration-app">
-					<section class="map-panel" aria-labelledby="mapTitle">
-						<div class="toolbar">
+				<section class="project-dashboard">
+					<section class="project-panel" aria-labelledby="mapTitle">
+						<div class="project-toolbar">
 							<label class="year-picker">
 								<span>Jaar <strong id="yearLabel">2025</strong></span>
 								<input id="yearSlider" type="range" min="2022" max="2025" value="2025" step="1" />
@@ -48,23 +61,23 @@
 								<span>Maat</span>
 								<select id="metricSelect"></select>
 							</label>
-							<div class="summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
+							<div class="project-summary summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
 						</div>
-						<div class="map-head">
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow">Gemeenten, grenzen 2025</p>
 								<h2 id="mapTitle">Buiten-Europese migranten geboren buiten Nederland</h2>
 							</div>
 							<p id="selectionLabel" class="selection-label">Geen gemeente geselecteerd</p>
 						</div>
-						<div class="map-wrap">
+						<div class="project-chart-wrap">
 							<svg id="municipalityMap" role="img" aria-labelledby="mapTitle mapDescription"></svg>
 							<p id="mapDescription" class="sr-only">Choroplethkaart van Nederlandse gemeenten met het percentage inwoners voor de gekozen CBS-maat.</p>
-							<div id="tooltip" class="tooltip" role="status" hidden></div>
+							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
 					</section>
-					<section class="table-panel" aria-labelledby="tableTitle">
-						<div class="table-head">
+					<section class="project-panel" aria-labelledby="tableTitle">
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow">Sorteerbare tabel</p>
 								<h2 id="tableTitle">Gemeenten</h2>
@@ -85,11 +98,11 @@
 							</table>
 						</div>
 					</section>
-				</main>
-			</div>
+				</section>
+			</article>
 			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 			<script type="module" src="app.js"></script>
-			<aside class="project-sources" aria-labelledby="project-sources-title">
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
@@ -107,5 +120,6 @@
 				</ul>
 			</aside>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

@@ -10,6 +10,7 @@ const ranking = document.querySelector("#ranking");
 const topOut = document.querySelector("#topOut");
 const topIn = document.querySelector("#topIn");
 const metricButtons = document.querySelectorAll("[data-metric]");
+const projectPage = document.querySelector(".project-page--eu-begrotingsstromenkaart");
 
 const euCodes = new Set(["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE"]);
 
@@ -53,7 +54,7 @@ let euFeatures = [];
 let metricExtents = {};
 let metric = "net_balance_pct_gni";
 let year = 2000;
-let playing = true;
+let playing = false;
 let lastAdvance = 0;
 let transition = null;
 let hoverFeature = null;
@@ -67,6 +68,31 @@ let lastAnimationDraw = 0;
 const baseHoldMs = 650;
 const baseTransitionMs = 1050;
 const baseResetMs = 850;
+let themePalette = readThemePalette();
+
+function cssVar(name) {
+	return getComputedStyle(projectPage).getPropertyValue(name).trim();
+}
+
+function readThemePalette() {
+	return {
+		bg: cssVar("--eu-map-bg") || "#0d1216",
+		land: cssVar("--eu-map-land") || "#182027",
+		neutral: cssVar("--eu-map-neutral") || "#263039",
+		stroke: cssVar("--eu-map-stroke") || "rgba(244,247,248,0.45)",
+		strokeMuted: cssVar("--eu-map-stroke-muted") || "rgba(244,247,248,0.12)",
+		hoverFill: cssVar("--eu-map-hover-fill") || "rgba(255,255,255,0.08)",
+		hoverStroke: cssVar("--eu-map-hover-stroke") || "rgba(255,255,255,0.92)",
+		out: cssVar("--eu-map-out") || "#ff8a7d",
+		in: cssVar("--eu-map-in") || "#6ccf8e",
+	};
+}
+
+function refreshThemePalette() {
+	themePalette = readThemePalette();
+	if (data) updateSidePanel({ redraw: false });
+	draw();
+}
 
 function isSmallScreen() {
 	return window.matchMedia("(max-width: 880px)").matches;
@@ -171,8 +197,9 @@ function cacheMetricExtents() {
 
 function colorFor(value, opacity = 1) {
 	const max = metricExtents[metric] || 1;
-	const scale = Math.min(1, Math.abs(value) / max);
-	const color = value < 0 ? d3.interpolateRgb("#383238", "#d54d43")(scale) : value > 0 ? d3.interpolateRgb("#273833", "#2fb47c")(scale) : "#263039";
+	const rawScale = Math.min(1, Math.abs(value) / max);
+	const scale = value === 0 ? 0 : 0.24 + rawScale * 0.76;
+	const color = value < 0 ? d3.interpolateRgb(themePalette.neutral, themePalette.out)(scale) : value > 0 ? d3.interpolateRgb(themePalette.neutral, themePalette.in)(scale) : themePalette.neutral;
 	return d3.color(color).copy({ opacity }).formatRgb();
 }
 
@@ -303,7 +330,7 @@ function tooltipHtml(row) {
 }
 
 function positionTooltip(event) {
-	const pane = canvas.closest(".map-pane").getBoundingClientRect();
+	const pane = canvas.closest(".project-canvas-stage").getBoundingClientRect();
 	const tooltipRect = countryTooltip.getBoundingClientRect();
 	const offset = 16;
 	let left = event.clientX - pane.left + offset;
@@ -341,18 +368,18 @@ function clearHover() {
 }
 
 function countryFill(row, neutralOpacity) {
-	if (!row) return "#182027";
+	if (!row) return themePalette.land;
 	if (neutralOpacity < 1) return colorFor(row[metric], neutralOpacity);
 	return colorFor(row[metric]);
 }
 
 function countryStroke(code) {
-	if (euCodes.has(code)) return "rgba(244,247,248,0.45)";
-	return "rgba(244,247,248,0.12)";
+	if (euCodes.has(code)) return themePalette.stroke;
+	return themePalette.strokeMuted;
 }
 
 function neutralLandFill() {
-	return "#263039";
+	return themePalette.neutral;
 }
 
 function draw(timestamp = performance.now()) {
@@ -366,7 +393,7 @@ function draw(timestamp = performance.now()) {
 	yearLabel.textContent = state.label;
 
 	context.clearRect(0, 0, width, height);
-	context.fillStyle = "#0d1216";
+	context.fillStyle = themePalette.bg;
 	context.fillRect(0, 0, width, height);
 
 	context.save();
@@ -378,7 +405,7 @@ function draw(timestamp = performance.now()) {
 		const row = rowsByCode.get(code);
 		context.beginPath();
 		path(feature);
-		context.fillStyle = row ? countryFill(row, state.neutralOpacity) : "#182027";
+		context.fillStyle = row ? countryFill(row, state.neutralOpacity) : themePalette.land;
 		if (transition?.to === null && row) context.fillStyle = d3.interpolateRgb(countryFill(row, state.neutralOpacity), neutralLandFill())(1 - state.neutralOpacity);
 		context.fill();
 		context.strokeStyle = countryStroke(code);
@@ -389,9 +416,9 @@ function draw(timestamp = performance.now()) {
 	if (hoverFeature) {
 		context.beginPath();
 		path(hoverFeature);
-		context.fillStyle = "rgba(255,255,255,0.08)";
+		context.fillStyle = themePalette.hoverFill;
 		context.fill();
-		context.strokeStyle = "rgba(255,255,255,0.92)";
+		context.strokeStyle = themePalette.hoverStroke;
 		context.lineWidth = 2 / mapTransform.k;
 		context.stroke();
 	}
@@ -419,7 +446,7 @@ function updateSidePanel({ redraw = true } = {}) {
 		...rows.map((row) => {
 			const li = document.createElement("li");
 			li.innerHTML = `<span>${row.country}<br><small>${row.code}</small></span><strong>${formatters[metric](row[metric])}</strong>`;
-			li.style.color = row[metric] < 0 ? "#ffb6ae" : "#a8e8ca";
+			li.querySelector("strong").className = row[metric] < 0 ? "out-text" : "in-text";
 			return li;
 		})
 	);
@@ -458,12 +485,16 @@ speedInput.addEventListener("input", (event) => {
 metricButtons.forEach((button) => {
 	button.addEventListener("click", () => {
 		metric = button.dataset.metric;
-		metricButtons.forEach((item) => item.classList.toggle("active", item === button));
+		metricButtons.forEach((item) => item.classList.toggle("is-active", item === button));
 		updateSidePanel();
 	});
 });
 
 window.addEventListener("resize", resize);
+new MutationObserver(refreshThemePalette).observe(document.documentElement, {
+	attributes: true,
+	attributeFilter: ["data-theme"],
+});
 
 const topologyUrl = isSmallScreen() ? "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json" : "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
 const [budgetData, topology] = await Promise.all([fetch("budget-flows.json").then((response) => response.json()), fetch(topologyUrl).then((response) => response.json())]);

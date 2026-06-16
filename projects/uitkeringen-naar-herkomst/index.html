@@ -6,29 +6,42 @@
 		<meta name="description" content="Interactief CBS-dashboard over uitkeringsontvangers naar herkomstgroep, geslacht, leeftijd, uitkeringstype en regio." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/uitkeringen-naar-herkomst/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="styles.css" />
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<div class="benefits-page">
-				<header class="benefits-header">
-					<div>
+			<link rel="stylesheet" href="styles.css" />
+			<article class="project-page project-page--uitkeringen-naar-herkomst">
+				<header class="project-hero">
+					<div class="project-hero__body">
 						<p class="eyebrow">CBS StatLine 85692NED + 85721NED + 80794NED</p>
 						<h1>Uitkeringen Naar Herkomst</h1>
 					</div>
 					<p>Nationale uitkeringsontvangers naar herkomst, leeftijd en geslacht, met regionale context zonder herkomstuitsplitsing.</p>
 				</header>
-				<section class="notes" aria-label="Datatoelichting">
+				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datatoelichting</h2>
 						<p>De nationale grafieken combineren CBS 85692NED met de bevolkingsnoemer uit 85721NED. De relatieve maat is ontvangers per 1.000 inwoners binnen dezelfde filtercombinatie.</p>
@@ -38,9 +51,9 @@
 						<p>Personen kunnen bij meerdere uitkeringstypen meetellen. Bij totalen telt CBS een persoon maar een keer; losse uitkeringstypen zijn niet bedoeld om bij elkaar op te tellen.</p>
 					</article>
 				</section>
-				<main class="benefits-dashboard">
-					<section class="panel chart-panel" aria-labelledby="trendTitle">
-						<div class="toolbar">
+				<section class="project-dashboard">
+					<section class="project-panel project-chart" aria-labelledby="trendTitle">
+						<div class="project-toolbar">
 							<div class="period-control">
 								<div class="period-head">
 									<span>Periode</span>
@@ -61,33 +74,33 @@
 								<select id="sexSelect"></select>
 							</label>
 						</div>
-						<div class="chart-head">
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow" id="trendKicker">Nationaal, per 1.000 inwoners</p>
 								<h2 id="trendTitle">Trend naar herkomst en geboorteland ouders</h2>
 							</div>
-							<div id="summaryStrip" class="summary-strip" aria-label="Samenvatting"></div>
+							<div id="summaryStrip" class="project-summary summary-strip" aria-label="Samenvatting"></div>
 						</div>
-						<div class="chart-wrap">
+						<div class="project-chart-wrap">
 							<svg id="trendChart" role="img" aria-labelledby="trendTitle trendDescription"></svg>
 							<p id="trendDescription" class="sr-only">Lijngrafiek met uitkeringsontvangers per 1.000 inwoners naar herkomstgroep en geboorteland ouders.</p>
-							<div id="tooltip" class="tooltip" role="status" hidden></div>
+							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
 					</section>
-					<section class="panel scatter-panel" aria-labelledby="scatterTitle">
-						<div class="section-head">
+					<section class="project-panel" aria-labelledby="scatterTitle">
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow">Geselecteerde periode</p>
 								<h2 id="scatterTitle">Aantal tegenover relatief niveau</h2>
 							</div>
 							<button id="exportCsv" type="button">Exporteer tabel</button>
 						</div>
-						<div class="chart-wrap compact">
+						<div class="project-chart-wrap compact">
 							<svg id="scatterChart" role="img" aria-labelledby="scatterTitle scatterDescription"></svg>
 							<p id="scatterDescription" class="sr-only">Scatterplot met uitkeringsontvangers en uitkeringsontvangers per 1.000 inwoners naar herkomstgroep en geboorteland ouders.</p>
 						</div>
 					</section>
-					<aside class="panel side-panel">
+					<aside class="project-panel project-sidebar">
 						<section aria-labelledby="detailTitle">
 							<p class="eyebrow">Selectie</p>
 							<h2 id="detailTitle">Nederlandse referentiegroep</h2>
@@ -99,8 +112,8 @@
 							<div id="rankingList" class="ranking-list"></div>
 						</section>
 					</aside>
-					<section class="panel map-panel" aria-labelledby="mapTitle">
-						<div class="section-head">
+					<section class="project-panel" aria-labelledby="mapTitle">
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow">Regionale context, geen herkomstuitsplitsing</p>
 								<h2 id="mapTitle">Gemeenten naar totaal aantal ontvangers</h2>
@@ -108,7 +121,7 @@
 							<p id="regionSelection" class="selection-label">Geen gemeente geselecteerd</p>
 						</div>
 						<div class="map-grid">
-							<div class="map-wrap">
+							<div class="project-chart-wrap">
 								<svg id="regionMap" role="img" aria-labelledby="mapTitle mapDescription"></svg>
 								<p id="mapDescription" class="sr-only">Choroplethkaart van gemeenten met uitkeringsontvangers voor het gekozen uitkeringstype.</p>
 							</div>
@@ -126,11 +139,11 @@
 							</div>
 						</div>
 					</section>
-				</main>
-			</div>
+				</section>
+			</article>
 			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 			<script type="module" src="app.js"></script>
-			<aside class="project-sources" aria-labelledby="project-sources-title">
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
@@ -152,5 +165,6 @@
 				</ul>
 			</aside>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

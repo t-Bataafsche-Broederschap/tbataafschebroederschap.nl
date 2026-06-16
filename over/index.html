@@ -6,16 +6,29 @@
 		<meta name="description" content="Meer informatie over ’t Bataafsche Broederschap." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/over/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main">
 			<article class="content">
@@ -24,5 +37,6 @@
 				<p>Als Ding werken we gezamenlijk door bronnen, bestanden en verbanden heen. Wat daaruit bovenkomt, maken we vrij beschikbaar: informatie die anders verborgen, versnipperd of moeilijk vindbaar blijft.</p>
 			</article>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

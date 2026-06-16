@@ -1,0 +1,220 @@
+:root {
+	/* Extracted from "Saga UI Kit - Dark theme (Community).fig" with OpenPencil CLI. */
+	--saga-bg: #111217;
+	--saga-bg-deep: #0a0a10;
+	--saga-bg-black: #030308;
+	--saga-surface: #181b1f;
+	--saga-surface-2: #22262b;
+	--saga-surface-3: #24292e;
+	--saga-ink: #ccccdc;
+	--saga-ink-strong: #ffffff;
+	--saga-muted: #9da4aa;
+	--saga-dim: #7b8087;
+	--saga-line: #464c54;
+	--saga-line-soft: rgba(204, 204, 220, 0.14);
+	--saga-blue: #c43b2f;
+	--saga-blue-2: #ff8a7d;
+	--saga-blue-3: #e85d4f;
+	--saga-blue-dark: #971f16;
+	--saga-pink: #ff5286;
+	--saga-pink-dark: #d10e5c;
+	--saga-orange: #f57047;
+	--saga-yellow: #fbad37;
+	--saga-green: #6ccf8e;
+	--saga-purple: #9747ff;
+	--saga-space-0: 0;
+	--saga-space-1: 4px;
+	--saga-space-2: 8px;
+	--saga-space-3: 12px;
+	--saga-space-4: 16px;
+	--saga-space-6: 24px;
+	--saga-space-8: 32px;
+	--saga-space-14: 56px;
+	--saga-radius-sm: 4px;
+	--saga-radius: 8px;
+	--saga-radius-lg: 12px;
+	--saga-radius-xl: 16px;
+	--saga-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+	--saga-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--saga-mono-font: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.saga-project-page-dark {
+	color-scheme: dark;
+	--bg: var(--saga-bg);
+	--surface: var(--saga-surface);
+	--surface-quiet: var(--saga-surface-2);
+	--panel: var(--saga-surface);
+	--ink: var(--saga-ink);
+	--muted: var(--saga-muted);
+	--dim: var(--saga-dim);
+	--line: var(--saga-line-soft);
+	--accent: var(--saga-blue);
+	--accent-2: var(--saga-pink);
+	--blue: var(--saga-blue-2);
+	--red: var(--saga-pink);
+	--orange: var(--saga-orange);
+	--amber: var(--saga-yellow);
+	--green: var(--saga-green);
+	--shadow: var(--saga-shadow);
+	min-height: calc(100vh - 4.5rem);
+	background: linear-gradient(180deg, var(--saga-bg) 0%, var(--saga-bg-deep) 64%, var(--saga-bg-black) 100%);
+	color: var(--saga-ink);
+	font-family: var(--saga-font);
+}
+
+.saga-project-page-dark *,
+.saga-project-page-dark *::before,
+.saga-project-page-dark *::after {
+	box-sizing: border-box;
+}
+
+.saga-project-page-dark p {
+	color: var(--saga-muted);
+}
+
+.saga-project-page-dark h1,
+.saga-project-page-dark h2,
+.saga-project-page-dark h3 {
+	color: var(--saga-ink-strong);
+	font-family: var(--saga-font);
+	letter-spacing: 0;
+}
+
+.saga-project-page-dark h1 {
+	font-size: clamp(2.4rem, 5.6vw, 5.75rem);
+	font-weight: 300;
+	line-height: 1.08;
+}
+
+.saga-project-page-dark h2 {
+	font-size: clamp(1.35rem, 2vw, 1.8rem);
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.saga-project-page-dark h3 {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.saga-dark-eyebrow,
+.saga-project-page-dark .eyebrow {
+	color: var(--saga-blue-2);
+	font-family: var(--saga-font);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.saga-dark-panel,
+.saga-dark-card,
+.saga-project-page-dark .panel,
+.saga-project-page-dark .chart-panel,
+.saga-project-page-dark .map-panel,
+.saga-project-page-dark .table-panel,
+.saga-project-page-dark .side-panel,
+.saga-project-page-dark .controls,
+.saga-project-page-dark .notes {
+	border: 1px solid var(--saga-line-soft);
+	border-radius: var(--saga-radius);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)), var(--saga-surface);
+	box-shadow: var(--saga-shadow);
+	color: var(--saga-ink);
+}
+
+.saga-project-page-dark .section-head,
+.saga-project-page-dark .chart-head,
+.saga-project-page-dark .toolbar,
+.saga-project-page-dark .chart-toolbar,
+.saga-project-page-dark .map-head,
+.saga-project-page-dark .table-head,
+.saga-project-page-dark .summary-strip div,
+.saga-project-page-dark .stat-item,
+.saga-project-page-dark .grid-card {
+	border-color: var(--saga-line-soft);
+	background-color: transparent;
+	color: var(--saga-ink);
+}
+
+.saga-project-page-dark .chart-wrap,
+.saga-project-page-dark .map-wrap,
+.saga-project-page-dark canvas {
+	border: 1px solid rgba(204, 204, 220, 0.08);
+	border-radius: var(--saga-radius-sm);
+	background: linear-gradient(rgba(204, 204, 220, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(204, 204, 220, 0.045) 1px, transparent 1px), var(--saga-bg-black);
+	background-size: 48px 48px;
+}
+
+.saga-project-page-dark button,
+.saga-dark-button,
+.saga-project-page-dark input,
+.saga-project-page-dark select,
+.saga-project-page-dark textarea {
+	border: 1px solid var(--saga-line-soft);
+	border-radius: var(--saga-radius-sm);
+	background: var(--saga-surface-3);
+	color: var(--saga-ink);
+	font-family: var(--saga-font);
+}
+
+.saga-project-page-dark button,
+.saga-dark-button {
+	min-height: 2.5rem;
+	padding: 0 var(--saga-space-4);
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.saga-project-page-dark button:hover,
+.saga-dark-button:hover {
+	border-color: rgba(255, 138, 125, 0.64);
+	background: #2b3340;
+	color: var(--saga-ink-strong);
+}
+
+.saga-project-page-dark button.active,
+.saga-project-page-dark button.is-active,
+.saga-dark-button.is-active {
+	border-color: var(--saga-blue-2);
+	background: linear-gradient(180deg, var(--saga-blue), var(--saga-blue-dark));
+	color: var(--saga-ink-strong);
+}
+
+.saga-project-page-dark input,
+.saga-project-page-dark select,
+.saga-project-page-dark textarea {
+	min-height: 2.5rem;
+	padding: 0 var(--saga-space-3);
+}
+
+.saga-project-page-dark textarea {
+	padding-block: var(--saga-space-2);
+}
+
+.saga-project-page-dark table {
+	border-collapse: collapse;
+	color: var(--saga-ink);
+	font-family: var(--saga-font);
+}
+
+.saga-project-page-dark th,
+.saga-project-page-dark td {
+	border-bottom: 1px solid var(--saga-line-soft);
+	padding: var(--saga-space-2) var(--saga-space-3);
+}
+
+.saga-project-page-dark th {
+	color: var(--saga-muted);
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.saga-project-page-dark code,
+.saga-project-page-dark pre,
+.saga-project-page-dark .mono {
+	font-family: var(--saga-mono-font);
+}

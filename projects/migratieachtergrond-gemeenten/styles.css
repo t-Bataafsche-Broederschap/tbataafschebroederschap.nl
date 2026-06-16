@@ -1,43 +1,8 @@
-.migration-map-page {
-	color-scheme: light;
-	--bg: #f3f0ea;
-	--surface: #fffdfa;
-	--surface-quiet: #ebe6dd;
-	--ink: #24211d;
-	--muted: #6d665b;
-	--line: #d4caba;
-	--accent: #28706b;
-	--accent-dark: #174743;
-	--select: #f2a51a;
-	--shadow: 0 18px 42px rgba(42, 35, 22, 0.12);
-	box-sizing: border-box;
-	min-height: calc(100vh - 10rem);
-	padding: 28px clamp(14px, 4vw, 46px) 44px;
-	background: var(--bg);
-	color: var(--ink);
-	font-family:
-		Inter,
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
+.project-page--migratieachtergrond-gemeenten {
+	--project-width: 1540px;
 }
 
-body:has(.migration-map-page) {
-	overflow-x: hidden;
-}
-
-.migration-map-page * {
-	box-sizing: border-box;
-}
-
-.migration-map-page p {
-	text-align: left;
-}
-
-.migration-header {
+.project-page--migratieachtergrond-gemeenten .project-hero {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
 	gap: 24px;
@@ -46,7 +11,7 @@ body:has(.migration-map-page) {
 	margin: 0 auto 22px;
 }
 
-.migration-header h1 {
+.project-page--migratieachtergrond-gemeenten .project-hero h1 {
 	max-width: 980px;
 	margin: 0;
 	color: var(--ink);
@@ -58,15 +23,15 @@ body:has(.migration-map-page) {
 	text-transform: none;
 }
 
-.migration-header p:last-child {
+.project-page--migratieachtergrond-gemeenten .project-hero p:last-child {
 	max-width: 56ch;
 	margin: 0;
-	color: #494239;
+	color: var(--muted);
 	font-size: 17px;
 	line-height: 1.5;
 }
 
-.eyebrow {
+.project-page--migratieachtergrond-gemeenten .eyebrow {
 	margin: 0;
 	color: var(--muted);
 	font-size: 12px;
@@ -75,16 +40,16 @@ body:has(.migration-map-page) {
 	text-transform: uppercase;
 }
 
-.migration-app {
+.project-page--migratieachtergrond-gemeenten .project-dashboard {
 	display: grid;
 	gap: 18px;
 	max-width: 1500px;
 	margin: 0 auto;
 }
 
-.map-panel,
-.table-panel,
-.notes {
+.project-page--migratieachtergrond-gemeenten .project-chart,
+.project-page--migratieachtergrond-gemeenten .project-chart,
+.project-page--migratieachtergrond-gemeenten .project-notes {
 	border: 1px solid var(--line);
 	border-radius: 8px;
 	background: var(--surface);
@@ -92,7 +57,7 @@ body:has(.migration-map-page) {
 	overflow: hidden;
 }
 
-.toolbar {
+.project-page--migratieachtergrond-gemeenten .project-toolbar {
 	display: grid;
 	grid-template-columns: 170px minmax(220px, 300px) minmax(0, 1fr);
 	gap: 14px;
@@ -102,7 +67,7 @@ body:has(.migration-map-page) {
 	background: var(--surface-quiet);
 }
 
-.year-picker {
+.project-page--migratieachtergrond-gemeenten .year-picker {
 	display: grid;
 	gap: 6px;
 	color: var(--muted);
@@ -112,7 +77,7 @@ body:has(.migration-map-page) {
 	text-transform: uppercase;
 }
 
-.metric-picker {
+.project-page--migratieachtergrond-gemeenten .metric-picker {
 	display: grid;
 	gap: 7px;
 	color: var(--muted);
@@ -122,13 +87,13 @@ body:has(.migration-map-page) {
 	text-transform: uppercase;
 }
 
-.metric-picker select {
+.project-page--migratieachtergrond-gemeenten .metric-picker select {
 	width: 100%;
 	min-height: 38px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 0 34px 0 10px;
-	background: #fff;
+	background: var(--surface-raised);
 	color: var(--ink);
 	font: inherit;
 	font-size: 14px;
@@ -137,18 +102,18 @@ body:has(.migration-map-page) {
 	text-transform: none;
 }
 
-.year-picker strong {
+.project-page--migratieachtergrond-gemeenten .year-picker strong {
 	color: var(--accent-dark);
 	font-size: 15px;
 	letter-spacing: 0;
 }
 
-.year-picker input[type="range"] {
+.project-page--migratieachtergrond-gemeenten .year-picker input[type="range"] {
 	width: 100%;
 	accent-color: var(--accent);
 }
 
-.year-ticks {
+.project-page--migratieachtergrond-gemeenten .year-ticks {
 	display: flex;
 	justify-content: space-between;
 	color: var(--muted);
@@ -158,29 +123,29 @@ body:has(.migration-map-page) {
 	text-transform: none;
 }
 
-.summary-strip {
+.project-page--migratieachtergrond-gemeenten .project-summary {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 10px;
 }
 
-.summary-strip div {
+.project-page--migratieachtergrond-gemeenten .project-summary div {
 	min-height: 58px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 9px 11px;
-	background: #fff;
+	background: var(--surface-raised);
 }
 
-.summary-strip span,
-td span {
+.project-page--migratieachtergrond-gemeenten .project-summary span,
+.project-page--migratieachtergrond-gemeenten td span {
 	display: block;
 	color: var(--muted);
 	font-size: 12px;
 	font-weight: 720;
 }
 
-.summary-strip strong {
+.project-page--migratieachtergrond-gemeenten .project-summary strong {
 	display: block;
 	margin-top: 4px;
 	overflow: hidden;
@@ -191,8 +156,8 @@ td span {
 	white-space: nowrap;
 }
 
-.map-head,
-.table-head {
+.project-page--migratieachtergrond-gemeenten .project-panel__head,
+.project-page--migratieachtergrond-gemeenten .project-panel__head {
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
@@ -200,9 +165,9 @@ td span {
 	padding: 18px 18px 8px;
 }
 
-.map-head h2,
-.table-head h2,
-.notes h2 {
+.project-page--migratieachtergrond-gemeenten .project-panel__head h2,
+.project-page--migratieachtergrond-gemeenten .project-panel__head h2,
+.project-page--migratieachtergrond-gemeenten .project-notes h2 {
 	margin: 4px 0 0;
 	color: var(--ink);
 	font: inherit;
@@ -213,26 +178,26 @@ td span {
 	text-transform: none;
 }
 
-.selection-label,
-.row-count {
+.project-page--migratieachtergrond-gemeenten .selection-label,
+.project-page--migratieachtergrond-gemeenten .row-count {
 	margin: 0;
 	color: var(--muted);
 	font-size: 13px;
 	white-space: nowrap;
 }
 
-.map-wrap {
+.project-page--migratieachtergrond-gemeenten .project-chart-wrap {
 	position: relative;
 	padding: 0 12px 14px;
 }
 
-#municipalityMap {
+.project-page--migratieachtergrond-gemeenten #municipalityMap {
 	display: block;
 	width: 100%;
 	min-height: 560px;
 }
 
-.municipality {
+.project-page--migratieachtergrond-gemeenten .municipality {
 	stroke: rgba(255, 253, 250, 0.86);
 	stroke-width: 0.55;
 	cursor: pointer;
@@ -242,28 +207,28 @@ td span {
 		stroke-width 140ms ease;
 }
 
-.municipality:hover {
-	stroke: #005f73;
+.project-page--migratieachtergrond-gemeenten .municipality:hover {
+	stroke: var(--line-strong);
 	stroke-width: 1.35;
 }
 
-.municipality.is-selected {
-	stroke: #ffb703;
+.project-page--migratieachtergrond-gemeenten .municipality.is-selected {
+	stroke: var(--line-strong);
 	stroke-width: 2.6;
 	filter: drop-shadow(0 0 5px rgba(255, 183, 3, 0.55));
 }
 
-.legend-bar {
+.project-page--migratieachtergrond-gemeenten .legend-bar {
 	stroke: rgba(36, 33, 29, 0.25);
 }
 
-.legend-text {
-	fill: #403a32;
+.project-page--migratieachtergrond-gemeenten .legend-text {
+	fill: var(--muted);
 	font-size: 12px;
 	font-weight: 760;
 }
 
-.tooltip {
+.project-page--migratieachtergrond-gemeenten .project-tooltip {
 	position: absolute;
 	z-index: 3;
 	display: grid;
@@ -279,22 +244,22 @@ td span {
 	pointer-events: none;
 }
 
-.tooltip strong {
+.project-page--migratieachtergrond-gemeenten .project-tooltip strong {
 	font-size: 15px;
 }
 
-.table-wrap {
+.project-page--migratieachtergrond-gemeenten .table-wrap {
 	overflow-x: auto;
 }
 
-table {
+.project-page--migratieachtergrond-gemeenten table {
 	width: 100%;
 	min-width: 720px;
 	border-collapse: collapse;
 }
 
-th,
-td {
+.project-page--migratieachtergrond-gemeenten th,
+.project-page--migratieachtergrond-gemeenten td {
 	border-top: 1px solid var(--line);
 	padding: 11px 14px;
 	text-align: right;
@@ -306,60 +271,60 @@ td:first-child {
 	text-align: left;
 }
 
-th {
-	background: #f6f1e8;
+.project-page--migratieachtergrond-gemeenten th {
+	background: var(--surface-quiet);
 }
 
-th button {
+.project-page--migratieachtergrond-gemeenten th button {
 	min-height: 36px;
 	border: 1px solid transparent;
 	border-radius: 6px;
 	padding: 0 8px;
 	background: transparent;
-	color: #3c362f;
+	color: var(--muted);
 	font: inherit;
 	font-weight: 840;
 	cursor: pointer;
 }
 
-th button.is-active {
+.project-page--migratieachtergrond-gemeenten th button.is-active {
 	border-color: rgba(40, 112, 107, 0.28);
-	background: #e4f0ec;
+	background: var(--surface-quiet);
 	color: var(--accent-dark);
 }
 
-tbody tr {
+.project-page--migratieachtergrond-gemeenten tbody tr {
 	cursor: pointer;
 }
 
-tbody tr:hover {
-	background: #f8f3ea;
+.project-page--migratieachtergrond-gemeenten tbody tr:hover {
+	background: var(--surface-quiet);
 }
 
-tbody tr.is-selected {
-	background: #e8f2ee;
+.project-page--migratieachtergrond-gemeenten tbody tr.is-selected {
+	background: var(--surface-quiet);
 	outline: 2px solid rgba(40, 112, 107, 0.3);
 	outline-offset: -2px;
 }
 
-td strong {
+.project-page--migratieachtergrond-gemeenten td strong {
 	display: block;
 	color: var(--ink);
 }
 
-.notes {
+.project-page--migratieachtergrond-gemeenten .project-notes {
 	max-width: 1500px;
 	margin: 18px auto 0;
 	padding: 22px;
 }
 
-.notes p {
+.project-page--migratieachtergrond-gemeenten .project-notes p {
 	max-width: 88ch;
-	color: #4a443c;
+	color: var(--muted);
 	line-height: 1.62;
 }
 
-.sr-only {
+.project-page--migratieachtergrond-gemeenten .sr-only {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -369,35 +334,35 @@ td strong {
 }
 
 @media (max-width: 880px) {
-	.migration-header,
-	.toolbar,
-	.map-head,
-	.table-head {
+	.project-page--migratieachtergrond-gemeenten .project-hero,
+	.project-page--migratieachtergrond-gemeenten .project-toolbar,
+	.project-page--migratieachtergrond-gemeenten .project-panel__head,
+	.project-page--migratieachtergrond-gemeenten .project-panel__head {
 		grid-template-columns: 1fr;
 		display: grid;
 		align-items: start;
 	}
 
-	.summary-strip {
+	.project-page--migratieachtergrond-gemeenten .project-summary {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.selection-label,
-	.row-count {
+	.project-page--migratieachtergrond-gemeenten .selection-label,
+	.project-page--migratieachtergrond-gemeenten .row-count {
 		white-space: normal;
 	}
 }
 
 @media (max-width: 560px) {
-	.migration-map-page {
+	.project-page--migratieachtergrond-gemeenten {
 		padding-inline: 10px;
 	}
 
-	.summary-strip {
+	.project-page--migratieachtergrond-gemeenten .project-summary {
 		grid-template-columns: 1fr;
 	}
 
-	#municipalityMap {
+	.project-page--migratieachtergrond-gemeenten #municipalityMap {
 		min-height: 500px;
 	}
 }

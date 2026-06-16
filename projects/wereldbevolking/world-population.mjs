@@ -1,6 +1,6 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-const dataUrl = "/projects/world-population/world-population-series.json";
+const dataUrl = "/projects/wereldbevolking/world-population-series.json";
 const chartRoot = document.getElementById("world-population-chart");
 const statusNode = document.getElementById("world-population-status");
 const highlightInput = document.getElementById("world-population-highlight");

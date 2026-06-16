@@ -193,7 +193,7 @@ function hideTooltip() {
 function renderChart() {
 	const points = visiblePoints();
 	const allPoints = data.legacy2022.points;
-	const wrap = document.querySelector(".chart-wrap");
+	const wrap = document.querySelector(".project-chart-wrap");
 	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
 	const height = isSmallScreen() ? 560 : 720;
 	const margin = isSmallScreen() ? { top: 24, right: 42, bottom: 64, left: 54 } : { top: 30, right: 70, bottom: 78, left: 68 };
@@ -477,5 +477,5 @@ async function init() {
 
 init().catch((error) => {
 	console.error(error);
-	document.querySelector(".chart-wrap").innerHTML = `<p class="load-error">Data kon niet worden geladen.</p>`;
+	document.querySelector(".project-chart-wrap").innerHTML = `<p class="load-error">Data kon niet worden geladen.</p>`;
 });

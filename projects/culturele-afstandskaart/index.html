@@ -6,29 +6,42 @@
 		<meta name="description" content="Interactieve culturele kaart die landen positioneert op de Inglehart-Welzel assen en afstanden tot een gekozen land rangschikt." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/culturele-afstandskaart/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="styles.css" />
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<div class="cultural-distance-page">
-				<header class="cultural-header">
-					<div>
+			<link rel="stylesheet" href="styles.css" />
+			<article class="project-page project-page--culturele-afstandskaart">
+				<header class="project-hero">
+					<div class="project-hero__body">
 						<p class="cultural-eyebrow">Culturele kaart van European Values Study en World Values Survey</p>
 						<h1>Culturele afstandskaart</h1>
 					</div>
 					<p>Vergelijk landen op basis van hun positie in de culturele waardenruimte. De afstand is de rechte lijn tussen twee landen in de gekozen projectie.</p>
 				</header>
-				<section class="explanation" aria-labelledby="explanation-title">
+				<section class="project-notes" aria-labelledby="explanation-title">
 					<div>
 						<p class="cultural-eyebrow">Interpretatie</p>
 						<h2 id="explanation-title">Wat meet deze kaart?</h2>
@@ -45,11 +58,11 @@
 						<p>Deze scores liggen in deze dataset ongeveer tussen 0 en 1. De horizontale as gebruikt emancipatieve waarden; de verticale as gebruikt seculiere waarden. Ze beantwoorden een iets andere vraag: welke landen lijken op elkaar qua seculiere en emancipatieve waarden?</p>
 					</article>
 				</section>
-				<main class="cultural-app">
-					<section class="chart-panel" aria-label="Culturele kaart">
-						<div class="chart-toolbar">
+				<section class="project-dashboard">
+					<section class="project-panel project-chart" aria-label="Culturele kaart">
+						<div class="project-toolbar">
 							<div class="mode-switch" role="group" aria-label="Projectie">
-								<button class="active" type="button" data-mode="standard">Inglehart-Welzel</button>
+								<button class="is-active" type="button" data-mode="standard">Inglehart-Welzel</button>
 								<button type="button" data-mode="welzel">Welzel waarden</button>
 							</div>
 							<label>
@@ -77,9 +90,9 @@
 								<button id="resetZoom" type="button">Herstel zoom</button>
 							</div>
 						</div>
-						<div class="chart-wrap">
+						<div class="project-chart-wrap">
 							<svg id="culturalChart" role="img" aria-labelledby="chartTitle chartDescription"></svg>
-							<div id="tooltip" class="tooltip" role="status" hidden></div>
+							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
 					</section>
 					<aside class="distance-panel" aria-label="Afstandsvergelijking">
@@ -111,11 +124,11 @@
 						</div>
 						<ol id="distanceRanking" class="distance-ranking"></ol>
 					</aside>
-				</main>
-			</div>
+				</section>
+			</article>
 			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 			<script type="module" src="app.js"></script>
-			<aside class="project-sources" aria-labelledby="project-sources-title">
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
@@ -125,5 +138,6 @@
 				</ul>
 			</aside>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

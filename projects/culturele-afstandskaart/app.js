@@ -1,7 +1,7 @@
 /* global d3 */
 
 const svg = d3.select("#culturalChart");
-const chartWrap = document.querySelector(".chart-wrap");
+const chartWrap = document.querySelector(".project-chart-wrap");
 const tooltip = document.querySelector("#tooltip");
 const yearRange = document.querySelector("#yearRange");
 const yearLabel = document.querySelector("#yearLabel");
@@ -712,7 +712,7 @@ function render() {
 	trailToggle.checked = state.showTrail;
 	trendToggle.checked = state.showTrends;
 	groupToggle.checked = state.showGroups;
-	modeButtons.forEach((button) => button.classList.toggle("active", button.dataset.mode === state.mode));
+	modeButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.mode === state.mode));
 	populateCountries();
 	renderChart();
 }

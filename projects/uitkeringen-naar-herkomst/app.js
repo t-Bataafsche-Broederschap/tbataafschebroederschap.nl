@@ -234,7 +234,7 @@ function renderRanking() {
 		...rows.map((row) => {
 			const button = document.createElement("button");
 			button.type = "button";
-			button.className = sameSelection(row) ? "active" : "";
+			button.className = sameSelection(row) ? "is-active" : "";
 			button.innerHTML = `<span>${rowLabel(row)}</span><strong>${formatDecimal(valueFor(row).per1000)} per 1.000</strong><small>${formatNumber(valueFor(row).recipients)} ontvangers · ${formatRatio(ratioToReference(row))}</small>`;
 			button.addEventListener("click", () => {
 				selectedOrigin = row.origin;
@@ -262,7 +262,7 @@ function trendSeries() {
 }
 
 function renderTrend() {
-	const wrap = document.querySelector(".chart-wrap");
+	const wrap = document.querySelector(".project-chart-wrap");
 	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
 	const height = window.matchMedia("(max-width: 760px)").matches ? 430 : 500;
 	const margin = { top: 24, right: 22, bottom: 54, left: 62 };
@@ -363,7 +363,7 @@ function renderTrend() {
 
 function renderScatter() {
 	const rows = latestRows();
-	const wrap = document.querySelector(".scatter-panel .chart-wrap");
+	const wrap = document.querySelector(".project-chart .project-chart-wrap");
 	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
 	const height = 380;
 	const margin = { top: 22, right: 22, bottom: 58, left: 64 };
@@ -487,7 +487,7 @@ function renderMap() {
 		.sort((a, b) => a - b);
 	const max = d3.quantile(values, 0.98) || d3.max(values) || 1;
 	const color = d3.scaleSequential([0, max], d3.interpolateYlGnBu).clamp(true);
-	const wrap = document.querySelector(".map-wrap");
+	const wrap = document.querySelector(".project-chart-wrap");
 	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
 	const height = window.matchMedia("(max-width: 760px)").matches ? 500 : 620;
 	const project = rdProjector(data.regional.geojson, width, height);
@@ -528,7 +528,7 @@ function renderRegionalTable() {
 	regionTable.replaceChildren(
 		...rows.map((row) => {
 			const tr = document.createElement("tr");
-			tr.className = row.code === selectedRegion ? "active" : "";
+			tr.className = row.code === selectedRegion ? "is-active" : "";
 			tr.dataset.region = row.code;
 			tr.innerHTML = `<td>${row.name}</td><td>${row.level}</td><td>${formatNumber(row.values[topicSelect.value])}</td>`;
 			tr.addEventListener("click", () => {
@@ -590,5 +590,5 @@ async function init() {
 
 init().catch((error) => {
 	console.error(error);
-	document.querySelector(".benefits-dashboard").innerHTML = `<section class="panel"><h2>Data kon niet geladen worden</h2><p>${error.message}</p></section>`;
+	document.querySelector(".project-dashboard").innerHTML = `<section class="panel"><h2>Data kon niet geladen worden</h2><p>${error.message}</p></section>`;
 });

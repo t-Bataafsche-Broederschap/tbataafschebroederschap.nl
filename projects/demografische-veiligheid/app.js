@@ -4,8 +4,8 @@ const groupSelect = document.querySelector("#groupSelect");
 const xMetricSelect = document.querySelector("#xMetricSelect");
 const yMetricSelect = document.querySelector("#yMetricSelect");
 const zeroBaselineToggle = document.querySelector("#zeroBaselineToggle");
-const chartPanel = document.querySelector(".chart-panel");
-const chartWrap = document.querySelector(".chart-wrap");
+const chartPanel = document.querySelector(".project-chart");
+const chartWrap = document.querySelector(".project-chart-wrap");
 const fullscreenButton = document.querySelector("#fullscreenButton");
 const presetControls = document.querySelector("#presetControls");
 const summaryStrip = document.querySelector("#summaryStrip");
@@ -214,7 +214,7 @@ function activePresetKey() {
 function updatePresetButtons() {
 	const active = activePresetKey();
 	presetControls.querySelectorAll("button").forEach((button) => {
-		button.classList.toggle("active", button.dataset.preset === active);
+		button.classList.toggle("is-active", button.dataset.preset === active);
 	});
 }
 
@@ -285,7 +285,7 @@ function renderRanking() {
 		...rows.map((row) => {
 			const button = document.createElement("button");
 			button.type = "button";
-			button.className = row.key === selectedKey ? "active" : "";
+			button.className = row.key === selectedKey ? "is-active" : "";
 			button.innerHTML = `<span>${row.label}</span><strong>${formatValue(valueOf(row, yKey), yKey)}</strong><small>${metric(xMetricSelect.value).shortLabel}: ${formatValue(valueOf(row, xMetricSelect.value), xMetricSelect.value)}</small>`;
 			button.addEventListener("click", () => {
 				selectedKey = row.key;
@@ -453,5 +453,5 @@ fetch("data.json")
 		renderAll();
 	})
 	.catch((error) => {
-		document.querySelector(".demographic-safety-dashboard").innerHTML = `<section class="panel detail-panel"><h2>Data kon niet worden geladen</h2><p>${error.message}</p></section>`;
+		document.querySelector(".project-dashboard").innerHTML = `<section class="panel detail-panel"><h2>Data kon niet worden geladen</h2><p>${error.message}</p></section>`;
 	});

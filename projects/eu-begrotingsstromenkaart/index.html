@@ -6,23 +6,36 @@
 		<meta name="description" content="Geanimeerde canvaskaart van netto begrotingssaldi van lidstaten van de Europese Unie van 2000 tot en met 2024." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/eu-begrotingsstromenkaart/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="styles.css" />
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<div class="eu-budget-flow-page">
-				<main class="app">
-					<section class="map-pane">
+			<link rel="stylesheet" href="styles.css" />
+			<article class="project-page project-page--eu-begrotingsstromenkaart">
+				<section class="project-experience app">
+					<section class="project-canvas-stage">
 						<canvas id="map" aria-label="Geanimeerde kaart van begrotingsstromen van de Europese Unie"></canvas>
 						<div id="countryTooltip" class="country-tooltip" role="status" aria-live="polite" hidden></div>
 						<div class="hud">
@@ -36,9 +49,9 @@
 							</div>
 						</div>
 					</section>
-					<aside class="controls">
-						<div class="toolbar">
-							<button id="play" type="button">Pauze</button>
+					<aside class="project-toolbar">
+						<div class="project-toolbar__row">
+							<button id="play" type="button">Afspelen</button>
 							<label>
 								Jaar
 								<input id="year" type="range" min="2000" max="2024" value="2000" step="1" />
@@ -49,7 +62,7 @@
 							<input id="speed" type="range" min="0.25" max="10" value="1" step="0.25" />
 						</label>
 						<div class="metric-switch" role="group" aria-label="Kleurmetriek">
-							<button class="active" type="button" data-metric="net_balance_pct_gni">Percentage bruto nationaal inkomen</button>
+							<button class="is-active" type="button" data-metric="net_balance_pct_gni">Percentage bruto nationaal inkomen</button>
 							<button type="button" data-metric="net_balance_m_eur">Miljoen euro</button>
 							<button type="button" data-metric="net_balance_per_capita_eur">Euro per inwoner</button>
 						</div>
@@ -66,12 +79,12 @@
 						<ol id="ranking" class="ranking"></ol>
 						<p class="source">Bron: EUBudget-ranglijstdata. 2001 tot en met 2006 zijn geïnterpoleerd, omdat EUBudget ranglijstpagina's voor 2000 en 2007 tot en met 2024 publiceert.</p>
 					</aside>
-				</main>
-			</div>
+				</section>
+			</article>
 			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 			<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 			<script type="module" src="app.js"></script>
-			<aside class="project-sources" aria-labelledby="project-sources-title">
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
@@ -89,5 +102,6 @@
 				</ul>
 			</aside>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

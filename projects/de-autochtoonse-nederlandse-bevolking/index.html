@@ -6,35 +6,48 @@
 		<meta name="description" content="Interactieve grafiek over Nederlandse bevolking, migratie, woningbouw, woningtekort en stroomnetcapaciteit." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/de-autochtoonse-nederlandse-bevolking/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="styles.css" />
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<div class="autochtoon-page">
-				<header class="autochtoon-header">
-					<div>
+			<link rel="stylesheet" href="styles.css" />
+			<article class="project-page project-page--de-autochtoonse-nederlandse-bevolking">
+				<header class="project-hero">
+					<div class="project-hero__body">
 						<p class="eyebrow">CBS StatLine + officiele reeksen</p>
 						<h1>De Autochtoonse Nederlandse Bevolking</h1>
 					</div>
 					<p>Bevolking, samenstelling naar achtergrond, migratie, woningbouw, woningtekort en stroomnetdruk in dezelfde tijdlijn. "Bevolking min cumulatieve nettomigratie" blijft boekhouding, geen bevolkingsscenario.</p>
 				</header>
-				<section class="notes" aria-label="Datatoelichting">
+				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datakeuzes</h2>
 						<p>"Autochtoon" is niet meer de CBS-indeling. Daarom laat deze pagina zowel de oude CBS-reeks voor Nederlandse achtergrond en eerste en tweede generatie migratieachtergrond zien als de recentere tabellen op basis van geboorteland van persoon en ouders.</p>
 						<p>
 							De herkomsttab gebruikt vertrekland, geboorteland en nationaliteit als drie aparte CBS-definities. "Terugkomers" is een proxy: immigranten met geboorteland Nederland. De emigratietab houdt bestemmingsland apart, omdat die reeks exclusief administratieve correcties is. Het woningtekort is een
-							ABF/Primos-indicator, niet een CBS StatLine-reeks. Ontbrekende jaren tussen bekende woningtekortpunten worden lineair geinterpoleerd en in de tooltip als interpolatie gemarkeerd. De stroomnetcijfers komen van Netbeheer Nederland; de actuele capaciteitskaart is een momentopname.
+							ABF/Primos-indicator, niet een CBS StatLine-reeks. Ontbrekende jaren tussen bekende woningtekortpunten worden lineair geinterpoleerd en in de als interpolatie gemarkeerd. De stroomnetcijfers komen van Netbeheer Nederland; de actuele capaciteitskaart is een momentopname.
 						</p>
 						<p>
 							De compositietab gebruikt 1972-1995 de CBS-reconstructie 70787NED voor migratieachtergrond en eerste en tweede generatie. CBS markeert die jaren als geschat op basis van een reconstructie van het verleden. Voor 1996-2021 gebruikt de pagina de publieke CBS-reeks 70751NED voor Nederlandse achtergrond,
@@ -56,11 +69,11 @@
 						</ul>
 					</article>
 				</section>
-				<main class="dashboard" aria-label="Interactieve grafiek">
-					<section class="chart-panel">
-						<div class="toolbar">
+				<section class="project-dashboard" aria-label="Interactieve grafiek">
+					<section class="project-panel project-chart">
+						<div class="project-toolbar">
 							<div class="view-switch" role="group" aria-label="Grafiekweergave">
-								<button class="active" type="button" data-view="population">Bevolking</button>
+								<button class="is-active" type="button" data-view="population">Bevolking</button>
 								<button type="button" data-view="composition">Samenstelling</button>
 								<button type="button" data-view="growth">Groei</button>
 								<button type="button" data-view="age">Leeftijd</button>
@@ -74,7 +87,7 @@
 								<div id="definitionControl" class="definition-control" hidden>
 									<span>Definitie</span>
 									<div class="definition-options" role="group" aria-label="Benadruk definitie">
-										<button class="active" type="button" data-definition="nativeBackgroundProxy">Inheemse proxy</button>
+										<button class="is-active" type="button" data-definition="nativeBackgroundProxy">Inheemse proxy</button>
 										<button type="button" data-definition="bornAbroadPopulation">Geboren buiten Nederland</button>
 										<button type="button" data-definition="firstGenerationMigrationBackground">Eerste generatie</button>
 										<button type="button" data-definition="migrationBackgroundTotal">Migratieachtergrond</button>
@@ -99,7 +112,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="chart-head">
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow" id="viewKicker">Bevolking en migratie</p>
 								<h2 id="viewTitle">Nederland in personen</h2>
@@ -107,13 +120,13 @@
 							<div id="legend" class="legend" aria-label="Legenda"></div>
 							<p id="chartNote" class="chart-note" hidden></p>
 						</div>
-						<div class="chart-wrap">
+						<div class="project-chart-wrap">
 							<svg id="mainChart" role="img" aria-labelledby="viewTitle viewDescription"></svg>
 							<p id="viewDescription" class="sr-only">Interactieve tijdlijngrafiek met de gekozen Nederlandse indicatoren.</p>
-							<div id="tooltip" class="tooltip" role="status" hidden></div>
+							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
 					</section>
-					<aside class="side-panel">
+					<aside class="project-sidebar">
 						<section class="year-panel" aria-labelledby="selectedYearTitle">
 							<p class="eyebrow">Geselecteerd jaar</p>
 							<h2 id="selectedYearTitle">2024</h2>
@@ -125,11 +138,11 @@
 							<div id="gridCards" class="grid-cards"></div>
 						</section>
 					</aside>
-				</main>
-			</div>
+				</section>
+			</article>
 			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 			<script type="module" src="app.js"></script>
-			<aside class="project-sources" aria-labelledby="project-sources-title">
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
@@ -223,5 +236,6 @@
 				</ul>
 			</aside>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

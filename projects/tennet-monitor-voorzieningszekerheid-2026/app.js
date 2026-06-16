@@ -6,7 +6,7 @@ const normSlider = document.querySelector("#normSlider");
 const normValue = document.querySelector("#normValue");
 const metricButtons = document.querySelectorAll("[data-metric]");
 const tabButtons = document.querySelectorAll("[data-tab]");
-const tabPanels = document.querySelectorAll(".tab-panel");
+const tabPanels = document.querySelectorAll(".project-tab-panel");
 const summaryCards = document.querySelector("#summaryCards");
 const tooltip = document.querySelector("#tooltip");
 const weatherMeta = document.querySelector("#weatherMeta");
@@ -326,7 +326,7 @@ function renderLoleChart() {
 		root
 			.append("path")
 			.datum(scenarioRows)
-			.attr("class", `scenario-line ${scenario.key === state.scenario ? "active" : ""}`)
+			.attr("class", `scenario-line ${scenario.key === state.scenario ? "is-active" : ""}`)
 			.attr("fill", "none")
 			.attr("stroke", scenarioColors[scenario.key] || "#c9a36a")
 			.attr("d", line);
@@ -885,10 +885,10 @@ function renderAll() {
 
 function activateTab(tab) {
 	state.tab = tab;
-	tabButtons.forEach((button) => button.classList.toggle("active", button.dataset.tab === tab));
+	tabButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.tab === tab));
 	tabPanels.forEach((panel) => {
 		const active = panel.id === `tab-${tab}`;
-		panel.classList.toggle("active", active);
+		panel.classList.toggle("is-active", active);
 		panel.hidden = !active;
 	});
 	renderAll();
@@ -920,7 +920,7 @@ fetch("data.json")
 		metricButtons.forEach((button) => {
 			button.addEventListener("click", () => {
 				state.metric = button.dataset.metric;
-				metricButtons.forEach((item) => item.classList.toggle("active", item === button));
+				metricButtons.forEach((item) => item.classList.toggle("is-active", item === button));
 				renderAll();
 			});
 		});
@@ -929,5 +929,5 @@ fetch("data.json")
 		renderAll();
 	})
 	.catch((error) => {
-		document.querySelector(".tennet-dashboard").innerHTML = `<section class="panel"><h2>Data kon niet worden geladen</h2><p>${error.message}</p></section>`;
+		document.querySelector(".project-dashboard").innerHTML = `<section class="panel"><h2>Data kon niet worden geladen</h2><p>${error.message}</p></section>`;
 	});

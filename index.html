@@ -7,16 +7,29 @@
 		<meta name="description" content="Startpagina van ’t Bataafsche Broederschap." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main">
 			<section class="home-intro" aria-labelledby="home-title">
@@ -28,5 +41,6 @@
 				<img class="seal" src="/images/tBataafscheBroederschap.pngquant-8c.png" alt="Zegel van ’t Bataafsche Broederschap" />
 			</section>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

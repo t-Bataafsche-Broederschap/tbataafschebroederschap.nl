@@ -1,43 +1,8 @@
-.suspects-page {
-	color-scheme: light;
-	--bg: #f5f2ec;
-	--surface: #fffdfa;
-	--surface-quiet: #ede8df;
-	--ink: #24211d;
-	--muted: #6d665b;
-	--line: #d5ccb9;
-	--orange: #f2a51a;
-	--orange-dark: #9d6200;
-	--blue: #226089;
-	--shadow: 0 18px 42px rgba(42, 35, 22, 0.13);
-	box-sizing: border-box;
-	min-height: calc(100vh - 10rem);
-	padding: 28px clamp(14px, 4vw, 46px) 44px;
-	background: var(--bg);
-	color: var(--ink);
-	font-family:
-		Inter,
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
+.project-page--verdachten-naar-herkomst {
+	--project-width: 1540px;
 }
 
-body:has(.suspects-page) {
-	overflow-x: hidden;
-}
-
-.suspects-page * {
-	box-sizing: border-box;
-}
-
-.suspects-page p {
-	text-align: left;
-}
-
-.suspects-header {
+.project-page--verdachten-naar-herkomst .project-hero {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
 	gap: 24px;
@@ -46,7 +11,7 @@ body:has(.suspects-page) {
 	margin: 0 auto 22px;
 }
 
-.suspects-header h1 {
+.project-page--verdachten-naar-herkomst .project-hero h1 {
 	max-width: 980px;
 	margin: 0;
 	color: var(--ink);
@@ -58,15 +23,15 @@ body:has(.suspects-page) {
 	text-transform: none;
 }
 
-.suspects-header p:last-child {
+.project-page--verdachten-naar-herkomst .project-hero p:last-child {
 	max-width: 56ch;
 	margin: 0;
-	color: #494239;
+	color: var(--muted);
 	font-size: 17px;
 	line-height: 1.5;
 }
 
-.eyebrow {
+.project-page--verdachten-naar-herkomst .eyebrow {
 	margin: 0;
 	color: var(--muted);
 	font-size: 12px;
@@ -75,7 +40,7 @@ body:has(.suspects-page) {
 	text-transform: uppercase;
 }
 
-.suspects-dashboard {
+.project-page--verdachten-naar-herkomst .project-dashboard {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) 360px;
 	gap: 18px;
@@ -84,21 +49,21 @@ body:has(.suspects-page) {
 	align-items: stretch;
 }
 
-.chart-panel,
-.side-panel,
-.notes {
+.project-page--verdachten-naar-herkomst .project-chart,
+.project-page--verdachten-naar-herkomst .project-sidebar,
+.project-page--verdachten-naar-herkomst .project-notes {
 	border: 1px solid var(--line);
 	border-radius: 8px;
 	background: var(--surface);
 	box-shadow: var(--shadow);
 }
 
-.chart-panel {
+.project-page--verdachten-naar-herkomst .project-chart {
 	min-width: 0;
 	overflow: hidden;
 }
 
-.toolbar {
+.project-page--verdachten-naar-herkomst .project-toolbar {
 	display: grid;
 	grid-template-columns: minmax(260px, 1fr) auto;
 	gap: 14px;
@@ -108,7 +73,7 @@ body:has(.suspects-page) {
 	background: var(--surface-quiet);
 }
 
-.search-field {
+.project-page--verdachten-naar-herkomst .search-field {
 	display: grid;
 	gap: 6px;
 	color: var(--muted);
@@ -118,13 +83,13 @@ body:has(.suspects-page) {
 	text-transform: uppercase;
 }
 
-.search-field input {
+.project-page--verdachten-naar-herkomst .search-field input {
 	width: 100%;
 	min-height: 42px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 0 12px;
-	background: #fff;
+	background: var(--surface-raised);
 	color: var(--ink);
 	font: inherit;
 	font-size: 15px;
@@ -132,7 +97,7 @@ body:has(.suspects-page) {
 	text-transform: none;
 }
 
-.toggle-row {
+.project-page--verdachten-naar-herkomst .toggle-row {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
@@ -140,7 +105,7 @@ body:has(.suspects-page) {
 	justify-content: flex-end;
 }
 
-.toggle-row label {
+.project-page--verdachten-naar-herkomst .toggle-row label {
 	display: inline-flex;
 	min-height: 42px;
 	align-items: center;
@@ -148,13 +113,13 @@ body:has(.suspects-page) {
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 0 11px;
-	background: #fff;
-	color: #403a32;
+	background: var(--surface-raised);
+	color: var(--muted);
 	font-size: 14px;
 	font-weight: 760;
 }
 
-.axis-scale-toggle {
+.project-page--verdachten-naar-herkomst .axis-scale-toggle {
 	display: inline-flex;
 	min-height: 42px;
 	align-items: center;
@@ -162,10 +127,10 @@ body:has(.suspects-page) {
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 3px;
-	background: #fff;
+	background: var(--surface-raised);
 }
 
-.axis-scale-toggle legend {
+.project-page--verdachten-naar-herkomst .axis-scale-toggle legend {
 	padding: 0 7px 0 6px;
 	color: var(--muted);
 	font-size: 12px;
@@ -174,7 +139,7 @@ body:has(.suspects-page) {
 	text-transform: uppercase;
 }
 
-.axis-scale-toggle label {
+.project-page--verdachten-naar-herkomst .axis-scale-toggle label {
 	min-height: 34px;
 	border: 0;
 	border-radius: 4px;
@@ -182,24 +147,24 @@ body:has(.suspects-page) {
 	background: transparent;
 }
 
-.axis-scale-toggle label:has(input:checked) {
-	background: #e3eef5;
-	color: #173f5a;
+.project-page--verdachten-naar-herkomst .axis-scale-toggle label:has(input:checked) {
+	background: var(--surface-quiet);
+	color: var(--muted);
 }
 
-.suspects-page button {
+.project-page--verdachten-naar-herkomst button {
 	min-height: 42px;
 	border: 1px solid rgba(34, 96, 137, 0.4);
 	border-radius: 6px;
 	padding: 0 14px;
-	background: #e3eef5;
-	color: #173f5a;
+	background: var(--surface-quiet);
+	color: var(--muted);
 	font: inherit;
 	font-weight: 820;
 	cursor: pointer;
 }
 
-.chart-head {
+.project-page--verdachten-naar-herkomst .project-panel__head {
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
@@ -207,9 +172,9 @@ body:has(.suspects-page) {
 	padding: 18px 18px 6px;
 }
 
-.chart-head h2,
-.side-panel h2,
-.notes h2 {
+.project-page--verdachten-naar-herkomst .project-panel__head h2,
+.project-page--verdachten-naar-herkomst .project-sidebar h2,
+.project-page--verdachten-naar-herkomst .project-notes h2 {
 	margin: 4px 0 0;
 	color: var(--ink);
 	font: inherit;
@@ -220,19 +185,19 @@ body:has(.suspects-page) {
 	text-transform: none;
 }
 
-.point-count {
+.project-page--verdachten-naar-herkomst .point-count {
 	margin: 0;
 	color: var(--muted);
 	font-size: 13px;
 	white-space: nowrap;
 }
 
-.chart-wrap {
+.project-page--verdachten-naar-herkomst .project-chart-wrap {
 	position: relative;
 	padding: 0 10px 12px 0;
 }
 
-#scatterChart {
+.project-page--verdachten-naar-herkomst #scatterChart {
 	display: block;
 	width: 100%;
 	min-height: 520px;
@@ -241,69 +206,69 @@ body:has(.suspects-page) {
 	user-select: none;
 }
 
-#scatterChart:active {
+.project-page--verdachten-naar-herkomst #scatterChart:active {
 	cursor: grabbing;
 }
 
-.grid line {
+.project-page--verdachten-naar-herkomst .grid line {
 	stroke: rgba(244, 239, 230, 0.12);
 	stroke-dasharray: 2 3;
 }
 
-.grid path {
+.project-page--verdachten-naar-herkomst .grid path {
 	display: none;
 }
 
-.band-boundary {
+.project-page--verdachten-naar-herkomst .band-boundary {
 	stroke: rgba(201, 163, 106, 0.38);
 	stroke-width: 1;
 	stroke-dasharray: 4 6;
 	pointer-events: none;
 }
 
-.axis path,
-.axis line {
+.project-page--verdachten-naar-herkomst .axis path,
+.project-page--verdachten-naar-herkomst .axis line {
 	stroke: rgba(201, 163, 106, 0.46);
 }
 
-.axis text {
-	fill: #c7b9a3;
+.project-page--verdachten-naar-herkomst .axis text {
+	fill: var(--muted);
 	font-size: 12px;
 }
 
-.axis-label {
-	fill: #f4efe6;
+.project-page--verdachten-naar-herkomst .axis-label {
+	fill: var(--muted);
 	font-size: 14px;
 	font-weight: 780;
 }
 
-.point {
+.project-page--verdachten-naar-herkomst .point {
 	stroke: rgba(5, 5, 5, 0.92);
 	stroke-width: 1.55;
 	cursor: pointer;
 }
 
-.point.is-country {
-	fill: #f4efe6;
+.project-page--verdachten-naar-herkomst .point.is-country {
+	fill: var(--muted);
 }
 
-.point.is-aggregate {
-	fill: #c43b2f;
-	stroke: #050505;
+.project-page--verdachten-naar-herkomst .point.is-aggregate {
+	fill: var(--muted);
+	stroke: var(--line-strong);
 }
 
-.point.is-selected {
-	stroke: #c9a36a;
+.project-page--verdachten-naar-herkomst .point.is-selected {
+	stroke: var(--line-strong);
 	stroke-width: 3.4;
 }
 
-.labels text,
-.labels {
+.project-page--verdachten-naar-herkomst .labels text,
+.project-page--verdachten-naar-herkomst .labels {
 	pointer-events: none;
 }
 
-.labels text {
-	fill: #fff8ed;
+.project-page--verdachten-naar-herkomst .labels text {
+	fill: var(--saga-ink-strong);
 	font-size: 12px;
 	font-weight: 650;
 	paint-order: stroke;
@@ -311,7 +276,7 @@ body:has(.suspects-page) {
 	stroke-width: 3.5px;
 }
 
-.legend {
+.project-page--verdachten-naar-herkomst .legend {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 14px;
@@ -321,66 +286,66 @@ body:has(.suspects-page) {
 	font-size: 13px;
 }
 
-.legend span {
+.project-page--verdachten-naar-herkomst .legend span {
 	display: inline-flex;
 	gap: 7px;
 	align-items: center;
 }
 
-.legend i {
+.project-page--verdachten-naar-herkomst .legend i {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
 	border: 1px solid;
 }
 
-.point-country {
-	background: #f4efe6;
-	border-color: #c9a36a;
+.project-page--verdachten-naar-herkomst .point-country {
+	background: var(--surface-quiet);
+	border-color: var(--muted);
 }
 
-.point-aggregate {
+.project-page--verdachten-naar-herkomst .point-aggregate {
 	background: #c43b2f;
-	border-color: #7f1711;
+	border-color: var(--muted);
 }
 
-.side-panel {
+.project-page--verdachten-naar-herkomst .project-sidebar {
 	display: grid;
 	align-content: start;
 	gap: 16px;
 	padding: 16px;
 }
 
-.side-panel section {
+.project-page--verdachten-naar-herkomst .project-sidebar section {
 	display: grid;
 	gap: 12px;
 	border-bottom: 1px solid var(--line);
 	padding-bottom: 16px;
 }
 
-.side-panel section:last-child {
+.project-page--verdachten-naar-herkomst .project-sidebar section:last-child {
 	border-bottom: 0;
 	padding-bottom: 0;
 }
 
-.stat-list {
+.project-page--verdachten-naar-herkomst .stat-list {
 	display: grid;
 	gap: 8px;
 }
 
-.stat-list div,
-.current-total {
+.project-page--verdachten-naar-herkomst .stat-list div,
+.project-page--verdachten-naar-herkomst .current-total {
 	display: grid;
 	gap: 3px;
 	border: 1px solid #e3d9c9;
 	border-radius: 6px;
 	padding: 10px;
-	background: #fffaf2;
+	background: var(--surface-raised);
 }
 
-.stat-list span,
-.current-summary span,
-.current-summary small {
+.project-page--verdachten-naar-herkomst .stat-list span,
+.project-page--verdachten-naar-herkomst .current-summary span,
+.project-page--verdachten-naar-herkomst .current-summary small {
 	color: var(--muted);
 	font-size: 12px;
 	font-weight: 760;
@@ -388,26 +353,26 @@ body:has(.suspects-page) {
 	text-transform: uppercase;
 }
 
-.stat-list strong,
-.current-summary strong {
+.project-page--verdachten-naar-herkomst .stat-list strong,
+.project-page--verdachten-naar-herkomst .current-summary strong {
 	color: var(--ink);
 	font-size: 20px;
 	line-height: 1.1;
 }
 
-.current-summary {
+.project-page--verdachten-naar-herkomst .current-summary {
 	display: grid;
 	gap: 12px;
 }
 
-.current-summary p {
+.project-page--verdachten-naar-herkomst .current-summary p {
 	margin: 0;
-	color: #4d463d;
+	color: var(--muted);
 	font-size: 14px;
 	line-height: 1.45;
 }
 
-.current-summary ol {
+.project-page--verdachten-naar-herkomst .current-summary ol {
 	display: grid;
 	gap: 8px;
 	margin: 0;
@@ -415,7 +380,7 @@ body:has(.suspects-page) {
 	list-style: none;
 }
 
-.current-summary li {
+.project-page--verdachten-naar-herkomst .current-summary li {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: 2px 10px;
@@ -423,17 +388,17 @@ body:has(.suspects-page) {
 	padding-bottom: 8px;
 }
 
-.current-summary li span {
+.project-page--verdachten-naar-herkomst .current-summary li span {
 	overflow-wrap: anywhere;
 }
 
-.current-summary li small {
+.project-page--verdachten-naar-herkomst .current-summary li small {
 	grid-column: 1 / -1;
 	text-transform: none;
 	letter-spacing: 0;
 }
 
-.tooltip {
+.project-page--verdachten-naar-herkomst .project-tooltip {
 	position: absolute;
 	z-index: 10;
 	display: grid;
@@ -449,57 +414,57 @@ body:has(.suspects-page) {
 	pointer-events: none;
 }
 
-.tooltip strong {
+.project-page--verdachten-naar-herkomst .project-tooltip strong {
 	font-size: 15px;
 }
 
-.tooltip span,
-.tooltip small {
+.project-page--verdachten-naar-herkomst .project-tooltip span,
+.project-page--verdachten-naar-herkomst .project-tooltip small {
 	display: block;
 }
 
-.tooltip small {
+.project-page--verdachten-naar-herkomst .project-tooltip small {
 	color: var(--muted);
 	line-height: 1.35;
 }
 
-.suspects-page button:disabled {
+.project-page--verdachten-naar-herkomst button:disabled {
 	opacity: 0.48;
 	cursor: not-allowed;
 }
 
-.notes {
+.project-page--verdachten-naar-herkomst .project-notes {
 	max-width: 1500px;
 	margin: 18px auto 0;
 	padding: 18px;
 }
 
-.notes article {
+.project-page--verdachten-naar-herkomst .project-notes article {
 	max-width: none;
 	column-count: 2;
 	column-gap: 36px;
 	column-rule: 1px solid rgba(201, 163, 106, 0.18);
 }
 
-.notes h2 {
+.project-page--verdachten-naar-herkomst .project-notes h2 {
 	column-span: all;
 	max-width: none;
 	margin-bottom: 0.85rem;
 }
 
-.notes p {
+.project-page--verdachten-naar-herkomst .project-notes p {
 	max-width: none;
 	margin: 10px 0 0;
-	color: #413a31;
+	color: var(--muted);
 	line-height: 1.55;
 	break-inside: avoid;
 }
 
-.notes p:first-of-type {
+.project-page--verdachten-naar-herkomst .project-notes p:first-of-type {
 	margin-top: 0;
 }
 
-.sr-only {
+.project-page--verdachten-naar-herkomst .sr-only {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -508,78 +473,78 @@ body:has(.suspects-page) {
 	white-space: nowrap;
 }
 
-.load-error {
+.project-page--verdachten-naar-herkomst .load-error {
 	margin: 20px;
-	color: #7a1f1f;
+	color: var(--muted);
 	font-weight: 800;
 }
 
 @media (max-width: 1060px) {
-	.suspects-header,
-	.suspects-dashboard {
+	.project-page--verdachten-naar-herkomst .project-hero,
+	.project-page--verdachten-naar-herkomst .project-dashboard {
 		grid-template-columns: 1fr;
 	}
 
-	.side-panel {
+	.project-page--verdachten-naar-herkomst .project-sidebar {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.notes article {
+	.project-page--verdachten-naar-herkomst .project-notes article {
 		column-count: 1;
 	}
 
-	.notes h2 {
+	.project-page--verdachten-naar-herkomst .project-notes h2 {
 		margin-bottom: 0;
 	}
 
-	.notes p:first-of-type {
+	.project-page--verdachten-naar-herkomst .project-notes p:first-of-type {
 		margin-top: 10px;
 	}
 }
 
 @media (max-width: 760px) {
-	.suspects-page {
+	.project-page--verdachten-naar-herkomst {
 		padding: 18px 10px 30px;
 	}
 
-	.suspects-header h1 {
+	.project-page--verdachten-naar-herkomst .project-hero h1 {
 		font-size: clamp(34px, 13vw, 52px);
 	}
 
-	.toolbar,
-	.chart-head,
-	.side-panel {
+	.project-page--verdachten-naar-herkomst .project-toolbar,
+	.project-page--verdachten-naar-herkomst .project-panel__head,
+	.project-page--verdachten-naar-herkomst .project-sidebar {
 		grid-template-columns: 1fr;
 	}
 
-	.chart-head {
+	.project-page--verdachten-naar-herkomst .project-panel__head {
 		display: grid;
 	}
 
-	.toggle-row {
+	.project-page--verdachten-naar-herkomst .toggle-row {
 		justify-content: stretch;
 	}
 
-	.toggle-row label,
-	.toggle-row button,
-	.axis-scale-toggle {
+	.project-page--verdachten-naar-herkomst .toggle-row label,
+	.project-page--verdachten-naar-herkomst .toggle-row button,
+	.project-page--verdachten-naar-herkomst .axis-scale-toggle {
 		flex: 1 1 130px;
 		justify-content: center;
 	}
 
-	.axis-scale-toggle label {
+	.project-page--verdachten-naar-herkomst .axis-scale-toggle label {
 		flex: 1 1 auto;
 	}
 
-	.side-panel {
+	.project-page--verdachten-naar-herkomst .project-sidebar {
 		display: grid;
 	}
 
-	.point-count {
+	.project-page--verdachten-naar-herkomst .point-count {
 		white-space: normal;
 	}
 
-	.labels text {
+	.project-page--verdachten-naar-herkomst .labels text {
 		font-size: 10px;
 	}
 }

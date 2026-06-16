@@ -1,43 +1,8 @@
-.benefits-page {
-	color-scheme: light;
-	--bg: #eef2ef;
-	--surface: #fffdfa;
-	--surface-quiet: #e4ebe6;
-	--ink: #1f2522;
-	--muted: #66726b;
-	--line: #cbd7cf;
-	--accent: #1f6f66;
-	--accent-2: #c4512d;
-	--select: #f2a51a;
-	--shadow: 0 18px 42px rgba(31, 41, 35, 0.11);
-	box-sizing: border-box;
-	min-height: calc(100vh - 10rem);
-	padding: 28px clamp(14px, 4vw, 46px) 44px;
-	background: var(--bg);
-	color: var(--ink);
-	font-family:
-		Inter,
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
+.project-page--uitkeringen-naar-herkomst {
+	--project-width: 1540px;
 }
 
-body:has(.benefits-page) {
-	overflow-x: hidden;
-}
-
-.benefits-page * {
-	box-sizing: border-box;
-}
-
-.benefits-page p {
-	text-align: left;
-}
-
-.benefits-header {
+.project-page--uitkeringen-naar-herkomst .project-hero {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
 	gap: 24px;
@@ -46,7 +11,7 @@ body:has(.benefits-page) {
 	margin: 0 auto 22px;
 }
 
-.benefits-header h1 {
+.project-page--uitkeringen-naar-herkomst .project-hero h1 {
 	max-width: 980px;
 	margin: 0;
 	color: var(--ink);
@@ -58,15 +23,15 @@ body:has(.benefits-page) {
 	text-transform: none;
 }
 
-.benefits-header p:last-child {
+.project-page--uitkeringen-naar-herkomst .project-hero p:last-child {
 	max-width: 56ch;
 	margin: 0;
-	color: #46524a;
+	color: var(--muted);
 	font-size: 17px;
 	line-height: 1.5;
 }
 
-.eyebrow {
+.project-page--uitkeringen-naar-herkomst .eyebrow {
 	margin: 0;
 	color: var(--muted);
 	font-size: 12px;
@@ -75,7 +40,7 @@ body:has(.benefits-page) {
 	text-transform: uppercase;
 }
 
-.benefits-dashboard {
+.project-page--uitkeringen-naar-herkomst .project-dashboard {
 	display: grid;
 	grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
 	gap: 18px;
@@ -83,8 +48,8 @@ body:has(.benefits-page) {
 	margin: 0 auto;
 }
 
-.panel,
-.notes {
+.project-page--uitkeringen-naar-herkomst .project-panel,
+.project-page--uitkeringen-naar-herkomst .project-notes {
 	border: 1px solid var(--line);
 	border-radius: 8px;
 	background: var(--surface);
@@ -92,17 +57,17 @@ body:has(.benefits-page) {
 	overflow: hidden;
 }
 
-.chart-panel,
-.scatter-panel,
-.map-panel {
+.project-page--uitkeringen-naar-herkomst .project-chart,
+.project-page--uitkeringen-naar-herkomst .project-chart,
+.project-page--uitkeringen-naar-herkomst .project-chart {
 	min-width: 0;
 }
 
-.map-panel {
+.project-page--uitkeringen-naar-herkomst .project-chart {
 	grid-column: 1 / -1;
 }
 
-.toolbar {
+.project-page--uitkeringen-naar-herkomst .project-toolbar {
 	display: grid;
 	grid-template-columns: repeat(5, minmax(130px, 1fr));
 	gap: 12px;
@@ -111,8 +76,8 @@ body:has(.benefits-page) {
 	background: var(--surface-quiet);
 }
 
-.toolbar label,
-.period-control {
+.project-page--uitkeringen-naar-herkomst .project-toolbar label,
+.project-page--uitkeringen-naar-herkomst .period-control {
 	display: grid;
 	gap: 6px;
 	color: var(--muted);
@@ -122,14 +87,14 @@ body:has(.benefits-page) {
 	text-transform: uppercase;
 }
 
-.period-head {
+.project-page--uitkeringen-naar-herkomst .period-head {
 	display: flex;
 	justify-content: space-between;
 	gap: 10px;
 	align-items: baseline;
 }
 
-.period-head strong {
+.project-page--uitkeringen-naar-herkomst .period-head strong {
 	overflow: hidden;
 	color: var(--ink);
 	font-size: 13px;
@@ -140,19 +105,19 @@ body:has(.benefits-page) {
 	white-space: nowrap;
 }
 
-.period-control input[type="range"] {
+.project-page--uitkeringen-naar-herkomst .period-control input[type="range"] {
 	width: 100%;
 	min-height: 42px;
 	accent-color: var(--accent);
 }
 
-.toolbar select {
+.project-page--uitkeringen-naar-herkomst .project-toolbar select {
 	width: 100%;
 	min-height: 42px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 0 10px;
-	background: #fff;
+	background: var(--surface-raised);
 	color: var(--ink);
 	font: inherit;
 	font-size: 14px;
@@ -160,8 +125,8 @@ body:has(.benefits-page) {
 	letter-spacing: 0;
 }
 
-.chart-head,
-.section-head {
+.project-page--uitkeringen-naar-herkomst .project-panel__head,
+.project-page--uitkeringen-naar-herkomst .project-panel__head {
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
@@ -169,10 +134,10 @@ body:has(.benefits-page) {
 	padding: 18px 18px 8px;
 }
 
-.chart-head h2,
-.section-head h2,
-.side-panel h2,
-.notes h2 {
+.project-page--uitkeringen-naar-herkomst .project-panel__head h2,
+.project-page--uitkeringen-naar-herkomst .project-panel__head h2,
+.project-page--uitkeringen-naar-herkomst .project-sidebar h2,
+.project-page--uitkeringen-naar-herkomst .project-notes h2 {
 	margin: 4px 0 0;
 	color: var(--ink);
 	font: inherit;
@@ -183,31 +148,31 @@ body:has(.benefits-page) {
 	text-transform: none;
 }
 
-.summary-strip {
+.project-page--uitkeringen-naar-herkomst .project-summary {
 	display: grid;
 	grid-template-columns: repeat(5, minmax(92px, 1fr));
 	gap: 8px;
 	min-width: min(660px, 100%);
 }
 
-.summary-strip div {
+.project-page--uitkeringen-naar-herkomst .project-summary div {
 	min-height: 58px;
 	border: 1px solid var(--line);
 	border-radius: 6px;
 	padding: 8px 10px;
-	background: #fff;
+	background: var(--surface-raised);
 }
 
-.summary-strip span,
-.stat-list span,
-.ranking-list small {
+.project-page--uitkeringen-naar-herkomst .project-summary span,
+.project-page--uitkeringen-naar-herkomst .stat-list span,
+.project-page--uitkeringen-naar-herkomst .ranking-list small {
 	display: block;
 	color: var(--muted);
 	font-size: 12px;
 	font-weight: 720;
 }
 
-.summary-strip strong {
+.project-page--uitkeringen-naar-herkomst .project-summary strong {
 	display: block;
 	margin-top: 4px;
 	overflow: hidden;
@@ -218,72 +183,72 @@ body:has(.benefits-page) {
 	white-space: nowrap;
 }
 
-.chart-wrap {
+.project-page--uitkeringen-naar-herkomst .project-chart-wrap {
 	position: relative;
 	padding: 0 14px 14px;
 }
 
-.chart-wrap.compact {
+.project-page--uitkeringen-naar-herkomst .project-chart-wrap.compact {
 	padding-top: 8px;
 }
 
-#trendChart,
-#scatterChart,
-#regionMap {
+.project-page--uitkeringen-naar-herkomst #trendChart,
+.project-page--uitkeringen-naar-herkomst #scatterChart,
+.project-page--uitkeringen-naar-herkomst #regionMap {
 	display: block;
 	width: 100%;
 }
 
-.axis path,
-.axis line {
-	stroke: #8a968f;
+.project-page--uitkeringen-naar-herkomst .axis path,
+.project-page--uitkeringen-naar-herkomst .axis line {
+	stroke: var(--line-strong);
 }
 
-.axis text,
-.axis-label,
-.chart-legend text,
-.dot-label {
-	fill: #536059;
+.project-page--uitkeringen-naar-herkomst .axis text,
+.project-page--uitkeringen-naar-herkomst .axis-label,
+.project-page--uitkeringen-naar-herkomst .chart-legend text,
+.project-page--uitkeringen-naar-herkomst .dot-label {
+	fill: var(--muted);
 	font-size: 12px;
 	font-weight: 680;
 }
 
-.grid line {
-	stroke: #dfe7e2;
+.project-page--uitkeringen-naar-herkomst .grid line {
+	stroke: var(--line-strong);
 }
 
-.grid path {
+.project-page--uitkeringen-naar-herkomst .grid path {
 	display: none;
 }
 
-.series {
+.project-page--uitkeringen-naar-herkomst .series {
 	opacity: 0.8;
 }
 
-.series.is-selected {
+.project-page--uitkeringen-naar-herkomst .series.is-selected {
 	opacity: 1;
 }
 
-.point,
-.scatter-dot {
+.project-page--uitkeringen-naar-herkomst .point,
+.project-page--uitkeringen-naar-herkomst .scatter-dot {
 	cursor: pointer;
-	stroke: #fffdfa;
+	stroke: var(--line-strong);
 	stroke-width: 1.5;
 }
 
-.scatter-dot {
+.project-page--uitkeringen-naar-herkomst .scatter-dot {
 	fill: var(--accent);
 	opacity: 0.76;
 }
 
-.scatter-dot.is-selected {
+.project-page--uitkeringen-naar-herkomst .scatter-dot.is-selected {
 	fill: var(--accent-2);
 	opacity: 1;
-	stroke: #1f2522;
+	stroke: var(--line-strong);
 	stroke-width: 2;
 }
 
-.tooltip {
+.project-page--uitkeringen-naar-herkomst .project-tooltip {
 	position: absolute;
 	z-index: 4;
 	display: grid;
@@ -299,38 +264,38 @@ body:has(.benefits-page) {
 	pointer-events: none;
 }
 
-.tooltip strong {
+.project-page--uitkeringen-naar-herkomst .project-tooltip strong {
 	font-size: 14px;
 }
 
-.tooltip span,
-.tooltip small {
+.project-page--uitkeringen-naar-herkomst .project-tooltip span,
+.project-page--uitkeringen-naar-herkomst .project-tooltip small {
 	display: block;
-	color: #4d5952;
+	color: var(--muted);
 }
 
-.side-panel {
+.project-page--uitkeringen-naar-herkomst .project-sidebar {
 	display: grid;
 	align-content: start;
 	gap: 0;
 }
 
-.side-panel section {
+.project-page--uitkeringen-naar-herkomst .project-sidebar section {
 	padding: 18px;
 	border-bottom: 1px solid var(--line);
 }
 
-.side-panel section:last-child {
+.project-page--uitkeringen-naar-herkomst .project-sidebar section:last-child {
 	border-bottom: 0;
 }
 
-.stat-list {
+.project-page--uitkeringen-naar-herkomst .stat-list {
 	display: grid;
 	gap: 8px;
 	margin-top: 14px;
 }
 
-.stat-list div {
+.project-page--uitkeringen-naar-herkomst .stat-list div {
 	display: grid;
 	grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1fr);
 	gap: 12px;
@@ -339,77 +304,77 @@ body:has(.benefits-page) {
 	padding-bottom: 7px;
 }
 
-.stat-list strong {
+.project-page--uitkeringen-naar-herkomst .stat-list strong {
 	overflow-wrap: anywhere;
 	font-size: 14px;
 	text-align: right;
 }
 
-.ranking-list {
+.project-page--uitkeringen-naar-herkomst .ranking-list {
 	display: grid;
 	gap: 8px;
 	margin-top: 14px;
 }
 
-.ranking-list button,
-#exportCsv {
+.project-page--uitkeringen-naar-herkomst .ranking-list button,
+.project-page--uitkeringen-naar-herkomst #exportCsv {
 	border: 1px solid var(--line);
 	border-radius: 6px;
-	background: #fff;
+	background: var(--surface-raised);
 	color: var(--ink);
 	font: inherit;
 	cursor: pointer;
 }
 
-.ranking-list button {
+.project-page--uitkeringen-naar-herkomst .ranking-list button {
 	display: block;
 	width: 100%;
 	padding: 10px;
 	text-align: left;
 }
 
-.ranking-list button:hover,
-.ranking-list button.active {
+.project-page--uitkeringen-naar-herkomst .ranking-list button:hover,
+.project-page--uitkeringen-naar-herkomst .ranking-list button.is-active {
 	border-color: var(--accent);
-	background: #eef8f5;
+	background: var(--surface-quiet);
 }
 
-.ranking-list strong {
+.project-page--uitkeringen-naar-herkomst .ranking-list strong {
 	display: block;
 	margin-top: 3px;
 	font-size: 14px;
 }
 
-#exportCsv {
+.project-page--uitkeringen-naar-herkomst #exportCsv {
 	min-height: 38px;
 	padding: 0 14px;
 	font-weight: 760;
 }
 
-#exportCsv:hover {
+.project-page--uitkeringen-naar-herkomst #exportCsv:hover {
 	border-color: var(--accent);
 }
 
-.selection-label {
+.project-page--uitkeringen-naar-herkomst .selection-label {
 	margin: 0;
 	color: var(--muted);
 	font-size: 13px;
 	white-space: nowrap;
 }
 
-.map-grid {
+.project-page--uitkeringen-naar-herkomst .map-grid {
 	display: grid;
 	grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
 	gap: 14px;
 	padding: 0 14px 14px;
 }
 
-.map-wrap {
+.project-page--uitkeringen-naar-herkomst .project-chart-wrap {
 	position: relative;
 	min-width: 0;
 }
 
-.municipality {
+.project-page--uitkeringen-naar-herkomst .municipality {
 	stroke: rgba(255, 253, 250, 0.86);
 	stroke-width: 0.55;
 	cursor: pointer;
@@ -419,43 +384,43 @@ body:has(.benefits-page) {
 		stroke-width 140ms ease;
 }
 
-.municipality:hover {
-	stroke: #005f73;
+.project-page--uitkeringen-naar-herkomst .municipality:hover {
+	stroke: var(--line-strong);
 	stroke-width: 1.35;
 }
 
-.municipality.is-selected {
+.project-page--uitkeringen-naar-herkomst .municipality.is-selected {
 	stroke: var(--select);
 	stroke-width: 2.4;
 	filter: drop-shadow(0 0 5px rgba(242, 165, 26, 0.6));
 }
 
-.table-wrap {
+.project-page--uitkeringen-naar-herkomst .table-wrap {
 	max-height: 620px;
 	overflow: auto;
 	border: 1px solid var(--line);
 	border-radius: 6px;
-	background: #fff;
+	background: var(--surface-raised);
 }
 
-table {
+.project-page--uitkeringen-naar-herkomst table {
 	width: 100%;
 	border-collapse: collapse;
 	font-size: 13px;
 }
 
-th,
-td {
+.project-page--uitkeringen-naar-herkomst th,
+.project-page--uitkeringen-naar-herkomst td {
 	border-bottom: 1px solid #edf1ee;
 	padding: 9px 10px;
 	text-align: left;
 }
 
-th {
+.project-page--uitkeringen-naar-herkomst th {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	background: #f7faf8;
+	background: var(--surface-quiet);
 	color: var(--muted);
 	font-size: 12px;
 	font-weight: 800;
@@ -466,33 +431,33 @@ th:last-child {
 	text-align: right;
 }
 
-tr {
+.project-page--uitkeringen-naar-herkomst tr {
 	cursor: pointer;
 }
 
 tr:hover,
-tr.active {
-	background: #eef8f5;
+.project-page--uitkeringen-naar-herkomst tr.is-active {
+	background: var(--surface-quiet);
 }
 
-.notes {
+.project-page--uitkeringen-naar-herkomst .project-notes {
 	max-width: 1540px;
 	margin: 18px auto 0;
 	padding: 20px;
 }
 
-.notes article {
+.project-page--uitkeringen-naar-herkomst .project-notes article {
 	max-width: 980px;
 }
 
-.notes p {
+.project-page--uitkeringen-naar-herkomst .project-notes p {
 	margin: 10px 0 0;
-	color: #4f5b54;
+	color: var(--muted);
 	font-size: 15px;
 	line-height: 1.58;
 }
 
-.sr-only {
+.project-page--uitkeringen-naar-herkomst .sr-only {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -502,42 +467,42 @@ tr.active {
 }
 
 @media (max-width: 1120px) {
-	.benefits-dashboard,
-	.benefits-header,
-	.map-grid {
+	.project-page--uitkeringen-naar-herkomst .project-dashboard,
+	.project-page--uitkeringen-naar-herkomst .project-hero,
+	.project-page--uitkeringen-naar-herkomst .map-grid {
 		grid-template-columns: 1fr;
 	}
 
-	.toolbar {
+	.project-page--uitkeringen-naar-herkomst .project-toolbar {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.chart-head {
+	.project-page--uitkeringen-naar-herkomst .project-panel__head {
 		display: grid;
 	}
 
-	.summary-strip {
+	.project-page--uitkeringen-naar-herkomst .project-summary {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		min-width: 0;
 	}
 }
 
 @media (max-width: 640px) {
-	.benefits-page {
+	.project-page--uitkeringen-naar-herkomst {
 		padding: 18px 10px 32px;
 	}
 
-	.toolbar,
-	.summary-strip {
+	.project-page--uitkeringen-naar-herkomst .project-toolbar,
+	.project-page--uitkeringen-naar-herkomst .project-summary {
 		grid-template-columns: 1fr;
 	}
 
-	.section-head {
+	.project-page--uitkeringen-naar-herkomst .project-panel__head {
 		display: grid;
 		align-items: start;
 	}
 
-	.selection-label {
+	.project-page--uitkeringen-naar-herkomst .selection-label {
 		white-space: normal;
 	}
 }

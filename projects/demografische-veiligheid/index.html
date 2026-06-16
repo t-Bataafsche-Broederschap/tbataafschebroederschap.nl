@@ -3,32 +3,45 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Demografische veiligheid | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactief dashboard met CBS Veiligheidsmonitor 2025: veiligheidsgevoel, slachtofferschap, discriminatie en politiecontact naar demografische groepen." />
+		<meta name="description" content="Interactief met CBS Veiligheidsmonitor 2025: veiligheidsgevoel, slachtofferschap, discriminatie en politiecontact naar demografische groepen." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/demografische-veiligheid/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/projects/">Projecten</a>
-				<a href="/over/">Over</a>
-			</nav>
+			<div class="site-actions">
+				<nav>
+					<a href="/">Home</a>
+					<a href="/projects/">Projecten</a>
+					<a href="/over/">Over</a>
+				</nav>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+					<span class="theme-toggle__label">Donker</span>
+				</button>
+			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="styles.css" />
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<div class="demographic-safety-page">
-				<header class="demographic-safety-header">
-					<div>
+			<link rel="stylesheet" href="styles.css" />
+			<article class="project-page project-page--demografische-veiligheid">
+				<header class="project-hero">
+					<div class="project-hero__body">
 						<p class="eyebrow">CBS Veiligheidsmonitor 2025</p>
 						<h1>Demografische veiligheid</h1>
 					</div>
 					<p>Vergelijk groepen op feitelijk slachtofferschap, veiligheidsbeleving, discriminatie en contact met politie. De grafiek laat zien waar risico en gevoel samenvallen, en waar ze juist uit elkaar lopen.</p>
 				</header>
-				<section class="notes" aria-label="Datatoelichting">
+				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datatoelichting</h2>
 						<p>Alle cijfers gaan over inwoners van Nederland van 15 jaar of ouder en komen uit de Veiligheidsmonitor 2025. De percentages zijn puntschattingen uit de CBS StatLine-tabellen.</p>
@@ -36,9 +49,9 @@
 						<p>Let op bij kleine of specifieke groepen: interpreteer verschillen samen met de CBS-betrouwbaarheidsmarges in StatLine. Deze eerste versie toont de waarden zelf, niet de marges.</p>
 					</article>
 				</section>
-				<main class="demographic-safety-dashboard">
-					<section class="panel chart-panel" aria-labelledby="chartTitle">
-						<div class="toolbar">
+				<section class="project-dashboard">
+					<section class="project-panel project-chart" aria-labelledby="chartTitle">
+						<div class="project-toolbar">
 							<label>
 								<span>Groep</span>
 								<select id="groupSelect"></select>
@@ -64,8 +77,8 @@
 								<button type="button" data-preset="genderOnline">Gender: online</button>
 							</div>
 						</div>
-						<div class="summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
-						<div class="chart-head">
+						<div class="project-summary summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
+						<div class="project-panel__head">
 							<div>
 								<p class="eyebrow">Risico tegenover veiligheidsbeleving</p>
 								<h2 id="chartTitle">Slachtofferschap versus onveiligheidsgevoel in de buurt</h2>
@@ -75,20 +88,20 @@
 								<button class="fullscreen-button" id="fullscreenButton" type="button">Vul scherm</button>
 							</div>
 						</div>
-						<div class="chart-wrap">
+						<div class="project-chart-wrap">
 							<svg id="safetyScatter" role="img" aria-labelledby="chartTitle chartDescription"></svg>
 							<p id="chartDescription" class="sr-only">Scatterplot met demografische groepen. De x-as en y-as zijn via selecties instelbaar.</p>
-							<div id="tooltip" class="tooltip" role="status" hidden></div>
+							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
 					</section>
-					<aside class="side-panel">
-						<section class="panel detail-panel" aria-labelledby="selectedTitle">
+					<aside class="project-sidebar">
+						<section class="project-panel detail-panel" aria-labelledby="selectedTitle">
 							<p class="eyebrow">Geselecteerd</p>
 							<h2 id="selectedTitle">Geen selectie</h2>
 							<div id="selectedStats" class="stat-list"></div>
 						</section>
-						<section class="panel ranking-panel" aria-labelledby="rankingTitle">
-							<div class="section-head">
+						<section class="project-panel ranking-panel" aria-labelledby="rankingTitle">
+							<div class="project-panel__head">
 								<div>
 									<p class="eyebrow">Demografische ranglijst</p>
 									<h2 id="rankingTitle">Hoogste waarden</h2>
@@ -97,11 +110,11 @@
 							<div id="rankingList" class="ranking-list"></div>
 						</section>
 					</aside>
-				</main>
-			</div>
+				</section>
+			</article>
 			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 			<script type="module" src="app.js"></script>
-			<aside class="project-sources" aria-labelledby="project-sources-title">
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
@@ -110,10 +123,11 @@
 					</li>
 					<li>
 						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85844NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Veiligheidsmonitor; kerncijfers, persoonskenmerken</a>
-						<span>Bron voor de demografische uitsplitsingen in het dashboard.</span>
+						<span>Bron voor de demografische uitsplitsingen in het.</span>
 					</li>
 				</ul>
 			</aside>
 		</main>
+		<script src="/theme-toggle.js"></script>
 	</body>
 </html>

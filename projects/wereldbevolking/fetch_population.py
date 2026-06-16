@@ -28,7 +28,7 @@ SERIES_OUTPUT_PATH = (
     Path(__file__).resolve().parents[3]
     / "static"
     / "projects"
-    / "world-population"
+    / "wereldbevolking"
     / "world-population-series.json"
 )
 

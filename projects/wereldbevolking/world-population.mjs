@@ -10,6 +10,7 @@ const metricButtons = Array.from(document.querySelectorAll("[data-world-populati
 const scaleButtons = Array.from(document.querySelectorAll("[data-world-population-scale]"));
 const backgroundToggle = document.getElementById("world-population-show-background");
 const noMigrationToggle = document.getElementById("world-population-show-no-migration");
+const noMigrationToggleLabel = noMigrationToggle?.closest(".world-population-comparison");
 const continentButtonsNode = document.getElementById("world-population-continents");
 const legendNode = document.getElementById("world-population-legend");
 const tooltipNode = document.getElementById("world-population-tooltip");
@@ -328,14 +329,18 @@ function updateLegend() {
 
 function updateScaleButtons() {
 	for (const button of scaleButtons) {
-		button.classList.toggle("is-active", button.dataset.worldPopulationScale === state.scaleMode);
+		const active = button.dataset.worldPopulationScale === state.scaleMode;
+		button.classList.toggle("is-active", active);
+		button.setAttribute("aria-pressed", String(active));
 		button.disabled = false;
 	}
 }
 
 function updateMetricButtons() {
 	for (const button of metricButtons) {
-		button.classList.toggle("is-active", button.dataset.worldPopulationMetric === state.metricMode);
+		const active = button.dataset.worldPopulationMetric === state.metricMode;
+		button.classList.toggle("is-active", active);
+		button.setAttribute("aria-pressed", String(active));
 	}
 }
 
@@ -347,8 +352,13 @@ function updateBackgroundToggle() {
 
 function updateNoMigrationToggle() {
 	if (noMigrationToggle) {
+		const disabled = state.metricMode !== "population";
 		noMigrationToggle.checked = state.showNoMigrationComparison && state.metricMode === "population";
-		noMigrationToggle.disabled = state.selectionWindows.size === 0 || state.metricMode !== "population";
+		noMigrationToggle.disabled = disabled;
+		noMigrationToggleLabel?.classList.toggle("is-disabled", disabled);
+		if (noMigrationToggleLabel) {
+			noMigrationToggleLabel.title = disabled ? "Deze vergelijking werkt alleen bij de maatstaf Bevolking, omdat hij een bevolkingsreeks zonder nettomigratie tekent." : "";
+		}
 	}
 }
 

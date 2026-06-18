@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Wereldbevolking | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Bevolkingsdata per land, uit Worldometer gehaald en omgezet naar een gegevensbestand voor grafieken." />
+		<meta name="description" content="Deze grafiek tekent elk land en afhankelijk gebied in de dataset over de volledige historische en geraamde tijdlijn. Alle reeksen blijven op de achtergrond zichtbaar; gemarkeerde landen worden bovenop getekend zodat de grafiek leesbaar blijft." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/wereldbevolking/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,25 +38,47 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--wereldbevolking">
+				<header class="project-intro">
+					<div class="project-intro__body">
+						<h1>Wereldbevolking</h1>
+						<p>Deze grafiek tekent elk land en afhankelijk gebied in de dataset over de volledige historische en geraamde tijdlijn. Alle reeksen blijven op de achtergrond zichtbaar; gemarkeerde landen worden bovenop getekend zodat de grafiek leesbaar blijft.</p>
+					</div>
+					<hr />
+				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Logaritmische schaal</dt>
+							<dd>Een schaal waarin gelijke stappen gelijke verhoudingen tonen. Daardoor blijven kleine en grote landen tegelijk leesbaar.</dd>
+						</div>
+						<div>
+							<dt>Nettomigratie</dt>
+							<dd>Immigratie minus emigratie in een jaar. Als percentage wordt dit gedeeld door de bevolking.</dd>
+						</div>
+						<div>
+							<dt>Zonder nettomigratie</dt>
+							<dd>Een berekende vergelijking waarin de actieve landenreeks wordt doorgerekend alsof netto migratie nul was.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-experience world-population-experience">
 					<section class="project-panel world-population-panel">
-						<h2>Alle landen door de tijd</h2>
-						<p>Deze grafiek tekent elk land en afhankelijk gebied in de dataset over de volledige historische en geraamde tijdlijn. Alle reeksen blijven op de achtergrond zichtbaar; gemarkeerde landen worden bovenop getekend zodat de grafiek leesbaar blijft.</p>
 						<div class="project-toolbar world-population-toolbar">
-							<div class="world-population-metric" aria-label="Maatstaf">
-								<button class="button is-active" data-world-population-metric="population" type="button">Bevolking</button>
-								<button class="button" data-world-population-metric="net-migration-share" type="button">Nettomigratie als percentage</button>
+							<div class="world-population-metric" role="group" aria-label="Maatstaf">
+								<button class="is-active" data-world-population-metric="population" type="button" aria-pressed="true">Bevolking</button>
+								<button data-world-population-metric="net-migration-share" type="button" aria-pressed="false">Nettomigratie als percentage</button>
 							</div>
-							<div class="world-population-scale" aria-label="Schaalmodus">
-								<button class="button is-active" data-world-population-scale="log" type="button">Logaritmische schaal</button>
-								<button class="button" data-world-population-scale="linear" type="button">Lineaire schaal</button>
+							<div class="world-population-scale" role="group" aria-label="Schaalmodus">
+								<button class="is-active" data-world-population-scale="log" type="button" aria-pressed="true">Logaritmische schaal</button>
+								<button data-world-population-scale="linear" type="button" aria-pressed="false">Lineaire schaal</button>
 							</div>
 							<label class="world-population-visibility">
 								<input id="world-population-show-background" type="checkbox" checked />
 								<span>Toon niet-geselecteerde landen</span>
 							</label>
 							<label class="world-population-comparison">
-								<input id="world-population-show-no-migration" type="checkbox" />
+								<input id="world-population-show-no-migration" type="checkbox" checked />
 								<span>Vergelijk actief land zonder nettomigratie</span>
 							</label>
 							<button class="button" id="world-population-reset" type="button">Wis markeringen</button>

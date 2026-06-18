@@ -2,7 +2,7 @@
 	--project-width: 1540px;
 }
 
-.project-page--culturele-afstandskaart .project-hero {
+.project-page--culturele-afstandskaart .project-intro {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(260px, 560px);
 	gap: 24px;
@@ -21,28 +21,6 @@
 	font-weight: 700;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-}
-
-.project-page--culturele-afstandskaart .project-hero h1 {
-	overflow: visible;
-	margin: 0;
-	padding: 0;
-	color: var(--ink);
-	font-family: inherit;
-	font-size: clamp(42px, 7vw, 92px);
-	font-weight: 850;
-	line-height: 0.9;
-	letter-spacing: 0;
-	text-transform: none;
-}
-
-.project-page--culturele-afstandskaart .project-hero p:last-child {
-	max-width: 60ch;
-	margin: 0;
-	color: var(--muted);
-	font-size: 17px;
-	line-height: 1.5;
-	text-align: left;
 }
 
 .project-page--culturele-afstandskaart .project-dashboard {
@@ -517,7 +495,7 @@
 }
 
 @media (max-width: 1080px) {
-	.project-page--culturele-afstandskaart .project-hero,
+	.project-page--culturele-afstandskaart .project-intro,
 	.project-page--culturele-afstandskaart .project-dashboard,
 	.project-page--culturele-afstandskaart .project-toolbar,
 	.project-page--culturele-afstandskaart .project-notes {
@@ -545,11 +523,6 @@
 
 	.project-page--culturele-afstandskaart {
 		padding: 18px 12px 32px;
-	}
-
-	.project-page--culturele-afstandskaart .project-hero h1 {
-		font-size: 38px;
-		line-height: 0.98;
 	}
 
 	.project-page--culturele-afstandskaart .mode-switch,

@@ -2,33 +2,13 @@
 	--project-width: 1540px;
 }
 
-.project-page--de-autochtoonse-nederlandse-bevolking .project-hero {
+.project-page--de-autochtoonse-nederlandse-bevolking .project-intro {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 560px);
 	gap: 24px;
 	align-items: end;
 	max-width: 1480px;
 	margin: 0 auto 24px;
-}
-
-.project-page--de-autochtoonse-nederlandse-bevolking .project-hero h1 {
-	max-width: 900px;
-	margin: 0;
-	color: var(--ink);
-	font: inherit;
-	font-size: clamp(42px, 7vw, 88px);
-	font-weight: 850;
-	letter-spacing: 0;
-	line-height: 0.92;
-	text-transform: none;
-}
-
-.project-page--de-autochtoonse-nederlandse-bevolking .project-hero p:last-child {
-	max-width: 62ch;
-	margin: 0;
-	color: var(--muted);
-	font-size: 17px;
-	line-height: 1.5;
 }
 
 .project-page--de-autochtoonse-nederlandse-bevolking .eyebrow,
@@ -741,7 +721,7 @@
 }
 
 @media (max-width: 1080px) {
-	.project-page--de-autochtoonse-nederlandse-bevolking .project-hero,
+	.project-page--de-autochtoonse-nederlandse-bevolking .project-intro,
 	.project-page--de-autochtoonse-nederlandse-bevolking .project-dashboard,
 	.project-page--de-autochtoonse-nederlandse-bevolking .project-notes {
 		grid-template-columns: 1fr;
@@ -756,11 +736,6 @@
 @media (max-width: 760px) {
 	.project-page--de-autochtoonse-nederlandse-bevolking {
 		padding: 18px 12px 30px;
-	}
-
-	.project-page--de-autochtoonse-nederlandse-bevolking .project-hero h1 {
-		font-size: clamp(34px, 11vw, 48px);
-		line-height: 0.96;
 	}
 
 	.project-page--de-autochtoonse-nederlandse-bevolking .project-toolbar,

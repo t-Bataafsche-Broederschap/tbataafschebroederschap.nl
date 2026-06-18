@@ -2,33 +2,13 @@
 	--project-width: 1540px;
 }
 
-.project-page--verdachten-naar-herkomst .project-hero {
+.project-page--verdachten-naar-herkomst .project-intro {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
 	gap: 24px;
 	align-items: end;
 	max-width: 1500px;
 	margin: 0 auto 22px;
-}
-
-.project-page--verdachten-naar-herkomst .project-hero h1 {
-	max-width: 980px;
-	margin: 0;
-	color: var(--ink);
-	font: inherit;
-	font-size: clamp(38px, 6.4vw, 82px);
-	font-weight: 850;
-	letter-spacing: 0;
-	line-height: 0.94;
-	text-transform: none;
-}
-
-.project-page--verdachten-naar-herkomst .project-hero p:last-child {
-	max-width: 56ch;
-	margin: 0;
-	color: var(--muted);
-	font-size: 17px;
-	line-height: 1.5;
 }
 
 .project-page--verdachten-naar-herkomst .eyebrow {
@@ -480,7 +460,7 @@
 }
 
 @media (max-width: 1060px) {
-	.project-page--verdachten-naar-herkomst .project-hero,
+	.project-page--verdachten-naar-herkomst .project-intro,
 	.project-page--verdachten-naar-herkomst .project-dashboard {
 		grid-template-columns: 1fr;
 	}
@@ -505,10 +485,6 @@
 @media (max-width: 760px) {
 	.project-page--verdachten-naar-herkomst {
 		padding: 18px 10px 30px;
-	}
-
-	.project-page--verdachten-naar-herkomst .project-hero h1 {
-		font-size: clamp(34px, 13vw, 52px);
 	}
 
 	.project-page--verdachten-naar-herkomst .project-toolbar,

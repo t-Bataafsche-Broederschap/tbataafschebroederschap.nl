@@ -151,7 +151,8 @@
 	letter-spacing: 0.08em;
 }
 
-.project-page--eu-begrotingsstromenkaart h1 {
+.project-page--eu-begrotingsstromenkaart .year-label {
+	display: block;
 	margin: 0;
 	padding: 0;
 	color: var(--ink);
@@ -336,7 +337,7 @@
 		overflow: visible;
 	}
 
-	.project-page--eu-begrotingsstromenkaart h1 {
+	.project-page--eu-begrotingsstromenkaart .year-label {
 		font-size: 56px;
 	}
 }

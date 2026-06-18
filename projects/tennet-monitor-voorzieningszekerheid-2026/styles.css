@@ -2,7 +2,7 @@
 	--project-width: 1540px;
 }
 
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-hero,
+.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro,
 .project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes,
 .project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls,
 .project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary,
@@ -12,32 +12,13 @@
 	margin-inline: auto;
 }
 
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-hero {
+.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	gap: 0.9rem;
 	align-items: start;
 	padding-bottom: 1.2rem;
 	border-bottom: 1px solid var(--line-soft);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-hero h1 {
-	max-width: min(100%, 18ch);
-	margin: 0;
-	color: var(--ink);
-	font-family: var(--saga-font);
-	font-size: clamp(2.4rem, 5.6vw, 5.75rem);
-	font-weight: 300;
-	line-height: 1.08;
-	overflow-wrap: anywhere;
-	text-shadow: none;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-hero p:last-child {
-	max-width: 62ch;
-	margin: 0;
-	font-size: 1.05rem;
-	line-height: 1.55;
 }
 
 .project-page--tennet-monitor-voorzieningszekerheid-2026 .eyebrow {
@@ -585,13 +566,9 @@
 		padding-inline: 0.75rem;
 	}
 
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-hero {
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro {
 		grid-template-columns: 1fr;
 		align-items: start;
-	}
-
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-hero h1 {
-		font-size: clamp(2.65rem, 13.5vw, 4.2rem);
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls {

@@ -2,37 +2,20 @@
 	--project-width: 1540px;
 }
 
-.project-page--demografische-veiligheid .project-hero,
+.project-page--demografische-veiligheid .project-intro,
 .project-page--demografische-veiligheid .project-notes,
 .project-page--demografische-veiligheid .project-dashboard {
 	max-width: 1540px;
 	margin-inline: auto;
 }
 
-.project-page--demografische-veiligheid .project-hero {
+.project-page--demografische-veiligheid .project-intro {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
 	gap: 1.4rem;
 	align-items: end;
 	padding-bottom: 1.2rem;
 	border-bottom: 1px solid var(--line-soft);
-}
-
-.project-page--demografische-veiligheid .project-hero h1 {
-	margin: 0;
-	color: var(--ink);
-	font-family: var(--saga-font);
-	font-size: clamp(2.4rem, 5.6vw, 5.75rem);
-	font-weight: 300;
-	line-height: 1.08;
-	text-shadow: none;
-}
-
-.project-page--demografische-veiligheid .project-hero p:last-child {
-	max-width: 58ch;
-	margin: 0;
-	font-size: 1.05rem;
-	line-height: 1.55;
 }
 
 .project-page--demografische-veiligheid .eyebrow {
@@ -529,7 +512,7 @@
 
 @media (max-width: 1120px) {
 	.project-page--demografische-veiligheid .project-dashboard,
-	.project-page--demografische-veiligheid .project-hero {
+	.project-page--demografische-veiligheid .project-intro {
 		grid-template-columns: 1fr;
 	}
 

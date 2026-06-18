@@ -10,7 +10,7 @@
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -41,8 +41,8 @@
 					<p class="eyebrow">Delfding</p>
 					<h1 id="home-title">’t Bataafsche Broederschap</h1>
 					<p>Welkom!</p>
+					<img class="home-image" src="/images/rape-gang-inquiry-chatgpt-response.png" alt="Screenshot van een ChatGPT-antwoord over de rape gang inquiry" />
 				</div>
-				<img class="seal" src="/images/tBataafscheBroederschap.pngquant-8c.png" alt="Zegel van ’t Bataafsche Broederschap" />
 			</section>
 		</main>
 		<script src="/theme-toggle.js"></script>

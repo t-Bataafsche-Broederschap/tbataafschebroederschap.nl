@@ -15,6 +15,7 @@
 	--color-gold: #c9a36a;
 	--color-copper: #8e6a3b;
 	--color-red: #971f16;
+	--color-red-soft: #d45a4d;
 	--color-border: #4f1713;
 	--space-page: clamp(1.25rem, 3vw, 3rem);
 	--content-width: 68rem;
@@ -31,6 +32,7 @@
 	--color-gold: #b52c22;
 	--color-copper: #7f1d15;
 	--color-red: #b52c22;
+	--color-red-soft: #8f241b;
 	--color-border: rgba(36, 41, 46, 0.14);
 }
 
@@ -307,9 +309,8 @@ a:hover {
 
 .home-intro {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(14rem, 24rem);
-	gap: clamp(2rem, 6vw, 5rem);
-	align-items: center;
+	gap: clamp(1.5rem, 4vw, 3rem);
+	align-items: start;
 	min-height: min(44rem, calc(100vh - 7rem));
 }
 
@@ -370,6 +371,22 @@ p:last-child {
 	justify-self: end;
 	border-radius: 50%;
 	filter: drop-shadow(0 1.5rem 3rem rgba(0, 0, 0, 0.45));
+}
+
+.home-image {
+	display: block;
+	width: 1149px;
+	max-width: none;
+	height: auto;
+	margin-top: clamp(1.5rem, 4vw, 2.5rem);
+	border: 1px solid rgba(244, 239, 230, 0.14);
+	border-radius: 8px;
+	box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.34);
+}
+
+:root[data-theme="light"] .home-image {
+	border-color: rgba(36, 41, 46, 0.14);
+	box-shadow: 0 1.25rem 2.5rem rgba(36, 41, 46, 0.12);
 }
 
 .content {
@@ -441,9 +458,13 @@ p:last-child {
 
 .project-entry .project-dates {
 	margin: 0 0 0.45rem;
-	color: var(--color-copper);
+	color: var(--color-red-soft);
 	font-size: 0.98rem;
 	line-height: 1.4;
+}
+
+.project-entry .project-dates span {
+	color: color-mix(in srgb, var(--color-red-soft) 82%, var(--color-muted));
 }
 
 .project-entry p {
@@ -513,7 +534,13 @@ p:last-child {
 
 	.seal {
 		justify-self: start;
-		width: min(18rem, 82vw);
-		order: -1;
+		width: min(100%, 82vw);
+	}
+}
+
+@media (max-width: 600px) {
+	.home-image {
+		width: min(100%, 82vw);
+		max-width: 100%;
 	}
 }

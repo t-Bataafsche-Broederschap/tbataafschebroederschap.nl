@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>De Autochtoonse Nederlandse Bevolking | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactieve grafiek over Nederlandse bevolking, migratie, woningbouw, woningtekort en stroomnetcapaciteit." />
+		<meta name="description" content="Bevolking, samenstelling naar achtergrond, migratie, woningbouw, woningtekort en stroomnetdruk in dezelfde tijdlijn. &#34;Bevolking min cumulatieve nettomigratie&#34; blijft boekhouding, geen bevolkingsscenario." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/de-autochtoonse-nederlandse-bevolking/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,13 +38,30 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--de-autochtoonse-nederlandse-bevolking">
-				<header class="project-hero">
-					<div class="project-hero__body">
-						<p class="eyebrow">CBS StatLine + officiele reeksen</p>
+				<header class="project-intro">
+					<div class="project-intro__body">
 						<h1>De Autochtoonse Nederlandse Bevolking</h1>
+						<p>Bevolking, samenstelling naar achtergrond, migratie, woningbouw, woningtekort en stroomnetdruk in dezelfde tijdlijn. "Bevolking min cumulatieve nettomigratie" blijft boekhouding, geen bevolkingsscenario.</p>
 					</div>
-					<p>Bevolking, samenstelling naar achtergrond, migratie, woningbouw, woningtekort en stroomnetdruk in dezelfde tijdlijn. "Bevolking min cumulatieve nettomigratie" blijft boekhouding, geen bevolkingsscenario.</p>
+					<hr />
 				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Autochtoon</dt>
+							<dd>Een oude CBS-term die niet meer als hoofdindeling wordt gebruikt; deze pagina toont daarom ook nieuwere indelingen.</dd>
+						</div>
+						<div>
+							<dt>Nettomigratie</dt>
+							<dd>Immigratie minus emigratie in een jaar. Dit is een boekhoudkundige component van bevolkingsgroei.</dd>
+						</div>
+						<div>
+							<dt>Eerste en tweede generatie</dt>
+							<dd>Eerste generatie is zelf in het buitenland geboren; tweede generatie is in Nederland geboren met migratieachtergrond volgens de gebruikte CBS-definitie.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datakeuzes</h2>

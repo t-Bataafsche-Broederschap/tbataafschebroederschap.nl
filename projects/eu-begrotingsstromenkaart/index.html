@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Kaart van begrotingsstromen van de Europese Unie | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Geanimeerde canvaskaart van netto begrotingssaldi van lidstaten van de Europese Unie van 2000 tot en met 2024." />
+		<meta name="description" content="Volg per jaar welke lidstaten netto bijdragen aan de Europese begroting en welke lidstaten netto ontvangen. De kaart vergelijkt saldi als percentage van het bruto nationaal inkomen, in miljoenen euro&#39;s en per inwoner." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/eu-begrotingsstromenkaart/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,6 +38,30 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--eu-begrotingsstromenkaart">
+				<header class="project-intro">
+					<div class="project-intro__body">
+						<h1>Kaart van begrotingsstromen van de Europese Unie</h1>
+						<p>Volg per jaar welke lidstaten netto bijdragen aan de Europese begroting en welke lidstaten netto ontvangen. De kaart vergelijkt saldi als percentage van het bruto nationaal inkomen, in miljoenen euro's en per inwoner.</p>
+					</div>
+					<hr />
+				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Netto betaler</dt>
+							<dd>Een lidstaat die in een jaar meer afdraagt aan de EU-begroting dan hij ontvangt.</dd>
+						</div>
+						<div>
+							<dt>Netto ontvanger</dt>
+							<dd>Een lidstaat die in een jaar meer ontvangt uit de EU-begroting dan hij afdraagt.</dd>
+						</div>
+						<div>
+							<dt>Bruto nationaal inkomen</dt>
+							<dd>Een maat voor de omvang van een economie; saldi als percentage hiervan maken landen beter vergelijkbaar.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-experience app">
 					<section class="project-canvas-stage">
 						<canvas id="map" aria-label="Geanimeerde kaart van begrotingsstromen van de Europese Unie"></canvas>
@@ -45,7 +69,7 @@
 						<div class="hud">
 							<div>
 								<p class="eyebrow">Netto begrotingssaldo van de Europese Unie</p>
-								<h1 id="yearLabel">2000</h1>
+								<strong id="yearLabel" class="year-label">2000</strong>
 							</div>
 							<div class="legend" aria-hidden="true">
 								<span><i class="out"></i> netto betaler</span>

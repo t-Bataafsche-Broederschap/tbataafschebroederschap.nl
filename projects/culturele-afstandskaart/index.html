@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Culturele afstandskaart | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactieve culturele kaart die landen positioneert op de Inglehart-Welzel assen en afstanden tot een gekozen land rangschikt." />
+		<meta name="description" content="Vergelijk landen op basis van hun positie in de culturele waardenruimte. De afstand is de rechte lijn tussen twee landen in de gekozen projectie." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/culturele-afstandskaart/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,13 +38,30 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--culturele-afstandskaart">
-				<header class="project-hero">
-					<div class="project-hero__body">
-						<p class="cultural-eyebrow">Culturele kaart van European Values Study en World Values Survey</p>
+				<header class="project-intro">
+					<div class="project-intro__body">
 						<h1>Culturele afstandskaart</h1>
+						<p>Vergelijk landen op basis van hun positie in de culturele waardenruimte. De afstand is de rechte lijn tussen twee landen in de gekozen projectie.</p>
 					</div>
-					<p>Vergelijk landen op basis van hun positie in de culturele waardenruimte. De afstand is de rechte lijn tussen twee landen in de gekozen projectie.</p>
+					<hr />
 				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Culturele waardenruimte</dt>
+							<dd>Een tweedimensionale kaart waarop landen worden geplaatst op basis van samengevatte waarden uit enquêtes.</dd>
+						</div>
+						<div>
+							<dt>Afstand</dt>
+							<dd>De rechte lijn tussen twee landen in dezelfde projectie; afstanden zijn alleen binnen dezelfde modus vergelijkbaar.</dd>
+						</div>
+						<div>
+							<dt>Projectie</dt>
+							<dd>De gekozen set assen waarmee de waarden worden getekend, zoals Inglehart-Welzel of Welzels waardenindexen.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-notes" aria-labelledby="explanation-title">
 					<div>
 						<p class="cultural-eyebrow">Interpretatie</p>

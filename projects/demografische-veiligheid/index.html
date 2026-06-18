@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Demografische veiligheid | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactief met CBS Veiligheidsmonitor 2025: veiligheidsgevoel, slachtofferschap, discriminatie en politiecontact naar demografische groepen." />
+		<meta name="description" content="Vergelijk groepen op feitelijk slachtofferschap, veiligheidsbeleving, discriminatie en contact met politie. De grafiek laat zien waar risico en gevoel samenvallen, en waar ze juist uit elkaar lopen." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/demografische-veiligheid/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,13 +38,30 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--demografische-veiligheid">
-				<header class="project-hero">
-					<div class="project-hero__body">
-						<p class="eyebrow">CBS Veiligheidsmonitor 2025</p>
+				<header class="project-intro">
+					<div class="project-intro__body">
 						<h1>Demografische veiligheid</h1>
+						<p>Vergelijk groepen op feitelijk slachtofferschap, veiligheidsbeleving, discriminatie en contact met politie. De grafiek laat zien waar risico en gevoel samenvallen, en waar ze juist uit elkaar lopen.</p>
 					</div>
-					<p>Vergelijk groepen op feitelijk slachtofferschap, veiligheidsbeleving, discriminatie en contact met politie. De grafiek laat zien waar risico en gevoel samenvallen, en waar ze juist uit elkaar lopen.</p>
+					<hr />
 				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Slachtofferschap</dt>
+							<dd>Het aandeel mensen dat aangeeft slachtoffer te zijn geweest van een vorm van criminaliteit of overlast.</dd>
+						</div>
+						<div>
+							<dt>Veiligheidsbeleving</dt>
+							<dd>Hoe veilig mensen zich voelen. Dit hoeft niet hetzelfde patroon te volgen als gemeten slachtofferschap.</dd>
+						</div>
+						<div>
+							<dt>Puntschatting</dt>
+							<dd>Een enkel percentage uit de enquête-uitkomst; kleine verschillen moeten voorzichtig worden gelezen.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datatoelichting</h2>

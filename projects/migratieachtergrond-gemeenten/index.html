@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Migratieachtergrond per Gemeente | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactieve kaart en sorteerbare tabel met CBS-cijfers over herkomst en geboorteland per Nederlandse gemeente." />
+		<meta name="description" content="Vergelijk per gemeente meerdere CBS-maten rond herkomstland en geboorteland, telkens als percentage van de totale gemeentebevolking op 1 januari." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/migratieachtergrond-gemeenten/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,13 +38,30 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--migratieachtergrond-gemeenten">
-				<header class="project-hero">
-					<div class="project-hero__body">
-						<p class="eyebrow">CBS StatLine 85458NED + PDOK</p>
+				<header class="project-intro">
+					<div class="project-intro__body">
 						<h1>Migratieachtergrond per Gemeente</h1>
+						<p>Vergelijk per gemeente meerdere CBS-maten rond herkomstland en geboorteland, telkens als percentage van de totale gemeentebevolking op 1 januari.</p>
 					</div>
-					<p>Vergelijk per gemeente meerdere CBS-maten rond herkomstland en geboorteland, telkens als percentage van de totale gemeentebevolking op 1 januari.</p>
+					<hr />
 				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Migratieachtergrond</dt>
+							<dd>Een CBS-indeling op basis van herkomstland en geboorteland van personen en, afhankelijk van de definitie, ouders.</dd>
+						</div>
+						<div>
+							<dt>Herkomstland</dt>
+							<dd>Het land dat CBS gebruikt om iemands herkomstcategorie te bepalen; dit is niet altijd hetzelfde als geboorteland.</dd>
+						</div>
+						<div>
+							<dt>Gemeentegrenzen 2025</dt>
+							<dd>De kaart gebruikt één vaste gemeentelijke indeling, zodat jaren visueel vergelijkbaar blijven.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datatoelichting</h2>

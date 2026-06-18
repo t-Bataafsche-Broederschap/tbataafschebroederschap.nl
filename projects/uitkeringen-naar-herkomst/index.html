@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Uitkeringen Naar Herkomst | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Interactief CBS-dashboard over uitkeringsontvangers naar herkomstgroep, geslacht, leeftijd, uitkeringstype en regio." />
+		<meta name="description" content="Nationale uitkeringsontvangers naar herkomst, leeftijd en geslacht, met regionale context zonder herkomstuitsplitsing." />
 		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/uitkeringen-naar-herkomst/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,13 +38,30 @@
 			<link rel="stylesheet" href="/styles/project-theme.css" />
 			<link rel="stylesheet" href="styles.css" />
 			<article class="project-page project-page--uitkeringen-naar-herkomst">
-				<header class="project-hero">
-					<div class="project-hero__body">
-						<p class="eyebrow">CBS StatLine 85692NED + 85721NED + 80794NED</p>
+				<header class="project-intro">
+					<div class="project-intro__body">
 						<h1>Uitkeringen Naar Herkomst</h1>
+						<p>Nationale uitkeringsontvangers naar herkomst, leeftijd en geslacht, met regionale context zonder herkomstuitsplitsing.</p>
 					</div>
-					<p>Nationale uitkeringsontvangers naar herkomst, leeftijd en geslacht, met regionale context zonder herkomstuitsplitsing.</p>
+					<hr />
 				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Uitkeringsontvanger</dt>
+							<dd>Een persoon die in de gebruikte statistiek een uitkering ontvangt; de precieze afbakening verschilt per regeling.</dd>
+						</div>
+						<div>
+							<dt>Herkomst</dt>
+							<dd>De CBS-herkomstindeling waarmee groepen worden onderscheiden; dit is een statistische categorie, geen nationaliteit.</dd>
+						</div>
+						<div>
+							<dt>Regionale context</dt>
+							<dd>Gemeente- of regiocijfers die de landelijke patronen helpen duiden, maar niet altijd dezelfde uitsplitsing hebben.</dd>
+						</div>
+					</dl>
+				</section>
 				<section class="project-notes" aria-label="Datatoelichting">
 					<article>
 						<h2>Datatoelichting</h2>

@@ -99,7 +99,7 @@ const culturalGroups = [
 	{
 		id: "orthodox-europe",
 		label: "Orthodox Europa",
-		color: "#ef4444",
+		color: "#c80000",
 		radius: 25,
 		countries: ["Armenia", "Belarus", "Bosnia and Herzegovina", "Bulgaria", "Cyprus", "Georgia", "Greece", "Kazakhstan", "Kosovo", "Moldova", "Montenegro", "North Macedonia", "Romania", "Russia", "Serbia", "Ukraine"],
 	},

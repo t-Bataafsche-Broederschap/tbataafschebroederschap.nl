@@ -9,7 +9,7 @@
 		<script>
 			(() => {
 				const stored = localStorage.getItem("theme");
-				const theme = stored || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+				const theme = stored || "dark";
 				document.documentElement.dataset.theme = theme;
 			})();
 		</script>
@@ -38,6 +38,9 @@
 			<article class="content">
 				<h1>Over</h1>
 				<p>’t Bataafsche Broederschap is een Delfding: een bijeenkomst van mensen die data onderzoeken, ordenen en ontsluiten.</p>
+				<h2 id="wat-was-een-ding">
+					<a class="self-link" href="#wat-was-een-ding"> Wat was een Ding? </a>
+				</h2>
 				<p>
 					Historisch was een ding, of thing, een volks- en rechtsvergadering in Germaanse en Noord-Europese samenlevingen: een plek waar vrije mensen bijeenkwamen om geschillen te beslechten, besluiten te nemen en gedeelde zaken hardop te behandelen. Dat publieke, onderzoekende en ordende karakter nemen wij mee in onze
 					eigen betekenis van het woord.

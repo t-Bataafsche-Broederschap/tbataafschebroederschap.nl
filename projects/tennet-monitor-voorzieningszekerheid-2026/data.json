@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "TenneT Monitor Voorzieningszekerheid 2026",
-		"generatedAt": "2026-06-15T12:13:30.836Z",
+		"generatedAt": "2026-06-16T15:59:52.549Z",
 		"adequacyNormHours": 4,
 		"adequacyNormOptions": [1, 2, 4, 8],
 		"sourceFiles": [
@@ -119023,46 +119023,6 @@
 			"scenarioLabel": "High Demand",
 			"case": "European capacity expansion",
 			"iteration": "Iteration 1",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 9.4,
-			"resultingLole": 4.8
-		},
-		{
-			"year": 2030,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 2",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 12.8,
-			"resultingLole": 3.9
-		},
-		{
-			"year": 2030,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 3",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 0,
-			"resultingLole": null
-		},
-		{
-			"year": 2030,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 4",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 0,
-			"resultingLole": null
-		},
-		{
-			"year": 2030,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 1",
 			"attribute": "Added capacity NL",
 			"addedCapacityGw": 0.3,
 			"resultingLole": 4.8
@@ -119101,6 +119061,46 @@
 			"year": 2030,
 			"scenario": "high-demand",
 			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 1",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 9.4,
+			"resultingLole": 4.8
+		},
+		{
+			"year": 2030,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 2",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 12.8,
+			"resultingLole": 3.9
+		},
+		{
+			"year": 2030,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 3",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 0,
+			"resultingLole": null
+		},
+		{
+			"year": 2030,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 4",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 0,
+			"resultingLole": null
+		},
+		{
+			"year": 2030,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
 			"case": "Only NL",
 			"iteration": "",
 			"attribute": "Added capacity NL",
@@ -119113,7 +119113,7 @@
 			"scenarioLabel": "High Demand",
 			"case": "Start LOLE",
 			"iteration": "",
-			"attribute": "Added capacity abroad",
+			"attribute": "Added capacity NL",
 			"addedCapacityGw": 0,
 			"resultingLole": 10.8
 		},
@@ -119123,49 +119123,9 @@
 			"scenarioLabel": "High Demand",
 			"case": "Start LOLE",
 			"iteration": "",
-			"attribute": "Added capacity NL",
+			"attribute": "Added capacity abroad",
 			"addedCapacityGw": 0,
 			"resultingLole": 10.8
-		},
-		{
-			"year": 2035,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 1",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 11.7,
-			"resultingLole": 25.6
-		},
-		{
-			"year": 2035,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 2",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 18.3,
-			"resultingLole": 15.7
-		},
-		{
-			"year": 2035,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 3",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 22.4,
-			"resultingLole": 12.6
-		},
-		{
-			"year": 2035,
-			"scenario": "high-demand",
-			"scenarioLabel": "High Demand",
-			"case": "European capacity expansion",
-			"iteration": "Iteration 4",
-			"attribute": "Added capacity abroad",
-			"addedCapacityGw": 25.4,
-			"resultingLole": 10.5
 		},
 		{
 			"year": 2035,
@@ -119211,6 +119171,46 @@
 			"year": 2035,
 			"scenario": "high-demand",
 			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 1",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 11.7,
+			"resultingLole": 25.6
+		},
+		{
+			"year": 2035,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 2",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 18.3,
+			"resultingLole": 15.7
+		},
+		{
+			"year": 2035,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 3",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 22.4,
+			"resultingLole": 12.6
+		},
+		{
+			"year": 2035,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
+			"case": "European capacity expansion",
+			"iteration": "Iteration 4",
+			"attribute": "Added capacity abroad",
+			"addedCapacityGw": 25.4,
+			"resultingLole": 10.5
+		},
+		{
+			"year": 2035,
+			"scenario": "high-demand",
+			"scenarioLabel": "High Demand",
 			"case": "Only NL",
 			"iteration": "",
 			"attribute": "Added capacity NL",
@@ -119223,7 +119223,7 @@
 			"scenarioLabel": "High Demand",
 			"case": "Start LOLE",
 			"iteration": "",
-			"attribute": "Added capacity abroad",
+			"attribute": "Added capacity NL",
 			"addedCapacityGw": 0,
 			"resultingLole": 46
 		},
@@ -119233,7 +119233,7 @@
 			"scenarioLabel": "High Demand",
 			"case": "Start LOLE",
 			"iteration": "",
-			"attribute": "Added capacity NL",
+			"attribute": "Added capacity abroad",
 			"addedCapacityGw": 0,
 			"resultingLole": 46
 		}

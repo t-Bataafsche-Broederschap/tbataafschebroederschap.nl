@@ -9,7 +9,7 @@ Use this script to update data/
 # requires-python = ">=3.13"
 # dependencies = [
 #     "beautifulsoup4",
-#     "requests",
+#     "niquests",
 # ]
 # ///
 
@@ -19,7 +19,7 @@ import json
 import time
 from pathlib import Path
 
-import requests
+import niquests as requests
 from bs4 import BeautifulSoup, Tag
 
 BASE_URL = "https://www.worldometers.info"

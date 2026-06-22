@@ -70,7 +70,7 @@
 					</article>
 				</section>
 				<section class="project-panel project-toolbar tennet-controls" aria-label="Dashboardinstellingen">
-					<label>
+					<label class="project-control">
 						<span>Scenario</span>
 						<select id="scenarioSelect"></select>
 					</label>
@@ -78,11 +78,11 @@
 						<span>Jaar</span>
 						<select id="yearSelect"></select>
 					</label>
-					<label class="norm-control">
+					<label class="norm-control project-control">
 						<span>LOLE-norm <strong id="normValue">4 uur</strong></span>
 						<input id="normSlider" type="range" min="0" max="3" value="2" step="1" />
 					</label>
-					<div class="metric-toggle" role="group" aria-label="Metriek voor weerscenario's">
+					<div class="metric-toggle project-segmented" role="group" aria-label="Metriek voor weerscenario's">
 						<button class="is-active" type="button" data-metric="lole">LOLE</button>
 						<button type="button" data-metric="eens">EENS</button>
 					</div>

@@ -96,7 +96,7 @@
 				<section class="project-dashboard" aria-label="Interactieve grafiek">
 					<section class="project-panel project-chart">
 						<div class="project-toolbar">
-							<div class="view-switch" role="group" aria-label="Grafiekweergave">
+							<div class="view-switch project-segmented" role="group" aria-label="Grafiekweergave">
 								<button class="is-active" type="button" data-view="population">Bevolking</button>
 								<button type="button" data-view="composition">Samenstelling</button>
 								<button type="button" data-view="growth">Groei</button>
@@ -107,10 +107,10 @@
 								<button type="button" data-view="housing">Wonen</button>
 								<button type="button" data-view="grid">Stroomnet</button>
 							</div>
-							<div class="year-control">
+							<div class="year-control project-control">
 								<div id="definitionControl" class="definition-control" hidden>
 									<span>Definitie</span>
-									<div class="definition-options" role="group" aria-label="Benadruk definitie">
+									<div class="definition-options project-segmented" role="group" aria-label="Benadruk definitie">
 										<button class="is-active" type="button" data-definition="nativeBackgroundProxy">Inheemse proxy</button>
 										<button type="button" data-definition="bornAbroadPopulation">Geboren buiten Nederland</button>
 										<button type="button" data-definition="firstGenerationMigrationBackground">Eerste generatie</button>
@@ -141,7 +141,7 @@
 								<p class="eyebrow" id="viewKicker">Bevolking en migratie</p>
 								<h2 id="viewTitle">Nederland in personen</h2>
 							</div>
-							<div id="legend" class="legend" aria-label="Legenda"></div>
+							<div id="legend" class="legend project-legend" aria-label="Legenda"></div>
 							<p id="chartNote" class="chart-note" hidden></p>
 						</div>
 						<div class="project-chart-wrap">

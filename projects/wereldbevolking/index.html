@@ -65,19 +65,19 @@
 				<section class="project-experience world-population-experience">
 					<section class="project-panel world-population-panel">
 						<div class="project-toolbar world-population-toolbar">
-							<div class="world-population-metric" role="group" aria-label="Maatstaf">
+							<div class="world-population-metric project-segmented" role="group" aria-label="Maatstaf">
 								<button class="is-active" data-world-population-metric="population" type="button" aria-pressed="true">Bevolking</button>
 								<button data-world-population-metric="net-migration-share" type="button" aria-pressed="false">Nettomigratie als percentage</button>
 							</div>
-							<div class="world-population-scale" role="group" aria-label="Schaalmodus">
+							<div class="world-population-scale project-segmented" role="group" aria-label="Schaalmodus">
 								<button class="is-active" data-world-population-scale="log" type="button" aria-pressed="true">Logaritmische schaal</button>
 								<button data-world-population-scale="linear" type="button" aria-pressed="false">Lineaire schaal</button>
 							</div>
-							<label class="world-population-visibility">
+							<label class="world-population-visibility project-control">
 								<input id="world-population-show-background" type="checkbox" checked />
 								<span>Toon niet-geselecteerde landen</span>
 							</label>
-							<label class="world-population-comparison">
+							<label class="world-population-comparison project-control">
 								<input id="world-population-show-no-migration" type="checkbox" checked />
 								<span>Vergelijk actief land zonder nettomigratie</span>
 							</label>
@@ -85,18 +85,18 @@
 						</div>
 						<div class="world-population-continents" id="world-population-continents" aria-label="Markeer werelddelen"></div>
 						<div class="world-population-highlight">
-							<label class="world-population-field">
+							<label class="world-population-field project-control">
 								<span>Markeer land</span>
 								<input id="world-population-highlight" list="world-population-country-list" placeholder="Nederland, India, Nigeria..." />
 							</label>
-							<label class="world-population-slider">
+							<label class="world-population-slider project-control">
 								<span>Buren aan elke kant: <strong id="world-population-neighbor-count">0</strong></span>
 								<input id="world-population-neighbor-range" type="range" min="0" max="25" step="1" value="0" />
 							</label>
 							<button class="button" id="world-population-add-highlight" type="button">Voeg markering toe</button>
 							<datalist id="world-population-country-list"></datalist>
 						</div>
-						<div class="world-population-legend" id="world-population-legend" aria-label="Gemarkeerde landen"></div>
+						<div class="world-population-legend project-legend" id="world-population-legend" aria-label="Gemarkeerde landen"></div>
 						<p class="world-population-status" id="world-population-status">Grafiekdata laden...</p>
 						<p class="world-population-note">De standaardweergave voor bevolking gebruikt een logaritmische verticale as, omdat een enkele lineaire as bijna elk klein en middelgroot land platdrukt. Nettomigratie als percentage wordt berekend als nettomigranten gedeeld door de bevolking.</p>
 					</section>

@@ -1,343 +1,325 @@
-.project-page--eu-begrotingsstromenkaart {
-	--project-width: 1540px;
-	--eu-map-bg: #070a0d;
-	--eu-map-land: #202a32;
-	--eu-map-neutral: #3a4650;
-	--eu-map-stroke: rgba(255, 255, 255, 0.62);
-	--eu-map-stroke-muted: rgba(255, 255, 255, 0.18);
-	--eu-map-hover-fill: rgba(255, 255, 255, 0.12);
-	--eu-map-hover-stroke: rgba(255, 255, 255, 0.92);
-	--eu-map-out: #ff6b5e;
-	--eu-map-in: #3ddc97;
-}
+@layer reset, tokens, base, components, project, utilities;
 
-.project-page--eu-begrotingsstromenkaart .app {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(22rem, 26rem);
-	gap: 0;
-	align-items: stretch;
-	height: max(46rem, calc(100vh - 10rem));
-	min-height: 0;
-	border: 1px solid var(--line);
-	border-radius: var(--saga-radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
-	overflow: hidden;
-}
+@layer project {
+	.project-page--eu-begrotingsstromenkaart {
+		--project-width: 1540px;
+		--eu-map-bg: #070a0d;
+		--eu-map-land: #202a32;
+		--eu-map-neutral: #3a4650;
+		--eu-map-stroke: rgba(255, 255, 255, 0.62);
+		--eu-map-stroke-muted: rgba(255, 255, 255, 0.18);
+		--eu-map-hover-fill: rgba(255, 255, 255, 0.12);
+		--eu-map-hover-stroke: rgba(255, 255, 255, 0.92);
+		--eu-map-out: #ff6b5e;
+		--eu-map-in: #3ddc97;
+	}
 
-.project-page--eu-begrotingsstromenkaart .app > * {
-	min-height: 0;
-}
-
-:root[data-theme="light"] .project-page--eu-begrotingsstromenkaart {
-	--eu-map-bg: #ffffff;
-	--eu-map-land: #d5dde5;
-	--eu-map-neutral: #f1f4f7;
-	--eu-map-stroke: rgba(24, 27, 31, 0.48);
-	--eu-map-stroke-muted: rgba(24, 27, 31, 0.18);
-	--eu-map-hover-fill: rgba(181, 44, 34, 0.12);
-	--eu-map-hover-stroke: rgba(127, 29, 21, 0.92);
-	--eu-map-out: #9f241b;
-	--eu-map-in: #0f6b48;
-}
-
-.project-page--eu-begrotingsstromenkaart .project-canvas-stage {
-	position: relative;
-	height: 100%;
-	overflow: hidden;
-	background: var(--saga-bg-black);
-}
-
-:root[data-theme="light"] .project-page--eu-begrotingsstromenkaart .project-canvas-stage {
-	background: #ffffff;
-}
-
-.project-page--eu-begrotingsstromenkaart canvas {
-	display: block;
-	width: 100%;
-	height: 100%;
-	min-height: 0;
-	cursor: grab;
-	touch-action: none;
-	user-select: none;
-}
-
-.project-page--eu-begrotingsstromenkaart canvas:active {
-	cursor: grabbing;
-}
-
-.project-page--eu-begrotingsstromenkaart .hud {
-	position: absolute;
-	left: 28px;
-	right: 28px;
-	top: 24px;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	pointer-events: none;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip {
-	position: absolute;
-	z-index: 4;
-	min-width: 230px;
-	max-width: 280px;
-	padding: 12px;
-	border: 1px solid rgba(244, 247, 248, 0.24);
-	border-radius: 6px;
-	background: rgba(17, 23, 28, 0.96);
-	box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
-	color: var(--ink);
-	font-size: 13px;
-	pointer-events: none;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip[hidden] {
-	display: none;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip-title {
-	display: flex;
-	align-items: baseline;
-	justify-content: space-between;
-	gap: 12px;
-	margin-bottom: 8px;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip-title strong {
-	font-size: 16px;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip-title span,
-.project-page--eu-begrotingsstromenkaart .country-tooltip dt {
-	color: var(--muted);
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip dl {
-	display: grid;
-	gap: 6px;
-	margin: 10px 0 0;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip dl div {
-	display: flex;
-	justify-content: space-between;
-	gap: 18px;
-}
-
-.project-page--eu-begrotingsstromenkaart .country-tooltip dd {
-	margin: 0;
-	font-weight: 700;
-}
-
-.project-page--eu-begrotingsstromenkaart .out-text {
-	color: var(--eu-map-out);
-}
-
-.project-page--eu-begrotingsstromenkaart .in-text {
-	color: var(--eu-map-in);
-}
-
-.project-page--eu-begrotingsstromenkaart .eyebrow,
-.project-page--eu-begrotingsstromenkaart .source,
-.project-page--eu-begrotingsstromenkaart .stats span {
-	margin: 0;
-	color: var(--muted);
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-}
-
-.project-page--eu-begrotingsstromenkaart .year-label {
-	display: block;
-	margin: 0;
-	padding: 0;
-	color: var(--ink);
-	font-family: inherit;
-	font-size: 82px;
-	font-weight: 800;
-	line-height: 0.9;
-	text-transform: none;
-	letter-spacing: 0;
-}
-
-.project-page--eu-begrotingsstromenkaart .legend {
-	display: flex;
-	gap: 16px;
-	font-size: 13px;
-	color: var(--muted);
-}
-
-.project-page--eu-begrotingsstromenkaart .legend i {
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	margin-right: 6px;
-	border-radius: 50%;
-}
-
-.project-page--eu-begrotingsstromenkaart .out {
-	background: var(--out);
-}
-
-.project-page--eu-begrotingsstromenkaart .in {
-	background: var(--in);
-}
-
-.project-page--eu-begrotingsstromenkaart .project-toolbar {
-	display: flex;
-	flex-direction: column;
-	gap: 18px;
-	align-items: stretch;
-	min-width: 0;
-	min-height: 0;
-	height: 100%;
-	max-height: 100%;
-	padding: 22px;
-	border-left: 1px solid var(--line);
-	background: var(--panel);
-	overflow: hidden;
-}
-
-.project-page--eu-begrotingsstromenkaart .project-toolbar__row,
-.project-page--eu-begrotingsstromenkaart .metric-switch,
-.project-page--eu-begrotingsstromenkaart .stats,
-.project-page--eu-begrotingsstromenkaart .speed-control {
-	display: grid;
-	gap: 10px;
-}
-
-.project-page--eu-begrotingsstromenkaart .project-toolbar__row {
-	grid-template-columns: 96px 1fr;
-	align-items: end;
-}
-
-.project-page--eu-begrotingsstromenkaart button {
-	min-height: 40px;
-	border: 1px solid var(--line);
-	border-radius: 6px;
-	background: var(--surface-raised);
-	color: var(--ink);
-	font: inherit;
-	cursor: pointer;
-}
-
-.project-page--eu-begrotingsstromenkaart button.is-active {
-	border-color: var(--accent);
-	background: color-mix(in srgb, var(--accent) 24%, var(--surface-raised));
-}
-
-.project-page--eu-begrotingsstromenkaart label {
-	display: grid;
-	gap: 7px;
-	color: var(--muted);
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-}
-
-.project-page--eu-begrotingsstromenkaart .speed-control span {
-	display: flex;
-	justify-content: space-between;
-	gap: 12px;
-}
-
-.project-page--eu-begrotingsstromenkaart .speed-control strong {
-	color: var(--ink);
-	font-weight: 800;
-	letter-spacing: 0;
-	text-transform: none;
-}
-
-.project-page--eu-begrotingsstromenkaart input[type="range"] {
-	width: 100%;
-}
-
-.project-page--eu-begrotingsstromenkaart .metric-switch {
-	grid-template-columns: 1fr;
-}
-
-.project-page--eu-begrotingsstromenkaart .stats {
-	grid-template-columns: 1fr 1fr;
-}
-
-.project-page--eu-begrotingsstromenkaart .stats div {
-	padding: 12px;
-	border: 1px solid var(--line);
-	border-radius: 6px;
-	background: var(--surface-raised);
-}
-
-.project-page--eu-begrotingsstromenkaart .stats strong {
-	display: block;
-	margin-top: 6px;
-	font-size: 16px;
-}
-
-.project-page--eu-begrotingsstromenkaart .ranking {
-	display: block;
-	flex: 1 1 0;
-	margin: 0;
-	padding: 0 0.35rem 0 0;
-	list-style: none;
-	overflow-y: auto;
-	overscroll-behavior: contain;
-	scrollbar-gutter: stable;
-	min-height: 0;
-}
-
-.project-page--eu-begrotingsstromenkaart .ranking li {
-	display: grid;
-	grid-template-columns: 1fr auto;
-	gap: 8px;
-	align-items: center;
-	padding: 9px 0;
-	border-bottom: 1px solid var(--line);
-	font-size: 14px;
-}
-
-.project-page--eu-begrotingsstromenkaart .ranking li:first-child {
-	padding-top: 0;
-}
-
-.project-page--eu-begrotingsstromenkaart .ranking small {
-	color: var(--muted);
-}
-
-.project-page--eu-begrotingsstromenkaart .ranking .out-text,
-.project-page--eu-begrotingsstromenkaart .ranking .in-text {
-	background: transparent;
-	font-weight: 800;
-}
-
-.project-page--eu-begrotingsstromenkaart .source {
-	margin-top: 0;
-	line-height: 1.5;
-	text-transform: none;
-	letter-spacing: 0;
-}
-
-@media (max-width: 880px) {
 	.project-page--eu-begrotingsstromenkaart .app {
-		grid-template-columns: 1fr;
-		height: auto;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(22rem, 26rem);
+		gap: 0;
+		align-items: stretch;
+		height: max(46rem, calc(100vh - 10rem));
+		min-height: 0;
+		border: 1px solid var(--line);
+		border-radius: var(--saga-radius);
+		background: var(--surface);
+		box-shadow: var(--shadow);
+		overflow: hidden;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .app > * {
+		min-height: 0;
+	}
+
+	:root[data-theme="light"] .project-page--eu-begrotingsstromenkaart {
+		--eu-map-bg: #ffffff;
+		--eu-map-land: #d5dde5;
+		--eu-map-neutral: #f1f4f7;
+		--eu-map-stroke: rgba(24, 27, 31, 0.48);
+		--eu-map-stroke-muted: rgba(24, 27, 31, 0.18);
+		--eu-map-hover-fill: rgba(181, 44, 34, 0.12);
+		--eu-map-hover-stroke: rgba(127, 29, 21, 0.92);
+		--eu-map-out: #9f241b;
+		--eu-map-in: #0f6b48;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .project-canvas-stage {
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+		background: var(--saga-bg-black);
+	}
+
+	:root[data-theme="light"] .project-page--eu-begrotingsstromenkaart .project-canvas-stage {
+		background: #ffffff;
 	}
 
 	.project-page--eu-begrotingsstromenkaart canvas {
-		height: 62vh;
-		min-height: 420px;
+		display: block;
+		width: 100%;
+		height: 100%;
+		min-height: 0;
+		cursor: grab;
+		touch-action: none;
+		user-select: none;
 	}
 
-	.project-page--eu-begrotingsstromenkaart .project-toolbar {
-		border-left: 0;
-		border-top: 1px solid var(--line);
-		overflow: visible;
+	.project-page--eu-begrotingsstromenkaart canvas:active {
+		cursor: grabbing;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .hud {
+		position: absolute;
+		left: 28px;
+		right: 28px;
+		top: 24px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		pointer-events: none;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip {
+		z-index: 4;
+		min-width: 230px;
+		max-width: 280px;
+		border: 1px solid rgba(244, 247, 248, 0.24);
+		background: rgba(17, 23, 28, 0.96);
+		box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+		font-size: 13px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip[hidden] {
+		display: none;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip-title {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 12px;
+		margin-bottom: 8px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip-title strong {
+		font-size: 16px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip-title span,
+	.project-page--eu-begrotingsstromenkaart .country-tooltip dt {
+		color: var(--muted);
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip dl {
+		display: grid;
+		gap: 6px;
+		margin: 10px 0 0;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip dl div {
+		display: flex;
+		justify-content: space-between;
+		gap: 18px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .country-tooltip dd {
+		margin: 0;
+		font-weight: 700;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .out-text {
+		color: var(--eu-map-out);
+	}
+
+	.project-page--eu-begrotingsstromenkaart .in-text {
+		color: var(--eu-map-in);
+	}
+
+	.project-page--eu-begrotingsstromenkaart .eyebrow,
+	.project-page--eu-begrotingsstromenkaart .source,
+	.project-page--eu-begrotingsstromenkaart .stats span {
+		margin: 0;
+		color: var(--muted);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
 	}
 
 	.project-page--eu-begrotingsstromenkaart .year-label {
-		font-size: 56px;
+		display: block;
+		margin: 0;
+		padding: 0;
+		color: var(--ink);
+		font-family: inherit;
+		font-size: 82px;
+		font-weight: 800;
+		line-height: 0.9;
+		text-transform: none;
+		letter-spacing: 0;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .legend {
+		gap: 16px;
+		font-size: 13px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .legend i {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		margin-right: 6px;
+		border-radius: 50%;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .out {
+		background: var(--out);
+	}
+
+	.project-page--eu-begrotingsstromenkaart .in {
+		background: var(--in);
+	}
+
+	.project-page--eu-begrotingsstromenkaart .project-toolbar {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		align-items: stretch;
+		min-width: 0;
+		min-height: 0;
+		height: 100%;
+		max-height: 100%;
+		padding: 22px;
+		border-left: 1px solid var(--line);
+		background: var(--panel);
+		overflow: hidden;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .project-toolbar__row,
+	.project-page--eu-begrotingsstromenkaart .metric-switch,
+	.project-page--eu-begrotingsstromenkaart .stats,
+	.project-page--eu-begrotingsstromenkaart .speed-control {
+		display: grid;
+		gap: 10px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .project-toolbar__row {
+		grid-template-columns: 96px 1fr;
+		align-items: end;
+	}
+
+	.project-page--eu-begrotingsstromenkaart button {
+		min-height: 40px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart button.is-active {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 24%, var(--surface-raised));
+	}
+
+	.project-page--eu-begrotingsstromenkaart .speed-control span {
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .speed-control strong {
+		color: var(--ink);
+		font-weight: 800;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	.project-page--eu-begrotingsstromenkaart input[type="range"] {
+		width: 100%;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .metric-switch {
+		grid-template-columns: 1fr;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .stats {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .stats div {
+		padding: 12px;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		background: var(--surface-raised);
+	}
+
+	.project-page--eu-begrotingsstromenkaart .stats strong {
+		display: block;
+		margin-top: 6px;
+		font-size: 16px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .ranking {
+		display: block;
+		flex: 1 1 0;
+		margin: 0;
+		padding: 0 0.35rem 0 0;
+		list-style: none;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		scrollbar-gutter: stable;
+		min-height: 0;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .ranking li {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: 8px;
+		align-items: center;
+		padding: 9px 0;
+		border-bottom: 1px solid var(--line);
+		font-size: 14px;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .ranking li:first-child {
+		padding-top: 0;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .ranking small {
+		color: var(--muted);
+	}
+
+	.project-page--eu-begrotingsstromenkaart .ranking .out-text,
+	.project-page--eu-begrotingsstromenkaart .ranking .in-text {
+		background: transparent;
+		font-weight: 800;
+	}
+
+	.project-page--eu-begrotingsstromenkaart .source {
+		margin-top: 0;
+		line-height: 1.5;
+		text-transform: none;
+		letter-spacing: 0;
+	}
+
+	@media (width <= 880px) {
+		.project-page--eu-begrotingsstromenkaart .app {
+			grid-template-columns: 1fr;
+			height: auto;
+		}
+
+		.project-page--eu-begrotingsstromenkaart canvas {
+			height: 62vh;
+			min-height: 420px;
+		}
+
+		.project-page--eu-begrotingsstromenkaart .project-toolbar {
+			border-left: 0;
+			border-top: 1px solid var(--line);
+			overflow: visible;
+		}
+
+		.project-page--eu-begrotingsstromenkaart .year-label {
+			font-size: 56px;
+		}
 	}
 }

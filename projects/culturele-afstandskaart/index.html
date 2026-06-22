@@ -85,28 +85,28 @@
 				<section class="project-dashboard">
 					<section class="project-panel project-chart" aria-label="Culturele kaart">
 						<div class="project-toolbar">
-							<div class="mode-switch" role="group" aria-label="Projectie">
+							<div class="mode-switch project-segmented" role="group" aria-label="Projectie">
 								<button class="is-active" type="button" data-mode="standard">Inglehart-Welzel</button>
 								<button type="button" data-mode="welzel">Welzel waarden</button>
 							</div>
-							<label>
+							<label class="project-control">
 								<span>Meting t/m <strong id="yearLabel">2022</strong></span>
 								<input id="yearRange" type="range" min="1981" max="2022" value="2022" step="1" />
 							</label>
-							<div class="line-legend" aria-label="Lijnlegenda">
+							<div class="line-legend project-legend" aria-label="Lijnlegenda">
 								<span><i class="legend-line legend-line-solid"></i> historische route referentieland</span>
 								<span><i class="legend-line legend-line-dotted"></i> afstand naar dichtstbijzijnde landen</span>
 								<span><i class="legend-line legend-line-arrow"></i> gewogen historische richting</span>
 							</div>
-							<label class="trail-toggle">
+							<label class="trail-toggle project-control">
 								<input id="trailToggle" type="checkbox" checked />
 								<span>Toon historische route</span>
 							</label>
-							<label class="trend-toggle">
+							<label class="trend-toggle project-control">
 								<input id="trendToggle" type="checkbox" checked />
 								<span>Toon trendpijlen</span>
 							</label>
-							<label class="group-toggle">
+							<label class="group-toggle project-control">
 								<input id="groupToggle" type="checkbox" checked />
 								<span>Toon waardengroepen</span>
 							</label>
@@ -120,7 +120,7 @@
 						</div>
 					</section>
 					<aside class="distance-panel" aria-label="Afstandsvergelijking">
-						<label class="country-picker">
+						<label class="country-picker project-control">
 							<span>Referentieland</span>
 							<select id="countrySelect"></select>
 						</label>

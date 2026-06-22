@@ -82,14 +82,14 @@
 				<section class="project-dashboard">
 					<section class="project-panel project-chart" aria-labelledby="chartTitle">
 						<div class="project-toolbar">
-							<label class="search-field">
+							<label class="search-field project-control">
 								<span>Zoek herkomst</span>
 								<input id="searchInput" type="search" placeholder="Bijv. Marokko, Duitsland, totaal" autocomplete="off" />
 							</label>
 							<div class="toggle-row" role="group" aria-label="Grafiekopties">
-								<label><input id="labelToggle" type="checkbox" checked /> Namen</label>
-								<label><input id="aggregateToggle" type="checkbox" checked /> Aggregaten</label>
-								<fieldset class="axis-scale-toggle">
+								<label class="project-control"><input id="labelToggle" type="checkbox" checked /> Namen</label>
+								<label class="project-control"><input id="aggregateToggle" type="checkbox" checked /> Aggregaten</label>
+								<fieldset class="axis-scale-toggle project-segmented">
 									<legend>X-as</legend>
 									<label><input type="radio" name="xScale" value="log" checked /> Log</label>
 									<label><input type="radio" name="xScale" value="linear" /> Lineair</label>
@@ -110,7 +110,7 @@
 							<p id="chartDescription" class="sr-only">Scatterplot met totaal verdachten op de x-as en verdachten per 10.000 inwoners op de y-as. De x-as kan tussen logaritmisch en lineair worden gewisseld.</p>
 							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
-						<div class="legend" aria-label="Legenda">
+						<div class="legend project-legend" aria-label="Legenda">
 							<span><i class="point-country"></i> landen / herkomsten</span>
 							<span><i class="point-aggregate"></i> aggregaten</span>
 							<span>scroll/pinch om te zoomen, sleep om te pannen, dubbelklik om te resetten</span>

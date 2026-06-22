@@ -1,614 +1,543 @@
-.project-page--tennet-monitor-voorzieningszekerheid-2026 {
-	--project-width: 1540px;
-}
+@layer reset, tokens, base, components, project, utilities;
 
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-dashboard {
-	max-width: 1540px;
-	margin-inline: auto;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr);
-	gap: 0.9rem;
-	align-items: start;
-	padding-bottom: 1.2rem;
-	border-bottom: 1px solid var(--line-soft);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .eyebrow {
-	margin: 0;
-	color: var(--dim);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.73rem;
-	font-weight: 780;
-	letter-spacing: 0.13em;
-	text-transform: uppercase;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes {
-	border: 1px solid var(--line);
-	border-radius: var(--saga-radius);
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)), var(--surface);
-	box-shadow: var(--shadow);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes {
-	margin-top: 1.1rem;
-	padding: 1rem 1.1rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes h2,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel h2 {
-	margin: 0;
-	color: var(--muted);
-	font-size: 1.35rem;
-	line-height: 1.15;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes p {
-	max-width: 118ch;
-	margin: 0.55rem 0 0;
-	line-height: 1.5;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls {
-	display: grid;
-	grid-template-columns: minmax(12rem, 0.9fr) minmax(8rem, 0.42fr) minmax(11rem, 0.7fr) auto;
-	gap: 0.75rem;
-	align-items: end;
-	margin-top: 1rem;
-	padding: 1rem;
-	background: var(--surface-quiet);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls label {
-	display: grid;
-	gap: 0.42rem;
-	min-width: 0;
-	color: var(--dim);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.72rem;
-	font-weight: 780;
-	letter-spacing: 0.11em;
-	text-transform: uppercase;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls select,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button {
-	min-height: 2.55rem;
-	border: 1px solid var(--line);
-	border-radius: 4px;
-	background: var(--surface-raised);
-	color: var(--ink);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.86rem;
-	font-weight: 760;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls select {
-	width: 100%;
-	padding: 0 0.65rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-control input {
-	width: 100%;
-	margin: 0;
-	accent-color: var(--accent);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-control strong {
-	color: var(--ink);
-	font-weight: 820;
-	letter-spacing: 0;
-	text-transform: none;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button {
-	padding: 0 0.65rem;
-	cursor: pointer;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button:hover,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button.is-active {
-	border-color: var(--accent);
-	background: color-mix(in srgb, var(--accent) 18%, var(--surface-raised));
-	color: var(--ink);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs {
-	display: grid;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
-	grid-template-columns: repeat(2, minmax(4rem, 1fr));
-	gap: 0.45rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs {
-	position: relative;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 0;
-	margin-top: 1rem;
-	border: 1px solid var(--line);
-	border-bottom: 0;
-	border-radius: var(--saga-radius) var(--saga-radius) 0 0;
-	background: var(--surface-quiet);
-	box-shadow: var(--shadow);
-	overflow: hidden;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs::after {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	height: 1px;
-	background: var(--line);
-	content: "";
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button {
-	position: relative;
-	z-index: 1;
-	min-height: 3rem;
-	border: 0;
-	border-right: 1px solid var(--line-soft);
-	border-radius: 0;
-	background: transparent;
-	color: var(--muted);
-	cursor: pointer;
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.9rem;
-	font-weight: 820;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button:last-child {
-	border-right: 0;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button:hover {
-	background: color-mix(in srgb, var(--accent) 10%, var(--surface-quiet));
-	color: var(--ink);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button.is-active {
-	margin-bottom: -1px;
-	border-right-color: var(--line);
-	border-bottom: 1px solid var(--surface);
-	background: var(--surface);
-	color: var(--ink);
-	box-shadow: inset 0 0.2rem 0 var(--accent);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary {
-	display: grid;
-	grid-template-columns: repeat(6, minmax(0, 1fr));
-	gap: 0.6rem;
-	margin-top: 1rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary article {
-	min-width: 0;
-	min-height: 4.4rem;
-	border: 1px solid var(--line-soft);
-	border-radius: 4px;
-	padding: 0.65rem 0.75rem;
-	background: rgba(255, 255, 255, 0.025);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary span {
-	display: block;
-	color: var(--dim);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.72rem;
-	font-weight: 720;
-	line-height: 1.25;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary strong {
-	display: block;
-	margin-top: 0.3rem;
-	overflow: hidden;
-	color: var(--ink);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.97rem;
-	font-weight: 820;
-	line-height: 1.2;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-dashboard {
-	margin-top: 0;
-	border: 1px solid var(--line);
-	border-radius: 0 0 4px 4px;
-	padding: 1rem;
-	background: var(--surface);
-	box-shadow: var(--shadow);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
-	gap: 1rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel[hidden] {
-	display: none;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel .wide {
-	grid-row: span 2;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart {
-	min-width: 0;
-	overflow: hidden;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-panel {
-	min-width: 0;
-	overflow: hidden;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel__head {
-	display: flex;
-	gap: 1rem;
-	align-items: end;
-	justify-content: space-between;
-	padding: 1.1rem 1.1rem 0.55rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel__head h2 {
-	margin-top: 0.25rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .chart-meta {
-	flex: 0 0 auto;
-	margin: 0;
-	color: var(--dim);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.84rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap {
-	position: relative;
-	min-height: 28rem;
-	padding: 0.35rem 0.7rem 0.9rem;
-	background: linear-gradient(rgba(204, 204, 220, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(204, 204, 220, 0.045) 1px, transparent 1px), var(--saga-bg-black);
-	background-size: 48px 48px;
-}
-
-:root[data-theme="light"] .project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap {
-	background: linear-gradient(rgba(36, 41, 46, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(36, 41, 46, 0.055) 1px, transparent 1px), #ffffff;
-	background-size: 48px 48px;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap.compact {
-	min-height: 22rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap.heatmap-wrap {
-	min-height: 20rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list {
-	display: grid;
-	gap: 0.55rem;
-	padding: 0.85rem 1rem 1rem;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap + .insight-list {
-	padding-top: 0;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list article {
-	min-width: 0;
-	border: 1px solid var(--line-soft);
-	border-radius: 4px;
-	padding: 0.65rem 0.75rem;
-	background: rgba(255, 255, 255, 0.025);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list span,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list small {
-	display: block;
-	color: var(--dim);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.72rem;
-	font-weight: 720;
-	line-height: 1.25;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list strong {
-	display: block;
-	margin-top: 0.24rem;
-	color: var(--ink);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 1rem;
-	font-weight: 840;
-	line-height: 1.18;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list small {
-	margin-top: 0.24rem;
-	color: var(--muted);
-	font-weight: 620;
-	letter-spacing: 0;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap svg {
-	display: block;
-	width: 100%;
-	height: auto;
-	overflow: visible;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis path,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis line {
-	stroke: color-mix(in srgb, var(--accent) 38%, transparent);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis text,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .legend text,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis-label,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-label,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .empty-state {
-	fill: var(--dim);
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.75rem;
-	font-weight: 720;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .grid line {
-	stroke: color-mix(in srgb, var(--accent) 14%, transparent);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .grid path {
-	display: none;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .scenario-line {
-	stroke-width: 2.1;
-	opacity: 0.45;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .scenario-line.is-active {
-	stroke-width: 3;
-	opacity: 1;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-line {
-	stroke: rgba(196, 59, 47, 0.95);
-	stroke-dasharray: 6 5;
-	stroke-width: 1.4;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .point,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .weather-dot {
-	cursor: pointer;
-	stroke: var(--line-strong);
-	stroke-width: 1.2;
-	opacity: 0.86;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .point:hover,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .weather-dot:hover {
-	opacity: 1;
-	stroke: var(--line-strong);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .point-selected {
-	stroke: var(--line-strong);
-	stroke-width: 2;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .area-line {
-	stroke-width: 2.4;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .event-bubble {
-	fill: rgba(118, 183, 201, 0.45);
-	stroke: rgba(118, 183, 201, 0.88);
-	stroke-width: 1.2;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .bar {
-	fill: rgba(215, 177, 110, 0.72);
-	stroke: rgba(8, 8, 8, 0.7);
-	stroke-width: 1;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .stack rect {
-	stroke: rgba(8, 8, 8, 0.68);
-	stroke-width: 1;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-cell {
-	stroke: rgba(5, 5, 5, 0.75);
-	stroke-width: 1;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-cell:hover {
-	stroke: var(--line-strong);
-	stroke-width: 1.8;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-cell-focus {
-	stroke: color-mix(in srgb, var(--accent) 42%, transparent);
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-axis path,
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-axis line {
-	display: none;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tooltip {
-	position: absolute;
-	z-index: 5;
-	max-width: min(20rem, calc(100vw - 2rem));
-	border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-	border-radius: 4px;
-	padding: 0.65rem 0.75rem;
-	background: rgba(5, 5, 5, 0.94);
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
-	color: var(--muted);
-	pointer-events: none;
-	font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		sans-serif;
-	font-size: 0.82rem;
-	line-height: 1.45;
-}
-
-.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tooltip strong {
-	display: block;
-	margin-bottom: 0.25rem;
-	color: var(--ink);
-}
-
-@media (max-width: 1180px) {
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
-		grid-column: span 1;
-	}
-
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-	}
-
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel {
-		grid-template-columns: 1fr;
-	}
-
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel .wide {
-		grid-row: auto;
-	}
-}
-
-@media (max-width: 760px) {
+@layer project {
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 {
-		padding-inline: 0.75rem;
+		--project-width: 1540px;
+		--project-summary-columns: repeat(6, minmax(0, 1fr));
+		--project-summary-gap: 0.6rem;
+		--summary-card-min-height: 4.4rem;
+		--summary-card-padding: 0.65rem 0.75rem;
+		--summary-value-size: 0.97rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-dashboard {
+		max-width: 1540px;
+		margin-inline: auto;
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro {
-		grid-template-columns: 1fr;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 0.9rem;
 		align-items: start;
+		padding-bottom: 1.2rem;
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .eyebrow {
+		margin: 0;
+		color: var(--dim);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 0.73rem;
+		font-weight: 780;
+		letter-spacing: 0.13em;
+		text-transform: uppercase;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes {
+		margin-top: 1.1rem;
+		padding: 1rem 1.1rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes h2,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel h2 {
+		margin: 0;
+		color: var(--muted);
+		font-size: 1.35rem;
+		line-height: 1.15;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-notes p {
+		max-width: 118ch;
+		margin: 0.55rem 0 0;
+		line-height: 1.5;
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls {
-		grid-template-columns: 1fr;
+		display: grid;
+		grid-template-columns: minmax(12rem, 0.9fr) minmax(8rem, 0.42fr) minmax(11rem, 0.7fr) auto;
+		gap: 0.75rem;
+		align-items: end;
+		margin-top: 1rem;
+		padding: 1rem;
+		background: var(--surface-quiet);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls select,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button {
+		min-height: 2.55rem;
+		font-size: 0.86rem;
+		font-weight: 760;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls select {
+		width: 100%;
+		padding: 0 0.65rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-control input {
+		width: 100%;
+		margin: 0;
+		accent-color: var(--accent);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-control strong {
+		color: var(--ink);
+		font-weight: 820;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button {
+		padding: 0 0.65rem;
+		cursor: pointer;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button:hover,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls button.is-active {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 18%, var(--surface-raised));
+		color: var(--ink);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs {
+		display: grid;
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, minmax(4rem, 1fr));
+		gap: 0.45rem;
 	}
 
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
-		grid-column: auto;
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs {
+		position: relative;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0;
+		margin-top: 1rem;
+		border: 1px solid var(--line);
+		border-bottom: 0;
+		border-radius: var(--saga-radius) var(--saga-radius) 0 0;
+		background: var(--surface-quiet);
+		box-shadow: var(--shadow);
+		overflow: hidden;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs::after {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 1px;
+		background: var(--line);
+		content: "";
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button {
-		min-height: 2.75rem;
-		padding-inline: 0.3rem;
-		font-size: 0.78rem;
+		position: relative;
+		z-index: 1;
+		min-height: 3rem;
+		border: 0;
+		border-right: 1px solid var(--line-soft);
+		border-radius: 0;
+		background: transparent;
+		color: var(--muted);
+		cursor: pointer;
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 0.9rem;
+		font-weight: 820;
 	}
 
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-dashboard {
-		padding: 0.65rem;
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button:last-child {
+		border-right: 0;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button:hover {
+		background: color-mix(in srgb, var(--accent) 10%, var(--surface-quiet));
+		color: var(--ink);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button.is-active {
+		margin-bottom: -1px;
+		border-right-color: var(--line);
+		border-bottom: 1px solid var(--surface);
+		background: var(--surface);
+		color: var(--ink);
+		box-shadow: inset 0 0.2rem 0 var(--accent);
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary {
-		grid-template-columns: 1fr;
+		margin-top: 1rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary article {
+		min-width: 0;
+		border: 1px solid var(--line-soft);
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary strong {
-		white-space: normal;
+		line-height: 1.2;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-dashboard {
+		margin-top: 0;
+		border: 1px solid var(--line);
+		border-radius: 0 0 4px 4px;
+		padding: 1rem;
+		background: var(--surface);
+		box-shadow: var(--shadow);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
+		gap: 1rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel[hidden] {
+		display: none;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel .wide {
+		grid-row: span 2;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart {
+		min-width: 0;
+		overflow: hidden;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-panel {
+		min-width: 0;
+		overflow: hidden;
 	}
 
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel__head {
-		display: grid;
-		align-items: start;
+		display: flex;
+		gap: 1rem;
+		align-items: end;
+		justify-content: space-between;
+		padding: 1.1rem 1.1rem 0.55rem;
 	}
 
-	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel__head h2 {
+		margin-top: 0.25rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .chart-meta {
+		flex: 0 0 auto;
+		margin: 0;
+		color: var(--dim);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 0.84rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap {
+		position: relative;
+		min-height: 28rem;
+		padding: 0.35rem 0.7rem 0.9rem;
+		background: linear-gradient(rgba(204, 204, 220, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(204, 204, 220, 0.045) 1px, transparent 1px), var(--saga-bg-black);
+		background-size: 48px 48px;
+	}
+
+	:root[data-theme="light"] .project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap {
+		background: linear-gradient(rgba(36, 41, 46, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(36, 41, 46, 0.055) 1px, transparent 1px), #ffffff;
+		background-size: 48px 48px;
+	}
+
 	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap.compact {
+		min-height: 22rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap.heatmap-wrap {
 		min-height: 20rem;
-		padding-inline: 0.25rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list {
+		display: grid;
+		gap: 0.55rem;
+		padding: 0.85rem 1rem 1rem;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap + .insight-list {
+		padding-top: 0;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list article {
+		min-width: 0;
+		border: 1px solid var(--line-soft);
+		border-radius: 4px;
+		padding: 0.65rem 0.75rem;
+		background: rgba(255, 255, 255, 0.025);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list span,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list small {
+		display: block;
+		color: var(--dim);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 0.72rem;
+		font-weight: 720;
+		line-height: 1.25;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list strong {
+		display: block;
+		margin-top: 0.24rem;
+		color: var(--ink);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 1rem;
+		font-weight: 840;
+		line-height: 1.18;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .insight-list small {
+		margin-top: 0.24rem;
+		color: var(--muted);
+		font-weight: 620;
+		letter-spacing: 0;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap svg {
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow: visible;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis path,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis line {
+		stroke: color-mix(in srgb, var(--accent) 38%, transparent);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis text,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .legend text,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .axis-label,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-label,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .empty-state {
+		fill: var(--dim);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 0.75rem;
+		font-weight: 720;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .grid line {
+		stroke: color-mix(in srgb, var(--accent) 14%, transparent);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .grid path {
+		display: none;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .scenario-line {
+		stroke-width: 2.1;
+		opacity: 0.45;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .scenario-line.is-active {
+		stroke-width: 3;
+		opacity: 1;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .norm-line {
+		stroke: rgba(196, 59, 47, 0.95);
+		stroke-dasharray: 6 5;
+		stroke-width: 1.4;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .point,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .weather-dot {
+		cursor: pointer;
+		stroke: var(--line-strong);
+		stroke-width: 1.2;
+		opacity: 0.86;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .point:hover,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .weather-dot:hover {
+		opacity: 1;
+		stroke: var(--line-strong);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .point-selected {
+		stroke: var(--line-strong);
+		stroke-width: 2;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .area-line {
+		stroke-width: 2.4;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .event-bubble {
+		fill: rgba(118, 183, 201, 0.45);
+		stroke: rgba(118, 183, 201, 0.88);
+		stroke-width: 1.2;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .bar {
+		fill: rgba(215, 177, 110, 0.72);
+		stroke: rgba(8, 8, 8, 0.7);
+		stroke-width: 1;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .stack rect {
+		stroke: rgba(8, 8, 8, 0.68);
+		stroke-width: 1;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-cell {
+		stroke: rgba(5, 5, 5, 0.75);
+		stroke-width: 1;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-cell:hover {
+		stroke: var(--line-strong);
+		stroke-width: 1.8;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-cell-focus {
+		stroke: color-mix(in srgb, var(--accent) 42%, transparent);
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-axis path,
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .heat-axis line {
+		display: none;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tooltip {
+		z-index: 5;
+		border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+		background: rgba(5, 5, 5, 0.94);
+		color: var(--muted);
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.45;
+	}
+
+	.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tooltip strong {
+		display: block;
+		margin-bottom: 0.25rem;
+		color: var(--ink);
+	}
+
+	@media (width <= 1180px) {
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
+			grid-column: span 1;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tab-panel .wide {
+			grid-row: auto;
+		}
+	}
+
+	@media (width <= 760px) {
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 {
+			padding-inline: 0.75rem;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-intro {
+			grid-template-columns: 1fr;
+			align-items: start;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .tennet-controls {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .metric-toggle {
+			grid-column: auto;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-tabs button {
+			min-height: 2.75rem;
+			padding-inline: 0.3rem;
+			font-size: 0.78rem;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-dashboard {
+			padding: 0.65rem;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-summary strong {
+			white-space: normal;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-panel__head {
+			display: grid;
+			align-items: start;
+		}
+
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap,
+		.project-page--tennet-monitor-voorzieningszekerheid-2026 .project-chart-wrap.compact {
+			min-height: 20rem;
+			padding-inline: 0.25rem;
+		}
 	}
 }

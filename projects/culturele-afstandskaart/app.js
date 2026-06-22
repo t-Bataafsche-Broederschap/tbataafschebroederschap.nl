@@ -462,13 +462,11 @@ function updateRanking(ranked) {
 }
 
 function showTooltip(event, record, distance) {
-	const rect = chartWrap.getBoundingClientRect();
 	const dimension = metric();
 	const distanceText = Number.isFinite(distance) ? `<br />Afstand: ${distance.toFixed(2)}` : "";
 	tooltip.innerHTML = `<strong>${record.country} (${record.year})</strong>${dimension.xHighLabel}: ${dimension.format(record[dimension.x])}<br />${dimension.yHighLabel}: ${dimension.format(record[dimension.y])}${distanceText}`;
 	tooltip.hidden = false;
-	tooltip.style.left = `${Math.min(rect.width - 290, Math.max(12, event.clientX - rect.left + 14))}px`;
-	tooltip.style.top = `${Math.min(rect.height - 120, Math.max(12, event.clientY - rect.top + 14))}px`;
+	window.positionProjectTooltip(event, tooltip, chartWrap);
 }
 
 function hideTooltip() {

@@ -233,6 +233,14 @@ export const metricInfo = {
 		description: "Nettomigratie als percentage van de bevolking op 1 januari van hetzelfde jaar.",
 		source: "Afgeleid uit nettomigratie en bevolking uit CBS StatLine 85524NED, 85496NED en 85451NED.",
 	},
+	netMigrationPctNativeBackgroundProxy: {
+		description: "Nettomigratie als percentage van de inheemse proxy in hetzelfde jaar. Vóór 1972 gebruikt de noemer een op 1972 gekalibreerde terugschatting: bevolking minus cumulatieve nettomigratie. Vanaf 1972 gebruikt de reeks de beschikbare proxy.",
+		source: "Afgeleid uit nettomigratie, de inheemse proxy en de gekalibreerde terugschatting op basis van CBS StatLine 85524NED, 85451NED, 70787NED, 70751NED en 85384NED.",
+	},
+	nativeBackgroundProxyExtended: {
+		description: "Samengestelde noemer voor de migratieratio. Vóór 1972: totale bevolking minus een op 1972 gekalibreerde cumulatieve nettomigratievoorraad. Vanaf 1972: de inheemse proxy van deze pagina.",
+		source: "Afgeleid uit CBS StatLine 85524NED, 85451NED, 70787NED, 70751NED en 85384NED.",
+	},
 	newHomes: {
 		description: "Nieuwbouwwoningen die in het kalenderjaar aan de woningvoorraad zijn toegevoegd.",
 		source: "CBS StatLine 82235NED.",
@@ -286,6 +294,7 @@ export const metricInfo = {
 export const viewSourceNotes = {
 	population: "CBS StatLine 85524NED vanaf 1899; deze tab combineert bevolking, samenstellingsvoorraden, aandelen en jaarstromen. Samenstellingsreeksen starten in 1972; 1972-1995 is CBS-reconstructie.",
 	composition: "1972-1995 CBS-reconstructie migratieachtergrond; 1996-2021 CBS migratieachtergrond en generatie; vanaf 2022 gereconstrueerd via geboorteland van persoon en ouders.",
+	"native-migration-share": "Afgeleid: jaarlijkse nettomigratie gedeeld door een samengestelde proxy. Vóór 1972 is de noemer teruggeschat als bevolking minus gekalibreerde cumulatieve nettomigratie; daarna gebruikt hij de beschikbare inheemse proxy.",
 	growth: "Bevolkingsgroei wordt boekhoudkundig ontleed in geboorteoverschot, nettomigratie en overige correcties.",
 	age: "Leeftijdsopbouw gebruikt CBS 70787NED, 37325 en 85384NED; ontbrekende buckets worden niet geinterpoleerd.",
 	origin: "CBS StatLine 85671NED, 85468NED en 85848NED; definities verschillen.",

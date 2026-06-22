@@ -1,6 +1,6 @@
 /* global d3 */
 
-import { formatMetric, formatNumber, formatOne, homes, mw, people, percent, percentTick, requests, shortNumber } from "./formatters.js";
+import { formatMetric, formatNumber, formatOne, homes, mw, people, percent, percentTick, precisePercent, requests, shortNumber } from "./formatters.js";
 import { gridCardInfo, metricInfo, viewSourceNotes } from "./metadata.js";
 import { views } from "./views.js";
 
@@ -18,6 +18,9 @@ const prevYearButton = document.querySelector("#prevYear");
 const nextYearButton = document.querySelector("#nextYear");
 const resetZoomButton = document.querySelector("#resetZoom");
 const exportCsvButton = document.querySelector("#exportCsv");
+const populationComparisonButton = document.querySelector("#togglePopulationComparison");
+const meansButton = document.querySelector("#toggleMeans");
+const trendsButton = document.querySelector("#toggleTrends");
 const definitionControl = document.querySelector("#definitionControl");
 const definitionButtons = document.querySelectorAll("[data-definition]");
 const selectedYearTitle = document.querySelector("#selectedYearTitle");
@@ -34,6 +37,9 @@ let state = {
 	view: "population",
 	year: 2024,
 	definition: "nativeBackgroundProxy",
+	showPopulationComparison: false,
+	showMeans: true,
+	showTrends: true,
 };
 const zoomDomains = new Map();
 let suppressNextClick = false;
@@ -56,6 +62,9 @@ function rowForYear(year) {
 function rowsForView(view) {
 	if (view === "age") {
 		return data.ageStructureByYear.map((row) => ({ year: row.year, population: row.buckets.reduce((total, bucket) => total + (bucket.population || 0), 0) || row.buckets.reduce((total, bucket) => total + (bucket.migrationBackgroundTotal || 0), 0) }));
+	}
+	if (view === "native-migration-share") {
+		return data.timeline.filter((row) => Number.isFinite(row.netMigrationPctNativeBackgroundProxy));
 	}
 	const keys = views[view].series.map((series) => series.key);
 	return data.timeline.filter((row) => keys.some((key) => Number.isFinite(row[key])));
@@ -158,8 +167,11 @@ function extentForSeries(rows, series) {
 	const values = [];
 	for (const row of rows) {
 		for (const item of series) {
-			const value = valueFor(row, item.key);
-			if (value !== null) values.push(value);
+			const keys = item.kind === "band" ? [item.lowerKey, item.upperKey] : [item.key];
+			for (const key of keys) {
+				const value = valueFor(row, key);
+				if (value !== null) values.push(value);
+			}
 		}
 	}
 
@@ -173,6 +185,20 @@ function extentForSeries(rows, series) {
 
 function activeView() {
 	return views[state.view];
+}
+
+function displayedView() {
+	const view = activeView();
+	if (state.view !== "native-migration-share") return view;
+	return {
+		...view,
+		series: view.series.filter((series) => {
+			if (series.comparison === "population" && !state.showPopulationComparison) return false;
+			if (series.overlay === "means" && !state.showMeans) return false;
+			if (series.overlay === "trends" && !state.showTrends) return false;
+			return true;
+		}),
+	};
 }
 
 function qualityForMetric(row, key) {
@@ -922,6 +948,25 @@ function renderDetailCards() {
 		return;
 	}
 
+	if (state.view === "native-migration-share") {
+		const row = rowForYear(state.year);
+		detailEyebrow.textContent = "Nettomigratie geselecteerd jaar";
+		detailTitle.textContent = "Aandeel van de inheemse proxy";
+		gridCards.replaceChildren();
+		appendMetricCard({
+			title: "Nettomigratie / inheemse proxy",
+			mainValue: precisePercent(valueFor(row, "netMigrationPctNativeBackgroundProxy")),
+			rows: [
+				["Nettomigratie", formatMetric("netMigration", valueFor(row, "netMigration"))],
+				["Inheemse proxy / terugschatting", people(valueFor(row, "nativeBackgroundProxyExtended"))],
+				["Aandeel totale bevolking", precisePercent(valueFor(row, "netMigrationPctPopulation"))],
+			],
+			note: "Een jaarlijkse stroom gedeeld door de proxyvoorraad in hetzelfde jaar. Vóór 1972 is de noemer teruggeschat; dit is geen aandeel migranten in de bevolking.",
+			info: metricInfo.netMigrationPctNativeBackgroundProxy,
+		});
+		return;
+	}
+
 	if (state.view === "growth") {
 		renderGrowthCards();
 		return;
@@ -979,9 +1024,9 @@ function drawChartPanel({ root, rows, series, x, top, height, marginLeft, innerW
 	const baselineLeft = yLeft(0);
 	const baselineRight = yRight(0);
 	const annotationYears = [
-		{ year: 1972, label: "1972 CBS-reconstructie" },
-		{ year: 1996, label: "1996 oude migratieachtergrondreeks" },
-		{ year: 2022, label: "2022 nieuwe herkomstindeling" },
+		{ year: 1972, label: "1972 · reconstructie" },
+		{ year: 1996, label: "1996 · oude reeks" },
+		{ year: 2022, label: "2022 · nieuwe reeks", alignEnd: true },
 	].filter((item) => item.year >= x.domain()[0] && item.year <= x.domain()[1]);
 	const barSeries = series.filter((item) => item.kind === "bar");
 	const xDomain = x.domain();
@@ -1022,6 +1067,16 @@ function drawChartPanel({ root, rows, series, x, top, height, marginLeft, innerW
 		.attr("transform", `translate(${marginLeft},0)`)
 		.call(d3.axisLeft(yLeft).ticks(6).tickSize(-innerWidth).tickFormat(""))
 		.call((selection) => selection.select(".domain").remove());
+
+	if (yLeft.domain()[0] <= 0 && yLeft.domain()[1] >= 0) {
+		panel
+			.append("line")
+			.attr("class", "zero-reference-line")
+			.attr("x1", marginLeft)
+			.attr("x2", marginLeft + innerWidth)
+			.attr("y1", yLeft(0))
+			.attr("y2", yLeft(0));
+	}
 
 	if (showXAxis) {
 		const xAxis = d3.axisBottom(x).tickValues(yearTicks(x.domain(), innerWidth)).tickFormat(d3.format("d"));
@@ -1082,6 +1137,24 @@ function drawChartPanel({ root, rows, series, x, top, height, marginLeft, innerW
 			.attr("opacity", 0.76);
 	}
 
+	for (const seriesItem of series.filter((item) => item.kind === "band")) {
+		const scale = seriesItem.axis === "right" ? yRight : yLeft;
+		const area = d3
+			.area()
+			.defined((row) => valueFor(row, seriesItem.lowerKey) !== null && valueFor(row, seriesItem.upperKey) !== null)
+			.x((row) => x(row.year))
+			.y0((row) => scale(valueFor(row, seriesItem.lowerKey)))
+			.y1((row) => scale(valueFor(row, seriesItem.upperKey)));
+
+		panel
+			.append("path")
+			.datum(rows)
+			.attr("class", "rolling-band")
+			.attr("d", area)
+			.attr("fill", seriesItem.color)
+			.attr("fill-opacity", seriesItem.opacity ?? 0.16);
+	}
+
 	for (const seriesItem of series.filter((item) => item.kind === "line")) {
 		const scale = seriesItem.axis === "right" ? yRight : yLeft;
 		const line = d3
@@ -1098,7 +1171,11 @@ function drawChartPanel({ root, rows, series, x, top, height, marginLeft, innerW
 			.attr("fill", "none")
 			.attr("stroke", seriesItem.color)
 			.attr("stroke-width", seriesItem.width || 2.4)
+			.attr("stroke-opacity", seriesItem.opacity ?? 1)
+			.attr("stroke-linecap", seriesItem.lineCap || null)
 			.attr("stroke-dasharray", seriesItem.dash || null);
+
+		if (seriesItem.points === false) continue;
 
 		panel
 			.append("g")
@@ -1126,7 +1203,7 @@ function drawChartPanel({ root, rows, series, x, top, height, marginLeft, innerW
 			.attr("y1", top)
 			.attr("y2", top + height);
 
-		for (const annotation of annotationYears) {
+		for (const [annotationIndex, annotation] of annotationYears.entries()) {
 			const annotationX = x(annotation.year);
 			panel
 				.append("line")
@@ -1138,8 +1215,9 @@ function drawChartPanel({ root, rows, series, x, top, height, marginLeft, innerW
 			panel
 				.append("text")
 				.attr("class", "definition-marker-label")
-				.attr("x", annotationX + 5)
-				.attr("y", top + 12)
+				.attr("x", annotationX + (annotation.alignEnd ? -5 : 5))
+				.attr("y", top + 12 + annotationIndex * 14)
+				.attr("text-anchor", annotation.alignEnd ? "end" : "start")
 				.text(annotation.label);
 		}
 
@@ -1234,6 +1312,7 @@ function renderSinglePanelChart(view, rows) {
 		innerWidth,
 		leftLabel: view.leftLabel,
 		rightLabel: view.rightLabel,
+		leftTickFormat: view.series.every((series) => series.key.includes("Pct")) ? percentTick : shortNumber,
 		showXAxis: true,
 		showSelectedYearLabel: true,
 	});
@@ -1552,7 +1631,7 @@ function renderAgeChart(view) {
 }
 
 function renderChart() {
-	const view = activeView();
+	const view = displayedView();
 	const rows = rowsForView(state.view);
 	chartWrap.classList.toggle("is-split", ["population", "housing"].includes(state.view));
 
@@ -1579,7 +1658,13 @@ function renderChart() {
 }
 
 function tooltipAnnotation(series, row) {
-	return [series.key === "housingShortage" && row.housingShortageInterpolated ? `<small>${interpolationLabel(row)}</small>` : "", ["bornAbroadPopulation", "bornAbroadPopulationPctPopulation"].includes(series.key) && row.bornAbroadPopulationEstimated ? "<small>geschat vóór 2022</small>" : ""].filter(Boolean).join("");
+	return [
+		series.key === "housingShortage" && row.housingShortageInterpolated ? `<small>${interpolationLabel(row)}</small>` : "",
+		["bornAbroadPopulation", "bornAbroadPopulationPctPopulation"].includes(series.key) && row.bornAbroadPopulationEstimated ? "<small>geschat vóór 2022</small>" : "",
+		series.key === "netMigrationPctNativeBackgroundProxy" && row.year < 1972 ? "<small>noemer teruggeschat vóór 1972</small>" : "",
+	]
+		.filter(Boolean)
+		.join("");
 }
 
 function seriesScreenMetrics({ row, seriesItem, mouseY, yLeft, yRight, baselineLeft, baselineRight }) {
@@ -1711,6 +1796,9 @@ function updateUrlState() {
 	const params = new URLSearchParams();
 	params.set("view", state.view);
 	params.set("year", state.year);
+	if (state.view === "native-migration-share" && state.showPopulationComparison) params.set("comparison", "population");
+	if (state.view === "native-migration-share" && !state.showMeans) params.set("means", "hidden");
+	if (state.view === "native-migration-share" && !state.showTrends) params.set("trends", "hidden");
 	if (["population", "composition"].includes(state.view)) params.set("definition", state.definition);
 	const domain = zoomDomains.get(state.view);
 	if (domain) {
@@ -1724,6 +1812,9 @@ function readUrlState() {
 	const params = new URLSearchParams(location.search);
 	const view = params.get("view");
 	if (view && views[view]) state.view = view;
+	state.showPopulationComparison = params.get("comparison") === "population";
+	state.showMeans = params.get("means") !== "hidden";
+	state.showTrends = params.get("trends") !== "hidden";
 	const year = Number(params.get("year"));
 	if (Number.isFinite(year)) state.year = Math.round(year);
 	const definition = params.get("definition");
@@ -1755,6 +1846,7 @@ function exportCsv() {
 
 function showTooltip(event, row, view, tooltipSeries = view.series) {
 	const lines = tooltipSeries
+		.filter((series) => series.tooltip !== false)
 		.map((series) => {
 			const value = valueFor(row, series.key);
 			if (value === null) return null;
@@ -1770,21 +1862,8 @@ function showTooltip(event, row, view, tooltipSeries = view.series) {
 
 	tooltip.innerHTML = `<div class="tooltip-title"><strong>${row.year}</strong><small>${viewSourceNotes[state.view]}</small></div><dl>${lines.map((line) => `<div>${line}</div>`).join("")}</dl>`;
 	tooltip.hidden = false;
-
-	const wrapRect = chartWrap.getBoundingClientRect();
-	const gap = 8;
-	const padding = 8;
-	const cursorX = event.clientX - wrapRect.left;
-	const cursorY = event.clientY - wrapRect.top;
-	let left = cursorX - tooltip.offsetWidth - gap;
-	let top = cursorY + gap;
-
-	if (left < padding) left = cursorX + gap;
-	if (top + tooltip.offsetHeight > wrapRect.height - padding) top = cursorY - tooltip.offsetHeight - gap;
-
-	left = Math.max(padding, Math.min(wrapRect.width - tooltip.offsetWidth - padding, left));
-	top = Math.max(padding, Math.min(wrapRect.height - tooltip.offsetHeight - padding, top));
-	tooltip.style.transform = `translate(${left}px, ${top}px)`;
+	tooltip.style.transform = "none";
+	window.positionProjectTooltip(event, tooltip, chartWrap);
 }
 
 function hideTooltip() {
@@ -1864,6 +1943,13 @@ function renderChartNote() {
 		return;
 	}
 
+	if (state.view === "native-migration-share") {
+		chartNote.textContent =
+			"Deze tab deelt de jaarlijkse nettomigratie door een samengestelde inheemse proxy, niet door de totale bevolking. Vóór 1972 wordt de noemer teruggeschat als bevolking minus een op 1972 gekalibreerde cumulatieve nettomigratievoorraad. Daarna gebruikt hij 1972-1995 de CBS-reconstructie, 1996-2021 Nederlandse achtergrond en vanaf 2022 personen met twee in Nederland geboren ouders. De gestreepte lijn gebruikt ter vergelijking de totale bevolking als noemer.";
+		chartNote.hidden = false;
+		return;
+	}
+
 	if (state.view === "origin") {
 		chartNote.textContent = "Vertrekland is beschikbaar vanaf 2014; een klein deel heeft geen gepubliceerd vertrekland. Geboorteland en nationaliteit zijn beschikbaar vanaf 2010. Terugkomers is hier een proxy: immigranten met geboorteland Nederland.";
 		chartNote.hidden = false;
@@ -1895,7 +1981,7 @@ function renderChartNote() {
 }
 
 function render() {
-	const view = activeView();
+	const view = displayedView();
 	viewKicker.textContent = view.kicker;
 	viewTitle.textContent = view.title;
 	renderLegend(view);
@@ -1903,8 +1989,22 @@ function render() {
 	renderStats();
 	renderDetailCards();
 	renderChart();
-	viewButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === state.view));
+	viewButtons.forEach((button) => {
+		const isActive = button.dataset.view === state.view;
+		button.classList.toggle("is-active", isActive);
+		button.setAttribute("aria-selected", String(isActive));
+		button.tabIndex = isActive ? 0 : -1;
+	});
 	definitionControl.hidden = !["population", "composition"].includes(state.view);
+	populationComparisonButton.hidden = state.view !== "native-migration-share";
+	meansButton.hidden = state.view !== "native-migration-share";
+	trendsButton.hidden = state.view !== "native-migration-share";
+	populationComparisonButton.setAttribute("aria-pressed", String(state.showPopulationComparison));
+	meansButton.setAttribute("aria-pressed", String(state.showMeans));
+	trendsButton.setAttribute("aria-pressed", String(state.showTrends));
+	populationComparisonButton.textContent = state.showPopulationComparison ? "Verberg vergelijking totale bevolking" : "Toon vergelijking totale bevolking";
+	meansButton.textContent = state.showMeans ? "Gemiddelden aan" : "Gemiddelden uit";
+	trendsButton.textContent = state.showTrends ? "Trendlijnen aan" : "Trendlijnen uit";
 	definitionButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.definition === state.definition));
 	scheduleUrlUpdate();
 }
@@ -1915,6 +2015,14 @@ function setupEvents() {
 			state.view = button.dataset.view;
 			syncYearRange();
 			render();
+		});
+		button.addEventListener("keydown", (event) => {
+			if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+			event.preventDefault();
+			const currentIndex = viewButtons.indexOf(button);
+			const nextIndex = event.key === "Home" ? 0 : event.key === "End" ? viewButtons.length - 1 : (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + viewButtons.length) % viewButtons.length;
+			viewButtons[nextIndex].click();
+			viewButtons[nextIndex].focus();
 		});
 	});
 
@@ -1934,6 +2042,18 @@ function setupEvents() {
 	nextYearButton.addEventListener("click", () => stepYear(1));
 	resetZoomButton?.addEventListener("click", resetZoomForCurrentView);
 	exportCsvButton?.addEventListener("click", exportCsv);
+	populationComparisonButton?.addEventListener("click", () => {
+		state.showPopulationComparison = !state.showPopulationComparison;
+		render();
+	});
+	meansButton?.addEventListener("click", () => {
+		state.showMeans = !state.showMeans;
+		render();
+	});
+	trendsButton?.addEventListener("click", () => {
+		state.showTrends = !state.showTrends;
+		render();
+	});
 
 	window.addEventListener("resize", () => renderChart());
 }
@@ -1959,6 +2079,52 @@ function syncYearRange() {
 
 async function init() {
 	data = await fetch("data.json").then((response) => response.json());
+	for (const row of data.timeline) {
+		row.nativeBackgroundProxyExtended = Number.isFinite(row.nativeBackgroundProxy) ? row.nativeBackgroundProxy : row.populationMinusNetMigration;
+		row.netMigrationPctNativeBackgroundProxy = Number.isFinite(row.netMigration) && Number.isFinite(row.nativeBackgroundProxyExtended) && row.nativeBackgroundProxyExtended > 0 ? (row.netMigration / row.nativeBackgroundProxyExtended) * 100 : null;
+	}
+	for (let index = 0; index < data.timeline.length; index += 1) {
+		const rollingValues = data.timeline
+			.slice(Math.max(0, index - 9), index + 1)
+			.map((row) => row.netMigrationPctNativeBackgroundProxy)
+			.filter(Number.isFinite);
+		if (rollingValues.length < 5) continue;
+		const mean = d3.mean(rollingValues);
+		const deviation = d3.deviation(rollingValues) ?? 0;
+		data.timeline[index].netMigrationPctNativeProxyRollingMean = mean;
+		data.timeline[index].netMigrationPctNativeProxyBandLower = mean - deviation * 2;
+		data.timeline[index].netMigrationPctNativeProxyBandUpper = mean + deviation * 2;
+	}
+	const ratioRows = data.timeline.filter((row) => Number.isFinite(row.netMigrationPctNativeBackgroundProxy));
+	const meanBefore1960 = d3.mean(
+		ratioRows.filter((row) => row.year < 1960),
+		(row) => row.netMigrationPctNativeBackgroundProxy
+	);
+	const meanSince1960 = d3.mean(
+		ratioRows.filter((row) => row.year >= 1960),
+		(row) => row.netMigrationPctNativeBackgroundProxy
+	);
+	const regression = (rows) => {
+		const meanYear = d3.mean(rows, (row) => row.year);
+		const meanRatio = d3.mean(rows, (row) => row.netMigrationPctNativeBackgroundProxy);
+		const numerator = d3.sum(rows, (row) => (row.year - meanYear) * (row.netMigrationPctNativeBackgroundProxy - meanRatio));
+		const denominator = d3.sum(rows, (row) => (row.year - meanYear) ** 2);
+		const slope = denominator === 0 ? 0 : numerator / denominator;
+		return (year) => meanRatio + slope * (year - meanYear);
+	};
+	const rowsBefore1960 = ratioRows.filter((row) => row.year < 1960);
+	const rowsSince1960 = ratioRows.filter((row) => row.year >= 1960);
+	const trendBefore1960 = regression(rowsBefore1960);
+	const trendSince1960 = regression(rowsSince1960);
+	for (const row of data.timeline) {
+		row.netMigrationPctNativeProxyMeanBefore1960 = row.year < 1960 ? meanBefore1960 : null;
+		row.netMigrationPctNativeProxyMeanSince1960 = row.year >= 1960 ? meanSince1960 : null;
+		row.netMigrationPctNativeProxyTrendBefore1960 = row.year < 1960 ? trendBefore1960(row.year) : null;
+		row.netMigrationPctNativeProxyTrendSince1960 = row.year >= 1960 ? trendSince1960(row.year) : null;
+	}
+	const migrationShareSeries = views["native-migration-share"].series;
+	migrationShareSeries.find((series) => series.key === "netMigrationPctNativeProxyMeanBefore1960").label = `Gemiddelde 1900–1959 (${precisePercent(meanBefore1960)})`;
+	migrationShareSeries.find((series) => series.key === "netMigrationPctNativeProxyMeanSince1960").label = `Gemiddelde 1960–2024 (${precisePercent(meanSince1960)})`;
 	readUrlState();
 	setupEvents();
 	syncYearRange();

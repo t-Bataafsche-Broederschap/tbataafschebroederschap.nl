@@ -14,10 +14,10 @@
 		--saga-dim: #7b8087;
 		--saga-line: #464c54;
 		--saga-line-soft: rgba(204, 204, 220, 0.14);
-		--saga-blue: #c43b2f;
-		--saga-blue-2: #ff8a7d;
+		--saga-blue: #d33;
+		--saga-blue-2: #d33;
 		--saga-blue-3: #e85d4f;
-		--saga-blue-dark: #971f16;
+		--saga-blue-dark: #800;
 		--saga-pink: #ff5286;
 		--saga-pink-dark: #d10e5c;
 		--saga-orange: #f57047;
@@ -47,8 +47,8 @@
 		--saga-light-dim: #4f5963;
 		--saga-light-line: rgba(36, 41, 46, 0.14);
 		--saga-light-line-strong: #ccccdc;
-		--saga-light-blue: #b52c22;
-		--saga-light-blue-2: #9f241b;
+		--saga-light-blue: #800;
+		--saga-light-blue-2: #800;
 		--saga-light-blue-dark: #7f1d15;
 		--saga-light-pink: #e0226e;
 		--saga-light-orange: #b5510d;
@@ -73,7 +73,7 @@
 		--accent-2: var(--saga-pink);
 		--accent-strong: var(--saga-blue-2);
 		--blue: var(--saga-blue-2);
-		--red: var(--saga-pink);
+		--red: var(--saga-blue);
 		--orange: var(--saga-orange);
 		--amber: var(--saga-yellow);
 		--green: var(--saga-green);
@@ -104,7 +104,7 @@
 		--accent-2: var(--saga-light-pink);
 		--accent-strong: var(--saga-light-blue-2);
 		--blue: var(--saga-light-blue-2);
-		--red: var(--saga-light-pink);
+		--red: var(--saga-light-blue);
 		--orange: var(--saga-light-orange);
 		--amber: var(--saga-light-yellow);
 		--green: var(--saga-light-green);
@@ -645,7 +645,7 @@
 
 	.project-page :where(button:hover, button:focus-visible),
 	.button:is(:hover, :focus-visible) {
-		border-color: rgba(255, 138, 125, 0.64);
+		border-color: color-mix(in srgb, var(--accent) 72%, white);
 		background: color-mix(in srgb, var(--accent) 16%, var(--surface-raised));
 		color: var(--saga-ink-strong);
 	}

@@ -17,6 +17,7 @@
 			})();
 		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
+		<link rel="stylesheet" href="/styles/project-tooltip-unified.css" />
 	</head>
 	<body>
 		<header class="site-header">
@@ -96,16 +97,17 @@
 				<section class="project-dashboard" aria-label="Interactieve grafiek">
 					<section class="project-panel project-chart">
 						<div class="project-toolbar">
-							<div class="view-switch project-segmented" role="group" aria-label="Grafiekweergave">
-								<button class="is-active" type="button" data-view="population">Bevolking</button>
-								<button type="button" data-view="composition">Samenstelling</button>
-								<button type="button" data-view="growth">Groei</button>
-								<button type="button" data-view="age">Leeftijd</button>
-								<button type="button" data-view="origin">Herkomst</button>
-								<button type="button" data-view="emigration">Emigratie</button>
-								<button type="button" data-view="motives">Motieven</button>
-								<button type="button" data-view="housing">Wonen</button>
-								<button type="button" data-view="grid">Stroomnet</button>
+							<div class="view-switch project-segmented" role="tablist" aria-label="Grafiekweergave">
+								<button class="is-active" type="button" role="tab" aria-selected="true" data-view="population">Bevolking</button>
+								<button type="button" role="tab" aria-selected="false" data-view="composition">Samenstelling</button>
+								<button type="button" role="tab" aria-selected="false" data-view="growth">Groei</button>
+								<button type="button" role="tab" aria-selected="false" data-view="age">Leeftijd</button>
+								<button type="button" role="tab" aria-selected="false" data-view="origin">Herkomst</button>
+								<button type="button" role="tab" aria-selected="false" data-view="emigration">Emigratie</button>
+								<button type="button" role="tab" aria-selected="false" data-view="motives">Motieven</button>
+								<button type="button" role="tab" aria-selected="false" data-view="housing">Wonen</button>
+								<button type="button" role="tab" aria-selected="false" data-view="grid">Stroomnet</button>
+								<button type="button" role="tab" aria-selected="false" data-view="native-migration-share">Migratie-% inheems</button>
 							</div>
 							<div class="year-control project-control">
 								<div id="definitionControl" class="definition-control" hidden>
@@ -131,6 +133,9 @@
 									<span id="maxYearLabel">2025</span>
 								</div>
 								<div class="chart-actions">
+									<button id="toggleMeans" class="zoom-reset analysis-toggle" type="button" aria-pressed="true" hidden>Gemiddelden aan</button>
+									<button id="toggleTrends" class="zoom-reset analysis-toggle" type="button" aria-pressed="true" hidden>Trendlijnen aan</button>
+									<button id="togglePopulationComparison" class="zoom-reset analysis-toggle" type="button" aria-pressed="false" hidden>Toon vergelijking totale bevolking</button>
 									<button id="resetZoom" class="zoom-reset" type="button" disabled>Volledig bereik</button>
 									<button id="exportCsv" class="zoom-reset" type="button">Exporteer tabel</button>
 								</div>
@@ -265,7 +270,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated" datetime="2026-06-22">2026-06-22</time></sub>
+					<sub>Last updated: <time id="updated" datetime="2026-06-23">2026-06-23</time></sub>
 				</p>
 			</div>
 			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>
@@ -284,6 +289,7 @@
 			</script>
 		</footer>
 		<script src="/theme-toggle.js"></script>
+		<script src="/project-tooltip.js"></script>
 		<script src="/search.js"></script>
 	</body>
 </html>

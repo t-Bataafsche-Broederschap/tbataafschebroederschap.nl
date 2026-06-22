@@ -8,8 +8,10 @@ Use this script to update data/
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#     "babel",
 #     "beautifulsoup4",
 #     "niquests",
+#     "pycountry",
 # ]
 # ///
 
@@ -20,6 +22,8 @@ import time
 from pathlib import Path
 
 import niquests as requests
+import pycountry
+from babel import Locale
 from bs4 import BeautifulSoup, Tag
 
 BASE_URL = "https://www.worldometers.info"
@@ -57,6 +61,49 @@ CONTINENT_SLUGS = {
     "oceania-population": "Oceania",
 }
 
+DUTCH_LOCALE = Locale.parse("nl")
+COUNTRY_CODE_OVERRIDES = {
+	"bolivia": "BO",
+	"brunei": "BN",
+	"brunei-darussalam": "BN",
+	"cabo-verde": "CV",
+	"caribbean-netherlands": "BQ",
+	"congo": "CG",
+	"cote-d-ivoire": "CI",
+	"czechia": "CZ",
+	"democratic-republic-of-the-congo": "CD",
+	"faeroe-islands": "FO",
+	"falkland-islands-malvinas": "FK",
+	"holy-see": "VA",
+    "iran": "IR",
+    "laos": "LA",
+    "micronesia": "FM",
+    "moldova": "MD",
+	"north-korea": "KP",
+	"palestine": "PS",
+    "russia": "RU",
+	"south-korea": "KR",
+	"saint-barthelemy": "BL",
+	"saint-helena": "SH",
+	"saint-kitts-and-nevis": "KN",
+	"saint-martin": "MF",
+	"saint-pierre-and-miquelon": "PM",
+	"saint-vincent-and-the-grenadines": "VC",
+	"sao-tome-and-principe": "ST",
+	"sint-maarten": "SX",
+	"state-of-palestine": "PS",
+    "syria": "SY",
+    "taiwan": "TW",
+    "tanzania": "TZ",
+	"turkey": "TR",
+	"turks-and-caicos-islands": "TC",
+	"united-states": "US",
+	"united-states-virgin-islands": "VI",
+    "venezuela": "VE",
+	"vietnam": "VN",
+	"wallis-and-futuna-islands": "WF",
+}
+
 
 def normalize_text(text: str) -> str:
     return " ".join(text.replace("\xa0", " ").replace("−", "-").split())
@@ -70,11 +117,37 @@ def normalize_header(header: str) -> str:
     return header
 
 
+def translate_country_name(country_name: str, country_slug: str) -> str:
+    country_code = COUNTRY_CODE_OVERRIDES.get(country_slug)
+    if country_code is None:
+        try:
+            country_code = pycountry.countries.lookup(country_name).alpha_2
+        except LookupError as error:
+            raise ValueError(
+                f"no ISO country found for {country_name!r} ({country_slug})"
+            ) from error
+
+    translated_name = DUTCH_LOCALE.territories.get(country_code)
+    if not translated_name:
+        raise ValueError(
+            f"no Dutch country name found for {country_name!r} ({country_code})"
+        )
+    return str(translated_name)
+
+
 def fetch_html(session: requests.Session, url: str) -> BeautifulSoup:
-    response = session.get(url, timeout=30)
-    response.raise_for_status()
-    response.encoding = "utf-8"
-    return BeautifulSoup(response.text, "html.parser")
+    for attempt in range(5):
+        try:
+            response = session.get(url, timeout=30)
+            response.raise_for_status()
+            response.encoding = "utf-8"
+            return BeautifulSoup(response.text, "html.parser")
+        except requests.RequestException:
+            if attempt == 4:
+                raise
+            time.sleep(2**attempt)
+
+    raise RuntimeError(f"failed to fetch {url}")
 
 
 def parse_integer(value: str) -> int:
@@ -246,7 +319,7 @@ def main() -> None:
         )
         series.append(
             {
-                "name": country_name,
+                "name": translate_country_name(country_name, country_slug),
                 "slug": country_slug,
                 "continent": continent,
                 "population_2026": population_2026,

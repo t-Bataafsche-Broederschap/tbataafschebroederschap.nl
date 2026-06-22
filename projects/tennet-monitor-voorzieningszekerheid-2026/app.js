@@ -148,19 +148,19 @@ function emptyChart(svg, message, preferredHeight = 320) {
 }
 
 function moveTooltip(event) {
-	const parent = document.querySelector(".tennet-security-page").getBoundingClientRect();
-	tooltip.style.left = `${event.clientX - parent.left + 14}px`;
-	tooltip.style.top = `${event.clientY - parent.top + 14}px`;
+	window.positionProjectTooltip(event, tooltip);
 }
 
 function showTooltip(event, html) {
 	tooltip.hidden = false;
+	tooltip.setAttribute("aria-hidden", "false");
 	tooltip.innerHTML = html;
 	moveTooltip(event);
 }
 
 function hideTooltip() {
 	tooltip.hidden = true;
+	tooltip.setAttribute("aria-hidden", "true");
 }
 
 function drawAxis(root, x, y, innerWidth, innerHeight, { xTicks = 5, yTicks = 5, yFormat = (value) => value } = {}) {

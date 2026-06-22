@@ -1,0 +1,111 @@
+.project-page :where(.project-tooltip, .country-tooltip) {
+	position: absolute;
+	z-index: 20;
+	display: grid;
+	gap: 0.35rem;
+	min-width: min(14.375rem, calc(100vw - 2rem));
+	max-width: min(17.5rem, calc(100vw - 2rem));
+	border: 1px solid rgba(244, 247, 248, 0.24);
+	border-radius: 4px;
+	padding: 0.65rem 0.75rem;
+	background: rgba(17, 23, 28, 0.97);
+	box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+	color: var(--saga-ink);
+	font-size: 13px;
+	line-height: 1.4;
+	pointer-events: none;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip)[hidden] {
+	display: none;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip) > strong:first-child,
+.project-page :where(.project-tooltip, .country-tooltip) :where(.country-tooltip-title, .tooltip-title) > strong:first-child {
+	display: block;
+	margin-bottom: 0.3rem;
+	color: var(--saga-ink-strong);
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip) :where(.country-tooltip-title, .tooltip-title) {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.75rem;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip) dl {
+	display: grid;
+	gap: 0.375rem;
+	margin: 0.45rem 0 0;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip) dl > div {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.125rem;
+	align-items: baseline;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip) dt {
+	color: var(--muted);
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.project-page :where(.project-tooltip, .country-tooltip) dd {
+	margin: 0;
+	font-weight: 700;
+	text-align: right;
+}
+
+:root[data-theme="light"] .project-page :where(.project-tooltip, .country-tooltip) {
+	border-color: rgba(36, 41, 46, 0.2);
+	background: rgba(255, 255, 255, 0.98);
+	color: var(--ink);
+}
+
+/* This chart has multi-series rows with badges and needs a wider, stacked header. */
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip {
+	min-width: min(250px, calc(100vw - 2rem));
+	max-width: min(320px, calc(100vw - 2rem));
+}
+
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip .tooltip-title {
+	display: grid;
+	gap: 3px;
+	margin-bottom: 8px;
+}
+
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip .tooltip-title > strong:first-child {
+	margin: 0;
+	font-size: 18px;
+}
+
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip .tooltip-title > small {
+	font-size: 10.5px;
+	font-weight: 650;
+	letter-spacing: 0.02em;
+	line-height: 1.35;
+	text-transform: none;
+}
+
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip dl {
+	gap: 7px;
+	margin: 0;
+}
+
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip dl > div {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 18px;
+	align-items: start;
+}
+
+.project-page--de-autochtoonse-nederlandse-bevolking .project-tooltip dl > div > strong {
+	text-align: right;
+	white-space: nowrap;
+}

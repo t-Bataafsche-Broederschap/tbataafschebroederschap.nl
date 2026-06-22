@@ -1,4 +1,4 @@
-import { decimal, homes, homesPer1000, mw, people, percent, personsPerHome, requests, signedPeople } from "./formatters.js";
+import { decimal, homes, homesPer1000, mw, people, percent, precisePercent, personsPerHome, requests, signedPeople } from "./formatters.js";
 
 export const views = {
 	population: {
@@ -63,6 +63,29 @@ export const views = {
 			{ key: "firstGenerationMigrationBackgroundPctPopulation", label: "Eerste generatie (%)", format: percent },
 			{ key: "secondGenerationMigrationBackground", label: "Tweede generatie", format: people },
 			{ key: "secondGenerationMigrationBackgroundPctPopulation", label: "Tweede generatie (%)", format: percent },
+		],
+	},
+	"native-migration-share": {
+		kicker: "Nettomigratie naar bevolkingsbasis",
+		title: "Nettomigratie als aandeel van de inheemse proxy",
+		leftLabel: "% per jaar",
+		rightLabel: "",
+		series: [
+			{ key: "netMigrationPctNativeProxyRollingMean", lowerKey: "netMigrationPctNativeProxyBandLower", upperKey: "netMigrationPctNativeProxyBandUpper", label: "10-jaars band (±2 standaarddeviaties)", color: "#d1495b", axis: "left", kind: "band", opacity: 0.16, tooltip: false },
+			{ key: "netMigrationPctNativeProxyMeanBefore1960", label: "Gemiddelde 1900–1959", color: "#38bdf8", axis: "left", kind: "line", width: 2.4, dash: "7 5", points: false, tooltip: false, overlay: "means" },
+			{ key: "netMigrationPctNativeProxyTrendBefore1960", label: "Trend 1900–1959", color: "#38bdf8", axis: "left", kind: "line", width: 2.2, dash: "1 5", lineCap: "round", points: false, tooltip: false, overlay: "trends" },
+			{ key: "netMigrationPctNativeProxyMeanSince1960", label: "Gemiddelde 1960–2024", color: "#f6c945", axis: "left", kind: "line", width: 2.4, dash: "7 5", points: false, tooltip: false, overlay: "means" },
+			{ key: "netMigrationPctNativeProxyTrendSince1960", label: "Trend 1960–2024", color: "#f6c945", axis: "left", kind: "line", width: 2.2, dash: "1 5", lineCap: "round", points: false, tooltip: false, overlay: "trends" },
+			{ key: "netMigrationPctNativeBackgroundProxy", label: "Jaarlijkse nettomigratie (% inheemse proxy)", color: "#d1495b", axis: "left", kind: "line", width: 1.8, opacity: 0.72 },
+			{ key: "netMigrationPctNativeProxyRollingMean", label: "10-jaars gemiddelde", color: "#ff8a7d", axis: "left", kind: "line", width: 3, points: false },
+			{ key: "netMigrationPctPopulation", label: "Nettomigratie (% totale bevolking)", color: "#8167a9", axis: "left", kind: "line", width: 2.2, dash: "7 5", comparison: "population" },
+		],
+		stats: [
+			{ key: "netMigrationPctNativeBackgroundProxy", label: "Nettomigratie (% inheemse proxy)", format: precisePercent },
+			{ key: "netMigrationPctPopulation", label: "Nettomigratie (% totale bevolking)", format: precisePercent },
+			{ key: "netMigration", label: "Nettomigratie", format: signedPeople },
+			{ key: "nativeBackgroundProxyExtended", label: "Inheemse proxy / terugschatting", format: people },
+			{ key: "population", label: "Totale bevolking", format: people },
 		],
 	},
 	growth: {

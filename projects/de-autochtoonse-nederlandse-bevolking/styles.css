@@ -53,7 +53,45 @@
 	.project-page--de-autochtoonse-nederlandse-bevolking .view-switch {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-		gap: 8px;
+		grid-auto-flow: row;
+		gap: 0;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		overflow: visible;
+	}
+
+	.project-page--de-autochtoonse-nederlandse-bevolking .view-switch > button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 42px;
+		border: 0;
+		border-top: 1px solid var(--line);
+		border-bottom: 3px solid transparent;
+		border-radius: 0;
+		background: transparent;
+		color: var(--muted);
+		line-height: 1.15;
+		text-align: center;
+		white-space: normal;
+	}
+
+	.project-page--de-autochtoonse-nederlandse-bevolking .view-switch > button:is(:hover, :focus-visible) {
+		background: color-mix(in srgb, var(--accent) 10%, transparent);
+		color: var(--ink);
+	}
+
+	.project-page--de-autochtoonse-nederlandse-bevolking .view-switch > button.is-active {
+		border-color: #d33;
+		background: transparent;
+		color: #d33;
+		font-weight: 800;
+	}
+
+	:root[data-theme="light"] .project-page--de-autochtoonse-nederlandse-bevolking .view-switch > button.is-active {
+		border-color: #800;
+		color: #800;
 	}
 
 	.project-page--de-autochtoonse-nederlandse-bevolking button,
@@ -65,11 +103,17 @@
 		min-height: 42px;
 	}
 
-	.project-page--de-autochtoonse-nederlandse-bevolking button.is-active {
-		border-color: rgba(35, 87, 137, 0.65);
-		background: #dcebf5;
-		color: var(--muted);
+	.project-page--de-autochtoonse-nederlandse-bevolking .definition-options button.is-active {
+		border-color: #d33;
+		background: linear-gradient(180deg, #d33, #800);
+		color: #fff;
 		font-weight: 800;
+	}
+
+	:root[data-theme="light"] .project-page--de-autochtoonse-nederlandse-bevolking .definition-options button.is-active {
+		border-color: #800;
+		background: #800;
+		color: #fff;
 	}
 
 	.project-page--de-autochtoonse-nederlandse-bevolking .definition-control {
@@ -92,6 +136,12 @@
 		font-size: 12px;
 		font-weight: 780;
 		line-height: 1.1;
+	}
+
+	.project-page--de-autochtoonse-nederlandse-bevolking .analysis-toggle[aria-pressed="true"] {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 18%, var(--surface-raised));
+		color: var(--ink);
 	}
 
 	.project-page--de-autochtoonse-nederlandse-bevolking .year-control-head,
@@ -354,6 +404,16 @@
 		pointer-events: none;
 	}
 
+	.project-page--de-autochtoonse-nederlandse-bevolking .zero-reference-line {
+		stroke: rgba(244, 239, 230, 0.68);
+		stroke-width: 1.8;
+		pointer-events: none;
+	}
+
+	:root[data-theme="light"] .project-page--de-autochtoonse-nederlandse-bevolking .zero-reference-line {
+		stroke: rgba(36, 41, 46, 0.58);
+	}
+
 	.project-page--de-autochtoonse-nederlandse-bevolking .definition-marker-label {
 		fill: var(--muted);
 		font-size: 11px;
@@ -362,6 +422,12 @@
 		stroke: rgba(255, 253, 250, 0.9);
 		stroke-width: 4px;
 		text-transform: uppercase;
+	}
+
+	:root:not([data-theme="light"]) .project-page--de-autochtoonse-nederlandse-bevolking :where(.selected-year-label, .definition-marker-label) {
+		fill: #c8cdd3;
+		stroke: rgba(3, 3, 8, 0.94);
+		stroke-width: 3px;
 	}
 
 	.project-page--de-autochtoonse-nederlandse-bevolking .hover-capture {

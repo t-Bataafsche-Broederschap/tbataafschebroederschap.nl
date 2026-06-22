@@ -2,7 +2,6 @@
 
 @layer project {
 	.project-page--culturele-afstandskaart {
-		--accent-strong: #b73d30;
 		--project-width: 1540px;
 	}
 
@@ -133,11 +132,23 @@
 		background: var(--surface-quiet);
 	}
 
-	.project-page--culturele-afstandskaart button.is-active,
+	.project-page--culturele-afstandskaart button.is-active {
+		border-color: #d33;
+		background: linear-gradient(180deg, #d33, #800);
+		color: #fff;
+		font-weight: 800;
+	}
+
+	:root[data-theme="light"] .project-page--culturele-afstandskaart button.is-active {
+		border-color: #800;
+		background: #800;
+		color: #fff;
+	}
+
 	.project-page--culturele-afstandskaart .distance-ranking button[aria-current="true"] {
 		border-color: var(--accent);
-		background: #dceeed;
-		color: var(--accent-strong);
+		background: color-mix(in srgb, var(--accent) 16%, var(--surface-quiet));
+		color: var(--ink);
 		font-weight: 800;
 	}
 

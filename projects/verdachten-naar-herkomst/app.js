@@ -162,13 +162,12 @@ function renderCurrentSummary() {
 }
 
 function moveTooltip(event) {
-	const rect = tooltip.parentElement.getBoundingClientRect();
-	tooltip.style.left = `${event.clientX - rect.left + 14}px`;
-	tooltip.style.top = `${event.clientY - rect.top + 14}px`;
+	window.positionProjectTooltip(event, tooltip);
 }
 
 function showTooltip(event, point) {
 	tooltip.hidden = false;
+	tooltip.setAttribute("aria-hidden", "false");
 	tooltip.innerHTML = `
 		<strong>${point.label}</strong>
 		<span>Totaal verdachten: ${formatNumber(point.totalSuspects)}</span>
@@ -188,6 +187,7 @@ function showTooltip(event, point) {
 
 function hideTooltip() {
 	tooltip.hidden = true;
+	tooltip.setAttribute("aria-hidden", "true");
 }
 
 function renderChart() {

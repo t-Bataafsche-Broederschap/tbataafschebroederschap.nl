@@ -124,6 +124,27 @@
 		gap: 0.45rem;
 		align-self: end;
 		min-width: 0;
+		margin: 0;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		padding: 0.7rem;
+		background: color-mix(in srgb, var(--accent) 5%, var(--surface-quiet));
+	}
+
+	.project-page--demografische-veiligheid .preset-controls legend {
+		padding: 0 0.35rem;
+		color: var(--ink);
+		font-size: 0.82rem;
+		font-weight: 800;
+		letter-spacing: 0.04em;
+	}
+
+	.project-page--demografische-veiligheid .preset-controls p {
+		grid-column: 1 / -1;
+		margin: 0 0 0.2rem;
+		color: var(--muted);
+		font-size: 0.78rem;
+		line-height: 1.35;
 	}
 
 	.project-page--demografische-veiligheid .preset-controls button {

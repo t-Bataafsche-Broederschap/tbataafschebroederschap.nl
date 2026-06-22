@@ -330,17 +330,7 @@ function tooltipHtml(row) {
 }
 
 function positionTooltip(event) {
-	const pane = canvas.closest(".project-canvas-stage").getBoundingClientRect();
-	const tooltipRect = countryTooltip.getBoundingClientRect();
-	const offset = 16;
-	let left = event.clientX - pane.left + offset;
-	let top = event.clientY - pane.top + offset;
-
-	if (left + tooltipRect.width > pane.width - 12) left = event.clientX - pane.left - tooltipRect.width - offset;
-	if (top + tooltipRect.height > pane.height - 12) top = event.clientY - pane.top - tooltipRect.height - offset;
-
-	countryTooltip.style.left = `${Math.max(12, left)}px`;
-	countryTooltip.style.top = `${Math.max(12, top)}px`;
+	window.positionProjectTooltip(event, countryTooltip, canvas.closest(".project-canvas-stage"));
 }
 
 function handleHover(event) {

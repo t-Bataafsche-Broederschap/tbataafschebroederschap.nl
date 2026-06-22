@@ -17,18 +17,20 @@ const tooltipNode = document.getElementById("world-population-tooltip");
 const neighborRange = document.getElementById("world-population-neighbor-range");
 const neighborCountNode = document.getElementById("world-population-neighbor-count");
 
-const palette = ["#c43b2f", "#f4efe6", "#c9a36a", "#7da7c9", "#8fbf8d", "#d46a54", "#a98552", "#b6b6b6"];
+// High-chroma hues remain distinguishable on both the dark and light project themes.
+const palette = ["#d33", "#38bdf8", "#f6c945", "#2dd4a7", "#d982d0", "#ff963f", "#a78bfa", "#72d5e5"];
 const chartColors = {
 	gridMajor: "rgba(244, 239, 230, 0.12)",
 	gridMinor: "rgba(201, 163, 106, 0.13)",
 	axisText: "#c7b9a3",
 	axisLine: "rgba(201, 163, 106, 0.38)",
-	red: "#c43b2f",
-	backgroundLine: "#6c5a4b",
-	neighborLine: "#a8a8a8",
+	red: "#d33",
+	backgroundLine: "#887d73",
+	neighborLine: "#b8afa7",
 	labelLine: "rgba(201, 163, 106, 0.38)",
-	labelText: "#9a8870",
+	labelText: "#c8beb4",
 	pointStroke: "#080808",
+	noMigrationLine: "#f4efe6",
 	noMigrationFill: "#080808",
 };
 const currentYear = new Date().getFullYear();
@@ -448,33 +450,33 @@ function syncUrl() {
 
 	const params = new URLSearchParams();
 	if (state.selectedCountrySlug) {
-		params.set("country", state.selectedCountrySlug);
+		params.set("land", state.selectedCountrySlug);
 	}
 	if (state.selectionWindows.size > 0) {
 		params.set(
-			"selections",
+			"selecties",
 			Array.from(state.selectionWindows.entries())
 				.map(([slug, neighbors]) => `${slug}:${neighbors}`)
 				.join(",")
 		);
 	}
 	if (state.neighborCount !== 0) {
-		params.set("neighbors", String(state.neighborCount));
+		params.set("buren", String(state.neighborCount));
 	}
 	if (state.scaleMode !== "log") {
-		params.set("scale", state.scaleMode);
+		params.set("schaal", state.scaleMode);
 	}
 	if (state.metricMode !== "population") {
-		params.set("metric", state.metricMode);
+		params.set("maatstaf", state.metricMode);
 	}
 	if (!state.showBackgroundCountries) {
-		params.set("background", "hidden");
+		params.set("achtergrond", "hidden");
 	}
 	if (state.showNoMigrationComparison && state.metricMode === "population") {
-		params.set("migration", "compare");
+		params.set("migratie", "compare");
 	}
 	if (state.continentHighlights.size > 0) {
-		params.set("continents", Array.from(state.continentHighlights).join(","));
+		params.set("werelddelen", Array.from(state.continentHighlights).join(","));
 	}
 
 	const query = params.toString();
@@ -484,35 +486,35 @@ function syncUrl() {
 
 function applyUrlState() {
 	const params = new URLSearchParams(window.location.search);
+	const getParam = (dutchName, legacyName) => params.get(dutchName) ?? params.get(legacyName);
 
-	const neighborValue = Number(params.get("neighbors"));
+	const neighborValue = Number(getParam("buren", "neighbors"));
 	if (Number.isFinite(neighborValue)) {
 		state.neighborCount = Math.min(25, Math.max(0, neighborValue));
 		neighborRange.value = String(state.neighborCount);
 	}
 
-	const scale = params.get("scale");
+	const scale = getParam("schaal", "scale");
 	if (scale === "linear" || scale === "log") {
 		state.scaleMode = scale;
 	}
 
-	const metric = params.get("metric");
+	const metric = getParam("maatstaf", "metric");
 	if (metric === "population" || metric === "net-migration-share") {
 		state.metricMode = metric;
 	}
 
-	const background = params.get("background");
+	const background = getParam("achtergrond", "background");
 	if (background === "hidden") {
 		state.showBackgroundCountries = false;
 	}
 
-	const migration = params.get("migration");
+	const migration = getParam("migratie", "migration");
 	if (migration === "compare") {
 		state.showNoMigrationComparison = true;
 	}
 
-	const continents = params
-		.get("continents")
+	const continents = getParam("werelddelen", "continents")
 		?.split(",")
 		.map((continent) => continent.trim())
 		.filter(Boolean);
@@ -522,8 +524,7 @@ function applyUrlState() {
 		}
 	}
 
-	const selections = params
-		.get("selections")
+	const selections = getParam("selecties", "selections")
 		?.split(",")
 		.map((entry) => entry.trim())
 		.filter(Boolean);
@@ -540,7 +541,7 @@ function applyUrlState() {
 		recomputeHighlights();
 	}
 
-	const countrySlug = params.get("country");
+	const countrySlug = getParam("land", "country");
 	if (countrySlug) {
 		const country = findCountryBySlug(countrySlug);
 		if (country) {
@@ -610,6 +611,10 @@ function render() {
 	chartRoot.replaceChildren();
 
 	const isPopulationMetric = state.metricMode === "population";
+	const isLightTheme = document.documentElement.dataset.theme === "light";
+	const labelTextColor = isLightTheme ? "#4f5963" : chartColors.labelText;
+	const labelTextOutline = isLightTheme ? "#ffffff" : "#11100f";
+	const noMigrationColor = isLightTheme ? "#1f2328" : chartColors.noMigrationLine;
 	const metricLabel = isPopulationMetric ? "Bevolking" : "Nettomigratie als percentage van de bevolking";
 	const svg = d3.select(chartRoot).append("svg").attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", `${metricLabel} per land door de tijd`);
 
@@ -622,7 +627,7 @@ function render() {
 		state.showNoMigrationComparison && isPopulationMetric
 			? anchorCountries.map((country) => ({
 					country,
-					color: getAnchorColor(country.slug),
+					color: noMigrationColor,
 					points: buildNoMigrationPoints(country),
 				}))
 			: [];
@@ -755,8 +760,8 @@ function render() {
 		.join("path")
 		.attr("fill", "none")
 		.attr("stroke", chartColors.backgroundLine)
-		.attr("stroke-width", 1.1)
-		.attr("stroke-opacity", isPopulationMetric && state.scaleMode === "log" ? 0.22 : 0.1)
+		.attr("stroke-width", 1.35)
+		.attr("stroke-opacity", isPopulationMetric && state.scaleMode === "log" ? 0.12 : 0.06)
 		.attr("d", (country) => line(country.points));
 
 	svg
@@ -883,9 +888,9 @@ function render() {
 			.join("path")
 			.attr("fill", "none")
 			.attr("stroke", (comparison) => comparison.color)
-			.attr("stroke-width", 2.2)
-			.attr("stroke-opacity", 0.8)
-			.attr("stroke-dasharray", "8 5")
+			.attr("stroke-width", isLightTheme ? 3.4 : 2.8)
+			.attr("stroke-opacity", 1)
+			.attr("stroke-dasharray", "5 4")
 			.attr("stroke-linecap", "round")
 			.attr("stroke-linejoin", "round")
 			.attr("d", (comparison) => line(comparison.points));
@@ -908,7 +913,7 @@ function render() {
 			.attr("r", 3.6)
 			.attr("fill", chartColors.noMigrationFill)
 			.attr("stroke", ({ color }) => color)
-			.attr("stroke-width", 1.4)
+			.attr("stroke-width", isLightTheme ? 2.4 : 2)
 			.style("cursor", "crosshair")
 			.on("mouseenter", function (event, datum) {
 				d3.select(this).attr("r", 5.4);
@@ -972,9 +977,16 @@ function render() {
 		.text("Jaar");
 
 	const endLabelCountries = isPopulationMetric && state.showBackgroundCountries ? state.data.countries : highlightedCountries;
-	const endLabels = buildEndLabels(endLabelCountries, y, margin.top + 8, margin.top + plotHeight - 8, 11);
+	const labelLayerPriority = (label) => {
+		if (label.country.slug === state.selectedCountrySlug) return 2;
+		return state.selectionWindows.has(label.country.slug) ? 1 : 0;
+	};
+	const endLabels = buildEndLabels(endLabelCountries, y, margin.top + 8, margin.top + plotHeight - 8, 11)
+		.map((label) => (label.country.slug === state.selectedCountrySlug ? { ...label, y: label.targetY } : label))
+		.sort((a, b) => labelLayerPriority(a) - labelLayerPriority(b));
 	const labelAnchorX = x(years[1]);
 	const labelTextX = labelAnchorX + 10;
+	const activeEndLabel = endLabels.find((label) => label.country.slug === state.selectedCountrySlug);
 
 	svg
 		.append("g")
@@ -1006,14 +1018,22 @@ function render() {
 			if (state.selectionWindows.has(label.country.slug)) {
 				return getAnchorColor(label.country.slug);
 			}
-			return chartColors.labelText;
+			return labelTextColor;
+		})
+		.attr("paint-order", "stroke")
+		.attr("stroke", (label) => (state.selectionWindows.has(label.country.slug) ? labelTextOutline : "none"))
+		.attr("stroke-width", (label) => (state.selectionWindows.has(label.country.slug) ? 1.5 : 0))
+		.attr("stroke-linejoin", "round")
+		.attr("opacity", (label) => {
+			if (!activeEndLabel || state.selectionWindows.has(label.country.slug)) return 1;
+			return Math.abs(label.y - activeEndLabel.targetY) < 18 ? (isLightTheme ? 0.18 : 0.28) : 1;
 		})
 		.attr("font-size", (label) => (state.selectionWindows.has(label.country.slug) ? 12 : 9.5))
 		.attr("font-weight", (label) => {
 			if (label.country.slug === state.selectedCountrySlug) {
 				return 700;
 			}
-			return state.selectionWindows.has(label.country.slug) ? 600 : 400;
+			return state.selectionWindows.has(label.country.slug) ? 600 : 500;
 		})
 		.text((label) => label.country.name);
 
@@ -1023,20 +1043,34 @@ function render() {
 			continue;
 		}
 
-		const labelY = y(getMetricValue(finalPoint));
+		const targetLabelY = y(getMetricValue(finalPoint));
+		const overlapsActiveLabel = activeEndLabel && Math.abs(targetLabelY - activeEndLabel.targetY) < 16;
+		const labelY = overlapsActiveLabel ? (activeEndLabel.targetY + 16 <= margin.top + plotHeight - 8 ? activeEndLabel.targetY + 16 : activeEndLabel.targetY - 16) : targetLabelY;
 
 		svg
 			.append("line")
 			.attr("x1", labelAnchorX)
 			.attr("x2", labelTextX - 4)
-			.attr("y1", labelY)
+			.attr("y1", targetLabelY)
 			.attr("y2", labelY)
 			.attr("stroke", comparison.color)
-			.attr("stroke-opacity", 0.9)
-			.attr("stroke-width", 1)
-			.attr("stroke-dasharray", "4 3");
+			.attr("stroke-opacity", 1)
+			.attr("stroke-width", isLightTheme ? 1.8 : 1.4)
+			.attr("stroke-dasharray", "5 4");
 
-		svg.append("text").attr("x", labelTextX).attr("y", labelY).attr("dy", "0.32em").attr("fill", comparison.color).attr("font-size", 10.5).attr("font-weight", 600).text(`${comparison.country.name} zonder nettomigratie`);
+		svg
+			.append("text")
+			.attr("x", labelTextX)
+			.attr("y", labelY)
+			.attr("dy", "0.32em")
+			.attr("fill", comparison.color)
+			.attr("paint-order", "stroke")
+			.attr("stroke", labelTextOutline)
+			.attr("stroke-width", 1.5)
+			.attr("stroke-linejoin", "round")
+			.attr("font-size", 10.5)
+			.attr("font-weight", 600)
+			.text(`${comparison.country.name} zonder nettomigratie`);
 	}
 
 	setStatus(
@@ -1066,7 +1100,7 @@ async function main() {
 	applyUrlState();
 
 	if (!state.selectedCountrySlug && state.selectionWindows.size === 0) {
-		const defaultCountry = state.data.countries.find((country) => country.name === "Netherlands");
+		const defaultCountry = findCountryBySlug("netherlands");
 		if (defaultCountry) {
 			applySelectedCountry(defaultCountry);
 		}
@@ -1142,6 +1176,16 @@ noMigrationToggle?.addEventListener("input", () => {
 	state.showNoMigrationComparison = noMigrationToggle.checked;
 	hideTooltip();
 	render();
+});
+
+const themeObserver = new MutationObserver(() => {
+	if (!state.data) return;
+	hideTooltip();
+	render();
+});
+themeObserver.observe(document.documentElement, {
+	attributes: true,
+	attributeFilter: ["data-theme"],
 });
 
 main().catch((error) => {

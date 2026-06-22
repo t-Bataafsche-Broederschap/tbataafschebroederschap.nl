@@ -1,5 +1,6 @@
 export const formatNumber = new Intl.NumberFormat("nl-NL");
 export const formatOne = new Intl.NumberFormat("nl-NL", { maximumFractionDigits: 1 });
+export const formatTwo = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 export const formatSigned = new Intl.NumberFormat("nl-NL", {
 	signDisplay: "exceptZero",
 	maximumFractionDigits: 0,
@@ -19,6 +20,10 @@ export function homes(value) {
 
 export function percent(value) {
 	return Number.isFinite(value) ? `${formatOne.format(value)}%` : "-";
+}
+
+export function precisePercent(value) {
+	return Number.isFinite(value) ? `${formatTwo.format(value)}%` : "-";
 }
 
 export function decimal(value) {
@@ -49,6 +54,7 @@ export function formatMetric(key, value) {
 	if (!Number.isFinite(value)) return "-";
 	if (key.includes("Mw")) return mw(value);
 	if (key.includes("Requests")) return requests(value);
+	if (key === "netMigrationPctPopulation" || key === "netMigrationPctNativeBackgroundProxy") return precisePercent(value);
 	if (key === "housingShortagePct" || key.endsWith("PctPopulation")) return percent(value);
 	if (key === "personsPerHome") return personsPerHome(value);
 	if (key === "netHousingStockGrowthPer1000Residents") return homesPer1000(value);
@@ -64,6 +70,7 @@ export function formatMetric(key, value) {
 		key === "emigration" ||
 		key === "bornAbroadPopulation" ||
 		key === "nativeBackgroundProxy" ||
+		key === "nativeBackgroundProxyExtended" ||
 		key === "migrationBackgroundTotal" ||
 		key === "firstGenerationMigrationBackground" ||
 		key === "secondGenerationMigrationBackground" ||

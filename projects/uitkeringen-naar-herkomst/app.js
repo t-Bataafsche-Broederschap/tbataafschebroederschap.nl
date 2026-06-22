@@ -166,19 +166,19 @@ function rowShare(row) {
 }
 
 function moveTooltip(event) {
-	const rect = tooltip.parentElement.getBoundingClientRect();
-	tooltip.style.left = `${event.clientX - rect.left + 14}px`;
-	tooltip.style.top = `${event.clientY - rect.top + 14}px`;
+	window.positionProjectTooltip(event, tooltip);
 }
 
 function showTooltip(event, html) {
 	tooltip.hidden = false;
+	tooltip.setAttribute("aria-hidden", "false");
 	tooltip.innerHTML = html;
 	moveTooltip(event);
 }
 
 function hideTooltip() {
 	tooltip.hidden = true;
+	tooltip.setAttribute("aria-hidden", "true");
 }
 
 function renderSummary() {

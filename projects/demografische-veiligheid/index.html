@@ -14,6 +14,7 @@
 			})();
 		</script>
 		<link rel="stylesheet" href="/styles/site.css" />
+		<link rel="stylesheet" href="/styles/project-tooltip-unified.css" />
 	</head>
 	<body>
 		<header class="site-header">
@@ -89,14 +90,16 @@
 								<input id="zeroBaselineToggle" type="checkbox" checked />
 								<span>%-assen 0-100</span>
 							</label>
-							<div class="preset-controls" id="presetControls" aria-label="Interessante instellingen">
-								<button type="button" data-preset="ageRisk">Leeftijd: risico</button>
-								<button type="button" data-preset="originDiscrimination">Herkomst: discriminatie</button>
-								<button type="button" data-preset="urbanCohesion">Stad: cohesie</button>
-								<button type="button" data-preset="orientationStreet">Seksualiteit: straat</button>
-								<button type="button" data-preset="incomeSafety">Inkomen: buurt</button>
-								<button type="button" data-preset="genderOnline">Gender: online</button>
-							</div>
+							<fieldset class="preset-controls" id="presetControls" aria-describedby="presetHelp">
+								<legend>Voorbeeldprofielen</legend>
+								<p id="presetHelp">Stel doelgroep, assen en voorbeeldselectie in één keer in.</p>
+								<button type="button" data-preset="ageRisk">Risico naar leeftijd</button>
+								<button type="button" data-preset="originDiscrimination">Discriminatie naar herkomst</button>
+								<button type="button" data-preset="urbanCohesion">Cohesie naar stedelijkheid</button>
+								<button type="button" data-preset="orientationStreet">Straatveiligheid naar seksualiteit</button>
+								<button type="button" data-preset="incomeSafety">Buurtveiligheid naar inkomen</button>
+								<button type="button" data-preset="genderOnline">Online veiligheid naar gender</button>
+							</fieldset>
 						</div>
 						<div class="project-summary summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
 						<div class="project-panel__head">
@@ -154,7 +157,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated" datetime="2026-06-22">2026-06-22</time></sub>
+					<sub>Last updated: <time id="updated" datetime="2026-06-23">2026-06-23</time></sub>
 				</p>
 			</div>
 			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>
@@ -173,6 +176,7 @@
 			</script>
 		</footer>
 		<script src="/theme-toggle.js"></script>
+		<script src="/project-tooltip.js"></script>
 		<script src="/search.js"></script>
 	</body>
 </html>

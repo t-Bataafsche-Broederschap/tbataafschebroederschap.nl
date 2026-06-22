@@ -39,6 +39,29 @@
 				<h1>Categories</h1>
 			</article>
 		</main>
+		<footer class="site-footer">
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated" datetime="0001-01-01">0001-01-01</time></sub>
+				</p>
+			</div>
+			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>
+			<script>
+				const toggleLocalStyles = (event) => {
+					event.preventDefault();
+					if (!event.ctrlKey || !event.shiftKey || event.button !== 0) return;
+					const stylesheets = [...document.querySelectorAll('link[rel~="stylesheet"][data-page-stylesheet]')];
+					if (stylesheets.length === 0) return;
+					const disabled = stylesheets.some((stylesheet) => !stylesheet.disabled);
+					stylesheets.forEach((stylesheet) => {
+						stylesheet.disabled = disabled;
+					});
+					event.currentTarget.setAttribute("aria-pressed", String(disabled));
+				};
+			</script>
+		</footer>
 		<script src="/theme-toggle.js"></script>
 		<script src="/search.js"></script>
 	</body>

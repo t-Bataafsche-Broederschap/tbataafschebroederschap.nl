@@ -36,7 +36,7 @@
 		</header>
 		<main class="site-main section-projects">
 			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="styles.css" data-page-stylesheet />
 			<article class="project-page project-page--culturele-afstandskaart">
 				<header class="project-intro">
 					<div class="project-intro__body">
@@ -166,6 +166,29 @@
 				</ul>
 			</aside>
 		</main>
+		<footer class="site-footer">
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated" datetime="2026-06-22">2026-06-22</time></sub>
+				</p>
+			</div>
+			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>
+			<script>
+				const toggleLocalStyles = (event) => {
+					event.preventDefault();
+					if (!event.ctrlKey || !event.shiftKey || event.button !== 0) return;
+					const stylesheets = [...document.querySelectorAll('link[rel~="stylesheet"][data-page-stylesheet]')];
+					if (stylesheets.length === 0) return;
+					const disabled = stylesheets.some((stylesheet) => !stylesheet.disabled);
+					stylesheets.forEach((stylesheet) => {
+						stylesheet.disabled = disabled;
+					});
+					event.currentTarget.setAttribute("aria-pressed", String(disabled));
+				};
+			</script>
+		</footer>
 		<script src="/theme-toggle.js"></script>
 		<script src="/search.js"></script>
 	</body>

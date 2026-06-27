@@ -235,6 +235,16 @@
 		line-height: 1.08 !important;
 	}
 
+	.project-page .page-dates {
+		margin: 0 !important;
+		color: var(--muted);
+		font-size: 0.88rem;
+	}
+
+	.project-page .page-dates dt {
+		color: var(--accent-strong);
+	}
+
 	.project-page .project-panel__head h2,
 	.project-page .project-notes h2,
 	.project-page .project-sources h2 {

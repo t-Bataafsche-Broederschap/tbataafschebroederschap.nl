@@ -1,0 +1,419 @@
+@layer reset, tokens, base, components, project, utilities;
+
+@layer project {
+	.project-page--uitkeringen-naar-herkomst {
+		--project-width: 1540px;
+		--project-summary-columns: repeat(5, minmax(92px, 1fr));
+		--project-summary-gap: 8px;
+		--summary-card-bg: var(--surface-raised);
+		--summary-card-padding: 8px 10px;
+		--summary-value-size: 15px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-intro {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
+		gap: 24px;
+		align-items: end;
+		max-width: 1540px;
+		margin: 0 auto 22px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .eyebrow {
+		margin: 0;
+		color: var(--muted);
+		font-size: 12px;
+		font-weight: 780;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-dashboard {
+		display: grid;
+		grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
+		gap: 18px;
+		max-width: 1540px;
+		margin: 0 auto;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-chart {
+		grid-column: 1 / -1;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-toolbar {
+		grid-template-columns: repeat(5, minmax(130px, 1fr));
+	}
+
+	.project-page--uitkeringen-naar-herkomst .period-head {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		align-items: baseline;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .period-head strong {
+		overflow: hidden;
+		color: var(--ink);
+		font-size: 13px;
+		font-weight: 820;
+		letter-spacing: 0;
+		text-overflow: ellipsis;
+		text-transform: none;
+		white-space: nowrap;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .period-control input[type="range"] {
+		width: 100%;
+		min-height: 42px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-toolbar select {
+		width: 100%;
+		min-height: 42px;
+		padding: 0 10px;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-sidebar h2,
+	.project-page--uitkeringen-naar-herkomst .project-notes h2 {
+		margin: 4px 0 0;
+		color: var(--ink);
+		font: inherit;
+		font-size: 23px;
+		font-weight: 820;
+		letter-spacing: 0;
+		line-height: 1.12;
+		text-transform: none;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-summary {
+		min-width: min(660px, 100%);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .stat-list span,
+	.project-page--uitkeringen-naar-herkomst .ranking-list small {
+		display: block;
+		color: var(--muted);
+		font-size: 12px;
+		font-weight: 720;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-chart-wrap {
+		position: relative;
+		padding: 0 14px 14px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-chart-wrap.compact {
+		padding-top: 8px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst #trendChart,
+	.project-page--uitkeringen-naar-herkomst #scatterChart,
+	.project-page--uitkeringen-naar-herkomst #regionMap {
+		display: block;
+		width: 100%;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .axis path,
+	.project-page--uitkeringen-naar-herkomst .axis line {
+		stroke: var(--line-strong);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .axis text,
+	.project-page--uitkeringen-naar-herkomst .axis-label,
+	.project-page--uitkeringen-naar-herkomst .chart-legend text,
+	.project-page--uitkeringen-naar-herkomst .dot-label {
+		fill: var(--muted);
+		font-size: 12px;
+		font-weight: 680;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .grid line {
+		stroke: var(--line-strong);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .grid path {
+		display: none;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .series {
+		opacity: 0.8;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .series.is-selected {
+		opacity: 1;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .point,
+	.project-page--uitkeringen-naar-herkomst .scatter-dot {
+		cursor: pointer;
+		stroke: var(--line-strong);
+		stroke-width: 1.5;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .scatter-dot {
+		fill: var(--accent);
+		opacity: 0.76;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .scatter-dot.is-selected {
+		fill: var(--accent-2);
+		opacity: 1;
+		stroke: var(--line-strong);
+		stroke-width: 2;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-tooltip {
+		z-index: 4;
+		max-width: 290px;
+		border: 1px solid rgba(31, 37, 34, 0.18);
+		background: rgba(255, 253, 250, 0.97);
+		box-shadow: 0 16px 36px rgba(31, 41, 35, 0.18);
+		font-size: 13px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-tooltip strong {
+		font-size: 14px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-tooltip span,
+	.project-page--uitkeringen-naar-herkomst .project-tooltip small {
+		display: block;
+		color: var(--muted);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-sidebar {
+		display: grid;
+		align-content: start;
+		gap: 0;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-sidebar section {
+		padding: 18px;
+		border-bottom: 1px solid var(--line);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-sidebar section:last-child {
+		border-bottom: 0;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .stat-list {
+		display: grid;
+		gap: 8px;
+		margin-top: 14px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .stat-list div {
+		display: grid;
+		grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1fr);
+		gap: 12px;
+		align-items: baseline;
+		border-bottom: 1px solid #edf1ee;
+		padding-bottom: 7px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .stat-list strong {
+		overflow-wrap: anywhere;
+		font-size: 14px;
+		text-align: right;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .ranking-list {
+		display: grid;
+		gap: 8px;
+		margin-top: 14px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .ranking-list button,
+	.project-page--uitkeringen-naar-herkomst #exportCsv {
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		background: var(--surface-raised);
+		color: var(--ink);
+		font: inherit;
+		cursor: pointer;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .ranking-list button {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		text-align: left;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .ranking-list button:hover,
+	.project-page--uitkeringen-naar-herkomst .ranking-list button.is-active {
+		border-color: var(--accent);
+		background: var(--surface-quiet);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .ranking-list strong {
+		display: block;
+		margin-top: 3px;
+		font-size: 14px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst #exportCsv {
+		min-height: 38px;
+		padding: 0 14px;
+		font-weight: 760;
+	}
+
+	.project-page--uitkeringen-naar-herkomst #exportCsv:hover {
+		border-color: var(--accent);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .selection-label {
+		margin: 0;
+		color: var(--muted);
+		font-size: 13px;
+		white-space: nowrap;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .map-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+		gap: 14px;
+		padding: 0 14px 14px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-chart-wrap {
+		position: relative;
+		min-width: 0;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .municipality {
+		stroke: rgba(255, 253, 250, 0.86);
+		stroke-width: 0.55;
+		cursor: pointer;
+		transition:
+			fill 140ms ease,
+			stroke 140ms ease,
+			stroke-width 140ms ease;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .municipality:hover {
+		stroke: var(--line-strong);
+		stroke-width: 1.35;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .municipality.is-selected {
+		stroke: var(--select);
+		stroke-width: 2.4;
+		filter: drop-shadow(0 0 5px rgba(242, 165, 26, 0.6));
+	}
+
+	.project-page--uitkeringen-naar-herkomst .table-wrap {
+		max-height: 620px;
+		overflow: auto;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		background: var(--surface-raised);
+	}
+
+	.project-page--uitkeringen-naar-herkomst table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 13px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst th,
+	.project-page--uitkeringen-naar-herkomst td {
+		border-bottom: 1px solid #edf1ee;
+		padding: 9px 10px;
+		text-align: left;
+	}
+
+	.project-page--uitkeringen-naar-herkomst th {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		background: var(--surface-quiet);
+		color: var(--muted);
+		font-size: 12px;
+		font-weight: 800;
+	}
+
+	td:last-child,
+	th:last-child {
+		text-align: right;
+	}
+
+	.project-page--uitkeringen-naar-herkomst tr {
+		cursor: pointer;
+	}
+
+	tr:hover,
+	.project-page--uitkeringen-naar-herkomst tr.is-active {
+		background: var(--surface-quiet);
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-notes {
+		max-width: 1540px;
+		margin: 18px auto 0;
+		padding: 20px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-notes article {
+		max-width: 980px;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .project-notes p {
+		margin: 10px 0 0;
+		color: var(--muted);
+		font-size: 15px;
+		line-height: 1.58;
+	}
+
+	.project-page--uitkeringen-naar-herkomst .sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+	}
+
+	@media (width <= 1120px) {
+		.project-page--uitkeringen-naar-herkomst .project-dashboard,
+		.project-page--uitkeringen-naar-herkomst .project-intro,
+		.project-page--uitkeringen-naar-herkomst .map-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--uitkeringen-naar-herkomst .project-toolbar {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.project-page--uitkeringen-naar-herkomst .project-panel__head {
+			display: grid;
+		}
+
+		.project-page--uitkeringen-naar-herkomst .project-summary {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			min-width: 0;
+		}
+	}
+
+	@media (width <= 640px) {
+		.project-page--uitkeringen-naar-herkomst {
+			padding: 18px 10px 32px;
+		}
+
+		.project-page--uitkeringen-naar-herkomst .project-toolbar,
+		.project-page--uitkeringen-naar-herkomst .project-summary {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--uitkeringen-naar-herkomst .project-panel__head {
+			display: grid;
+			align-items: start;
+		}
+
+		.project-page--uitkeringen-naar-herkomst .selection-label {
+			white-space: normal;
+		}
+	}
+}

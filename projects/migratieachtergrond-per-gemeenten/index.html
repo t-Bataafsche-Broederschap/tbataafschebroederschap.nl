@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>Migratieachtergrond per Gemeente | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Na de verduidelijking van criminaliteiten van bepaalde bevolkingen maakte mij nieuwsgierig naar waarom ik er persoonlijk niet veel last van heb gehad. Blijkbaar leef ik in het kwart van de gemeenten met de laagste concentratie buiten-Europese migranten." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/migratieachtergrond-per-gemeenten/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const stored = localStorage.getItem("theme");
+				const theme = stored || "dark";
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
+		<link rel="stylesheet" href="/styles/site.css" />
+		<link rel="stylesheet" href="/styles/project-tooltip-unified.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="site-nav">
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/regels/">Regels</a>
+				<a href="/over/">Over</a>
+			</nav>
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<div class="site-tools">
+				<form class="site-search" role="search" autocomplete="off">
+					<label class="sr-only" for="siteSearch">Zoeken</label>
+					<input id="siteSearch" class="site-search__input" type="search" name="q" placeholder="Zoek" aria-expanded="false" aria-controls="siteSearchResults" />
+					<div id="siteSearchResults" class="site-search__results" role="listbox" hidden></div>
+				</form>
+				<button class="theme-toggle" type="button" aria-label="Wissel kleurmodus" aria-pressed="false">
+					<span class="theme-toggle__icon" aria-hidden="true"></span>
+				</button>
+			</div>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<link rel="stylesheet" href="styles.css" data-page-stylesheet />
+			<article class="project-page project-page--migratieachtergrond-gemeenten">
+				<header class="project-intro">
+					<div class="project-intro__body">
+						<h1>Migratieachtergrond per Gemeente</h1>
+						<dl class="page-dates" aria-label="Paginadatums">
+							<div>
+								<dt>Gepubliceerd</dt>
+								<dd><time datetime="2026-06-01T21:00:00&#43;02:00">2026-06-01</time></dd>
+							</div>
+							<div>
+								<dt>Bijgewerkt</dt>
+								<dd><time datetime="2026-06-27T20:17:33&#43;02:00">2026-06-27</time></dd>
+							</div>
+						</dl>
+						<p>Na de verduidelijking van criminaliteiten van bepaalde bevolkingen maakte mij nieuwsgierig naar waarom ik er persoonlijk niet veel last van heb gehad. Blijkbaar leef ik in het kwart van de gemeenten met de laagste concentratie buiten-Europese migranten.</p>
+					</div>
+					<hr />
+				</header>
+				<section class="project-glossary" aria-labelledby="glossary-title">
+					<h2 id="glossary-title">Begrippen</h2>
+					<dl>
+						<div>
+							<dt>Migratieachtergrond</dt>
+							<dd>Een CBS-indeling op basis van herkomstland en geboorteland van personen en, afhankelijk van de definitie, ouders.</dd>
+						</div>
+						<div>
+							<dt>Herkomstland</dt>
+							<dd>Het land dat CBS gebruikt om iemands herkomstcategorie te bepalen; dit is niet altijd hetzelfde als geboorteland.</dd>
+						</div>
+						<div>
+							<dt>Gemeentegrenzen 2025</dt>
+							<dd>De kaart gebruikt één vaste gemeentelijke indeling, zodat jaren visueel vergelijkbaar blijven.</dd>
+						</div>
+					</dl>
+				</section>
+				<section class="project-notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>Alle kaartlagen komen uit CBS StatLine 85458NED. De teller volgt de gekozen combinatie van herkomstland, geboorteland en leeftijd; de noemer is steeds de totale gemeentebevolking in dezelfde CBS-tabel en hetzelfde jaar.</p>
+						<p>De standaardlaag volgt de VZinfo-maat: personen geboren buiten Nederland met herkomstland buiten Europa.</p>
+						<p>De kaart gebruikt de gegeneraliseerde gemeentegrenzen van 2025 voor alle jaren 2022-2025. Gemeentelijke herindelingen binnen deze periode worden dus getoond op de 2025-indeling.</p>
+					</article>
+				</section>
+				<section class="project-dashboard">
+					<section class="project-panel" aria-labelledby="mapTitle">
+						<div class="project-toolbar">
+							<label class="year-picker project-control">
+								<span>Jaar <strong id="yearLabel">2025</strong></span>
+								<input id="yearSlider" type="range" min="2022" max="2025" value="2025" step="1" />
+								<div id="yearTicks" class="year-ticks" aria-hidden="true"></div>
+							</label>
+							<label class="metric-picker project-control">
+								<span>Maat</span>
+								<select id="metricSelect"></select>
+							</label>
+							<div class="project-summary summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
+						</div>
+						<div class="project-panel__head">
+							<div>
+								<p class="eyebrow">Gemeenten, grenzen 2025</p>
+								<h2 id="mapTitle">Buiten-Europese migranten geboren buiten Nederland</h2>
+							</div>
+							<p id="selectionLabel" class="selection-label">Geen gemeente geselecteerd</p>
+						</div>
+						<div class="project-chart-wrap">
+							<svg id="municipalityMap" role="img" aria-labelledby="mapTitle mapDescription"></svg>
+							<p id="mapDescription" class="sr-only">Choroplethkaart van Nederlandse gemeenten met het percentage inwoners voor de gekozen CBS-maat.</p>
+							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
+						</div>
+					</section>
+					<section class="project-panel" aria-labelledby="tableTitle">
+						<div class="project-panel__head">
+							<div>
+								<p class="eyebrow">Sorteerbare tabel</p>
+								<h2 id="tableTitle">Gemeenten</h2>
+							</div>
+							<p id="rowCount" class="row-count"></p>
+						</div>
+						<div class="table-wrap">
+							<table>
+								<thead>
+									<tr>
+										<th><button type="button" data-sort="name">Gemeente</button></th>
+										<th><button type="button" data-sort="percentage">Percentage</button></th>
+										<th><button type="button" data-sort="count">Aantal</button></th>
+										<th><button type="button" data-sort="totalPopulation">Bevolking</button></th>
+									</tr>
+								</thead>
+								<tbody id="tableBody"></tbody>
+							</table>
+						</div>
+					</section>
+				</section>
+			</article>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.vzinfo.nl/bevolking/regionaal/migratieachtergrond" rel="noopener noreferrer" target="_blank">VZinfo: Bevolking | Regionaal | Migratieachtergrond</a>
+						<span>Contextpagina waarop de maat is gebaseerd: percentage migranten met buiten-Europese herkomst per gemeente.</span>
+					</li>
+					<li>
+						<a href="https://opendata.cbs.nl/#/CBS/nl/dataset/85458NED/table" rel="noopener noreferrer" target="_blank">CBS StatLine: Bevolking; herkomstland, geboorteland, leeftijd, regio, 1 januari</a>
+						<span>CBS 85458NED levert de gemeentelijke teller en totale bevolking voor 2022-2025.</span>
+					</li>
+					<li>
+						<a href="https://service.pdok.nl/cbs/gebiedsindelingen/2025/wfs/v1_0" rel="noopener noreferrer" target="_blank">PDOK/CBS Gebiedsindelingen 2025 WFS</a>
+						<span>Gegeneraliseerde gemeentegrenzen 2025 voor de kaart.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+		<footer class="site-footer">
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated" datetime="2026-06-27">2026-06-27</time></sub>
+				</p>
+			</div>
+			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>
+			<script>
+				const toggleLocalStyles = (event) => {
+					event.preventDefault();
+					if (!event.ctrlKey || !event.shiftKey || event.button !== 0) return;
+					const stylesheets = [...document.querySelectorAll('link[rel~="stylesheet"][data-page-stylesheet]')];
+					if (stylesheets.length === 0) return;
+					const disabled = stylesheets.some((stylesheet) => !stylesheet.disabled);
+					stylesheets.forEach((stylesheet) => {
+						stylesheet.disabled = disabled;
+					});
+					event.currentTarget.setAttribute("aria-pressed", String(disabled));
+				};
+			</script>
+		</footer>
+		<script src="/theme-toggle.js"></script>
+		<script src="/project-tooltip.js"></script>
+		<script src="/search.js"></script>
+	</body>
+</html>

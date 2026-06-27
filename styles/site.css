@@ -401,6 +401,38 @@
 		color: var(--color-muted);
 	}
 
+	.page-dates {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem 1rem;
+		margin: -0.55rem 0 1.5rem;
+		padding: 0;
+		color: var(--color-muted);
+		font-size: 0.95rem;
+		line-height: 1.35;
+	}
+
+	.page-dates div {
+		display: flex;
+		gap: 0.35rem;
+		align-items: baseline;
+		min-width: 0;
+	}
+
+	.page-dates dt {
+		margin: 0;
+		color: var(--color-red-soft);
+		font-weight: 700;
+	}
+
+	.page-dates dd {
+		margin: 0;
+	}
+
+	.page-dates time {
+		font-variant-numeric: tabular-nums;
+	}
+
 	.content h2 {
 		margin: 2.5rem 0 0.8rem;
 		color: var(--color-text);

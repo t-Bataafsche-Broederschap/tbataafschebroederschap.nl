@@ -6,8 +6,15 @@
     <description>Recent content in Projecten on ’t Bataafsche Broederschap</description>
     <generator>Hugo</generator>
     <language>nl-NL</language>
-    <lastBuildDate>Sat, 27 Jun 2026 20:18:42 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 21:23:13 +0200</lastBuildDate>
     <atom:link href="https://tbataafschebroederschap.nl/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://tbataafschebroederschap.nl/projects/politiek-ouderschap/</link>
+      <pubDate>Sat, 27 Jun 2026 20:50:00 +0200</pubDate>
+      <guid>https://tbataafschebroederschap.nl/projects/politiek-ouderschap/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://tbataafschebroederschap.nl/styles/project-theme.css&#34; /&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;styles.css&#34; data-page-stylesheet /&gt;&#xA;&#xA;&lt;article class=&#34;project-page project-page--politiek-ouderschap&#34;&gt;&#xA;&#x9;&lt;header class=&#34;project-intro&#34;&gt;&#xA;&#x9;&#x9;&lt;div class=&#34;project-intro__body&#34;&gt;&#xA;&#x9;&#x9;&#x9;&lt;h1&gt;Politiek Ouderschap&lt;/h1&gt;&#xA;&#x9;&#x9;&#x9;&lt;p&gt;Hoeveel ouders zitten er eigenlijk in de 1e en 2e kamer?&lt;/p&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;hr /&gt;&#xA;&#x9;&lt;/header&gt;&#xA;&#xA;&#x9;&lt;section class=&#34;project-glossary&#34; aria-labelledby=&#34;glossary-title&#34;&gt;&#xA;&#x9;&#x9;&lt;h2 id=&#34;glossary-title&#34;&gt;Begrippen&lt;/h2&gt;&#xA;&#x9;&#x9;&lt;dl&gt;&#xA;&#x9;&#x9;&#x9;&lt;div&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;dt&gt;Ouder bekend&lt;/dt&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;dd&gt;De biografie bevat onder Familie/gezin een onderdeel kinderen met een expliciete vermelding, zoals een aantal kinderen, dochters of zonen.&lt;/dd&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;dt&gt;Onbekend&lt;/dt&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;dd&gt;De geraadpleegde biografie bevat geen expliciete kindervermelding. Dit is geen bewijs dat iemand geen ouder is.&lt;/dd&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&#x9;&lt;div&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;dt&gt;Kamerlid&lt;/dt&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;dd&gt;Een lid dat op de actuele Parlement.com-lijst voor de Eerste Kamer of Tweede Kamer staat op het moment dat de data is opgehaald.&lt;/dd&gt;&#xA;&#x9;&#x9;&#x9;&lt;/div&gt;&#xA;&#x9;&#x9;&lt;/dl&gt;&#xA;&#x9;&lt;/section&gt;&#xA;&#xA;&#x9;&lt;section class=&#34;project-notes&#34; aria-label=&#34;Datatoelichting&#34;&gt;&#xA;&#x9;&#x9;&lt;article&gt;&#xA;&#x9;&#x9;&#x9;&lt;h2&gt;Datatoelichting&lt;/h2&gt;&#xA;&#x9;&#x9;&#x9;&lt;p&gt;De ledenlijst komt uit de actuele Parlement.com-overzichten voor de Eerste Kamer en Tweede Kamer. Voor elk lid leest het script de openbare biografie en zoekt het uitsluitend in de sectie &lt;strong&gt;Familie/gezin&lt;/strong&gt; naar het onderdeel &lt;strong&gt;kinderen&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title></title>
       <link>https://tbataafschebroederschap.nl/projects/geboortecijfers-nederlandse-afkomst/</link>

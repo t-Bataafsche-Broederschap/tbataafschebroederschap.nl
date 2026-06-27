@@ -1,0 +1,298 @@
+.project-page--politiek-ouderschap {
+	--project-width: 1380px;
+}
+
+.project-page--politiek-ouderschap .project-dashboard {
+	display: grid;
+	gap: var(--saga-space-4);
+}
+
+.project-controls-panel,
+.project-breakdown,
+.project-party-breakdown,
+.project-table-panel {
+	display: grid;
+	gap: var(--saga-space-4);
+}
+
+.project-page--politiek-ouderschap .project-toolbar {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: var(--saga-space-3);
+	align-items: end;
+}
+
+.project-control--search {
+	min-width: min(100%, 18rem);
+}
+
+.summary-card small {
+	display: block;
+	color: var(--dim);
+	font-size: 0.78rem;
+	line-height: 1.35;
+}
+
+.breakdown-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--saga-space-3);
+}
+
+.breakdown-card {
+	display: grid;
+	gap: var(--saga-space-3);
+	padding: var(--saga-space-4);
+	border: 1px solid var(--line);
+	border-radius: var(--saga-radius);
+	background: var(--surface);
+}
+
+.breakdown-card h3 {
+	margin: 0;
+}
+
+.status-bar {
+	display: flex;
+	width: 100%;
+	height: 0.85rem;
+	overflow: hidden;
+	border-radius: 999px;
+	background: var(--surface-quiet);
+}
+
+.status-bar span {
+	display: block;
+	min-width: 0;
+}
+
+.status-bar__yes {
+	background: var(--green);
+}
+
+.status-bar__unknown {
+	background: var(--amber);
+}
+
+.status-bar__no {
+	background: var(--dim);
+}
+
+.breakdown-card dl {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--saga-space-2);
+	margin: 0;
+}
+
+.breakdown-card div {
+	display: grid;
+	gap: 0.15rem;
+}
+
+.breakdown-card dt {
+	color: var(--dim);
+	font-size: 0.78rem;
+}
+
+.breakdown-card dd {
+	margin: 0;
+	color: var(--ink);
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.table-wrap {
+	overflow-x: auto;
+	border: 1px solid var(--line);
+	border-radius: var(--saga-radius);
+	background: var(--surface);
+}
+
+#membersTable,
+#partyBreakdownTable {
+	width: 100%;
+	min-width: 860px;
+	border-collapse: collapse;
+}
+
+#membersTable th,
+#membersTable td,
+#partyBreakdownTable th,
+#partyBreakdownTable td {
+	padding: 0.78rem 0.9rem;
+	border-bottom: 1px solid var(--line);
+	text-align: left;
+	vertical-align: top;
+}
+
+#membersTable thead th,
+#partyBreakdownTable thead th {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: var(--surface-quiet);
+	color: var(--ink);
+	font-size: 0.82rem;
+	text-transform: uppercase;
+}
+
+#membersTable tbody th,
+#partyBreakdownTable tbody th {
+	min-width: 14rem;
+	font-weight: 700;
+}
+
+#membersTable tbody tr:last-child th,
+#membersTable tbody tr:last-child td,
+#partyBreakdownTable tbody tr:last-child th,
+#partyBreakdownTable tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+#partyBreakdownTable {
+	min-width: 720px;
+}
+
+.sort-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	max-width: 100%;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	text-align: left;
+	text-transform: inherit;
+	cursor: pointer;
+}
+
+.sort-button:hover,
+.sort-button[data-sort-direction] {
+	color: var(--green);
+}
+
+.sort-button:focus-visible {
+	outline: 2px solid var(--green);
+	outline-offset: 0.2rem;
+}
+
+.sort-button__indicator {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1ch;
+	color: var(--dim);
+	font-size: 0.9em;
+}
+
+.sort-button[data-sort-direction] .sort-button__indicator {
+	color: var(--green);
+}
+
+#partyBreakdownTable td:not(:last-child) {
+	font-variant-numeric: tabular-nums;
+}
+
+.metric {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.35rem;
+	min-height: 1.9rem;
+	padding: 0.18rem 0.5rem;
+	border: 1px solid var(--line);
+	border-radius: var(--saga-radius-sm);
+	font-weight: 800;
+	line-height: 1;
+	font-variant-numeric: tabular-nums;
+}
+
+.metric--total {
+	background: var(--surface-quiet);
+	color: var(--ink);
+}
+
+.metric--yes {
+	border-color: color-mix(in srgb, var(--green) 66%, var(--line));
+	background: color-mix(in srgb, var(--green) 18%, transparent);
+	color: var(--green);
+}
+
+.metric--unknown {
+	border-color: color-mix(in srgb, var(--amber) 66%, var(--line));
+	background: color-mix(in srgb, var(--amber) 16%, transparent);
+	color: var(--amber);
+}
+
+.metric--no {
+	border-color: color-mix(in srgb, var(--dim) 66%, var(--line));
+	background: color-mix(in srgb, var(--dim) 16%, transparent);
+	color: var(--dim);
+}
+
+.party-share-cell {
+	min-width: 9rem;
+}
+
+.party-share {
+	display: inline-block;
+	min-width: 3.2rem;
+	color: var(--green);
+	font-weight: 800;
+	font-variant-numeric: tabular-nums;
+}
+
+.party-share-bar {
+	display: inline-flex;
+	width: min(9rem, 100%);
+	height: 0.55rem;
+	overflow: hidden;
+	border-radius: 999px;
+	background: linear-gradient(90deg, var(--green) 0 var(--known-share), color-mix(in srgb, var(--amber) 48%, var(--surface-quiet)) var(--known-share) 100%);
+	box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line) 80%, transparent);
+	vertical-align: middle;
+}
+
+#membersTable tbody tr[data-status="yes"] {
+	background: color-mix(in srgb, var(--green) 8%, transparent);
+}
+
+.status-pill {
+	display: inline-flex;
+	align-items: center;
+	min-height: 1.55rem;
+	padding: 0.2rem 0.5rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	color: var(--ink);
+	font-size: 0.78rem;
+	font-weight: 700;
+	line-height: 1.15;
+	white-space: nowrap;
+}
+
+.status-pill--yes {
+	border-color: color-mix(in srgb, var(--green) 60%, var(--line));
+	background: color-mix(in srgb, var(--green) 16%, transparent);
+	color: var(--green);
+}
+
+.status-pill--unknown {
+	border-color: color-mix(in srgb, var(--amber) 60%, var(--line));
+	background: color-mix(in srgb, var(--amber) 14%, transparent);
+	color: var(--amber);
+}
+
+.status-pill--no {
+	color: var(--dim);
+}
+
+@media (max-width: 880px) {
+	.project-page--politiek-ouderschap .project-toolbar,
+	.breakdown-grid {
+		grid-template-columns: 1fr;
+	}
+}

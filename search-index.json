@@ -1,4 +1,10 @@
 [
+	{"title": "Politiek Ouderschap",
+		"url": "/projects/politiek-ouderschap/",
+		"section": "Projects",
+		"description": "Hoeveel ouders zitten er eigenlijk in de 1e en 2e kamer?",
+		"content": " Politiek Ouderschap Hoeveel ouders zitten er eigenlijk in de 1e en 2e kamer?\nBegrippen Ouder bekend De biografie bevat onder Familie/gezin een onderdeel kinderen met een expliciete vermelding, zoals een aantal kinderen, dochters of zonen. Onbekend De geraadpleegde biografie bevat geen expliciete kindervermelding. Dit is geen bewijs dat iemand geen ouder is. Kamerlid Een lid dat op de actuele Parlement.com-lijst voor de Eerste Kamer of Tweede Kamer staat op het moment dat de data is opgehaald. Datatoelichting De ledenlijst komt uit de actuele Parlement.com-overzichten voor de Eerste Kamer en Tweede Kamer. Voor elk lid leest het script de openbare biografie en zoekt het uitsluitend in de sectie Familie/gezin naar het onderdeel kinderen.\nDeze pagina maakt dus een conservatieve telling: wel ouder wanneer de bron het expliciet zegt, onbekend wanneer de bron zwijgt. Dat voorkomt dat privacy, onvolledige biografieën of achterhaalde externe profielen worden vertaald naar een harde conclusie.\nOpenbare biografieën\nWie staat als ouder vermeld? Kamer Status Fractie Zoek Verdeling\nPer Kamer Fracties\nOuderschap per partij Fractie Totaal Ouder bekend Expliciet geen kinderen Onbekend Ouder bekend % Ledenlijst\nAlle Kamerleden Naam Kamer Fractie Status Vermelding "
+	},
 	{"title": "Geboortecijfers Nederlandse Afkomst",
 		"url": "/projects/geboortecijfers-nederlandse-afkomst/",
 		"section": "Projects",

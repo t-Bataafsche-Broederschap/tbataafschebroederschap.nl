@@ -168,6 +168,27 @@
 		pointer-events: none;
 	}
 
+	.project-page--verdachten-naar-herkomst .band-label {
+		pointer-events: none;
+		transition: opacity 160ms ease;
+	}
+
+	.project-page--verdachten-naar-herkomst .band-label text {
+		fill: var(--saga-ink-strong);
+		font-size: 10px;
+		font-weight: 760;
+		letter-spacing: 0;
+		paint-order: stroke;
+		stroke: rgba(5, 5, 5, 0.78);
+		stroke-linejoin: round;
+		stroke-width: 2.75px;
+	}
+
+	.project-page--verdachten-naar-herkomst .band-label__title {
+		font-size: 11px;
+		font-weight: 860;
+	}
+
 	.project-page--verdachten-naar-herkomst .axis path,
 	.project-page--verdachten-naar-herkomst .axis line {
 		stroke: rgba(201, 163, 106, 0.46);
@@ -249,6 +270,52 @@
 	.project-page--verdachten-naar-herkomst .point-aggregate {
 		background: #c43b2f;
 		border-color: var(--muted);
+	}
+
+	.project-page--verdachten-naar-herkomst .band-summary {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 8px;
+		padding: 0 18px 14px;
+	}
+
+	.project-page--verdachten-naar-herkomst .band-summary__item {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 2px 8px;
+		align-items: start;
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		padding: 9px 10px;
+		background: rgba(255, 255, 255, 0.035);
+	}
+
+	.project-page--verdachten-naar-herkomst .band-summary__item i {
+		grid-row: 1 / span 4;
+		width: 12px;
+		height: 12px;
+		margin-top: 2px;
+		border: 1px solid rgba(244, 239, 230, 0.26);
+		border-radius: 3px;
+	}
+
+	.project-page--verdachten-naar-herkomst .band-summary__item strong,
+	.project-page--verdachten-naar-herkomst .band-summary__item span {
+		min-width: 0;
+		overflow-wrap: anywhere;
+		line-height: 1.25;
+	}
+
+	.project-page--verdachten-naar-herkomst .band-summary__item strong {
+		color: var(--ink);
+		font-size: 13px;
+		font-weight: 840;
+	}
+
+	.project-page--verdachten-naar-herkomst .band-summary__item span {
+		color: var(--muted);
+		font-size: 12px;
+		font-weight: 700;
 	}
 
 	.project-page--verdachten-naar-herkomst .project-sidebar {
@@ -437,6 +504,12 @@
 		}
 	}
 
+	@media (width <= 1180px) {
+		.project-page--verdachten-naar-herkomst .band-summary {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
 	@media (width <= 760px) {
 		.project-page--verdachten-naar-herkomst {
 			padding: 18px 10px 30px;
@@ -473,6 +546,14 @@
 
 		.project-page--verdachten-naar-herkomst .point-count {
 			white-space: normal;
+		}
+
+		.project-page--verdachten-naar-herkomst .band-summary {
+			grid-template-columns: 1fr;
+		}
+
+		.project-page--verdachten-naar-herkomst .band-label {
+			display: none;
 		}
 
 		.project-page--verdachten-naar-herkomst .labels text {

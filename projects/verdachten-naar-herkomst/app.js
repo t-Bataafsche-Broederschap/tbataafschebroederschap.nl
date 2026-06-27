@@ -13,6 +13,7 @@ const selectedStats = document.querySelector("#selectedStats");
 const currentSummary = document.querySelector("#currentSummary");
 const pointCount = document.querySelector("#pointCount");
 const quartileLabel = document.querySelector("#quartileLabel");
+const bandSummary = document.querySelector("#bandSummary");
 
 let data;
 let selectedKey = null;
@@ -23,6 +24,8 @@ const perFormat = new Intl.NumberFormat("nl-NL", { maximumFractionDigits: 0 });
 const ratioFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const percentFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const sharePercentFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+// Deze CBS-punten zijn disjuncte groepen; de overige aggregaten zouden mensen dubbel tellen.
+const countableAggregateKeys = new Set(["1012600", "1012950"]);
 
 function formatNumber(value) {
 	return Number.isFinite(value) ? numberFormat.format(value) : "-";
@@ -74,6 +77,84 @@ function suspectPopulationShareRatio(point) {
 	const suspectShare = shareOfTotalSuspects(point);
 	const populationShare = shareOfTotalPopulation(point);
 	return Number.isFinite(suspectShare) && Number.isFinite(populationShare) && populationShare > 0 ? suspectShare / populationShare : null;
+}
+
+function isCountableBandPoint(point) {
+	return !point.isAggregate || countableAggregateKeys.has(point.key);
+}
+
+function sumFinite(points, key) {
+	return points.reduce((total, point) => total + (Number.isFinite(point[key]) ? point[key] : 0), 0);
+}
+
+function percentageOf(value, total) {
+	return Number.isFinite(value) && Number.isFinite(total) && total > 0 ? (value / total) * 100 : null;
+}
+
+function pointBelongsToBand(point, band, index, bands) {
+	if (!Number.isFinite(point.suspectsPer10000)) return false;
+	if (point.suspectsPer10000 < band.from) return false;
+	return index === bands.length - 1 ? point.suspectsPer10000 <= band.to : point.suspectsPer10000 < band.to;
+}
+
+function buildBandStats(bands) {
+	const allCountablePoints = data.legacy2022.points.filter(isCountableBandPoint);
+	const totals = {
+		groupCount: allCountablePoints.length,
+		populationEstimate: sumFinite(allCountablePoints, "populationEstimate"),
+		totalSuspects: sumFinite(allCountablePoints, "totalSuspects"),
+	};
+
+	return bands.map((band, index) => {
+		const countablePoints = data.legacy2022.points.filter((point) => isCountableBandPoint(point) && pointBelongsToBand(point, band, index, bands));
+		const groupCount = countablePoints.length;
+		const populationEstimate = sumFinite(countablePoints, "populationEstimate");
+		const totalSuspects = sumFinite(countablePoints, "totalSuspects");
+		return {
+			...band,
+			groupCount,
+			groupShare: percentageOf(groupCount, totals.groupCount),
+			populationEstimate,
+			populationShare: percentageOf(populationEstimate, totals.populationEstimate),
+			totalSuspects,
+			suspectShare: percentageOf(totalSuspects, totals.totalSuspects),
+		};
+	});
+}
+
+function formatBandGroupLine(band) {
+	return `${formatNumber(band.groupCount)} herkomstgroepen (${formatPercent(band.groupShare)})`;
+}
+
+function formatBandPopulationLine(band) {
+	return `ca. ${formatNumber(band.populationEstimate)} inwoners (${formatPercent(band.populationShare)})`;
+}
+
+function formatBandSuspectLine(band) {
+	return `${formatNumber(band.totalSuspects)} verdachten (${formatPercent(band.suspectShare)})`;
+}
+
+function renderBandSummary(bandStats) {
+	bandSummary.replaceChildren(
+		...bandStats.map((band) => {
+			const item = document.createElement("div");
+			const swatch = document.createElement("i");
+			const title = document.createElement("strong");
+			const groups = document.createElement("span");
+			const population = document.createElement("span");
+			const suspects = document.createElement("span");
+
+			item.className = "band-summary__item";
+			swatch.style.background = band.color;
+			title.textContent = band.label;
+			groups.textContent = formatBandGroupLine(band);
+			population.textContent = formatBandPopulationLine(band);
+			suspects.textContent = formatBandSuspectLine(band);
+
+			item.append(swatch, title, groups, population, suspects);
+			return item;
+		})
+	);
 }
 
 function isSmallScreen() {
@@ -229,11 +310,12 @@ function renderChart() {
 
 	const { q1, median, q3 } = data.legacy2022.quartiles;
 	const bands = [
-		{ from: -20, to: q1, color: "rgba(34, 197, 94, 0.16)" },
-		{ from: q1, to: median, color: "rgba(250, 204, 21, 0.16)" },
-		{ from: median, to: q3, color: "rgba(249, 115, 22, 0.18)" },
-		{ from: q3, to: y.domain()[1], color: "rgba(196, 59, 47, 0.24)" },
+		{ label: "Laagste kwartiel", from: -20, to: q1, color: "rgba(34, 197, 94, 0.16)" },
+		{ label: "Tweede kwartiel", from: q1, to: median, color: "rgba(250, 204, 21, 0.16)" },
+		{ label: "Derde kwartiel", from: median, to: q3, color: "rgba(249, 115, 22, 0.18)" },
+		{ label: "Hoogste kwartiel", from: q3, to: y.domain()[1], color: "rgba(196, 59, 47, 0.24)" },
 	];
+	const bandStats = buildBandStats(bands);
 	const plotArea = g.append("g").attr("clip-path", `url(#${clipId})`);
 	const bandSelection = plotArea
 		.selectAll("rect.band")
@@ -243,6 +325,29 @@ function renderChart() {
 		.attr("fill", (band) => band.color);
 
 	const bandBoundarySelection = plotArea.selectAll("line.band-boundary").data([q1, median, q3]).join("line").attr("class", "band-boundary").attr("x1", 0).attr("x2", innerWidth);
+	const bandLabelSelection = plotArea
+		.selectAll("g.band-label")
+		.data(bandStats)
+		.join((enter) => {
+			const label = enter.append("g").attr("class", "band-label");
+			label
+				.append("text")
+				.attr("text-anchor", "end")
+				.call((text) => {
+					text.append("tspan").attr("class", "band-label__title").attr("x", 0).attr("dy", 0);
+					text.append("tspan").attr("x", 0).attr("dy", "1.15em");
+					text.append("tspan").attr("x", 0).attr("dy", "1.15em");
+					text.append("tspan").attr("x", 0).attr("dy", "1.15em");
+				});
+			return label;
+		});
+
+	bandLabelSelection.select("title").remove();
+	bandLabelSelection.append("title").text((band) => `${band.label}: ${formatBandGroupLine(band)}, ${formatBandPopulationLine(band)}, ${formatBandSuspectLine(band)}`);
+	bandLabelSelection.select(".band-label__title").text((band) => band.label);
+	bandLabelSelection.select("tspan:nth-child(2)").text(formatBandGroupLine);
+	bandLabelSelection.select("tspan:nth-child(3)").text(formatBandPopulationLine);
+	bandLabelSelection.select("tspan:nth-child(4)").text(formatBandSuspectLine);
 
 	const yGrid = g.append("g").attr("class", "grid").call(d3.axisLeft(y).ticks(8).tickSize(-innerWidth).tickFormat(""));
 
@@ -350,6 +455,16 @@ function renderChart() {
 			.attr("height", (band) => Math.max(0, zy(band.from) - zy(band.to)));
 
 		bandBoundarySelection.attr("y1", (value) => zy(value)).attr("y2", (value) => zy(value));
+		bandLabelSelection.attr("transform", (band) => {
+			const top = Math.max(0, zy(band.to));
+			const bottom = Math.min(innerHeight, zy(band.from));
+			return `translate(${innerWidth - 10},${top + 14})`;
+		});
+		bandLabelSelection.attr("opacity", (band) => {
+			const top = Math.max(0, zy(band.to));
+			const bottom = Math.min(innerHeight, zy(band.from));
+			return bottom - top >= 50 ? 1 : 0;
+		});
 
 		xGrid.call(
 			d3
@@ -434,6 +549,7 @@ function renderChart() {
 
 	quartileLabel.textContent = `y-kwartielen ≈ ${formatPer(q1)} / ${formatPer(median)} / ${formatPer(q3)}`;
 	pointCount.textContent = `${points.length} van ${allPoints.length} punten zichtbaar`;
+	renderBandSummary(bandStats);
 }
 
 function exportCsv() {

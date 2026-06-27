@@ -76,7 +76,10 @@
 						<p>"Aandeel alle verdachten" is het percentage van het totaal aantal geregistreerde verdachten in 2022. "Verdachten/bevolking" deelt dat percentage door het aandeel van dezelfde groep in de afgeleide bevolkingsnoemer.</p>
 						<p>De hover en het selectiepanel tonen ook hetzelfde relatieve cijfer als aandeel binnen de groep. Bijvoorbeeld: 61 verdachten per 10.000 inwoners is 0,61 procent, ongeveer 1 op 164 personen in die groep in dat verslagjaar.</p>
 						<p>De bevolking per groep wordt hier afgeleid uit dezelfde CBS-tabel: verdachten met woonadres in Nederland gedeeld door verdachten per 10.000 inwoners, maal 10.000. Dat is de noemer achter het relatieve cijfer en kan door afronding licht afwijken van aparte CBS-bevolkingstabellen.</p>
-						<p>De kleurbanden zijn relatieve kwartielen binnen de getoonde 2022-punten op de y-as. Ze verdelen de herkomstpunten in vier groepen op basis van verdachten per 10.000 inwoners. Het zijn dus geen absolute risicocategorieen of CBS-normen.</p>
+						<p>
+							De kleurbanden zijn relatieve kwartielen binnen de getoonde 2022-punten op de y-as. Ze verdelen de herkomstpunten in vier groepen op basis van verdachten per 10.000 inwoners. Het zijn dus geen absolute risicocategorieen of CBS-normen. De bandtellingen tellen Nederlandse achtergrond, landen en de
+							restcategorie "Overige migratieachtergrond"; dubbel tellende aggregaten zoals "Totaal", "Met migratieachtergrond", "Westerse migratieachtergrond" en "Niet-westerse migratieachtergrond" tellen daar niet in mee. De percentages zijn aandelen binnen die meetellende set.
+						</p>
 						<p>Relatieve cijfers tellen alleen personen die in de BRP voorkomen. BRP staat voor Basisregistratie Personen: het bevolkingsregister van gemeenten in Nederland. Personen zonder BRP-registratie zitten wel in absolute aantallen maar niet in verdachten per 10.000 inwoners.</p>
 						<p>De nieuwe CBS-tabel 85658NED loopt tot 2025, maar gebruikt een andere herkomstindeling met minder detailpunten.</p>
 					</article>
@@ -109,9 +112,10 @@
 						</div>
 						<div class="project-chart-wrap">
 							<svg id="scatterChart" role="img" aria-labelledby="chartTitle chartDescription"></svg>
-							<p id="chartDescription" class="sr-only">Scatterplot met totaal verdachten op de x-as en verdachten per 10.000 inwoners op de y-as. De x-as kan tussen logaritmisch en lineair worden gewisseld.</p>
+							<p id="chartDescription" class="sr-only">Scatterplot met totaal verdachten op de x-as en verdachten per 10.000 inwoners op de y-as. De x-as kan tussen logaritmisch en lineair worden gewisseld. Elk kleurvlak toont een telling en percentage van herkomstgroepen, inwoners en verdachten.</p>
 							<div id="tooltip" class="project-tooltip" role="status" hidden></div>
 						</div>
+						<div id="bandSummary" class="band-summary" aria-label="Tellingen per kleurvlak"></div>
 						<div class="legend project-legend" aria-label="Legenda">
 							<span><i class="point-country"></i> landen / herkomsten</span>
 							<span><i class="point-aggregate"></i> aggregaten</span>

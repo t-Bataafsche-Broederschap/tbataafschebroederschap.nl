@@ -1,10 +1,18 @@
 <!doctype html>
 <html lang="nl-NL">
-	<head>
+	<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 		<meta charset="utf-8" />
+		
 		<title>TenneT Monitor Voorzieningszekerheid 2026 | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Misschien lijkt het stroomverbruik in Nederland ongerelateerd aan immigratie, maar de immigranten hebben huizen nodig. Huizen met stroom. Ik ben momenteel overtuigd dat de massa-migratie invloed heeft op de vraag naar elektriciteit en daarmee op de voorzieningszekerheid." />
-		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/tennet-monitor-voorzieningszekerheid-2026/" />
+		
+		
+		
+		
+		<meta name="description" content="
+				Hoe groot is het effect van massa-migratie op de elektriciteitsvoorziening? Misschien lijkt het stroomverbruik in Nederland ongerelateerd aan immigratie, maar de immigranten hebben huizen nodig. Huizen met stroom. Ik ben momenteel overtuigd dat de massa-migratie invloed heeft op de vraag naar elektriciteit en
+				daarmee op de voorzieningszekerheid.
+			" />
+		<link rel="canonical" href="http://tbb.localhost:1313/projects/tennet-monitor-voorzieningszekerheid-2026/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
 			(() => {
@@ -16,6 +24,7 @@
 		<link rel="stylesheet" href="/styles/site.css" />
 		<link rel="stylesheet" href="/styles/project-tooltip-unified.css" />
 	</head>
+
 	<body>
 		<header class="site-header">
 			<nav class="site-nav">
@@ -37,248 +46,274 @@
 			</div>
 		</header>
 		<main class="site-main section-projects">
-			<link rel="stylesheet" href="/styles/project-theme.css" />
-			<link rel="stylesheet" href="styles.css" data-page-stylesheet />
-			<article class="project-page project-page--tennet-monitor-voorzieningszekerheid-2026">
-				<header class="project-intro">
-					<div class="project-intro__body">
-						<h1>TenneT Monitor Voorzieningszekerheid 2026</h1>
-						<dl class="page-dates" aria-label="Paginadatums">
-							<div>
-								<dt>Gepubliceerd</dt>
-								<dd><time datetime="2026-06-15T13:00:00&#43;02:00">2026-06-15</time></dd>
-							</div>
-							<div>
-								<dt>Bijgewerkt</dt>
-								<dd><time datetime="2026-06-27T20:13:11&#43;02:00">2026-06-27</time></dd>
-							</div>
-						</dl>
-						<p>Misschien lijkt het stroomverbruik in Nederland ongerelateerd aan immigratie, maar de immigranten hebben huizen nodig. Huizen met stroom. Ik ben momenteel overtuigd dat de massa-migratie invloed heeft op de vraag naar elektriciteit en daarmee op de voorzieningszekerheid.</p>
+
+
+
+
+
+
+<link rel="stylesheet" href="/styles/project-theme.css" />
+<link rel="stylesheet" href="styles.css" data-page-stylesheet />
+<article class="project-page project-page--tennet-monitor-voorzieningszekerheid-2026">
+	<header class="project-intro">
+		<div class="project-intro__body">
+			<h1>TenneT Monitor Voorzieningszekerheid 2026</h1>
+<dl class="page-dates" aria-label="Paginadatums">
+	<div>
+		<dt>Gepubliceerd</dt>
+		<dd><time datetime="2026-06-15T13:00:00&#43;02:00">2026-06-15</time></dd>
+	</div>
+	<div>
+		<dt>Bijgewerkt</dt>
+		<dd><time datetime="2026-06-22T23:41:08&#43;02:00">2026-06-22</time></dd>
+	</div>
+</dl>
+			<p>
+				Hoe groot is het effect van massa-migratie op de elektriciteitsvoorziening? Misschien lijkt het stroomverbruik in Nederland ongerelateerd aan immigratie, maar de immigranten hebben huizen nodig. Huizen met stroom. Ik ben momenteel overtuigd dat de massa-migratie invloed heeft op de vraag naar elektriciteit en
+				daarmee op de voorzieningszekerheid.
+			</p>
+		</div>
+		<hr />
+	</header>
+
+	<section class="project-glossary" aria-labelledby="glossary-title">
+		<h2 id="glossary-title">Begrippen</h2>
+		<dl>
+			<div>
+				<dt>LOLE</dt>
+				<dd>Loss of Load Expectation: het verwachte aantal uren per jaar waarin niet volledig aan de elektriciteitsvraag kan worden voldaan.</dd>
+			</div>
+			<div>
+				<dt>EENS/ENS</dt>
+				<dd>Expected Energy Not Served: de verwachte hoeveelheid elektriciteit die bij tekort niet geleverd kan worden.</dd>
+			</div>
+			<div>
+				<dt>Tekortevent</dt>
+				<dd>Een periode waarin het elektriciteitssysteem volgens de simulatie onvoldoende capaciteit heeft om de vraag te dekken.</dd>
+			</div>
+		</dl>
+	</section>
+
+	<section class="project-notes" aria-label="Datatoelichting">
+		<article>
+			<h2>Datatoelichting</h2>
+			<p>LOLE staat voor Loss of Load Expectation: het verwachte aantal uren per jaar waarin niet aan de elektriciteitsvraag kan worden voldaan. EENS/ENS duidt de verwachte niet-geleverde energie aan.</p>
+			<p>Alle runtime-data komt uit de lokaal opgeslagen CSV-bestanden van de Monitor Voorzieningszekerheid 2026. De pagina haalt tijdens gebruik geen externe data op.</p>
+		</article>
+	</section>
+
+	<section class="project-panel project-toolbar tennet-controls" aria-label="Dashboardinstellingen">
+		<label class="project-control">
+			<span>Scenario</span>
+			<select id="scenarioSelect"></select>
+		</label>
+		<label>
+			<span>Jaar</span>
+			<select id="yearSelect"></select>
+		</label>
+		<label class="norm-control project-control">
+			<span>LOLE-norm <strong id="normValue">4 uur</strong></span>
+			<input id="normSlider" type="range" min="0" max="3" value="2" step="1" />
+		</label>
+		<div class="metric-toggle project-segmented" role="group" aria-label="Metriek voor weerscenario's">
+			<button class="is-active" type="button" data-metric="lole">LOLE</button>
+			<button type="button" data-metric="eens">EENS</button>
+		</div>
+	</section>
+
+	<div id="summaryCards" class="project-summary" aria-label="Samenvatting"></div>
+
+	<nav class="project-tabs" aria-label="TenneT tabs">
+		<button class="is-active" type="button" data-tab="scarcity">Krapte</button>
+		<button type="button" data-tab="events">Tekortevents</button>
+		<button type="button" data-tab="system">Systeemmix</button>
+	</nav>
+
+	<section class="project-dashboard">
+		<section class="project-tab-panel is-active" id="tab-scarcity" aria-labelledby="tab-scarcity-title">
+			<section class="project-panel project-chart wide">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Krapte</p>
+						<h2 id="tab-scarcity-title">LOLE per scenario</h2>
 					</div>
-					<hr />
-				</header>
-				<section class="project-glossary" aria-labelledby="glossary-title">
-					<h2 id="glossary-title">Begrippen</h2>
-					<dl>
-						<div>
-							<dt>LOLE</dt>
-							<dd>Loss of Load Expectation: het verwachte aantal uren per jaar waarin niet volledig aan de elektriciteitsvraag kan worden voldaan.</dd>
-						</div>
-						<div>
-							<dt>EENS/ENS</dt>
-							<dd>Expected Energy Not Served: de verwachte hoeveelheid elektriciteit die bij tekort niet geleverd kan worden.</dd>
-						</div>
-						<div>
-							<dt>Tekortevent</dt>
-							<dd>Een periode waarin het elektriciteitssysteem volgens de simulatie onvoldoende capaciteit heeft om de vraag te dekken.</dd>
-						</div>
-					</dl>
-				</section>
-				<section class="project-notes" aria-label="Datatoelichting">
-					<article>
-						<h2>Datatoelichting</h2>
-						<p>LOLE staat voor Loss of Load Expectation: het verwachte aantal uren per jaar waarin niet aan de elektriciteitsvraag kan worden voldaan. EENS/ENS duidt de verwachte niet-geleverde energie aan.</p>
-						<p>Alle runtime-data komt uit de lokaal opgeslagen CSV-bestanden van de Monitor Voorzieningszekerheid 2026. De pagina haalt tijdens gebruik geen externe data op.</p>
-					</article>
-				</section>
-				<section class="project-panel project-toolbar tennet-controls" aria-label="Dashboardinstellingen">
-					<label class="project-control">
-						<span>Scenario</span>
-						<select id="scenarioSelect"></select>
-					</label>
-					<label>
-						<span>Jaar</span>
-						<select id="yearSelect"></select>
-					</label>
-					<label class="norm-control project-control">
-						<span>LOLE-norm <strong id="normValue">4 uur</strong></span>
-						<input id="normSlider" type="range" min="0" max="3" value="2" step="1" />
-					</label>
-					<div class="metric-toggle project-segmented" role="group" aria-label="Metriek voor weerscenario's">
-						<button class="is-active" type="button" data-metric="lole">LOLE</button>
-						<button type="button" data-metric="eens">EENS</button>
+					<p class="chart-meta">Norm: 4 uur per jaar</p>
+				</div>
+				<div class="project-chart-wrap">
+					<svg id="loleChart" role="img" aria-label="LOLE per jaar en scenario"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Capaciteit</p>
+						<h2>Missing-capacity analyse</h2>
 					</div>
-				</section>
-				<div id="summaryCards" class="project-summary" aria-label="Samenvatting"></div>
-				<nav class="project-tabs" aria-label="TenneT tabs">
-					<button class="is-active" type="button" data-tab="scarcity">Krapte</button>
-					<button type="button" data-tab="events">Tekortevents</button>
-					<button type="button" data-tab="system">Systeemmix</button>
-				</nav>
-				<section class="project-dashboard">
-					<section class="project-tab-panel is-active" id="tab-scarcity" aria-labelledby="tab-scarcity-title">
-						<section class="project-panel project-chart wide">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Krapte</p>
-									<h2 id="tab-scarcity-title">LOLE per scenario</h2>
-								</div>
-								<p class="chart-meta">Norm: 4 uur per jaar</p>
-							</div>
-							<div class="project-chart-wrap">
-								<svg id="loleChart" role="img" aria-label="LOLE per jaar en scenario"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Capaciteit</p>
-									<h2>Missing-capacity analyse</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact">
-								<svg id="missingCapacityChart" role="img" aria-label="Extra capaciteit en resulterende LOLE"></svg>
-							</div>
-							<div id="capacityMechanismList" class="insight-list" aria-label="Capaciteitsmechanisme samenvatting"></div>
-						</section>
-						<section class="project-panel insight-panel">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Normdoorbraak</p>
-									<h2>Wanneer faalt de norm?</h2>
-								</div>
-							</div>
-							<div id="normBreakdownList" class="insight-list" aria-label="Normdoorbraak per scenario"></div>
-						</section>
-					</section>
-					<section class="project-tab-panel" id="tab-events" aria-labelledby="tab-events-title" hidden>
-						<section class="project-panel project-chart wide">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Weerscenario's</p>
-									<h2 id="tab-events-title">Risicowaaier</h2>
-								</div>
-								<p id="weatherMeta" class="chart-meta"></p>
-							</div>
-							<div class="project-chart-wrap">
-								<svg id="weatherChart" role="img" aria-label="Verdeling over weerscenario's"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">ENS</p>
-									<h2>Tekort-duurcurve</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact">
-								<svg id="durationChart" role="img" aria-label="ENS duurcurve"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Events</p>
-									<h2>Grootte en duur</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact">
-								<svg id="eventChart" role="img" aria-label="Tekortevent-grootte en duur"></svg>
-							</div>
-						</section>
-					</section>
-					<section class="project-tab-panel" id="tab-system" aria-labelledby="tab-system-title" hidden>
-						<section class="project-panel project-chart wide">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Vraag</p>
-									<h2 id="tab-system-title">Elektriciteitsvraag per sector</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap">
-								<svg id="demandChart" role="img" aria-label="Vraag per sector"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Mix</p>
-									<h2>Capaciteit en flexibiliteit</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact">
-								<svg id="capacityChart" role="img" aria-label="Capaciteit en flexibiliteit"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Import</p>
-									<h2>Normale uren versus tekorturen</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact">
-								<svg id="importChart" role="img" aria-label="Netto import in normale uren en tekorturen"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Weekprofiel</p>
-									<h2>Vraag per uur</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact heatmap-wrap">
-								<svg id="weeklyDemandChart" role="img" aria-label="Weekprofiel van elektriciteitsvraag"></svg>
-							</div>
-						</section>
-						<section class="project-panel project-chart">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Gelijktijdigheid</p>
-									<h2>Krapte met buurlanden</h2>
-								</div>
-							</div>
-							<div class="project-chart-wrap compact heatmap-wrap">
-								<svg id="simultaneityChart" role="img" aria-label="Matrix van gelijktijdige krapte met buurlanden"></svg>
-							</div>
-						</section>
-						<section class="project-panel insight-panel">
-							<div class="project-panel__head">
-								<div>
-									<p class="eyebrow">Importkwetsbaarheid</p>
-									<h2>Als buren tegelijk krap zijn</h2>
-								</div>
-							</div>
-							<div id="importVulnerabilityList" class="insight-list" aria-label="Importkwetsbaarheid per buurland"></div>
-						</section>
-					</section>
-				</section>
-				<div id="tooltip" class="project-tooltip" role="status" hidden></div>
-			</article>
-			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-			<script type="module" src="app.js"></script>
-			<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
-				<h2 id="project-sources-title">Bronnen</h2>
-				<ul>
-					<li>
-						<a href="https://www.netbeheernederland.nl/artikelen/nieuws/tennet-adviseert-politiek-te-starten-met-capaciteitsmechanisme-voor" rel="noopener noreferrer" target="_blank">Netbeheer Nederland: TenneT adviseert capaciteitsmechanisme</a>
-						<span>Publieke context bij de Monitor Voorzieningszekerheid 2026 en de oproep om met een capaciteitsmechanisme te starten.</span>
-					</li>
-					<li>
-						<a href="https://www.vemw.nl/kennisbank-detail/2026/06/10/monitor-voorzieningszekerheid-2026" rel="noopener noreferrer" target="_blank">VEMW: Monitor Voorzieningszekerheid 2026</a>
-						<span>Publieke samenvatting van de TenneT-monitor en de rol van de jaarlijkse monitor.</span>
-					</li>
-					<li>
-						<a href="" rel="noopener noreferrer" target="_blank">Lokale TenneT CSV-bestanden</a>
-						<span>Brondata in deze projectmap voor LOLE, EENS/ENS, tekortevents, vraag, productiecapaciteit, flexibiliteit, import en missing-capacity-analyse.</span>
-					</li>
-				</ul>
-			</aside>
-		</main>
+				</div>
+				<div class="project-chart-wrap compact">
+					<svg id="missingCapacityChart" role="img" aria-label="Extra capaciteit en resulterende LOLE"></svg>
+				</div>
+				<div id="capacityMechanismList" class="insight-list" aria-label="Capaciteitsmechanisme samenvatting"></div>
+			</section>
+			<section class="project-panel insight-panel">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Normdoorbraak</p>
+						<h2>Wanneer faalt de norm?</h2>
+					</div>
+				</div>
+				<div id="normBreakdownList" class="insight-list" aria-label="Normdoorbraak per scenario"></div>
+			</section>
+		</section>
+
+		<section class="project-tab-panel" id="tab-events" aria-labelledby="tab-events-title" hidden>
+			<section class="project-panel project-chart wide">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Weerscenario's</p>
+						<h2 id="tab-events-title">Risicowaaier</h2>
+					</div>
+					<p id="weatherMeta" class="chart-meta"></p>
+				</div>
+				<div class="project-chart-wrap">
+					<svg id="weatherChart" role="img" aria-label="Verdeling over weerscenario's"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">ENS</p>
+						<h2>Tekort-duurcurve</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap compact">
+					<svg id="durationChart" role="img" aria-label="ENS duurcurve"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Events</p>
+						<h2>Grootte en duur</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap compact">
+					<svg id="eventChart" role="img" aria-label="Tekortevent-grootte en duur"></svg>
+				</div>
+			</section>
+		</section>
+
+		<section class="project-tab-panel" id="tab-system" aria-labelledby="tab-system-title" hidden>
+			<section class="project-panel project-chart wide">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Vraag</p>
+						<h2 id="tab-system-title">Elektriciteitsvraag per sector</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap">
+					<svg id="demandChart" role="img" aria-label="Vraag per sector"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Mix</p>
+						<h2>Capaciteit en flexibiliteit</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap compact">
+					<svg id="capacityChart" role="img" aria-label="Capaciteit en flexibiliteit"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Import</p>
+						<h2>Normale uren versus tekorturen</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap compact">
+					<svg id="importChart" role="img" aria-label="Netto import in normale uren en tekorturen"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Weekprofiel</p>
+						<h2>Vraag per uur</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap compact heatmap-wrap">
+					<svg id="weeklyDemandChart" role="img" aria-label="Weekprofiel van elektriciteitsvraag"></svg>
+				</div>
+			</section>
+			<section class="project-panel project-chart">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Gelijktijdigheid</p>
+						<h2>Krapte met buurlanden</h2>
+					</div>
+				</div>
+				<div class="project-chart-wrap compact heatmap-wrap">
+					<svg id="simultaneityChart" role="img" aria-label="Matrix van gelijktijdige krapte met buurlanden"></svg>
+				</div>
+			</section>
+			<section class="project-panel insight-panel">
+				<div class="project-panel__head">
+					<div>
+						<p class="eyebrow">Importkwetsbaarheid</p>
+						<h2>Als buren tegelijk krap zijn</h2>
+					</div>
+				</div>
+				<div id="importVulnerabilityList" class="insight-list" aria-label="Importkwetsbaarheid per buurland"></div>
+			</section>
+		</section>
+	</section>
+	<div id="tooltip" class="project-tooltip" role="status" hidden></div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script type="module" src="app.js"></script>
+
+
+<aside class="project-panel project-sources" aria-labelledby="project-sources-title">
+	<h2 id="project-sources-title">Bronnen</h2>
+	<ul>
+		<li>
+			<a href="https://www.netbeheernederland.nl/artikelen/nieuws/tennet-adviseert-politiek-te-starten-met-capaciteitsmechanisme-voor" rel="noopener noreferrer" target="_blank">Netbeheer Nederland: TenneT adviseert capaciteitsmechanisme</a>
+			<span>Publieke context bij de Monitor Voorzieningszekerheid 2026 en de oproep om met een capaciteitsmechanisme te starten.</span>
+		</li>
+		<li>
+			<a href="https://www.vemw.nl/kennisbank-detail/2026/06/10/monitor-voorzieningszekerheid-2026" rel="noopener noreferrer" target="_blank">VEMW: Monitor Voorzieningszekerheid 2026</a>
+			<span>Publieke samenvatting van de TenneT-monitor en de rol van de jaarlijkse monitor.</span>
+		</li>
+		<li>
+			<a href="" rel="noopener noreferrer" target="_blank">Lokale TenneT CSV-bestanden</a>
+			<span>Brondata in deze projectmap voor LOLE, EENS/ENS, tekortevents, vraag, productiecapaciteit, flexibiliteit, import en missing-capacity-analyse.</span>
+		</li>
+	</ul>
+</aside>
+
+</main>
 		<footer class="site-footer">
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
+				
 				<p>
-					<sub>Last updated: <time id="updated" datetime="2026-06-27">2026-06-27</time></sub>
+					<sub>Last updated: <time id="updated" datetime="2026-06-22">2026-06-22</time></sub>
 				</p>
 			</div>
+			
+			
 			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>
 			<script>
+				
 				const toggleLocalStyles = (event) => {
 					event.preventDefault();
 					if (!event.ctrlKey || !event.shiftKey || event.button !== 0) return;
+
 					const stylesheets = [...document.querySelectorAll('link[rel~="stylesheet"][data-page-stylesheet]')];
 					if (stylesheets.length === 0) return;
 					const disabled = stylesheets.some((stylesheet) => !stylesheet.disabled);

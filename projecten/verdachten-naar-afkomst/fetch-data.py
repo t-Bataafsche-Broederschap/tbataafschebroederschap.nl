@@ -11,10 +11,10 @@ Fetch CBS suspect data by origin.
 
 from __future__ import annotations
 
+import datetime as dt
 import json
 import math
 import re
-import datetime as dt
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode

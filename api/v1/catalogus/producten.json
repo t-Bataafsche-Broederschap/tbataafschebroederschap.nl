@@ -38,7 +38,18 @@
       "contentPad": "content/projecten/autochtoonse-nederlandse-bevolking/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/autochtoonse-nederlandse-bevolking/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/data.json",
+        "index": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/index.json",
+        "leeftijdsopbouw": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/leeftijdsopbouw.json",
+        "metadata": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/metadata.json",
+        "migratie": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/migratie.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "tijdlijn": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/tijdlijn.json",
+        "zelf": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/manifest.json"
+      },
       "slug": "autochtoonse-nederlandse-bevolking",
       "status": "publiek",
       "titel": "Autochtone Nederlandse bevolking"
@@ -59,25 +70,52 @@
       "contentPad": "content/projecten/begrotingsstromen-van-de-europese-Unie/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/begrotingsstromen-van-de-europese-Unie/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/data.json",
+        "index": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/index.json",
+        "jaarwaarden": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/jaarwaarden.json",
+        "landen": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/landen.json",
+        "metadata": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/manifest.json"
+      },
       "slug": "begrotingsstromen-van-de-europese-Unie",
       "status": "publiek",
       "titel": "Begrotingsstromen van de Europese Unie"
     },
     {
+      "beschrijving": "Geregistreerde criminaliteit, slachtofferschap en relevante registratiewijzigingen.",
       "bronnen": [
-        "cbs-83723ned",
         "cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
-        "cbs-83648ned",
         "cbs-cbs-tijdlijn-migratie-1849-2025",
-        "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
         "verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
-        "rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven"
+        "rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+        "cbs-83723ned",
+        "cbs-83648ned",
+        "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit"
+      ],
+      "compatibiliteit": [
+        {
+          "bestand": "data.json",
+          "pad": "/projecten/criminaliteit-nederland/data.json"
+        }
       ],
       "contentPad": "content/projecten/criminaliteit-nederland/index.html",
-      "publiekeEindpunten": {},
+      "eigenaar": "t-Bataafsche Broederschap",
+      "metadataPad": "gegevensproducten/criminaliteit-nederland/product.yaml",
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/criminaliteit-nederland/data.json",
+        "index": "/api/v1/projecten/criminaliteit-nederland/index.json",
+        "metadata": "/api/v1/projecten/criminaliteit-nederland/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/criminaliteit-nederland/manifest.json"
+      },
       "slug": "criminaliteit-nederland",
-      "status": "bestaand",
+      "status": "publiek",
       "titel": "Criminaliteit in Nederland"
     },
     {
@@ -96,7 +134,16 @@
       "contentPad": "content/projecten/culturele-afstandskaart/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/culturele-afstandskaart/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/culturele-afstandskaart/data.json",
+        "index": "/api/v1/projecten/culturele-afstandskaart/index.json",
+        "metadata": "/api/v1/projecten/culturele-afstandskaart/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "records": "/api/v1/projecten/culturele-afstandskaart/records.json",
+        "zelf": "/api/v1/projecten/culturele-afstandskaart/manifest.json"
+      },
       "slug": "culturele-afstandskaart",
       "status": "publiek",
       "titel": "Culturele afstandskaart"
@@ -116,7 +163,17 @@
       "contentPad": "content/projecten/demografische-veiligheid/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/demografische-veiligheid/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/demografische-veiligheid/data.json",
+        "demografie": "/api/v1/projecten/demografische-veiligheid/demografie.json",
+        "index": "/api/v1/projecten/demografische-veiligheid/index.json",
+        "meetdefinities": "/api/v1/projecten/demografische-veiligheid/meetdefinities.json",
+        "metadata": "/api/v1/projecten/demografische-veiligheid/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/demografische-veiligheid/manifest.json"
+      },
       "slug": "demografische-veiligheid",
       "status": "publiek",
       "titel": "Demografische veiligheid"
@@ -138,7 +195,18 @@
       "contentPad": "content/projecten/geboortecijfers-nederlandse-afkomst/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/geboortecijfers-nederlandse-afkomst/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/data.json",
+        "index": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/index.json",
+        "kerncijfers": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/kerncijfers.json",
+        "leeftijdsopbouw": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/leeftijdsopbouw.json",
+        "leeftijdsspecifiek": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/leeftijdsspecifiek.json",
+        "metadata": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/manifest.json"
+      },
       "slug": "geboortecijfers-nederlandse-afkomst",
       "status": "publiek",
       "titel": "Geboortecijfers Nederlandse Afkomst"
@@ -172,21 +240,53 @@
       "contentPad": "content/projecten/hoe-hecht-is-nederland/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/hoe-hecht-is-nederland/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/hoe-hecht-is-nederland/data.json",
+        "historie": "/api/v1/projecten/hoe-hecht-is-nederland/historie.json",
+        "index": "/api/v1/projecten/hoe-hecht-is-nederland/index.json",
+        "metadata": "/api/v1/projecten/hoe-hecht-is-nederland/metadata.json",
+        "profielen": "/api/v1/projecten/hoe-hecht-is-nederland/profielen.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "provincies": "/api/v1/projecten/hoe-hecht-is-nederland/provincies.json",
+        "tijdlijn": "/api/v1/projecten/hoe-hecht-is-nederland/tijdlijn.json",
+        "verbondenheid": "/api/v1/projecten/hoe-hecht-is-nederland/verbondenheid.json",
+        "vertrouwen": "/api/v1/projecten/hoe-hecht-is-nederland/vertrouwen.json",
+        "zelf": "/api/v1/projecten/hoe-hecht-is-nederland/manifest.json"
+      },
       "slug": "hoe-hecht-is-nederland",
       "status": "publiek",
       "titel": "Hoe hecht is Nederland?"
     },
     {
+      "beschrijving": "Aanvullende reeks voor kennismigranten naast de EU/EFTA- en IND-reeksen.",
       "bronnen": [
         "cbs-84808ned",
         "cbs-84809ned",
         "cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
       ],
+      "compatibiliteit": [
+        {
+          "bestand": "data.json",
+          "pad": "/projecten/migratie-in-nederland/data.json"
+        }
+      ],
       "contentPad": "content/projecten/migratie-in-nederland/index.html",
-      "publiekeEindpunten": {},
+      "eigenaar": "t-Bataafsche Broederschap",
+      "metadataPad": "gegevensproducten/migratie-in-nederland/product.yaml",
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/migratie-in-nederland/data.json",
+        "index": "/api/v1/projecten/migratie-in-nederland/index.json",
+        "kennismigranten": "/api/v1/projecten/migratie-in-nederland/data.json",
+        "metadata": "/api/v1/projecten/migratie-in-nederland/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/migratie-in-nederland/manifest.json"
+      },
       "slug": "migratie-in-nederland",
-      "status": "bestaand",
+      "status": "publiek",
       "titel": "Waarom komen mensen naar Nederland?"
     },
     {
@@ -206,7 +306,17 @@
       "contentPad": "content/projecten/migratieachtergrond-per-gemeenten/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/migratieachtergrond-per-gemeenten/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/migratieachtergrond-per-gemeenten/data.json",
+        "gemeenten": "/api/v1/projecten/migratieachtergrond-per-gemeenten/gemeenten.json",
+        "geometrie": "/api/v1/projecten/migratieachtergrond-per-gemeenten/geometrie.json",
+        "index": "/api/v1/projecten/migratieachtergrond-per-gemeenten/index.json",
+        "metadata": "/api/v1/projecten/migratieachtergrond-per-gemeenten/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/migratieachtergrond-per-gemeenten/manifest.json"
+      },
       "slug": "migratieachtergrond-per-gemeenten",
       "status": "publiek",
       "titel": "Migratieachtergrond per Gemeente"
@@ -227,7 +337,17 @@
       "contentPad": "content/projecten/politiek-ouderschap/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/politiek-ouderschap/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/politiek-ouderschap/data.json",
+        "index": "/api/v1/projecten/politiek-ouderschap/index.json",
+        "kamerleden": "/api/v1/projecten/politiek-ouderschap/kamerleden.json",
+        "metadata": "/api/v1/projecten/politiek-ouderschap/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "samenvatting": "/api/v1/projecten/politiek-ouderschap/samenvatting.json",
+        "zelf": "/api/v1/projecten/politiek-ouderschap/manifest.json"
+      },
       "slug": "politiek-ouderschap",
       "status": "publiek",
       "titel": "Politiek Ouderschap"
@@ -251,7 +371,15 @@
       "contentPad": "content/projecten/remittances-nederland/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/remittances-nederland/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/remittances-nederland/data.json",
+        "index": "/api/v1/projecten/remittances-nederland/index.json",
+        "metadata": "/api/v1/projecten/remittances-nederland/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/remittances-nederland/manifest.json"
+      },
       "slug": "remittances-nederland",
       "status": "publiek",
       "titel": "Remittance Monitor Nederland"
@@ -273,7 +401,23 @@
       "contentPad": "content/projecten/tennet-monitor-voorzieningszekerheid-2026/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/tennet-monitor-voorzieningszekerheid-2026/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/data.json",
+        "duurcurves": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/duurcurves.json",
+        "hoofdresultaten": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/hoofdresultaten.json",
+        "index": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/index.json",
+        "metadata": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/metadata.json",
+        "ontbrekende-capaciteit": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/ontbrekende-capaciteit.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "simultaniteit": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/simultaniteit.json",
+        "systeemmix": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/systeemmix.json",
+        "tekortevents": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/tekortevents.json",
+        "vraag": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/vraag.json",
+        "weersverdelingen": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/weersverdelingen.json",
+        "zelf": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/manifest.json"
+      },
       "slug": "tennet-monitor-voorzieningszekerheid-2026",
       "status": "publiek",
       "titel": "TenneT Monitor Voorzieningszekerheid 2026"
@@ -295,7 +439,17 @@
       "contentPad": "content/projecten/uitkeringen-naar-afkomst/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/uitkeringen-naar-afkomst/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/uitkeringen-naar-afkomst/data.json",
+        "index": "/api/v1/projecten/uitkeringen-naar-afkomst/index.json",
+        "metadata": "/api/v1/projecten/uitkeringen-naar-afkomst/metadata.json",
+        "nationaal": "/api/v1/projecten/uitkeringen-naar-afkomst/nationaal.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "regionaal": "/api/v1/projecten/uitkeringen-naar-afkomst/regionaal.json",
+        "zelf": "/api/v1/projecten/uitkeringen-naar-afkomst/manifest.json"
+      },
       "slug": "uitkeringen-naar-afkomst",
       "status": "publiek",
       "titel": "Uitkeringen Naar Afkomst"
@@ -320,7 +474,17 @@
       "contentPad": "content/projecten/verdachten-naar-afkomst/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/verdachten-naar-afkomst/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "actuele-reeks": "/api/v1/projecten/verdachten-naar-afkomst/actuele-reeks.json",
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/verdachten-naar-afkomst/data.json",
+        "historisch-2022": "/api/v1/projecten/verdachten-naar-afkomst/historisch-2022.json",
+        "index": "/api/v1/projecten/verdachten-naar-afkomst/index.json",
+        "metadata": "/api/v1/projecten/verdachten-naar-afkomst/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/verdachten-naar-afkomst/manifest.json"
+      },
       "slug": "verdachten-naar-afkomst",
       "status": "publiek",
       "titel": "Verdachten naar afkomst"
@@ -341,7 +505,16 @@
       "contentPad": "content/projecten/wereldbevolking/index.html",
       "eigenaar": "t-Bataafsche Broederschap",
       "metadataPad": "gegevensproducten/wereldbevolking/product.yaml",
-      "publiekeEindpunten": {},
+      "publiekeEindpunten": {
+        "api": "/api/v1/index.json",
+        "catalogus": "/api/v1/catalogus/index.json",
+        "data": "/api/v1/projecten/wereldbevolking/data.json",
+        "index": "/api/v1/projecten/wereldbevolking/index.json",
+        "landen": "/api/v1/projecten/wereldbevolking/landen.json",
+        "metadata": "/api/v1/projecten/wereldbevolking/metadata.json",
+        "projecten": "/api/v1/projecten/index.json",
+        "zelf": "/api/v1/projecten/wereldbevolking/manifest.json"
+      },
       "slug": "wereldbevolking",
       "status": "publiek",
       "titel": "Wereldbevolking"

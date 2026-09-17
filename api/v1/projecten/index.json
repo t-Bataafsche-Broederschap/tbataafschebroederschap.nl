@@ -1,5 +1,5 @@
 {
-  "aantalProjectenMetApi": 13,
+  "aantalProjectenMetApi": 15,
   "links": {
     "api": "/api/v1/index.json",
     "catalogus": "/api/v1/catalogus/index.json",
@@ -18,6 +18,12 @@
       "manifest": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/manifest.json",
       "slug": "begrotingsstromen-van-de-europese-Unie",
       "titel": "Begrotingsstromen van de Europese Unie"
+    },
+    {
+      "href": "/api/v1/projecten/criminaliteit-nederland/index.json",
+      "manifest": "/api/v1/projecten/criminaliteit-nederland/manifest.json",
+      "slug": "criminaliteit-nederland",
+      "titel": "Criminaliteit in Nederland"
     },
     {
       "href": "/api/v1/projecten/culturele-afstandskaart/index.json",
@@ -42,6 +48,12 @@
       "manifest": "/api/v1/projecten/hoe-hecht-is-nederland/manifest.json",
       "slug": "hoe-hecht-is-nederland",
       "titel": "Hoe hecht is Nederland?"
+    },
+    {
+      "href": "/api/v1/projecten/migratie-in-nederland/index.json",
+      "manifest": "/api/v1/projecten/migratie-in-nederland/manifest.json",
+      "slug": "migratie-in-nederland",
+      "titel": "Waarom komen mensen naar Nederland?"
     },
     {
       "href": "/api/v1/projecten/migratieachtergrond-per-gemeenten/index.json",

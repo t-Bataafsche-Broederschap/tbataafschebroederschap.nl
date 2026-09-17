@@ -3,6 +3,471 @@
   "relaties": [
     {
       "naar": "gegevensset:autochtoonse-bevolking-leeftijdsopbouw",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-bevolking-migratie",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-bevolking-tijdlijn",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-bevolking-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-37325",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-70751ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-70787ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-82235ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-84808ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-84809ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85369ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85451ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85468ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85496ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85671ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85848ned",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-12e-volkstelling-annex-woningtelling-1947",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025",
+      "type": "publiceert",
+      "van": "bewerking:autochtoonse-nederlandse-bevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie",
+      "type": "publiceert",
+      "van": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-github-com-world-atlas-topojson",
+      "type": "publiceert",
+      "van": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie"
+    },
+    {
+      "naar": "gegevensset:eu-begrotingsstromen-jaarwaarden",
+      "type": "publiceert",
+      "van": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie"
+    },
+    {
+      "naar": "gegevensset:eu-begrotingsstromen-landen",
+      "type": "publiceert",
+      "van": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie"
+    },
+    {
+      "naar": "gegevensset:eu-begrotingsstromen-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+      "type": "publiceert",
+      "van": "bewerking:criminaliteit-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-tijdlijn-migratie-1849-2025",
+      "type": "publiceert",
+      "van": "bewerking:criminaliteit-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+      "type": "publiceert",
+      "van": "bewerking:criminaliteit-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+      "type": "publiceert",
+      "van": "bewerking:criminaliteit-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:criminaliteit-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:criminaliteit-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey",
+      "type": "publiceert",
+      "van": "bewerking:culturele-afstandskaart-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-ygeiamou-gr-originele-excel-download-cultural-map-2023",
+      "type": "publiceert",
+      "van": "bewerking:culturele-afstandskaart-publicatie"
+    },
+    {
+      "naar": "gegevensset:culturele-afstand-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:culturele-afstandskaart-publicatie"
+    },
+    {
+      "naar": "gegevensset:culturele-kaart-records",
+      "type": "publiceert",
+      "van": "bewerking:culturele-afstandskaart-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-veiligheidsmonitor-2025",
+      "type": "publiceert",
+      "van": "bewerking:demografische-veiligheid-publicatie"
+    },
+    {
+      "naar": "gegevensset:demografische-veiligheid-demografie",
+      "type": "publiceert",
+      "van": "bewerking:demografische-veiligheid-publicatie"
+    },
+    {
+      "naar": "gegevensset:demografische-veiligheid-meetdefinities",
+      "type": "publiceert",
+      "van": "bewerking:demografische-veiligheid-publicatie"
+    },
+    {
+      "naar": "gegevensset:demografische-veiligheid-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:demografische-veiligheid-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
+      "type": "publiceert",
+      "van": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
+      "type": "publiceert",
+      "van": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-kerncijfers",
+      "type": "publiceert",
+      "van": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-leeftijdsopbouw",
+      "type": "publiceert",
+      "van": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-leeftijdsspecifiek",
+      "type": "publiceert",
+      "van": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-samenleven-in-de-toekomst",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:buurtcohesie-regio",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-historie",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-profielen",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-tijdlijn",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:vertrouwen-tijdlijn",
+      "type": "publiceert",
+      "van": "bewerking:hoe-hecht-is-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:migratie-kennismigranten",
+      "type": "publiceert",
+      "van": "bewerking:migratie-in-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
+      "type": "publiceert",
+      "van": "bewerking:migratieachtergrond-per-gemeenten-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond",
+      "type": "publiceert",
+      "van": "bewerking:migratieachtergrond-per-gemeenten-publicatie"
+    },
+    {
+      "naar": "gegevensset:migratie-gemeenten",
+      "type": "publiceert",
+      "van": "bewerking:migratieachtergrond-per-gemeenten-publicatie"
+    },
+    {
+      "naar": "gegevensset:migratie-gemeenten-geometrie",
+      "type": "publiceert",
+      "van": "bewerking:migratieachtergrond-per-gemeenten-publicatie"
+    },
+    {
+      "naar": "gegevensset:migratie-gemeenten-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:migratieachtergrond-per-gemeenten-publicatie"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-kamerleden",
+      "type": "publiceert",
+      "van": "bewerking:politiek-ouderschap-publicatie"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-samenvatting",
+      "type": "publiceert",
+      "van": "bewerking:politiek-ouderschap-publicatie"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:politiek-ouderschap-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-begrip-nationaliteit",
+      "type": "publiceert",
+      "van": "bewerking:remittances-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+      "type": "publiceert",
+      "van": "bewerking:remittances-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:remittances-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:remittances-nederland-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-2026",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-lokaal-lokale-tennet-csv-bestanden",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-duurcurves",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-hoofdresultaten",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-ontbrekende-capaciteit",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-simultaniteit",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-systeemmix",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-tekortevents",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-vraag",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:tennet-2026-weersverdelingen",
+      "type": "publiceert",
+      "van": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-nationaal",
+      "type": "publiceert",
+      "van": "bewerking:uitkeringen-naar-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-regionaal",
+      "type": "publiceert",
+      "van": "bewerking:uitkeringen-naar-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:uitkeringen-naar-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:verdachten-actuele-reeks",
+      "type": "publiceert",
+      "van": "bewerking:verdachten-naar-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:verdachten-historisch-2022",
+      "type": "publiceert",
+      "van": "bewerking:verdachten-naar-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:verdachten-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:verdachten-naar-afkomst-publicatie"
+    },
+    {
+      "naar": "gegevensset:bronset-population-un-org-verenigde-naties-world-population-prospects",
+      "type": "publiceert",
+      "van": "bewerking:wereldbevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:wereldbevolking-landen",
+      "type": "publiceert",
+      "van": "bewerking:wereldbevolking-publicatie"
+    },
+    {
+      "naar": "gegevensset:wereldbevolking-viewmodel",
+      "type": "publiceert",
+      "van": "bewerking:wereldbevolking-publicatie"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:autochtoonse-bevolking-legacy-baseline"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-bevolking-leeftijdsopbouw",
       "type": "afgeleid-van",
       "van": "gegevensbron:autochtoonse-bevolking-legacy-baseline"
     },
@@ -22,9 +487,19 @@
       "van": "gegevensbron:autochtoonse-bevolking-legacy-baseline"
     },
     {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:belastingdienst-btw-tarieven-2026"
+    },
+    {
       "naar": "gegevensset:remittances-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensbron:belastingdienst-btw-tarieven-2026"
+    },
+    {
+      "naar": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-2026"
     },
     {
       "naar": "gegevensset:bronset-cbs-2026",
@@ -32,9 +507,19 @@
       "van": "gegevensbron:cbs-2026"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-37325"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-37325",
       "type": "levert",
       "van": "gegevensbron:cbs-37325"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-60027ned"
     },
     {
       "naar": "gegevensset:sociale-cohesie-historie",
@@ -42,9 +527,19 @@
       "van": "gegevensbron:cbs-60027ned"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-70751ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-70751ned",
       "type": "levert",
       "van": "gegevensbron:cbs-70751ned"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-70787ned"
     },
     {
       "naar": "gegevensset:bronset-cbs-70787ned",
@@ -52,9 +547,19 @@
       "van": "gegevensbron:cbs-70787ned"
     },
     {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-80270ned"
+    },
+    {
       "naar": "gegevensset:sociale-cohesie-verbondenheid",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-80270ned"
+    },
+    {
+      "naar": "bewerking:uitkeringen-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-80794ned"
     },
     {
       "naar": "gegevensset:uitkeringen-regionaal",
@@ -62,9 +567,19 @@
       "van": "gegevensbron:cbs-80794ned"
     },
     {
+      "naar": "bewerking:verdachten-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-81959ned"
+    },
+    {
       "naar": "gegevensset:verdachten-historisch-2022",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-81959ned"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-82235ned"
     },
     {
       "naar": "gegevensset:bronset-cbs-82235ned",
@@ -72,18 +587,33 @@
       "van": "gegevensbron:cbs-82235ned"
     },
     {
-      "naar": "gegevensset:bronset-cbs-83648ned",
-      "type": "levert",
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:cbs-83648ned"
     },
     {
-      "naar": "gegevensset:bronset-cbs-83723ned",
-      "type": "levert",
+      "naar": "gegevensset:criminaliteit-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-83648ned"
+    },
+    {
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:cbs-83723ned"
     },
     {
-      "naar": "gegevensset:bronset-cbs-84808ned",
-      "type": "levert",
+      "naar": "gegevensset:criminaliteit-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-83723ned"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-84808ned"
+    },
+    {
+      "naar": "bewerking:migratie-in-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:cbs-84808ned"
     },
     {
@@ -92,14 +622,24 @@
       "van": "gegevensbron:cbs-84808ned"
     },
     {
-      "naar": "gegevensset:bronset-cbs-84809ned",
-      "type": "levert",
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-84809ned"
+    },
+    {
+      "naar": "bewerking:migratie-in-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:cbs-84809ned"
     },
     {
       "naar": "gegevensset:bronset-cbs-84809ned",
       "type": "levert",
       "van": "gegevensbron:cbs-84809ned"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85146ned"
     },
     {
       "naar": "gegevensset:buurtcohesie-regio",
@@ -107,9 +647,24 @@
       "van": "gegevensbron:cbs-85146ned"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85369ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-85369ned",
       "type": "levert",
       "van": "gegevensbron:cbs-85369ned"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85384ned"
+    },
+    {
+      "naar": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85384ned"
     },
     {
       "naar": "gegevensset:geboortecijfers-kerncijfers",
@@ -127,9 +682,19 @@
       "van": "gegevensbron:cbs-85384ned"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85451ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-85451ned",
       "type": "levert",
       "van": "gegevensbron:cbs-85451ned"
+    },
+    {
+      "naar": "bewerking:migratieachtergrond-per-gemeenten-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85458ned"
     },
     {
       "naar": "gegevensset:migratie-gemeenten",
@@ -137,14 +702,29 @@
       "van": "gegevensbron:cbs-85458ned"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85468ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-85468ned",
       "type": "levert",
       "van": "gegevensbron:cbs-85468ned"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85496ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-85496ned",
       "type": "levert",
       "van": "gegevensbron:cbs-85496ned"
+    },
+    {
+      "naar": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85497ned"
     },
     {
       "naar": "gegevensset:geboortecijfers-kerncijfers",
@@ -155,6 +735,16 @@
       "naar": "gegevensset:geboortecijfers-leeftijdsspecifiek",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85497ned"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85524ned"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85533ned"
     },
     {
       "naar": "gegevensset:sociale-cohesie-profielen",
@@ -172,6 +762,11 @@
       "van": "gegevensbron:cbs-85533ned"
     },
     {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85541ned"
+    },
+    {
       "naar": "gegevensset:sociale-cohesie-profielen",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85541ned"
@@ -182,9 +777,19 @@
       "van": "gegevensbron:cbs-85541ned"
     },
     {
+      "naar": "bewerking:verdachten-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85658ned"
+    },
+    {
       "naar": "gegevensset:verdachten-actuele-reeks",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85658ned"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85671ned"
     },
     {
       "naar": "gegevensset:bronset-cbs-85671ned",
@@ -192,9 +797,19 @@
       "van": "gegevensbron:cbs-85671ned"
     },
     {
+      "naar": "bewerking:uitkeringen-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85692ned"
+    },
+    {
       "naar": "gegevensset:uitkeringen-nationaal",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85692ned"
+    },
+    {
+      "naar": "bewerking:uitkeringen-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85721ned"
     },
     {
       "naar": "gegevensset:uitkeringen-nationaal",
@@ -202,9 +817,19 @@
       "van": "gegevensbron:cbs-85721ned"
     },
     {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85766ned"
+    },
+    {
       "naar": "gegevensset:sociale-cohesie-profielen",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85766ned"
+    },
+    {
+      "naar": "bewerking:demografische-veiligheid-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85844ned"
     },
     {
       "naar": "gegevensset:demografische-veiligheid-demografie",
@@ -222,9 +847,19 @@
       "van": "gegevensbron:cbs-85844ned"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85848ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-85848ned",
       "type": "levert",
       "van": "gegevensbron:cbs-85848ned"
+    },
+    {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-85879ned"
     },
     {
       "naar": "gegevensset:remittances-viewmodel",
@@ -232,9 +867,19 @@
       "van": "gegevensbron:cbs-85879ned"
     },
     {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-86136ned"
+    },
+    {
       "naar": "gegevensset:remittances-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-86136ned"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-buitensluiting-2024"
     },
     {
       "naar": "gegevensset:sociale-cohesie-verbondenheid",
@@ -242,9 +887,19 @@
       "van": "gegevensbron:cbs-buitensluiting-2024"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-12e-volkstelling-annex-woningtelling-1947"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-12e-volkstelling-annex-woningtelling-1947",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-12e-volkstelling-annex-woningtelling-1947"
+    },
+    {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-begrip-nationaliteit"
     },
     {
       "naar": "gegevensset:bronset-cbs-cbs-begrip-nationaliteit",
@@ -252,14 +907,29 @@
       "van": "gegevensbron:cbs-cbs-begrip-nationaliteit"
     },
     {
+      "naar": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
     },
     {
-      "naar": "gegevensset:bronset-cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
-      "type": "levert",
+      "naar": "bewerking:migratie-in-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
+    },
+    {
+      "naar": "gegevensset:migratie-kennismigranten",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
+    },
+    {
+      "naar": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind"
     },
     {
       "naar": "gegevensset:bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
@@ -267,9 +937,14 @@
       "van": "gegevensbron:cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind"
     },
     {
-      "naar": "gegevensset:bronset-cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
-      "type": "levert",
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit"
+    },
+    {
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde"
     },
     {
       "naar": "gegevensset:bronset-cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
@@ -277,9 +952,19 @@
       "van": "gegevensbron:cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde"
     },
     {
+      "naar": "bewerking:migratieachtergrond-per-gemeenten-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari"
+    },
+    {
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-tijdlijn-migratie-1849-2025"
     },
     {
       "naar": "gegevensset:bronset-cbs-cbs-tijdlijn-migratie-1849-2025",
@@ -287,9 +972,19 @@
       "van": "gegevensbron:cbs-cbs-tijdlijn-migratie-1849-2025"
     },
     {
+      "naar": "bewerking:demografische-veiligheid-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-cbs-veiligheidsmonitor-2025"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-veiligheidsmonitor-2025",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-veiligheidsmonitor-2025"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:cbs-veiligheidsmonitor-2025"
     },
     {
       "naar": "gegevensset:sociale-cohesie-historie",
@@ -297,9 +992,19 @@
       "van": "gegevensbron:cbs-veiligheidsmonitor-2025"
     },
     {
+      "naar": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie"
+    },
+    {
       "naar": "gegevensset:bronset-commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie",
       "type": "levert",
       "van": "gegevensbron:commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie"
+    },
+    {
+      "naar": "bewerking:culturele-afstandskaart-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:culturele-kaart-2023-xlsx"
     },
     {
       "naar": "gegevensset:culturele-kaart-records",
@@ -307,9 +1012,19 @@
       "van": "gegevensbron:culturele-kaart-2023-xlsx"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet"
+    },
+    {
       "naar": "gegevensset:bronset-data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet",
       "type": "levert",
       "van": "gegevensbron:data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet"
+    },
+    {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland"
     },
     {
       "naar": "gegevensset:bronset-dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
@@ -317,9 +1032,19 @@
       "van": "gegevensbron:dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland"
     },
     {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:dnb-remittances-2026"
+    },
+    {
       "naar": "gegevensset:remittances-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensbron:dnb-remittances-2026"
+    },
+    {
+      "naar": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:eubudget-ranglijst"
     },
     {
       "naar": "gegevensset:eu-begrotingsstromen-jaarwaarden",
@@ -337,9 +1062,19 @@
       "van": "gegevensbron:eubudget-ranglijst"
     },
     {
+      "naar": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:github-com-world-atlas-topojson"
+    },
+    {
       "naar": "gegevensset:bronset-github-com-world-atlas-topojson",
       "type": "levert",
       "van": "gegevensbron:github-com-world-atlas-topojson"
+    },
+    {
+      "naar": "bewerking:culturele-afstandskaart-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey"
     },
     {
       "naar": "gegevensset:bronset-lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey",
@@ -347,9 +1082,24 @@
       "van": "gegevensbron:lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey"
     },
     {
+      "naar": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:lokaal-lokale-tennet-csv-bestanden"
+    },
+    {
       "naar": "gegevensset:bronset-lokaal-lokale-tennet-csv-bestanden",
       "type": "levert",
       "van": "gegevensbron:lokaal-lokale-tennet-csv-bestanden"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:netbeheer-voedingsgebieden"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers"
     },
     {
       "naar": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers",
@@ -357,9 +1107,19 @@
       "van": "gegevensbron:netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers"
     },
     {
+      "naar": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme"
+    },
+    {
       "naar": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme",
       "type": "levert",
       "van": "gegevensbron:netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme"
+    },
+    {
+      "naar": "bewerking:politiek-ouderschap-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:parlement-biografieen"
     },
     {
       "naar": "gegevensset:politiek-ouderschap-kamerleden",
@@ -367,14 +1127,34 @@
       "van": "gegevensbron:parlement-biografieen"
     },
     {
-      "naar": "gegevensset:politiek-ouderschap-kamerleden",
-      "type": "afgeleid-van",
+      "naar": "bewerking:politiek-ouderschap-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:parlement-eerste-kamer"
     },
     {
       "naar": "gegevensset:politiek-ouderschap-kamerleden",
       "type": "afgeleid-van",
+      "van": "gegevensbron:parlement-eerste-kamer"
+    },
+    {
+      "naar": "bewerking:politiek-ouderschap-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:parlement-tweede-kamer"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-kamerleden",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:parlement-tweede-kamer"
+    },
+    {
+      "naar": "bewerking:migratieachtergrond-per-gemeenten-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:pdok-cbs-gebiedsindelingen-2025"
+    },
+    {
+      "naar": "bewerking:uitkeringen-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:pdok-cbs-gebiedsindelingen-2025"
     },
     {
       "naar": "gegevensset:migratie-gemeenten-geometrie",
@@ -387,9 +1167,19 @@
       "van": "gegevensbron:pdok-cbs-gebiedsindelingen-2025"
     },
     {
+      "naar": "bewerking:wereldbevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:population-un-org-verenigde-naties-world-population-prospects"
+    },
+    {
       "naar": "gegevensset:bronset-population-un-org-verenigde-naties-world-population-prospects",
       "type": "levert",
       "van": "gegevensbron:population-un-org-verenigde-naties-world-population-prospects"
+    },
+    {
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven"
     },
     {
       "naar": "gegevensset:bronset-rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
@@ -397,9 +1187,19 @@
       "van": "gegevensbron:rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven"
     },
     {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:scp-burgerperspectieven-2025-2"
+    },
+    {
       "naar": "gegevensset:sociale-cohesie-verbondenheid",
       "type": "afgeleid-van",
       "van": "gegevensbron:scp-burgerperspectieven-2025-2"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:scp-nl-scp-burgerperspectieven-2025-sociale-cohesie"
     },
     {
       "naar": "gegevensset:bronset-scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
@@ -407,9 +1207,19 @@
       "van": "gegevensbron:scp-nl-scp-burgerperspectieven-2025-sociale-cohesie"
     },
     {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020"
+    },
+    {
       "naar": "gegevensset:bronset-scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
       "type": "levert",
       "van": "gegevensbron:scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:scp-nl-scp-samenleven-in-de-toekomst"
     },
     {
       "naar": "gegevensset:bronset-scp-nl-scp-samenleven-in-de-toekomst",
@@ -417,9 +1227,19 @@
       "van": "gegevensbron:scp-nl-scp-samenleven-in-de-toekomst"
     },
     {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023"
+    },
+    {
       "naar": "gegevensset:bronset-scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
       "type": "levert",
       "van": "gegevensbron:scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:scp-samenleven-toekomst-2024"
     },
     {
       "naar": "gegevensset:sociale-cohesie-verbondenheid",
@@ -427,14 +1247,29 @@
       "van": "gegevensbron:scp-samenleven-toekomst-2024"
     },
     {
-      "naar": "gegevensset:sociale-cohesie-verbondenheid",
-      "type": "afgeleid-van",
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:scp-sco-2023"
     },
     {
       "naar": "gegevensset:sociale-cohesie-verbondenheid",
       "type": "afgeleid-van",
+      "van": "gegevensbron:scp-sco-2023"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:scp-sim-2020"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:scp-sim-2020"
+    },
+    {
+      "naar": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:tennet-monitor-2026-csv"
     },
     {
       "naar": "gegevensset:tennet-2026-duurcurves",
@@ -482,9 +1317,19 @@
       "van": "gegevensbron:tennet-monitor-2026-csv"
     },
     {
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960"
+    },
+    {
       "naar": "gegevensset:bronset-verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
       "type": "levert",
       "van": "gegevensbron:verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039"
     },
     {
       "naar": "gegevensset:bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
@@ -492,9 +1337,19 @@
       "van": "gegevensbron:volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039"
     },
     {
+      "naar": "bewerking:migratieachtergrond-per-gemeenten-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond"
+    },
+    {
       "naar": "gegevensset:bronset-vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond",
       "type": "levert",
       "van": "gegevensbron:vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond"
+    },
+    {
+      "naar": "bewerking:wereldbevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:worldometer-bevolkingsreeksen"
     },
     {
       "naar": "gegevensset:wereldbevolking-landen",
@@ -507,9 +1362,19 @@
       "van": "gegevensbron:worldometer-bevolkingsreeksen"
     },
     {
+      "naar": "bewerking:culturele-afstandskaart-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:ygeiamou-gr-originele-excel-download-cultural-map-2023"
+    },
+    {
       "naar": "gegevensset:bronset-ygeiamou-gr-originele-excel-download-cultural-map-2023",
       "type": "levert",
       "van": "gegevensbron:ygeiamou-gr-originele-excel-download-cultural-map-2023"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort"
     },
     {
       "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort",
@@ -517,9 +1382,19 @@
       "van": "gegevensbron:zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort"
     },
     {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf"
+    },
+    {
       "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf",
       "type": "levert",
       "van": "gegevensbron:zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020"
     },
     {
       "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020",
@@ -527,24 +1402,14 @@
       "van": "gegevensbron:zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020"
     },
     {
-      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025",
-      "type": "levert",
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
       "van": "gegevensbron:zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
     },
     {
-      "naar": "gegevensset:migratie-in-nederland-migratie-data",
-      "type": "verwerkt-tot",
-      "van": "gegevensset:bronset-cbs-84808ned"
-    },
-    {
-      "naar": "gegevensset:migratie-in-nederland-migratie-data",
-      "type": "verwerkt-tot",
-      "van": "gegevensset:bronset-cbs-84809ned"
-    },
-    {
-      "naar": "gegevensset:migratie-in-nederland-migratie-data",
-      "type": "verwerkt-tot",
-      "van": "gegevensset:bronset-cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025",
+      "type": "levert",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
     },
     {
       "naar": "gegevensset:sociale-cohesie-viewmodel",
@@ -630,6 +1495,116 @@
       "naar": "gegevensset:sociale-cohesie-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensset:vertrouwen-tijdlijn"
+    },
+    {
+      "naar": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:autochtoonse-nederlandse-bevolking"
+    },
+    {
+      "naar": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:begrotingsstromen-van-de-europese-Unie"
+    },
+    {
+      "naar": "bewerking:criminaliteit-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:criminaliteit-nederland"
+    },
+    {
+      "naar": "bewerking:culturele-afstandskaart-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:culturele-afstandskaart"
+    },
+    {
+      "naar": "bewerking:demografische-veiligheid-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:demografische-veiligheid"
+    },
+    {
+      "naar": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:geboortecijfers-nederlandse-afkomst"
+    },
+    {
+      "naar": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:hoe-hecht-is-nederland"
+    },
+    {
+      "naar": "bewerking:migratie-in-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:migratie-in-nederland"
+    },
+    {
+      "naar": "product:autochtoonse-nederlandse-bevolking",
+      "type": "gebruikt-gegevensproduct",
+      "van": "product:migratie-in-nederland"
+    },
+    {
+      "naar": "bewerking:migratieachtergrond-per-gemeenten-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:migratieachtergrond-per-gemeenten"
+    },
+    {
+      "naar": "bewerking:politiek-ouderschap-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:politiek-ouderschap"
+    },
+    {
+      "naar": "bewerking:remittances-nederland-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:remittances-nederland"
+    },
+    {
+      "naar": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:tennet-monitor-voorzieningszekerheid-2026"
+    },
+    {
+      "naar": "bewerking:uitkeringen-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:uitkeringen-naar-afkomst"
+    },
+    {
+      "naar": "bewerking:verdachten-naar-afkomst-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:verdachten-naar-afkomst"
+    },
+    {
+      "naar": "bewerking:wereldbevolking-publicatie",
+      "type": "verwerkt-door",
+      "van": "product:wereldbevolking"
+    },
+    {
+      "naar": "visualisatie:autochtoonse-tijdlijn",
+      "type": "gebruikt-door",
+      "van": "variant:autochtoonse-weergave"
+    },
+    {
+      "naar": "visualisatie:culturele-kaart",
+      "type": "gebruikt-door",
+      "van": "variant:culturele-projectie"
+    },
+    {
+      "naar": "visualisatie:eu-begrotingsstromen",
+      "type": "gebruikt-door",
+      "van": "variant:eu-maatstaf"
+    },
+    {
+      "naar": "visualisatie:remittances-impact",
+      "type": "gebruikt-door",
+      "van": "variant:remittances-btw"
+    },
+    {
+      "naar": "visualisatie:tennet-schaarste",
+      "type": "gebruikt-door",
+      "van": "variant:tennet-scenario"
+    },
+    {
+      "naar": "visualisatie:wereldbevolking",
+      "type": "gebruikt-door",
+      "van": "variant:wereldbevolking-maatstaf"
     }
   ]
 }

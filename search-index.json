@@ -1,4 +1,10 @@
 [
+	{"title": "Begrippen",
+		"url": "/begrippen/",
+		"section": "Pagina",
+		"description": "Uitleg van begrippen die in de data, grafieken en productbeschrijvingen worden gebruikt.",
+		"content": " Begrippen Zoek een term voor de betekenis, de bijbehorende projecten en de gebruikte herkomst.\nZoek in begrippen Begrippen laden…\n"
+	},
 	{"title": "Remittance Monitor",
 		"url": "/projecten/remittances-nederland/",
 		"section": "Projecten",
@@ -27,7 +33,7 @@
 		"url": "/data-catalogus/",
 		"section": "Pagina",
 		"description": "Overzicht van gegevensbronnen, gegevenssets, lagen en publieke bestanden.",
-		"content": " Data-catalogus Een statisch overzicht van de gegevensproducten, bronnen, gegevenssets, lagen en herkomstlijnen achter de projectgrafieken.\nProducten - Gegevensbronnen - Gegevenssets - Herkomstlijnen - Herkomstlijnen zijn de afstamming van data: welke gegevensbron een gegevensset levert, en welke verwerkte of publieke bestanden daaruit zijn afgeleid.\nZoeken Laag Alle lagen Gegevensproducten Product Status Bronnen Eindpunten Gegevensbronnen Bron Aanbieder Type Producten Gegevenssets Gegevensset Product Laag Bestanden "
+		"content": " Data-catalogus Een overzicht van de gegevensproducten, bronnen, bewerkingen, varianten en grafieken achter de projecten.\nProducten - Gegevensbronnen - Gegevenssets - Afkomstlijnen - Bewerkingen - Varianten - Begrippen - Afkomstlijnen tonen welke bron, bewerking en gegevensset bij elkaar horen. Een variant verwijst naar een instelling van een grafiek; de link bewaart die instelling in de URL.\nAfkomstdiagram Begin met een product. Open daarna een bron, bewerking, gegevensset of variant voor de details.\nNaar alle begrippen Zoeken in producten en onderdelen Gegevenslaag Alle lagen Alle producten Kies een product om het Afkomstdiagram te openen.\nDe productkaarten tonen alvast welke bronnen, datasets en varianten beschikbaar zijn.\nSleep om te verschuiven. Gebruik scrollen of de knoppen om te zoomen. − Reset + Gebruik de pijltjestoetsen om te verschuiven. Gebruik plus en min om te zoomen en nul om de kaart te herstellen.\nSelecteer een onderdeel in het diagram.\nToon relaties als lijst Gegevensproducten Product Status Bronnen Eindpunten Gegevensbronnen Bron Aanbieder Type Producten Gegevenssets Gegevensset Product Laag Bestanden Varianten en grafieken Variant Product Opties Grafiek "
 	},
 	{"title": "Politiek Ouderschap",
 		"url": "/projecten/politiek-ouderschap/",

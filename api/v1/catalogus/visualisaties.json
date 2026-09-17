@@ -1,0 +1,54 @@
+{
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
+  "schemaVersie": 1,
+  "visualisaties": [
+    {
+      "anker": "project-chart",
+      "href": "/projecten/autochtoonse-nederlandse-bevolking/?view=population#project-chart",
+      "id": "visualisatie:autochtoonse-tijdlijn",
+      "product": "autochtoonse-nederlandse-bevolking",
+      "titel": "Bevolking en migratie door de tijd",
+      "variant": "variant:autochtoonse-weergave"
+    },
+    {
+      "anker": "tab-scarcity",
+      "href": "/projecten/tennet-monitor-voorzieningszekerheid-2026/?scenario=high-demand#tab-scarcity",
+      "id": "visualisatie:tennet-schaarste",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "titel": "Schaarste per weerscenario",
+      "variant": "variant:tennet-scenario"
+    },
+    {
+      "anker": "project-chart",
+      "href": "/projecten/culturele-afstandskaart/?mode=standard#project-chart",
+      "id": "visualisatie:culturele-kaart",
+      "product": "culturele-afstandskaart",
+      "titel": "Culturele waardenkaart",
+      "variant": "variant:culturele-projectie"
+    },
+    {
+      "anker": "project-chart",
+      "href": "/projecten/begrotingsstromen-van-de-europese-Unie/?metric=net_balance_pct_gni#project-chart",
+      "id": "visualisatie:eu-begrotingsstromen",
+      "product": "begrotingsstromen-van-de-europese-Unie",
+      "titel": "Begrotingsstromen per lidstaat",
+      "variant": "variant:eu-maatstaf"
+    },
+    {
+      "anker": "economische-impact",
+      "href": "/projecten/remittances-nederland/?btw=21#economische-impact",
+      "id": "visualisatie:remittances-impact",
+      "product": "remittances-nederland",
+      "titel": "Economische impact van remittances",
+      "variant": "variant:remittances-btw"
+    },
+    {
+      "anker": "project-chart",
+      "href": "/projecten/wereldbevolking/?maatstaf=population#project-chart",
+      "id": "visualisatie:wereldbevolking",
+      "product": "wereldbevolking",
+      "titel": "Wereldbevolking per land",
+      "variant": "variant:wereldbevolking-maatstaf"
+    }
+  ]
+}

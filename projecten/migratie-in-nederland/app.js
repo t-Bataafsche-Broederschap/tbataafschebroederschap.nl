@@ -1,5 +1,5 @@
 const DATA_URL = "/api/v1/projecten/autochtoonse-nederlandse-bevolking/data.json";
-const EXTRA_DATA_URL = "./migratie-data.json";
+const EXTRA_DATA_URL = "/api/v1/projecten/migratie-in-nederland/data.json";
 const SVG_NS = "http://www.w3.org/2000/svg";
 
 const page = document.querySelector(".migration-page");

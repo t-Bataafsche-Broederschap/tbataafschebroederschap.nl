@@ -719,6 +719,9 @@
 				throw new Error(`data.json antwoordde met HTTP ${response.status}`);
 			}
 			state.data = await response.json();
+			const urlParams = new URLSearchParams(window.location.search);
+			const vatRate = byId("impact-vat-rate");
+			if (["0", "9", "21"].includes(urlParams.get("btw")) && vatRate) vatRate.value = urlParams.get("btw");
 			bindSummary(state.data);
 			bindImpactTooltips(state.data);
 			renderTrend(state.data);

@@ -15,11 +15,11 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import datetime as dt
 import json
 import re
 from collections import Counter
 from dataclasses import dataclass
-import datetime as dt
 from pathlib import Path
 from typing import Any
 
@@ -259,7 +259,7 @@ def enrich_member(seed: MemberSeed) -> dict[str, Any]:
     try:
         html = fetch_text(seed.url, timeout=10, attempts=1)
         evidence = children_text_from_html(html)
-    except Exception:
+    except (http.RequestException, RuntimeError, ValueError):
         markdown = fetch_text(seed.url, reader=True, timeout=25, attempts=1)
         evidence = children_text_from_markdown(markdown)
     parent_status, child_count = classify_children(evidence)

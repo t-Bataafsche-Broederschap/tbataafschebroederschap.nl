@@ -490,6 +490,10 @@ const topologyUrl = isSmallScreen() ? "https://cdn.jsdelivr.net/npm/world-atlas@
 const [budgetData, topology] = await Promise.all([fetch("/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/data.json").then((response) => response.json()), fetch(topologyUrl).then((response) => response.json())]);
 
 data = budgetData;
+const urlParams = new URLSearchParams(window.location.search);
+if (formatters[urlParams.get("metric")]) metric = urlParams.get("metric");
+const urlYear = Number(urlParams.get("year"));
+if (Number.isFinite(urlYear) && data.byYear?.[String(urlYear)]) year = urlYear;
 world = topojson.feature(topology, topology.objects.countries);
 cacheFeatures();
 cacheMetricExtents();

@@ -1,4 +1,4 @@
-const LONG_DATA = [
+let LONG_DATA = [
 	{ year: 1948, total: 133255, per1000: 14, solved: 91760, suspects: null, clearance: 68.9, provisional: false },
 	{ year: 1949, total: 105080, per1000: 11, solved: 70340, suspects: null, clearance: 66.9, provisional: false },
 	{ year: 1950, total: 103135, per1000: 10, solved: 68635, suspects: null, clearance: 66.5, provisional: false },
@@ -78,7 +78,7 @@ const LONG_DATA = [
 	{ year: 2024, total: 815940, per1000: 45, solved: 208120, suspects: 249505, clearance: 25.5, provisional: true },
 	{ year: 2025, total: 816210, per1000: 45, solved: 180085, suspects: 252000, clearance: 22.1, provisional: true },
 ];
-const TYPE_DATA = [
+let TYPE_DATA = [
 	{ year: 2010, wealth: 715600.0, violence: 115800.0, destruction: 158300.0, order: 27700.0, drugs: 18000.0, weapons: 6500.0 },
 	{ year: 2011, wealth: 723200.0, violence: 114100.0, destruction: 155600.0, order: 26600.0, drugs: 17100.0, weapons: 7400.0 },
 	{ year: 2012, wealth: 704300.0, violence: 110500.0, destruction: 139600.0, order: 22800.0, drugs: 17600.0, weapons: 7000.0 },
@@ -96,7 +96,7 @@ const TYPE_DATA = [
 	{ year: 2024, wealth: 464100.0, violence: 78000.0, destruction: 77300.0, order: 25200.0, drugs: 15300.0, weapons: 7300.0 },
 	{ year: 2025, wealth: 451740.0, violence: 83345.0, destruction: 76940.0, order: 26590.0, drugs: 16115.0, weapons: 8005.0 },
 ];
-const WEALTH_DATA = [
+let WEALTH_DATA = [
 	{ year: 2010, wealth: 715600.0, theft: 670500.0, other: 45100.0 },
 	{ year: 2011, wealth: 723200.0, theft: 678000.0, other: 45200.0 },
 	{ year: 2012, wealth: 704300.0, theft: 656500.0, other: 47800.0 },
@@ -114,7 +114,7 @@ const WEALTH_DATA = [
 	{ year: 2024, wealth: 464100.0, theft: 358500.0, other: 105600.0 },
 	{ year: 2025, wealth: 451740.0, theft: 354475.0, other: 97265.0 },
 ];
-const VIOLENCE_DATA = [
+let VIOLENCE_DATA = [
 	{ year: 2010, violence: 115800.0, assault: 61400.0, threat: 38100.0, sexual: 9700.0, other: 6600.0 },
 	{ year: 2011, violence: 114100.0, assault: 60500.0, threat: 37700.0, sexual: 9100.0, other: 6700.0 },
 	{ year: 2012, violence: 110500.0, assault: 57600.0, threat: 37300.0, sexual: 9100.0, other: 6500.0 },
@@ -132,7 +132,7 @@ const VIOLENCE_DATA = [
 	{ year: 2024, violence: 78000.0, assault: 40400.0, threat: 23000.0, sexual: 9900.0, other: 4800.0 },
 	{ year: 2025, violence: 83345.0, assault: 42460.0, threat: 24705.0, sexual: 11120.0, other: 5060.0 },
 ];
-const ONLINE_DATA = [
+let ONLINE_DATA = [
 	{ year: 2012, cyber: 4500.0, fraud: 8500.0 },
 	{ year: 2013, cyber: 2400.0, fraud: 6100.0 },
 	{ year: 2014, cyber: 2000.0, fraud: 6000.0 },
@@ -147,7 +147,7 @@ const ONLINE_DATA = [
 	{ year: 2023, cyber: 12100.0, fraud: 88100.0 },
 	{ year: 2024, cyber: 7000.0, fraud: 94300.0 },
 ];
-const VICTIM_DATA = [
+let VICTIM_DATA = [
 	{ year: 2010, total: 100.0, wealth: 100.0, destruction: 100.0 },
 	{ year: 2011, total: 98.0, wealth: 103.1, destruction: 96.9 },
 	{ year: 2012, total: 95.5, wealth: 102.4, destruction: 92.6 },
@@ -160,7 +160,7 @@ const VICTIM_DATA = [
 	{ year: 2021, total: 54.1, wealth: 51.8, destruction: 53.0 },
 	{ year: 2023, total: 62.7, wealth: 62.3, destruction: 56.7 },
 ];
-const COMPOSITION = [
+let COMPOSITION = [
 	{ category: "Vermogensmisdrijven", y2010: 59.6, y2025: 55.3 },
 	{ category: "Verkeersmisdrijven", y2010: 12.0, y2025: 17.1 },
 	{ category: "Geweld en seksueel", y2010: 9.6, y2025: 10.2 },
@@ -171,9 +171,9 @@ const COMPOSITION = [
 	{ category: "Overige misdrijven", y2010: 1.3, y2025: 1.8 },
 ];
 
-const MIGRATION_CHARTS = ["overviewChart", "overviewRateChart", "totalChart", "rateChart"];
-const CBS_MIGRATION_TIMELINE = "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true";
-const TIMELINE_EVENTS = [
+let MIGRATION_CHARTS = ["overviewChart", "overviewRateChart", "totalChart", "rateChart"];
+let CBS_MIGRATION_TIMELINE = "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true";
+let TIMELINE_EVENTS = [
 	{ year: 1948, label: "Migratie uit voormalig Nederlands-Indië (1945–1962)", detail: "Tussen 1945 en 1962 vestigden zich ongeveer 400.000 mensen uit voormalig Nederlands-Indië in Nederland; deze stroom begon vóór de grafiekreeks.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
 	{ year: 1960, label: "Italiaanse en Spaanse arbeidsmigratie", detail: "De werving begon eind jaren vijftig; eerst kwamen vooral Italiaanse en Spaanse werknemers. 1960 is een beleidsmijlpaal, geen exact beginjaar.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
 	{ year: 1964, label: "Turkse en Marokkaanse arbeidsmigratie (1964–1969)", detail: "Later in de jaren zestig volgden vooral Turkse en Marokkaanse werknemers; de wervingsakkoorden dateren uit 1964 en 1969.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
@@ -736,3 +736,17 @@ renderLongTable();
 initControls();
 renderOverview();
 window.addEventListener("resize", () => renderCurrent(), { passive: true });
+
+async function loadCanonicalData() {
+	const response = await fetch("/api/v1/projecten/criminaliteit-nederland/data.json", { headers: { Accept: "application/json" } });
+	if (!response.ok) throw new Error(`criminaliteit-data antwoordde met HTTP ${response.status}`);
+	const payload = await response.json();
+	({ LONG_DATA, TYPE_DATA, WEALTH_DATA, VIOLENCE_DATA, ONLINE_DATA, VICTIM_DATA, COMPOSITION, MIGRATION_CHARTS, CBS_MIGRATION_TIMELINE, TIMELINE_EVENTS } = payload);
+	renderMetrics();
+	renderComposition();
+	renderLongTable();
+	renderOverview();
+	renderCurrent();
+}
+
+loadCanonicalData().catch((error) => console.error(error));

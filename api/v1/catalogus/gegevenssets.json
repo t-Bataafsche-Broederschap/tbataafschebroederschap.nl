@@ -114,26 +114,6 @@
     {
       "bestanden": [],
       "formaat": "odata",
-      "gegevensbron": "cbs-83648ned",
-      "id": "bronset-cbs-83648ned",
-      "laag": "ruw",
-      "product": "criminaliteit-nederland",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Geregistreerde criminaliteit; soort misdrijf, regio"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-83723ned",
-      "id": "bronset-cbs-83723ned",
-      "laag": "ruw",
-      "product": "criminaliteit-nederland",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Geregistreerde criminaliteit; tijdreeks vanaf 1948"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
       "gegevensbron": "cbs-84808ned",
       "id": "bronset-cbs-84808ned",
       "laag": "ruw",
@@ -244,32 +224,12 @@
     {
       "bestanden": [],
       "formaat": "web",
-      "gegevensbron": "cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
-      "id": "bronset-cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
-      "laag": "ruw",
-      "product": "migratie-in-nederland",
-      "status": "gecatalogiseerd",
-      "titel": "CBS: Minder immigratie in 2024, vooral minder kennismigranten"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
       "gegevensbron": "cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
       "id": "bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
       "laag": "ruw",
       "product": "geboortecijfers-nederlandse-afkomst",
       "status": "gecatalogiseerd",
       "titel": "CBS: Moeders iets ouder bij geboorte eerste kind"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
-      "gegevensbron": "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
-      "id": "bronset-cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
-      "laag": "ruw",
-      "product": "criminaliteit-nederland",
-      "status": "gecatalogiseerd",
-      "titel": "CBS: Onderzoeksomschrijving geregistreerde criminaliteit"
     },
     {
       "bestanden": [],
@@ -550,6 +510,21 @@
       "bestanden": [
         {
           "formaat": "json",
+          "pad": "/api/v1/projecten/criminaliteit-nederland/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "criminaliteit-viewmodel",
+      "laag": "publiek",
+      "product": "criminaliteit-nederland",
+      "publiekBestand": "/api/v1/projecten/criminaliteit-nederland/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel criminaliteit"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
           "pad": "/api/v1/projecten/culturele-afstandskaart/data.json"
         }
       ],
@@ -774,18 +749,17 @@
     {
       "bestanden": [
         {
-          "aantalRecords": 6,
-          "bytes": 594,
           "formaat": "json",
-          "pad": "content/projecten/migratie-in-nederland/migratie-data.json"
+          "pad": "/api/v1/projecten/migratie-in-nederland/data.json"
         }
       ],
       "formaat": "json",
-      "id": "migratie-in-nederland-migratie-data",
-      "laag": "publiek",
+      "id": "migratie-kennismigranten",
+      "laag": "verwerkt",
       "product": "migratie-in-nederland",
-      "status": "bestaand",
-      "titel": "Waarom komen mensen naar Nederland? - migratie-data.json"
+      "publiekBestand": "/api/v1/projecten/migratie-in-nederland/data.json",
+      "status": "beschreven",
+      "titel": "Kennismigranten van buiten de EU/EFTA"
     },
     {
       "bestanden": [

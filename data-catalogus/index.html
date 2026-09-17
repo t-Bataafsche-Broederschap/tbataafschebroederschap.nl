@@ -22,6 +22,7 @@
 				<a href="/">Home</a>
 				<a href="/projecten/">Projecten</a>
 				<a href="/data-catalogus/">Data-catalogus</a>
+				<a href="/begrippen/">Begrippen</a>
 				<a href="/regels/">Regels</a>
 				<a href="/over/">Over</a>
 			</nav>
@@ -49,10 +50,10 @@
 						</div>
 						<div>
 							<dt>Bijgewerkt</dt>
-							<dd><time datetime="2026-07-07T22:04:59&#43;02:00">2026-07-07</time></dd>
+							<dd><time datetime="2026-09-17T22:32:56&#43;02:00">2026-09-17</time></dd>
 						</div>
 					</dl>
-					<p>Een statisch overzicht van de gegevensproducten, bronnen, gegevenssets, lagen en herkomstlijnen achter de projectgrafieken.</p>
+					<p>Een overzicht van de gegevensproducten, bronnen, bewerkingen, varianten en grafieken achter de projecten.</p>
 				</header>
 				<section class="data-catalogus__summary" aria-label="Catalogusoverzicht">
 					<div>
@@ -68,24 +69,78 @@
 						<strong id="catalogusSets">-</strong>
 					</div>
 					<div>
-						<span>Herkomstlijnen</span>
+						<span>Afkomstlijnen</span>
 						<strong id="catalogusHerkomstlijnen">-</strong>
 					</div>
+					<div>
+						<span>Bewerkingen</span>
+						<strong id="catalogusBewerkingen">-</strong>
+					</div>
+					<div>
+						<span>Varianten</span>
+						<strong id="catalogusVarianten">-</strong>
+					</div>
+					<div>
+						<span>Begrippen</span>
+						<strong id="catalogusBegrippen">-</strong>
+					</div>
 				</section>
-				<section class="data-catalogus__note" aria-label="Uitleg herkomstlijnen">
-					<p><strong>Herkomstlijnen</strong> zijn de afstamming van data: welke gegevensbron een gegevensset levert, en welke verwerkte of publieke bestanden daaruit zijn afgeleid.</p>
+				<section class="data-catalogus__note" aria-label="Uitleg afkomstlijnen">
+					<p><strong>Afkomstlijnen</strong> tonen welke bron, bewerking en gegevensset bij elkaar horen. Een variant verwijst naar een instelling van een grafiek; de link bewaart die instelling in de URL.</p>
 				</section>
-				<section class="data-catalogus__controls" aria-label="Catalogusfilters">
-					<label>
-						<span>Zoeken</span>
-						<input id="catalogusZoek" type="search" autocomplete="off" placeholder="Bron, set, product of bestand" />
-					</label>
-					<label>
-						<span>Laag</span>
-						<select id="catalogusLaag">
-							<option value="">Alle lagen</option>
-						</select>
-					</label>
+				<section class="data-catalogus__section" aria-labelledby="afkomstTitel">
+					<div class="data-catalogus__section-heading">
+						<div>
+							<h2 id="afkomstTitel">Afkomstdiagram</h2>
+							<p class="data-catalogus__muted">Begin met een product. Open daarna een bron, bewerking, gegevensset of variant voor de details.</p>
+						</div>
+						<a href="/begrippen/">Naar alle begrippen</a>
+					</div>
+					<div class="data-catalogus__controls afkomstdiagram__controls" aria-label="Afkomstdiagramfilters">
+						<label>
+							<span>Zoeken in producten en onderdelen</span>
+							<input id="catalogusZoek" type="search" autocomplete="off" placeholder="Product, bron, dataset of variant" />
+						</label>
+						<label>
+							<span>Gegevenslaag</span>
+							<select id="catalogusLaag">
+								<option value="">Alle lagen</option>
+							</select>
+						</label>
+					</div>
+					<div class="afkomstdiagram__history" aria-label="Recent bekeken producten">
+						<button id="catalogusAlleProducten" type="button">Alle producten</button>
+						<div id="catalogusGeschiedenis"></div>
+					</div>
+					<div id="catalogusProductKaarten" class="afkomstdiagram__products" aria-label="Gegevensproducten"></div>
+					<p id="catalogusResultaatStatus" class="data-catalogus__muted" aria-live="polite"></p>
+					<div id="catalogusGraphEmpty" class="afkomstdiagram__empty">
+						<p><strong>Kies een product om het Afkomstdiagram te openen.</strong></p>
+						<p>De productkaarten tonen alvast welke bronnen, datasets en varianten beschikbaar zijn.</p>
+					</div>
+					<div id="catalogusGraphLayout" class="afkomstdiagram__layout" hidden>
+						<div class="data-catalogus__graph-wrap afkomstdiagram__graph-wrap">
+							<div class="afkomstdiagram__map-toolbar" aria-label="Kaartbediening">
+								<span class="data-catalogus__muted">Sleep om te verschuiven. Gebruik scrollen of de knoppen om te zoomen.</span>
+								<div class="afkomstdiagram__map-actions">
+									<button type="button" data-map-action="zoom-out" aria-label="Zoom uit">−</button>
+									<button type="button" data-map-action="reset" aria-label="Herstel kaartpositie">Reset</button>
+									<button type="button" data-map-action="zoom-in" aria-label="Zoom in">+</button>
+								</div>
+							</div>
+							<div id="catalogusGraphViewport" class="afkomstdiagram__viewport" tabindex="0" role="region" aria-label="Pannend afkomstdiagram" aria-describedby="afkomstMapHelp">
+								<p id="afkomstMapHelp" class="sr-only">Gebruik de pijltjestoetsen om te verschuiven. Gebruik plus en min om te zoomen en nul om de kaart te herstellen.</p>
+								<div id="catalogusGraph" class="afkomstdiagram__stage" role="group" aria-labelledby="afkomstTitel"></div>
+							</div>
+						</div>
+						<aside id="catalogusDetail" class="data-catalogus__detail afkomstdiagram__detail" aria-live="polite">
+							<p class="data-catalogus__muted">Selecteer een onderdeel in het diagram.</p>
+						</aside>
+					</div>
+					<details class="data-catalogus__relations">
+						<summary>Toon relaties als lijst</summary>
+						<ul id="catalogusRelatieLijst"></ul>
+					</details>
 				</section>
 				<section class="data-catalogus__section" aria-labelledby="productenTitel">
 					<h2 id="productenTitel">Gegevensproducten</h2>
@@ -135,6 +190,22 @@
 						</table>
 					</div>
 				</section>
+				<section class="data-catalogus__section" aria-labelledby="variantenTitel">
+					<h2 id="variantenTitel">Varianten en grafieken</h2>
+					<div class="data-catalogus__table-wrap">
+						<table>
+							<thead>
+								<tr>
+									<th>Variant</th>
+									<th>Product</th>
+									<th>Opties</th>
+									<th>Grafiek</th>
+								</tr>
+							</thead>
+							<tbody id="catalogusVariantRijen"></tbody>
+						</table>
+					</div>
+				</section>
 			</article>
 			<script type="module" src="/data-catalogus.js"></script>
 		</main>
@@ -143,7 +214,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs">12019</a> – <a id="target-year" href="http://updateyourfooter.com/">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated" datetime="2026-07-07">2026-07-07</time></sub>
+					<sub>Last updated: <time id="updated" datetime="2026-09-17">2026-09-17</time></sub>
 				</p>
 			</div>
 			<a class="secret" href="#" role="button" aria-label="Lokale CSS in- of uitschakelen" aria-pressed="false" onclick="toggleLocalStyles(event)">π</a>

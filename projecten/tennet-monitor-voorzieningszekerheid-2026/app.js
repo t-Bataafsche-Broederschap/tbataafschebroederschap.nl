@@ -196,6 +196,16 @@ function populateControls() {
 	populateYears();
 }
 
+function applyUrlState() {
+	const params = new URLSearchParams(window.location.search);
+	const scenario = params.get("scenario");
+	if (scenario && visibleScenarios().some((item) => item.key === scenario)) state.scenario = scenario;
+	const metric = params.get("metric");
+	if (metric === "lole" || metric === "eens") state.metric = metric;
+	const year = Number(params.get("year"));
+	if (Number.isFinite(year)) state.year = year;
+}
+
 function populateYears() {
 	const years = availableYears();
 	if (!years.includes(state.year)) state.year = years.at(-1);
@@ -901,6 +911,7 @@ fetch("/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/data.json")
 	})
 	.then((loaded) => {
 		data = loaded;
+		applyUrlState();
 		populateControls();
 		normSlider.addEventListener("input", () => {
 			state.normIndex = Number(normSlider.value);

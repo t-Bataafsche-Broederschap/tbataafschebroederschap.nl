@@ -722,6 +722,10 @@ async function init() {
 	metadata = payload.metadata;
 	state.selectedCode = metadata.defaultCountryCode || state.selectedCode;
 	state.year = metadata.yearExtent?.[1] || state.year;
+	const params = new URLSearchParams(window.location.search);
+	if (dimensions[params.get("mode")]) state.mode = params.get("mode");
+	const year = Number(params.get("year"));
+	if (Number.isFinite(year)) state.year = year;
 	yearRange.min = metadata.yearExtent?.[0] || 1981;
 	yearRange.max = metadata.yearExtent?.[1] || 2022;
 	yearRange.value = state.year;

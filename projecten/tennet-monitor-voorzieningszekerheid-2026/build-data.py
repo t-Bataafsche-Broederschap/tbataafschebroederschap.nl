@@ -9,10 +9,10 @@ Build the TenneT monitor data bundle from the CSV exports in data/.
 from __future__ import annotations
 
 import csv
+import datetime as dt
 import json
 import math
 import re
-import datetime as dt
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent

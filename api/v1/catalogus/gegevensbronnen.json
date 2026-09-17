@@ -112,11 +112,11 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-83648ned",
-      "opmerking": "Aanvullende detailtabel naar soort misdrijf en regio.",
+      "opmerking": "",
       "producten": [
         "criminaliteit-nederland"
       ],
-      "rol": "context",
+      "rol": "data",
       "titel": "CBS StatLine: Geregistreerde criminaliteit; soort misdrijf, regio",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83648NED"
@@ -124,11 +124,11 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-83723ned",
-      "opmerking": "Langetermijnreeks voor misdrijven, relatieve cijfers, opgehelderde misdrijven en verdachtenregistraties.",
+      "opmerking": "",
       "producten": [
         "criminaliteit-nederland"
       ],
-      "rol": "context",
+      "rol": "data",
       "titel": "CBS StatLine: Geregistreerde criminaliteit; tijdreeks vanaf 1948",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83723NED"
@@ -451,11 +451,11 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
-      "opmerking": "Recente context en de afzonderlijke reeks voor niet-EU/EFTA-kennismigranten.",
+      "opmerking": "",
       "producten": [
         "migratie-in-nederland"
       ],
-      "rol": "context",
+      "rol": "data",
       "titel": "CBS: Minder immigratie in 2024, vooral minder kennismigranten",
       "type": "web",
       "url": "https://www.cbs.nl/item?sc_itemid=e98c2ad9-6a05-4de6-a3dc-8f31e826f654&sc_lang=nl-nl"
@@ -475,11 +475,11 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
-      "opmerking": "Methodologische context en trendbreuk rond 2010.",
+      "opmerking": "",
       "producten": [
         "criminaliteit-nederland"
       ],
-      "rol": "context",
+      "rol": "methode",
       "titel": "CBS: Onderzoeksomschrijving geregistreerde criminaliteit",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksomschrijvingen/geregistreerde-criminaliteit"

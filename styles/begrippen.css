@@ -1,0 +1,89 @@
+.begrippen-page {
+	width: min(74rem, calc(100% - (2 * var(--space-page))));
+	margin: 0 auto;
+	padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.begrippen-page__header {
+	max-width: 55rem;
+}
+
+.begrippen-page__header h1 {
+	margin: 0 0 0.75rem;
+	font-size: clamp(2rem, 5vw, 4rem);
+	line-height: 1.05;
+}
+
+.begrippen-page__header p {
+	margin: 0 0 1.25rem;
+	color: var(--color-muted);
+}
+
+.begrippen-page__header label {
+	display: block;
+}
+
+.begrippen-page__header input {
+	width: min(34rem, 100%);
+	min-height: 2.6rem;
+	border: 1px solid rgba(244, 239, 230, 0.18);
+	border-radius: 4px;
+	padding: 0 0.75rem;
+	background: var(--color-surface);
+	color: var(--color-text);
+	font: inherit;
+}
+
+.begrippen-page__letters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45rem;
+	margin: 2rem 0 1rem;
+}
+
+.begrippen-page__letters a {
+	min-width: 2rem;
+	padding: 0.35rem 0.55rem;
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	text-align: center;
+}
+
+.begrippen-page__status {
+	color: var(--color-muted);
+}
+
+.begrippen-page__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.begrippen-page__list > div {
+	padding: 1rem;
+	border: 1px solid rgba(244, 239, 230, 0.14);
+	background: var(--color-surface);
+}
+
+.begrippen-page__list dt {
+	margin: 0 0 0.4rem;
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+.begrippen-page__list dd {
+	margin: 0;
+	line-height: 1.55;
+}
+
+.begrippen-page__projects {
+	margin-top: 0.75rem;
+	color: var(--color-muted);
+	font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+	.begrippen-page__list {
+		grid-template-columns: 1fr;
+	}
+}

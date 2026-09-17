@@ -1,0 +1,503 @@
+{
+  "begrippen": [
+    {
+      "ankers": [
+        "/projecten/culturele-afstandskaart/#glossary-title"
+      ],
+      "definitie": "De rechte lijn tussen twee landen in dezelfde projectie; afstanden zijn alleen binnen dezelfde modus vergelijkbaar.",
+      "id": "begrip:afstand",
+      "producten": [
+        "culturele-afstandskaart"
+      ],
+      "term": "Afstand"
+    },
+    {
+      "ankers": [
+        "/projecten/autochtoonse-nederlandse-bevolking/#glossary-title"
+      ],
+      "definitie": "Een oude CBS-term die niet meer als hoofdindeling wordt gebruikt; deze pagina toont daarom ook nieuwere indelingen.",
+      "id": "begrip:autochtoon",
+      "producten": [
+        "autochtoonse-nederlandse-bevolking"
+      ],
+      "term": "Autochtoon"
+    },
+    {
+      "ankers": [
+        "/projecten/hoe-hecht-is-nederland/#glossary-title"
+      ],
+      "definitie": "Het bereik rond een enquêteschatting waarbinnen de werkelijke waarde met 95 procent betrouwbaarheid wordt verwacht.",
+      "id": "begrip:betrouwbaarheidsinterval",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "term": "Betrouwbaarheidsinterval"
+    },
+    {
+      "ankers": [
+        "/projecten/verdachten-naar-afkomst/#glossary-title"
+      ],
+      "definitie": "Basisregistratie Personen. Relatieve cijfers tellen alleen personen die in dit bevolkingsregister voorkomen.",
+      "id": "begrip:brp",
+      "producten": [
+        "verdachten-naar-afkomst"
+      ],
+      "term": "BRP"
+    },
+    {
+      "ankers": [
+        "/projecten/begrotingsstromen-van-de-europese-Unie/#glossary-title"
+      ],
+      "definitie": "Een maat voor de omvang van een economie; saldi als percentage hiervan maken landen beter vergelijkbaar.",
+      "id": "begrip:bruto-nationaal-inkomen",
+      "producten": [
+        "begrotingsstromen-van-de-europese-Unie"
+      ],
+      "term": "Bruto nationaal inkomen"
+    },
+    {
+      "ankers": [
+        "/projecten/hoe-hecht-is-nederland/#glossary-title"
+      ],
+      "definitie": "Een schaalscore van 0 tot 10 uit concrete uitspraken over omgang, contact, hulp, thuisgevoel en aanspreekbaarheid in de woonbuurt.",
+      "id": "begrip:buurtcohesie",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "term": "Buurtcohesie"
+    },
+    {
+      "ankers": [
+        "/projecten/remittances-nederland/#glossary-title"
+      ],
+      "definitie": "Bestemmingsbedrag gedeeld door het inkomen van de gelijknamige herkomstgroep; een schaalvergelijking, geen afzendermeting.",
+      "id": "begrip:corridorproxy",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "term": "Corridorproxy"
+    },
+    {
+      "ankers": [
+        "/projecten/culturele-afstandskaart/#glossary-title"
+      ],
+      "definitie": "Een tweedimensionale kaart waarop landen worden geplaatst op basis van samengevatte waarden uit enquêtes.",
+      "id": "begrip:culturele-waardenruimte",
+      "producten": [
+        "culturele-afstandskaart"
+      ],
+      "term": "Culturele waardenruimte"
+    },
+    {
+      "ankers": [
+        "/projecten/tennet-monitor-voorzieningszekerheid-2026/#glossary-title"
+      ],
+      "definitie": "Expected Energy Not Served: de verwachte hoeveelheid elektriciteit die bij tekort niet geleverd kan worden.",
+      "id": "begrip:eens-ens",
+      "producten": [
+        "tennet-monitor-voorzieningszekerheid-2026"
+      ],
+      "term": "EENS/ENS"
+    },
+    {
+      "ankers": [
+        "/projecten/autochtoonse-nederlandse-bevolking/#glossary-title"
+      ],
+      "definitie": "Eerste generatie is zelf in het buitenland geboren; tweede generatie is in Nederland geboren met migratieachtergrond volgens de gebruikte CBS-definitie.",
+      "id": "begrip:eerste-en-tweede-generatie",
+      "producten": [
+        "autochtoonse-nederlandse-bevolking"
+      ],
+      "term": "Eerste en tweede generatie"
+    },
+    {
+      "ankers": [
+        "/projecten/migratie-in-nederland/#glossary-title"
+      ],
+      "definitie": "Een gangbare maar niet eenduidige term; het CBS telt expats daarom niet als afzonderlijke categorie.",
+      "id": "begrip:expat",
+      "producten": [
+        "migratie-in-nederland"
+      ],
+      "term": "Expat"
+    },
+    {
+      "ankers": [
+        "/projecten/migratieachtergrond-per-gemeenten/#glossary-title"
+      ],
+      "definitie": "De kaart gebruikt één vaste gemeentelijke indeling, zodat jaren visueel vergelijkbaar blijven.",
+      "id": "begrip:gemeentegrenzen-2025",
+      "producten": [
+        "migratieachtergrond-per-gemeenten"
+      ],
+      "term": "Gemeentegrenzen 2025"
+    },
+    {
+      "ankers": [
+        "/projecten/criminaliteit-nederland/#glossary-title"
+      ],
+      "definitie": "Een door de politie vastgelegd misdrijf. Dit is niet hetzelfde als alle daadwerkelijk gepleegde criminaliteit.",
+      "id": "begrip:geregistreerd-misdrijf",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "term": "Geregistreerd misdrijf"
+    },
+    {
+      "ankers": [
+        "/projecten/uitkeringen-naar-afkomst/#glossary-title"
+      ],
+      "definitie": "De CBS-herkomstindeling waarmee groepen worden onderscheiden; dit is een statistische categorie, geen nationaliteit.",
+      "id": "begrip:herkomst",
+      "producten": [
+        "uitkeringen-naar-afkomst"
+      ],
+      "term": "Herkomst"
+    },
+    {
+      "ankers": [
+        "/projecten/remittances-nederland/#glossary-title"
+      ],
+      "definitie": "CBS-indeling op basis van het geboorteland van de persoon en diens ouders; niet hetzelfde als nationaliteit.",
+      "id": "begrip:herkomstgroep",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "term": "Herkomstgroep"
+    },
+    {
+      "ankers": [
+        "/projecten/migratieachtergrond-per-gemeenten/#glossary-title"
+      ],
+      "definitie": "Het land dat CBS gebruikt om iemands herkomstcategorie te bepalen; dit is niet altijd hetzelfde als geboorteland.",
+      "id": "begrip:herkomstland",
+      "producten": [
+        "migratieachtergrond-per-gemeenten"
+      ],
+      "term": "Herkomstland"
+    },
+    {
+      "ankers": [
+        "/projecten/migratie-in-nederland/#glossary-title"
+      ],
+      "definitie": "Iemand die vanuit het buitenland naar Nederland komt en hier bij een gemeente wordt ingeschreven.",
+      "id": "begrip:immigrant",
+      "producten": [
+        "migratie-in-nederland"
+      ],
+      "term": "Immigrant"
+    },
+    {
+      "ankers": [
+        "/projecten/politiek-ouderschap/#glossary-title"
+      ],
+      "definitie": "Een lid dat op de actuele Parlement.com-lijst voor de Eerste Kamer of Tweede Kamer staat op het moment dat de data is opgehaald.",
+      "id": "begrip:kamerlid",
+      "producten": [
+        "politiek-ouderschap"
+      ],
+      "term": "Kamerlid"
+    },
+    {
+      "ankers": [
+        "/projecten/wereldbevolking/#glossary-title"
+      ],
+      "definitie": "Een schaal waarin gelijke stappen gelijke verhoudingen tonen. Daardoor blijven kleine en grote landen tegelijk leesbaar.",
+      "id": "begrip:logaritmische-schaal",
+      "producten": [
+        "wereldbevolking"
+      ],
+      "term": "Logaritmische schaal"
+    },
+    {
+      "ankers": [
+        "/projecten/tennet-monitor-voorzieningszekerheid-2026/#glossary-title"
+      ],
+      "definitie": "Loss of Load Expectation: het verwachte aantal uren per jaar waarin niet volledig aan de elektriciteitsvraag kan worden voldaan.",
+      "id": "begrip:lole",
+      "producten": [
+        "tennet-monitor-voorzieningszekerheid-2026"
+      ],
+      "term": "LOLE"
+    },
+    {
+      "ankers": [
+        "/projecten/migratieachtergrond-per-gemeenten/#glossary-title"
+      ],
+      "definitie": "Een CBS-indeling op basis van herkomstland en geboorteland van personen en, afhankelijk van de definitie, ouders.",
+      "id": "begrip:migratieachtergrond",
+      "producten": [
+        "migratieachtergrond-per-gemeenten"
+      ],
+      "term": "Migratieachtergrond"
+    },
+    {
+      "ankers": [
+        "/projecten/migratie-in-nederland/#glossary-title"
+      ],
+      "definitie": "De reden of verblijfsvergunning die bij de eerste immigratie aan de komst wordt gekoppeld.",
+      "id": "begrip:migratiemotief",
+      "producten": [
+        "migratie-in-nederland"
+      ],
+      "term": "Migratiemotief"
+    },
+    {
+      "ankers": [
+        "/projecten/geboortecijfers-nederlandse-afkomst/#glossary-title"
+      ],
+      "definitie": "CBS-indeling voor personen die zelf in Nederland zijn geboren en van wie beide ouders in Nederland zijn geboren.",
+      "id": "begrip:nederlandse-herkomst",
+      "producten": [
+        "geboortecijfers-nederlandse-afkomst"
+      ],
+      "term": "Nederlandse herkomst"
+    },
+    {
+      "ankers": [
+        "/projecten/begrotingsstromen-van-de-europese-Unie/#glossary-title"
+      ],
+      "definitie": "Een lidstaat die in een jaar meer afdraagt aan de EU-begroting dan hij ontvangt.",
+      "id": "begrip:netto-betaler",
+      "producten": [
+        "begrotingsstromen-van-de-europese-Unie"
+      ],
+      "term": "Netto betaler"
+    },
+    {
+      "ankers": [
+        "/projecten/begrotingsstromen-van-de-europese-Unie/#glossary-title"
+      ],
+      "definitie": "Een lidstaat die in een jaar meer ontvangt uit de EU-begroting dan hij afdraagt.",
+      "id": "begrip:netto-ontvanger",
+      "producten": [
+        "begrotingsstromen-van-de-europese-Unie"
+      ],
+      "term": "Netto ontvanger"
+    },
+    {
+      "ankers": [
+        "/projecten/autochtoonse-nederlandse-bevolking/#glossary-title",
+        "/projecten/wereldbevolking/#glossary-title"
+      ],
+      "definitie": "Immigratie minus emigratie in een jaar. Dit is een boekhoudkundige component van bevolkingsgroei.",
+      "id": "begrip:nettomigratie",
+      "producten": [
+        "autochtoonse-nederlandse-bevolking",
+        "wereldbevolking"
+      ],
+      "term": "Nettomigratie"
+    },
+    {
+      "ankers": [
+        "/projecten/politiek-ouderschap/#glossary-title"
+      ],
+      "definitie": "De geraadpleegde biografie bevat geen expliciete kindervermelding. Dit is geen bewijs dat iemand geen ouder is.",
+      "id": "begrip:onbekend",
+      "producten": [
+        "politiek-ouderschap"
+      ],
+      "term": "Onbekend"
+    },
+    {
+      "ankers": [
+        "/projecten/criminaliteit-nederland/#glossary-title"
+      ],
+      "definitie": "Er is ten minste één verdachte bij de politie bekend; dit zegt niet dat iemand is vervolgd of veroordeeld.",
+      "id": "begrip:opgehelderd",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "term": "Opgehelderd"
+    },
+    {
+      "ankers": [
+        "/projecten/politiek-ouderschap/#glossary-title"
+      ],
+      "definitie": "De biografie bevat onder Familie/gezin een onderdeel kinderen met een expliciete vermelding, zoals een aantal kinderen, dochters of zonen.",
+      "id": "begrip:ouder-bekend",
+      "producten": [
+        "politiek-ouderschap"
+      ],
+      "term": "Ouder bekend"
+    },
+    {
+      "ankers": [
+        "/projecten/verdachten-naar-afkomst/#glossary-title"
+      ],
+      "definitie": "Een relatieve maat die groepen van verschillende grootte vergelijkbaar maakt.",
+      "id": "begrip:per-10-000-inwoners",
+      "producten": [
+        "verdachten-naar-afkomst"
+      ],
+      "term": "Per 10.000 inwoners"
+    },
+    {
+      "ankers": [
+        "/projecten/culturele-afstandskaart/#glossary-title"
+      ],
+      "definitie": "De gekozen set assen waarmee de waarden worden getekend, zoals Inglehart-Welzel of Welzels waardenindexen.",
+      "id": "begrip:projectie",
+      "producten": [
+        "culturele-afstandskaart"
+      ],
+      "term": "Projectie"
+    },
+    {
+      "ankers": [
+        "/projecten/demografische-veiligheid/#glossary-title"
+      ],
+      "definitie": "Een enkel percentage uit de enquête-uitkomst; kleine verschillen moeten voorzichtig worden gelezen.",
+      "id": "begrip:puntschatting",
+      "producten": [
+        "demografische-veiligheid"
+      ],
+      "term": "Puntschatting"
+    },
+    {
+      "ankers": [
+        "/projecten/uitkeringen-naar-afkomst/#glossary-title"
+      ],
+      "definitie": "Gemeente- of regiocijfers die de landelijke patronen helpen duiden, maar niet altijd dezelfde uitsplitsing hebben.",
+      "id": "begrip:regionale-context",
+      "producten": [
+        "uitkeringen-naar-afkomst"
+      ],
+      "term": "Regionale context"
+    },
+    {
+      "ankers": [
+        "/projecten/remittances-nederland/#glossary-title"
+      ],
+      "definitie": "Particuliere geldovermaking vanuit Nederland naar een ontvanger in het buitenland, zoals door DNB geraamd.",
+      "id": "begrip:remittance",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "term": "Remittance"
+    },
+    {
+      "ankers": [
+        "/projecten/geboortecijfers-nederlandse-afkomst/#glossary-title"
+      ],
+      "definitie": "Levendgeborenen gedeeld door een bevolkingsnoemer. De uitkomst verandert sterk als oudere vrouwen meetellen.",
+      "id": "begrip:ruwe-geboorteratio",
+      "producten": [
+        "geboortecijfers-nederlandse-afkomst"
+      ],
+      "term": "Ruwe geboorteratio"
+    },
+    {
+      "ankers": [
+        "/projecten/demografische-veiligheid/#glossary-title"
+      ],
+      "definitie": "Het aandeel mensen dat aangeeft slachtoffer te zijn geweest van een vorm van criminaliteit of overlast.",
+      "id": "begrip:slachtofferschap",
+      "producten": [
+        "demografische-veiligheid"
+      ],
+      "term": "Slachtofferschap"
+    },
+    {
+      "ankers": [
+        "/projecten/hoe-hecht-is-nederland/#glossary-title"
+      ],
+      "definitie": "Deelname aan de samenleving en vertrouwen in andere mensen en instituties. Het CBS publiceert hiervoor meerdere indicatoren, geen enkele totaalscore.",
+      "id": "begrip:sociale-samenhang",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "term": "Sociale samenhang"
+    },
+    {
+      "ankers": [
+        "/projecten/tennet-monitor-voorzieningszekerheid-2026/#glossary-title"
+      ],
+      "definitie": "Een periode waarin het elektriciteitssysteem volgens de simulatie onvoldoende capaciteit heeft om de vraag te dekken.",
+      "id": "begrip:tekortevent",
+      "producten": [
+        "tennet-monitor-voorzieningszekerheid-2026"
+      ],
+      "term": "Tekortevent"
+    },
+    {
+      "ankers": [
+        "/projecten/geboortecijfers-nederlandse-afkomst/#glossary-title"
+      ],
+      "definitie": "Som van leeftijdsspecifieke geboortecijfers. Dit is de betere maat voor gemiddeld kindertal per vrouw.",
+      "id": "begrip:totaal-vruchtbaarheidscijfer",
+      "producten": [
+        "geboortecijfers-nederlandse-afkomst"
+      ],
+      "term": "Totaal vruchtbaarheidscijfer"
+    },
+    {
+      "ankers": [
+        "/projecten/uitkeringen-naar-afkomst/#glossary-title"
+      ],
+      "definitie": "Een persoon die in de gebruikte statistiek een uitkering ontvangt; de precieze afbakening verschilt per regeling.",
+      "id": "begrip:uitkeringsontvanger",
+      "producten": [
+        "uitkeringen-naar-afkomst"
+      ],
+      "term": "Uitkeringsontvanger"
+    },
+    {
+      "ankers": [
+        "/projecten/demografische-veiligheid/#glossary-title"
+      ],
+      "definitie": "Hoe veilig mensen zich voelen. Dit hoeft niet hetzelfde patroon te volgen als gemeten slachtofferschap.",
+      "id": "begrip:veiligheidsbeleving",
+      "producten": [
+        "demografische-veiligheid"
+      ],
+      "term": "Veiligheidsbeleving"
+    },
+    {
+      "ankers": [
+        "/projecten/verdachten-naar-afkomst/#glossary-title"
+      ],
+      "definitie": "Een persoon die door de politie als verdachte is geregistreerd; dit is niet hetzelfde als veroordeeld zijn.",
+      "id": "begrip:verdachte",
+      "producten": [
+        "verdachten-naar-afkomst"
+      ],
+      "term": "Verdachte"
+    },
+    {
+      "ankers": [
+        "/projecten/criminaliteit-nederland/#glossary-title"
+      ],
+      "definitie": "Een registratie in een zaak. Eén persoon kan daardoor binnen een jaar meer dan één keer meetellen.",
+      "id": "begrip:verdachtenregistratie",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "term": "Verdachtenregistratie"
+    },
+    {
+      "ankers": [
+        "/projecten/geboortecijfers-nederlandse-afkomst/#glossary-title"
+      ],
+      "definitie": "De TFR gedeeld door 2,1. Een ratio onder 1,00 betekent dat de vruchtbaarheid onder vervangingsniveau ligt.",
+      "id": "begrip:vervangingsratio",
+      "producten": [
+        "geboortecijfers-nederlandse-afkomst"
+      ],
+      "term": "Vervangingsratio"
+    },
+    {
+      "ankers": [
+        "/projecten/wereldbevolking/#glossary-title"
+      ],
+      "definitie": "Een berekende vergelijking waarin de actieve landenreeks wordt doorgerekend alsof netto migratie nul was.",
+      "id": "begrip:zonder-nettomigratie",
+      "producten": [
+        "wereldbevolking"
+      ],
+      "term": "Zonder nettomigratie"
+    }
+  ],
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
+  "schemaVersie": 1
+}

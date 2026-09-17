@@ -11,8 +11,8 @@ Fetch CBS demographic safety data.
 
 from __future__ import annotations
 
-import json
 import datetime as dt
+import json
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode

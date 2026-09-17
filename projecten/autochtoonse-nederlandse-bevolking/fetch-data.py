@@ -15,9 +15,9 @@ JavaScript fetcher.
 from __future__ import annotations
 
 import csv
+import datetime as dt
 import json
 import math
-import datetime as dt
 from pathlib import Path
 from typing import Any
 

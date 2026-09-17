@@ -1,0 +1,350 @@
+{
+  "bewerkingen": [
+    {
+      "id": "bewerking:autochtoonse-nederlandse-bevolking-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-85496ned",
+        "gegevensbron:cbs-85451ned",
+        "gegevensbron:cbs-85671ned",
+        "gegevensbron:cbs-85468ned",
+        "gegevensbron:cbs-85848ned",
+        "gegevensbron:cbs-70787ned",
+        "gegevensbron:cbs-37325",
+        "gegevensbron:cbs-70751ned",
+        "gegevensbron:cbs-85369ned",
+        "gegevensbron:cbs-82235ned",
+        "gegevensbron:cbs-84808ned",
+        "gegevensbron:cbs-84809ned",
+        "gegevensbron:cbs-cbs-12e-volkstelling-annex-woningtelling-1947",
+        "gegevensbron:zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort",
+        "gegevensbron:zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020",
+        "gegevensbron:zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf",
+        "gegevensbron:zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025",
+        "gegevensbron:volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
+        "gegevensbron:data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet",
+        "gegevensbron:netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers",
+        "gegevensbron:autochtoonse-bevolking-legacy-baseline",
+        "gegevensbron:cbs-85524ned",
+        "gegevensbron:cbs-85384ned",
+        "gegevensbron:netbeheer-voedingsgebieden"
+      ],
+      "product": "autochtoonse-nederlandse-bevolking",
+      "script": "content/projecten/autochtoonse-nederlandse-bevolking/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Autochtone Nederlandse bevolking",
+      "uitvoer": [
+        "gegevensset:autochtoonse-bevolking-leeftijdsopbouw",
+        "gegevensset:autochtoonse-bevolking-migratie",
+        "gegevensset:autochtoonse-bevolking-tijdlijn",
+        "gegevensset:autochtoonse-bevolking-viewmodel",
+        "gegevensset:bronset-cbs-37325",
+        "gegevensset:bronset-cbs-70751ned",
+        "gegevensset:bronset-cbs-70787ned",
+        "gegevensset:bronset-cbs-82235ned",
+        "gegevensset:bronset-cbs-84808ned",
+        "gegevensset:bronset-cbs-84809ned",
+        "gegevensset:bronset-cbs-85369ned",
+        "gegevensset:bronset-cbs-85451ned",
+        "gegevensset:bronset-cbs-85468ned",
+        "gegevensset:bronset-cbs-85496ned",
+        "gegevensset:bronset-cbs-85671ned",
+        "gegevensset:bronset-cbs-85848ned",
+        "gegevensset:bronset-cbs-cbs-12e-volkstelling-annex-woningtelling-1947",
+        "gegevensset:bronset-data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet",
+        "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers",
+        "gegevensset:bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
+        "gegevensset:bronset-zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort",
+        "gegevensset:bronset-zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf",
+        "gegevensset:bronset-zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020",
+        "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
+      ]
+    },
+    {
+      "id": "bewerking:begrotingsstromen-van-de-europese-Unie-publicatie",
+      "invoer": [
+        "gegevensbron:commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie",
+        "gegevensbron:github-com-world-atlas-topojson",
+        "gegevensbron:eubudget-ranglijst"
+      ],
+      "product": "begrotingsstromen-van-de-europese-Unie",
+      "script": "content/projecten/begrotingsstromen-van-de-europese-Unie/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Begrotingsstromen van de Europese Unie",
+      "uitvoer": [
+        "gegevensset:bronset-commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie",
+        "gegevensset:bronset-github-com-world-atlas-topojson",
+        "gegevensset:eu-begrotingsstromen-jaarwaarden",
+        "gegevensset:eu-begrotingsstromen-landen",
+        "gegevensset:eu-begrotingsstromen-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:criminaliteit-nederland-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+        "gegevensbron:cbs-cbs-tijdlijn-migratie-1849-2025",
+        "gegevensbron:verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+        "gegevensbron:rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+        "gegevensbron:cbs-83723ned",
+        "gegevensbron:cbs-83648ned",
+        "gegevensbron:cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit"
+      ],
+      "product": "criminaliteit-nederland",
+      "script": "scripts/gegevens/bouw_product.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Criminaliteit in Nederland",
+      "uitvoer": [
+        "gegevensset:bronset-cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+        "gegevensset:bronset-cbs-cbs-tijdlijn-migratie-1849-2025",
+        "gegevensset:bronset-rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+        "gegevensset:bronset-verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+        "gegevensset:criminaliteit-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:culturele-afstandskaart-publicatie",
+      "invoer": [
+        "gegevensbron:lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey",
+        "gegevensbron:ygeiamou-gr-originele-excel-download-cultural-map-2023",
+        "gegevensbron:culturele-kaart-2023-xlsx"
+      ],
+      "product": "culturele-afstandskaart",
+      "script": "content/projecten/culturele-afstandskaart/extract-data.mjs",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Culturele afstandskaart",
+      "uitvoer": [
+        "gegevensset:bronset-lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey",
+        "gegevensset:bronset-ygeiamou-gr-originele-excel-download-cultural-map-2023",
+        "gegevensset:culturele-afstand-viewmodel",
+        "gegevensset:culturele-kaart-records"
+      ]
+    },
+    {
+      "id": "bewerking:demografische-veiligheid-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-cbs-veiligheidsmonitor-2025",
+        "gegevensbron:cbs-85844ned"
+      ],
+      "product": "demografische-veiligheid",
+      "script": "content/projecten/demografische-veiligheid/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Demografische veiligheid",
+      "uitvoer": [
+        "gegevensset:bronset-cbs-cbs-veiligheidsmonitor-2025",
+        "gegevensset:demografische-veiligheid-demografie",
+        "gegevensset:demografische-veiligheid-meetdefinities",
+        "gegevensset:demografische-veiligheid-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:geboortecijfers-nederlandse-afkomst-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
+        "gegevensbron:cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
+        "gegevensbron:cbs-85497ned",
+        "gegevensbron:cbs-85384ned"
+      ],
+      "product": "geboortecijfers-nederlandse-afkomst",
+      "script": "content/projecten/geboortecijfers-nederlandse-afkomst/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Geboortecijfers Nederlandse Afkomst",
+      "uitvoer": [
+        "gegevensset:bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
+        "gegevensset:bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
+        "gegevensset:geboortecijfers-kerncijfers",
+        "gegevensset:geboortecijfers-leeftijdsopbouw",
+        "gegevensset:geboortecijfers-leeftijdsspecifiek",
+        "gegevensset:geboortecijfers-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:hoe-hecht-is-nederland-publicatie",
+      "invoer": [
+        "gegevensbron:scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+        "gegevensbron:scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+        "gegevensbron:scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+        "gegevensbron:scp-nl-scp-samenleven-in-de-toekomst",
+        "gegevensbron:cbs-60027ned",
+        "gegevensbron:cbs-80270ned",
+        "gegevensbron:cbs-85541ned",
+        "gegevensbron:cbs-85533ned",
+        "gegevensbron:cbs-85766ned",
+        "gegevensbron:cbs-85146ned",
+        "gegevensbron:cbs-veiligheidsmonitor-2025",
+        "gegevensbron:cbs-buitensluiting-2024",
+        "gegevensbron:scp-burgerperspectieven-2025-2",
+        "gegevensbron:scp-sco-2023",
+        "gegevensbron:scp-sim-2020",
+        "gegevensbron:scp-samenleven-toekomst-2024"
+      ],
+      "product": "hoe-hecht-is-nederland",
+      "script": "content/projecten/hoe-hecht-is-nederland/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Hoe hecht is Nederland?",
+      "uitvoer": [
+        "gegevensset:bronset-scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+        "gegevensset:bronset-scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+        "gegevensset:bronset-scp-nl-scp-samenleven-in-de-toekomst",
+        "gegevensset:bronset-scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+        "gegevensset:buurtcohesie-regio",
+        "gegevensset:sociale-cohesie-historie",
+        "gegevensset:sociale-cohesie-profielen",
+        "gegevensset:sociale-cohesie-tijdlijn",
+        "gegevensset:sociale-cohesie-verbondenheid",
+        "gegevensset:sociale-cohesie-viewmodel",
+        "gegevensset:vertrouwen-tijdlijn"
+      ]
+    },
+    {
+      "id": "bewerking:migratie-in-nederland-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-84808ned",
+        "gegevensbron:cbs-84809ned",
+        "gegevensbron:cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
+      ],
+      "product": "migratie-in-nederland",
+      "script": "scripts/gegevens/bouw_product.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Waarom komen mensen naar Nederland?",
+      "uitvoer": [
+        "gegevensset:migratie-kennismigranten"
+      ]
+    },
+    {
+      "id": "bewerking:migratieachtergrond-per-gemeenten-publicatie",
+      "invoer": [
+        "gegevensbron:vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond",
+        "gegevensbron:cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
+        "gegevensbron:cbs-85458ned",
+        "gegevensbron:pdok-cbs-gebiedsindelingen-2025"
+      ],
+      "product": "migratieachtergrond-per-gemeenten",
+      "script": "content/projecten/migratieachtergrond-per-gemeenten/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Migratieachtergrond per Gemeente",
+      "uitvoer": [
+        "gegevensset:bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
+        "gegevensset:bronset-vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond",
+        "gegevensset:migratie-gemeenten",
+        "gegevensset:migratie-gemeenten-geometrie",
+        "gegevensset:migratie-gemeenten-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:politiek-ouderschap-publicatie",
+      "invoer": [
+        "gegevensbron:parlement-tweede-kamer",
+        "gegevensbron:parlement-eerste-kamer",
+        "gegevensbron:parlement-biografieen"
+      ],
+      "product": "politiek-ouderschap",
+      "script": "content/projecten/politiek-ouderschap/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Politiek Ouderschap",
+      "uitvoer": [
+        "gegevensset:politiek-ouderschap-kamerleden",
+        "gegevensset:politiek-ouderschap-samenvatting",
+        "gegevensset:politiek-ouderschap-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:remittances-nederland-publicatie",
+      "invoer": [
+        "gegevensbron:dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+        "gegevensbron:cbs-cbs-begrip-nationaliteit",
+        "gegevensbron:cbs-86136ned",
+        "gegevensbron:cbs-85879ned",
+        "gegevensbron:dnb-remittances-2026",
+        "gegevensbron:belastingdienst-btw-tarieven-2026"
+      ],
+      "product": "remittances-nederland",
+      "script": "content/projecten/remittances-nederland/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Remittance Monitor Nederland",
+      "uitvoer": [
+        "gegevensset:bronset-cbs-cbs-begrip-nationaliteit",
+        "gegevensset:bronset-dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+        "gegevensset:remittances-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:tennet-monitor-voorzieningszekerheid-2026-publicatie",
+      "invoer": [
+        "gegevensbron:netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme",
+        "gegevensbron:cbs-2026",
+        "gegevensbron:lokaal-lokale-tennet-csv-bestanden",
+        "gegevensbron:tennet-monitor-2026-csv"
+      ],
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "script": "content/projecten/tennet-monitor-voorzieningszekerheid-2026/build-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: TenneT Monitor Voorzieningszekerheid 2026",
+      "uitvoer": [
+        "gegevensset:bronset-cbs-2026",
+        "gegevensset:bronset-lokaal-lokale-tennet-csv-bestanden",
+        "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme",
+        "gegevensset:tennet-2026-duurcurves",
+        "gegevensset:tennet-2026-hoofdresultaten",
+        "gegevensset:tennet-2026-ontbrekende-capaciteit",
+        "gegevensset:tennet-2026-simultaniteit",
+        "gegevensset:tennet-2026-systeemmix",
+        "gegevensset:tennet-2026-tekortevents",
+        "gegevensset:tennet-2026-viewmodel",
+        "gegevensset:tennet-2026-vraag",
+        "gegevensset:tennet-2026-weersverdelingen"
+      ]
+    },
+    {
+      "id": "bewerking:uitkeringen-naar-afkomst-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-85692ned",
+        "gegevensbron:cbs-85721ned",
+        "gegevensbron:cbs-80794ned",
+        "gegevensbron:pdok-cbs-gebiedsindelingen-2025"
+      ],
+      "product": "uitkeringen-naar-afkomst",
+      "script": "content/projecten/uitkeringen-naar-afkomst/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Uitkeringen Naar Afkomst",
+      "uitvoer": [
+        "gegevensset:uitkeringen-nationaal",
+        "gegevensset:uitkeringen-regionaal",
+        "gegevensset:uitkeringen-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:verdachten-naar-afkomst-publicatie",
+      "invoer": [
+        "gegevensbron:cbs-81959ned",
+        "gegevensbron:cbs-85658ned"
+      ],
+      "product": "verdachten-naar-afkomst",
+      "script": "content/projecten/verdachten-naar-afkomst/fetch-data.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Verdachten naar afkomst",
+      "uitvoer": [
+        "gegevensset:verdachten-actuele-reeks",
+        "gegevensset:verdachten-historisch-2022",
+        "gegevensset:verdachten-viewmodel"
+      ]
+    },
+    {
+      "id": "bewerking:wereldbevolking-publicatie",
+      "invoer": [
+        "gegevensbron:population-un-org-verenigde-naties-world-population-prospects",
+        "gegevensbron:worldometer-bevolkingsreeksen"
+      ],
+      "product": "wereldbevolking",
+      "script": "content/projecten/wereldbevolking/fetch_population.py",
+      "status": "beschreven",
+      "titel": "Verwerking en publicatie: Wereldbevolking",
+      "uitvoer": [
+        "gegevensset:bronset-population-un-org-verenigde-naties-world-population-prospects",
+        "gegevensset:wereldbevolking-landen",
+        "gegevensset:wereldbevolking-viewmodel"
+      ]
+    }
+  ],
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
+  "schemaVersie": 1
+}

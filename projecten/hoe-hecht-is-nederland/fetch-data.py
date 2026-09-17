@@ -12,15 +12,14 @@ from __future__ import annotations
 
 import json
 import math
-from io import BytesIO
 from datetime import UTC, datetime
+from io import BytesIO
 from pathlib import Path
 from typing import Any
 
 import niquests as http
 from bs4 import BeautifulSoup
 from pypdf import PdfReader
-
 
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR.parents[2] / "static" / "projecten" / BASE_DIR.name

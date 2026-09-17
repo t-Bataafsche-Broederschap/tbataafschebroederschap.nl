@@ -1,0 +1,162 @@
+{
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
+  "schemaVersie": 1,
+  "varianten": [
+    {
+      "href": "/projecten/tennet-monitor-voorzieningszekerheid-2026/?scenario=high-demand#tab-scarcity",
+      "id": "variant:tennet-scenario",
+      "opties": [
+        {
+          "id": "high-demand",
+          "titel": "High Demand"
+        },
+        {
+          "id": "low-demand",
+          "titel": "Low Demand"
+        },
+        {
+          "id": "low-demand-europe-sensitivity",
+          "titel": "Low Demand Europe sensitivity"
+        },
+        {
+          "id": "reference",
+          "titel": "Reference"
+        }
+      ],
+      "parameter": "scenario",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "titel": "TenneT-weerscenario",
+      "type": "scenario"
+    },
+    {
+      "href": "/projecten/autochtoonse-nederlandse-bevolking/?view=population#project-chart",
+      "id": "variant:autochtoonse-weergave",
+      "opties": [
+        {
+          "id": "population",
+          "titel": "Bevolking"
+        },
+        {
+          "id": "composition",
+          "titel": "Samenstelling"
+        },
+        {
+          "id": "growth",
+          "titel": "Groei"
+        },
+        {
+          "id": "age",
+          "titel": "Leeftijd"
+        },
+        {
+          "id": "origin",
+          "titel": "Herkomst"
+        },
+        {
+          "id": "emigration",
+          "titel": "Emigratie"
+        },
+        {
+          "id": "motives",
+          "titel": "Motieven"
+        },
+        {
+          "id": "housing",
+          "titel": "Wonen"
+        },
+        {
+          "id": "grid",
+          "titel": "Stroomnet"
+        }
+      ],
+      "parameter": "view",
+      "product": "autochtoonse-nederlandse-bevolking",
+      "titel": "Bevolkingsweergave",
+      "type": "weergave"
+    },
+    {
+      "href": "/projecten/culturele-afstandskaart/?mode=standard#project-chart",
+      "id": "variant:culturele-projectie",
+      "opties": [
+        {
+          "id": "standard",
+          "titel": "Inglehart-Welzel"
+        },
+        {
+          "id": "welzel",
+          "titel": "Welzel waarden"
+        }
+      ],
+      "parameter": "mode",
+      "product": "culturele-afstandskaart",
+      "titel": "Culturele projectie",
+      "type": "projectie"
+    },
+    {
+      "href": "/projecten/begrotingsstromen-van-de-europese-Unie/?metric=net_balance_pct_gni#project-chart",
+      "id": "variant:eu-maatstaf",
+      "opties": [
+        {
+          "id": "net_balance_pct_gni",
+          "titel": "Percentage bruto nationaal inkomen"
+        },
+        {
+          "id": "net_balance_m_eur",
+          "titel": "Miljoen euro"
+        },
+        {
+          "id": "net_balance_per_capita_eur",
+          "titel": "Euro per inwoner"
+        }
+      ],
+      "parameter": "metric",
+      "product": "begrotingsstromen-van-de-europese-Unie",
+      "titel": "EU-begrotingsmaatstaf",
+      "type": "maatstaf"
+    },
+    {
+      "href": "/projecten/remittances-nederland/?btw=21#economische-impact",
+      "id": "variant:remittances-btw",
+      "opties": [
+        {
+          "id": "0",
+          "titel": "Geen btw / vrijgesteld"
+        },
+        {
+          "id": "9",
+          "titel": "9%-tarief"
+        },
+        {
+          "id": "21",
+          "titel": "21%-tarief"
+        }
+      ],
+      "parameter": "btw",
+      "product": "remittances-nederland",
+      "titel": "Btw-scenario voor remittances",
+      "type": "scenario"
+    },
+    {
+      "href": "/projecten/wereldbevolking/?maatstaf=population#project-chart",
+      "id": "variant:wereldbevolking-maatstaf",
+      "opties": [
+        {
+          "id": "population",
+          "titel": "Bevolking"
+        },
+        {
+          "id": "growth",
+          "titel": "Groei"
+        },
+        {
+          "id": "per-capita",
+          "titel": "Per inwoner"
+        }
+      ],
+      "parameter": "maatstaf",
+      "product": "wereldbevolking",
+      "titel": "Wereldbevolkingsmaatstaf",
+      "type": "maatstaf"
+    }
+  ]
+}

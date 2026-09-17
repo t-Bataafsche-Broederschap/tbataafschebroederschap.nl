@@ -1,0 +1,1431 @@
+{
+  "LONG_DATA": [
+    {
+      "year": 1948,
+      "total": 133255,
+      "per1000": 14,
+      "solved": 91760,
+      "suspects": null,
+      "clearance": 68.9,
+      "provisional": false
+    },
+    {
+      "year": 1949,
+      "total": 105080,
+      "per1000": 11,
+      "solved": 70340,
+      "suspects": null,
+      "clearance": 66.9,
+      "provisional": false
+    },
+    {
+      "year": 1950,
+      "total": 103135,
+      "per1000": 10,
+      "solved": 68635,
+      "suspects": null,
+      "clearance": 66.5,
+      "provisional": false
+    },
+    {
+      "year": 1951,
+      "total": 124620,
+      "per1000": 12,
+      "solved": 83025,
+      "suspects": null,
+      "clearance": 66.6,
+      "provisional": false
+    },
+    {
+      "year": 1952,
+      "total": 121400,
+      "per1000": 12,
+      "solved": 88205,
+      "suspects": 95945,
+      "clearance": 72.7,
+      "provisional": false
+    },
+    {
+      "year": 1953,
+      "total": 114955,
+      "per1000": 11,
+      "solved": 85560,
+      "suspects": 95885,
+      "clearance": 74.4,
+      "provisional": false
+    },
+    {
+      "year": 1954,
+      "total": 109580,
+      "per1000": 10,
+      "solved": 81760,
+      "suspects": 91995,
+      "clearance": 74.6,
+      "provisional": false
+    },
+    {
+      "year": 1955,
+      "total": 110655,
+      "per1000": 10,
+      "solved": 80465,
+      "suspects": 90750,
+      "clearance": 72.7,
+      "provisional": false
+    },
+    {
+      "year": 1956,
+      "total": 112805,
+      "per1000": 10,
+      "solved": 79330,
+      "suspects": 90765,
+      "clearance": 70.3,
+      "provisional": false
+    },
+    {
+      "year": 1957,
+      "total": 126770,
+      "per1000": 12,
+      "solved": 84345,
+      "suspects": 96960,
+      "clearance": 66.5,
+      "provisional": false
+    },
+    {
+      "year": 1958,
+      "total": 133215,
+      "per1000": 12,
+      "solved": 86340,
+      "suspects": 100265,
+      "clearance": 64.8,
+      "provisional": false
+    },
+    {
+      "year": 1959,
+      "total": 134290,
+      "per1000": 12,
+      "solved": 88115,
+      "suspects": 103805,
+      "clearance": 65.6,
+      "provisional": false
+    },
+    {
+      "year": 1960,
+      "total": 140735,
+      "per1000": 12,
+      "solved": 91490,
+      "suspects": 108380,
+      "clearance": 65,
+      "provisional": false
+    },
+    {
+      "year": 1961,
+      "total": 145035,
+      "per1000": 13,
+      "solved": 93165,
+      "suspects": 110030,
+      "clearance": 64.2,
+      "provisional": false
+    },
+    {
+      "year": 1962,
+      "total": 155780,
+      "per1000": 13,
+      "solved": 94490,
+      "suspects": 115910,
+      "clearance": 60.7,
+      "provisional": false
+    },
+    {
+      "year": 1963,
+      "total": 159000,
+      "per1000": 13,
+      "solved": 96155,
+      "suspects": 116460,
+      "clearance": 60.5,
+      "provisional": false
+    },
+    {
+      "year": 1964,
+      "total": 172965,
+      "per1000": 14,
+      "solved": 101260,
+      "suspects": 123965,
+      "clearance": 58.5,
+      "provisional": false
+    },
+    {
+      "year": 1965,
+      "total": 181560,
+      "per1000": 15,
+      "solved": 105930,
+      "suspects": 125940,
+      "clearance": 58.3,
+      "provisional": false
+    },
+    {
+      "year": 1966,
+      "total": 197675,
+      "per1000": 16,
+      "solved": 107020,
+      "suspects": 129445,
+      "clearance": 54.1,
+      "provisional": false
+    },
+    {
+      "year": 1967,
+      "total": 210570,
+      "per1000": 17,
+      "solved": 112200,
+      "suspects": 136070,
+      "clearance": 53.3,
+      "provisional": false
+    },
+    {
+      "year": 1968,
+      "total": 232055,
+      "per1000": 18,
+      "solved": 121435,
+      "suspects": 145975,
+      "clearance": 52.3,
+      "provisional": false
+    },
+    {
+      "year": 1969,
+      "total": 256765,
+      "per1000": 20,
+      "solved": 126340,
+      "suspects": 152615,
+      "clearance": 49.2,
+      "provisional": false
+    },
+    {
+      "year": 1970,
+      "total": 284700,
+      "per1000": 22,
+      "solved": 131040,
+      "suspects": 158335,
+      "clearance": 46,
+      "provisional": false
+    },
+    {
+      "year": 1971,
+      "total": 329820,
+      "per1000": 25,
+      "solved": 138840,
+      "suspects": 171110,
+      "clearance": 42.1,
+      "provisional": false
+    },
+    {
+      "year": 1972,
+      "total": 373865,
+      "per1000": 28,
+      "solved": 150960,
+      "suspects": 182840,
+      "clearance": 40.4,
+      "provisional": false
+    },
+    {
+      "year": 1973,
+      "total": 416840,
+      "per1000": 31,
+      "solved": 160440,
+      "suspects": 188930,
+      "clearance": 38.5,
+      "provisional": false
+    },
+    {
+      "year": 1974,
+      "total": 456590,
+      "per1000": 34,
+      "solved": 165480,
+      "suspects": 190525,
+      "clearance": 36.2,
+      "provisional": false
+    },
+    {
+      "year": 1975,
+      "total": 486670,
+      "per1000": 36,
+      "solved": 179520,
+      "suspects": 206215,
+      "clearance": 36.9,
+      "provisional": false
+    },
+    {
+      "year": 1976,
+      "total": 564025,
+      "per1000": 41,
+      "solved": 207840,
+      "suspects": 234045,
+      "clearance": 36.8,
+      "provisional": false
+    },
+    {
+      "year": 1977,
+      "total": 590880,
+      "per1000": 43,
+      "solved": 213360,
+      "suspects": 250715,
+      "clearance": 36.1,
+      "provisional": false
+    },
+    {
+      "year": 1978,
+      "total": 612370,
+      "per1000": 44,
+      "solved": 224040,
+      "suspects": 257280,
+      "clearance": 36.6,
+      "provisional": false
+    },
+    {
+      "year": 1979,
+      "total": 668235,
+      "per1000": 48,
+      "solved": 239520,
+      "suspects": 273150,
+      "clearance": 35.8,
+      "provisional": false
+    },
+    {
+      "year": 1980,
+      "total": 757405,
+      "per1000": 54,
+      "solved": 252120,
+      "suspects": 292120,
+      "clearance": 33.3,
+      "provisional": false
+    },
+    {
+      "year": 1981,
+      "total": 872355,
+      "per1000": 61,
+      "solved": 281520,
+      "suspects": 320245,
+      "clearance": 32.3,
+      "provisional": false
+    },
+    {
+      "year": 1982,
+      "total": 990535,
+      "per1000": 69,
+      "solved": 297480,
+      "suspects": 344145,
+      "clearance": 30,
+      "provisional": false
+    },
+    {
+      "year": 1983,
+      "total": 1059290,
+      "per1000": 74,
+      "solved": 309255,
+      "suspects": 352740,
+      "clearance": 29.2,
+      "provisional": false
+    },
+    {
+      "year": 1984,
+      "total": 1163500,
+      "per1000": 81,
+      "solved": 326985,
+      "suspects": 374130,
+      "clearance": 28.1,
+      "provisional": false
+    },
+    {
+      "year": 1985,
+      "total": 1174245,
+      "per1000": 81,
+      "solved": 315340,
+      "suspects": 368415,
+      "clearance": 26.9,
+      "provisional": false
+    },
+    {
+      "year": 1986,
+      "total": 1178540,
+      "per1000": 81,
+      "solved": 313325,
+      "suspects": 365145,
+      "clearance": 26.6,
+      "provisional": false
+    },
+    {
+      "year": 1987,
+      "total": 1212920,
+      "per1000": 83,
+      "solved": 319910,
+      "suspects": 358625,
+      "clearance": 26.4,
+      "provisional": false
+    },
+    {
+      "year": 1988,
+      "total": 1231185,
+      "per1000": 84,
+      "solved": 319335,
+      "suspects": 357385,
+      "clearance": 25.9,
+      "provisional": false
+    },
+    {
+      "year": 1989,
+      "total": 1245150,
+      "per1000": 84,
+      "solved": 319790,
+      "suspects": 360045,
+      "clearance": 25.7,
+      "provisional": false
+    },
+    {
+      "year": 1990,
+      "total": 1235480,
+      "per1000": 83,
+      "solved": 306700,
+      "suspects": 350360,
+      "clearance": 24.8,
+      "provisional": false
+    },
+    {
+      "year": 1991,
+      "total": 1268785,
+      "per1000": 85,
+      "solved": 285715,
+      "suspects": 344235,
+      "clearance": 22.5,
+      "provisional": false
+    },
+    {
+      "year": 1992,
+      "total": 1362250,
+      "per1000": 90,
+      "solved": 290965,
+      "suspects": 350465,
+      "clearance": 21.4,
+      "provisional": false
+    },
+    {
+      "year": 1993,
+      "total": 1366550,
+      "per1000": 90,
+      "solved": 285245,
+      "suspects": 341665,
+      "clearance": 20.9,
+      "provisional": false
+    },
+    {
+      "year": 1994,
+      "total": 1410595,
+      "per1000": 92,
+      "solved": 283585,
+      "suspects": 341875,
+      "clearance": 20.1,
+      "provisional": false
+    },
+    {
+      "year": 1995,
+      "total": 1317130,
+      "per1000": 85,
+      "solved": 251925,
+      "suspects": 348190,
+      "clearance": 19.1,
+      "provisional": false
+    },
+    {
+      "year": 1996,
+      "total": 1274155,
+      "per1000": 82,
+      "solved": 245670,
+      "suspects": 357890,
+      "clearance": 19.3,
+      "provisional": false
+    },
+    {
+      "year": 1997,
+      "total": 1309610,
+      "per1000": 84,
+      "solved": 236440,
+      "suspects": 371785,
+      "clearance": 18.1,
+      "provisional": false
+    },
+    {
+      "year": 1998,
+      "total": 1325725,
+      "per1000": 85,
+      "solved": 252440,
+      "suspects": 388975,
+      "clearance": 19,
+      "provisional": false
+    },
+    {
+      "year": 1999,
+      "total": 1399855,
+      "per1000": 89,
+      "solved": 252280,
+      "suspects": 393685,
+      "clearance": 18,
+      "provisional": false
+    },
+    {
+      "year": 2000,
+      "total": 1426710,
+      "per1000": 90,
+      "solved": 248125,
+      "suspects": 397565,
+      "clearance": 17.4,
+      "provisional": false
+    },
+    {
+      "year": 2001,
+      "total": 1481500,
+      "per1000": 93,
+      "solved": 279720,
+      "suspects": 414445,
+      "clearance": 18.9,
+      "provisional": false
+    },
+    {
+      "year": 2002,
+      "total": 1505135,
+      "per1000": 93,
+      "solved": 307180,
+      "suspects": 449640,
+      "clearance": 20.4,
+      "provisional": false
+    },
+    {
+      "year": 2003,
+      "total": 1470760,
+      "per1000": 91,
+      "solved": 335980,
+      "suspects": 487305,
+      "clearance": 22.8,
+      "provisional": false
+    },
+    {
+      "year": 2004,
+      "total": 1417040,
+      "per1000": 87,
+      "solved": 346555,
+      "suspects": 508880,
+      "clearance": 24.5,
+      "provisional": false
+    },
+    {
+      "year": 2005,
+      "total": 1348285,
+      "per1000": 83,
+      "solved": 339160,
+      "suspects": 494360,
+      "clearance": 25.2,
+      "provisional": false
+    },
+    {
+      "year": 2006,
+      "total": 1311770,
+      "per1000": 80,
+      "solved": 334315,
+      "suspects": 491445,
+      "clearance": 25.5,
+      "provisional": false
+    },
+    {
+      "year": 2007,
+      "total": 1303835,
+      "per1000": 80,
+      "solved": 326235,
+      "suspects": 482095,
+      "clearance": 25,
+      "provisional": false
+    },
+    {
+      "year": 2008,
+      "total": 1277775,
+      "per1000": 78,
+      "solved": 312460,
+      "suspects": 457730,
+      "clearance": 24.5,
+      "provisional": false
+    },
+    {
+      "year": 2009,
+      "total": 1254480,
+      "per1000": 76,
+      "solved": 313180,
+      "suspects": 412615,
+      "clearance": 25,
+      "provisional": false
+    },
+    {
+      "year": 2010,
+      "total": 1200825,
+      "per1000": 72,
+      "solved": 331305,
+      "suspects": 406510,
+      "clearance": 27.6,
+      "provisional": false
+    },
+    {
+      "year": 2011,
+      "total": 1206565,
+      "per1000": 72,
+      "solved": 326680,
+      "suspects": 397790,
+      "clearance": 27.1,
+      "provisional": false
+    },
+    {
+      "year": 2012,
+      "total": 1154950,
+      "per1000": 69,
+      "solved": 308410,
+      "suspects": 373480,
+      "clearance": 26.7,
+      "provisional": false
+    },
+    {
+      "year": 2013,
+      "total": 1105565,
+      "per1000": 66,
+      "solved": 289665,
+      "suspects": 350395,
+      "clearance": 26.2,
+      "provisional": false
+    },
+    {
+      "year": 2014,
+      "total": 1025630,
+      "per1000": 61,
+      "solved": 271355,
+      "suspects": 327320,
+      "clearance": 26.5,
+      "provisional": false
+    },
+    {
+      "year": 2015,
+      "total": 978945,
+      "per1000": 58,
+      "solved": 248875,
+      "suspects": 301555,
+      "clearance": 25.4,
+      "provisional": false
+    },
+    {
+      "year": 2016,
+      "total": 930325,
+      "per1000": 55,
+      "solved": 234100,
+      "suspects": 278930,
+      "clearance": 25.2,
+      "provisional": false
+    },
+    {
+      "year": 2017,
+      "total": 832950,
+      "per1000": 49,
+      "solved": 217265,
+      "suspects": 257895,
+      "clearance": 26.1,
+      "provisional": false
+    },
+    {
+      "year": 2018,
+      "total": 786420,
+      "per1000": 46,
+      "solved": 217870,
+      "suspects": 258820,
+      "clearance": 27.7,
+      "provisional": false
+    },
+    {
+      "year": 2019,
+      "total": 821905,
+      "per1000": 48,
+      "solved": 231520,
+      "suspects": 275985,
+      "clearance": 28.2,
+      "provisional": false
+    },
+    {
+      "year": 2020,
+      "total": 813150,
+      "per1000": 47,
+      "solved": 220070,
+      "suspects": 263520,
+      "clearance": 27.1,
+      "provisional": false
+    },
+    {
+      "year": 2021,
+      "total": 758065,
+      "per1000": 43,
+      "solved": 208875,
+      "suspects": 244070,
+      "clearance": 27.6,
+      "provisional": false
+    },
+    {
+      "year": 2022,
+      "total": 810550,
+      "per1000": 46,
+      "solved": 229685,
+      "suspects": 264175,
+      "clearance": 28.3,
+      "provisional": false
+    },
+    {
+      "year": 2023,
+      "total": 816540,
+      "per1000": 46,
+      "solved": 227895,
+      "suspects": 259155,
+      "clearance": 27.9,
+      "provisional": false
+    },
+    {
+      "year": 2024,
+      "total": 815940,
+      "per1000": 45,
+      "solved": 208120,
+      "suspects": 249505,
+      "clearance": 25.5,
+      "provisional": true
+    },
+    {
+      "year": 2025,
+      "total": 816210,
+      "per1000": 45,
+      "solved": 180085,
+      "suspects": 252000,
+      "clearance": 22.1,
+      "provisional": true
+    }
+  ],
+  "TYPE_DATA": [
+    {
+      "year": 2010,
+      "wealth": 715600,
+      "violence": 115800,
+      "destruction": 158300,
+      "order": 27700,
+      "drugs": 18000,
+      "weapons": 6500
+    },
+    {
+      "year": 2011,
+      "wealth": 723200,
+      "violence": 114100,
+      "destruction": 155600,
+      "order": 26600,
+      "drugs": 17100,
+      "weapons": 7400
+    },
+    {
+      "year": 2012,
+      "wealth": 704300,
+      "violence": 110500,
+      "destruction": 139600,
+      "order": 22800,
+      "drugs": 17600,
+      "weapons": 7000
+    },
+    {
+      "year": 2013,
+      "wealth": 690600,
+      "violence": 103500,
+      "destruction": 123300,
+      "order": 17900,
+      "drugs": 17000,
+      "weapons": 6500
+    },
+    {
+      "year": 2014,
+      "wealth": 631500,
+      "violence": 98500,
+      "destruction": 115000,
+      "order": 20400,
+      "drugs": 16300,
+      "weapons": 5900
+    },
+    {
+      "year": 2015,
+      "wealth": 614100,
+      "violence": 92500,
+      "destruction": 106700,
+      "order": 16100,
+      "drugs": 14800,
+      "weapons": 5500
+    },
+    {
+      "year": 2016,
+      "wealth": 576400,
+      "violence": 90200,
+      "destruction": 99300,
+      "order": 16200,
+      "drugs": 13300,
+      "weapons": 5400
+    },
+    {
+      "year": 2017,
+      "wealth": 502500,
+      "violence": 85300,
+      "destruction": 86200,
+      "order": 15900,
+      "drugs": 12500,
+      "weapons": 4700
+    },
+    {
+      "year": 2018,
+      "wealth": 457800,
+      "violence": 83300,
+      "destruction": 76700,
+      "order": 16700,
+      "drugs": 13400,
+      "weapons": 5500
+    },
+    {
+      "year": 2019,
+      "wealth": 473700,
+      "violence": 84000,
+      "destruction": 81700,
+      "order": 20700,
+      "drugs": 14700,
+      "weapons": 6600
+    },
+    {
+      "year": 2020,
+      "wealth": 471600,
+      "violence": 80200,
+      "destruction": 83400,
+      "order": 25600,
+      "drugs": 13300,
+      "weapons": 6800
+    },
+    {
+      "year": 2021,
+      "wealth": 419700,
+      "violence": 76400,
+      "destruction": 75800,
+      "order": 30500,
+      "drugs": 12200,
+      "weapons": 7000
+    },
+    {
+      "year": 2022,
+      "wealth": 448300,
+      "violence": 80600,
+      "destruction": 75100,
+      "order": 30900,
+      "drugs": 12200,
+      "weapons": 7100
+    },
+    {
+      "year": 2023,
+      "wealth": 464900,
+      "violence": 76200,
+      "destruction": 74100,
+      "order": 29500,
+      "drugs": 14300,
+      "weapons": 7000
+    },
+    {
+      "year": 2024,
+      "wealth": 464100,
+      "violence": 78000,
+      "destruction": 77300,
+      "order": 25200,
+      "drugs": 15300,
+      "weapons": 7300
+    },
+    {
+      "year": 2025,
+      "wealth": 451740,
+      "violence": 83345,
+      "destruction": 76940,
+      "order": 26590,
+      "drugs": 16115,
+      "weapons": 8005
+    }
+  ],
+  "WEALTH_DATA": [
+    {
+      "year": 2010,
+      "wealth": 715600,
+      "theft": 670500,
+      "other": 45100
+    },
+    {
+      "year": 2011,
+      "wealth": 723200,
+      "theft": 678000,
+      "other": 45200
+    },
+    {
+      "year": 2012,
+      "wealth": 704300,
+      "theft": 656500,
+      "other": 47800
+    },
+    {
+      "year": 2013,
+      "wealth": 690600,
+      "theft": 650700,
+      "other": 40000
+    },
+    {
+      "year": 2014,
+      "wealth": 631500,
+      "theft": 592600,
+      "other": 38900
+    },
+    {
+      "year": 2015,
+      "wealth": 614100,
+      "theft": 549100,
+      "other": 64900
+    },
+    {
+      "year": 2016,
+      "wealth": 576400,
+      "theft": 498300,
+      "other": 78200
+    },
+    {
+      "year": 2017,
+      "wealth": 502500,
+      "theft": 428100,
+      "other": 74400
+    },
+    {
+      "year": 2018,
+      "wealth": 457800,
+      "theft": 380300,
+      "other": 77500
+    },
+    {
+      "year": 2019,
+      "wealth": 473700,
+      "theft": 374800,
+      "other": 98900
+    },
+    {
+      "year": 2020,
+      "wealth": 471600,
+      "theft": 330100,
+      "other": 141500
+    },
+    {
+      "year": 2021,
+      "wealth": 419700,
+      "theft": 287100,
+      "other": 132600
+    },
+    {
+      "year": 2022,
+      "wealth": 448300,
+      "theft": 349000,
+      "other": 99200
+    },
+    {
+      "year": 2023,
+      "wealth": 464900,
+      "theft": 364100,
+      "other": 100800
+    },
+    {
+      "year": 2024,
+      "wealth": 464100,
+      "theft": 358500,
+      "other": 105600
+    },
+    {
+      "year": 2025,
+      "wealth": 451740,
+      "theft": 354475,
+      "other": 97265
+    }
+  ],
+  "VIOLENCE_DATA": [
+    {
+      "year": 2010,
+      "violence": 115800,
+      "assault": 61400,
+      "threat": 38100,
+      "sexual": 9700,
+      "other": 6600
+    },
+    {
+      "year": 2011,
+      "violence": 114100,
+      "assault": 60500,
+      "threat": 37700,
+      "sexual": 9100,
+      "other": 6700
+    },
+    {
+      "year": 2012,
+      "violence": 110500,
+      "assault": 57600,
+      "threat": 37300,
+      "sexual": 9100,
+      "other": 6500
+    },
+    {
+      "year": 2013,
+      "violence": 103500,
+      "assault": 53400,
+      "threat": 35800,
+      "sexual": 8600,
+      "other": 5700
+    },
+    {
+      "year": 2014,
+      "violence": 98500,
+      "assault": 50900,
+      "threat": 33900,
+      "sexual": 8200,
+      "other": 5500
+    },
+    {
+      "year": 2015,
+      "violence": 92500,
+      "assault": 48300,
+      "threat": 31100,
+      "sexual": 7700,
+      "other": 5400
+    },
+    {
+      "year": 2016,
+      "violence": 90200,
+      "assault": 47000,
+      "threat": 29700,
+      "sexual": 8200,
+      "other": 5300
+    },
+    {
+      "year": 2017,
+      "violence": 85300,
+      "assault": 44800,
+      "threat": 27000,
+      "sexual": 8400,
+      "other": 5100
+    },
+    {
+      "year": 2018,
+      "violence": 83300,
+      "assault": 43000,
+      "threat": 26100,
+      "sexual": 9100,
+      "other": 5100
+    },
+    {
+      "year": 2019,
+      "violence": 84000,
+      "assault": 42600,
+      "threat": 27400,
+      "sexual": 8300,
+      "other": 5600
+    },
+    {
+      "year": 2020,
+      "violence": 80200,
+      "assault": 38300,
+      "threat": 28800,
+      "sexual": 8100,
+      "other": 5100
+    },
+    {
+      "year": 2021,
+      "violence": 76400,
+      "assault": 36400,
+      "threat": 26000,
+      "sexual": 8800,
+      "other": 5200
+    },
+    {
+      "year": 2022,
+      "violence": 80600,
+      "assault": 41000,
+      "threat": 24400,
+      "sexual": 10100,
+      "other": 5100
+    },
+    {
+      "year": 2023,
+      "violence": 76200,
+      "assault": 39700,
+      "threat": 22400,
+      "sexual": 9300,
+      "other": 4800
+    },
+    {
+      "year": 2024,
+      "violence": 78000,
+      "assault": 40400,
+      "threat": 23000,
+      "sexual": 9900,
+      "other": 4800
+    },
+    {
+      "year": 2025,
+      "violence": 83345,
+      "assault": 42460,
+      "threat": 24705,
+      "sexual": 11120,
+      "other": 5060
+    }
+  ],
+  "ONLINE_DATA": [
+    {
+      "year": 2012,
+      "cyber": 4500,
+      "fraud": 8500
+    },
+    {
+      "year": 2013,
+      "cyber": 2400,
+      "fraud": 6100
+    },
+    {
+      "year": 2014,
+      "cyber": 2000,
+      "fraud": 6000
+    },
+    {
+      "year": 2015,
+      "cyber": 2200,
+      "fraud": 39500
+    },
+    {
+      "year": 2016,
+      "cyber": 1800,
+      "fraud": 65500
+    },
+    {
+      "year": 2017,
+      "cyber": 2200,
+      "fraud": 62400
+    },
+    {
+      "year": 2018,
+      "cyber": 2800,
+      "fraud": 65300
+    },
+    {
+      "year": 2019,
+      "cyber": 4700,
+      "fraud": 84600
+    },
+    {
+      "year": 2020,
+      "cyber": 10800,
+      "fraud": 125400
+    },
+    {
+      "year": 2021,
+      "cyber": 14200,
+      "fraud": 117600
+    },
+    {
+      "year": 2022,
+      "cyber": 14000,
+      "fraud": 86800
+    },
+    {
+      "year": 2023,
+      "cyber": 12100,
+      "fraud": 88100
+    },
+    {
+      "year": 2024,
+      "cyber": 7000,
+      "fraud": 94300
+    }
+  ],
+  "VICTIM_DATA": [
+    {
+      "year": 2010,
+      "total": 100,
+      "wealth": 100,
+      "destruction": 100
+    },
+    {
+      "year": 2011,
+      "total": 98,
+      "wealth": 103.1,
+      "destruction": 96.9
+    },
+    {
+      "year": 2012,
+      "total": 95.5,
+      "wealth": 102.4,
+      "destruction": 92.6
+    },
+    {
+      "year": 2013,
+      "total": 95,
+      "wealth": 106.4,
+      "destruction": 86.1
+    },
+    {
+      "year": 2014,
+      "total": 90.9,
+      "wealth": 100.8,
+      "destruction": 82.3
+    },
+    {
+      "year": 2015,
+      "total": 84.9,
+      "wealth": 94.5,
+      "destruction": 75.4
+    },
+    {
+      "year": 2016,
+      "total": 83.5,
+      "wealth": 89.2,
+      "destruction": 75.7
+    },
+    {
+      "year": 2017,
+      "total": 73.2,
+      "wealth": 77.5,
+      "destruction": 66
+    },
+    {
+      "year": 2019,
+      "total": 65.8,
+      "wealth": 66.8,
+      "destruction": 61.5
+    },
+    {
+      "year": 2021,
+      "total": 54.1,
+      "wealth": 51.8,
+      "destruction": 53
+    },
+    {
+      "year": 2023,
+      "total": 62.7,
+      "wealth": 62.3,
+      "destruction": 56.7
+    }
+  ],
+  "COMPOSITION": [
+    {
+      "category": "Vermogensmisdrijven",
+      "y2010": 59.6,
+      "y2025": 55.3
+    },
+    {
+      "category": "Verkeersmisdrijven",
+      "y2010": 12,
+      "y2025": 17.1
+    },
+    {
+      "category": "Geweld en seksueel",
+      "y2010": 9.6,
+      "y2025": 10.2
+    },
+    {
+      "category": "Vernieling en brandstichting",
+      "y2010": 13.2,
+      "y2025": 9.4
+    },
+    {
+      "category": "Openbare orde en gezag",
+      "y2010": 2.3,
+      "y2025": 3.3
+    },
+    {
+      "category": "Drugsmisdrijven",
+      "y2010": 1.5,
+      "y2025": 2
+    },
+    {
+      "category": "(Vuur)wapenmisdrijven",
+      "y2010": 0.5,
+      "y2025": 1
+    },
+    {
+      "category": "Overige misdrijven",
+      "y2010": 1.3,
+      "y2025": 1.8
+    }
+  ],
+  "MIGRATION_CHARTS": [
+    "overviewChart",
+    "overviewRateChart",
+    "totalChart",
+    "rateChart"
+  ],
+  "CBS_MIGRATION_TIMELINE": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true",
+  "TIMELINE_EVENTS": [
+    {
+      "year": 1948,
+      "label": "Migratie uit voormalig Nederlands-Indië (1945–1962)",
+      "detail": "Tussen 1945 en 1962 vestigden zich ongeveer 400.000 mensen uit voormalig Nederlands-Indië in Nederland; deze stroom begon vóór de grafiekreeks.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 1960,
+      "label": "Italiaanse en Spaanse arbeidsmigratie",
+      "detail": "De werving begon eind jaren vijftig; eerst kwamen vooral Italiaanse en Spaanse werknemers. 1960 is een beleidsmijlpaal, geen exact beginjaar.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 1964,
+      "label": "Turkse en Marokkaanse arbeidsmigratie (1964–1969)",
+      "detail": "Later in de jaren zestig volgden vooral Turkse en Marokkaanse werknemers; de wervingsakkoorden dateren uit 1964 en 1969.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 1973,
+      "label": "Wervingsstop",
+      "detail": "Nederland stopte de officiële werving uit mediterrane landen; migratie via gezinshereniging ging daarna door.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 1975,
+      "label": "Surinaamse migratiepiek",
+      "detail": "De migratie uit Suriname liep al vanaf de jaren zestig op en bereikte rond de onafhankelijkheid in 1975 een piek van ongeveer 40.000 immigranten.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/nieuws/2025/47/sinds-onafhankelijkheid-ruim-250-duizend-surinamers-naar-nederland-gekomen"
+    },
+    {
+      "year": 1991,
+      "label": "Asielmigratie in de jaren negentig",
+      "detail": "Na het uitbreken van de oorlogen in voormalig Joegoslavië kwamen grotere groepen uit die regio en Somalië; later volgden vooral mensen uit Irak en Afghanistan.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 2002,
+      "label": "Piek 2001–2002",
+      "detail": "In 2001 en 2002 bereikte de reeks 93 geregistreerde misdrijven per 1.000 inwoners; het absolute maximum lag in 2002.",
+      "kind": "trend"
+    },
+    {
+      "year": 2004,
+      "label": "Midden- en Oost-Europese arbeidsmigratie",
+      "detail": "Na de EU-uitbreiding van 2004 nam vooral de immigratie uit Polen sterk toe; vanaf 2007 groeide ook de instroom uit Bulgarije en Roemenië.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 2010,
+      "label": "Trendbreuk registratie",
+      "detail": "Vanaf 2010 kwamen de gegevens uit een nieuwere landelijke politiewaarneming; CBS meldt een lichte trendbreuk met eerdere jaren.",
+      "kind": "method"
+    },
+    {
+      "year": 2014,
+      "label": "Syrische vluchtelingen",
+      "detail": "Vanaf 2014 kwamen steeds meer vluchtelingen uit Syrië naar Nederland; de eerste immigratiepiek volgde in 2016.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 2015,
+      "label": "Internetoplichting meegeteld",
+      "detail": "Sinds juni 2015 telt CBS ook misdrijven mee die bij het Landelijk Meldpunt Internet Oplichting zijn gemeld.",
+      "kind": "method",
+      "charts": [
+        "onlineChart"
+      ]
+    },
+    {
+      "year": 2018,
+      "label": "Delicten apart geregistreerd",
+      "detail": "Sinds juli 2018 kunnen samenhangende delicten niet meer in één registratie; daarvoor telde alleen het zwaarste delict.",
+      "kind": "method"
+    },
+    {
+      "year": 2020,
+      "label": "Corona en online aangifte",
+      "detail": "Corona veranderde het criminaliteitsbeeld. Vanaf 30 april kon WhatsAppfraude online worden aangegeven, wat de registraties mede beïnvloedde.",
+      "kind": "method"
+    },
+    {
+      "year": 2022,
+      "label": "Oekraïense vluchtelingen",
+      "detail": "Na de Russische invasie kwamen in 2022 ongeveer 108.000 vluchtelingen uit Oekraïne naar Nederland onder tijdelijke bescherming.",
+      "kind": "migration",
+      "charts": [
+        "overviewChart",
+        "overviewRateChart",
+        "totalChart",
+        "rateChart"
+      ],
+      "sourceUrl": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "year": 2024,
+      "label": "Wet seksuele misdrijven",
+      "detail": "Sinds 1 juli 2024 zijn meer vormen van seksueel grensoverschrijdend gedrag strafbaar; dit verandert de reikwijdte van de registratie.",
+      "kind": "method",
+      "charts": [
+        "violenceChart"
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "source": {
+    "type": "embedded-cbs-transcript",
+    "file": "content/projecten/criminaliteit-nederland/app.js",
+    "note": "Historische reeksen en contextmarkers worden uit de gecontroleerde projectbron geëxtraheerd."
+  }
+}

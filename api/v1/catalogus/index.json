@@ -1,25 +1,37 @@
 {
   "aantallen": {
-    "afstammingsrelaties": 126,
+    "afstammingsrelaties": 321,
+    "begrippen": 45,
+    "bewerkingen": 15,
     "gegevensbronnen": 83,
-    "gegevenssets": 95,
-    "producten": 15
+    "gegevenssets": 92,
+    "producten": 15,
+    "varianten": 6,
+    "visualisaties": 6
   },
   "catalogusbestanden": [
     "/api/v1/catalogus/producten.json",
     "/api/v1/catalogus/gegevensbronnen.json",
     "/api/v1/catalogus/gegevenssets.json",
-    "/api/v1/catalogus/afstamming.json"
+    "/api/v1/catalogus/afstamming.json",
+    "/api/v1/catalogus/bewerkingen.json",
+    "/api/v1/catalogus/varianten.json",
+    "/api/v1/catalogus/visualisaties.json",
+    "/api/v1/catalogus/begrippen.json"
   ],
   "gegenereerdOp": "2026-08-30T22:01:56Z",
   "links": {
     "afstamming": "/api/v1/catalogus/afstamming.json",
     "api": "/api/v1/index.json",
+    "begrippen": "/api/v1/catalogus/begrippen.json",
+    "bewerkingen": "/api/v1/catalogus/bewerkingen.json",
     "gegevensbronnen": "/api/v1/catalogus/gegevensbronnen.json",
     "gegevenssets": "/api/v1/catalogus/gegevenssets.json",
     "producten": "/api/v1/catalogus/producten.json",
     "projecten": "/api/v1/projecten/index.json",
     "root": "/api/index.json",
+    "varianten": "/api/v1/catalogus/varianten.json",
+    "visualisaties": "/api/v1/catalogus/visualisaties.json",
     "zelf": "/api/v1/catalogus/index.json"
   },
   "type": "catalogus"

@@ -11,11 +11,11 @@ Fetch EU budget ranking pages and build budget-flows.json.
 
 from __future__ import annotations
 
+import datetime as dt
 import html
 import json
 import math
 import re
-import datetime as dt
 from pathlib import Path
 
 import niquests as http
@@ -52,8 +52,8 @@ def text_between(value: str, start: str, end: str) -> str:
 
 
 def clean_html(value: str) -> str:
-    value = re.sub(r"<script[\s\S]*?</script>", "", value, flags=re.I)
-    value = re.sub(r"<style[\s\S]*?</style>", "", value, flags=re.I)
+    value = re.sub(r"<script[\s\S]*?</script>", "", value, flags=re.IGNORECASE)
+    value = re.sub(r"<style[\s\S]*?</style>", "", value, flags=re.IGNORECASE)
     value = re.sub(r"<[^>]+>", " ", value)
     return re.sub(r"\s+", " ", html.unescape(value).replace("\xa0", " ")).strip()
 
@@ -65,14 +65,16 @@ def parse_number(value: str) -> float | int:
 
 def parse_rows(page_html: str, year: int) -> list[dict[str, object]]:
     tbody = text_between(page_html, "<tbody>", "</tbody>")
-    rows = re.findall(r"<tr[\s\S]*?</tr>", tbody, flags=re.I)
+    rows = re.findall(r"<tr[\s\S]*?</tr>", tbody, flags=re.IGNORECASE)
     result = []
     for row in rows:
         country = clean_html(text_between(row, '<div class="country-name">', "</div>"))
         code = clean_html(text_between(row, '<div class="small">', "</div>"))
         cells = [
             clean_html(match)
-            for match in re.findall(r"<td[^>]*>([\s\S]*?)</td>", row, flags=re.I)
+            for match in re.findall(
+                r"<td[^>]*>([\s\S]*?)</td>", row, flags=re.IGNORECASE
+            )
         ]
         numeric = cells[2:7]
         result.append(

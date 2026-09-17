@@ -21,12 +21,56 @@
 		});
 
 	const loadIndex = () => {
-		indexPromise ??= fetch("/search-index.json")
-			.then((response) => {
+		indexPromise ??= Promise.all([
+			fetch("/search-index.json").then((response) => {
 				if (!response.ok) throw new Error("Search index not available");
 				return response.json();
-			})
-			.then((items) => {
+			}),
+			fetch("/api/v1/catalogus/begrippen.json")
+				.then((response) => (response.ok ? response.json() : { begrippen: [] }))
+				.catch(() => ({ begrippen: [] })),
+			fetch("/api/v1/catalogus/producten.json")
+				.then((response) => (response.ok ? response.json() : { producten: [] }))
+				.catch(() => ({ producten: [] })),
+			fetch("/api/v1/catalogus/gegevenssets.json")
+				.then((response) => (response.ok ? response.json() : { gegevenssets: [] }))
+				.catch(() => ({ gegevenssets: [] })),
+			fetch("/api/v1/catalogus/varianten.json")
+				.then((response) => (response.ok ? response.json() : { varianten: [] }))
+				.catch(() => ({ varianten: [] })),
+		])
+			.then(([items, glossary, products, datasets, variants]) => {
+				const glossaryPages = (glossary.begrippen || []).map((item) => ({
+					title: item.term,
+					url: `/begrippen/#${item.id}`,
+					section: "Begrip",
+					description: item.definitie,
+					content: `${item.definitie} ${(item.producten || []).join(" ")}`,
+				}));
+				const catalogPages = [
+					...(products.producten || []).map((item) => ({
+						title: item.titel || item.slug,
+						url: `/data-catalogus/?node=product:${encodeURIComponent(item.slug)}`,
+						section: "Gegevensproduct",
+						description: item.beschrijving || "",
+						content: `${item.beschrijving || ""} ${(item.bronnen || []).join(" ")}`,
+					})),
+					...(datasets.gegevenssets || []).map((item) => ({
+						title: item.titel || item.id,
+						url: `/data-catalogus/?node=gegevensset:${encodeURIComponent(item.id)}`,
+						section: "Gegevensset",
+						description: `${item.product || ""} · ${item.laag || ""}`,
+						content: `${item.product || ""} ${item.laag || ""} ${item.id || ""}`,
+					})),
+					...(variants.varianten || []).map((item) => ({
+						title: item.titel || item.id,
+						url: `/data-catalogus/?node=${encodeURIComponent(item.id)}`,
+						section: "Variant",
+						description: item.product || "",
+						content: `${item.product || ""} ${(item.opties || []).map((option) => option.titel).join(" ")}`,
+					})),
+				];
+				items = [...items, ...glossaryPages, ...catalogPages];
 				pages = items.map((item) => ({
 					...item,
 					haystack: normalize(`${item.title} ${item.section} ${item.description} ${item.content}`),

@@ -356,7 +356,7 @@ function renderTrend() {
 	const legend = g.append("g").attr("class", "chart-legend").attr("transform", "translate(8,8)");
 	series.forEach((row, index) => {
 		const item = legend.append("g").attr("transform", `translate(0,${index * 20})`);
-		item.append("rect").attr("width", 10).attr("height", 10).attr("rx", 2).attr("fill", color(row.origin));
+		item.append("rect").attr("width", 10).attr("height", 10).attr("rx", 2).attr("fill", color(row.key));
 		item.append("text").attr("x", 16).attr("y", 9).text(row.label);
 	});
 }

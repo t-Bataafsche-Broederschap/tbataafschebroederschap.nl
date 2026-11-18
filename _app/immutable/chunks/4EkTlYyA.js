@@ -1,0 +1,1 @@
+import{rt as e}from"./BSDTuh87.js";e();

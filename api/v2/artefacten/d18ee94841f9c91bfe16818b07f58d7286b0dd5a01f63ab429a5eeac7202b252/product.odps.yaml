@@ -1,0 +1,23 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-geboortecijfers-nederlandse-afkomst
+name: Geboortecijfers Nederlandse Afkomst
+version: 1.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Is het totaal vruchtbaarheidscijfer (TFR) in Nederland van 1,43 in 2024
+    een gevolg van een grote groep oudere vrouwen? Als we die oudere vrouwen buiten
+    beschouwing laten, hoe hoog (of laag) is het TFR dan voor vrouwen van Nederlandse
+    afkomst?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-geboortecijfers-nederlandse-afkomst-public
+  customProperties:
+  - property: contractVersion
+    value: 1.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/geboortecijfers-nederlandse-afkomst/manifest.json

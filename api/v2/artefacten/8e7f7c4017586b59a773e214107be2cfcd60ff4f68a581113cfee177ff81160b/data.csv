@@ -1,0 +1,337 @@
+series,unit,period,group,value,status,source_status,reason,lower,upper,x
+historisch-totalSuspects,personen,2022,Totaal,158290,observed,,,,,
+historisch-totalSuspects,personen,2022,Met migratieachtergrond,84520,observed,,,,,
+historisch-totalSuspects,personen,2022,Nederlandse achtergrond,72890,observed,,,,,
+historisch-totalSuspects,personen,2022,Niet-westerse migratieachtergrond,52840,observed,,,,,
+historisch-totalSuspects,personen,2022,Westerse migratieachtergrond,31680,observed,,,,,
+historisch-totalSuspects,personen,2022,Marokko,12810,observed,,,,,
+historisch-totalSuspects,personen,2022,Polen,8340,observed,,,,,
+historisch-totalSuspects,personen,2022,Suriname,7950,observed,,,,,
+historisch-totalSuspects,personen,2022,Turkije,6600,observed,,,,,
+historisch-totalSuspects,personen,2022,"(voormalige) Nederlandse Antillen, Aruba",5650,observed,,,,,
+historisch-totalSuspects,personen,2022,Overige migratieachtergrond,3770,observed,,,,,
+historisch-totalSuspects,personen,2022,Voormalige Sovjet-Unie,3480,observed,,,,,
+historisch-totalSuspects,personen,2022,Roemenië,3420,observed,,,,,
+historisch-totalSuspects,personen,2022,Duitsland,2650,observed,,,,,
+historisch-totalSuspects,personen,2022,Syrië,2380,observed,,,,,
+historisch-totalSuspects,personen,2022,Algerije,2360,observed,,,,,
+historisch-totalSuspects,personen,2022,België,1780,observed,,,,,
+historisch-totalSuspects,personen,2022,Indonesië,1660,observed,,,,,
+historisch-totalSuspects,personen,2022,Bulgarije,1550,observed,,,,,
+historisch-totalSuspects,personen,2022,(voormalig) Joegoslavië,1390,observed,,,,,
+historisch-totalSuspects,personen,2022,Irak,1260,observed,,,,,
+historisch-totalSuspects,personen,2022,Somalië,1260,observed,,,,,
+historisch-totalSuspects,personen,2022,Frankrijk,1170,observed,,,,,
+historisch-totalSuspects,personen,2022,Spanje,1000,observed,,,,,
+historisch-totalSuspects,personen,2022,Verenigd Koninkrijk,840,observed,,,,,
+historisch-totalSuspects,personen,2022,Afghanistan,800,observed,,,,,
+historisch-totalSuspects,personen,2022,Iran,800,observed,,,,,
+historisch-totalSuspects,personen,2022,Italië,720,observed,,,,,
+historisch-totalSuspects,personen,2022,Portugal,620,observed,,,,,
+historisch-totalSuspects,personen,2022,Tunesië,620,observed,,,,,
+historisch-totalSuspects,personen,2022,Kaapverdië,570,observed,,,,,
+historisch-totalSuspects,personen,2022,Voormalig Tsjecho-Slowakije,530,observed,,,,,
+historisch-totalSuspects,personen,2022,Egypte,520,observed,,,,,
+historisch-totalSuspects,personen,2022,Hongarije,510,observed,,,,,
+historisch-totalSuspects,personen,2022,Colombia,480,observed,,,,,
+historisch-totalSuspects,personen,2022,Dominicaanse Republiek,480,observed,,,,,
+historisch-totalSuspects,personen,2022,Brazilië,450,observed,,,,,
+historisch-totalSuspects,personen,2022,Ghana,450,observed,,,,,
+historisch-totalSuspects,personen,2022,Nigeria,390,observed,,,,,
+historisch-totalSuspects,personen,2022,China,380,observed,,,,,
+historisch-totalSuspects,personen,2022,Ethiopië,380,observed,,,,,
+historisch-totalSuspects,personen,2022,Pakistan,330,observed,,,,,
+historisch-totalSuspects,personen,2022,Verenigde Staten van Amerika,330,observed,,,,,
+historisch-totalSuspects,personen,2022,Angola,300,observed,,,,,
+historisch-totalSuspects,personen,2022,India,300,observed,,,,,
+historisch-totalSuspects,personen,2022,Congo (Democratische Republiek),240,observed,,,,,
+historisch-totalSuspects,personen,2022,Zuid-Afrika,200,observed,,,,,
+historisch-totalSuspects,personen,2022,Soedan,190,observed,,,,,
+historisch-totalSuspects,personen,2022,Sierra Leone,180,observed,,,,,
+historisch-totalSuspects,personen,2022,Australië,170,observed,,,,,
+historisch-totalSuspects,personen,2022,Thailand,170,observed,,,,,
+historisch-totalSuspects,personen,2022,Vietnam,170,observed,,,,,
+historisch-totalSuspects,personen,2022,Ierland,150,observed,,,,,
+historisch-totalSuspects,personen,2022,Libanon,140,observed,,,,,
+historisch-totalSuspects,personen,2022,Chili,130,observed,,,,,
+historisch-totalSuspects,personen,2022,Filippijnen,130,observed,,,,,
+historisch-totalSuspects,personen,2022,Sri Lanka,130,observed,,,,,
+historisch-totalSuspects,personen,2022,Canada,120,observed,,,,,
+historisch-totalSuspects,personen,2022,Venezuela,120,observed,,,,,
+historisch-totalSuspects,personen,2022,Oostenrijk,110,observed,,,,,
+historisch-totalSuspects,personen,2022,Peru,110,observed,,,,,
+historisch-totalSuspects,personen,2022,Israël,100,observed,,,,,
+historisch-totalSuspects,personen,2022,Guyana,90,observed,,,,,
+historisch-totalSuspects,personen,2022,Argentinië,80,observed,,,,,
+historisch-totalSuspects,personen,2022,Zwitserland,80,observed,,,,,
+historisch-totalSuspects,personen,2022,Zweden,70,observed,,,,,
+historisch-totalSuspects,personen,2022,Hongkong,60,observed,,,,,
+historisch-totalSuspects,personen,2022,Nieuw-Zeeland,60,observed,,,,,
+historisch-totalSuspects,personen,2022,Zuid-Korea,60,observed,,,,,
+historisch-totalSuspects,personen,2022,Mexico,50,observed,,,,,
+historisch-totalSuspects,personen,2022,Denemarken,40,observed,,,,,
+historisch-totalSuspects,personen,2022,Maleisië,40,observed,,,,,
+historisch-totalSuspects,personen,2022,Finland,30,observed,,,,,
+historisch-totalSuspects,personen,2022,Noorwegen,30,observed,,,,,
+historisch-totalSuspects,personen,2022,Singapore,30,observed,,,,,
+historisch-totalSuspects,personen,2022,Japan,20,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Totaal,8.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Met migratieachtergrond,15.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Nederlandse achtergrond,6.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Niet-westerse migratieachtergrond,20.2,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Westerse migratieachtergrond,8.6,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Marokko,29.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Polen,16.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Suriname,22.7,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Turkije,16.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,"(voormalige) Nederlandse Antillen, Aruba",35.7,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Overige migratieachtergrond,16.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Voormalige Sovjet-Unie,9.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Roemenië,12.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Duitsland,5.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Syrië,19.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Algerije,27.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,België,7.7,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Indonesië,4.7,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Bulgarije,17.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,(voormalig) Joegoslavië,13.7,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Irak,19.6,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Somalië,34.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Frankrijk,7.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Spanje,10.2,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Verenigd Koninkrijk,7.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Afghanistan,15.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Iran,15.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Italië,8.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Portugal,13.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Tunesië,27.2,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Kaapverdië,24.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Voormalig Tsjecho-Slowakije,11.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Egypte,18.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Hongarije,8.8,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Colombia,18.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Dominicaanse Republiek,32.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Brazilië,10.6,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Ghana,17.8,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Nigeria,18.7,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,China,4.6,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Ethiopië,15.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Pakistan,12.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Verenigde Staten van Amerika,5.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Angola,35.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,India,4.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Congo (Democratische Republiek),27.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Zuid-Afrika,6.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Soedan,20.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Sierra Leone,32.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Australië,9.6,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Thailand,8.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Vietnam,6.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Ierland,7.2,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Libanon,17.8,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Chili,12.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Filippijnen,5.2,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Sri Lanka,10.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Canada,7.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Venezuela,11.5,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Oostenrijk,4.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Peru,8.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Israël,8.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Guyana,19.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Argentinië,7.8,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Zwitserland,6.0,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Zweden,5.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Hongkong,3.2,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Nieuw-Zeeland,9.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Zuid-Korea,6.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Mexico,3.9,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Denemarken,5.6,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Maleisië,5.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Finland,5.4,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Noorwegen,5.1,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Singapore,5.3,observed,,,,,
+historisch-suspectsPer10000,per 1.000 inwoners,2022,Japan,1.9,observed,,,,,
+actueel-totalSuspects,personen,2022,Totaal,155650,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Nederland,72980,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Europa (exclusief Nederland),26790,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Buiten Europa (excl. 5 grote herkomst...,20540,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Marokko,12350,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Suriname,8060,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Turkije,6670,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Nederlandse Cariben,5880,observed,Definitief,,,,
+actueel-totalSuspects,personen,2022,Indonesië,1730,observed,Definitief,,,,
+actueel-totalSuspects,personen,2023,Totaal,148800,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Nederland,66790,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Europa (exclusief Nederland),27670,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Buiten Europa (excl. 5 grote herkomst...,21070,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Marokko,11520,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Suriname,7510,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Turkije,6360,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Nederlandse Cariben,5640,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2023,Indonesië,1590,observed,Definitief,Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Totaal,140240,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Nederland,60740,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Europa (exclusief Nederland),26360,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Buiten Europa (excl. 5 grote herkomst...,20760,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Marokko,11220,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Suriname,7240,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Turkije,6400,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Nederlandse Cariben,5520,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2024,Indonesië,1350,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-totalSuspects,personen,2025,Totaal,139960,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Nederland,59460,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Europa (exclusief Nederland),26520,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Buiten Europa (excl. 5 grote herkomst...,21380,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Marokko,11180,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Suriname,6970,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Turkije,6360,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Nederlandse Cariben,5580,observed,Voorlopig,Provisional figures,,,
+actueel-totalSuspects,personen,2025,Indonesië,1270,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Totaal,8.4,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Nederland,6.2,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Europa (exclusief Nederland),9.4,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Buiten Europa (excl. 5 grote herkomst...,14.2,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Marokko,30.1,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Suriname,22.8,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Turkije,16.1,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Nederlandse Cariben,34.0,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2022,Indonesië,4.7,observed,Definitief,,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Totaal,7.9,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Nederland,5.6,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Europa (exclusief Nederland),9.2,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Buiten Europa (excl. 5 grote herkomst...,13.2,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Marokko,27.7,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Suriname,21.0,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Turkije,14.7,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Nederlandse Cariben,31.7,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2023,Indonesië,4.4,observed,Definitief,Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Totaal,7.4,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Nederland,5.1,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Europa (exclusief Nederland),8.6,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Buiten Europa (excl. 5 grote herkomst...,12.6,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Marokko,27.0,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Suriname,20.0,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Turkije,14.5,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Nederlandse Cariben,30.4,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2024,Indonesië,3.7,observed,Voorlopig,Provisional figures Voorlopige cijfers,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Totaal,7.3,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Nederland,5.0,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Europa (exclusief Nederland),8.4,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Buiten Europa (excl. 5 grote herkomst...,12.8,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Marokko,26.5,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Suriname,19.2,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Turkije,14.0,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Nederlandse Cariben,30.6,observed,Voorlopig,Provisional figures,,,
+actueel-suspectsPer10000,per 1.000 inwoners,2025,Indonesië,3.5,observed,Voorlopig,Provisional figures,,,
+historisch-spreiding,per 1.000 inwoners,2022,Totaal,8.3,observed,,,,,158290
+historisch-spreiding,per 1.000 inwoners,2022,Met migratieachtergrond,15.0,observed,,,,,84520
+historisch-spreiding,per 1.000 inwoners,2022,Nederlandse achtergrond,6.1,observed,,,,,72890
+historisch-spreiding,per 1.000 inwoners,2022,Niet-westerse migratieachtergrond,20.2,observed,,,,,52840
+historisch-spreiding,per 1.000 inwoners,2022,Westerse migratieachtergrond,8.6,observed,,,,,31680
+historisch-spreiding,per 1.000 inwoners,2022,Marokko,29.5,observed,,,,,12810
+historisch-spreiding,per 1.000 inwoners,2022,Polen,16.5,observed,,,,,8340
+historisch-spreiding,per 1.000 inwoners,2022,Suriname,22.7,observed,,,,,7950
+historisch-spreiding,per 1.000 inwoners,2022,Turkije,16.1,observed,,,,,6600
+historisch-spreiding,per 1.000 inwoners,2022,"(voormalige) Nederlandse Antillen, Aruba",35.7,observed,,,,,5650
+historisch-spreiding,per 1.000 inwoners,2022,Overige migratieachtergrond,16.9,observed,,,,,3770
+historisch-spreiding,per 1.000 inwoners,2022,Voormalige Sovjet-Unie,9.5,observed,,,,,3480
+historisch-spreiding,per 1.000 inwoners,2022,Roemenië,12.1,observed,,,,,3420
+historisch-spreiding,per 1.000 inwoners,2022,Duitsland,5.5,observed,,,,,2650
+historisch-spreiding,per 1.000 inwoners,2022,Syrië,19.1,observed,,,,,2380
+historisch-spreiding,per 1.000 inwoners,2022,Algerije,27.3,observed,,,,,2360
+historisch-spreiding,per 1.000 inwoners,2022,België,7.7,observed,,,,,1780
+historisch-spreiding,per 1.000 inwoners,2022,Indonesië,4.7,observed,,,,,1660
+historisch-spreiding,per 1.000 inwoners,2022,Bulgarije,17.5,observed,,,,,1550
+historisch-spreiding,per 1.000 inwoners,2022,(voormalig) Joegoslavië,13.7,observed,,,,,1390
+historisch-spreiding,per 1.000 inwoners,2022,Irak,19.6,observed,,,,,1260
+historisch-spreiding,per 1.000 inwoners,2022,Somalië,34.4,observed,,,,,1260
+historisch-spreiding,per 1.000 inwoners,2022,Frankrijk,7.3,observed,,,,,1170
+historisch-spreiding,per 1.000 inwoners,2022,Spanje,10.2,observed,,,,,1000
+historisch-spreiding,per 1.000 inwoners,2022,Verenigd Koninkrijk,7.4,observed,,,,,840
+historisch-spreiding,per 1.000 inwoners,2022,Afghanistan,15.9,observed,,,,,800
+historisch-spreiding,per 1.000 inwoners,2022,Iran,15.4,observed,,,,,800
+historisch-spreiding,per 1.000 inwoners,2022,Italië,8.4,observed,,,,,720
+historisch-spreiding,per 1.000 inwoners,2022,Portugal,13.4,observed,,,,,620
+historisch-spreiding,per 1.000 inwoners,2022,Tunesië,27.2,observed,,,,,620
+historisch-spreiding,per 1.000 inwoners,2022,Kaapverdië,24.9,observed,,,,,570
+historisch-spreiding,per 1.000 inwoners,2022,Voormalig Tsjecho-Slowakije,11.0,observed,,,,,530
+historisch-spreiding,per 1.000 inwoners,2022,Egypte,18.1,observed,,,,,520
+historisch-spreiding,per 1.000 inwoners,2022,Hongarije,8.8,observed,,,,,510
+historisch-spreiding,per 1.000 inwoners,2022,Colombia,18.0,observed,,,,,480
+historisch-spreiding,per 1.000 inwoners,2022,Dominicaanse Republiek,32.0,observed,,,,,480
+historisch-spreiding,per 1.000 inwoners,2022,Brazilië,10.6,observed,,,,,450
+historisch-spreiding,per 1.000 inwoners,2022,Ghana,17.8,observed,,,,,450
+historisch-spreiding,per 1.000 inwoners,2022,Nigeria,18.7,observed,,,,,390
+historisch-spreiding,per 1.000 inwoners,2022,China,4.6,observed,,,,,380
+historisch-spreiding,per 1.000 inwoners,2022,Ethiopië,15.9,observed,,,,,380
+historisch-spreiding,per 1.000 inwoners,2022,Pakistan,12.3,observed,,,,,330
+historisch-spreiding,per 1.000 inwoners,2022,Verenigde Staten van Amerika,5.9,observed,,,,,330
+historisch-spreiding,per 1.000 inwoners,2022,Angola,35.4,observed,,,,,300
+historisch-spreiding,per 1.000 inwoners,2022,India,4.5,observed,,,,,300
+historisch-spreiding,per 1.000 inwoners,2022,Congo (Democratische Republiek),27.4,observed,,,,,240
+historisch-spreiding,per 1.000 inwoners,2022,Zuid-Afrika,6.4,observed,,,,,200
+historisch-spreiding,per 1.000 inwoners,2022,Soedan,20.9,observed,,,,,190
+historisch-spreiding,per 1.000 inwoners,2022,Sierra Leone,32.0,observed,,,,,180
+historisch-spreiding,per 1.000 inwoners,2022,Australië,9.6,observed,,,,,170
+historisch-spreiding,per 1.000 inwoners,2022,Thailand,8.3,observed,,,,,170
+historisch-spreiding,per 1.000 inwoners,2022,Vietnam,6.9,observed,,,,,170
+historisch-spreiding,per 1.000 inwoners,2022,Ierland,7.2,observed,,,,,150
+historisch-spreiding,per 1.000 inwoners,2022,Libanon,17.8,observed,,,,,140
+historisch-spreiding,per 1.000 inwoners,2022,Chili,12.9,observed,,,,,130
+historisch-spreiding,per 1.000 inwoners,2022,Filippijnen,5.2,observed,,,,,130
+historisch-spreiding,per 1.000 inwoners,2022,Sri Lanka,10.4,observed,,,,,130
+historisch-spreiding,per 1.000 inwoners,2022,Canada,7.1,observed,,,,,120
+historisch-spreiding,per 1.000 inwoners,2022,Venezuela,11.5,observed,,,,,120
+historisch-spreiding,per 1.000 inwoners,2022,Oostenrijk,4.9,observed,,,,,110
+historisch-spreiding,per 1.000 inwoners,2022,Peru,8.0,observed,,,,,110
+historisch-spreiding,per 1.000 inwoners,2022,Israël,8.3,observed,,,,,100
+historisch-spreiding,per 1.000 inwoners,2022,Guyana,19.9,observed,,,,,90
+historisch-spreiding,per 1.000 inwoners,2022,Argentinië,7.8,observed,,,,,80
+historisch-spreiding,per 1.000 inwoners,2022,Zwitserland,6.0,observed,,,,,80
+historisch-spreiding,per 1.000 inwoners,2022,Zweden,5.4,observed,,,,,70
+historisch-spreiding,per 1.000 inwoners,2022,Hongkong,3.2,observed,,,,,60
+historisch-spreiding,per 1.000 inwoners,2022,Nieuw-Zeeland,9.4,observed,,,,,60
+historisch-spreiding,per 1.000 inwoners,2022,Zuid-Korea,6.9,observed,,,,,60
+historisch-spreiding,per 1.000 inwoners,2022,Mexico,3.9,observed,,,,,50
+historisch-spreiding,per 1.000 inwoners,2022,Denemarken,5.6,observed,,,,,40
+historisch-spreiding,per 1.000 inwoners,2022,Maleisië,5.3,observed,,,,,40
+historisch-spreiding,per 1.000 inwoners,2022,Finland,5.4,observed,,,,,30
+historisch-spreiding,per 1.000 inwoners,2022,Noorwegen,5.1,observed,,,,,30
+historisch-spreiding,per 1.000 inwoners,2022,Singapore,5.3,observed,,,,,30
+historisch-spreiding,per 1.000 inwoners,2022,Japan,1.9,observed,,,,,20
+historisch-kwartielen,per 1.000 inwoners,2022,1,6.5,observed,,,,,19
+historisch-kwartielen,per 1.000 inwoners,2022,2,10.3,observed,,,,,17
+historisch-kwartielen,per 1.000 inwoners,2022,3,18.0,observed,,,,,18
+historisch-kwartielen,per 1.000 inwoners,2022,4,35.7,observed,,,,,18
+verdachten-bevolking-groepen,% geregistreerde verdachten,2022,Nederland,46.89,observed,Definitief,,,,73.98
+verdachten-bevolking-groepen,% geregistreerde verdachten,2022,Europa (exclusief Nederland),17.21,observed,Definitief,,,,8.40
+verdachten-bevolking-groepen,% geregistreerde verdachten,2022,Buiten Europa,35.48,observed,Definitief,,,,17.62
+verdachten-bevolking-groepen,% geregistreerde verdachten,2023,Nederland,44.89,observed,Definitief,,,,72.86
+verdachten-bevolking-groepen,% geregistreerde verdachten,2023,Europa (exclusief Nederland),18.60,observed,Definitief,,,,9.08
+verdachten-bevolking-groepen,% geregistreerde verdachten,2023,Buiten Europa,36.08,observed,Definitief,,,,18.05
+verdachten-bevolking-groepen,% geregistreerde verdachten,2024,Nederland,43.31,observed,Voorlopig,,,,72.13
+verdachten-bevolking-groepen,% geregistreerde verdachten,2024,Europa (exclusief Nederland),18.80,observed,Voorlopig,,,,9.35
+verdachten-bevolking-groepen,% geregistreerde verdachten,2024,Buiten Europa,37.43,observed,Voorlopig,,,,18.53
+verdachten-bevolking-groepen,% geregistreerde verdachten,2025,Nederland,42.48,observed,Voorlopig,,,,71.50
+verdachten-bevolking-groepen,% geregistreerde verdachten,2025,Europa (exclusief Nederland),18.95,observed,Voorlopig,,,,9.49
+verdachten-bevolking-groepen,% geregistreerde verdachten,2025,Buiten Europa,37.68,observed,Voorlopig,,,,19.01
+verdachten-bevolking-landen,% geregistreerde verdachten,2022,Indonesië,1.11,observed,Definitief,,,,2.07
+verdachten-bevolking-landen,% geregistreerde verdachten,2022,Marokko,7.93,observed,Definitief,,,,2.38
+verdachten-bevolking-landen,% geregistreerde verdachten,2022,Nederlandse Cariben,3.78,observed,Definitief,,,,1.05
+verdachten-bevolking-landen,% geregistreerde verdachten,2022,Suriname,5.18,observed,Definitief,,,,2.06
+verdachten-bevolking-landen,% geregistreerde verdachten,2022,Turkije,4.29,observed,Definitief,,,,2.45
+verdachten-bevolking-landen,% geregistreerde verdachten,2023,Indonesië,1.07,observed,Definitief,,,,2.02
+verdachten-bevolking-landen,% geregistreerde verdachten,2023,Marokko,7.74,observed,Definitief,,,,2.39
+verdachten-bevolking-landen,% geregistreerde verdachten,2023,Nederlandse Cariben,3.79,observed,Definitief,,,,1.07
+verdachten-bevolking-landen,% geregistreerde verdachten,2023,Suriname,5.05,observed,Definitief,,,,2.04
+verdachten-bevolking-landen,% geregistreerde verdachten,2023,Turkije,4.27,observed,Definitief,,,,2.49
+verdachten-bevolking-landen,% geregistreerde verdachten,2024,Indonesië,0.96,observed,Voorlopig,,,,1.99
+verdachten-bevolking-landen,% geregistreerde verdachten,2024,Marokko,8.00,observed,Voorlopig,,,,2.39
+verdachten-bevolking-landen,% geregistreerde verdachten,2024,Nederlandse Cariben,3.94,observed,Voorlopig,,,,1.08
+verdachten-bevolking-landen,% geregistreerde verdachten,2024,Suriname,5.16,observed,Voorlopig,,,,2.04
+verdachten-bevolking-landen,% geregistreerde verdachten,2024,Turkije,4.56,observed,Voorlopig,,,,2.55
+verdachten-bevolking-landen,% geregistreerde verdachten,2025,Indonesië,0.91,observed,Voorlopig,,,,1.95
+verdachten-bevolking-landen,% geregistreerde verdachten,2025,Marokko,7.99,observed,Voorlopig,,,,2.40
+verdachten-bevolking-landen,% geregistreerde verdachten,2025,Nederlandse Cariben,3.99,observed,Voorlopig,,,,1.09
+verdachten-bevolking-landen,% geregistreerde verdachten,2025,Suriname,4.98,observed,Voorlopig,,,,2.04
+verdachten-bevolking-landen,% geregistreerde verdachten,2025,Turkije,4.54,observed,Voorlopig,,,,2.60

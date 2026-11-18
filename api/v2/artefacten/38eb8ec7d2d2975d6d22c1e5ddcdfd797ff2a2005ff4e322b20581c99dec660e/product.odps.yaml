@@ -1,0 +1,22 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-hoe-hecht-is-nederland
+name: Hoe hecht is Nederland?
+version: 2.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Nederlanders vertrouwen hun buren, helpen elkaar en zetten zich vrijwillig
+    in. Toch namen sociaal contact, hulp en vertrouwen in 2025 tegelijk af. Deze verkenning
+    laat zien waar de verbinding sterk is, waar zij dunner wordt en voor wie.
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-hoe-hecht-is-nederland-public
+  customProperties:
+  - property: contractVersion
+    value: 2.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/hoe-hecht-is-nederland/manifest.json

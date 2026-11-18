@@ -1,0 +1,21 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-hoe-hecht-is-nederland
+name: Hoe hecht is Nederland?
+version: 1.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoe veranderen vertrouwen, contacten, participatie, eenzaamheid en sociale
+    cohesie in Nederland en tussen groepen?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-hoe-hecht-is-nederland-public
+  customProperties:
+  - property: contractVersion
+    value: 1.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/hoe-hecht-is-nederland/manifest.json

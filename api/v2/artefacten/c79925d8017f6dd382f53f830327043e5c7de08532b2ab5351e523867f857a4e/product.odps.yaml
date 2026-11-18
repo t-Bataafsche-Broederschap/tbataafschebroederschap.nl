@@ -1,0 +1,21 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-begrotingsstromen-van-de-europese-Unie
+name: Begrotingsstromen van de Europese Unie
+version: 2.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Welke landen dragen netto bij aan de EU-begroting en welke landen netto
+    ontvangen? Deze kaart visualiseert geldvloeing binnen de Europese Unie.
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-begrotingsstromen-van-de-europese-Unie-public
+  customProperties:
+  - property: contractVersion
+    value: 2.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/begrotingsstromen-van-de-europese-Unie/manifest.json

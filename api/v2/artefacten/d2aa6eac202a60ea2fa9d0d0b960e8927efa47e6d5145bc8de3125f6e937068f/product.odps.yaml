@@ -1,0 +1,21 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-criminaliteit-nederland
+name: Criminaliteit in Nederland
+version: 2.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Interactief overzicht van door de politie geregistreerde misdrijven vanaf
+    1948, aangevuld met delictsoorten en slachtofferschap vanaf 2010.
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-criminaliteit-nederland-public
+  customProperties:
+  - property: contractVersion
+    value: 2.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/criminaliteit-nederland/manifest.json

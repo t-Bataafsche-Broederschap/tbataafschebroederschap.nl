@@ -1,0 +1,22 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-woningbouw-en-woningtekort
+name: Woningbouw en woningtekort
+version: 1.2.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: We lijken een permanent huizentekort te hebben. Is dat ooit anders geweest?
+    Hoeveel huizen bouwen we eigenlijk, en hoeveel van die huizen komen terecht bij
+    de inheemse, en hoeveel bij andere groepen?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-woningbouw-en-woningtekort-public
+  customProperties:
+  - property: contractVersion
+    value: 1.2.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/woningbouw-en-woningtekort/manifest.json

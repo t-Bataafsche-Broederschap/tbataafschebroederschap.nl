@@ -1,0 +1,546 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: tbb-autochtoonse-nederlandse-bevolking-public
+version: 2.1.0
+name: Autochtone Nederlandse bevolking
+status: active
+description:
+  purpose: Hoeveel mensen in Nederland zou ik autochtoon noemen? Hoeveel inheems?
+    Deze grafiek toont verschillende indelingen van de autochtoonse bevolking, waaronder
+    ook de bevolkingsgroei als percentage.
+  limitations: De bewaarde herkomstindelingen zijn geen meting van inheems zijn. Geboorteland,
+    geboorteland van de ouders en nationaliteit zijn verschillende kenmerken. Herkomstgegevens
+    vóór 1996 zijn reconstructies; vanaf 2022 wordt een brugdefinitie gebruikt. De
+    tijdreeksen worden bij 1996 en 2022 onderbroken; een getrokken lijn mag geen onveranderde
+    meetdefinitie suggereren. De bewaarde herkomstaantallen lopen tot 2026, maar de
+    totale bevolkingsnoemer slechts tot 2025. Voor 2026 worden geen percentages geconstrueerd
+    uit een ontbrekende noemer. De invoer is een historische verwerkte baseline. Niet
+    alle oorspronkelijke bronresponses en bronstatussen zijn opnieuw bevestigd. Een
+    samenloop van tijdreeksen toont geen oorzaak aan. Nettomigratie betreft heel Nederland,
+    ook bij deling door de herkomstbenadering. Dit is een schaalvergelijking, geen
+    aandeel migranten en geen migratiecijfer binnen die herkomstgroep. De bewaarde
+    jaarstromen eindigen in 2024. De bevolkingsbasis vóór 1972 is een model dat aansluit
+    op de herkomstbenadering van 1972; geboorten, sterfte en generatiewisselingen
+    van herkomstgroepen ontbreken in dit model. De kalibratie wijkt af van de oude
+    grafiek, die op geboorteland aansloot. Het voortschrijdend gemiddelde vereist
+    tien volledige opeenvolgende jaren. De band van twee steekproefstandaarddeviaties
+    toont spreiding, geen betrouwbaarheidsinterval. Vensters en periodetrends kunnen
+    verschillende bronindelingen omvatten; de keuze voor 1960 komt uit de oude visualisatie.
+team:
+  name: t-Bataafsche Broederschap
+customProperties:
+- property: seriesSemantics
+  value:
+  - id: population
+    unit: personen
+    definition: Bewaarde CBS-reeks. Bevolking is een stand op 1 januari; immigratie
+      en emigratie zijn jaarstromen. Bij de herkomstbenadering blijven reconstructies
+      en de brugdefinitie vanaf 2022 onderscheiden. Dit is geen meting van inheems
+      zijn.
+    key:
+    - period
+    - group
+  - id: immigration
+    unit: personen
+    definition: Bewaarde CBS-reeks. Bevolking is een stand op 1 januari; immigratie
+      en emigratie zijn jaarstromen. Bij de herkomstbenadering blijven reconstructies
+      en de brugdefinitie vanaf 2022 onderscheiden. Dit is geen meting van inheems
+      zijn.
+    key:
+    - period
+    - group
+  - id: emigration
+    unit: personen
+    definition: Bewaarde CBS-reeks. Bevolking is een stand op 1 januari; immigratie
+      en emigratie zijn jaarstromen. Bij de herkomstbenadering blijven reconstructies
+      en de brugdefinitie vanaf 2022 onderscheiden. Dit is geen meting van inheems
+      zijn.
+    key:
+    - period
+    - group
+  - id: nativeBackgroundProxy
+    unit: personen
+    definition: Bewaarde CBS-reeks. Bevolking is een stand op 1 januari; immigratie
+      en emigratie zijn jaarstromen. Bij de herkomstbenadering blijven reconstructies
+      en de brugdefinitie vanaf 2022 onderscheiden. Dit is geen meting van inheems
+      zijn.
+    key:
+    - period
+    - group
+  - id: samenstelling-aandeel
+    unit: '%'
+    definition: 'Aandelen = groepsaantal / bevolking op 1 januari × 100. Jaarlijkse
+      groei = gerapporteerde jaarmutatie / bevolking op 1 januari × 100. Deze bewaarde
+      indelingen zijn niet door de tijd identiek: reconstructie tot 1996, historische
+      generatie-indeling tot 2022 en vervolgens een brugdefinitie. Verbindingslijnen
+      bij 1996 en 2022 mogen geen doorlopende meetdefinitie suggereren.'
+    key:
+    - period
+    - group
+  - id: samenstelling-aantal
+    unit: personen
+    definition: 'Aandelen = groepsaantal / bevolking op 1 januari × 100. Jaarlijkse
+      groei = gerapporteerde jaarmutatie / bevolking op 1 januari × 100. Deze bewaarde
+      indelingen zijn niet door de tijd identiek: reconstructie tot 1996, historische
+      generatie-indeling tot 2022 en vervolgens een brugdefinitie. Verbindingslijnen
+      bij 1996 en 2022 mogen geen doorlopende meetdefinitie suggereren.'
+    key:
+    - period
+    - group
+  - id: bevolkingsgroei
+    unit: '% van de beginstand'
+    definition: 'Aandelen = groepsaantal / bevolking op 1 januari × 100. Jaarlijkse
+      groei = gerapporteerde jaarmutatie / bevolking op 1 januari × 100. Deze bewaarde
+      indelingen zijn niet door de tijd identiek: reconstructie tot 1996, historische
+      generatie-indeling tot 2022 en vervolgens een brugdefinitie. Verbindingslijnen
+      bij 1996 en 2022 mogen geen doorlopende meetdefinitie suggereren.'
+    key:
+    - period
+    - group
+  - id: migratiestromen
+    unit: personen per jaar
+    definition: 'Aandelen = groepsaantal / bevolking op 1 januari × 100. Jaarlijkse
+      groei = gerapporteerde jaarmutatie / bevolking op 1 januari × 100. Deze bewaarde
+      indelingen zijn niet door de tijd identiek: reconstructie tot 1996, historische
+      generatie-indeling tot 2022 en vervolgens een brugdefinitie. Verbindingslijnen
+      bij 1996 en 2022 mogen geen doorlopende meetdefinitie suggereren.'
+    key:
+    - period
+    - group
+  - id: nettomigratie-aandeel
+    unit: '% per jaar'
+    definition: Landelijke nettomigratie / bevolkingsbasis op 1 januari × 100. Negatieve
+      waarden zijn mogelijk. De teller betreft heel Nederland, niet de migratie binnen
+      de noemergroep. Dit is geen aandeel migranten in de bevolking. De noemer staat
+      in nettomigratie-noemer; exacte teller en noemer staan ook per punt in reason.
+    key:
+    - period
+    - group
+  - id: nettomigratie-noemer
+    unit: personen
+    definition: 'Totale bevolking of herkomstbenadering. Vóór 1972: bevolking − (bevolking1972
+      − herkomstbenadering1972 − cumulatieveNettomigratie1972 + cumulatieveNettomigratieJaar).
+      Dit model negeert geboorten, sterfte en generatiewisselingen van herkomstgroepen.
+      Geen waargenomen herkomstbevolking vóór 1972. Vanaf 1972 de bewaarde reconstructie,
+      vanaf 1996 directe oude indeling, vanaf 2022 brugdefinitie.'
+    key:
+    - period
+    - group
+  - id: nettomigratie-tienjaarsgemiddelde
+    unit: '% per jaar'
+    definition: Tien volledige opeenvolgende jaren, inclusief het getoonde jaar. Gemiddelde
+      en band van ±2 steekproefstandaarddeviaties, deler n−1. De band beschrijft jaarvariatie
+      en is geen betrouwbaarheidsinterval. Geen aanvulling bij ontbrekende jaren.
+      Vensters lopen door over bronwisselingen.
+    key:
+    - period
+    - group
+  - id: nettomigratie-periodegemiddelde
+    unit: '% per jaar'
+    definition: Ongewogen rekenkundig gemiddelde van de jaarverhoudingen, afzonderlijk
+      vóór 1960 en vanaf 1960 tot de laatste beschikbare jaarwaarde. Geen verhouding
+      van opgetelde tellers en noemers.
+    key:
+    - period
+    - group
+  - id: nettomigratie-trend
+    unit: '% per jaar'
+    definition: Lineaire kleinste-kwadratenregressie van de jaarverhouding op kalenderjaar,
+      afzonderlijk vóór en vanaf 1960. Geen prognose of causale schatting. De periodekeuze
+      komt uit de oude visualisatie, niet uit een statistische breuktoets.
+    key:
+    - period
+    - group
+schema:
+- name: research
+  logicalType: object
+  properties:
+  - name: checks
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: id
+        logicalType: string
+        required: true
+      - name: message
+        logicalType: string
+        required: true
+      - name: status
+        logicalType: string
+        required: true
+        enum:
+        - value: passed
+        - value: limited
+        - value: not_comparable
+  - name: correlations
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: cells
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: object
+          required: true
+          properties:
+          - name: column
+            logicalType: string
+            required: true
+          - name: n
+            logicalType: integer
+            required: true
+          - name: reason
+            logicalType: string
+            required: true
+          - name: row
+            logicalType: string
+            required: true
+          - name: value
+            logicalType: string
+            required: false
+      - name: definition
+        logicalType: string
+        required: true
+      - name: dimension
+        logicalType: string
+        required: true
+      - name: group_ids
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: string
+          required: true
+      - name: method
+        logicalType: string
+        required: true
+        enum:
+        - value: pearson
+    description: Exploratieve correlaties van groepscijfers, met de exacte groepsselectie
+      en het aantal geldige paren per cel.
+  - name: definition
+    logicalType: string
+    required: true
+  - name: geometry
+    logicalType: object
+    required: false
+    properties: []
+  - name: id
+    logicalType: string
+    required: true
+  - name: inputs
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: capture_id
+        logicalType: string
+        required: true
+      - name: kind
+        logicalType: string
+        required: true
+        enum:
+        - value: source_response
+        - value: processed_baseline
+        - value: reviewed_transcription
+      - name: retrieved_at
+        logicalType: string
+        required: true
+      - name: sha256
+        logicalType: string
+        required: true
+      - name: source_id
+        logicalType: string
+        required: true
+  - name: limitations
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: string
+      required: true
+  - name: method_version
+    logicalType: string
+    required: true
+  - name: original_context
+    logicalType: string
+    required: true
+    description: Oorspronkelijke aanleiding als platte tekst. De oorspronkelijke HTML
+      blijft in het behoudarchief staan.
+  - name: question
+    logicalType: string
+    required: true
+  - name: question_ids
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: string
+      required: true
+  - name: schema_version
+    logicalType: integer
+    required: true
+    enum:
+    - value: 2
+  - name: series
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: definition
+        logicalType: string
+        required: true
+      - name: id
+        logicalType: string
+        required: true
+      - name: kind
+        logicalType: string
+        required: true
+        enum:
+        - value: line
+        - value: bar
+        - value: scatter
+        - value: map
+      - name: points
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: object
+          required: true
+          properties:
+          - name: estimate
+            logicalType: object
+            required: false
+            properties:
+            - name: expenditure_eur
+              logicalType: string
+              required: true
+            - name: expenditure_source_id
+              logicalType: string
+              required: true
+            - name: group_recipients
+              logicalType: array
+              required: true
+              items:
+                name: item
+                logicalType: string
+                required: true
+              description: 'Dertien maandultimo''s: december voorafgaand aan het verslagjaar
+                tot december van het verslagjaar. Thuiswonende PW-ontvangers jonger
+                dan AOW-leeftijd.'
+            - name: inhabitants
+              logicalType: array
+              required: true
+              items:
+                name: item
+                logicalType: string
+                required: true
+              description: 'Dertien bevolkingsstanden op de eerste van de maand: januari
+                verslagjaar tot januari volgend jaar; dezelfde herkomstgroep, alle
+                leeftijden.'
+            - name: measure
+              logicalType: string
+              required: true
+              enum:
+              - value: per_capita
+              - value: total
+            - name: method
+              logicalType: string
+              required: true
+              enum:
+              - value: pw-equal-person-year-cost-v1
+            - name: national_recipients
+              logicalType: array
+              required: true
+              items:
+                name: item
+                logicalType: string
+                required: true
+              description: Dezelfde dertien maandultimo's voor de landelijke PW-telling.
+                Ook onbekende herkomst blijft in het landelijke totaal.
+            - name: population_source_id
+              logicalType: string
+              required: true
+            - name: recipients_source_id
+              logicalType: string
+              required: true
+            - name: year
+              logicalType: integer
+              required: true
+            description: Model voor bruto PW-uitgaven per inwoner per jaar. Gelijke
+              kosten per ontvangerjaar; jaargemiddelden uit dertien standen met halve
+              eindgewichten. Alle leeftijden in de bevolkingsnoemer. Geen gemeten
+              groepsbetalingen of netto bankontvangsten.
+          - name: group
+            logicalType: string
+            required: true
+            description: Groepssleutel binnen de specifieke reeks, geen universele
+              herkomstclassificatie.
+          - name: label
+            logicalType: string
+            required: true
+          - name: lower
+            logicalType: string
+            required: false
+          - name: percentage
+            logicalType: object
+            required: false
+            properties:
+            - name: cell
+              logicalType: string
+              required: true
+              logicalTypeOptions:
+                pattern: ^[A-Z]+[1-9][0-9]*$
+            - name: percentage
+              logicalType: string
+              required: true
+            - name: population
+              logicalType: string
+              required: true
+              enum:
+              - value: NL-residents-15-to-AOW
+            - name: reference_date
+              logicalType: string
+              required: true
+            - name: sheet
+              logicalType: string
+              required: true
+            - name: source_id
+              logicalType: string
+              required: true
+            description: CBS-percentage voor algemene bijstand, inwoners van 15 jaar
+              tot AOW-leeftijd, eind september. Per 1.000 is dit percentage maal tien;
+              blad, cel en peildatum blijven gebonden. Geen afgeleide absolute teller
+              of noemer.
+          - name: period
+            logicalType: string
+            required: true
+            description: Bronperiode; peildatum en frequentie staan in de reeksdefinitie.
+          - name: ratio
+            logicalType: object
+            required: false
+            properties:
+            - name: denominator
+              logicalType: string
+              required: true
+            - name: denominator_date
+              logicalType: string
+              required: true
+            - name: denominator_source_id
+              logicalType: string
+              required: true
+            - name: numerator
+              logicalType: string
+              required: true
+            - name: numerator_date
+              logicalType: string
+              required: true
+            - name: numerator_measure
+              logicalType: string
+              required: true
+            - name: numerator_source_id
+              logicalType: string
+              required: true
+            - name: population
+              logicalType: string
+              required: true
+              enum:
+              - value: NL-residents
+            description: Herleidbare teller, noemer en afzonderlijke peildata voor
+              een verhouding per 1.000 inwoners. De peildata liggen één dag uiteen;
+              dit is een expliciete benadering, geen identieke stand.
+          - name: reason
+            logicalType: string
+            required: true
+          - name: source_status
+            logicalType: string
+            required: true
+          - name: status
+            logicalType: string
+            required: true
+            enum:
+            - value: observed
+            - value: missing
+            - value: suppressed
+            - value: not_applicable
+            - value: estimated
+          - name: upper
+            logicalType: string
+            required: false
+          - name: value
+            logicalType: string
+            required: false
+            description: Exacte decimalstring in de eenheid van de reeks; null vereist
+              een expliciete ontbreekstatus.
+          - name: x
+            logicalType: string
+            required: false
+      - name: title
+        logicalType: string
+        required: true
+      - name: unit
+        logicalType: string
+        required: true
+        description: Meeteenheid van alle waarden in deze reeks. Een verhouding vereist
+          een passende teller en noemer.
+      - name: x_label
+        logicalType: string
+        required: true
+  - name: sources
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: id
+        logicalType: string
+        required: true
+      - name: publisher
+        logicalType: string
+        required: true
+      - name: role
+        logicalType: string
+        required: true
+      - name: title
+        logicalType: string
+        required: true
+      - name: url
+        logicalType: string
+        required: false
+  - name: title
+    logicalType: string
+    required: true
+  dataGranularityDescription: 'Een onderzoeksproduct met afzonderlijke reeksen; waarnemingssleutel
+    per reeks: periode en groep.'
+  quality:
+  - id: public-schema
+    name: Public schema
+    type: text
+    description: De publieke uitvoer voldoet aan het gegenereerde serialisatieschema.
+  - id: unique-observations
+    name: Unique observations
+    type: text
+    description: Binnen iedere reeks is periode plus groep uniek.
+  - id: value-status
+    name: Value and status
+    type: text
+    description: Een ontbrekende of afgeschermde waarde bevat geen getal; een waargenomen
+      waarde is niet null.

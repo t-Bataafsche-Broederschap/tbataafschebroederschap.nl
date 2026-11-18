@@ -1,0 +1,20 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-wereldbevolking
+name: Wereldbevolking
+version: 1.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoe ontwikkelt de bevolking van landen zich historisch en volgens ramingen?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-wereldbevolking-public
+  customProperties:
+  - property: contractVersion
+    value: 1.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/wereldbevolking/manifest.json

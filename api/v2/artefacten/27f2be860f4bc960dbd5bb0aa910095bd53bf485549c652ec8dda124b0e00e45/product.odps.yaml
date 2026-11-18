@@ -1,0 +1,20 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-migratie-in-nederland
+name: Waarom komen mensen naar Nederland?
+version: 1.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Waarom komen mensen naar Nederland en hoe veranderen de aantallen per migratiemotief?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-migratie-in-nederland-public
+  customProperties:
+  - property: contractVersion
+    value: 1.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/migratie-in-nederland/manifest.json

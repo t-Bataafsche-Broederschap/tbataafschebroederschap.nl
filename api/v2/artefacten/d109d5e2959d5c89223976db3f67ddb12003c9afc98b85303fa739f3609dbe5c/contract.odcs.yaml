@@ -1,0 +1,292 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: tbb-autochtoonse-nederlandse-bevolking-public
+version: 1.0.0
+name: Autochtone Nederlandse bevolking
+status: active
+description:
+  purpose: Hoe veranderen bevolkingsomvang, herkomst en migratie door de tijd?
+  limitations: Herkomst, geboorteland en nationaliteit zijn verschillende begrippen.
+    Een tijdsverband is geen oorzakelijke verklaring.
+team:
+  name: t-Bataafsche Broederschap
+customProperties:
+- property: seriesSemantics
+  value:
+  - id: population
+    unit: personen
+    definition: Historische reconstructies en veranderde herkomstindelingen zijn geen
+      doorlopend identieke meetdefinitie.
+    key:
+    - period
+    - group
+  - id: immigration
+    unit: personen
+    definition: Historische reconstructies en veranderde herkomstindelingen zijn geen
+      doorlopend identieke meetdefinitie.
+    key:
+    - period
+    - group
+  - id: emigration
+    unit: personen
+    definition: Historische reconstructies en veranderde herkomstindelingen zijn geen
+      doorlopend identieke meetdefinitie.
+    key:
+    - period
+    - group
+  - id: nativeBackgroundProxy
+    unit: personen
+    definition: Historische reconstructies en veranderde herkomstindelingen zijn geen
+      doorlopend identieke meetdefinitie.
+    key:
+    - period
+    - group
+schema:
+- name: research
+  logicalType: object
+  properties:
+  - name: checks
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: id
+        logicalType: string
+        required: true
+      - name: message
+        logicalType: string
+        required: true
+      - name: status
+        logicalType: string
+        required: true
+        enum:
+        - value: passed
+        - value: limited
+        - value: not_comparable
+  - name: definition
+    logicalType: string
+    required: true
+  - name: geometry
+    logicalType: object
+    required: false
+    properties: []
+  - name: id
+    logicalType: string
+    required: true
+  - name: inputs
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: capture_id
+        logicalType: string
+        required: true
+      - name: kind
+        logicalType: string
+        required: true
+        enum:
+        - value: source_response
+        - value: processed_baseline
+        - value: reviewed_transcription
+      - name: retrieved_at
+        logicalType: string
+        required: true
+      - name: sha256
+        logicalType: string
+        required: true
+      - name: source_id
+        logicalType: string
+        required: true
+  - name: limitations
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: string
+      required: true
+  - name: method_version
+    logicalType: string
+    required: true
+  - name: original_context
+    logicalType: string
+    required: true
+    description: Oorspronkelijke aanleiding als platte tekst. De oorspronkelijke HTML
+      blijft in het behoudarchief staan.
+  - name: question
+    logicalType: string
+    required: true
+  - name: question_ids
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: string
+      required: true
+  - name: schema_version
+    logicalType: integer
+    required: true
+    enum:
+    - value: 2
+  - name: series
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: definition
+        logicalType: string
+        required: true
+      - name: id
+        logicalType: string
+        required: true
+      - name: kind
+        logicalType: string
+        required: true
+        enum:
+        - value: line
+        - value: bar
+        - value: scatter
+        - value: map
+      - name: points
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: object
+          required: true
+          properties:
+          - name: group
+            logicalType: string
+            required: true
+            description: Groepssleutel binnen de specifieke reeks, geen universele
+              herkomstclassificatie.
+          - name: label
+            logicalType: string
+            required: true
+          - name: lower
+            logicalType: string
+            required: false
+          - name: period
+            logicalType: string
+            required: true
+            description: Bronperiode; peildatum en frequentie staan in de reeksdefinitie.
+          - name: ratio
+            logicalType: object
+            required: false
+            properties:
+            - name: denominator
+              logicalType: string
+              required: true
+            - name: denominator_date
+              logicalType: string
+              required: true
+            - name: denominator_source_id
+              logicalType: string
+              required: true
+            - name: numerator
+              logicalType: string
+              required: true
+            - name: numerator_date
+              logicalType: string
+              required: true
+            - name: numerator_measure
+              logicalType: string
+              required: true
+            - name: numerator_source_id
+              logicalType: string
+              required: true
+            - name: population
+              logicalType: string
+              required: true
+              enum:
+              - value: NL-residents
+            description: Herleidbare teller, noemer en afzonderlijke peildata voor
+              een verhouding per 1.000 inwoners. De peildata liggen één dag uiteen;
+              dit is een expliciete benadering, geen identieke stand.
+          - name: reason
+            logicalType: string
+            required: true
+          - name: source_status
+            logicalType: string
+            required: true
+          - name: status
+            logicalType: string
+            required: true
+            enum:
+            - value: observed
+            - value: missing
+            - value: suppressed
+            - value: not_applicable
+            - value: estimated
+          - name: upper
+            logicalType: string
+            required: false
+          - name: value
+            logicalType: string
+            required: false
+            description: Exacte decimalstring in de eenheid van de reeks; null vereist
+              een expliciete ontbreekstatus.
+          - name: x
+            logicalType: string
+            required: false
+      - name: title
+        logicalType: string
+        required: true
+      - name: unit
+        logicalType: string
+        required: true
+        description: Meeteenheid van alle waarden in deze reeks. Een verhouding vereist
+          een passende teller en noemer.
+      - name: x_label
+        logicalType: string
+        required: true
+  - name: sources
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: id
+        logicalType: string
+        required: true
+      - name: publisher
+        logicalType: string
+        required: true
+      - name: role
+        logicalType: string
+        required: true
+      - name: title
+        logicalType: string
+        required: true
+      - name: url
+        logicalType: string
+        required: false
+  - name: title
+    logicalType: string
+    required: true
+  dataGranularityDescription: 'Een onderzoeksproduct met afzonderlijke reeksen; waarnemingssleutel
+    per reeks: periode en groep.'
+  quality:
+  - id: public-schema
+    name: Public schema
+    type: text
+    description: De publieke uitvoer voldoet aan het gegenereerde serialisatieschema.
+  - id: unique-observations
+    name: Unique observations
+    type: text
+    description: Binnen iedere reeks is periode plus groep uniek.
+  - id: value-status
+    name: Value and status
+    type: text
+    description: Een ontbrekende of afgeschermde waarde bevat geen getal; een waargenomen
+      waarde is niet null.

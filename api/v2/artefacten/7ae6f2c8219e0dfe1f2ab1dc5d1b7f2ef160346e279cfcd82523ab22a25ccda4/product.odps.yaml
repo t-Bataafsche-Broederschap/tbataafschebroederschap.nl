@@ -1,0 +1,24 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-tennet-monitor-voorzieningszekerheid-2026
+name: TenneT Monitor Voorzieningszekerheid 2026
+version: 2.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoe groot is het effect van massa-migratie op de elektriciteitsvoorziening?
+    Misschien lijkt het stroomverbruik in Nederland ongerelateerd aan immigratie,
+    maar de immigranten hebben huizen nodig. Huizen met stroom. Ik ben momenteel overtuigd
+    dat de massa-migratie invloed heeft op de vraag naar elektriciteit en daarmee
+    op de voorzieningszekerheid.
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-tennet-monitor-voorzieningszekerheid-2026-public
+  customProperties:
+  - property: contractVersion
+    value: 2.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/tennet-monitor-voorzieningszekerheid-2026/manifest.json

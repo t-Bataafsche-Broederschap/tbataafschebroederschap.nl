@@ -1,0 +1,21 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-begrotingsstromen-van-de-europese-Unie
+name: Begrotingsstromen van de Europese Unie
+version: 1.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoe verschillen bijdragen, ontvangsten en nettosaldi van EU-lidstaten door
+    de tijd?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-begrotingsstromen-van-de-europese-Unie-public
+  customProperties:
+  - property: contractVersion
+    value: 1.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/begrotingsstromen-van-de-europese-Unie/manifest.json

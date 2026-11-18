@@ -1,0 +1,457 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: tbb-culturele-afstandskaart-public
+version: 2.0.0
+name: Culturele afstandskaart
+status: active
+description:
+  purpose: Ik heb de data van The Inglehart-Welzel Cultural Map of the World gevonden
+    - kan ik een interactieve kaart maken die de culturele afstand tussen landen laat
+    zien?
+  limitations: Verschillende meetjaren en projecties zijn niet zonder meer vergelijkbaar.
+    Afstand op de kaart is geen individueel persoonskenmerk. Voor 45 land-jaarcombinaties
+    ontbreken coördinaten in de traditionele kaart. Waarden van een andere projectie
+    worden daar niet ingevuld. De laatste bronjaren verschillen per land. De laatste
+    meting blijft ook bij ontbrekende coördinaten de laatste; er wordt niet teruggevallen
+    op oudere waarden. De afstand is afhankelijk van deze projectie en asschalen.
+    De coördinaten zijn geen individuele eigenschappen of universele maat voor culturele
+    afstand. De tijdlijnen verbinden bronmetingen en vullen geen tussenliggende jaren
+    in.
+team:
+  name: t-Bataafsche Broederschap
+customProperties:
+- property: seriesSemantics
+  value:
+  - id: waardenkaart
+    unit: broncoördinaat
+    definition: EVS/WVS Cultural Map 2023, rechtstreeks uit de oorspronkelijke spreadsheet.
+      Horizontaal survival/self-expression, verticaal traditioneel/seculier. Schalen
+      alleen binnen dezelfde projectie vergelijken.
+    key:
+    - period
+    - group
+  - id: waardenkaart-laatste
+    unit: broncoördinaat
+    definition: 'Laatste bronjaar per land, ook als de coördinaten ontbreken. Landen
+      hebben verschillende meetjaren; er wordt niet stilzwijgend teruggevallen op
+      oudere waarden. X: survival/self-expression; Y: traditioneel/seculier-rationeel.'
+    key:
+    - period
+    - group
+  - id: zelfexpressie
+    unit: broncoördinaat
+    definition: Oorspronkelijke landcoördinaten per bronjaar. Tussenliggende jaren
+      worden niet ingevuld. Een lijn verbindt de beschikbare bronmetingen, geen jaarlijkse
+      interpolatie.
+    key:
+    - period
+    - group
+  - id: seculier-rationeel
+    unit: broncoördinaat
+    definition: Oorspronkelijke landcoördinaten per bronjaar. Tussenliggende jaren
+      worden niet ingevuld. Een lijn verbindt de beschikbare bronmetingen, geen jaarlijkse
+      interpolatie.
+    key:
+    - period
+    - group
+  - id: afstand-tot-nederland
+    unit: afstand in broncoördinaten
+    definition: Euclidische afstand sqrt((x_land-x_NL)^2+(y_land-y_NL)^2) tussen laatste
+      landmetingen en Nederland 2022. Meetjaren verschillen; assen worden niet herwogen.
+      Geen populatiekenmerk van personen of universele culturele afstand.
+    key:
+    - period
+    - group
+schema:
+- name: research
+  logicalType: object
+  properties:
+  - name: checks
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: id
+        logicalType: string
+        required: true
+      - name: message
+        logicalType: string
+        required: true
+      - name: status
+        logicalType: string
+        required: true
+        enum:
+        - value: passed
+        - value: limited
+        - value: not_comparable
+  - name: correlations
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: cells
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: object
+          required: true
+          properties:
+          - name: column
+            logicalType: string
+            required: true
+          - name: n
+            logicalType: integer
+            required: true
+          - name: reason
+            logicalType: string
+            required: true
+          - name: row
+            logicalType: string
+            required: true
+          - name: value
+            logicalType: string
+            required: false
+      - name: definition
+        logicalType: string
+        required: true
+      - name: dimension
+        logicalType: string
+        required: true
+      - name: group_ids
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: string
+          required: true
+      - name: method
+        logicalType: string
+        required: true
+        enum:
+        - value: pearson
+    description: Exploratieve correlaties van groepscijfers, met de exacte groepsselectie
+      en het aantal geldige paren per cel.
+  - name: definition
+    logicalType: string
+    required: true
+  - name: geometry
+    logicalType: object
+    required: false
+    properties: []
+  - name: id
+    logicalType: string
+    required: true
+  - name: inputs
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: capture_id
+        logicalType: string
+        required: true
+      - name: kind
+        logicalType: string
+        required: true
+        enum:
+        - value: source_response
+        - value: processed_baseline
+        - value: reviewed_transcription
+      - name: retrieved_at
+        logicalType: string
+        required: true
+      - name: sha256
+        logicalType: string
+        required: true
+      - name: source_id
+        logicalType: string
+        required: true
+  - name: limitations
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: string
+      required: true
+  - name: method_version
+    logicalType: string
+    required: true
+  - name: original_context
+    logicalType: string
+    required: true
+    description: Oorspronkelijke aanleiding als platte tekst. De oorspronkelijke HTML
+      blijft in het behoudarchief staan.
+  - name: question
+    logicalType: string
+    required: true
+  - name: question_ids
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: string
+      required: true
+  - name: schema_version
+    logicalType: integer
+    required: true
+    enum:
+    - value: 2
+  - name: series
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: definition
+        logicalType: string
+        required: true
+      - name: id
+        logicalType: string
+        required: true
+      - name: kind
+        logicalType: string
+        required: true
+        enum:
+        - value: line
+        - value: bar
+        - value: scatter
+        - value: map
+      - name: points
+        logicalType: array
+        required: true
+        items:
+          name: item
+          logicalType: object
+          required: true
+          properties:
+          - name: estimate
+            logicalType: object
+            required: false
+            properties:
+            - name: expenditure_eur
+              logicalType: string
+              required: true
+            - name: expenditure_source_id
+              logicalType: string
+              required: true
+            - name: group_recipients
+              logicalType: array
+              required: true
+              items:
+                name: item
+                logicalType: string
+                required: true
+              description: 'Dertien maandultimo''s: december voorafgaand aan het verslagjaar
+                tot december van het verslagjaar. Thuiswonende PW-ontvangers jonger
+                dan AOW-leeftijd.'
+            - name: inhabitants
+              logicalType: array
+              required: true
+              items:
+                name: item
+                logicalType: string
+                required: true
+              description: 'Dertien bevolkingsstanden op de eerste van de maand: januari
+                verslagjaar tot januari volgend jaar; dezelfde herkomstgroep, alle
+                leeftijden.'
+            - name: measure
+              logicalType: string
+              required: true
+              enum:
+              - value: per_capita
+              - value: total
+            - name: method
+              logicalType: string
+              required: true
+              enum:
+              - value: pw-equal-person-year-cost-v1
+            - name: national_recipients
+              logicalType: array
+              required: true
+              items:
+                name: item
+                logicalType: string
+                required: true
+              description: Dezelfde dertien maandultimo's voor de landelijke PW-telling.
+                Ook onbekende herkomst blijft in het landelijke totaal.
+            - name: population_source_id
+              logicalType: string
+              required: true
+            - name: recipients_source_id
+              logicalType: string
+              required: true
+            - name: year
+              logicalType: integer
+              required: true
+            description: Model voor bruto PW-uitgaven per inwoner per jaar. Gelijke
+              kosten per ontvangerjaar; jaargemiddelden uit dertien standen met halve
+              eindgewichten. Alle leeftijden in de bevolkingsnoemer. Geen gemeten
+              groepsbetalingen of netto bankontvangsten.
+          - name: group
+            logicalType: string
+            required: true
+            description: Groepssleutel binnen de specifieke reeks, geen universele
+              herkomstclassificatie.
+          - name: label
+            logicalType: string
+            required: true
+          - name: lower
+            logicalType: string
+            required: false
+          - name: percentage
+            logicalType: object
+            required: false
+            properties:
+            - name: cell
+              logicalType: string
+              required: true
+              logicalTypeOptions:
+                pattern: ^[A-Z]+[1-9][0-9]*$
+            - name: percentage
+              logicalType: string
+              required: true
+            - name: population
+              logicalType: string
+              required: true
+              enum:
+              - value: NL-residents-15-to-AOW
+            - name: reference_date
+              logicalType: string
+              required: true
+            - name: sheet
+              logicalType: string
+              required: true
+            - name: source_id
+              logicalType: string
+              required: true
+            description: CBS-percentage voor algemene bijstand, inwoners van 15 jaar
+              tot AOW-leeftijd, eind september. Per 1.000 is dit percentage maal tien;
+              blad, cel en peildatum blijven gebonden. Geen afgeleide absolute teller
+              of noemer.
+          - name: period
+            logicalType: string
+            required: true
+            description: Bronperiode; peildatum en frequentie staan in de reeksdefinitie.
+          - name: ratio
+            logicalType: object
+            required: false
+            properties:
+            - name: denominator
+              logicalType: string
+              required: true
+            - name: denominator_date
+              logicalType: string
+              required: true
+            - name: denominator_source_id
+              logicalType: string
+              required: true
+            - name: numerator
+              logicalType: string
+              required: true
+            - name: numerator_date
+              logicalType: string
+              required: true
+            - name: numerator_measure
+              logicalType: string
+              required: true
+            - name: numerator_source_id
+              logicalType: string
+              required: true
+            - name: population
+              logicalType: string
+              required: true
+              enum:
+              - value: NL-residents
+            description: Herleidbare teller, noemer en afzonderlijke peildata voor
+              een verhouding per 1.000 inwoners. De peildata liggen één dag uiteen;
+              dit is een expliciete benadering, geen identieke stand.
+          - name: reason
+            logicalType: string
+            required: true
+          - name: source_status
+            logicalType: string
+            required: true
+          - name: status
+            logicalType: string
+            required: true
+            enum:
+            - value: observed
+            - value: missing
+            - value: suppressed
+            - value: not_applicable
+            - value: estimated
+          - name: upper
+            logicalType: string
+            required: false
+          - name: value
+            logicalType: string
+            required: false
+            description: Exacte decimalstring in de eenheid van de reeks; null vereist
+              een expliciete ontbreekstatus.
+          - name: x
+            logicalType: string
+            required: false
+      - name: title
+        logicalType: string
+        required: true
+      - name: unit
+        logicalType: string
+        required: true
+        description: Meeteenheid van alle waarden in deze reeks. Een verhouding vereist
+          een passende teller en noemer.
+      - name: x_label
+        logicalType: string
+        required: true
+  - name: sources
+    logicalType: array
+    required: true
+    items:
+      name: item
+      logicalType: object
+      required: true
+      properties:
+      - name: id
+        logicalType: string
+        required: true
+      - name: publisher
+        logicalType: string
+        required: true
+      - name: role
+        logicalType: string
+        required: true
+      - name: title
+        logicalType: string
+        required: true
+      - name: url
+        logicalType: string
+        required: false
+  - name: title
+    logicalType: string
+    required: true
+  dataGranularityDescription: 'Een onderzoeksproduct met afzonderlijke reeksen; waarnemingssleutel
+    per reeks: periode en groep.'
+  quality:
+  - id: public-schema
+    name: Public schema
+    type: text
+    description: De publieke uitvoer voldoet aan het gegenereerde serialisatieschema.
+  - id: unique-observations
+    name: Unique observations
+    type: text
+    description: Binnen iedere reeks is periode plus groep uniek.
+  - id: value-status
+    name: Value and status
+    type: text
+    description: Een ontbrekende of afgeschermde waarde bevat geen getal; een waargenomen
+      waarde is niet null.

@@ -27,3 +27,14 @@
 !search.js
 !sitemap.xml
 !theme-toggle.js
+
+# SvelteKit-publicatie
+!_app/
+!artikelen/
+!begrippen/
+!bronnen/
+!onderzoeken/
+!vragen/
+!.nojekyll
+!__data.json
+!release.json

@@ -1,0 +1,1 @@
+function e(e){let t=e.normalize(`NFKD`).replace(/\p{M}/gu,``).toLocaleLowerCase(`nl`).replace(/[^a-z0-9]+/g,`-`).replace(/^-|-$/g,``);if(!t)throw Error(`Een onderzoekspagina heeft een naam nodig`);return t}function t(t){return`/onderzoeken/${e(t.title)}/`}export{t};

@@ -1,0 +1,21 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-tennet-monitor-voorzieningszekerheid-2026
+name: TenneT Monitor Voorzieningszekerheid 2026
+version: 1.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoe verschillen leveringszekerheid, systeemmix en tekorten tussen de scenario’s
+    van de TenneT-monitor 2026?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-tennet-monitor-voorzieningszekerheid-2026-public
+  customProperties:
+  - property: contractVersion
+    value: 1.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/tennet-monitor-voorzieningszekerheid-2026/manifest.json

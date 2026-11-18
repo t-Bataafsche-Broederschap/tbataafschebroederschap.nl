@@ -1,0 +1,21 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-remittances-nederland
+name: Remittance Monitor
+version: 2.0.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoeveel geld stroomt als remittance uit Nederland, naar welke landen, en
+    hoe verhouden inkomens van herkomstgroepen zich tot een Nederlandse referentie?
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-remittances-nederland-public
+  customProperties:
+  - property: contractVersion
+    value: 2.0.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/remittances-nederland/manifest.json

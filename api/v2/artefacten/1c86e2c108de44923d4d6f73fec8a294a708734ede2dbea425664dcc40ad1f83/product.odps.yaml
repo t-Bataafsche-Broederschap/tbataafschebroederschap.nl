@@ -1,0 +1,22 @@
+apiVersion: v1.1.0
+kind: DataProduct
+id: tbb-autochtoonse-nederlandse-bevolking
+name: Autochtone Nederlandse bevolking
+version: 2.1.0
+status: active
+team:
+  name: t-Bataafsche Broederschap
+description:
+  purpose: Hoeveel mensen in Nederland zou ik autochtoon noemen? Hoeveel inheems?
+    Deze grafiek toont verschillende indelingen van de autochtoonse bevolking, waaronder
+    ook de bevolkingsgroei als percentage.
+outputPorts:
+- name: public-json
+  type: file
+  version: 1.0.0
+  contractId: tbb-autochtoonse-nederlandse-bevolking-public
+  customProperties:
+  - property: contractVersion
+    value: 2.1.0
+  - property: manifestUrl
+    value: https://tbataafschebroederschap.nl/api/v2/projecten/autochtoonse-nederlandse-bevolking/manifest.json

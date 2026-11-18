@@ -1,0 +1,7 @@
+series,unit,period,group,value,status,source_status,reason,lower,upper,x
+ouders,personen,2026-06-27,Eerste Kamer · Ouderschap publiek genoemd,45,observed,,,,,
+ouders,personen,2026-06-27,Eerste Kamer · Expliciet kinderloos,0,observed,,,,,
+ouders,personen,2026-06-27,Eerste Kamer · Onbekend,30,observed,,,,,
+ouders,personen,2026-06-27,Tweede Kamer · Ouderschap publiek genoemd,53,observed,,,,,
+ouders,personen,2026-06-27,Tweede Kamer · Expliciet kinderloos,0,observed,,,,,
+ouders,personen,2026-06-27,Tweede Kamer · Onbekend,97,observed,,,,,

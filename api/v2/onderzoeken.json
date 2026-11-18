@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "definition": "Oorspronkelijke toevoegdatum van het onderzoek. Voor bestaande onderzoeken overgenomen uit de bewaarde projectenlijst; dit is niet de datum van de rewrite of van de broncijfers.",
+  "sources": {
+    "bewaarde-projectenlijst": "https://github.com/t-Bataafsche-Broederschap/tbb/blob/35a0e6feedb30d62480245616755a7013c6ef7d3/docs/rewrite/projectenlijst-letterlijk-2026-10-27.json",
+    "woningbouw-eerste-publicatie": "https://github.com/t-Bataafsche-Broederschap/tbb/commit/7b222cd1ec9eca0abeaca4b31265696b10b6ed65"
+  },
+  "products": [
+    {
+      "id": "autochtoonse-nederlandse-bevolking",
+      "added_on": "2026-05-31",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "begrotingsstromen-van-de-europese-Unie",
+      "added_on": "2026-05-21",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "criminaliteit-nederland",
+      "added_on": "2026-07-31",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "culturele-afstandskaart",
+      "added_on": "2026-05-30",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "demografische-veiligheid",
+      "added_on": "2026-06-08",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "geboortecijfers-nederlandse-afkomst",
+      "added_on": "2026-06-25",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "hoe-hecht-is-nederland",
+      "added_on": "2026-08-02",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "migratie-in-nederland",
+      "added_on": "2026-08-27",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "migratieachtergrond-per-gemeenten",
+      "added_on": "2026-06-01",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "politiek-ouderschap",
+      "added_on": "2026-06-27",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "remittances-nederland",
+      "added_on": "2026-08-30",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "tennet-monitor-voorzieningszekerheid-2026",
+      "added_on": "2026-06-15",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "uitkeringen-naar-afkomst",
+      "added_on": "2026-06-01",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "verdachten-naar-afkomst",
+      "added_on": "2026-06-01",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "wereldbevolking",
+      "added_on": "2026-04-06",
+      "source": "bewaarde-projectenlijst"
+    },
+    {
+      "id": "woningbouw-en-woningtekort",
+      "added_on": "2026-10-28",
+      "source": "woningbouw-eerste-publicatie"
+    }
+  ]
+}
